@@ -1,0 +1,150 @@
+[
+  {
+    "id": "VULN-LITELLM-MALWARE-2026",
+    "type": "vulnerability",
+    "name": "Malicious LiteLLM PyPI releases 1.82.7 and 1.82.8",
+    "kind": "malicious-package",
+    "package": "litellm",
+    "ecosystem": "PyPI",
+    "identifiers": [
+      "GHSA-92x9-889m-jgmw",
+      "MAL-2026-2144"
+    ],
+    "severity": "malware",
+    "affected": [
+      "1.82.7",
+      "1.82.8"
+    ],
+    "patched": [],
+    "published": "2026-07-21",
+    "confidence": "confirmed",
+    "summary": "The LiteLLM package was compromised and malicious PyPI versions 1.82.7 and 1.82.8 were published with secret-exfiltration behavior.",
+    "source_ids": [
+      "SRC-GHSA-LITELLM-MALWARE"
+    ]
+  },
+  {
+    "id": "VULN-LITELLM-CVE-2026-59822",
+    "type": "vulnerability",
+    "name": "LiteLLM MCP OAuth2 Passthrough Authentication Bypass",
+    "kind": "authentication-bypass",
+    "package": "litellm",
+    "ecosystem": "PyPI",
+    "identifiers": [
+      "CVE-2026-59822",
+      "GHSA-7488-6r32-c95q"
+    ],
+    "severity": "high",
+    "affected": [
+      "<1.84.0"
+    ],
+    "patched": [
+      "1.84.0"
+    ],
+    "published": "2026-06-30",
+    "confidence": "confirmed",
+    "summary": "A fallback in LiteLLM MCP authentication could allow requests with an arbitrary Bearer token to reach configured MCP tooling without a valid LiteLLM key.",
+    "source_ids": [
+      "SRC-GHSA-LITELLM-MCP-59822"
+    ]
+  },
+  {
+    "id": "VULN-LITELLM-CVE-2026-12773",
+    "type": "vulnerability",
+    "name": "LiteLLM MCP Proxy Improper Authentication",
+    "kind": "improper-authentication",
+    "package": "litellm",
+    "ecosystem": "PyPI",
+    "identifiers": [
+      "CVE-2026-12773",
+      "GHSA-4jcj-7x88-m979"
+    ],
+    "severity": "moderate",
+    "affected": [
+      "<1.84.0"
+    ],
+    "patched": [
+      "1.84.0"
+    ],
+    "published": "2026-06-21",
+    "confidence": "confirmed",
+    "summary": "LiteLLM MCP proxy authentication logic was affected by improper authentication and fixed in 1.84.0.",
+    "source_ids": [
+      "SRC-GHSA-LITELLM-MCP-12773"
+    ]
+  },
+  {
+    "id": "VULN-LITELLM-CVE-2026-59821",
+    "type": "vulnerability",
+    "name": "LiteLLM Custom Code Guardrails Production Safety-Check Bypass",
+    "kind": "guardrail-code-execution",
+    "package": "litellm",
+    "ecosystem": "PyPI",
+    "identifiers": [
+      "CVE-2026-59821",
+      "GHSA-72m8-9m7m-h278"
+    ],
+    "severity": "low",
+    "affected": [
+      "<1.82.0-stable"
+    ],
+    "patched": [
+      "1.82.0-stable"
+    ],
+    "published": "2026-06-30",
+    "confidence": "confirmed",
+    "summary": "Production create/update paths for custom-code guardrails did not apply the same sandboxing and validation as the test path, enabling code execution under specified privilege conditions.",
+    "source_ids": [
+      "SRC-GHSA-LITELLM-GUARDRAIL-59821"
+    ]
+  },
+  {
+    "id": "VULN-TRIVY-CVE-2026-33634",
+    "type": "vulnerability",
+    "name": "Trivy Ecosystem Supply-Chain Compromise",
+    "kind": "supply-chain-compromise",
+    "package": "aquasecurity/trivy ecosystem",
+    "ecosystem": "GitHub Actions / releases",
+    "identifiers": [
+      "CVE-2026-33634",
+      "GHSA-69fq-xp46-6x23"
+    ],
+    "severity": "critical",
+    "affected": [
+      "compromised Trivy release/action ecosystem during incident window"
+    ],
+    "patched": [
+      "see vendor incident advisory"
+    ],
+    "published": "2026-03-21",
+    "confidence": "confirmed",
+    "summary": "A compromised credential was used to publish malicious Trivy ecosystem artifacts and mutable action references during the March 2026 incident.",
+    "source_ids": [
+      "SRC-GHSA-TRIVY-SUPPLYCHAIN"
+    ]
+  },
+  {
+    "id": "VULN-TRIVY-GHSA-MCJ4",
+    "type": "vulnerability",
+    "name": "Trivy Crafted OCI Artifact Path Traversal",
+    "kind": "path-traversal",
+    "package": "github.com/aquasecurity/trivy",
+    "ecosystem": "Go",
+    "identifiers": [
+      "GHSA-mcj4-mphf-j9ff"
+    ],
+    "severity": "high",
+    "affected": [
+      "<0.71.1"
+    ],
+    "patched": [
+      "0.71.1"
+    ],
+    "published": "2026-06-15",
+    "confidence": "confirmed",
+    "summary": "A crafted OCI artifact title could cause Trivy to write downloaded layer content outside the intended destination when fetching attacker-controlled artifacts.",
+    "source_ids": [
+      "SRC-GHSA-TRIVY-PATH"
+    ]
+  }
+]
