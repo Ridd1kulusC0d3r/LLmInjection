@@ -142,7 +142,7 @@ Real-world reporting is intentionally placed on the front page because AI securi
 | **Famous Chollima / PromptMink** | North Korea | Coding-agent / supply chain | Reporting describes malicious package activity designed to influence AI coding-agent dependency selection | 🟡 High |
 | **TeamPCP** | Unattributed | AI infrastructure target | 2026 software supply-chain activity included malicious LiteLLM releases, exposing AI gateways and CI/CD trust | 🟢 Confirmed |
 
-**Analyst view:** [full actor tracker →](docs/ACTOR-TRACKER.md) · **Machine-readable:** [`data/actors.json`](data/actors.json) · **Source methodology:** [SOURCE-GRADING.md](docs/SOURCE-GRADING.md)
+**Actors Using AI:** [docs/ACTORS-USING-AI.md](docs/ACTORS-USING-AI.md) · **Analyst tracker:** [ACTOR-TRACKER.md](docs/ACTOR-TRACKER.md) · **Machine-readable:** [`data/actors.json`](data/actors.json) · **Source methodology:** [SOURCE-GRADING.md](docs/SOURCE-GRADING.md)
 
 > Attribution is deliberately conservative. Vendor tracking labels are not silently merged into universal aliases, and claims that lack sufficient primary evidence remain in the research queue rather than being promoted to fact.
 
@@ -256,6 +256,18 @@ python scripts/run_safe_lab.py --profile all
 ```
 
 Generated outputs are written to `dist/graph.json`, `dist/graph.graphml` and `dist/llminjection-stix.json`. Vulnerability nodes retain CVE/GHSA/OSV identifiers as STIX external references.
+
+### Read-only intelligence interfaces
+
+```bash
+python scripts/query_intel.py search "prompt injection"
+python scripts/query_intel.py get ACTOR-APT28
+python scripts/query_intel.py coverage LLMI-T015
+```
+
+An optional **MCP v2 read-only server** exposes search, object lookup, graph traversal, recent activity, defensive coverage and latest-diff queries without modifying the dataset.
+
+**MCP:** [integrations/mcp/README.md](integrations/mcp/README.md)
 
 **Explorer:** https://ridd1kulusc0d3r.github.io/LLmInjection/ · **Static API:** `https://ridd1kulusc0d3r.github.io/LLmInjection/api/v1/index.json` · **Graph model:** [INTELLIGENCE-GRAPH.md](docs/INTELLIGENCE-GRAPH.md) · **Methodology:** [METHODOLOGY.md](docs/METHODOLOGY.md) · **Vulnerabilities:** [`data/vulnerabilities.json`](data/vulnerabilities.json) · **Reference library:** [REFERENCE-LIBRARY.md](references/REFERENCE-LIBRARY.md)
 
