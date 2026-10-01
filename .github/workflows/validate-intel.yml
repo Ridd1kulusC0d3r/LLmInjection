@@ -9,6 +9,7 @@ on:
       - "detections/**"
       - "tests/**"
       - "reports/**"
+      - "integrations/**"
       - ".github/workflows/validate-intel.yml"
   pull_request:
     paths:
@@ -18,6 +19,7 @@ on:
       - "detections/**"
       - "tests/**"
       - "reports/**"
+      - "integrations/**"
       - ".github/workflows/validate-intel.yml"
 
 permissions:
@@ -36,7 +38,13 @@ jobs:
           python-version: "3.12"
 
       - name: Compile Python
-        run: python -m compileall -q scripts
+        run: python -m compileall -q scripts integrations
+
+      - name: Smoke test local intelligence queries
+        run: |
+          python scripts/query_intel.py search "prompt injection" --limit 3 > /dev/null
+          python scripts/query_intel.py coverage LLMI-T015 > /dev/null
+          python scripts/query_intel.py neighbors ACTOR-GTG-1002 --limit 5 > /dev/null
 
       - name: Validate structured intelligence
         run: python scripts/validate_intel.py
