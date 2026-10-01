@@ -1,0 +1,153 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "LLMInjection research queue",
+  "type": "object",
+  "required": [
+    "meta",
+    "items"
+  ],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "last_run",
+        "policy",
+        "statuses"
+      ],
+      "properties": {
+        "schema_version": {
+          "type": "string"
+        },
+        "last_run": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "policy": {
+          "type": "string"
+        },
+        "statuses": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "status",
+          "source_feed_id",
+          "source_grade",
+          "kind",
+          "title",
+          "url",
+          "published",
+          "observed_at",
+          "relevance_score",
+          "matched_terms",
+          "summary",
+          "identifiers",
+          "review"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^RQ-"
+          },
+          "status": {
+            "enum": [
+              "candidate",
+              "reviewing",
+              "accepted",
+              "rejected",
+              "duplicate"
+            ]
+          },
+          "source_feed_id": {
+            "type": "string",
+            "pattern": "^FEED-"
+          },
+          "source_grade": {
+            "enum": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E"
+            ]
+          },
+          "kind": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "published": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "observed_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "relevance_score": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "matched_terms": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "summary": {
+            "type": "string"
+          },
+          "identifiers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "review": {
+            "type": "object",
+            "required": [
+              "decision",
+              "notes"
+            ],
+            "properties": {
+              "decision": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "notes": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,9 +1,13 @@
-const state={graph:null,landscape:null,search:"",type:"",confidence:""};
+const state={graph:null,landscape:null,diff:null,search:"",type:"",confidence:""};
 const colors={actor:"#ff7c8c",campaign:"#f3c969",incident:"#e98bff",technique:"#6ea8ff",model:"#43d7ff",framework:"#9f8cff","test-case":"#55d98d",control:"#6ed5b0",detection:"#ffae6e",source:"#71839e",vulnerability:"#ff5b8d"};
 
 async function load(){
-  const [g,l]=await Promise.all([fetch("graph.json").then(r=>r.json()),fetch("landscape.json").then(r=>r.json())]);
-  state.graph=g;state.landscape=l;
+  const [g,l,d]=await Promise.all([
+    fetch("graph.json").then(r=>r.json()),
+    fetch("landscape.json").then(r=>r.json()),
+    fetch("intelligence-diff.json").then(r=>r.ok?r.json():null).catch(()=>null)
+  ]);
+  state.graph=g;state.landscape=l;state.diff=d;
   initFilters();renderAll();
 }
 function esc(v){return String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
@@ -74,6 +78,23 @@ function renderSources(){
   const ns=visibleNodes().filter(n=>n.type==="source");
   document.querySelector("#sourceList").innerHTML=ns.map(n=>`<div class="card" onclick="openNode('${n.id}')"><h3>${esc(n.label)}</h3><div class="meta">Grade ${esc(n.data.grade)} · ${esc(n.data.role)}</div><p>${esc(n.data.publisher||"")}</p></div>`).join("");
 }
+function renderWhatsNew(){
+  const box=document.querySelector("#diffSummary"),table=document.querySelector("#diffTable");
+  if(!box||!table)return;
+  if(!state.diff){
+    box.innerHTML='<div class="metric"><strong>—</strong><span>No diff available</span></div>';
+    table.innerHTML="";
+    return;
+  }
+  const s=state.diff.summary||{};
+  box.innerHTML=[
+    ["Added",s.added||0],["Removed",s.removed||0],["Changed",s.changed||0]
+  ].map(([k,v])=>`<div class="metric"><strong>${v}</strong><span>${k}</span></div>`).join("");
+  const rows=Object.entries(state.diff.datasets||{}).filter(([,v])=>v.added.length||v.removed.length||v.changed.length);
+  table.innerHTML="<thead><tr><th>Dataset</th><th>Added</th><th>Removed</th><th>Changed</th></tr></thead><tbody>"+
+    (rows.length?rows.map(([name,v])=>`<tr><td><b>${esc(name)}</b></td><td>${v.added.length}</td><td>${v.removed.length}</td><td>${v.changed.length}</td></tr>`).join(""):'<tr><td colspan="4">No structured-intelligence changes since the latest committed snapshot.</td></tr>')+
+    "</tbody>";
+}
 function openNode(id){
   const n=state.graph.nodes.find(x=>x.id===id);if(!n)return;
   const edges=state.graph.edges.filter(e=>e.source===id||e.target===id);
@@ -81,5 +102,5 @@ function openNode(id){
   document.querySelector("#drawerBody").innerHTML=`<div class="eyebrow">${esc(n.type)}</div><h2>${esc(n.label)}</h2><p class="muted">${esc(n.id)}</p><h3>Relationships</h3><ul>${links||"<li>None</li>"}</ul><h3>Record</h3><pre>${esc(JSON.stringify(n.data,null,2))}</pre>`;
   document.querySelector("#drawer").classList.add("open");
 }
-function renderAll(){if(!state.graph)return;renderMetrics();renderActors();renderLandscape();renderGraph();renderCoverage();renderTimeline();renderSources();}
+function renderAll(){if(!state.graph)return;renderMetrics();renderActors();renderLandscape();renderWhatsNew();renderGraph();renderCoverage();renderTimeline();renderSources();}
 window.openNode=openNode;load().catch(e=>{document.body.insertAdjacentHTML("afterbegin",`<div style="padding:12px;background:#6d1b2d;color:white">Explorer data failed to load: ${esc(e.message)}</div>`)});

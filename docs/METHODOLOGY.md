@@ -165,11 +165,15 @@ Vendor-specific queries are starter implementations and require field/schema ada
 
 ## 10. Update cadence
 
+- Living-intelligence intake: daily metadata collection from allow-listed canonical/advisory feeds.
+- Research promotion: review-gated; collection never auto-promotes official CTI.
 - Actor/source verification: warning after 90 days; CI failure threshold after 180 days.
-- Threat landscape: target quarterly snapshots.
+- Threat landscape: monthly structured snapshots and entity-level diffs, with quarterly synthesis as the longer-form reporting cadence.
 - Framework crosswalks: update when canonical upstream versions change.
-- CVE/GHSA/OSV: enrich when authoritative advisories become available.
-- Confidence changes: future versions should preserve change history rather than silently rewriting prior assessments.
+- CVE/GHSA/OSV: review candidates are collected automatically; official vulnerability/relationship enrichment remains evidence-gated.
+- Confidence changes: preserve change history rather than silently rewriting prior assessments.
+
+See docs/LIVING-INTELLIGENCE.md for the collection and review pipeline.
 
 ## 11. Reproducibility and provenance
 

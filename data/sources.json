@@ -348,5 +348,15 @@
     "role": "security-evaluation",
     "url": "https://github.com/meta-llama/PurpleLlama",
     "last_verified": "2026-09-30"
+  },
+  {
+    "id": "SRC-MITRE-ATLAS-2026-09",
+    "type": "source",
+    "name": "MITRE ATLAS v2026.09",
+    "publisher": "MITRE",
+    "grade": "A",
+    "role": "canonical-framework-release",
+    "url": "https://github.com/mitre-atlas/atlas-data/releases/tag/v2026.09",
+    "last_verified": "2026-10-01"
   }
 ]

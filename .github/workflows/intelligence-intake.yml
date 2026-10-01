@@ -1,0 +1,94 @@
+name: Living intelligence intake
+
+on:
+  schedule:
+    - cron: "17 11 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  intake:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Prepare automation branch
+        run: git checkout -B automation/intel-intake
+
+      - name: Collect intelligence candidates
+        id: intake
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          mkdir -p dist reports/intake
+          set +e
+          python scripts/intel_intake.py             --report reports/intake/latest.md             --summary-json dist/intake-summary.json
+          STATUS=$?
+          set -e
+          NEW_COUNT="$(python -c 'import json; print(json.load(open("dist/intake-summary.json"))["new_count"])')"
+          FAILURES="$(python -c 'import json; print(json.load(open("dist/intake-summary.json"))["failure_count"])')"
+          echo "new_count=$NEW_COUNT" >> "$GITHUB_OUTPUT"
+          echo "failure_count=$FAILURES" >> "$GITHUB_OUTPUT"
+          echo "intake_exit=$STATUS" >> "$GITHUB_OUTPUT"
+
+      - name: Upload intake report
+        uses: actions/upload-artifact@v4
+        with:
+          name: living-intelligence-intake
+          path: |
+            reports/intake/latest.md
+            dist/intake-summary.json
+
+      - name: Commit new candidates
+        if: steps.intake.outputs.new_count != '0'
+        shell: bash
+        run: |
+          git config user.name "llminjection-intel-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/research-queue.json reports/intake/latest.md
+          git commit -m "chore: refresh living intelligence research queue"
+          git push --force origin automation/intel-intake
+
+      - name: Create or update review PR
+        if: steps.intake.outputs.new_count != '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          PR="$(gh pr list --base main --head automation/intel-intake --state open --json number --jq '.[0].number // empty')"
+          BODY_FILE="$(mktemp)"
+          cat > "$BODY_FILE" <<'EOF'
+          ## Automated intelligence intake
+
+          New material was collected from the allow-listed source registry and placed in data/research-queue.json.
+
+          This PR is intentionally **review-only**:
+          - no actor attribution is promoted automatically;
+          - no campaign/incident is created automatically;
+          - no CVE/GHSA relationship is accepted automatically;
+          - no framework mapping is accepted automatically.
+
+          Review candidates against docs/METHODOLOGY.md before promotion.
+          EOF
+          if [ -z "$PR" ]; then
+            gh pr create               --base main               --head automation/intel-intake               --title "chore: review new AI threat intelligence candidates"               --body-file "$BODY_FILE"
+          else
+            gh pr edit "$PR" --body-file "$BODY_FILE"
+          fi
+
+      - name: Report feed degradation
+        if: steps.intake.outputs.failure_count != '0'
+        run: |
+          echo "::warning::One or more intelligence feeds failed. See the uploaded intake report."

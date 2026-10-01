@@ -1,0 +1,114 @@
+{
+  "schema_version": "1.0",
+  "policy": "Collection is automated; promotion into structured CTI requires human review.",
+  "feeds": [
+    {
+      "id": "FEED-MITRE-ATLAS-RELEASES",
+      "name": "MITRE ATLAS releases",
+      "kind": "atlas-releases",
+      "url": "https://api.github.com/repos/mitre-atlas/atlas-data/releases?per_page=10",
+      "source_grade": "A",
+      "enabled": true,
+      "max_items": 1,
+      "relevance_mode": "all"
+    },
+    {
+      "id": "FEED-OWASP-LLM-COMMITS",
+      "name": "OWASP GenAI LLM Top 10 canonical repository",
+      "kind": "github-commits",
+      "url": "https://api.github.com/repos/GenAI-Security-Project/GenAI-LLM-Top10/commits?per_page=20",
+      "source_grade": "A",
+      "enabled": true,
+      "max_items": 10,
+      "relevance_mode": "all"
+    },
+    {
+      "id": "FEED-MCP-RELEASES",
+      "name": "Model Context Protocol releases",
+      "kind": "github-releases",
+      "url": "https://api.github.com/repos/modelcontextprotocol/modelcontextprotocol/releases?per_page=20",
+      "source_grade": "A",
+      "enabled": true,
+      "max_items": 5,
+      "relevance_mode": "all"
+    },
+    {
+      "id": "FEED-GITHUB-ADVISORIES",
+      "name": "GitHub Advisory Database reviewed advisories",
+      "kind": "github-advisories",
+      "url": "https://api.github.com/advisories?per_page=100&sort=published&direction=desc",
+      "source_grade": "A",
+      "enabled": true,
+      "max_items": 100,
+      "relevance_mode": "keywords",
+      "keywords": [
+        "llm",
+        "large language model",
+        "generative ai",
+        "artificial intelligence",
+        "agentic",
+        "model context protocol",
+        "mcp server",
+        "litellm",
+        "ollama",
+        "vllm",
+        "langchain",
+        "llamaindex",
+        "hugging face",
+        "transformers",
+        "model gateway",
+        "ai gateway",
+        "rag"
+      ]
+    },
+    {
+      "id": "FEED-GITHUB-MALWARE",
+      "name": "GitHub Advisory Database malware advisories",
+      "kind": "github-advisories",
+      "url": "https://api.github.com/advisories?type=malware&per_page=100",
+      "source_grade": "A",
+      "enabled": true,
+      "max_items": 100,
+      "relevance_mode": "keywords",
+      "keywords": [
+        "llm",
+        "ai",
+        "agent",
+        "mcp",
+        "litellm",
+        "ollama",
+        "vllm",
+        "langchain",
+        "llamaindex",
+        "huggingface",
+        "hugging face",
+        "transformers",
+        "mastra"
+      ]
+    },
+    {
+      "id": "FEED-CISA-KEV",
+      "name": "CISA Known Exploited Vulnerabilities",
+      "kind": "cisa-kev",
+      "url": "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json",
+      "source_grade": "A",
+      "enabled": true,
+      "max_items": 500,
+      "relevance_mode": "keywords",
+      "keywords": [
+        "artificial intelligence",
+        "ai",
+        "llm",
+        "model",
+        "agent",
+        "mcp",
+        "ray",
+        "jupyter",
+        "hugging face",
+        "langchain",
+        "ollama",
+        "litellm"
+      ]
+    }
+  ]
+}

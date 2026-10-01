@@ -5,7 +5,7 @@ from __future__ import annotations
 
 import json
 import sys
-from datetime import date
+from datetime import date, datetime
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -42,12 +42,23 @@ def valid_date(value: str) -> bool:
 def check_https(value: str) -> bool:
     return isinstance(value, str) and value.startswith("https://")
 
+def valid_datetime(value: str | None) -> bool:
+    if value is None:
+        return True
+    try:
+        datetime.fromisoformat(value.replace("Z", "+00:00"))
+        return True
+    except (TypeError, ValueError):
+        return False
+
 def validate():
     errors: list[str] = []
     datasets = {name: load_json(ROOT / "data" / filename) for name, filename in LIST_DATASETS.items()}
     landscape = load_json(ROOT / "data" / "threat-landscape-2026.json")
     manifest = load_json(ROOT / "data" / "dataset-manifest.json")
     contributors = load_json(ROOT / "data" / "contributors.json")
+    source_feeds = load_json(ROOT / "data" / "source-feeds.json")
+    research_queue = load_json(ROOT / "data" / "research-queue.json")
     seen: set[str] = set()
     index: dict[str, tuple[str, dict]] = {}
 
@@ -191,6 +202,67 @@ def validate():
             if source_id not in index or index[source_id][0] != "sources":
                 errors.append(f"{prefix}: unknown evidence source {source_id}")
 
+    feed_ids: set[str] = set()
+    if not isinstance(source_feeds, dict) or not isinstance(source_feeds.get("feeds"), list):
+        errors.append("source-feeds: root must contain a feeds array")
+    else:
+        for i, feed in enumerate(source_feeds.get("feeds", [])):
+            prefix = f"source-feeds.feeds[{i}]"
+            feed_id = feed.get("id")
+            if not feed_id or not str(feed_id).startswith("FEED-"):
+                errors.append(f"{prefix}: invalid feed id")
+            elif feed_id in feed_ids:
+                errors.append(f"{prefix}: duplicate feed id {feed_id}")
+            else:
+                feed_ids.add(feed_id)
+            if feed.get("source_grade") not in GRADES:
+                errors.append(f"{prefix}: invalid source grade")
+            if not check_https(feed.get("url")):
+                errors.append(f"{prefix}: URL must use https")
+            if feed.get("relevance_mode") not in {"all", "keywords"}:
+                errors.append(f"{prefix}: invalid relevance_mode")
+            if feed.get("relevance_mode") == "keywords" and not feed.get("keywords"):
+                errors.append(f"{prefix}: keyword mode requires keywords")
+
+    if not isinstance(research_queue, dict) or not isinstance(research_queue.get("items"), list):
+        errors.append("research-queue: root must contain an items array")
+    else:
+        queue_ids: set[str] = set()
+        valid_statuses = {"candidate", "reviewing", "accepted", "rejected", "duplicate"}
+        if not valid_datetime(research_queue.get("meta", {}).get("last_run")):
+            errors.append("research-queue.meta.last_run: invalid datetime")
+        for i, item in enumerate(research_queue.get("items", [])):
+            prefix = f"research-queue.items[{i}]"
+            item_id = item.get("id")
+            if not item_id or not str(item_id).startswith("RQ-"):
+                errors.append(f"{prefix}: invalid id")
+            elif item_id in queue_ids:
+                errors.append(f"{prefix}: duplicate id {item_id}")
+            else:
+                queue_ids.add(item_id)
+            if item.get("status") not in valid_statuses:
+                errors.append(f"{prefix}: invalid status")
+            if item.get("source_feed_id") not in feed_ids:
+                errors.append(f"{prefix}: unknown source_feed_id {item.get('source_feed_id')}")
+            if item.get("source_grade") not in GRADES:
+                errors.append(f"{prefix}: invalid source grade")
+            if not check_https(item.get("url")):
+                errors.append(f"{prefix}: URL must use https")
+            if not valid_datetime(item.get("observed_at")):
+                errors.append(f"{prefix}: invalid observed_at")
+            score = item.get("relevance_score")
+            if not isinstance(score, int) or not 0 <= score <= 100:
+                errors.append(f"{prefix}: relevance_score must be 0..100")
+
+    snapshots_dir = ROOT / "data" / "snapshots"
+    if snapshots_dir.exists():
+        for snapshot_path in sorted(snapshots_dir.glob("*.json")):
+            snapshot = load_json(snapshot_path)
+            if not isinstance(snapshot, dict) or snapshot.get("schema_version") != "1.0":
+                errors.append(f"{snapshot_path.name}: invalid snapshot schema")
+            if not isinstance(snapshot.get("datasets"), dict):
+                errors.append(f"{snapshot_path.name}: datasets must be an object")
+
     if not isinstance(manifest, dict):
         errors.append("dataset-manifest: root must be an object")
     else:
@@ -234,7 +306,13 @@ def validate():
 
     counts = ", ".join(f"{name}={len(records)}" for name, records in datasets.items())
     landscape_metrics = len(landscape.get("key_metrics", [])) if isinstance(landscape, dict) else 0
-    print(f"LLMInjection intelligence validation OK: {counts}, landscape-metrics={landscape_metrics}, schema={manifest.get('schema_version', 'unknown')}")
+    queue_count = len(research_queue.get("items", [])) if isinstance(research_queue, dict) else 0
+    feed_count = len(source_feeds.get("feeds", [])) if isinstance(source_feeds, dict) else 0
+    print(
+        f"LLMInjection intelligence validation OK: {counts}, "
+        f"landscape-metrics={landscape_metrics}, feeds={feed_count}, "
+        f"research-queue={queue_count}, schema={manifest.get('schema_version', 'unknown')}"
+    )
     return 0
 
 if __name__ == "__main__":

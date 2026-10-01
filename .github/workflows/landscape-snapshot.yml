@@ -1,0 +1,78 @@
+name: Monthly AI threat landscape snapshot
+
+on:
+  schedule:
+    - cron: "41 10 1 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Prepare automation branch
+        run: git checkout -B automation/landscape-snapshot
+
+      - name: Validate current intelligence
+        run: python scripts/validate_intel.py
+
+      - name: Build monthly snapshot and diff
+        shell: bash
+        run: |
+          PERIOD="$(date -u +%Y-%m)"
+          BASELINE="$(find data/snapshots -maxdepth 1 -type f -name '*.json' | sort | tail -n 1)"
+          if [ -z "$BASELINE" ]; then
+            echo "No baseline snapshot exists" >&2
+            exit 1
+          fi
+
+          CURRENT="data/snapshots/$PERIOD.json"
+          python scripts/build_snapshot.py --output "$CURRENT"
+
+          mkdir -p "reports/monthly"
+          python scripts/diff_intelligence.py             --baseline "$BASELINE"             --current "$CURRENT"             --output "reports/monthly/$PERIOD-diff.json"             --markdown "reports/monthly/$PERIOD-diff.md"
+
+          python scripts/generate_landscape_report.py             --snapshot "$CURRENT"             --diff "reports/monthly/$PERIOD-diff.json"             --period "$PERIOD"             --output "reports/monthly/$PERIOD.md"
+
+      - name: Commit monthly intelligence snapshot
+        shell: bash
+        run: |
+          git config user.name "llminjection-intel-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/snapshots reports/monthly
+          if git diff --cached --quiet; then
+            echo "No monthly snapshot changes."
+            exit 0
+          fi
+          PERIOD="$(date -u +%Y-%m)"
+          git commit -m "data: add AI threat landscape snapshot $PERIOD"
+          git push --force origin automation/landscape-snapshot
+
+      - name: Create or update monthly review PR
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          if git diff origin/main...HEAD --quiet; then
+            exit 0
+          fi
+          PERIOD="$(date -u +%Y-%m)"
+          PR="$(gh pr list --base main --head automation/landscape-snapshot --state open --json number --jq '.[0].number // empty')"
+          if [ -z "$PR" ]; then
+            gh pr create               --base main               --head automation/landscape-snapshot               --title "data: AI threat landscape monthly snapshot $PERIOD"               --body "Automated monthly snapshot, entity-level diff and generated landscape report. Review before merge."
+          else
+            gh pr edit "$PR"               --title "data: AI threat landscape monthly snapshot $PERIOD"               --body "Automated monthly snapshot, entity-level diff and generated landscape report. Review before merge."
+          fi

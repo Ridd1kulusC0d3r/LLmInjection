@@ -1,7 +1,7 @@
 {
   "name": "LLMInjection Intelligence Dataset",
   "schema_version": "1.0.0-beta.1",
-  "snapshot": "2026-09-30",
+  "snapshot": "2026-10-01",
   "status": "beta",
   "license": "Apache-2.0",
   "methodology": "docs/METHODOLOGY.md",
@@ -23,12 +23,15 @@
   "exports": [
     "graph.json",
     "graph.graphml",
-    "llminjection-stix.json"
+    "llminjection-stix.json",
+    "current-snapshot.json",
+    "intelligence-diff.json"
   ],
   "compatibility": {
     "stix": "2.1",
     "graphml": "1.0",
-    "static_api": "v1"
+    "static_api": "v1",
+    "research_queue": "v1"
   },
   "maintainer": "Ridd1kulusC0d3r"
 }

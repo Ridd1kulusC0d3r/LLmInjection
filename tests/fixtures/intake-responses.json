@@ -1,0 +1,64 @@
+{
+  "FEED-MITRE-ATLAS-RELEASES": [
+    {
+      "name": "v2026.09",
+      "tag_name": "v2026.09",
+      "html_url": "https://github.com/mitre-atlas/atlas-data/releases/tag/v2026.09",
+      "published_at": "2026-09-15T15:03:39Z",
+      "body": "###### Techniques\\n* Added new techniques\\n  * AI Agent Response Biasing\\n  * Misconfigured or Publicly Exposed AI Services\\n* Updated existing techniques\\n  * LLM Prompt Injection: Indirect\\n###### Case Studies\\n* Added new case studies\\n  * AI Recommendation Poisoning via Crafted AI Assistant Links"
+    }
+  ],
+  "FEED-OWASP-LLM-COMMITS": [
+    {
+      "html_url": "https://github.com/GenAI-Security-Project/GenAI-LLM-Top10/commit/example",
+      "commit": {
+        "message": "docs: update 2026 framework mappings",
+        "committer": {
+          "date": "2026-09-20T10:00:00Z"
+        }
+      }
+    }
+  ],
+  "FEED-MCP-RELEASES": [
+    {
+      "name": "MCP security update",
+      "tag_name": "security-2026-07-28",
+      "html_url": "https://github.com/modelcontextprotocol/modelcontextprotocol",
+      "published_at": "2026-07-28T00:00:00Z",
+      "body": "Security best practices update covering token audience and consent."
+    }
+  ],
+  "FEED-GITHUB-ADVISORIES": [
+    {
+      "ghsa_id": "GHSA-7488-6r32-c95q",
+      "cve_id": "CVE-2026-59822",
+      "summary": "LiteLLM MCP Authentication Bypass via OAuth2 Passthrough Fallback",
+      "description": "LiteLLM MCP authentication could allow requests with an arbitrary token to reach configured MCP tooling.",
+      "html_url": "https://github.com/BerriAI/litellm/security/advisories/GHSA-7488-6r32-c95q",
+      "published_at": "2026-06-30T00:00:00Z",
+      "type": "reviewed",
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "litellm"
+          }
+        }
+      ]
+    }
+  ],
+  "FEED-GITHUB-MALWARE": [],
+  "FEED-CISA-KEV": {
+    "vulnerabilities": [
+      {
+        "cveID": "CVE-2026-0001",
+        "vendorProject": "Example",
+        "product": "Unrelated VPN",
+        "vulnerabilityName": "Example VPN vulnerability",
+        "shortDescription": "Unrelated test vulnerability.",
+        "dateAdded": "2026-09-01",
+        "requiredAction": "Apply updates."
+      }
+    ]
+  }
+}
