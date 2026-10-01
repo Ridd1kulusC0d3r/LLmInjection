@@ -1,0 +1,8 @@
+| tstats count min(_time) as firstTime max(_time) as lastTime
+  from datamodel=Network_Traffic.All_Traffic
+  where All_Traffic.dest_category="ai_provider"
+  by All_Traffic.src All_Traffic.user All_Traffic.process_name All_Traffic.dest
+| rename All_Traffic.* as *
+| lookup approved_ai_workloads host as src OUTPUT approved
+| where isnull(approved) OR approved!="true"
+| convert ctime(firstTime) ctime(lastTime)
