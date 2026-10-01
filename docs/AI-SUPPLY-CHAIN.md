@@ -56,6 +56,12 @@ AI/ML-BOM
 
 No single BOM format proves that an artifact is trustworthy. It makes trust decisions inspectable.
 
+## Vulnerability and advisory enrichment
+
+Machine-readable records live in `data/vulnerabilities.json`. The initial set includes the 2026 LiteLLM malicious-package incident, MCP authentication flaws and Trivy supply-chain / artifact-processing advisories. Records retain affected/fixed versions and primary GHSA/CVE/OSV identifiers.
+
+These are not treated as actors or campaigns. They are separate graph objects that can be linked to incidents, techniques and controls.
+
 ## Controls already modeled
 
 - `CTRL-AIML-BOM`
