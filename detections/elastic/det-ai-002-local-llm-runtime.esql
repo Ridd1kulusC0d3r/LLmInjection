@@ -1,0 +1,6 @@
+FROM logs-endpoint.events.process-*
+| WHERE event.category == "process"
+  AND event.type == "start"
+  AND process.name IN ("ollama", "ollama.exe", "gpt4all", "gpt4all.exe", "LM Studio.exe", "lmstudio")
+| KEEP @timestamp, host.name, user.name, process.name, process.command_line, process.executable
+| SORT @timestamp DESC
