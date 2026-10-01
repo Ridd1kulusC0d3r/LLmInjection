@@ -1,0 +1,169 @@
+[
+  {
+    "id": "ACTOR-GTG-1002",
+    "type": "actor",
+    "name": "GTG-1002",
+    "aliases": [],
+    "nexus": "China",
+    "ai_role": [
+      "autonomous-operator",
+      "offensive-enabler"
+    ],
+    "confidence": "confirmed",
+    "summary": "Anthropic assessed with high confidence that a Chinese state-sponsored group used Claude Code in a largely AI-orchestrated espionage campaign against roughly 30 targets, with AI executing 80–90% of tactical operations.",
+    "last_verified": "2026-09-30",
+    "sources": [
+      {
+        "title": "Disrupting the first reported AI-orchestrated cyber espionage campaign",
+        "publisher": "Anthropic",
+        "grade": "A",
+        "url": "https://www.anthropic.com/news/disrupting-AI-espionage"
+      },
+      {
+        "title": "Mapping AI-enabled cyber threats",
+        "publisher": "Anthropic",
+        "grade": "A",
+        "url": "https://www.anthropic.com/research/attack-navigator"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-APT28",
+    "type": "actor",
+    "name": "APT28",
+    "aliases": [
+      "FROZENLAKE"
+    ],
+    "nexus": "Russia",
+    "ai_role": [
+      "runtime-enabler"
+    ],
+    "confidence": "confirmed",
+    "summary": "Google Threat Intelligence reported PROMPTSTEAL, reported by CERT-UA as LAMEHUG, querying Qwen2.5-Coder-32B-Instruct through Hugging Face to generate commands during live operations.",
+    "last_verified": "2026-09-30",
+    "sources": [
+      {
+        "title": "GTIG AI Threat Tracker: Advances in Threat Actor Usage of AI Tools",
+        "publisher": "Google Threat Intelligence Group",
+        "grade": "A",
+        "url": "https://cloud.google.com/blog/topics/threat-intelligence/threat-actor-usage-of-ai-tools"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-APT42",
+    "type": "actor",
+    "name": "APT42",
+    "aliases": [],
+    "nexus": "Iran",
+    "ai_role": [
+      "offensive-enabler"
+    ],
+    "confidence": "confirmed",
+    "summary": "GTIG observed Gemini use supporting reconnaissance, target research, phishing content and localization.",
+    "last_verified": "2026-09-30",
+    "sources": [
+      {
+        "title": "Adversarial Misuse of Generative AI",
+        "publisher": "Google Threat Intelligence Group",
+        "grade": "A",
+        "url": "https://cloud.google.com/blog/topics/threat-intelligence/adversarial-misuse-generative-ai"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-UNC2970",
+    "type": "actor",
+    "name": "UNC2970",
+    "aliases": [],
+    "nexus": "North Korea nexus",
+    "ai_role": [
+      "offensive-enabler"
+    ],
+    "confidence": "confirmed",
+    "summary": "GTIG reported Gemini use to synthesize OSINT and profile high-value targets for campaign planning and reconnaissance.",
+    "last_verified": "2026-09-30",
+    "sources": [
+      {
+        "title": "Distillation, Experimentation, and (Continued) Integration of AI for Adversarial Use",
+        "publisher": "Google Threat Intelligence Group",
+        "grade": "A",
+        "url": "https://cloud.google.com/blog/topics/threat-intelligence/distillation-experimentation-integration-ai-adversarial-use"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-KIMSUKY",
+    "type": "actor",
+    "name": "Kimsuky",
+    "aliases": [],
+    "nexus": "North Korea",
+    "ai_role": [
+      "local-analysis",
+      "offensive-enabler"
+    ],
+    "confidence": "high",
+    "summary": "Genians reported local LLM environments including Ollama, GPT4All and Msty plus RAG-related artifacts on infrastructure linked to Kimsuky, assessing the group as accumulating and integrating AI capability.",
+    "last_verified": "2026-09-30",
+    "sources": [
+      {
+        "title": "Kimsuky Integrates AI into Attack Operations, From AI-Generated Decoy Documents to a Local LLM",
+        "publisher": "Genians Security Center",
+        "grade": "A",
+        "url": "https://www.genians.co.kr/blog/threat_intelligence/kimsuky_ai_llm"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-FAMOUS-CHOLLIMA",
+    "type": "actor",
+    "name": "Famous Chollima",
+    "aliases": [
+      "Shifty Corsair"
+    ],
+    "nexus": "North Korea",
+    "ai_role": [
+      "ai-supply-chain-targeting",
+      "coding-agent-targeting"
+    ],
+    "confidence": "high",
+    "summary": "2026 reporting summarized by CSA attributes PromptMink to Famous Chollima and describes npm packages deliberately optimized to influence AI coding-agent dependency selection.",
+    "last_verified": "2026-09-30",
+    "sources": [
+      {
+        "title": "PromptMink: AI-Optimized DPRK Supply Chain Attack",
+        "publisher": "Cloud Security Alliance",
+        "grade": "B",
+        "url": "https://labs.cloudsecurityalliance.org/research/csa-research-note-promptmink-dprk-ai-generated-supply-chain/"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-TEAMPCP",
+    "type": "actor",
+    "name": "TeamPCP",
+    "aliases": [],
+    "nexus": "Unattributed",
+    "ai_role": [
+      "ai-infrastructure-targeting",
+      "supply-chain"
+    ],
+    "confidence": "confirmed",
+    "summary": "2026 supply-chain activity resulted in malicious LiteLLM releases and demonstrated the concentration of credentials and trust in AI gateways and CI/CD pipelines.",
+    "last_verified": "2026-09-30",
+    "sources": [
+      {
+        "title": "TeamPCP Isn't Done: Threat Actor Behind Trivy and KICS Compromises Now Hits LiteLLM",
+        "publisher": "Endor Labs",
+        "grade": "A",
+        "url": "https://www.endorlabs.com/learn/teampcp-isnt-done"
+      },
+      {
+        "title": "TeamPCP trojanizes LiteLLM",
+        "publisher": "Wiz",
+        "grade": "B",
+        "url": "https://www.wiz.io/blog/threes-a-crowd-teampcp-trojanizes-litellm-in-continuation-of-campaign"
+      }
+    ]
+  }
+]

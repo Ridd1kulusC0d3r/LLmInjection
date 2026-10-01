@@ -30,6 +30,12 @@ The repository models four distinct questions:
 | Frameworks | MITRE ATLAS, OWASP, NIST, Google SAIF, CSA MAESTRO, ENISA and classic threat modeling |
 | Evidence | Source quality, confidence, attribution and verification date |
 
+## Model family coverage
+
+The repository tracks model families as security-relevant assets, including **GPT / gpt-oss, Claude, Gemini, Gemma, Llama, Qwen, DeepSeek, Mistral, Grok, Kimi and GLM**. The catalog records deployment style and security surface rather than claiming that one vendor or release is universally "more secure".
+
+See [docs/MODEL-CATALOG.md](docs/MODEL-CATALOG.md) and [data/models.json](data/models.json).
+
 ## Frameworks beyond MITRE ATLAS
 
 LLMInjection treats frameworks according to what they actually do instead of pretending every standards document is a threat framework.
@@ -73,13 +79,15 @@ LLmInjection/
 │   ├── ACTOR-TRACKER.md
 │   ├── DETECTION-ENGINEERING.md
 │   ├── MODEL-SECURITY-MATRIX.md
+│   ├── MODEL-CATALOG.md
 │   ├── BENCHMARKS.md
 │   ├── SOURCE-GRADING.md
 │   └── ROADMAP.md
 ├── data/
 │   ├── frameworks.json
 │   ├── actors.json
-│   └── techniques.json
+│   ├── techniques.json
+│   └── models.json
 ├── references/
 │   └── community-corpora.md
 ├── schemas/

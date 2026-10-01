@@ -1,0 +1,59 @@
+name: New intelligence / correction
+description: Add a sourced AI/LLM threat-intelligence item or correct an existing one.
+title: "[intel] "
+labels: ["intelligence"]
+body:
+  - type: dropdown
+    id: type
+    attributes:
+      label: Record type
+      options:
+        - Threat actor
+        - Campaign
+        - Technique
+        - Incident
+        - Framework mapping
+        - Correction
+    validations:
+      required: true
+
+  - type: textarea
+    id: claim
+    attributes:
+      label: Claim
+      description: State the proposed fact or correction concisely.
+    validations:
+      required: true
+
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources
+      description: Prefer primary-source URLs and include publication dates.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: confidence
+    attributes:
+      label: Proposed confidence
+      options:
+        - confirmed
+        - high
+        - medium
+        - low
+        - unverified
+    validations:
+      required: true
+
+  - type: textarea
+    id: mapping
+    attributes:
+      label: Framework mappings
+      description: MITRE ATLAS/ATT&CK, OWASP, NIST, SAIF, MAESTRO, etc.
+
+  - type: textarea
+    id: detection
+    attributes:
+      label: Defensive relevance
+      description: Telemetry, detection hypothesis, mitigation or control.
