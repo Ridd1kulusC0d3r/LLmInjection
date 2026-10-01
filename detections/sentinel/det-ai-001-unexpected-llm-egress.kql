@@ -1,0 +1,8 @@
+// DET-AI-001 — Unexpected LLM Provider Egress
+// Adapt ApprovedAIWorkloads to your CMDB / workload inventory.
+let ApprovedAIWorkloads = dynamic(["replace-with-approved-host"]);
+DeviceNetworkEvents
+| where RemoteUrl has_any ("api.openai.com", "api.anthropic.com", "generativelanguage.googleapis.com")
+| where DeviceName !in~ (ApprovedAIWorkloads)
+| project Timestamp, DeviceName, InitiatingProcessFileName, InitiatingProcessCommandLine, RemoteUrl, RemoteIP
+| order by Timestamp desc
