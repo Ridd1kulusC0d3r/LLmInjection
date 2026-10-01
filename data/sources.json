@@ -308,5 +308,45 @@
     "role": "security-advisory",
     "url": "https://github.com/aquasecurity/trivy/security/advisories/GHSA-mcj4-mphf-j9ff",
     "last_verified": "2026-09-30"
+  },
+  {
+    "id": "SRC-SLSA-12",
+    "type": "source",
+    "name": "SLSA Specification v1.2",
+    "publisher": "SLSA",
+    "grade": "A",
+    "role": "supply-chain-provenance-standard",
+    "url": "https://slsa.dev/spec/v1.2/",
+    "last_verified": "2026-09-30"
+  },
+  {
+    "id": "SRC-SIGSTORE-COSIGN",
+    "type": "source",
+    "name": "Sigstore Cosign Signing and Verification",
+    "publisher": "Sigstore",
+    "grade": "A",
+    "role": "artifact-signing",
+    "url": "https://docs.sigstore.dev/quickstart/quickstart-cosign/",
+    "last_verified": "2026-09-30"
+  },
+  {
+    "id": "SRC-OPENSSF-MALICIOUS",
+    "type": "source",
+    "name": "OpenSSF Malicious Packages",
+    "publisher": "OpenSSF",
+    "grade": "A",
+    "role": "malicious-package-feed",
+    "url": "https://github.com/ossf/malicious-packages",
+    "last_verified": "2026-09-30"
+  },
+  {
+    "id": "SRC-PURPLELLAMA",
+    "type": "source",
+    "name": "Purple Llama / CyberSecEval",
+    "publisher": "Meta",
+    "grade": "A",
+    "role": "security-evaluation",
+    "url": "https://github.com/meta-llama/PurpleLlama",
+    "last_verified": "2026-09-30"
   }
 ]
