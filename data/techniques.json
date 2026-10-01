@@ -406,7 +406,15 @@
       "MITRE ATLAS",
       "CSA MAESTRO"
     ],
-    "external_mappings": []
+    "external_mappings": [
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0124",
+        "name": "Autonomous Attack Orchestration",
+        "relation": "exact",
+        "url": "https://atlas.mitre.org/techniques/AML.T0124"
+      }
+    ]
   },
   {
     "id": "LLMI-T016",
