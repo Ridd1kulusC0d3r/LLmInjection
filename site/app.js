@@ -1,5 +1,5 @@
 const state={graph:null,landscape:null,search:"",type:"",confidence:""};
-const colors={actor:"#ff7c8c",campaign:"#f3c969",incident:"#e98bff",technique:"#6ea8ff",model:"#43d7ff",framework:"#9f8cff","test-case":"#55d98d",control:"#6ed5b0",detection:"#ffae6e",source:"#71839e"};
+const colors={actor:"#ff7c8c",campaign:"#f3c969",incident:"#e98bff",technique:"#6ea8ff",model:"#43d7ff",framework:"#9f8cff","test-case":"#55d98d",control:"#6ed5b0",detection:"#ffae6e",source:"#71839e",vulnerability:"#ff5b8d"};
 
 async function load(){
   const [g,l]=await Promise.all([fetch("graph.json").then(r=>r.json()),fetch("landscape.json").then(r=>r.json())]);
@@ -67,7 +67,7 @@ function renderCoverage(){
   document.querySelector("#coverageTable").innerHTML="<thead><tr><th>Technique</th><th>Tests</th><th>Detections</th><th>Controls</th></tr></thead><tbody>"+techniques.map(n=>{const c=edgeCounts(n.id);return`<tr onclick="openNode('${n.id}')"><td><b>${esc(n.label)}</b><br><span class="muted">${esc(n.id)}</span></td><td>${c.tests.length}</td><td>${c.detections.length}</td><td>${c.controls.length}</td></tr>`}).join("")+"</tbody>";
 }
 function renderTimeline(){
-  const items=visibleNodes().filter(n=>["campaign","incident"].includes(n.type)).map(n=>({n,date:n.data.first_seen||n.data.date||n.data.last_seen||"unknown"})).sort((a,b)=>String(b.date).localeCompare(String(a.date)));
+  const items=visibleNodes().filter(n=>["campaign","incident","vulnerability"].includes(n.type)).map(n=>({n,date:n.data.first_seen||n.data.date||n.data.published||n.data.last_seen||"unknown"})).sort((a,b)=>String(b.date).localeCompare(String(a.date)));
   document.querySelector("#timelineList").innerHTML=items.map(({n,date})=>`<div class="timeline-item" onclick="openNode('${n.id}')"><div class="date">${esc(date)}</div><h3>${esc(n.label)}</h3><div class="meta">${esc(n.type)} · ${esc(n.data.confidence||n.data.status||"")}</div><p>${esc(n.data.summary||"")}</p></div>`).join("");
 }
 function renderSources(){
