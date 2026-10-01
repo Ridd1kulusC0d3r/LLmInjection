@@ -123,7 +123,7 @@ def stix_type_for(node: dict) -> str:
     return {
         "actor": "threat-actor",
         "campaign": "campaign",
-        "incident": "incident",
+        "incident": "x-llminjection-incident",
         "technique": "attack-pattern",
         "control": "course-of-action",
         "model": "x-llminjection-model",
@@ -151,6 +151,29 @@ def stix_object(node: dict) -> dict:
         obj["description"] = description
     if st == "threat-actor":
         obj["threat_actor_types"] = ["unknown"]
+    if st == "vulnerability":
+        refs = []
+        for identifier in data.get("identifiers", []):
+            if identifier.startswith("CVE-"):
+                refs.append({
+                    "source_name": "cve",
+                    "external_id": identifier,
+                    "url": f"https://www.cve.org/CVERecord?id={identifier}",
+                })
+            elif identifier.startswith("GHSA-"):
+                refs.append({
+                    "source_name": "ghsa",
+                    "external_id": identifier,
+                    "url": f"https://github.com/advisories/{identifier}",
+                })
+            elif identifier.startswith("MAL-"):
+                refs.append({
+                    "source_name": "osv",
+                    "external_id": identifier,
+                    "url": f"https://osv.dev/vulnerability/{identifier}",
+                })
+        if refs:
+            obj["external_references"] = refs
     return obj
 
 def write_stix(g: dict) -> None:
