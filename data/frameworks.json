@@ -16,12 +16,23 @@
     "use": "Surrounding intrusion behavior for AI-enabled campaigns"
   },
   {
+    "id": "FRAMEWORK-OWASP-LLM-2026",
+    "name": "OWASP Top 10 for LLM Applications 2026",
+    "category": "application-risk",
+    "scope": "Current LLM and GenAI application risk ordering and mitigations",
+    "url": "https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/",
+    "use": "Current application-layer risk mapping",
+    "status": "current",
+    "release_date": "2026-08-04"
+  },
+  {
     "id": "FRAMEWORK-OWASP-LLM-2025",
     "name": "OWASP Top 10 for LLM Applications 2025",
     "category": "application-risk",
     "scope": "LLM and GenAI application risks",
     "url": "https://genai.owasp.org/llm-top-10/",
-    "use": "Application-layer risk mapping"
+    "use": "Application-layer risk mapping",
+    "status": "historical"
   },
   {
     "id": "FRAMEWORK-OWASP-AGENTIC-2026",
