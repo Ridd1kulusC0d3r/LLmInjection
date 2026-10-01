@@ -1,0 +1,60 @@
+name: Deploy AI Threat Intelligence Explorer
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "site/**"
+      - "data/**"
+      - "scripts/build_graph.py"
+      - ".github/workflows/pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate intelligence
+        run: python scripts/validate_intel.py
+      - name: Build graph exports
+        run: python scripts/build_graph.py
+      - name: Assemble static site
+        run: |
+          mkdir -p _site
+          cp -R site/. _site/
+          cp dist/graph.json _site/graph.json
+          cp dist/graph.graphml _site/graph.graphml
+          cp dist/llminjection-stix.json _site/llminjection-stix.json
+          cp data/threat-landscape-2026.json _site/landscape.json
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
