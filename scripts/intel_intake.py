@@ -146,14 +146,16 @@ def parse_atlas_added_items(body: str) -> list[tuple[str, str]]:
         if line.startswith("#"):
             current = None
             continue
-        matched_header = False
+
+        selected = None
         for heading, kind in mapping.items():
             if heading in lower:
-                current = kind
-                matched_header = True
+                selected = kind
                 break
-        if matched_header:
+        if selected:
+            current = selected
             continue
+
         if current and (
             "updated existing" in lower
             or "removed " in lower
@@ -162,10 +164,12 @@ def parse_atlas_added_items(body: str) -> list[tuple[str, str]]:
         ):
             current = None
             continue
+
         if current and line.startswith(("* ", "- ")):
             title = line[2:].strip()
             if title and not title.lower().startswith(("added ", "updated ", "removed ")):
                 found.append((current, title))
+
     return found
 
 
@@ -272,12 +276,18 @@ def candidates_from_feed(feed: dict, payload: Any) -> list[dict]:
     return out
 
 
-def render_report(feeds: list[dict], new_items: list[dict], queue: dict, failures: list[str]) -> str:
+def render_report(
+    feeds: list[dict],
+    new_items: list[dict],
+    queue: dict,
+    failures: list[str],
+    run_time: str,
+) -> str:
     active = sum(1 for feed in feeds if feed.get("enabled"))
     lines = [
         "# Living Intelligence Intake",
         "",
-        f"- Run: {queue['meta']['last_run']}",
+        f"- Run: {run_time}",
         f"- Enabled feeds: **{active}**",
         f"- New candidates: **{len(new_items)}**",
         f"- Queue size: **{len(queue['items'])}**",
@@ -286,6 +296,7 @@ def render_report(feeds: list[dict], new_items: list[dict], queue: dict, failure
         "## New candidates",
         "",
     ]
+
     if not new_items:
         lines.append("No new candidates were discovered.")
     else:
@@ -309,10 +320,12 @@ def render_report(feeds: list[dict], new_items: list[dict], queue: dict, failure
                     "",
                 ]
             )
+
     if failures:
         lines.extend(["## Feed failures", ""])
         lines.extend(f"- {failure}" for failure in failures)
         lines.append("")
+
     lines.extend(
         [
             "## Promotion policy",
@@ -330,6 +343,7 @@ def main() -> int:
     parser.add_argument("--queue", default=str(DEFAULT_QUEUE))
     parser.add_argument("--report", default=str(ROOT / "reports" / "intake" / "latest.md"))
     parser.add_argument("--fixture", help="JSON object keyed by feed ID; disables network fetching")
+    parser.add_argument("--summary-json", help="Optional machine-readable run summary")
     parser.add_argument("--dry-run", action="store_true", help="Do not overwrite the queue")
     args = parser.parse_args()
 
@@ -355,7 +369,10 @@ def main() -> int:
         except Exception as exc:
             failures.append(f"{feed['id']}: {type(exc).__name__}: {exc}")
 
-    queue["meta"]["last_run"] = utc_now()
+    run_time = utc_now()
+    if new_items:
+        queue["meta"]["last_run"] = run_time
+
     queue["items"] = sorted(
         existing.values(),
         key=lambda item: (
@@ -368,10 +385,22 @@ def main() -> int:
 
     report_path = Path(args.report)
     report_path.parent.mkdir(parents=True, exist_ok=True)
-    report_path.write_text(render_report(feeds_doc["feeds"], new_items, queue, failures), encoding="utf-8")
+    report_path.write_text(
+        render_report(feeds_doc["feeds"], new_items, queue, failures, run_time),
+        encoding="utf-8",
+    )
 
     if not args.dry_run:
         write_json(queue_path, queue)
+
+    summary = {
+        "run_time": run_time,
+        "new_count": len(new_items),
+        "queue_count": len(queue["items"]),
+        "failure_count": len(failures),
+    }
+    if args.summary_json:
+        write_json(Path(args.summary_json), summary)
 
     print(
         f"Living intelligence intake complete: feeds={len(feeds_doc['feeds'])}, "
