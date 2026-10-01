@@ -1,0 +1,205 @@
+[
+  {
+    "id": "CTRL-POLICY-OUTSIDE-MODEL",
+    "type": "control",
+    "name": "External Policy Enforcement",
+    "category": "authorization",
+    "description": "Enforce security policy outside the model so generated text cannot self-authorize privileged actions.",
+    "source_ids": [
+      "SRC-OWASP-ACS"
+    ]
+  },
+  {
+    "id": "CTRL-INSTRUCTION-DATA-SEPARATION",
+    "type": "control",
+    "name": "Instruction / Data Separation",
+    "category": "prompt-context",
+    "description": "Preserve provenance and trust boundaries between control instructions and untrusted content.",
+    "source_ids": [
+      "SRC-OWASP-LLM-2026"
+    ]
+  },
+  {
+    "id": "CTRL-TOOL-ALLOWLIST",
+    "type": "control",
+    "name": "Tool Capability Allowlist",
+    "category": "agentic",
+    "description": "Allow only explicitly approved tools and capabilities for an agent identity.",
+    "source_ids": [
+      "SRC-OWASP-AGENTIC-2026",
+      "SRC-OWASP-ACS"
+    ]
+  },
+  {
+    "id": "CTRL-CONTEXTUAL-AUTHZ",
+    "type": "control",
+    "name": "Contextual Tool Authorization",
+    "category": "authorization",
+    "description": "Evaluate identity, requested capability, resource and context before each tool action.",
+    "source_ids": [
+      "SRC-OWASP-ACS",
+      "SRC-MCP-SECURITY-2026"
+    ]
+  },
+  {
+    "id": "CTRL-HUMAN-CHECKPOINT",
+    "type": "control",
+    "name": "Human Checkpoint for High-Impact Actions",
+    "category": "agentic",
+    "description": "Require explicit approval before high-impact or irreversible actions.",
+    "source_ids": [
+      "SRC-OWASP-AGENTIC-2026"
+    ]
+  },
+  {
+    "id": "CTRL-MEMORY-PROVENANCE",
+    "type": "control",
+    "name": "Memory Provenance and Scope",
+    "category": "memory",
+    "description": "Track source, scope, expiry and review state for persistent agent memory.",
+    "source_ids": [
+      "SRC-OWASP-AGENTIC-2026"
+    ]
+  },
+  {
+    "id": "CTRL-RAG-PROVENANCE",
+    "type": "control",
+    "name": "RAG Source Provenance",
+    "category": "rag",
+    "description": "Record trust and origin of retrieved documents and preserve that metadata through inference.",
+    "source_ids": [
+      "SRC-GOOGLE-SAIF"
+    ]
+  },
+  {
+    "id": "CTRL-OUTPUT-SANITIZATION",
+    "type": "control",
+    "name": "Untrusted Output Handling",
+    "category": "application",
+    "description": "Encode, validate or sanitize model output before downstream interpretation or rendering.",
+    "source_ids": [
+      "SRC-OWASP-LLM-2026"
+    ]
+  },
+  {
+    "id": "CTRL-EGRESS-POLICY",
+    "type": "control",
+    "name": "AI Egress Policy",
+    "category": "network",
+    "description": "Restrict and monitor network access to model providers and AI gateways by workload identity.",
+    "source_ids": [
+      "SRC-GOOGLE-SAIF"
+    ]
+  },
+  {
+    "id": "CTRL-AI-INVENTORY",
+    "type": "control",
+    "name": "AI Asset and Service Inventory",
+    "category": "governance",
+    "description": "Maintain inventory of models, runtimes, agents, gateways, MCP servers and external providers.",
+    "source_ids": [
+      "SRC-CSA-AICM-11"
+    ]
+  },
+  {
+    "id": "CTRL-ARTIFACT-PINNING",
+    "type": "control",
+    "name": "Artifact Digest Pinning",
+    "category": "supply-chain",
+    "description": "Pin model, package and deployment artifacts to approved immutable digests.",
+    "source_ids": [
+      "SRC-CYCLONEDX-MLBOM"
+    ]
+  },
+  {
+    "id": "CTRL-SIGNATURE-VERIFICATION",
+    "type": "control",
+    "name": "Artifact Signature Verification",
+    "category": "supply-chain",
+    "description": "Verify trusted publisher identity and artifact integrity before promotion or execution.",
+    "source_ids": [
+      "SRC-CYCLONEDX-MLBOM"
+    ]
+  },
+  {
+    "id": "CTRL-DEPENDENCY-POLICY",
+    "type": "control",
+    "name": "Dependency Admission Policy",
+    "category": "supply-chain",
+    "description": "Require provenance, approved registries and review before dependencies suggested by automation are installed.",
+    "source_ids": [
+      "SRC-CYCLONEDX-MLBOM"
+    ]
+  },
+  {
+    "id": "CTRL-MCP-TOKEN-AUDIENCE",
+    "type": "control",
+    "name": "MCP Token Audience Validation",
+    "category": "mcp",
+    "description": "Validate that access tokens were issued for the MCP server receiving them; prohibit token passthrough.",
+    "source_ids": [
+      "SRC-MCP-SECURITY-2026"
+    ]
+  },
+  {
+    "id": "CTRL-MCP-CONSENT",
+    "type": "control",
+    "name": "MCP Explicit User Consent",
+    "category": "mcp",
+    "description": "Require clear user consent before connecting servers or invoking consequential tools.",
+    "source_ids": [
+      "SRC-MCP-SECURITY-2026"
+    ]
+  },
+  {
+    "id": "CTRL-MCP-STATE-BINDING",
+    "type": "control",
+    "name": "MCP State Handle Binding",
+    "category": "mcp",
+    "description": "Bind server-side state handles to verified identities and re-authorize every use.",
+    "source_ids": [
+      "SRC-MCP-SECURITY-2026"
+    ]
+  },
+  {
+    "id": "CTRL-AIML-BOM",
+    "type": "control",
+    "name": "AI/ML Bill of Materials",
+    "category": "supply-chain",
+    "description": "Track models, datasets, configurations and dependencies using AI/ML-BOM-capable formats.",
+    "source_ids": [
+      "SRC-CYCLONEDX-MLBOM"
+    ]
+  },
+  {
+    "id": "CTRL-SECRET-ISOLATION",
+    "type": "control",
+    "name": "Secret Isolation",
+    "category": "identity",
+    "description": "Keep model/provider credentials outside prompts and minimize which agents can access them.",
+    "source_ids": [
+      "SRC-CSA-AICM-11"
+    ]
+  },
+  {
+    "id": "CTRL-ACTION-BUDGET",
+    "type": "control",
+    "name": "Agent Action and Resource Budgets",
+    "category": "availability",
+    "description": "Apply hard limits to iterations, tool calls, tokens, time and cost.",
+    "source_ids": [
+      "SRC-OWASP-LLM-2026",
+      "SRC-OWASP-AGENTIC-2026"
+    ]
+  },
+  {
+    "id": "CTRL-AGENT-TELEMETRY",
+    "type": "control",
+    "name": "Agent Decision and Action Telemetry",
+    "category": "observability",
+    "description": "Log identity, plan step, capability request, authorization result and side effect for agent actions.",
+    "source_ids": [
+      "SRC-OWASP-ACS"
+    ]
+  }
+]
