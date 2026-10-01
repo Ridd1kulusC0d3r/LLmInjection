@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use LLMInjection in research, threat intelligence, detection engineering or training, please cite the repository."
+title: "LLMInjection: AI / LLM Cyber Threat Intelligence"
+type: dataset
+authors:
+  - family-names: "Ridd1kulusC0d3r"
+repository-code: "https://github.com/Ridd1kulusC0d3r/LLmInjection"
+url: "https://github.com/Ridd1kulusC0d3r/LLmInjection"
+license: "Apache-2.0"
+keywords:
+  - ai-security
+  - llm-security
+  - threat-intelligence
+  - prompt-injection
+  - adversarial-ml
+  - agentic-ai
+  - mitre-atlas
+  - owasp
+  - threat-modeling
