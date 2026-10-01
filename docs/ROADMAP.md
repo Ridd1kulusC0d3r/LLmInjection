@@ -29,8 +29,8 @@ The goal is a **living AI cyber threat-intelligence platform**, not a static awe
 - [x] STIX 2.1 export
 - [x] canonical source IDs
 - [x] referential-integrity CI
-- [ ] exact MITRE ATLAS + ATT&CK IDs for every defensible technique
-- [ ] CVE/GHSA/OSV enrichment for applicable supply-chain incidents
+- [x] exact/related MITRE ATLAS + ATT&CK + OWASP IDs where defensible
+- [x] initial CVE/GHSA/OSV enrichment for applicable AI/supply-chain incidents
 - [ ] attribution/confidence changelog
 
 ## v0.3 — Threat graph ✅ foundation
