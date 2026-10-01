@@ -14,7 +14,7 @@ API=DIST/"api"/"v1"
 FILES=[
     "actors.json","campaigns.json","incidents.json","techniques.json","models.json",
     "frameworks.json","test-cases.json","controls.json","detections.json","sources.json",
-    "relationships.json","vulnerabilities.json","threat-landscape-2026.json",
+    "relationships.json","vulnerabilities.json","threat-landscape-2026.json",\n    "dataset-manifest.json","contributors.json",
 ]
 
 def load(path):
@@ -28,7 +28,12 @@ def main():
         dst=API/filename
         shutil.copyfile(src,dst)
         obj=load(src)
-        count=len(obj) if isinstance(obj,list) else len(obj.get("key_metrics",[]))
+        if isinstance(obj,list):
+            count=len(obj)
+        elif filename=="threat-landscape-2026.json":
+            count=len(obj.get("key_metrics",[]))
+        else:
+            count=1
         endpoints.append({"name":filename.removesuffix(".json"),"path":filename,"records":count})
 
     for filename in ("graph.json","llminjection-stix.json"):
