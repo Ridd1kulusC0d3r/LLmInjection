@@ -31,7 +31,7 @@ The goal is a **living AI cyber threat-intelligence platform**, not a static awe
 - [x] referential-integrity CI
 - [x] exact/related MITRE ATLAS + ATT&CK + OWASP IDs where defensible
 - [x] initial CVE/GHSA/OSV enrichment for applicable AI/supply-chain incidents
-- [ ] attribution/confidence changelog
+- [x] attribution/confidence changelog
 
 ## v0.3 — Threat graph ✅ foundation
 
@@ -78,20 +78,22 @@ The goal is a **living AI cyber threat-intelligence platform**, not a static awe
 - [x] artifact pinning/signature/dependency controls
 - [x] CycloneDX and Sigstore references
 - [ ] automated OSV/GHSA enrichment
-- [ ] signed release manifests
+- [x] provenance-attested release archives with SHA-256
 - [ ] generated AI/ML-BOM for LLMInjection releases
 
 ## v1.0 — Community CTI platform
 
 - [x] API-friendly JSON datasets
+- [x] versioned static JSON API builder
 - [x] graph/STIX/GraphML generation
 - [x] interactive public explorer workflow
 - [x] source freshness checks
-- [ ] versioned signed data releases
-- [ ] stable schema guarantee
-- [ ] contributor attribution ledger
+- [x] versioned dataset manifest
+- [x] provenance-attested tagged data-release pipeline
+- [x] contributor attribution ledger
+- [x] public methodology
+- [ ] promote schema from beta to stable guarantee
 - [ ] TAXII publishing endpoint
-- [ ] public methodology paper
 
 ## North star
 

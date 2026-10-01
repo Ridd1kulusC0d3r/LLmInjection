@@ -46,6 +46,8 @@ def validate():
     errors: list[str] = []
     datasets = {name: load_json(ROOT / "data" / filename) for name, filename in LIST_DATASETS.items()}
     landscape = load_json(ROOT / "data" / "threat-landscape-2026.json")
+    manifest = load_json(ROOT / "data" / "dataset-manifest.json")
+    contributors = load_json(ROOT / "data" / "contributors.json")
     seen: set[str] = set()
     index: dict[str, tuple[str, dict]] = {}
 
@@ -189,6 +191,24 @@ def validate():
             if source_id not in index or index[source_id][0] != "sources":
                 errors.append(f"{prefix}: unknown evidence source {source_id}")
 
+    if not isinstance(manifest, dict):
+        errors.append("dataset-manifest: root must be an object")
+    else:
+        if not manifest.get("schema_version"):
+            errors.append("dataset-manifest: missing schema_version")
+        if not valid_date(manifest.get("snapshot")):
+            errors.append("dataset-manifest: invalid snapshot date")
+        for filename in manifest.get("datasets", []):
+            if not (ROOT / "data" / filename).exists():
+                errors.append(f"dataset-manifest: missing dataset {filename}")
+
+    if not isinstance(contributors, list) or not contributors:
+        errors.append("contributors: root must be a non-empty array")
+    else:
+        for i, contributor in enumerate(contributors):
+            if not contributor.get("github") or not contributor.get("roles"):
+                errors.append(f"contributors[{i}]: github and roles are required")
+
     if not isinstance(landscape, dict):
         errors.append("threat-landscape-2026: root must be a JSON object")
     else:
@@ -214,7 +234,7 @@ def validate():
 
     counts = ", ".join(f"{name}={len(records)}" for name, records in datasets.items())
     landscape_metrics = len(landscape.get("key_metrics", [])) if isinstance(landscape, dict) else 0
-    print(f"LLMInjection intelligence validation OK: {counts}, landscape-metrics={landscape_metrics}")
+    print(f"LLMInjection intelligence validation OK: {counts}, landscape-metrics={landscape_metrics}, schema={manifest.get('schema_version', 'unknown')}")
     return 0
 
 if __name__ == "__main__":

@@ -1,0 +1,34 @@
+{
+  "name": "LLMInjection Intelligence Dataset",
+  "schema_version": "1.0.0-beta.1",
+  "snapshot": "2026-09-30",
+  "status": "beta",
+  "license": "Apache-2.0",
+  "methodology": "docs/METHODOLOGY.md",
+  "datasets": [
+    "actors.json",
+    "campaigns.json",
+    "incidents.json",
+    "techniques.json",
+    "models.json",
+    "frameworks.json",
+    "test-cases.json",
+    "controls.json",
+    "detections.json",
+    "sources.json",
+    "relationships.json",
+    "vulnerabilities.json",
+    "threat-landscape-2026.json"
+  ],
+  "exports": [
+    "graph.json",
+    "graph.graphml",
+    "llminjection-stix.json"
+  ],
+  "compatibility": {
+    "stix": "2.1",
+    "graphml": "1.0",
+    "static_api": "v1"
+  },
+  "maintainer": "Ridd1kulusC0d3r"
+}
