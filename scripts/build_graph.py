@@ -25,6 +25,7 @@ DATASETS = {
     "control": "controls.json",
     "detection": "detections.json",
     "source": "sources.json",
+    "vulnerability": "vulnerabilities.json",
 }
 NAMESPACE = uuid.UUID("b2f8bf4d-a6bf-4a9a-99d6-3a08e49fdc2b")
 
@@ -130,6 +131,7 @@ def stix_type_for(node: dict) -> str:
         "test-case": "x-llminjection-test-case",
         "detection": "x-llminjection-detection",
         "source": "x-llminjection-source",
+        "vulnerability": "vulnerability",
     }.get(node["type"], "x-llminjection-object")
 
 def stix_object(node: dict) -> dict:
