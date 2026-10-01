@@ -1,0 +1,55 @@
+name: Publish intelligence data release
+
+on:
+  push:
+    tags:
+      - "data-v*"
+
+permissions:
+  contents: write
+  id-token: write
+  attestations: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate intelligence
+        run: python scripts/validate_intel.py
+
+      - name: Build graph exports
+        run: python scripts/build_graph.py
+
+      - name: Build static API
+        run: python scripts/build_api.py
+
+      - name: Build release package
+        id: package
+        shell: bash
+        run: |
+          python scripts/build_release.py
+          ARCHIVE="$(find dist/releases -maxdepth 1 -type f -name '*.zip' | head -n 1)"
+          if [ -z "$ARCHIVE" ]; then
+            echo "release archive was not created" >&2
+            exit 1
+          fi
+          echo "archive=$ARCHIVE" >> "$GITHUB_OUTPUT"
+
+      - name: Generate signed build provenance
+        uses: actions/attest@v4
+        with:
+          subject-path: ${{ steps.package.outputs.archive }}
+
+      - name: Publish GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME"             dist/releases/*.zip             dist/releases/*.sha256             --verify-tag             --generate-notes             --title "LLMInjection Intelligence $GITHUB_REF_NAME"
