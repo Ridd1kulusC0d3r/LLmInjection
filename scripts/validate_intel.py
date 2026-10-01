@@ -24,6 +24,7 @@ LIST_DATASETS = {
     "controls": "controls.json",
     "detections": "detections.json",
     "sources": "sources.json",
+    "vulnerabilities": "vulnerabilities.json",
     "relationships": "relationships.json",
 }
 
@@ -103,11 +104,24 @@ def validate():
         if not valid_date(source.get("last_verified")):
             errors.append(f"{prefix}: invalid last_verified")
 
-    for dataset_name in ("campaigns", "incidents", "controls"):
+    for dataset_name in ("campaigns", "incidents", "controls", "vulnerabilities"):
         for i, record in enumerate(datasets[dataset_name]):
             for source_id in record.get("source_ids", []):
                 if source_id not in index or index[source_id][0] != "sources":
                     errors.append(f"{dataset_name}[{i}]: unknown source_id {source_id}")
+
+    for i, vuln in enumerate(datasets["vulnerabilities"]):
+        prefix = f"vulnerabilities[{i}]"
+        if vuln.get("type") != "vulnerability":
+            errors.append(f"{prefix}: type must be vulnerability")
+        if vuln.get("confidence") not in CONFIDENCE:
+            errors.append(f"{prefix}: invalid confidence")
+        if not vuln.get("identifiers"):
+            errors.append(f"{prefix}: identifiers must not be empty")
+        if not valid_date(vuln.get("published")):
+            errors.append(f"{prefix}: invalid published date")
+        if not vuln.get("package") or not vuln.get("summary"):
+            errors.append(f"{prefix}: package and summary are required")
 
     for i, technique in enumerate(datasets["techniques"]):
         prefix = f"techniques[{i}]"
