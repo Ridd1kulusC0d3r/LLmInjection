@@ -17,7 +17,7 @@ This library prioritizes **canonical standards, primary threat reports, maintain
 | [CSA MAESTRO](https://labs.cloudsecurityalliance.org/maestro/) | Multi-agent and agentic threat modeling |
 | [CSA AI Controls Matrix v1.1](https://cloudsecurityalliance.org/blog/2026/07/14/ai-controls-matrix-v1-1-strengthening-the-foundation-for-trustworthy-ai) | AI control framework with dedicated model-security coverage |
 | [MCP specification and security guidance](https://github.com/modelcontextprotocol/modelcontextprotocol) | Protocol trust boundaries, authorization and security best practices |
-| [CycloneDX AI/ML-BOM](https://www.cyclonedx.org/capabilities/mlbom/) | Model/dataset/dependency supply-chain transparency |
+| [CycloneDX AI/ML-BOM](https://www.cyclonedx.org/capabilities/mlbom/) | Model/dataset/dependency supply-chain transparency |\n| [SLSA v1.2](https://slsa.dev/spec/v1.2/) | Build/source provenance and supply-chain assurance |\n| [Sigstore / Cosign](https://docs.sigstore.dev/quickstart/quickstart-cosign/) | Artifact signing, identity and verification |\n| [OpenSSF Malicious Packages](https://github.com/ossf/malicious-packages) | OSV-formatted malicious package intelligence |
 | [STIX 2.1](https://docs.oasis-open.org/cti/stix/v2.1/os/stix-v2.1-os.html) | CTI interchange format |
 
 ## Defensive evaluation tooling
@@ -29,7 +29,7 @@ This library prioritizes **canonical standards, primary threat reports, maintain
 | [JailbreakBench](https://github.com/JailbreakBench/jailbreakbench) | Jailbreak robustness benchmark |
 | [Adversarial Robustness Toolbox](https://github.com/Trusted-AI/adversarial-robustness-toolbox) | Adversarial ML evaluation |
 | [TextAttack](https://github.com/QData/TextAttack) | Adversarial NLP experimentation |
-| [Model Context Protocol Inspector](https://github.com/modelcontextprotocol/inspector) | Protocol inspection and development support |
+| [Model Context Protocol Inspector](https://github.com/modelcontextprotocol/inspector) | Protocol inspection and development support |\n| [Purple Llama / CyberSecEval](https://github.com/meta-llama/PurpleLlama) | Cybersecurity, prompt-injection and autonomous-operation evaluation suites |
 | [Sigstore Cosign](https://github.com/sigstore/cosign) | Artifact signing and verification |
 
 ## Primary threat and landscape sources
