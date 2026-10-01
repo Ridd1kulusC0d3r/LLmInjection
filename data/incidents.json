@@ -1,0 +1,67 @@
+[
+  {
+    "id": "INCIDENT-CLOSEDQUORUM",
+    "type": "incident",
+    "name": "CLOSEDQUORUM autonomous AI C2 research case",
+    "kind": "research-artifact",
+    "status": "not-confirmed-in-the-wild",
+    "confidence": "confirmed",
+    "date": "2026",
+    "summary": "Cisco Talos described an autonomous AI C2 implant design while explicitly stating that in-the-wild deployment was not confirmed.",
+    "source_ids": [
+      "SRC-CISCO-CLOSEDQUORUM"
+    ]
+  },
+  {
+    "id": "INCIDENT-VOIDLINK",
+    "type": "incident",
+    "name": "VoidLink AI-assisted malware engineering case",
+    "kind": "observed-research-case",
+    "status": "observed",
+    "confidence": "confirmed",
+    "date": "2026",
+    "summary": "Check Point Research linked a large functional malware framework to a developer using an AI coding environment in under a week.",
+    "source_ids": [
+      "SRC-CHECKPOINT-VOIDLINK"
+    ]
+  },
+  {
+    "id": "INCIDENT-MASTRA-STARDUST",
+    "type": "incident",
+    "name": "STARDUST CHOLLIMA Mastra AI package compromise",
+    "kind": "supply-chain",
+    "status": "observed",
+    "confidence": "confirmed",
+    "date": "2026",
+    "summary": "CrowdStrike reported a malicious npm dependency injected into at least 131 Mastra AI framework packages.",
+    "source_ids": [
+      "SRC-CROWDSTRIKE-THR2026"
+    ]
+  },
+  {
+    "id": "INCIDENT-UNIT42-SAFETY-CIRCUITS",
+    "type": "incident",
+    "name": "Qwen3-4B safety-circuit perturbation research",
+    "kind": "defensive-research",
+    "status": "research",
+    "confidence": "confirmed",
+    "date": "2026",
+    "summary": "Unit 42 reported concentrated refusal-related behavior in a specific Qwen3-4B experiment, reinforcing the need for external system controls.",
+    "source_ids": [
+      "SRC-UNIT42-PERTURBATION"
+    ]
+  },
+  {
+    "id": "INCIDENT-PROMPTWARE-KILLCHAIN",
+    "type": "incident",
+    "name": "Promptware Kill Chain research model",
+    "kind": "research-framework",
+    "status": "research",
+    "confidence": "confirmed",
+    "date": "2026",
+    "summary": "Academic work proposed a multi-stage lifecycle model for attacks against LLM-based systems.",
+    "source_ids": [
+      "SRC-PROMPTWARE-PAPER"
+    ]
+  }
+]
