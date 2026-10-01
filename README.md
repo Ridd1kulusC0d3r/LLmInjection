@@ -49,9 +49,39 @@ LLMInjection connects <strong>threat actors, campaigns, prompt injection, agent 
 
 > **LLMInjection is not a prompt dump.** The project is structured as cyber threat intelligence: every meaningful claim should have evidence, confidence, last-verification date, framework context and defensive relevance.
 
-**Graph layer:** 7 campaigns · 5 incident/research cases · 6 CVE/GHSA/malicious-package records · 10 detection hypotheses · 20 controls · 35 curated sources · 52 explicit evidence-backed relationships.
+**Graph layer:** 7 campaigns · 5 incident/research cases · 6 CVE/GHSA/malicious-package records · 10 detection hypotheses · 20 controls · 36 curated sources · 52 explicit evidence-backed relationships.
 
-**Exports:** `graph.json` · GraphML · STIX 2.1 · `/api/v1/` static JSON API · provenance-attested tagged releases · interactive GitHub Pages Explorer.
+**Exports:** `graph.json` · GraphML · STIX 2.1 · `/api/v1/` static JSON API · current snapshot/diff · provenance-attested tagged releases · interactive GitHub Pages Explorer.
+
+---
+
+# Living Intelligence
+
+LLMInjection now has a **review-gated living-intelligence pipeline** instead of depending on occasional manual bulk updates.
+
+```text
+MITRE ATLAS · OWASP · MCP · GitHub Advisories · CISA KEV
+                         ↓
+                 automated collection
+                         ↓
+                 research-queue.json
+                         ↓
+                    analyst review
+                         ↓
+              structured intelligence
+                         ↓
+                Graph / STIX / API
+                         ↓
+                monthly snapshot
+                         ↓
+                entity-level diff
+                         ↓
+             Explorer · What's New
+```
+
+The daily collector **cannot auto-create attribution, incidents, CVE relationships or framework mappings**. It only creates review candidates. Monthly automation produces deterministic snapshots and added/removed/changed diffs.
+
+**Living intelligence methodology:** [docs/LIVING-INTELLIGENCE.md](docs/LIVING-INTELLIGENCE.md) · **Feed registry:** [data/source-feeds.json](data/source-feeds.json) · **Research queue:** [data/research-queue.json](data/research-queue.json)
 
 ---
 
@@ -418,6 +448,7 @@ v0.4  Sigma / KQL / SPL / ES|QL / YARA-L         🟡 starter pack
 v0.5  Reproducible AI security evaluation lab     🟡 safe foundation
 v0.6  AI supply-chain intelligence + AI/ML-BOM    🟡 foundation
 v1.0  Community CTI platform                      🟡 beta
+v1.1  Living Intelligence Pipeline                ✅ foundation
 ```
 
 The north star is simple:
