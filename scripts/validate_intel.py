@@ -37,11 +37,13 @@ def validate():
     frameworks = load_json(ROOT / "data" / "frameworks.json")
     actors = load_json(ROOT / "data" / "actors.json")
     techniques = load_json(ROOT / "data" / "techniques.json")
+    models = load_json(ROOT / "data" / "models.json")
 
     for dataset_name, records in (
         ("frameworks", frameworks),
         ("actors", actors),
         ("techniques", techniques),
+        ("models", models),
     ):
         if not isinstance(records, list):
             errors.append(f"{dataset_name}: root must be a JSON array")
@@ -92,6 +94,15 @@ def validate():
         if not technique.get("mappings"):
             errors.append(f"{prefix}: at least one framework mapping is required")
 
+    for index, model in enumerate(models):
+        prefix = f"models[{index}]"
+        if not model.get("provider"):
+            errors.append(f"{prefix}: missing provider")
+        if not model.get("deployment"):
+            errors.append(f"{prefix}: missing deployment")
+        if not check_https(model.get("official")):
+            errors.append(f"{prefix}: official URL must use https")
+
     for index, framework in enumerate(frameworks):
         prefix = f"frameworks[{index}]"
         if not check_https(framework.get("url")):
@@ -109,7 +120,8 @@ def validate():
         "LLMInjection intelligence validation OK: "
         f"{len(frameworks)} frameworks, "
         f"{len(actors)} actors, "
-        f"{len(techniques)} techniques"
+        f"{len(techniques)} techniques, "
+        f"{len(models)} model families"
     )
     return 0
 
