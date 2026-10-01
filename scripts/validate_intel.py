@@ -39,6 +39,7 @@ def validate():
     techniques = load_json(ROOT / "data" / "techniques.json")
     models = load_json(ROOT / "data" / "models.json")
     test_cases = load_json(ROOT / "data" / "test-cases.json")
+    landscape = load_json(ROOT / "data" / "threat-landscape-2026.json")
 
     for dataset_name, records in (
         ("frameworks", frameworks),
@@ -115,6 +116,44 @@ def validate():
         if not test_case.get("mappings"):
             errors.append(f"{prefix}: mappings must not be empty")
 
+    if not isinstance(landscape, dict):
+        errors.append("threat-landscape-2026: root must be a JSON object")
+    else:
+        meta = landscape.get("meta", {})
+        if meta.get("as_of") and not valid_date(meta.get("as_of")):
+            errors.append("threat-landscape-2026.meta.as_of: invalid date")
+        metrics = landscape.get("key_metrics", [])
+        domains = landscape.get("domains", [])
+        cases = landscape.get("notable_cases", [])
+        if not metrics:
+            errors.append("threat-landscape-2026: key_metrics must not be empty")
+        if not domains:
+            errors.append("threat-landscape-2026: domains must not be empty")
+        for index, metric in enumerate(metrics):
+            prefix = f"threat-landscape-2026.key_metrics[{index}]"
+            if metric.get("confidence") not in CONFIDENCE:
+                errors.append(f"{prefix}: invalid confidence")
+            source = metric.get("source", {})
+            if source.get("grade") not in GRADES:
+                errors.append(f"{prefix}.source: invalid grade")
+            if not check_https(source.get("url")):
+                errors.append(f"{prefix}.source: URL must use https")
+        for index, domain in enumerate(domains):
+            prefix = f"threat-landscape-2026.domains[{index}]"
+            if domain.get("confidence") not in CONFIDENCE:
+                errors.append(f"{prefix}: invalid confidence")
+            if not domain.get("defensive_focus"):
+                errors.append(f"{prefix}: defensive_focus must not be empty")
+        for index, case in enumerate(cases):
+            prefix = f"threat-landscape-2026.notable_cases[{index}]"
+            if case.get("confidence") not in CONFIDENCE:
+                errors.append(f"{prefix}: invalid confidence")
+            source = case.get("source", {})
+            if source.get("grade") not in GRADES:
+                errors.append(f"{prefix}.source: invalid grade")
+            if not check_https(source.get("url")):
+                errors.append(f"{prefix}.source: URL must use https")
+
     for index, model in enumerate(models):
         prefix = f"models[{index}]"
         if not model.get("provider"):
@@ -143,7 +182,8 @@ def validate():
         f"{len(actors)} actors, "
         f"{len(techniques)} techniques, "
         f"{len(models)} model families, "
-        f"{len(test_cases)} test cases"
+        f"{len(test_cases)} test cases, "
+        f"{len(landscape.get('key_metrics', [])) if isinstance(landscape, dict) else 0} landscape metrics"
     )
     return 0
 
