@@ -108,7 +108,8 @@
     "category": "supply-chain",
     "description": "Pin model, package and deployment artifacts to approved immutable digests.",
     "source_ids": [
-      "SRC-CYCLONEDX-MLBOM"
+      "SRC-CYCLONEDX-MLBOM",
+      "SRC-SLSA-12"
     ]
   },
   {
@@ -118,7 +119,8 @@
     "category": "supply-chain",
     "description": "Verify trusted publisher identity and artifact integrity before promotion or execution.",
     "source_ids": [
-      "SRC-CYCLONEDX-MLBOM"
+      "SRC-CYCLONEDX-MLBOM",
+      "SRC-SIGSTORE-COSIGN"
     ]
   },
   {
@@ -128,7 +130,8 @@
     "category": "supply-chain",
     "description": "Require provenance, approved registries and review before dependencies suggested by automation are installed.",
     "source_ids": [
-      "SRC-CYCLONEDX-MLBOM"
+      "SRC-CYCLONEDX-MLBOM",
+      "SRC-OPENSSF-MALICIOUS"
     ]
   },
   {
