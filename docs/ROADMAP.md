@@ -113,7 +113,7 @@ The goal is a **living AI cyber threat-intelligence platform**, not a static awe
 - [ ] automated duplicate clustering across vendor naming
 - [ ] analyst promotion helper that generates candidate object patches
 - [ ] stateful TAXII service
-- [ ] read-only MCP intelligence server
+- [x] read-only MCP v2 intelligence server
 
 ## North star
 
