@@ -40,6 +40,12 @@ jobs:
       - name: Build graph exports
         run: python scripts/build_graph.py
 
+      - name: Build static API
+        run: python scripts/build_api.py
+
+      - name: Build release package
+        run: python scripts/build_release.py
+
       - name: Exercise safe lab plan
         run: python scripts/run_safe_lab.py --profile all --adapter plan > /dev/null
 
