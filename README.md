@@ -24,7 +24,9 @@ LLMInjection connects <strong>threat actors, campaigns, prompt injection, agent 
 </p>
 
 <p align="center">
-  <a href="https://ridd1kulusc0d3r.github.io/LLmInjection/"><strong>Open Threat Intelligence Explorer</strong></a>
+  <a href="https://ridd1kulusc0d3r.github.io/LLmInjection/"><strong>Threat Intelligence Explorer</strong></a> ·
+  <a href="docs/PUBLISHING.md">Publishing / API</a> ·
+  <a href="docs/METHODOLOGY.md">Methodology</a>
 </p>
 
 <p align="center">
@@ -49,7 +51,7 @@ LLMInjection connects <strong>threat actors, campaigns, prompt injection, agent 
 
 **Graph layer:** 7 campaigns · 5 incident/research cases · 6 CVE/GHSA/malicious-package records · 10 detection hypotheses · 20 controls · 35 curated sources · 52 explicit evidence-backed relationships.
 
-**Exports:** `graph.json` · GraphML · STIX 2.1 · interactive GitHub Pages Explorer.
+**Exports:** `graph.json` · GraphML · STIX 2.1 · `/api/v1/` static JSON API · provenance-attested tagged releases · interactive GitHub Pages Explorer.
 
 ---
 
@@ -225,7 +227,7 @@ python scripts/run_safe_lab.py --profile all
 
 Generated outputs are written to `dist/graph.json`, `dist/graph.graphml` and `dist/llminjection-stix.json`. Vulnerability nodes retain CVE/GHSA/OSV identifiers as STIX external references.
 
-**Explorer:** https://ridd1kulusc0d3r.github.io/LLmInjection/ · **Graph model:** [INTELLIGENCE-GRAPH.md](docs/INTELLIGENCE-GRAPH.md) · **Vulnerabilities:** [`data/vulnerabilities.json`](data/vulnerabilities.json) · **Reference library:** [REFERENCE-LIBRARY.md](references/REFERENCE-LIBRARY.md)
+**Explorer:** https://ridd1kulusc0d3r.github.io/LLmInjection/ · **Static API:** `https://ridd1kulusc0d3r.github.io/LLmInjection/api/v1/index.json` · **Graph model:** [INTELLIGENCE-GRAPH.md](docs/INTELLIGENCE-GRAPH.md) · **Methodology:** [METHODOLOGY.md](docs/METHODOLOGY.md) · **Vulnerabilities:** [`data/vulnerabilities.json`](data/vulnerabilities.json) · **Reference library:** [REFERENCE-LIBRARY.md](references/REFERENCE-LIBRARY.md)
 
 ---
 
@@ -415,14 +417,14 @@ v0.3  Threat graph + interactive GitHub Pages     ✅ foundation
 v0.4  Sigma / KQL / SPL / ES|QL / YARA-L         🟡 starter pack
 v0.5  Reproducible AI security evaluation lab     🟡 safe foundation
 v0.6  AI supply-chain intelligence + AI/ML-BOM    🟡 foundation
-v1.0  Community CTI platform + stable dataset     ⏳
+v1.0  Community CTI platform                      🟡 beta
 ```
 
 The north star is simple:
 
 > Start with an **actor, model, prompt-injection class, OWASP risk, MITRE technique or supply-chain incident** and navigate directly to **evidence → related behavior → test case → telemetry → detection → control**.
 
-Full roadmap: [docs/ROADMAP.md](docs/ROADMAP.md)
+Full roadmap: [docs/ROADMAP.md](docs/ROADMAP.md) · [Intelligence changelog](docs/INTELLIGENCE-CHANGELOG.md) · [Publishing & releases](docs/PUBLISHING.md)
 
 ---
 
@@ -434,7 +436,7 @@ LLMInjection is built for **defenders, threat analysts, AI red teams, detection 
 
 Useful contributions add **evidence, relationships, tests, detections or corrections**, not hype.
 
-Read [CONTRIBUTING.md](CONTRIBUTING.md), prefer primary sources, preserve uncertainty and run:
+Read [CONTRIBUTING.md](CONTRIBUTING.md) and [METHODOLOGY.md](docs/METHODOLOGY.md), prefer primary sources, preserve uncertainty and run:
 
 ```bash
 python scripts/validate_intel.py
