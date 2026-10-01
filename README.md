@@ -37,11 +37,54 @@ LLMInjection connects <strong>threat actors, campaigns, prompt injection, agent 
 
 ## At a glance
 
-| **7** tracked actors | **15** safe test cases | **16** threat techniques | **13** frameworks / taxonomies | **12** model families |
+| **7** tracked actors | **15** safe test cases | **16** threat techniques | **14** frameworks / taxonomies | **12** model families |
 |:---:|:---:|:---:|:---:|:---:|
 | APT & criminal activity | Prompt · RAG · Agent · MCP · Supply chain | Machine-readable JSON | ATLAS · OWASP · NIST · SAIF · MAESTRO | API · open-weight · local |
 
 > **LLMInjection is not a prompt dump.** The project is structured as cyber threat intelligence: every meaningful claim should have evidence, confidence, last-verification date, framework context and defensive relevance.
+
+---
+
+# AI / LLM Threat Landscape 2026
+
+The repository now maintains a dedicated **evidence-driven threat landscape**, separate from the actor tracker. The landscape tracks macro-trends, telemetry, sectors, research concepts, attack surfaces and defensive priorities while preserving each source's original population and time window.
+
+### 2026 snapshot
+
+| Signal | Verified value | Source |
+|---|---:|---|
+| Leaders expecting AI to be the biggest force shaping cybersecurity in 2026 | **94%** | World Economic Forum |
+| Respondents identifying AI-related vulnerabilities as fastest-growing cyber risk | **87%** | World Economic Forum |
+| Average attacks per organization per week | **1,968** | Check Point |
+| AI-agent-triggered detection leads vs human-triggered growth | **2.5×** | CrowdStrike |
+| Cloud-conscious eCrime activity | **+171%** | CrowdStrike |
+| Registry threats involving malicious npm packages | **87%** | CrowdStrike |
+| Confirmed ransomware victims in Fortinet dataset | **7,831 / +389% YoY** | Fortinet |
+| Ransomware-associated data theft | **896.2 TB** | Zscaler ThreatLabz |
+| Blockchain transactions associated with ransomware payments | **US$328M** | Zscaler ThreatLabz |
+| High-risk GenAI prompts | **2% → 4%** | Check Point Research |
+| Longer malicious prompt-injection payload detections | **~5×** | Check Point Research |
+| Major supply-chain / third-party incidents since 2020 | **nearly 4×** | IBM X-Force |
+
+### Landscape domains
+
+```mermaid
+flowchart LR
+    TL["AI / LLM Threat Landscape 2026"]
+    TL --> O["AI as Operator"]
+    TL --> E["AI as Offensive Enabler"]
+    TL --> P["Prompt Injection / Promptware"]
+    TL --> A["Agentic / MCP / Tool Risk"]
+    TL --> S["AI Supply Chain"]
+    TL --> D["Data Exposure / Shadow AI"]
+    TL --> I["Cloud / Identity"]
+    TL --> R["Ransomware / Extortion"]
+    TL --> M["Model Integrity"]
+```
+
+**Full landscape:** [THREAT-LANDSCAPE-2026.md](docs/THREAT-LANDSCAPE-2026.md) · **Dataset:** [`data/threat-landscape-2026.json`](data/threat-landscape-2026.json) · **AI security ecosystem:** [AI-SECURITY-ECOSYSTEM.md](references/AI-SECURITY-ECOSYSTEM.md)
+
+> The landscape distinguishes **observed incidents**, **vendor assessments**, **research frameworks**, **proofs of concept** and **unverified leads**. Interesting numbers do not become CTI just because someone put them in a chart.
 
 ---
 
@@ -108,7 +151,7 @@ The roadmap includes adapters for **Microsoft PyRIT, NVIDIA garak, JailbreakBenc
 
 ---
 
-# Threat Landscape
+# Threat Landscape Model
 
 LLMInjection separates four roles that are often carelessly mixed together under the phrase “AI cyber threat”.
 
@@ -155,7 +198,7 @@ MITRE ATLAS is essential, but it does not cover the whole AI system. LLMInjectio
 | Layer | Frameworks / taxonomies | Purpose |
 |---|---|---|
 | Adversary behavior | **MITRE ATLAS · MITRE ATT&CK** | AI-specific and surrounding intrusion TTPs |
-| LLM application risk | **OWASP Top 10 for LLM Applications 2025** | Prompt, data, supply-chain and output risks |
+| LLM application risk | **OWASP Top 10 for LLM Applications 2026** | Current prompt, disclosure, agency, supply-chain, poisoning, consumption, context and output risks |
 | Agentic security | **OWASP Top 10 for Agentic Applications 2026 · CSA MAESTRO** | Autonomy, tools, memory, identity and multi-agent trust |
 | Adversarial ML | **NIST AI 100-2e2025** | AML terminology, attacker goals/capabilities and mitigations |
 | AI risk governance | **NIST AI RMF · NIST AI 600-1** | Govern, Map, Measure and Manage GenAI risk |
@@ -284,14 +327,17 @@ LLmInjection/
 │   ├── MODEL-SECURITY-MATRIX.md
 │   ├── SOURCE-GRADING.md
 │   ├── TEST-CASES.md
+│   ├── THREAT-LANDSCAPE-2026.md
 │   └── ROADMAP.md
 ├── data/
 │   ├── actors.json
 │   ├── frameworks.json
 │   ├── models.json
 │   ├── techniques.json
-│   └── test-cases.json
+│   ├── test-cases.json
+│   └── threat-landscape-2026.json
 ├── references/
+│   ├── AI-SECURITY-ECOSYSTEM.md
 │   └── community-corpora.md
 ├── schemas/
 │   └── intel.schema.json
