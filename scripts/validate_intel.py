@@ -131,6 +131,14 @@ def validate():
             errors.append(f"{prefix}: missing summary")
         if not technique.get("mappings"):
             errors.append(f"{prefix}: at least one framework mapping is required")
+        for midx, mapping in enumerate(technique.get("external_mappings", [])):
+            mp = f"{prefix}.external_mappings[{midx}]"
+            if mapping.get("relation") not in {"exact", "related"}:
+                errors.append(f"{mp}: relation must be exact or related")
+            if not mapping.get("framework") or not mapping.get("id") or not mapping.get("name"):
+                errors.append(f"{mp}: framework, id and name are required")
+            if not check_https(mapping.get("url")):
+                errors.append(f"{mp}: URL must use https")
 
     for i, test_case in enumerate(datasets["test-cases"]):
         prefix = f"test-cases[{i}]"
