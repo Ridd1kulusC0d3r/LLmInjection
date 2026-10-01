@@ -9,6 +9,22 @@
       "OWASP LLM",
       "MITRE ATLAS",
       "Google SAIF"
+    ],
+    "external_mappings": [
+      {
+        "framework": "OWASP LLM Top 10 2026",
+        "id": "LLM01:2026",
+        "name": "Prompt Injection",
+        "relation": "exact",
+        "url": "https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0051.000",
+        "name": "LLM Prompt Injection: Direct",
+        "relation": "exact",
+        "url": "https://atlas.mitre.org/techniques/AML.T0051.000"
+      }
     ]
   },
   {
@@ -22,6 +38,22 @@
       "MITRE ATLAS",
       "Google SAIF",
       "CSA MAESTRO"
+    ],
+    "external_mappings": [
+      {
+        "framework": "OWASP LLM Top 10 2026",
+        "id": "LLM01:2026",
+        "name": "Prompt Injection",
+        "relation": "exact",
+        "url": "https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0051.001",
+        "name": "LLM Prompt Injection: Indirect",
+        "relation": "exact",
+        "url": "https://atlas.mitre.org/techniques/AML.T0051.001"
+      }
     ]
   },
   {
@@ -33,6 +65,22 @@
     "mappings": [
       "OWASP LLM",
       "NIST AI 100-2e2025"
+    ],
+    "external_mappings": [
+      {
+        "framework": "OWASP LLM Top 10 2026",
+        "id": "LLM01:2026",
+        "name": "Prompt Injection",
+        "relation": "related",
+        "url": "https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0054",
+        "name": "LLM Jailbreak",
+        "relation": "exact",
+        "url": "https://atlas.mitre.org/techniques/AML.T0054"
+      }
     ]
   },
   {
@@ -44,6 +92,22 @@
     "mappings": [
       "OWASP LLM",
       "Google SAIF"
+    ],
+    "external_mappings": [
+      {
+        "framework": "OWASP LLM Top 10 2026",
+        "id": "LLM02:2026",
+        "name": "Sensitive Information Disclosure",
+        "relation": "exact",
+        "url": "https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0057",
+        "name": "LLM Data Leakage",
+        "relation": "exact",
+        "url": "https://atlas.mitre.org/techniques/AML.T0057"
+      }
     ]
   },
   {
@@ -56,6 +120,15 @@
       "MITRE ATLAS",
       "NIST AI 100-2e2025",
       "Google SAIF"
+    ],
+    "external_mappings": [
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0044",
+        "name": "Full AI Model Access",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0044"
+      }
     ]
   },
   {
@@ -69,6 +142,29 @@
       "MITRE ATLAS",
       "NIST AI 100-2e2025",
       "Google SAIF"
+    ],
+    "external_mappings": [
+      {
+        "framework": "OWASP LLM Top 10 2026",
+        "id": "LLM05:2026",
+        "name": "Data and Model Poisoning",
+        "relation": "exact",
+        "url": "https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0020",
+        "name": "Poison Training Data",
+        "relation": "exact",
+        "url": "https://atlas.mitre.org/techniques/AML.T0020"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0018",
+        "name": "Manipulate AI Model",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0018"
+      }
     ]
   },
   {
@@ -81,6 +177,22 @@
       "OWASP LLM",
       "CSA MAESTRO",
       "Google SAIF"
+    ],
+    "external_mappings": [
+      {
+        "framework": "OWASP LLM Top 10 2026",
+        "id": "LLM09:2026",
+        "name": "Vector and Embedding Weaknesses",
+        "relation": "related",
+        "url": "https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0070",
+        "name": "RAG Poisoning",
+        "relation": "exact",
+        "url": "https://atlas.mitre.org/techniques/AML.T0070"
+      }
     ]
   },
   {
@@ -93,6 +205,22 @@
       "OWASP Agentic",
       "CSA MAESTRO",
       "Google SAIF"
+    ],
+    "external_mappings": [
+      {
+        "framework": "OWASP Agentic Top 10 2026",
+        "id": "ASI02:2026",
+        "name": "Tool Misuse and Exploitation",
+        "relation": "exact",
+        "url": "https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0053",
+        "name": "AI Agent Tool Invocation",
+        "relation": "exact",
+        "url": "https://atlas.mitre.org/techniques/AML.T0053"
+      }
     ]
   },
   {
@@ -104,6 +232,22 @@
     "mappings": [
       "OWASP Agentic",
       "CSA MAESTRO"
+    ],
+    "external_mappings": [
+      {
+        "framework": "OWASP Agentic Top 10 2026",
+        "id": "ASI06:2026",
+        "name": "Memory & Context Poisoning",
+        "relation": "exact",
+        "url": "https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0080",
+        "name": "AI Agent Context Poisoning",
+        "relation": "exact",
+        "url": "https://atlas.mitre.org/techniques/AML.T0080"
+      }
     ]
   },
   {
@@ -115,6 +259,22 @@
     "mappings": [
       "Google SAIF",
       "MITRE ATLAS"
+    ],
+    "external_mappings": [
+      {
+        "framework": "OWASP LLM Top 10 2026",
+        "id": "LLM04:2026",
+        "name": "Supply Chain",
+        "relation": "related",
+        "url": "https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0010.003",
+        "name": "AI Supply Chain Compromise: Model",
+        "relation": "exact",
+        "url": "https://atlas.mitre.org/techniques/AML.T0010.003"
+      }
     ]
   },
   {
@@ -128,6 +288,36 @@
       "Google SAIF",
       "CSA MAESTRO",
       "MITRE ATT&CK"
+    ],
+    "external_mappings": [
+      {
+        "framework": "OWASP LLM Top 10 2026",
+        "id": "LLM04:2026",
+        "name": "Supply Chain",
+        "relation": "exact",
+        "url": "https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/"
+      },
+      {
+        "framework": "OWASP Agentic Top 10 2026",
+        "id": "ASI04:2026",
+        "name": "Agentic Supply Chain Vulnerabilities",
+        "relation": "related",
+        "url": "https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0010",
+        "name": "AI Supply Chain Compromise",
+        "relation": "exact",
+        "url": "https://atlas.mitre.org/techniques/AML.T0010"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0010.001",
+        "name": "AI Supply Chain Compromise: AI Software",
+        "relation": "exact",
+        "url": "https://atlas.mitre.org/techniques/AML.T0010.001"
+      }
     ]
   },
   {
@@ -140,6 +330,29 @@
       "OWASP Agentic",
       "OWASP LLM",
       "CSA MAESTRO"
+    ],
+    "external_mappings": [
+      {
+        "framework": "OWASP LLM Top 10 2026",
+        "id": "LLM04:2026",
+        "name": "Supply Chain",
+        "relation": "related",
+        "url": "https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/"
+      },
+      {
+        "framework": "OWASP Agentic Top 10 2026",
+        "id": "ASI04:2026",
+        "name": "Agentic Supply Chain Vulnerabilities",
+        "relation": "related",
+        "url": "https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0111",
+        "name": "AI Supply Chain Reputation Inflation",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0111"
+      }
     ]
   },
   {
@@ -151,6 +364,15 @@
     "mappings": [
       "MITRE ATT&CK",
       "MITRE ATLAS"
+    ],
+    "external_mappings": [
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0102",
+        "name": "Generate Malicious Commands",
+        "relation": "exact",
+        "url": "https://atlas.mitre.org/techniques/AML.T0102"
+      }
     ]
   },
   {
@@ -162,6 +384,15 @@
     "mappings": [
       "MITRE ATT&CK",
       "MITRE ATLAS"
+    ],
+    "external_mappings": [
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0052.000",
+        "name": "Spearphishing via Social Engineering LLM",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0052.000"
+      }
     ]
   },
   {
@@ -174,7 +405,8 @@
       "MITRE ATT&CK",
       "MITRE ATLAS",
       "CSA MAESTRO"
-    ]
+    ],
+    "external_mappings": []
   },
   {
     "id": "LLMI-T016",
@@ -186,6 +418,29 @@
       "OWASP LLM",
       "Google SAIF",
       "MITRE ATT&CK"
+    ],
+    "external_mappings": [
+      {
+        "framework": "OWASP Agentic Top 10 2026",
+        "id": "ASI03:2026",
+        "name": "Identity & Privilege Abuse",
+        "relation": "related",
+        "url": "https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0083",
+        "name": "Credentials from AI Agent Configuration",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0083"
+      },
+      {
+        "framework": "MITRE ATT&CK",
+        "id": "T1552",
+        "name": "Unsecured Credentials",
+        "relation": "related",
+        "url": "https://attack.mitre.org/techniques/T1552/"
+      }
     ]
   }
 ]
