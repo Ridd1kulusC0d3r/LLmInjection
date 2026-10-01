@@ -7,6 +7,8 @@ on:
       - "schemas/**"
       - "scripts/**"
       - "detections/**"
+      - "tests/**"
+      - "reports/**"
       - ".github/workflows/validate-intel.yml"
   pull_request:
     paths:
@@ -14,6 +16,8 @@ on:
       - "schemas/**"
       - "scripts/**"
       - "detections/**"
+      - "tests/**"
+      - "reports/**"
       - ".github/workflows/validate-intel.yml"
 
 permissions:
@@ -36,6 +40,16 @@ jobs:
 
       - name: Validate structured intelligence
         run: python scripts/validate_intel.py
+
+      - name: Exercise living-intelligence intake with fixtures
+        run: |
+          python scripts/intel_intake.py             --fixture tests/fixtures/intake-responses.json             --dry-run             --report /tmp/intake.md             --summary-json /tmp/intake-summary.json
+
+      - name: Build intelligence snapshot and diff
+        run: |
+          python scripts/build_snapshot.py --output /tmp/current-snapshot.json
+          python scripts/diff_intelligence.py             --baseline data/snapshots/2026-09.json             --current /tmp/current-snapshot.json             --output /tmp/intelligence-diff.json             --markdown /tmp/intelligence-diff.md
+          python scripts/generate_landscape_report.py             --snapshot /tmp/current-snapshot.json             --diff /tmp/intelligence-diff.json             --period 2026-10             --output /tmp/monthly-landscape.md
 
       - name: Build graph exports
         run: python scripts/build_graph.py
