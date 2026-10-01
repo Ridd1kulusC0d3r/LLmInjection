@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Ridd1kulusC0d3r/LLmInjection/schemas/threat-landscape.schema.json",
+  "title": "LLMInjection AI / LLM Threat Landscape",
+  "type": "object",
+  "required": [
+    "meta",
+    "key_metrics",
+    "domains",
+    "sector_signals",
+    "notable_cases",
+    "research_queue"
+  ],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": [
+        "title",
+        "as_of",
+        "scope",
+        "methodology"
+      ],
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "as_of": {
+          "type": "string",
+          "format": "date"
+        },
+        "scope": {
+          "type": "string"
+        },
+        "methodology": {
+          "type": "string"
+        }
+      }
+    },
+    "key_metrics": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "value",
+          "unit",
+          "timeframe",
+          "confidence",
+          "source"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "value": {},
+          "unit": {
+            "type": "string"
+          },
+          "timeframe": {
+            "type": "string"
+          },
+          "confidence": {
+            "enum": [
+              "confirmed",
+              "high",
+              "medium",
+              "low",
+              "unverified"
+            ]
+          },
+          "source": {
+            "type": "object",
+            "required": [
+              "publisher",
+              "grade",
+              "url"
+            ],
+            "properties": {
+              "publisher": {
+                "type": "string"
+              },
+              "grade": {
+                "enum": [
+                  "A",
+                  "B",
+                  "C",
+                  "D",
+                  "E"
+                ]
+              },
+              "url": {
+                "type": "string",
+                "format": "uri"
+              }
+            }
+          }
+        }
+      }
+    },
+    "domains": {
+      "type": "array",
+      "minItems": 1
+    },
+    "sector_signals": {
+      "type": "array"
+    },
+    "notable_cases": {
+      "type": "array"
+    },
+    "research_queue": {
+      "type": "array"
+    }
+  },
+  "additionalProperties": false
+}
