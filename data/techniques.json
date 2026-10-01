@@ -1,0 +1,191 @@
+[
+  {
+    "id": "LLMI-T001",
+    "type": "technique",
+    "name": "Direct Prompt Injection",
+    "category": "prompt-context",
+    "summary": "Untrusted user input attempts to alter instruction priority or application behavior.",
+    "mappings": [
+      "OWASP LLM",
+      "MITRE ATLAS",
+      "Google SAIF"
+    ]
+  },
+  {
+    "id": "LLMI-T002",
+    "type": "technique",
+    "name": "Indirect Prompt Injection",
+    "category": "prompt-context",
+    "summary": "Instructions embedded in retrieved or external content influence the model or agent.",
+    "mappings": [
+      "OWASP LLM",
+      "MITRE ATLAS",
+      "Google SAIF",
+      "CSA MAESTRO"
+    ]
+  },
+  {
+    "id": "LLMI-T003",
+    "type": "technique",
+    "name": "Jailbreak / Safety Boundary Manipulation",
+    "category": "model-behavior",
+    "summary": "Adversarial inputs attempt to elicit behavior outside intended safety or policy boundaries.",
+    "mappings": [
+      "OWASP LLM",
+      "NIST AI 100-2e2025"
+    ]
+  },
+  {
+    "id": "LLMI-T004",
+    "type": "technique",
+    "name": "Sensitive Information Disclosure",
+    "category": "confidentiality",
+    "summary": "Model or application reveals sensitive information beyond authorization.",
+    "mappings": [
+      "OWASP LLM",
+      "Google SAIF"
+    ]
+  },
+  {
+    "id": "LLMI-T005",
+    "type": "technique",
+    "name": "Model Extraction / Theft",
+    "category": "model",
+    "summary": "Adversary attempts to recover model behavior, intellectual property or weights.",
+    "mappings": [
+      "MITRE ATLAS",
+      "NIST AI 100-2e2025",
+      "Google SAIF"
+    ]
+  },
+  {
+    "id": "LLMI-T006",
+    "type": "technique",
+    "name": "Data or Model Poisoning",
+    "category": "training-data",
+    "summary": "Adversarial changes to data or model artifacts influence future behavior.",
+    "mappings": [
+      "OWASP LLM",
+      "MITRE ATLAS",
+      "NIST AI 100-2e2025",
+      "Google SAIF"
+    ]
+  },
+  {
+    "id": "LLMI-T007",
+    "type": "technique",
+    "name": "RAG Knowledge Poisoning",
+    "category": "rag",
+    "summary": "Malicious or manipulated corpus content changes retrieval-driven behavior.",
+    "mappings": [
+      "OWASP LLM",
+      "CSA MAESTRO",
+      "Google SAIF"
+    ]
+  },
+  {
+    "id": "LLMI-T008",
+    "type": "technique",
+    "name": "Agent Tool Misuse",
+    "category": "agentic",
+    "summary": "An agent is induced to use an authorized tool outside intended purpose or context.",
+    "mappings": [
+      "OWASP Agentic",
+      "CSA MAESTRO",
+      "Google SAIF"
+    ]
+  },
+  {
+    "id": "LLMI-T009",
+    "type": "technique",
+    "name": "Memory / Context Poisoning",
+    "category": "agentic",
+    "summary": "Persistent or session context is manipulated to influence later decisions.",
+    "mappings": [
+      "OWASP Agentic",
+      "CSA MAESTRO"
+    ]
+  },
+  {
+    "id": "LLMI-T010",
+    "type": "technique",
+    "name": "Model Source Tampering",
+    "category": "supply-chain",
+    "summary": "Model code, weights or serving artifacts are replaced or modified without authorization.",
+    "mappings": [
+      "Google SAIF",
+      "MITRE ATLAS"
+    ]
+  },
+  {
+    "id": "LLMI-T011",
+    "type": "technique",
+    "name": "AI Software Supply Chain Compromise",
+    "category": "supply-chain",
+    "summary": "Packages, CI/CD, gateways, frameworks or registries used by AI systems are compromised.",
+    "mappings": [
+      "OWASP LLM",
+      "Google SAIF",
+      "CSA MAESTRO",
+      "MITRE ATT&CK"
+    ]
+  },
+  {
+    "id": "LLMI-T012",
+    "type": "technique",
+    "name": "Coding-Agent Dependency Manipulation",
+    "category": "supply-chain",
+    "summary": "Package metadata or documentation is shaped to influence automated dependency selection by coding agents.",
+    "mappings": [
+      "OWASP Agentic",
+      "OWASP LLM",
+      "CSA MAESTRO"
+    ]
+  },
+  {
+    "id": "LLMI-T013",
+    "type": "technique",
+    "name": "Runtime LLM Command Generation",
+    "category": "ai-offensive-enabler",
+    "summary": "Malware or tooling queries an LLM at runtime to generate host-specific commands or logic.",
+    "mappings": [
+      "MITRE ATT&CK",
+      "MITRE ATLAS"
+    ]
+  },
+  {
+    "id": "LLMI-T014",
+    "type": "technique",
+    "name": "AI-Assisted Reconnaissance and Social Engineering",
+    "category": "ai-offensive-enabler",
+    "summary": "LLMs accelerate OSINT synthesis, target profiling, translation or social-engineering content.",
+    "mappings": [
+      "MITRE ATT&CK",
+      "MITRE ATLAS"
+    ]
+  },
+  {
+    "id": "LLMI-T015",
+    "type": "technique",
+    "name": "Agentic Attack Orchestration",
+    "category": "ai-autonomous-operator",
+    "summary": "AI agents autonomously chain multiple cyber tasks with limited human intervention.",
+    "mappings": [
+      "MITRE ATT&CK",
+      "MITRE ATLAS",
+      "CSA MAESTRO"
+    ]
+  },
+  {
+    "id": "LLMI-T016",
+    "type": "technique",
+    "name": "AI Gateway Credential Compromise",
+    "category": "supply-chain",
+    "summary": "An AI gateway or proxy is compromised to access concentrated upstream model-provider credentials.",
+    "mappings": [
+      "OWASP LLM",
+      "Google SAIF",
+      "MITRE ATT&CK"
+    ]
+  }
+]
