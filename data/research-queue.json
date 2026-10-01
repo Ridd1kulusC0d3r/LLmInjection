@@ -1,0 +1,15 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "last_run": null,
+    "policy": "candidate-only; no automatic promotion into official intelligence datasets",
+    "statuses": [
+      "candidate",
+      "reviewing",
+      "accepted",
+      "rejected",
+      "duplicate"
+    ]
+  },
+  "items": []
+}
