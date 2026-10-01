@@ -1,0 +1,506 @@
+{
+  "meta": {
+    "title": "AI / LLM Threat Landscape 2026",
+    "as_of": "2026-09-30",
+    "scope": "Cyber threat intelligence focused on AI, LLM, GenAI and agentic systems",
+    "methodology": "Evidence-first synthesis using primary vendor, standards-body and research sources. Metrics retain their original population/time window and are not generalized beyond it."
+  },
+  "key_metrics": [
+    {
+      "id": "METRIC-WEF-AI-DRIVER",
+      "name": "AI expected to be the biggest force shaping cybersecurity in 2026",
+      "value": 94,
+      "unit": "percent of survey respondents",
+      "timeframe": "WEF Global Cybersecurity Outlook 2026",
+      "confidence": "confirmed",
+      "source": {
+        "publisher": "World Economic Forum",
+        "grade": "A",
+        "url": "https://www.weforum.org/publications/global-cybersecurity-outlook-2026/in-full/executive-summary-6efae97d74/"
+      }
+    },
+    {
+      "id": "METRIC-WEF-AI-VULNS",
+      "name": "Respondents identifying AI-related vulnerabilities as the fastest-growing cyber risk during 2025",
+      "value": 87,
+      "unit": "percent of respondents",
+      "timeframe": "2025 observations reported in WEF 2026 outlook",
+      "confidence": "confirmed",
+      "source": {
+        "publisher": "World Economic Forum",
+        "grade": "A",
+        "url": "https://www.weforum.org/publications/global-cybersecurity-outlook-2026/in-full/executive-summary-6efae97d74/"
+      }
+    },
+    {
+      "id": "METRIC-CP-WEEKLY-ATTACKS",
+      "name": "Average weekly cyber attacks per organization",
+      "value": 1968,
+      "unit": "attacks per organization per week",
+      "timeframe": "2025",
+      "confidence": "confirmed",
+      "source": {
+        "publisher": "Check Point",
+        "grade": "A",
+        "url": "https://www.checkpoint.com/kr/press-releases/check-point-softwares-2026-cyber-security-report-shows-global-attacks-reach-record-levels-as-ai-accelerates-the-threat-landscape/"
+      }
+    },
+    {
+      "id": "METRIC-CS-AGENT-LEADS",
+      "name": "Growth rate of AI-agent-triggered detection leads relative to human-triggered leads",
+      "value": 2.5,
+      "unit": "times",
+      "timeframe": "parts of Q1 2026",
+      "confidence": "confirmed",
+      "source": {
+        "publisher": "CrowdStrike",
+        "grade": "A",
+        "url": "https://www.crowdstrike.com/en-us/press-releases/crowdstrike-2026-threat-hunting-report/"
+      }
+    },
+    {
+      "id": "METRIC-CS-CLOUD-ECRIME",
+      "name": "Increase in cloud-conscious eCrime activity",
+      "value": 171,
+      "unit": "percent increase",
+      "timeframe": "CrowdStrike 2026 Threat Hunting Report period",
+      "confidence": "confirmed",
+      "source": {
+        "publisher": "CrowdStrike",
+        "grade": "A",
+        "url": "https://www.crowdstrike.com/en-us/press-releases/crowdstrike-2026-threat-hunting-report/"
+      }
+    },
+    {
+      "id": "METRIC-CS-NPM",
+      "name": "Share of identified software registry threats involving malicious npm packages",
+      "value": 87,
+      "unit": "percent",
+      "timeframe": "1H 2026",
+      "confidence": "confirmed",
+      "source": {
+        "publisher": "CrowdStrike",
+        "grade": "A",
+        "url": "https://www.crowdstrike.com/en-us/blog/crowdstrike-2026-threat-hunting-report/"
+      }
+    },
+    {
+      "id": "METRIC-CS-EXPLOIT-48H",
+      "name": "Observed exploitation of vulnerabilities with public PoC occurring within 48 hours",
+      "value": 88,
+      "unit": "percent",
+      "timeframe": "1H 2026",
+      "confidence": "confirmed",
+      "source": {
+        "publisher": "CrowdStrike",
+        "grade": "A",
+        "url": "https://www.crowdstrike.com/en-us/press-releases/crowdstrike-2026-threat-hunting-report/"
+      }
+    },
+    {
+      "id": "METRIC-FORTINET-RANSOMWARE-VICTIMS",
+      "name": "Confirmed ransomware victims identified by FortiRecon",
+      "value": 7831,
+      "unit": "victims",
+      "timeframe": "2025 activity reported in 2026",
+      "confidence": "confirmed",
+      "source": {
+        "publisher": "Fortinet",
+        "grade": "A",
+        "url": "https://investor.fortinet.com/news-releases/news-release-details/fortinet-2026-global-threat-landscape-report-reveals-surge-ai"
+      }
+    },
+    {
+      "id": "METRIC-FORTINET-RANSOMWARE-YOY",
+      "name": "Increase in confirmed ransomware victims in Fortinet dataset",
+      "value": 389,
+      "unit": "percent YoY",
+      "timeframe": "2025 vs prior report",
+      "confidence": "confirmed",
+      "source": {
+        "publisher": "Fortinet",
+        "grade": "A",
+        "url": "https://investor.fortinet.com/news-releases/news-release-details/fortinet-2026-global-threat-landscape-report-reveals-surge-ai"
+      }
+    },
+    {
+      "id": "METRIC-ZSCALER-EXFIL",
+      "name": "Ransomware-associated data theft measured by Zscaler",
+      "value": 896.2,
+      "unit": "terabytes",
+      "timeframe": "2026 report measurement period",
+      "confidence": "confirmed",
+      "source": {
+        "publisher": "Zscaler ThreatLabz",
+        "grade": "A",
+        "url": "https://www.zscaler.com/press/new-zscaler-report-reveals-ai-assisted-attackers-move-massive-data-theft-executive-targeting"
+      }
+    },
+    {
+      "id": "METRIC-ZSCALER-PAYMENTS",
+      "name": "Blockchain transactions associated with ransomware payments",
+      "value": 328,
+      "unit": "USD millions",
+      "timeframe": "2026 report measurement period",
+      "confidence": "confirmed",
+      "source": {
+        "publisher": "Zscaler ThreatLabz",
+        "grade": "A",
+        "url": "https://www.zscaler.com/press/new-zscaler-report-reveals-ai-assisted-attackers-move-massive-data-theft-executive-targeting"
+      }
+    },
+    {
+      "id": "METRIC-CP-HIGHRISK-PROMPTS",
+      "name": "Share of GenAI prompts classified high-risk by Check Point",
+      "value": {
+        "from": 2,
+        "to": 4
+      },
+      "unit": "percent",
+      "timeframe": "one-year change reported in 2026",
+      "confidence": "confirmed",
+      "source": {
+        "publisher": "Check Point Research",
+        "grade": "A",
+        "url": "https://research.checkpoint.com/2026/ai-security-report-2026/"
+      }
+    },
+    {
+      "id": "METRIC-CP-AI-APPS",
+      "name": "Average AI applications used by an organization per month",
+      "value": 10,
+      "unit": "applications per month",
+      "timeframe": "2026 report",
+      "confidence": "confirmed",
+      "source": {
+        "publisher": "Check Point Research",
+        "grade": "A",
+        "url": "https://research.checkpoint.com/2026/ai-security-report-2026/"
+      }
+    },
+    {
+      "id": "METRIC-CP-IPI",
+      "name": "Increase in detections of longer malicious prompt-injection payloads",
+      "value": 5,
+      "unit": "approximately times",
+      "timeframe": "March-May 2026",
+      "confidence": "confirmed",
+      "source": {
+        "publisher": "Check Point Research",
+        "grade": "A",
+        "url": "https://research.checkpoint.com/2026/ai-security-report-2026/"
+      }
+    },
+    {
+      "id": "METRIC-IBM-SUPPLYCHAIN",
+      "name": "Increase in major supply-chain and third-party incidents since 2020",
+      "value": 4,
+      "unit": "nearly times",
+      "timeframe": "2020-2025",
+      "confidence": "confirmed",
+      "source": {
+        "publisher": "IBM X-Force",
+        "grade": "A",
+        "url": "https://www.ibm.com/think/x-force/threat-intelligence-index-2026-securing-identities-ai-detection-risk-management"
+      }
+    }
+  ],
+  "domains": [
+    {
+      "id": "LANDSCAPE-AI-OPERATOR",
+      "name": "AI as active operator",
+      "trend": "rising",
+      "confidence": "high",
+      "summary": "Public reporting now includes campaigns and malware where AI participates in live execution, task chaining or runtime decision-making rather than only preparation.",
+      "signals": [
+        "agent-triggered detection growth",
+        "AI-orchestrated intrusion reporting",
+        "runtime LLM command generation"
+      ],
+      "defensive_focus": [
+        "agent action telemetry",
+        "tool authorization",
+        "AI egress visibility",
+        "human/policy checkpoints"
+      ]
+    },
+    {
+      "id": "LANDSCAPE-AI-ENABLER",
+      "name": "AI as offensive force multiplier",
+      "trend": "rising",
+      "confidence": "confirmed",
+      "summary": "Threat actors use AI for reconnaissance, social engineering, code generation, debugging, translation and rapid iteration.",
+      "signals": [
+        "AI-assisted malware development",
+        "OSINT synthesis",
+        "content localization",
+        "faster exploit iteration"
+      ],
+      "defensive_focus": [
+        "behavioral detection",
+        "identity controls",
+        "rapid intelligence cycles",
+        "software provenance"
+      ]
+    },
+    {
+      "id": "LANDSCAPE-PROMPT-INJECTION",
+      "name": "Prompt injection and content-borne attacks",
+      "trend": "rising",
+      "confidence": "confirmed",
+      "summary": "Prompt Injection remains OWASP LLM01:2026, while Check Point observed a sharp rise in longer malicious payloads consistent with indirect/content-borne attack paths.",
+      "signals": [
+        "indirect prompt injection",
+        "cross-modal input risk",
+        "retrieved-content instruction abuse"
+      ],
+      "defensive_focus": [
+        "instruction/data separation",
+        "content provenance",
+        "output/tool policy",
+        "safe adversarial testing"
+      ]
+    },
+    {
+      "id": "LANDSCAPE-AGENTIC",
+      "name": "Agentic autonomy, identity and tool abuse",
+      "trend": "rising",
+      "confidence": "confirmed",
+      "summary": "Excessive Agency moved to LLM03:2026 and OWASP maintains a separate Agentic Top 10 covering goal hijack, tool misuse, identity abuse, memory poisoning, inter-agent communication and rogue agents.",
+      "signals": [
+        "privileged tools",
+        "persistent memory",
+        "delegated identity",
+        "multi-agent workflows"
+      ],
+      "defensive_focus": [
+        "least privilege",
+        "contextual authorization",
+        "human checkpoints",
+        "agent identity",
+        "auditability"
+      ]
+    },
+    {
+      "id": "LANDSCAPE-SUPPLY-CHAIN",
+      "name": "AI and software supply chain",
+      "trend": "rising",
+      "confidence": "confirmed",
+      "summary": "Open-source packages, CI/CD, AI frameworks, model artifacts and gateways increasingly sit in the blast radius of supply-chain compromise.",
+      "signals": [
+        "malicious npm packages",
+        "AI framework poisoning",
+        "CI/CD credential theft",
+        "gateway compromise"
+      ],
+      "defensive_focus": [
+        "AIBOM/SBOM",
+        "artifact signatures",
+        "dependency policy",
+        "CI identity",
+        "model provenance"
+      ]
+    },
+    {
+      "id": "LANDSCAPE-DATA-EXPOSURE",
+      "name": "Enterprise AI data exposure and Shadow AI",
+      "trend": "rising",
+      "confidence": "confirmed",
+      "summary": "Everyday enterprise AI use creates measurable data-exposure risk even without an external attacker.",
+      "signals": [
+        "high-risk prompts doubled",
+        "average 10 AI apps/month",
+        "business-services exposure"
+      ],
+      "defensive_focus": [
+        "AI application inventory",
+        "tenant/account context",
+        "DLP",
+        "approved data paths",
+        "interaction-level visibility"
+      ]
+    },
+    {
+      "id": "LANDSCAPE-CLOUD-IDENTITY",
+      "name": "Cloud and identity abuse around AI workloads",
+      "trend": "rising",
+      "confidence": "confirmed",
+      "summary": "Cloud-conscious eCrime increased while vendor reporting continues to emphasize stolen or misused credentials over direct infrastructure exploitation.",
+      "signals": [
+        "cloud eCrime +171%",
+        "device-code phishing growth",
+        "SSO/SaaS abuse",
+        "credential theft"
+      ],
+      "defensive_focus": [
+        "identity telemetry",
+        "token controls",
+        "workload identity",
+        "secret isolation",
+        "conditional access"
+      ]
+    },
+    {
+      "id": "LANDSCAPE-RANSOMWARE",
+      "name": "Ransomware and data-extortion industrialization",
+      "trend": "rising",
+      "confidence": "confirmed",
+      "summary": "Ransomware reporting shows greater victim volume and a shift toward high-volume data theft and extortion, with AI contributing to speed and scale in the broader ecosystem.",
+      "signals": [
+        "7,831 victims in Fortinet dataset",
+        "896.2 TB exfiltration in Zscaler dataset",
+        "senior employee targeting"
+      ],
+      "defensive_focus": [
+        "identity defense",
+        "data egress monitoring",
+        "rapid containment",
+        "extortion resilience"
+      ]
+    },
+    {
+      "id": "LANDSCAPE-MODEL-INTEGRITY",
+      "name": "Model integrity and safety-control fragility",
+      "trend": "emerging",
+      "confidence": "high",
+      "summary": "Research on open-weight models demonstrates that some refusal behaviors can depend on surprisingly concentrated internal mechanisms, reinforcing that model alignment alone is not a system security boundary.",
+      "signals": [
+        "safety-circuit research",
+        "open-weight modification",
+        "model tampering"
+      ],
+      "defensive_focus": [
+        "sandboxing",
+        "external policy enforcement",
+        "artifact provenance",
+        "defense in depth"
+      ]
+    }
+  ],
+  "sector_signals": [
+    {
+      "sector": "Manufacturing",
+      "metric": "ransomware victims",
+      "value": 1284,
+      "source": "Fortinet 2026 Global Threat Landscape Report"
+    },
+    {
+      "sector": "Business Services",
+      "metric": "ransomware victims",
+      "value": 824,
+      "source": "Fortinet 2026 Global Threat Landscape Report"
+    },
+    {
+      "sector": "Retail",
+      "metric": "ransomware victims",
+      "value": 682,
+      "source": "Fortinet 2026 Global Threat Landscape Report"
+    },
+    {
+      "sector": "Business Services",
+      "metric": "high-risk GenAI prompts",
+      "value": 5.91,
+      "unit": "percent",
+      "timeframe": "Jan-May 2026",
+      "source": "Check Point AI Security Report 2026"
+    },
+    {
+      "sector": "Wholesale & Distribution",
+      "metric": "high-risk GenAI prompts",
+      "value": 5.47,
+      "unit": "percent",
+      "timeframe": "Jan-May 2026",
+      "source": "Check Point AI Security Report 2026"
+    },
+    {
+      "sector": "Telecommunications",
+      "metric": "high-risk GenAI prompts",
+      "value": 4.06,
+      "unit": "percent",
+      "timeframe": "Jan-May 2026",
+      "source": "Check Point AI Security Report 2026"
+    }
+  ],
+  "notable_cases": [
+    {
+      "id": "CASE-CLOSEDQUORUM",
+      "name": "CLOSEDQUORUM",
+      "status": "research-significant / no confirmed in-the-wild deployment",
+      "confidence": "confirmed",
+      "summary": "Cisco Talos reported an autonomous AI C2 implant discovered through CAIRN. Talos explicitly states it did not have confirmation of in-the-wild deployment.",
+      "source": {
+        "publisher": "Cisco Talos",
+        "grade": "A",
+        "url": "https://blog.talosintelligence.com/the-closed-quorum-inside-the-first-reported-autonomous-ai-c2-implant/"
+      }
+    },
+    {
+      "id": "CASE-VOIDLINK",
+      "name": "VoidLink",
+      "status": "observed malware-development case",
+      "confidence": "confirmed",
+      "summary": "Check Point Research reported a roughly 88,000-line functional malware framework produced by one developer with an AI coding environment in under a week.",
+      "source": {
+        "publisher": "Check Point Research",
+        "grade": "A",
+        "url": "https://research.checkpoint.com/2026/voidlink-early-ai-generated-malware-framework/"
+      }
+    },
+    {
+      "id": "CASE-PROMPTWARE",
+      "name": "Promptware Kill Chain",
+      "status": "research framework",
+      "confidence": "confirmed",
+      "summary": "A 2026 academic paper proposed promptware as a framework for multi-stage attacks against LLM-based systems; CSA subsequently published defensive analysis around the concept.",
+      "source": {
+        "publisher": "arXiv / academic authors",
+        "grade": "A",
+        "url": "https://arxiv.org/abs/2601.09625"
+      }
+    },
+    {
+      "id": "CASE-STARDUST-CHOLLIMA-MASTRA",
+      "name": "STARDUST CHOLLIMA / Mastra AI supply chain",
+      "status": "observed supply-chain activity",
+      "confidence": "confirmed",
+      "summary": "CrowdStrike reported a malicious npm dependency injected into at least 131 Mastra AI framework packages.",
+      "source": {
+        "publisher": "CrowdStrike",
+        "grade": "A",
+        "url": "https://www.crowdstrike.com/en-us/blog/crowdstrike-2026-threat-hunting-report/"
+      }
+    },
+    {
+      "id": "CASE-UNIT42-SAFETY-CIRCUITS",
+      "name": "Perturbation Probing of LLM Safety",
+      "status": "defensive research",
+      "confidence": "confirmed",
+      "summary": "Unit 42 reported that in Qwen3-4B, 50 of 350,208 feed-forward neurons were causally linked to the tested refusal template, illustrating concentrated safety behavior in that model and experiment.",
+      "source": {
+        "publisher": "Palo Alto Networks Unit 42",
+        "grade": "A",
+        "url": "https://unit42.paloaltonetworks.com/perturbation-probing-llm-safety/"
+      }
+    }
+  ],
+  "research_queue": [
+    {
+      "claim": "A financially motivated operator breached 27 companies at an average AI-compute cost of USD 25.46 per target.",
+      "status": "secondary-reporting-only",
+      "confidence": "low",
+      "reason": "Found in secondary reporting; retain as a lead until a primary technical report is attached."
+    },
+    {
+      "claim": "40% of 10,000 MCP servers reviewed had security weaknesses.",
+      "status": "requires-primary-source-validation",
+      "confidence": "unverified",
+      "reason": "Do not publish as a headline metric until the underlying Lakera methodology/source is attached and scoped."
+    },
+    {
+      "claim": "CISA/Five Eyes designated prompt injection as the principal unresolved threat for agentic AI.",
+      "status": "requires-exact-guidance-source",
+      "confidence": "unverified",
+      "reason": "Strong wording requires the exact joint guidance before promotion."
+    }
+  ]
+}

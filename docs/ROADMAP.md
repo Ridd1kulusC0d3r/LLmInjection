@@ -12,6 +12,20 @@ The goal is to make LLMInjection a **living AI cyber threat-intelligence platfor
 - [x] machine-readable actor/framework/technique data;
 - [x] CI validation.
 
+## v0.15 — AI / LLM Threat Landscape
+
+- [x] 2026 evidence-driven threat landscape;
+- [x] key-metric dataset with source/population/time-window context;
+- [x] landscape domains: operator, enabler, prompt injection, agentic, supply chain, data exposure, cloud/identity, ransomware, model integrity;
+- [x] sector signals;
+- [x] notable-case status model (observed vs research vs unverified);
+- [x] OWASP LLM Top 10 2026 update while preserving 2025 historical mappings;
+- [x] curated AI-security GitHub ecosystem;
+- [x] JSON schema and CI validation;
+- [ ] recurring source-freshness checks;
+- [ ] quarterly landscape snapshots / changelog;
+- [ ] trend deltas between landscape releases.
+
 ## v0.2 — Structured intelligence
 
 - [ ] STIX 2.1 export;
