@@ -1,0 +1,106 @@
+[
+  {
+    "id": "FRAMEWORK-MITRE-ATLAS",
+    "name": "MITRE ATLAS",
+    "category": "adversary-knowledge-base",
+    "scope": "Adversary tactics and techniques against AI-enabled systems",
+    "url": "https://atlas.mitre.org/",
+    "use": "AI-specific adversary behavior mapping"
+  },
+  {
+    "id": "FRAMEWORK-MITRE-ATTACK",
+    "name": "MITRE ATT&CK",
+    "category": "adversary-knowledge-base",
+    "scope": "Enterprise, cloud, mobile and ICS adversary behavior",
+    "url": "https://attack.mitre.org/",
+    "use": "Surrounding intrusion behavior for AI-enabled campaigns"
+  },
+  {
+    "id": "FRAMEWORK-OWASP-LLM-2025",
+    "name": "OWASP Top 10 for LLM Applications 2025",
+    "category": "application-risk",
+    "scope": "LLM and GenAI application risks",
+    "url": "https://genai.owasp.org/llm-top-10/",
+    "use": "Application-layer risk mapping"
+  },
+  {
+    "id": "FRAMEWORK-OWASP-AGENTIC-2026",
+    "name": "OWASP Top 10 for Agentic Applications 2026",
+    "category": "agentic-risk",
+    "scope": "Autonomous and agentic AI application risks",
+    "url": "https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/",
+    "use": "Agent autonomy, tools and orchestration risk"
+  },
+  {
+    "id": "TAXONOMY-NIST-AI-100-2E2025",
+    "name": "NIST AI 100-2e2025",
+    "category": "adversarial-ml-taxonomy",
+    "scope": "Adversarial ML attacks, attacker capabilities and mitigations",
+    "url": "https://doi.org/10.6028/NIST.AI.100-2e2025",
+    "use": "Canonical AML terminology"
+  },
+  {
+    "id": "FRAMEWORK-NIST-AI-RMF",
+    "name": "NIST AI Risk Management Framework",
+    "category": "risk-management",
+    "scope": "AI risk governance and lifecycle",
+    "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+    "use": "Governance, mapping, measurement and management"
+  },
+  {
+    "id": "PROFILE-NIST-AI-600-1",
+    "name": "NIST AI RMF Generative AI Profile",
+    "category": "risk-profile",
+    "scope": "Generative-AI-specific risk management",
+    "url": "https://doi.org/10.6028/NIST.AI.600-1",
+    "use": "GenAI risk profile and actions"
+  },
+  {
+    "id": "FRAMEWORK-GOOGLE-SAIF",
+    "name": "Google Secure AI Framework",
+    "category": "secure-ai-framework",
+    "scope": "AI lifecycle risks, components and controls",
+    "url": "https://saif.google/",
+    "use": "Risk-to-control mapping across AI lifecycle"
+  },
+  {
+    "id": "FRAMEWORK-CSA-MAESTRO",
+    "name": "CSA MAESTRO",
+    "category": "threat-modeling",
+    "scope": "Multi-agent and agentic AI threat modeling",
+    "url": "https://labs.cloudsecurityalliance.org/maestro/",
+    "use": "Layered agentic threat modeling"
+  },
+  {
+    "id": "METHODOLOGY-ENISA-CTL-2025",
+    "name": "ENISA Cybersecurity Threat Landscape Methodology 2025",
+    "category": "threat-intelligence-methodology",
+    "scope": "Threat landscape production and contextual analysis",
+    "url": "https://www.enisa.europa.eu/publications/enisa-cybersecurity-threat-landscape-methodology",
+    "use": "Threat-intelligence methodology"
+  },
+  {
+    "id": "TM-STRIDE",
+    "name": "STRIDE",
+    "category": "classic-threat-modeling",
+    "scope": "Technical threat categories",
+    "url": "https://learn.microsoft.com/azure/security/develop/threat-modeling-tool-threats",
+    "use": "Baseline component threats"
+  },
+  {
+    "id": "TM-PASTA",
+    "name": "PASTA",
+    "category": "risk-centric-threat-modeling",
+    "scope": "Attack simulation and risk-centric threat modeling",
+    "url": "https://owasp.org/www-pdf-archive/AppSecEU2012_PASTA.pdf",
+    "use": "Scenario and impact-driven modeling"
+  },
+  {
+    "id": "TM-LINDDUN",
+    "name": "LINDDUN",
+    "category": "privacy-threat-modeling",
+    "scope": "Privacy threat modeling",
+    "url": "https://www.linddun.org/",
+    "use": "Privacy threats in data/RAG/model flows"
+  }
+]
