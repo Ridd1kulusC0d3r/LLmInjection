@@ -7,6 +7,7 @@ on:
       - "site/**"
       - "data/**"
       - "scripts/build_graph.py"
+      - "scripts/build_api.py"
       - ".github/workflows/pages.yml"
   workflow_dispatch:
 
@@ -33,6 +34,9 @@ jobs:
         run: python scripts/validate_intel.py
       - name: Build graph exports
         run: python scripts/build_graph.py
+      - name: Build static API
+        run: python scripts/build_api.py
+
       - name: Assemble static site
         run: |
           mkdir -p _site
@@ -41,6 +45,7 @@ jobs:
           cp dist/graph.graphml _site/graph.graphml
           cp dist/llminjection-stix.json _site/llminjection-stix.json
           cp data/threat-landscape-2026.json _site/landscape.json
+          cp -R dist/api _site/api
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload Pages artifact
