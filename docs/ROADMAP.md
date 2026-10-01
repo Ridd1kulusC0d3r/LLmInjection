@@ -19,8 +19,8 @@ The goal is a **living AI cyber threat-intelligence platform**, not a static awe
 - [x] OWASP LLM 2026 with 2025 historical preservation
 - [x] curated ecosystem and reference library
 - [x] weekly source-freshness workflow
-- [ ] quarterly snapshot automation
-- [ ] automated trend-delta reports
+- [x] monthly snapshot automation
+- [x] automated entity-level trend/delta reports
 
 ## v0.2 — Structured intelligence ✅ foundation
 
@@ -43,7 +43,7 @@ The goal is a **living AI cyber threat-intelligence platform**, not a static awe
 - [x] timeline view
 - [x] evidence detail drawer
 - [ ] larger-graph clustering and layout optimization
-- [ ] quarter-over-quarter landscape comparison
+- [x] snapshot-to-snapshot landscape comparison foundation
 
 ## v0.4 — Detection engineering 🟡 starter pack
 
@@ -77,7 +77,7 @@ The goal is a **living AI cyber threat-intelligence platform**, not a static awe
 - [x] AI/ML-BOM guidance
 - [x] artifact pinning/signature/dependency controls
 - [x] CycloneDX and Sigstore references
-- [ ] automated OSV/GHSA enrichment
+- [x] review-gated GitHub advisory / malicious-package intake
 - [x] provenance-attested release archives with SHA-256
 - [ ] generated AI/ML-BOM for LLMInjection releases
 
@@ -94,6 +94,26 @@ The goal is a **living AI cyber threat-intelligence platform**, not a static awe
 - [x] public methodology
 - [ ] promote schema from beta to stable guarantee
 - [ ] TAXII publishing endpoint
+
+## v1.1 — Living intelligence pipeline ✅ foundation
+
+- [x] allow-listed machine-readable source registry
+- [x] daily MITRE ATLAS / OWASP / MCP / GitHub Advisory / CISA KEV intake
+- [x] research queue with deduplication and review state
+- [x] transparent relevance scoring
+- [x] ATLAS release-note extraction for new techniques, mitigations and case studies
+- [x] monthly deterministic snapshots
+- [x] entity-level added / removed / changed diff
+- [x] monthly threat-landscape report generator
+- [x] review-only automation PRs; no auto-promotion
+- [x] Explorer What's New view
+- [x] current MITRE ATLAS v2026.09 source tracking
+- [x] LLMI-T015 → AML.T0124 Autonomous Attack Orchestration exact mapping
+- [ ] RSS / Atom vendor-threat-research feed adapters
+- [ ] automated duplicate clustering across vendor naming
+- [ ] analyst promotion helper that generates candidate object patches
+- [ ] stateful TAXII service
+- [ ] read-only MCP intelligence server
 
 ## North star
 
