@@ -1,0 +1,13 @@
+rule llminjection_det_ai_002_local_llm_runtime {
+  meta:
+    author = "LLMInjection"
+    description = "Detect local LLM runtime process creation outside approved inventory"
+    severity = "MEDIUM"
+
+  events:
+    $e.metadata.event_type = "PROCESS_LAUNCH"
+    re.regex($e.target.process.file.full_path, `(?i)(ollama|gpt4all|lm[ _-]?studio)(\\.exe)?$`)
+
+  condition:
+    $e
+}
