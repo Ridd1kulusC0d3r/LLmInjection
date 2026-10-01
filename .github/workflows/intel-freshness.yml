@@ -1,0 +1,20 @@
+name: Intelligence freshness
+
+on:
+  schedule:
+    - cron: "23 9 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  freshness:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check verification age
+        run: python scripts/check_source_freshness.py --warn-days 90 --fail-days 180
