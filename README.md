@@ -47,7 +47,7 @@ LLMInjection connects <strong>threat actors, campaigns, prompt injection, agent 
 
 > **LLMInjection is not a prompt dump.** The project is structured as cyber threat intelligence: every meaningful claim should have evidence, confidence, last-verification date, framework context and defensive relevance.
 
-**Graph layer:** 7 campaigns · 5 incident/research cases · 10 detection hypotheses · 20 controls · 25 curated sources · 48 explicit evidence-backed relationships.
+**Graph layer:** 7 campaigns · 5 incident/research cases · 6 CVE/GHSA/malicious-package records · 10 detection hypotheses · 20 controls · 35 curated sources · 52 explicit evidence-backed relationships.
 
 **Exports:** `graph.json` · GraphML · STIX 2.1 · interactive GitHub Pages Explorer.
 
@@ -223,9 +223,9 @@ python scripts/build_graph.py
 python scripts/run_safe_lab.py --profile all
 ```
 
-Generated outputs are written to `dist/graph.json`, `dist/graph.graphml` and `dist/llminjection-stix.json`.
+Generated outputs are written to `dist/graph.json`, `dist/graph.graphml` and `dist/llminjection-stix.json`. Vulnerability nodes retain CVE/GHSA/OSV identifiers as STIX external references.
 
-**Explorer:** https://ridd1kulusc0d3r.github.io/LLmInjection/ · **Graph model:** [INTELLIGENCE-GRAPH.md](docs/INTELLIGENCE-GRAPH.md) · **Reference library:** [REFERENCE-LIBRARY.md](references/REFERENCE-LIBRARY.md)
+**Explorer:** https://ridd1kulusc0d3r.github.io/LLmInjection/ · **Graph model:** [INTELLIGENCE-GRAPH.md](docs/INTELLIGENCE-GRAPH.md) · **Vulnerabilities:** [`data/vulnerabilities.json`](data/vulnerabilities.json) · **Reference library:** [REFERENCE-LIBRARY.md](references/REFERENCE-LIBRARY.md)
 
 ---
 
