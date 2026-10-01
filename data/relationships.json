@@ -528,5 +528,52 @@
     "evidence_sources": [
       "SRC-OWASP-ACS"
     ]
+  },
+  {
+    "id": "REL-049",
+    "type": "relationship",
+    "source": "VULN-LITELLM-MALWARE-2026",
+    "relationship": "observed-in",
+    "target": "CAMPAIGN-TEAMPCP-LITELLM",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GHSA-LITELLM-MALWARE",
+      "SRC-ENDOR-TEAMPCP"
+    ]
+  },
+  {
+    "id": "REL-050",
+    "type": "relationship",
+    "source": "VULN-TRIVY-CVE-2026-33634",
+    "relationship": "demonstrates",
+    "target": "LLMI-T011",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GHSA-TRIVY-SUPPLYCHAIN"
+    ]
+  },
+  {
+    "id": "REL-051",
+    "type": "relationship",
+    "source": "VULN-LITELLM-CVE-2026-59822",
+    "relationship": "mitigated-by",
+    "target": "CTRL-MCP-TOKEN-AUDIENCE",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-GHSA-LITELLM-MCP-59822",
+      "SRC-MCP-SECURITY-2026"
+    ]
+  },
+  {
+    "id": "REL-052",
+    "type": "relationship",
+    "source": "VULN-LITELLM-CVE-2026-12773",
+    "relationship": "mitigated-by",
+    "target": "CTRL-CONTEXTUAL-AUTHZ",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-GHSA-LITELLM-MCP-12773",
+      "SRC-MCP-SECURITY-2026"
+    ]
   }
 ]
