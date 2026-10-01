@@ -1,0 +1,25 @@
+title: Unauthorized Local LLM Runtime
+id: 0c5890a1-52e4-4ca1-884c-4f4047f71ef7
+status: experimental
+description: Detects common local LLM runtime processes on systems where such software is not expected.
+references:
+  - https://github.com/Ridd1kulusC0d3r/LLmInjection
+author: LLMInjection
+date: 2026-09-30
+tags:
+  - llminjection.det-ai-002
+logsource:
+  category: process_creation
+detection:
+  selection:
+    Image|endswith:
+      - '/ollama'
+      - '\\ollama.exe'
+      - '/gpt4all'
+      - '\\gpt4all.exe'
+      - '/lmstudio'
+      - '\\LM Studio.exe'
+  condition: selection
+falsepositives:
+  - Approved developer, research or AI inference workstations.
+level: medium
