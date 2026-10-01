@@ -38,12 +38,14 @@ def validate():
     actors = load_json(ROOT / "data" / "actors.json")
     techniques = load_json(ROOT / "data" / "techniques.json")
     models = load_json(ROOT / "data" / "models.json")
+    test_cases = load_json(ROOT / "data" / "test-cases.json")
 
     for dataset_name, records in (
         ("frameworks", frameworks),
         ("actors", actors),
         ("techniques", techniques),
         ("models", models),
+        ("test-cases", test_cases),
     ):
         if not isinstance(records, list):
             errors.append(f"{dataset_name}: root must be a JSON array")
@@ -94,6 +96,25 @@ def validate():
         if not technique.get("mappings"):
             errors.append(f"{prefix}: at least one framework mapping is required")
 
+    for index, test_case in enumerate(test_cases):
+        prefix = f"test-cases[{index}]"
+        if test_case.get("mode") not in {"safe-lab", "detection-simulation"}:
+            errors.append(f"{prefix}: invalid mode")
+        if not test_case.get("category"):
+            errors.append(f"{prefix}: missing category")
+        if not test_case.get("goal"):
+            errors.append(f"{prefix}: missing goal")
+        if not test_case.get("stimulus"):
+            errors.append(f"{prefix}: missing stimulus")
+        if not test_case.get("expected"):
+            errors.append(f"{prefix}: missing expected behavior")
+        if not test_case.get("telemetry"):
+            errors.append(f"{prefix}: telemetry must not be empty")
+        if not test_case.get("controls"):
+            errors.append(f"{prefix}: controls must not be empty")
+        if not test_case.get("mappings"):
+            errors.append(f"{prefix}: mappings must not be empty")
+
     for index, model in enumerate(models):
         prefix = f"models[{index}]"
         if not model.get("provider"):
@@ -121,7 +142,8 @@ def validate():
         f"{len(frameworks)} frameworks, "
         f"{len(actors)} actors, "
         f"{len(techniques)} techniques, "
-        f"{len(models)} model families"
+        f"{len(models)} model families, "
+        f"{len(test_cases)} test cases"
     )
     return 0
 

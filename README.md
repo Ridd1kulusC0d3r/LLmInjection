@@ -1,145 +1,367 @@
-# LLMInjection
+<p align="center">
+  <img src="assets/llminjection-banner.svg" alt="LLMInjection — AI / LLM Cyber Threat Intelligence" width="100%">
+</p>
 
-> **AI / LLM Cyber Threat Intelligence, adversarial research and defensive engineering.**
+<p align="center">
+  <a href="https://github.com/Ridd1kulusC0d3r/LLmInjection/stargazers"><img src="https://img.shields.io/github/stars/Ridd1kulusC0d3r/LLmInjection?style=for-the-badge&logo=github&label=Stars" alt="GitHub stars"></a>
+  <a href="https://github.com/Ridd1kulusC0d3r/LLmInjection/actions/workflows/validate-intel.yml"><img src="https://img.shields.io/github/actions/workflow/status/Ridd1kulusC0d3r/LLmInjection/validate-intel.yml?style=for-the-badge&label=Intel%20CI" alt="Intel CI"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/Ridd1kulusC0d3r/LLmInjection?style=for-the-badge" alt="Apache-2.0 license"></a>
+  <img src="https://img.shields.io/badge/Focus-AI%20Threat%20Intelligence-0ea5e9?style=for-the-badge" alt="AI Threat Intelligence">
+</p>
 
-LLMInjection is an open cybersecurity knowledge base for tracking how large language models, generative AI and agentic systems change the threat landscape.
+<p align="center">
+  <img src="https://img.shields.io/badge/MITRE-ATLAS-ef4444?style=flat-square" alt="MITRE ATLAS">
+  <img src="https://img.shields.io/badge/OWASP-GenAI-7c3aed?style=flat-square" alt="OWASP GenAI">
+  <img src="https://img.shields.io/badge/NIST-AI%20RMF-2563eb?style=flat-square" alt="NIST AI RMF">
+  <img src="https://img.shields.io/badge/CSA-MAESTRO-0891b2?style=flat-square" alt="CSA MAESTRO">
+  <img src="https://img.shields.io/badge/Mode-Defensive--First-16a34a?style=flat-square" alt="Defensive first">
+</p>
 
-This project is **not a prompt dump**. It connects threat actors, campaigns, AI attack surfaces, prompt injection, jailbreak research, adversarial ML, model supply-chain compromise, agentic abuse, detections, mitigations, benchmarks and security frameworks in one evidence-driven repository.
+<h3 align="center">Open cyber threat intelligence for AI, LLM and agentic systems.</h3>
 
-## Why this exists
+<p align="center">
+LLMInjection connects <strong>threat actors, campaigns, prompt injection, agent abuse, model supply chain, adversarial ML, safe test cases, detections, mitigations and security frameworks</strong> in one evidence-driven repository.
+</p>
 
-AI security is fragmented across model-security papers, vendor threat reports, jailbreak repositories, OWASP guidance, MITRE ATLAS, adversarial ML research, incident reports and classic threat-modeling methods. LLMInjection turns that fragmentation into a usable intelligence layer.
+<p align="center">
+  <a href="#threat-actors--campaigns">Threat Actors</a> ·
+  <a href="#security-test-lab">Test Cases</a> ·
+  <a href="#threat-landscape">Threat Landscape</a> ·
+  <a href="#framework-stack">Frameworks</a> ·
+  <a href="#model--runtime-intelligence">Models</a> ·
+  <a href="#detection-engineering">Detection</a> ·
+  <a href="docs/ROADMAP.md">Roadmap</a>
+</p>
 
-The repository models four distinct questions:
+---
 
-1. **AI as a target** — prompt injection, poisoning, model theft, supply-chain compromise, malicious dependencies and agent/tool abuse.
-2. **AI as an offensive enabler** — reconnaissance, social engineering, malware development, data analysis and attack automation.
-3. **AI as an autonomous operator** — agentic execution, orchestration and machine-speed attack chains.
-4. **AI as a defensive control plane** — detection, evaluation, policy enforcement, monitoring and threat hunting.
+## At a glance
 
-## Intelligence map
+| **7** tracked actors | **15** safe test cases | **16** threat techniques | **13** frameworks / taxonomies | **12** model families |
+|:---:|:---:|:---:|:---:|:---:|
+| APT & criminal activity | Prompt · RAG · Agent · MCP · Supply chain | Machine-readable JSON | ATLAS · OWASP · NIST · SAIF · MAESTRO | API · open-weight · local |
 
-| Layer | What we track |
+> **LLMInjection is not a prompt dump.** The project is structured as cyber threat intelligence: every meaningful claim should have evidence, confidence, last-verification date, framework context and defensive relevance.
+
+---
+
+# Threat Actors & Campaigns
+
+Real-world reporting is intentionally placed on the front page because AI security becomes useful when research connects to **who is doing what, where the evidence comes from, and what defenders can observe**.
+
+| Actor / cluster | Nexus | AI role | Documented activity | Confidence |
+|---|---|---|---|:---:|
+| **GTG-1002** | China | Autonomous operator | Claude Code used in a largely AI-orchestrated espionage campaign against ~30 targets; Anthropic reported AI performing 80–90% of tactical operations | 🟢 Confirmed |
+| **APT28 / FROZENLAKE** | Russia | Runtime enabler | PROMPTSTEAL / LAMEHUG queried an LLM to generate commands during live operations | 🟢 Confirmed |
+| **APT42** | Iran | Offensive enabler | Gemini used for reconnaissance, target research, phishing content and localization | 🟢 Confirmed |
+| **UNC2970** | North Korea nexus | Offensive enabler | Gemini used to synthesize OSINT and profile high-value targets | 🟢 Confirmed |
+| **Kimsuky** | North Korea | Local AI stack | Reporting identified Ollama, GPT4All, Msty and RAG-related artifacts in infrastructure linked to the group | 🟡 High |
+| **Famous Chollima / PromptMink** | North Korea | Coding-agent / supply chain | Reporting describes malicious package activity designed to influence AI coding-agent dependency selection | 🟡 High |
+| **TeamPCP** | Unattributed | AI infrastructure target | 2026 software supply-chain activity included malicious LiteLLM releases, exposing AI gateways and CI/CD trust | 🟢 Confirmed |
+
+**Analyst view:** [full actor tracker →](docs/ACTOR-TRACKER.md) · **Machine-readable:** [`data/actors.json`](data/actors.json) · **Source methodology:** [SOURCE-GRADING.md](docs/SOURCE-GRADING.md)
+
+> Attribution is deliberately conservative. Vendor tracking labels are not silently merged into universal aliases, and claims that lack sufficient primary evidence remain in the research queue rather than being promoted to fact.
+
+---
+
+# Security Test Lab
+
+The test catalog converts threat intelligence into **safe, reproducible defensive validation**. Tests use synthetic canaries, mock tools, local fixtures and simulated telemetry instead of production secrets or third-party targets.
+
+| ID | Test case | Surface | What the secure system must prove |
+|---|---|---|---|
+| [`TC-PI-001`](docs/TEST-CASES.md#tc-pi-001--direct-prompt-injection-boundary) | Direct Prompt Injection Boundary | Prompt | User text cannot become higher-priority policy |
+| [`TC-PI-002`](docs/TEST-CASES.md#tc-pi-002--indirect-prompt-injection-in-rag) | Indirect Prompt Injection in RAG | RAG | Retrieved instructions remain untrusted content |
+| [`TC-DL-003`](docs/TEST-CASES.md#tc-dl-003--synthetic-secret-disclosure) | Synthetic Secret Disclosure | Context | Protected canaries are not disclosed |
+| [`TC-RAG-004`](docs/TEST-CASES.md#tc-rag-004--rag-provenance-conflict) | RAG Provenance Conflict | Knowledge | Trusted/untrusted source provenance survives retrieval |
+| [`TC-AG-005`](docs/TEST-CASES.md#tc-ag-005--unauthorized-tool-invocation) | Unauthorized Tool Invocation | Agent tools | Content cannot trigger privileged side effects |
+| [`TC-AG-006`](docs/TEST-CASES.md#tc-ag-006--high-impact-action-confirmation) | High-Impact Action Confirmation | Agent tools | High-impact action stops at a human/policy checkpoint |
+| [`TC-MEM-007`](docs/TEST-CASES.md#tc-mem-007--persistent-memory-poisoning) | Persistent Memory Poisoning | Memory | Memory cannot silently grant future authority |
+| [`TC-SC-008`](docs/TEST-CASES.md#tc-sc-008--coding-agent-dependency-manipulation) | Coding-Agent Dependency Manipulation | Supply chain | Attractive metadata cannot bypass dependency policy |
+| [`TC-SC-009`](docs/TEST-CASES.md#tc-sc-009--model-artifact-provenance-drift) | Model Artifact Provenance Drift | Model supply chain | Digest/provenance mismatch blocks deployment |
+| [`TC-MCP-010`](docs/TEST-CASES.md#tc-mcp-010--mock-mcp-capability-spoofing) | Mock MCP Capability Spoofing | MCP / tools | Tool descriptions cannot self-grant privilege |
+| [`TC-RUN-011`](docs/TEST-CASES.md#tc-run-011--unauthorized-local-llm-runtime) | Unauthorized Local LLM Runtime | Endpoint | Shadow AI is inventoried and investigated |
+| [`TC-NET-012`](docs/TEST-CASES.md#tc-net-012--unexpected-llm-provider-egress) | Unexpected LLM Provider Egress | Network | AI egress from an unapproved workload is surfaced |
+| [`TC-OH-013`](docs/TEST-CASES.md#tc-oh-013--improper-output-handling) | Improper Output Handling | Application | Model output remains untrusted data |
+| [`TC-COST-014`](docs/TEST-CASES.md#tc-cost-014--agent-budget-exhaustion) | Agent Budget Exhaustion | Availability | Token/call/cost budgets terminate loops |
+| [`TC-AUTO-015`](docs/TEST-CASES.md#tc-auto-015--autonomous-multi-step-chain-gate) | Autonomous Multi-Step Chain Gate | Orchestration | Autonomous chains stop at privilege boundaries |
+
+**Test handbook:** [docs/TEST-CASES.md](docs/TEST-CASES.md) · **Dataset:** [`data/test-cases.json`](data/test-cases.json) · **Evaluation ecosystem:** [BENCHMARKS.md](docs/BENCHMARKS.md)
+
+### Lab pipeline
+
+```mermaid
+flowchart LR
+    A["Threat / CTI hypothesis"] --> B["Safe test case"]
+    B --> C["Synthetic stimulus"]
+    C --> D["System under test"]
+    D --> E{"Security boundary"}
+    E -->|Held| F["PASS"]
+    E -->|Crossed| G["FAIL / investigate"]
+    F --> H["Telemetry + evidence"]
+    G --> H
+    H --> I["Framework + control mapping"]
+```
+
+The roadmap includes adapters for **Microsoft PyRIT, NVIDIA garak, JailbreakBench-style evaluation, local models, mock RAG stores and mock MCP/tool servers**.
+
+---
+
+# Threat Landscape
+
+LLMInjection separates four roles that are often carelessly mixed together under the phrase “AI cyber threat”.
+
+```mermaid
+flowchart TB
+    CTI["LLMInjection Intelligence Layer"]
+
+    CTI --> TARGET["AI as Target"]
+    CTI --> ENABLER["AI as Offensive Enabler"]
+    CTI --> OPERATOR["AI as Autonomous Operator"]
+    CTI --> DEFENSE["AI as Defensive Control Plane"]
+
+    TARGET --> T1["Prompt / indirect injection"]
+    TARGET --> T2["RAG & memory poisoning"]
+    TARGET --> T3["Model / data theft & poisoning"]
+    TARGET --> T4["Agent / MCP / tool abuse"]
+    TARGET --> T5["AI supply-chain compromise"]
+
+    ENABLER --> E1["Recon & OSINT synthesis"]
+    ENABLER --> E2["Social engineering"]
+    ENABLER --> E3["Code / malware assistance"]
+    ENABLER --> E4["Data triage"]
+
+    OPERATOR --> O1["Task chaining"]
+    OPERATOR --> O2["Autonomous tool use"]
+    OPERATOR --> O3["Machine-speed iteration"]
+
+    DEFENSE --> D1["Evaluation"]
+    DEFENSE --> D2["Detection engineering"]
+    DEFENSE --> D3["Policy enforcement"]
+    DEFENSE --> D4["Threat hunting"]
+```
+
+The important boundary is usually not the text generated by the model. It is the transition from **text to capability**: API call, tool execution, file write, credential use, message send, package install or other state change.
+
+Read the full model: [AI-THREAT-MODEL.md](docs/AI-THREAT-MODEL.md).
+
+---
+
+# Framework Stack
+
+MITRE ATLAS is essential, but it does not cover the whole AI system. LLMInjection uses a multi-framework crosswalk rather than pretending every taxonomy is interchangeable.
+
+| Layer | Frameworks / taxonomies | Purpose |
+|---|---|---|
+| Adversary behavior | **MITRE ATLAS · MITRE ATT&CK** | AI-specific and surrounding intrusion TTPs |
+| LLM application risk | **OWASP Top 10 for LLM Applications 2025** | Prompt, data, supply-chain and output risks |
+| Agentic security | **OWASP Top 10 for Agentic Applications 2026 · CSA MAESTRO** | Autonomy, tools, memory, identity and multi-agent trust |
+| Adversarial ML | **NIST AI 100-2e2025** | AML terminology, attacker goals/capabilities and mitigations |
+| AI risk governance | **NIST AI RMF · NIST AI 600-1** | Govern, Map, Measure and Manage GenAI risk |
+| Secure AI architecture | **Google SAIF** | Data, infrastructure, model and application controls |
+| Threat intelligence | **ENISA CTL Methodology 2025** | Evidence-driven threat-landscape methodology |
+| Classic modeling | **STRIDE · PASTA · LINDDUN** | Technical, risk-centric and privacy threat modeling |
+
+**Full crosswalk:** [docs/FRAMEWORKS.md](docs/FRAMEWORKS.md) · **Dataset:** [`data/frameworks.json`](data/frameworks.json)
+
+---
+
+# Model & Runtime Intelligence
+
+A model name is not a security posture. Deployment architecture, tool authority, RAG, memory, identity, network access and provenance often matter more than the base model alone.
+
+**Tracked families:**  
+`GPT` · `gpt-oss` · `Claude` · `Gemini` · `Gemma` · `Llama` · `Qwen` · `DeepSeek` · `Mistral` · `Grok` · `Kimi` · `GLM`
+
+| Deployment class | Main security questions |
 |---|---|
-| Threat actors | APTs, financially motivated actors, unattributed clusters |
-| Campaigns | Real-world AI-enabled or AI-targeting operations |
-| Techniques | Prompt injection, jailbreaks, poisoning, model extraction, RAG abuse, agent/tool misuse |
-| Models & runtimes | Frontier APIs, open-weight models, local runtimes and agent frameworks |
-| Supply chain | Models, datasets, packages, gateways, plugins, MCP/A2A components and CI/CD |
-| Detection | Telemetry, behaviors, analytics, hunting hypotheses and control points |
-| Frameworks | MITRE ATLAS, OWASP, NIST, Google SAIF, CSA MAESTRO, ENISA and classic threat modeling |
-| Evidence | Source quality, confidence, attribution and verification date |
+| Managed API | Identity, API keys, gateway policy, data handling, tool authorization |
+| Open-weight / self-hosted | Model provenance, serving stack, dependencies, runtime isolation |
+| RAG application | Ingestion trust, indirect injection, corpus poisoning, citation provenance |
+| Coding agent | Repository trust, dependency policy, secret isolation, shell/tool permissions |
+| Tool-using agent | Capability boundaries, contextual authorization, side effects |
+| Multi-agent system | Agent identity, delegation, message integrity, trust propagation |
+| AI gateway | Credential concentration, routing integrity, CI/CD and admin control |
 
-## Model family coverage
+**Catalog:** [MODEL-CATALOG.md](docs/MODEL-CATALOG.md) · **Security matrix:** [MODEL-SECURITY-MATRIX.md](docs/MODEL-SECURITY-MATRIX.md) · **Data:** [`data/models.json`](data/models.json)
 
-The repository tracks model families as security-relevant assets, including **GPT / gpt-oss, Claude, Gemini, Gemma, Llama, Qwen, DeepSeek, Mistral, Grok, Kimi and GLM**. The catalog records deployment style and security surface rather than claiming that one vendor or release is universally "more secure".
+---
 
-See [docs/MODEL-CATALOG.md](docs/MODEL-CATALOG.md) and [data/models.json](data/models.json).
+# Detection Engineering
 
-## Frameworks beyond MITRE ATLAS
+LLMInjection focuses on behaviors and trust-boundary crossings rather than trying to detect the string “AI”.
 
-LLMInjection treats frameworks according to what they actually do instead of pretending every standards document is a threat framework.
+### High-value detection hypotheses
 
-- **MITRE ATLAS** — adversary behaviors against AI-enabled systems.
-- **OWASP Top 10 for LLM Applications 2025** — application-layer GenAI risks.
-- **OWASP Top 10 for Agentic Applications 2026** — autonomous-agent security risks.
-- **NIST AI 100-2e2025** — adversarial machine learning taxonomy and terminology.
-- **NIST AI RMF + Generative AI Profile (AI 600-1)** — AI risk governance and lifecycle controls.
-- **Google Secure AI Framework (SAIF)** — AI lifecycle risks and mapped controls.
-- **CSA MAESTRO** — threat modeling for multi-agent and agentic AI systems.
-- **ENISA Cybersecurity Threat Landscape Methodology 2025** — structured threat-landscape methodology.
-- **STRIDE / PASTA / LINDDUN** — foundational threat-modeling lenses reused where they still fit.
+- **Unexpected AI egress** from workloads with no approved AI dependency.
+- **Local model runtimes** appearing on non-AI endpoints.
+- **Agent capability transitions** from text/read-only context to privileged action.
+- **RAG or memory integrity changes** originating from untrusted sources.
+- **Model/package provenance drift** before deployment.
+- **AI gateway credential access** inconsistent with normal administration.
+- **Autonomous chains** crossing action-risk tiers without required approval.
 
-See [docs/FRAMEWORKS.md](docs/FRAMEWORKS.md) for the crosswalk.
+```text
+untrusted content
+      ↓
+model / agent interpretation
+      ↓
+capability request
+      ↓
+policy + identity decision
+      ↓
+tool / API / state change
+      ↓
+telemetry + detection
+```
 
-## Current threat-intelligence watchlist
+**Detection guide:** [docs/DETECTION-ENGINEERING.md](docs/DETECTION-ENGINEERING.md)
 
-The repository tracks confirmed or well-sourced cases including:
+---
 
-- **GTG-1002** — Anthropic assessed with high confidence that a Chinese state-sponsored group used Claude Code in a largely AI-orchestrated espionage campaign against roughly 30 targets; Anthropic reported AI performing 80–90% of tactical operations.
-- **APT28 / FROZENLAKE** — Google Threat Intelligence documented PROMPTSTEAL/LAMEHUG querying an LLM to generate commands during live operations.
-- **APT42** — Google documented Gemini use for reconnaissance, target research, phishing content and localization.
-- **UNC2970** — Google documented Gemini use to synthesize OSINT and profile high-value targets.
-- **Kimsuky** — Genians reported local LLM infrastructure including Ollama, GPT4All and Msty plus RAG-related artifacts in infrastructure linked to the group.
-- **Famous Chollima / PromptMink** — public 2026 reporting describes AI-optimized malicious package activity aimed at coding-agent dependency selection.
-- **TeamPCP** — 2026 supply-chain activity affected Trivy/KICS and malicious LiteLLM releases, demonstrating that AI infrastructure and gateways are high-value targets.
+# Intelligence Architecture
 
-Every actor record includes a source list, confidence level and last-verification date. We deliberately separate **confirmed fact**, **vendor assessment**, **community reporting** and **unverified claims**.
+```mermaid
+flowchart LR
+    S["Sources"] --> I["Evidence & confidence"]
+    I --> A["Actors / campaigns"]
+    I --> T["Techniques"]
+    I --> M["Models / runtimes"]
+    I --> F["Framework mappings"]
 
-## Repository structure
+    A --> R["Relationships"]
+    T --> R
+    M --> R
+    F --> R
+
+    R --> TC["Safe test cases"]
+    R --> DE["Detection engineering"]
+    R --> TH["Threat hunting"]
+    R --> CT["Controls / mitigations"]
+
+    TC --> OUT["JSON · Graph · STIX · Pages"]
+    DE --> OUT
+    TH --> OUT
+    CT --> OUT
+```
+
+### Evidence model
+
+Every intelligence item should answer:
+
+1. **What happened?**
+2. **Who says so?**
+3. **What is directly observed vs assessed?**
+4. **How confident are we?**
+5. **When was it last verified?**
+6. **Which frameworks does it map to?**
+7. **What telemetry, test or control is relevant?**
+
+| Confidence | Meaning |
+|---|---|
+| 🟢 `confirmed` | Primary or authoritative reporting directly supports the claim |
+| 🟡 `high` | Strong named-vendor assessment or multiple credible sources |
+| 🟠 `medium` | Plausible and partially supported, with material gaps |
+| 🔴 `low` | Limited support or meaningful conflicting evidence |
+| ⚪ `unverified` | Research lead retained without promotion to fact |
+
+---
+
+# Repository Map
 
 ```text
 LLmInjection/
-├── README.md
-├── CONTRIBUTING.md
-├── SECURITY.md
+├── assets/
+│   └── llminjection-banner.svg
 ├── docs/
-│   ├── FRAMEWORKS.md
-│   ├── AI-THREAT-MODEL.md
 │   ├── ACTOR-TRACKER.md
-│   ├── DETECTION-ENGINEERING.md
-│   ├── MODEL-SECURITY-MATRIX.md
-│   ├── MODEL-CATALOG.md
+│   ├── AI-THREAT-MODEL.md
 │   ├── BENCHMARKS.md
+│   ├── DETECTION-ENGINEERING.md
+│   ├── FRAMEWORKS.md
+│   ├── MODEL-CATALOG.md
+│   ├── MODEL-SECURITY-MATRIX.md
 │   ├── SOURCE-GRADING.md
+│   ├── TEST-CASES.md
 │   └── ROADMAP.md
 ├── data/
-│   ├── frameworks.json
 │   ├── actors.json
+│   ├── frameworks.json
+│   ├── models.json
 │   ├── techniques.json
-│   └── models.json
+│   └── test-cases.json
 ├── references/
 │   └── community-corpora.md
 ├── schemas/
 │   └── intel.schema.json
-└── scripts/
-    └── validate_intel.py
+├── scripts/
+│   └── validate_intel.py
+├── CONTRIBUTING.md
+├── SECURITY.md
+└── CITATION.cff
 ```
 
-## Evidence model
+---
 
-Every intelligence item should answer:
+# Research & Evaluation Ecosystem
 
-- **What happened?**
-- **Who says so?**
-- **What is directly observed vs assessed?**
-- **How confident are we?**
-- **When was it last verified?**
-- **Which framework techniques/risks does it map to?**
-- **What defensive telemetry or control is relevant?**
+LLMInjection indexes external projects for discovery and reproducible evaluation while keeping its CTI dataset evidence-driven.
 
-Confidence values:
-
-| Value | Meaning |
+| Area | Projects |
 |---|---|
-| `confirmed` | Primary or authoritative reporting directly supports the claim |
-| `high` | Multiple credible sources or a strong named-vendor assessment |
-| `medium` | Plausible reporting with material gaps |
-| `low` | Weak, indirect or single-source reporting |
-| `unverified` | Interesting claim retained for research but not treated as fact |
+| GenAI red teaming | Microsoft **PyRIT**, NVIDIA **garak** |
+| Jailbreak robustness | **JailbreakBench**, GCG / LLM Attacks |
+| Adversarial ML | **Adversarial Robustness Toolbox**, TextAttack |
+| Community corpora | jailbreak and prompt-security collections indexed as research sources |
+| Standards | MITRE, OWASP, NIST, CSA, Google SAIF, ENISA |
 
-## Core sources
+Community corpora are discovery sources, **not self-authenticating intelligence**. Claims are promoted only after evidence review.
 
-- MITRE ATLAS: https://atlas.mitre.org/
-- OWASP GenAI Security Project: https://genai.owasp.org/
-- NIST AI RMF: https://www.nist.gov/itl/ai-risk-management-framework
-- NIST AI 100-2e2025: https://doi.org/10.6028/NIST.AI.100-2e2025
-- Google SAIF: https://saif.google/
-- CSA MAESTRO: https://labs.cloudsecurityalliance.org/maestro/
-- ENISA Threat Landscape methodology: https://www.enisa.europa.eu/publications/enisa-cybersecurity-threat-landscape-methodology
-- Anthropic threat research: https://www.anthropic.com/research
-- Google Threat Intelligence: https://cloud.google.com/blog/topics/threat-intelligence
+See [BENCHMARKS.md](docs/BENCHMARKS.md) and [community-corpora.md](references/community-corpora.md).
+
+---
+
+# Roadmap
+
+```text
+v0.1  Intelligence foundation                    ✅
+v0.2  Relationships + STIX 2.1                    ⏳
+v0.3  Threat graph + interactive GitHub Pages     ⏳
+v0.4  Sigma / KQL / SPL / ES|QL / YARA-L         ⏳
+v0.5  Reproducible AI security evaluation lab     ⏳
+v0.6  AI supply-chain intelligence + AI-BOM       ⏳
+v1.0  Community CTI platform + stable dataset     ⏳
+```
+
+The north star is simple:
+
+> Start with an **actor, model, prompt-injection class, OWASP risk, MITRE technique or supply-chain incident** and navigate directly to **evidence → related behavior → test case → telemetry → detection → control**.
+
+Full roadmap: [docs/ROADMAP.md](docs/ROADMAP.md)
+
+---
 
 ## Research posture
 
-LLMInjection is built for **defenders, threat analysts, AI red teams, detection engineers, researchers and security architects**. Offensive techniques are documented to support threat modeling and authorized evaluation; the project prioritizes reproducible evidence, mitigations, detections and safe lab research over turnkey abuse.
+LLMInjection is built for **defenders, threat analysts, AI red teams, detection engineers, researchers and security architects**. Offensive behavior is documented to support threat modeling and authorized evaluation; the project prioritizes reproducible evidence, safe labs, mitigations and detections over turnkey abuse.
 
 ## Contributing
 
-The fastest way to make this repository useful is to contribute **new evidence**, not hype.
+Useful contributions add **evidence, relationships, tests, detections or corrections**, not hype.
 
-Read [CONTRIBUTING.md](CONTRIBUTING.md), include primary sources whenever possible, and mark uncertain attribution explicitly.
+Read [CONTRIBUTING.md](CONTRIBUTING.md), prefer primary sources, preserve uncertainty and run:
+
+```bash
+python scripts/validate_intel.py
+```
+
+before opening a pull request.
 
 ## License
 
 Apache-2.0. See [LICENSE](LICENSE).
+
+<p align="center">
+  <strong>Evidence over hype. Behavior over branding. Controls over vibes.</strong>
+</p>
