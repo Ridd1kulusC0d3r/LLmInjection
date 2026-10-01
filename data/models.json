@@ -1,0 +1,188 @@
+[
+  {
+    "id": "MODEL-FAMILY-OPENAI-GPT",
+    "name": "GPT",
+    "provider": "OpenAI",
+    "deployment": [
+      "managed-api"
+    ],
+    "official": "https://developers.openai.com/api/docs/models",
+    "security_focus": [
+      "api-identity",
+      "tool-use",
+      "agentic-workflows",
+      "application-controls"
+    ]
+  },
+  {
+    "id": "MODEL-FAMILY-OPENAI-GPT-OSS",
+    "name": "gpt-oss",
+    "provider": "OpenAI",
+    "deployment": [
+      "open-weight",
+      "self-hosted"
+    ],
+    "official": "https://openai.com/open-models/",
+    "security_focus": [
+      "model-provenance",
+      "fine-tuning",
+      "runtime-security",
+      "supply-chain"
+    ]
+  },
+  {
+    "id": "MODEL-FAMILY-CLAUDE",
+    "name": "Claude",
+    "provider": "Anthropic",
+    "deployment": [
+      "managed-api",
+      "agentic-coding"
+    ],
+    "official": "https://docs.anthropic.com/",
+    "security_focus": [
+      "tool-use",
+      "coding-agent",
+      "mcp",
+      "agentic-security"
+    ]
+  },
+  {
+    "id": "MODEL-FAMILY-GEMINI",
+    "name": "Gemini",
+    "provider": "Google",
+    "deployment": [
+      "managed-api"
+    ],
+    "official": "https://ai.google.dev/",
+    "security_focus": [
+      "multimodal",
+      "tool-use",
+      "rag",
+      "application-controls"
+    ]
+  },
+  {
+    "id": "MODEL-FAMILY-GEMMA",
+    "name": "Gemma",
+    "provider": "Google",
+    "deployment": [
+      "open-weight",
+      "self-hosted"
+    ],
+    "official": "https://ai.google.dev/gemma",
+    "security_focus": [
+      "model-provenance",
+      "runtime-security",
+      "fine-tuning"
+    ]
+  },
+  {
+    "id": "MODEL-FAMILY-LLAMA",
+    "name": "Llama",
+    "provider": "Meta",
+    "deployment": [
+      "open-weight",
+      "self-hosted",
+      "third-party-hosted"
+    ],
+    "official": "https://www.llama.com/",
+    "security_focus": [
+      "model-provenance",
+      "fine-tuning",
+      "serving-stack",
+      "supply-chain"
+    ]
+  },
+  {
+    "id": "MODEL-FAMILY-QWEN",
+    "name": "Qwen",
+    "provider": "Alibaba / Qwen",
+    "deployment": [
+      "open-weight",
+      "self-hosted",
+      "hosted"
+    ],
+    "official": "https://qwenlm.github.io/",
+    "security_focus": [
+      "coding",
+      "reasoning",
+      "runtime-security",
+      "model-provenance"
+    ]
+  },
+  {
+    "id": "MODEL-FAMILY-DEEPSEEK",
+    "name": "DeepSeek",
+    "provider": "DeepSeek",
+    "deployment": [
+      "api",
+      "open-weight"
+    ],
+    "official": "https://www.deepseek.com/en/transparency/",
+    "security_focus": [
+      "reasoning",
+      "coding",
+      "self-hosted",
+      "model-provenance"
+    ]
+  },
+  {
+    "id": "MODEL-FAMILY-MISTRAL",
+    "name": "Mistral",
+    "provider": "Mistral AI",
+    "deployment": [
+      "api",
+      "open-weight",
+      "self-hosted"
+    ],
+    "official": "https://docs.mistral.ai/",
+    "security_focus": [
+      "enterprise-deployment",
+      "model-provenance",
+      "api-security"
+    ]
+  },
+  {
+    "id": "MODEL-FAMILY-GROK",
+    "name": "Grok",
+    "provider": "xAI",
+    "deployment": [
+      "managed-api"
+    ],
+    "official": "https://docs.x.ai/",
+    "security_focus": [
+      "application-controls",
+      "tool-use",
+      "agentic-workflows"
+    ]
+  },
+  {
+    "id": "MODEL-FAMILY-KIMI",
+    "name": "Kimi",
+    "provider": "Moonshot AI",
+    "deployment": [
+      "managed-api"
+    ],
+    "official": "https://platform.moonshot.ai/",
+    "security_focus": [
+      "long-context",
+      "agentic-applications",
+      "api-security"
+    ]
+  },
+  {
+    "id": "MODEL-FAMILY-GLM",
+    "name": "GLM",
+    "provider": "Zhipu AI ecosystem",
+    "deployment": [
+      "api",
+      "open-ecosystem"
+    ],
+    "official": "https://open.bigmodel.cn/",
+    "security_focus": [
+      "coding",
+      "agentic-applications",
+      "api-security"
+    ]
+  }
+]
