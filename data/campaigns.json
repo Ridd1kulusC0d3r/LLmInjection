@@ -1,0 +1,87 @@
+[
+  {
+    "id": "CAMPAIGN-GTG1002-AI-ESPIONAGE",
+    "type": "campaign",
+    "name": "GTG-1002 AI-orchestrated espionage",
+    "confidence": "confirmed",
+    "first_seen": "2026",
+    "last_seen": "2026",
+    "summary": "Campaign assessed by Anthropic as Chinese state-sponsored in which Claude Code performed the majority of tactical operations against roughly 30 targets.",
+    "source_ids": [
+      "SRC-ANTHROPIC-GTG1002"
+    ]
+  },
+  {
+    "id": "CAMPAIGN-APT28-PROMPTSTEAL",
+    "type": "campaign",
+    "name": "APT28 PROMPTSTEAL / LAMEHUG runtime LLM use",
+    "confidence": "confirmed",
+    "first_seen": "2026",
+    "last_seen": "2026",
+    "summary": "APT28-linked activity used a public LLM at runtime to generate host-relevant commands.",
+    "source_ids": [
+      "SRC-GTIG-AI-THREATS"
+    ]
+  },
+  {
+    "id": "CAMPAIGN-APT42-GEMINI",
+    "type": "campaign",
+    "name": "APT42 Gemini-enabled reconnaissance",
+    "confidence": "confirmed",
+    "first_seen": "2025",
+    "last_seen": "2026",
+    "summary": "GTIG documented Gemini use for reconnaissance, target research, phishing content and localization.",
+    "source_ids": [
+      "SRC-GTIG-MISUSE"
+    ]
+  },
+  {
+    "id": "CAMPAIGN-UNC2970-GEMINI",
+    "type": "campaign",
+    "name": "UNC2970 Gemini-enabled target profiling",
+    "confidence": "confirmed",
+    "first_seen": "2025",
+    "last_seen": "2026",
+    "summary": "GTIG documented Gemini use to synthesize OSINT and profile high-value targets.",
+    "source_ids": [
+      "SRC-GTIG-INTEGRATION"
+    ]
+  },
+  {
+    "id": "CAMPAIGN-KIMSUKY-LOCAL-LLM",
+    "type": "campaign",
+    "name": "Kimsuky local LLM capability integration",
+    "confidence": "high",
+    "first_seen": "2026",
+    "last_seen": "2026",
+    "summary": "Genians reported local LLM tooling and RAG-related artifacts on infrastructure linked to Kimsuky.",
+    "source_ids": [
+      "SRC-GENIANS-KIMSUKY"
+    ]
+  },
+  {
+    "id": "CAMPAIGN-PROMPTMINK",
+    "type": "campaign",
+    "name": "PromptMink",
+    "confidence": "high",
+    "first_seen": "2026",
+    "last_seen": "2026",
+    "summary": "Reporting describes malicious package activity optimized to influence AI coding-agent dependency selection and attributes it to Famous Chollima.",
+    "source_ids": [
+      "SRC-CSA-PROMPTMINK"
+    ]
+  },
+  {
+    "id": "CAMPAIGN-TEAMPCP-LITELLM",
+    "type": "campaign",
+    "name": "TeamPCP LiteLLM supply-chain compromise",
+    "confidence": "confirmed",
+    "first_seen": "2026",
+    "last_seen": "2026",
+    "summary": "TeamPCP-linked supply-chain activity affected LiteLLM releases and highlighted credential concentration in AI gateways.",
+    "source_ids": [
+      "SRC-ENDOR-TEAMPCP",
+      "SRC-WIZ-TEAMPCP"
+    ]
+  }
+]

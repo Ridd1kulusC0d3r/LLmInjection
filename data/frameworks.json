@@ -113,5 +113,50 @@
     "scope": "Privacy threat modeling",
     "url": "https://www.linddun.org/",
     "use": "Privacy threats in data/RAG/model flows"
+  },
+  {
+    "id": "STANDARD-OWASP-ACS",
+    "name": "OWASP Agent Control Standard",
+    "category": "agent-runtime-control-standard",
+    "scope": "Portable runtime inspection, policy hooks and control for AI agents",
+    "url": "https://genai.owasp.org/resource/agent-control-standard-acs/",
+    "use": "Runtime enforcement and agent observability",
+    "status": "current"
+  },
+  {
+    "id": "FRAMEWORK-CSA-AICM-11",
+    "name": "CSA AI Controls Matrix v1.1",
+    "category": "ai-control-framework",
+    "scope": "Security, governance and model-security controls for AI systems",
+    "url": "https://cloudsecurityalliance.org/blog/2026/07/14/ai-controls-matrix-v1-1-strengthening-the-foundation-for-trustworthy-ai",
+    "use": "Control mapping and assurance",
+    "status": "current"
+  },
+  {
+    "id": "GUIDE-MCP-SECURITY-2026",
+    "name": "MCP Security Best Practices 2026-07-28",
+    "category": "protocol-security-guidance",
+    "scope": "Authorization, consent, local-server and protocol-specific MCP security",
+    "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/blob/main/docs/docs/2026-07-28/tutorials/security/security_best_practices.mdx",
+    "use": "MCP threat modeling and controls",
+    "status": "current"
+  },
+  {
+    "id": "STANDARD-CYCLONEDX-MLBOM",
+    "name": "CycloneDX AI/ML-BOM",
+    "category": "supply-chain-transparency",
+    "scope": "Models, datasets, configurations and dependencies in AI/ML systems",
+    "url": "https://www.cyclonedx.org/capabilities/mlbom/",
+    "use": "AI supply-chain inventory and provenance",
+    "status": "current"
+  },
+  {
+    "id": "TOOL-OWASP-GENAI-CROSSWALK",
+    "name": "OWASP GenAI Security Industry Framework Crosswalk",
+    "category": "framework-crosswalk",
+    "scope": "Maps GenAI vulnerabilities across source lists to controls in major frameworks",
+    "url": "https://genai.owasp.org/resource-item/tools/",
+    "use": "Cross-framework control mapping",
+    "status": "current"
   }
 ]

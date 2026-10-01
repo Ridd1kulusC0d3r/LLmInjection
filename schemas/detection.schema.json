@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "LLMInjection detection hypothesis",
+  "type": "object",
+  "required": [
+    "id",
+    "type",
+    "name",
+    "category",
+    "severity",
+    "status",
+    "hypothesis",
+    "telemetry",
+    "test_ids"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^DET-AI-"
+    },
+    "type": {
+      "const": "detection"
+    },
+    "name": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "severity": {
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "critical"
+      ]
+    },
+    "status": {
+      "type": "string"
+    },
+    "hypothesis": {
+      "type": "string",
+      "minLength": 20
+    },
+    "telemetry": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "test_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^TC-"
+      }
+    }
+  },
+  "additionalProperties": false
+}

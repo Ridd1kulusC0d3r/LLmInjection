@@ -5,13 +5,16 @@ on:
     paths:
       - "data/**"
       - "schemas/**"
-      - "scripts/validate_intel.py"
+      - "scripts/**"
+      - "detections/**"
       - ".github/workflows/validate-intel.yml"
   pull_request:
     paths:
       - "data/**"
       - "schemas/**"
-      - "scripts/validate_intel.py"
+      - "scripts/**"
+      - "detections/**"
+      - ".github/workflows/validate-intel.yml"
 
 permissions:
   contents: read
@@ -21,12 +24,27 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
+      - name: Compile Python
+        run: python -m compileall -q scripts
+
       - name: Validate structured intelligence
         run: python scripts/validate_intel.py
+
+      - name: Build graph exports
+        run: python scripts/build_graph.py
+
+      - name: Exercise safe lab plan
+        run: python scripts/run_safe_lab.py --profile all --adapter plan > /dev/null
+
+      - name: Upload generated intelligence exports
+        uses: actions/upload-artifact@v4
+        with:
+          name: llminjection-intelligence-exports
+          path: dist/

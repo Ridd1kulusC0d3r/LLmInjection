@@ -1,0 +1,579 @@
+[
+  {
+    "id": "REL-001",
+    "type": "relationship",
+    "source": "ACTOR-GTG-1002",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-GTG1002-AI-ESPIONAGE",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-GTG1002"
+    ]
+  },
+  {
+    "id": "REL-002",
+    "type": "relationship",
+    "source": "CAMPAIGN-GTG1002-AI-ESPIONAGE",
+    "relationship": "uses",
+    "target": "LLMI-T015",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-GTG1002"
+    ]
+  },
+  {
+    "id": "REL-003",
+    "type": "relationship",
+    "source": "CAMPAIGN-GTG1002-AI-ESPIONAGE",
+    "relationship": "uses-model-family",
+    "target": "MODEL-FAMILY-CLAUDE",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-GTG1002"
+    ]
+  },
+  {
+    "id": "REL-004",
+    "type": "relationship",
+    "source": "ACTOR-APT28",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-APT28-PROMPTSTEAL",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-AI-THREATS"
+    ]
+  },
+  {
+    "id": "REL-005",
+    "type": "relationship",
+    "source": "CAMPAIGN-APT28-PROMPTSTEAL",
+    "relationship": "uses",
+    "target": "LLMI-T013",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-AI-THREATS"
+    ]
+  },
+  {
+    "id": "REL-006",
+    "type": "relationship",
+    "source": "CAMPAIGN-APT28-PROMPTSTEAL",
+    "relationship": "uses-model-family",
+    "target": "MODEL-FAMILY-QWEN",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-AI-THREATS"
+    ]
+  },
+  {
+    "id": "REL-007",
+    "type": "relationship",
+    "source": "ACTOR-APT42",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-APT42-GEMINI",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-MISUSE"
+    ]
+  },
+  {
+    "id": "REL-008",
+    "type": "relationship",
+    "source": "CAMPAIGN-APT42-GEMINI",
+    "relationship": "uses",
+    "target": "LLMI-T014",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-MISUSE"
+    ]
+  },
+  {
+    "id": "REL-009",
+    "type": "relationship",
+    "source": "CAMPAIGN-APT42-GEMINI",
+    "relationship": "uses-model-family",
+    "target": "MODEL-FAMILY-GEMINI",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-MISUSE"
+    ]
+  },
+  {
+    "id": "REL-010",
+    "type": "relationship",
+    "source": "ACTOR-UNC2970",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-UNC2970-GEMINI",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-INTEGRATION"
+    ]
+  },
+  {
+    "id": "REL-011",
+    "type": "relationship",
+    "source": "CAMPAIGN-UNC2970-GEMINI",
+    "relationship": "uses",
+    "target": "LLMI-T014",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-INTEGRATION"
+    ]
+  },
+  {
+    "id": "REL-012",
+    "type": "relationship",
+    "source": "CAMPAIGN-UNC2970-GEMINI",
+    "relationship": "uses-model-family",
+    "target": "MODEL-FAMILY-GEMINI",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-INTEGRATION"
+    ]
+  },
+  {
+    "id": "REL-013",
+    "type": "relationship",
+    "source": "ACTOR-KIMSUKY",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-KIMSUKY-LOCAL-LLM",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-GENIANS-KIMSUKY"
+    ]
+  },
+  {
+    "id": "REL-014",
+    "type": "relationship",
+    "source": "ACTOR-FAMOUS-CHOLLIMA",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-PROMPTMINK",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-CSA-PROMPTMINK"
+    ]
+  },
+  {
+    "id": "REL-015",
+    "type": "relationship",
+    "source": "CAMPAIGN-PROMPTMINK",
+    "relationship": "uses",
+    "target": "LLMI-T012",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-CSA-PROMPTMINK"
+    ]
+  },
+  {
+    "id": "REL-016",
+    "type": "relationship",
+    "source": "ACTOR-TEAMPCP",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-TEAMPCP-LITELLM",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-ENDOR-TEAMPCP"
+    ]
+  },
+  {
+    "id": "REL-017",
+    "type": "relationship",
+    "source": "CAMPAIGN-TEAMPCP-LITELLM",
+    "relationship": "uses",
+    "target": "LLMI-T011",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-ENDOR-TEAMPCP",
+      "SRC-WIZ-TEAMPCP"
+    ]
+  },
+  {
+    "id": "REL-018",
+    "type": "relationship",
+    "source": "CAMPAIGN-TEAMPCP-LITELLM",
+    "relationship": "uses",
+    "target": "LLMI-T016",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-ENDOR-TEAMPCP",
+      "SRC-WIZ-TEAMPCP"
+    ]
+  },
+  {
+    "id": "REL-019",
+    "type": "relationship",
+    "source": "INCIDENT-MASTRA-STARDUST",
+    "relationship": "demonstrates",
+    "target": "LLMI-T011",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-CROWDSTRIKE-THR2026"
+    ]
+  },
+  {
+    "id": "REL-020",
+    "type": "relationship",
+    "source": "INCIDENT-CLOSEDQUORUM",
+    "relationship": "demonstrates",
+    "target": "LLMI-T015",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-CISCO-CLOSEDQUORUM"
+    ]
+  },
+  {
+    "id": "REL-021",
+    "type": "relationship",
+    "source": "TC-PI-001",
+    "relationship": "validates",
+    "target": "LLMI-T001",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-OWASP-LLM-2026"
+    ]
+  },
+  {
+    "id": "REL-022",
+    "type": "relationship",
+    "source": "TC-PI-002",
+    "relationship": "validates",
+    "target": "LLMI-T002",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-OWASP-LLM-2026"
+    ]
+  },
+  {
+    "id": "REL-023",
+    "type": "relationship",
+    "source": "TC-DL-003",
+    "relationship": "validates",
+    "target": "LLMI-T004",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-OWASP-LLM-2026"
+    ]
+  },
+  {
+    "id": "REL-024",
+    "type": "relationship",
+    "source": "TC-RAG-004",
+    "relationship": "validates",
+    "target": "LLMI-T007",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-OWASP-LLM-2026"
+    ]
+  },
+  {
+    "id": "REL-025",
+    "type": "relationship",
+    "source": "TC-AG-005",
+    "relationship": "validates",
+    "target": "LLMI-T008",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-OWASP-AGENTIC-2026"
+    ]
+  },
+  {
+    "id": "REL-026",
+    "type": "relationship",
+    "source": "TC-MEM-007",
+    "relationship": "validates",
+    "target": "LLMI-T009",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-OWASP-AGENTIC-2026"
+    ]
+  },
+  {
+    "id": "REL-027",
+    "type": "relationship",
+    "source": "TC-SC-008",
+    "relationship": "validates",
+    "target": "LLMI-T012",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-OWASP-AGENTIC-2026"
+    ]
+  },
+  {
+    "id": "REL-028",
+    "type": "relationship",
+    "source": "TC-SC-009",
+    "relationship": "validates",
+    "target": "LLMI-T010",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS"
+    ]
+  },
+  {
+    "id": "REL-029",
+    "type": "relationship",
+    "source": "TC-AUTO-015",
+    "relationship": "validates",
+    "target": "LLMI-T015",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-OWASP-AGENTIC-2026"
+    ]
+  },
+  {
+    "id": "REL-030",
+    "type": "relationship",
+    "source": "LLMI-T001",
+    "relationship": "mitigated-by",
+    "target": "CTRL-INSTRUCTION-DATA-SEPARATION",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-OWASP-LLM-2026"
+    ]
+  },
+  {
+    "id": "REL-031",
+    "type": "relationship",
+    "source": "LLMI-T002",
+    "relationship": "mitigated-by",
+    "target": "CTRL-RAG-PROVENANCE",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GOOGLE-SAIF"
+    ]
+  },
+  {
+    "id": "REL-032",
+    "type": "relationship",
+    "source": "LLMI-T008",
+    "relationship": "mitigated-by",
+    "target": "CTRL-CONTEXTUAL-AUTHZ",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-OWASP-ACS"
+    ]
+  },
+  {
+    "id": "REL-033",
+    "type": "relationship",
+    "source": "LLMI-T009",
+    "relationship": "mitigated-by",
+    "target": "CTRL-MEMORY-PROVENANCE",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-OWASP-AGENTIC-2026"
+    ]
+  },
+  {
+    "id": "REL-034",
+    "type": "relationship",
+    "source": "LLMI-T010",
+    "relationship": "mitigated-by",
+    "target": "CTRL-ARTIFACT-PINNING",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-CYCLONEDX-MLBOM"
+    ]
+  },
+  {
+    "id": "REL-035",
+    "type": "relationship",
+    "source": "LLMI-T011",
+    "relationship": "mitigated-by",
+    "target": "CTRL-AIML-BOM",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-CYCLONEDX-MLBOM"
+    ]
+  },
+  {
+    "id": "REL-036",
+    "type": "relationship",
+    "source": "LLMI-T012",
+    "relationship": "mitigated-by",
+    "target": "CTRL-DEPENDENCY-POLICY",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-CYCLONEDX-MLBOM"
+    ]
+  },
+  {
+    "id": "REL-037",
+    "type": "relationship",
+    "source": "LLMI-T015",
+    "relationship": "mitigated-by",
+    "target": "CTRL-HUMAN-CHECKPOINT",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-OWASP-AGENTIC-2026"
+    ]
+  },
+  {
+    "id": "REL-038",
+    "type": "relationship",
+    "source": "DET-AI-001",
+    "relationship": "detects",
+    "target": "LLMI-T013",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-GTIG-AI-THREATS"
+    ]
+  },
+  {
+    "id": "REL-039",
+    "type": "relationship",
+    "source": "DET-AI-003",
+    "relationship": "detects",
+    "target": "LLMI-T008",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-OWASP-ACS"
+    ]
+  },
+  {
+    "id": "REL-040",
+    "type": "relationship",
+    "source": "DET-AI-004",
+    "relationship": "detects",
+    "target": "LLMI-T007",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-GOOGLE-SAIF"
+    ]
+  },
+  {
+    "id": "REL-041",
+    "type": "relationship",
+    "source": "DET-AI-005",
+    "relationship": "detects",
+    "target": "LLMI-T010",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-CYCLONEDX-MLBOM"
+    ]
+  },
+  {
+    "id": "REL-042",
+    "type": "relationship",
+    "source": "DET-AI-007",
+    "relationship": "supported-by",
+    "target": "CTRL-MCP-TOKEN-AUDIENCE",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-MCP-SECURITY-2026"
+    ]
+  },
+  {
+    "id": "REL-043",
+    "type": "relationship",
+    "source": "DET-AI-009",
+    "relationship": "supported-by",
+    "target": "CTRL-DEPENDENCY-POLICY",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-CYCLONEDX-MLBOM"
+    ]
+  },
+  {
+    "id": "REL-044",
+    "type": "relationship",
+    "source": "TC-MCP-010",
+    "relationship": "supported-by",
+    "target": "CTRL-MCP-CONSENT",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-MCP-SECURITY-2026"
+    ]
+  },
+  {
+    "id": "REL-045",
+    "type": "relationship",
+    "source": "TC-MCP-010",
+    "relationship": "supported-by",
+    "target": "CTRL-MCP-STATE-BINDING",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-MCP-SECURITY-2026"
+    ]
+  },
+  {
+    "id": "REL-046",
+    "type": "relationship",
+    "source": "LLMI-T015",
+    "relationship": "mitigated-by",
+    "target": "CTRL-AGENT-TELEMETRY",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-OWASP-ACS"
+    ]
+  },
+  {
+    "id": "REL-047",
+    "type": "relationship",
+    "source": "LLMI-T016",
+    "relationship": "mitigated-by",
+    "target": "CTRL-SECRET-ISOLATION",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-CSA-AICM-11"
+    ]
+  },
+  {
+    "id": "REL-048",
+    "type": "relationship",
+    "source": "LLMI-T003",
+    "relationship": "mitigated-by",
+    "target": "CTRL-POLICY-OUTSIDE-MODEL",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-OWASP-ACS"
+    ]
+  },
+  {
+    "id": "REL-049",
+    "type": "relationship",
+    "source": "VULN-LITELLM-MALWARE-2026",
+    "relationship": "observed-in",
+    "target": "CAMPAIGN-TEAMPCP-LITELLM",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GHSA-LITELLM-MALWARE",
+      "SRC-ENDOR-TEAMPCP"
+    ]
+  },
+  {
+    "id": "REL-050",
+    "type": "relationship",
+    "source": "VULN-TRIVY-CVE-2026-33634",
+    "relationship": "demonstrates",
+    "target": "LLMI-T011",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GHSA-TRIVY-SUPPLYCHAIN"
+    ]
+  },
+  {
+    "id": "REL-051",
+    "type": "relationship",
+    "source": "VULN-LITELLM-CVE-2026-59822",
+    "relationship": "mitigated-by",
+    "target": "CTRL-MCP-TOKEN-AUDIENCE",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-GHSA-LITELLM-MCP-59822",
+      "SRC-MCP-SECURITY-2026"
+    ]
+  },
+  {
+    "id": "REL-052",
+    "type": "relationship",
+    "source": "VULN-LITELLM-CVE-2026-12773",
+    "relationship": "mitigated-by",
+    "target": "CTRL-CONTEXTUAL-AUTHZ",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-GHSA-LITELLM-MCP-12773",
+      "SRC-MCP-SECURITY-2026"
+    ]
+  }
+]

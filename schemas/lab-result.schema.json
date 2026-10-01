@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Ridd1kulusC0d3r/LLmInjection/schemas/lab-result.schema.json",
+  "title": "LLMInjection lab result",
+  "type": "object",
+  "required": [
+    "test_case",
+    "adapter",
+    "result",
+    "timestamp"
+  ],
+  "properties": {
+    "test_case": {
+      "type": "string",
+      "pattern": "^TC-"
+    },
+    "name": {
+      "type": "string"
+    },
+    "adapter": {
+      "type": "string"
+    },
+    "result": {
+      "enum": [
+        "pass",
+        "fail",
+        "error",
+        "not-run"
+      ]
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "observations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "telemetry_expected": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "controls_expected": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "framework_mappings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "disclaimer": {
+      "type": "string"
+    }
+  }
+}

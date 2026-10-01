@@ -1,96 +1,106 @@
 # Roadmap
 
-The goal is to make LLMInjection a **living AI cyber threat-intelligence platform**, not a static awesome-list.
+The goal is a **living AI cyber threat-intelligence platform**, not a static awesome-list.
 
-## v0.1 — Intelligence foundation
+## v0.1 — Intelligence foundation ✅
 
-- [x] evidence model and source grading;
-- [x] framework crosswalk beyond MITRE ATLAS;
-- [x] initial AI/APT threat actor tracker;
-- [x] AI threat model;
-- [x] model/architecture security matrix;
-- [x] machine-readable actor/framework/technique data;
-- [x] CI validation.
+- [x] evidence model and source grading
+- [x] framework crosswalk
+- [x] actor tracker
+- [x] AI threat model
+- [x] model security matrix
+- [x] structured data and CI
 
-## v0.15 — AI / LLM Threat Landscape
+## v0.15 — AI / LLM Threat Landscape ✅
 
-- [x] 2026 evidence-driven threat landscape;
-- [x] key-metric dataset with source/population/time-window context;
-- [x] landscape domains: operator, enabler, prompt injection, agentic, supply chain, data exposure, cloud/identity, ransomware, model integrity;
-- [x] sector signals;
-- [x] notable-case status model (observed vs research vs unverified);
-- [x] OWASP LLM Top 10 2026 update while preserving 2025 historical mappings;
-- [x] curated AI-security GitHub ecosystem;
-- [x] JSON schema and CI validation;
-- [ ] recurring source-freshness checks;
-- [ ] quarterly landscape snapshots / changelog;
-- [ ] trend deltas between landscape releases.
+- [x] evidence-driven 2026 landscape
+- [x] sourced metrics with population/time-window context
+- [x] sector signals and notable-case status
+- [x] OWASP LLM 2026 with 2025 historical preservation
+- [x] curated ecosystem and reference library
+- [x] weekly source-freshness workflow
+- [ ] quarterly snapshot automation
+- [ ] automated trend-delta reports
 
-## v0.2 — Structured intelligence
+## v0.2 — Structured intelligence ✅ foundation
 
-- [ ] STIX 2.1 export;
-- [ ] relationships: actor → campaign → technique → model/tool → control;
-- [ ] MITRE ATLAS + ATT&CK identifiers where defensible;
-- [ ] CVE/GHSA/OSV references for AI supply-chain incidents;
-- [ ] source deduplication and canonical URLs;
-- [ ] changelog of confidence/attribution changes.
+- [x] campaigns, incidents, controls, detections and source registry
+- [x] explicit relationship graph with confidence/evidence
+- [x] STIX 2.1 export
+- [x] canonical source IDs
+- [x] referential-integrity CI
+- [x] exact/related MITRE ATLAS + ATT&CK + OWASP IDs where defensible
+- [x] initial CVE/GHSA/OSV enrichment for applicable AI/supply-chain incidents
+- [ ] attribution/confidence changelog
 
-## v0.3 — Threat graph
+## v0.3 — Threat graph ✅ foundation
 
-- [ ] GraphML/JSON graph export;
-- [ ] interactive GitHub Pages explorer;
-- [ ] filters by actor, country/nexus, technique, model, framework and confidence;
-- [ ] timeline view;
-- [ ] source-evidence panel;
-- [ ] "AI as target / enabler / operator / defense" graph layers.
+- [x] Graph JSON export
+- [x] GraphML export
+- [x] interactive GitHub Pages explorer
+- [x] actor / campaign / technique / model / source navigation
+- [x] computed technique coverage view
+- [x] timeline view
+- [x] evidence detail drawer
+- [ ] larger-graph clustering and layout optimization
+- [ ] quarter-over-quarter landscape comparison
 
-## v0.4 — Detection engineering
+## v0.4 — Detection engineering 🟡 starter pack
 
-- [ ] vendor-neutral analytics specification;
-- [ ] Sigma;
-- [ ] Sentinel KQL;
-- [ ] Splunk SPL;
-- [ ] Elastic ES|QL;
-- [ ] Google SecOps YARA-L;
-- [ ] detection-to-intel coverage matrix.
+- [x] vendor-neutral detection catalog
+- [x] Sigma starter analytic
+- [x] Sentinel KQL starter analytic
+- [x] Splunk SPL starter analytic
+- [x] Elastic ES|QL starter analytic
+- [x] Google SecOps YARA-L starter analytic
+- [x] detection-to-test coverage matrix
+- [ ] implementation for all detection IDs across all engines
+- [ ] sample normalized telemetry fixtures
 
-## v0.5 — Evaluation lab
+## v0.5 — Evaluation lab 🟡 safe foundation
 
-- [ ] safe local test harness;
-- [ ] benchmark adapters for garak / PyRIT / JailbreakBench;
-- [ ] regression result schema;
-- [ ] model/system version tracking;
-- [ ] defense effectiveness matrix;
-- [ ] agent/RAG/MCP test profiles.
+- [x] safe local test runner
+- [x] prompt / RAG / agent / MCP / supply-chain / detection profiles
+- [x] result schema
+- [x] deterministic mock-secure and mock-insecure adapters for CI plumbing
+- [ ] PyRIT adapter
+- [ ] garak adapter
+- [ ] JailbreakBench-style adapter
+- [ ] local model endpoint adapter
+- [ ] defense effectiveness reporting across system versions
 
-## v0.6 — AI supply-chain intelligence
+## v0.6 — AI supply-chain intelligence 🟡 foundation
 
-- [ ] model registry/hub incidents;
-- [ ] malicious packages and gateways;
-- [ ] CI/CD compromise cases;
-- [ ] model/data provenance guidance;
-- [ ] SBOM / AI-BOM mapping;
-- [ ] OpenSSF / SLSA integration notes.
+- [x] supply-chain incident objects
+- [x] AI gateway and malicious-package threat relationships
+- [x] model/data provenance guidance
+- [x] AI/ML-BOM guidance
+- [x] artifact pinning/signature/dependency controls
+- [x] CycloneDX and Sigstore references
+- [ ] automated OSV/GHSA enrichment
+- [ ] signed release manifests
+- [ ] generated AI/ML-BOM for LLMInjection releases
 
 ## v1.0 — Community CTI platform
 
-- [ ] documented release process;
-- [ ] signed data releases;
-- [ ] contributor attribution;
-- [ ] automated source freshness checks;
-- [ ] stable schema;
-- [ ] API-friendly published dataset;
-- [ ] public methodology paper.
+- [x] API-friendly JSON datasets
+- [x] graph/STIX/GraphML generation
+- [x] interactive public explorer workflow
+- [x] source freshness checks
+- [ ] versioned signed data releases
+- [ ] stable schema guarantee
+- [ ] contributor attribution ledger
+- [ ] TAXII publishing endpoint
+- [ ] public methodology paper
 
 ## North star
 
-A security analyst should be able to start from any one of these:
+An analyst should be able to start from:
 
-- an APT;
-- an AI model/runtime;
-- a prompt-injection class;
-- an OWASP risk;
-- a MITRE technique;
-- a supply-chain incident;
+```text
+Actor / Model / Prompt Injection / MCP / OWASP risk / Supply-chain incident
+                              ↓
+Evidence → Campaign → Technique → Test → Detection → Control → Framework
+```
 
-…and navigate to **evidence, related behaviors, controls and detections** without leaving the repository.
+…and move through the chain without leaving the project.

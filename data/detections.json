@@ -1,0 +1,182 @@
+[
+  {
+    "id": "DET-AI-001",
+    "type": "detection",
+    "name": "Unexpected LLM Provider Egress",
+    "category": "network",
+    "severity": "medium",
+    "status": "specification",
+    "hypothesis": "A workload with no approved AI dependency contacts an LLM provider or AI gateway.",
+    "telemetry": [
+      "dns",
+      "proxy",
+      "network-flow",
+      "workload-identity"
+    ],
+    "test_ids": [
+      "TC-NET-012"
+    ]
+  },
+  {
+    "id": "DET-AI-002",
+    "type": "detection",
+    "name": "Unauthorized Local LLM Runtime",
+    "category": "endpoint",
+    "severity": "medium",
+    "status": "specification",
+    "hypothesis": "A local LLM runtime or model-serving process appears on a host outside the approved AI inventory.",
+    "telemetry": [
+      "process",
+      "listening-port",
+      "file",
+      "host-inventory"
+    ],
+    "test_ids": [
+      "TC-RUN-011"
+    ]
+  },
+  {
+    "id": "DET-AI-003",
+    "type": "detection",
+    "name": "Agent Privilege Boundary Crossing",
+    "category": "agent-runtime",
+    "severity": "high",
+    "status": "specification",
+    "hypothesis": "An agent moves from read-only or analysis context into a privileged tool action without the required authorization state.",
+    "telemetry": [
+      "agent-plan",
+      "tool-request",
+      "authorization-result",
+      "tool-call"
+    ],
+    "test_ids": [
+      "TC-AG-005",
+      "TC-AG-006",
+      "TC-AUTO-015"
+    ]
+  },
+  {
+    "id": "DET-AI-004",
+    "type": "detection",
+    "name": "RAG or Memory Integrity Drift",
+    "category": "rag-memory",
+    "severity": "high",
+    "status": "specification",
+    "hypothesis": "Trusted RAG content or persistent agent memory changes from an unapproved source or outside the expected ingestion path.",
+    "telemetry": [
+      "document-provenance",
+      "vector-store-write",
+      "memory-write",
+      "identity"
+    ],
+    "test_ids": [
+      "TC-RAG-004",
+      "TC-MEM-007"
+    ]
+  },
+  {
+    "id": "DET-AI-005",
+    "type": "detection",
+    "name": "Model Artifact Provenance Drift",
+    "category": "supply-chain",
+    "severity": "high",
+    "status": "specification",
+    "hypothesis": "A model or serving artifact digest differs from the approved manifest or trusted publisher record.",
+    "telemetry": [
+      "artifact-digest",
+      "registry-event",
+      "deployment-gate",
+      "publisher"
+    ],
+    "test_ids": [
+      "TC-SC-009"
+    ]
+  },
+  {
+    "id": "DET-AI-006",
+    "type": "detection",
+    "name": "AI Gateway Credential Anomaly",
+    "category": "identity",
+    "severity": "high",
+    "status": "specification",
+    "hypothesis": "An AI gateway identity accesses, exports or uses provider credentials outside its normal administrative pattern.",
+    "telemetry": [
+      "secret-access",
+      "gateway-admin",
+      "cloud-audit",
+      "provider-auth"
+    ],
+    "test_ids": []
+  },
+  {
+    "id": "DET-AI-007",
+    "type": "detection",
+    "name": "New or Changed MCP Capability",
+    "category": "mcp",
+    "severity": "medium",
+    "status": "specification",
+    "hypothesis": "An MCP server, identity or advertised capability appears or changes without an approved configuration event.",
+    "telemetry": [
+      "mcp-server-inventory",
+      "capability-list",
+      "config-change",
+      "identity"
+    ],
+    "test_ids": [
+      "TC-MCP-010"
+    ]
+  },
+  {
+    "id": "DET-AI-008",
+    "type": "detection",
+    "name": "Agent Loop or Budget Exhaustion",
+    "category": "availability",
+    "severity": "medium",
+    "status": "specification",
+    "hypothesis": "An agent exceeds normal planning iterations, tool-call rates or budget thresholds.",
+    "telemetry": [
+      "iteration-count",
+      "tool-call-count",
+      "token-count",
+      "cost"
+    ],
+    "test_ids": [
+      "TC-COST-014"
+    ]
+  },
+  {
+    "id": "DET-AI-009",
+    "type": "detection",
+    "name": "Automated Dependency Admission Without Review",
+    "category": "supply-chain",
+    "severity": "high",
+    "status": "specification",
+    "hypothesis": "A coding agent or automation installs a new dependency before provenance and review controls complete.",
+    "telemetry": [
+      "dependency-suggestion",
+      "package-manager",
+      "review-state",
+      "ci-event"
+    ],
+    "test_ids": [
+      "TC-SC-008"
+    ]
+  },
+  {
+    "id": "DET-AI-010",
+    "type": "detection",
+    "name": "Sensitive Canary in Model Output",
+    "category": "data-protection",
+    "severity": "high",
+    "status": "specification",
+    "hypothesis": "A protected synthetic canary or classified marker appears in generated output.",
+    "telemetry": [
+      "response-classification",
+      "canary-hit",
+      "request-id"
+    ],
+    "test_ids": [
+      "TC-DL-003"
+    ]
+  }
+]

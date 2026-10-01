@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "LLMInjection defensive control",
+  "type": "object",
+  "required": [
+    "id",
+    "type",
+    "name",
+    "category",
+    "description",
+    "source_ids"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^CTRL-"
+    },
+    "type": {
+      "const": "control"
+    },
+    "name": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string",
+      "minLength": 15
+    },
+    "source_ids": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "pattern": "^SRC-"
+      }
+    }
+  },
+  "additionalProperties": false
+}
