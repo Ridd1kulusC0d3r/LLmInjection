@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="LLMInjection AI/LLM Cyber Threat Intelligence Explorer">
+  <title>LLMInjection · AI Threat Intelligence Explorer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div>
+        <div class="eyebrow">AI / LLM CYBER THREAT INTELLIGENCE</div>
+        <h1>LLMInjection Explorer</h1>
+        <p>Evidence-driven actors, campaigns, techniques, models, tests, detections, controls and sources in one navigable graph.</p>
+      </div>
+      <div class="hero-actions">
+        <a class="button primary" href="https://github.com/Ridd1kulusC0d3r/LLmInjection">GitHub</a>
+        <a class="button" href="llminjection-stix.json">STIX 2.1</a>
+        <a class="button" href="graph.graphml">GraphML</a>
+      </div>
+    </div>
+    <div id="metrics" class="metrics"></div>
+  </header>
+
+  <main>
+    <section class="toolbar panel">
+      <input id="search" type="search" placeholder="Search actor, campaign, technique, model, control...">
+      <select id="typeFilter"><option value="">All object types</option></select>
+      <select id="confidenceFilter">
+        <option value="">All confidence</option>
+        <option>confirmed</option><option>high</option><option>medium</option><option>low</option><option>unverified</option>
+      </select>
+    </section>
+
+    <nav class="tabs">
+      <button class="tab active" data-tab="overview">Overview</button>
+      <button class="tab" data-tab="graph">Graph</button>
+      <button class="tab" data-tab="coverage">Coverage</button>
+      <button class="tab" data-tab="timeline">Timeline</button>
+      <button class="tab" data-tab="sources">Sources</button>
+    </nav>
+
+    <section id="overview" class="view active">
+      <div class="grid two">
+        <article class="panel">
+          <h2>Threat actors & campaigns</h2>
+          <div id="actors"></div>
+        </article>
+        <article class="panel">
+          <h2>Landscape</h2>
+          <div id="landscape"></div>
+        </article>
+      </div>
+      <article class="panel">
+        <h2>Intelligence path</h2>
+        <div class="path">
+          <span>Evidence</span><b>→</b><span>Actor</span><b>→</b><span>Campaign</span><b>→</b><span>Technique</span><b>→</b><span>Test</span><b>→</b><span>Detection</span><b>→</b><span>Control</span>
+        </div>
+      </article>
+    </section>
+
+    <section id="graph" class="view">
+      <div class="panel graph-panel">
+        <div class="graph-head">
+          <div>
+            <h2>Intelligence graph</h2>
+            <p class="muted">Click a node to inspect evidence and relationships.</p>
+          </div>
+          <span id="graphCount" class="pill"></span>
+        </div>
+        <svg id="graphSvg" viewBox="0 0 1400 760" role="img" aria-label="LLMInjection intelligence graph"></svg>
+      </div>
+    </section>
+
+    <section id="coverage" class="view">
+      <article class="panel">
+        <h2>Technique coverage</h2>
+        <p class="muted">Computed from graph relationships, not manually maintained status icons.</p>
+        <div class="table-wrap"><table id="coverageTable"></table></div>
+      </article>
+    </section>
+
+    <section id="timeline" class="view">
+      <article class="panel">
+        <h2>Timeline</h2>
+        <div id="timelineList" class="timeline"></div>
+      </article>
+    </section>
+
+    <section id="sources" class="view">
+      <article class="panel">
+        <h2>Evidence sources</h2>
+        <div id="sourceList" class="cards"></div>
+      </article>
+    </section>
+  </main>
+
+  <aside id="drawer" class="drawer" aria-hidden="true">
+    <button id="closeDrawer" class="close">×</button>
+    <div id="drawerBody"></div>
+  </aside>
+
+  <footer>LLMInjection · evidence over hype · generated from validated repository data</footer>
+  <script src="app.js"></script>
+</body>
+</html>
