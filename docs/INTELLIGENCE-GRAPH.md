@@ -18,7 +18,7 @@ Actor → Campaign → Technique → Model
                 Framework
 ```
 
-Additional `incident` objects represent observed incidents, research artifacts and defensive research cases. Status is preserved so a proof of concept is not silently presented as an active intrusion.
+Additional `incident` objects represent observed incidents, research artifacts and defensive research cases. `vulnerability` objects preserve package, affected/fixed versions and CVE/GHSA/OSV identifiers. Status is preserved so a proof of concept is not silently presented as an active intrusion.
 
 ## Datasets
 
@@ -33,7 +33,7 @@ Additional `incident` objects represent observed incidents, research artifacts a
 | `detections.json` | Vendor-neutral detection hypotheses |
 | `controls.json` | Defensive and governance controls |
 | `frameworks.json` | Standards, taxonomies and frameworks |
-| `sources.json` | Canonical source registry |
+| `sources.json` | Canonical source registry |\n| `vulnerabilities.json` | CVE, GHSA and malicious-package intelligence |
 | `relationships.json` | Explicit graph edges |
 
 ## Relationship semantics
