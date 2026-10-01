@@ -248,5 +248,65 @@
     "role": "research-paper",
     "url": "https://arxiv.org/abs/2601.09625",
     "last_verified": "2026-09-30"
+  },
+  {
+    "id": "SRC-GHSA-LITELLM-MALWARE",
+    "type": "source",
+    "name": "Malicious code in LiteLLM 1.82.7 / 1.82.8",
+    "publisher": "GitHub Advisory Database / OpenSSF",
+    "grade": "A",
+    "role": "security-advisory",
+    "url": "https://github.com/advisories/GHSA-92x9-889m-jgmw",
+    "last_verified": "2026-09-30"
+  },
+  {
+    "id": "SRC-GHSA-LITELLM-MCP-59822",
+    "type": "source",
+    "name": "LiteLLM MCP Authentication Bypass via OAuth2 Passthrough Fallback",
+    "publisher": "BerriAI / GitHub Advisory Database",
+    "grade": "A",
+    "role": "security-advisory",
+    "url": "https://github.com/BerriAI/litellm/security/advisories/GHSA-7488-6r32-c95q",
+    "last_verified": "2026-09-30"
+  },
+  {
+    "id": "SRC-GHSA-LITELLM-MCP-12773",
+    "type": "source",
+    "name": "LiteLLM MCP Proxy Improper Authentication",
+    "publisher": "GitHub Advisory Database",
+    "grade": "A",
+    "role": "security-advisory",
+    "url": "https://github.com/advisories/GHSA-4jcj-7x88-m979",
+    "last_verified": "2026-09-30"
+  },
+  {
+    "id": "SRC-GHSA-LITELLM-GUARDRAIL-59821",
+    "type": "source",
+    "name": "LiteLLM Custom Code Guardrails Safety-Check Bypass",
+    "publisher": "BerriAI / GitHub Advisory Database",
+    "grade": "A",
+    "role": "security-advisory",
+    "url": "https://github.com/BerriAI/litellm/security/advisories/GHSA-72m8-9m7m-h278",
+    "last_verified": "2026-09-30"
+  },
+  {
+    "id": "SRC-GHSA-TRIVY-SUPPLYCHAIN",
+    "type": "source",
+    "name": "Trivy Ecosystem Supply Chain Temporarily Compromised",
+    "publisher": "Aqua Security / GitHub Advisory Database",
+    "grade": "A",
+    "role": "security-advisory",
+    "url": "https://github.com/advisories/GHSA-69fq-xp46-6x23",
+    "last_verified": "2026-09-30"
+  },
+  {
+    "id": "SRC-GHSA-TRIVY-PATH",
+    "type": "source",
+    "name": "Trivy Crafted Artifact Path Traversal",
+    "publisher": "Aqua Security",
+    "grade": "A",
+    "role": "security-advisory",
+    "url": "https://github.com/aquasecurity/trivy/security/advisories/GHSA-mcj4-mphf-j9ff",
+    "last_verified": "2026-09-30"
   }
 ]
