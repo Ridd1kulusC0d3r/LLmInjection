@@ -16,6 +16,22 @@ This page summarizes public reporting where AI materially intersects with real-w
 | Famous Chollima / PromptMink | North Korea | AI supply-chain / coding-agent targeting | 2026 reporting describes malicious npm packages optimized to influence AI coding-agent dependency selection; CSA summarizes ReversingLabs' attribution to Famous Chollima | high |
 | TeamPCP | Unattributed / criminal reporting | AI infrastructure as target | 2026 campaign compromised software supply-chain components and resulted in malicious LiteLLM releases, exposing the strategic value of AI gateways and CI secrets | confirmed |
 
+## From actor intelligence to defensive tests
+
+The actor tracker is not meant to end at attribution. Where the public behavior translates cleanly into a defensive hypothesis, LLMInjection links it to a safe lab case.
+
+| Intelligence example | Defensive question | Related safe test |
+|---|---|---|
+| GTG-1002 / AI-orchestrated campaign | Where must an autonomous workflow stop and return control to policy or a human? | [TC-AUTO-015](TEST-CASES.md#tc-auto-015--autonomous-multi-step-chain-gate), [TC-AG-006](TEST-CASES.md#tc-ag-006--high-impact-action-confirmation) |
+| APT28 / runtime LLM command generation | Can defenders identify AI-provider traffic from workloads that should not use AI? | [TC-NET-012](TEST-CASES.md#tc-net-012--unexpected-llm-provider-egress) |
+| Kimsuky / local LLM stack reporting | Can unauthorized local model runtimes and unexpected RAG artifacts be inventoried? | [TC-RUN-011](TEST-CASES.md#tc-run-011--unauthorized-local-llm-runtime), [TC-RAG-004](TEST-CASES.md#tc-rag-004--rag-provenance-conflict) |
+| Famous Chollima / PromptMink reporting | Can coding agents recommend or install dependencies without package provenance controls? | [TC-SC-008](TEST-CASES.md#tc-sc-008--coding-agent-dependency-manipulation) |
+| TeamPCP / LiteLLM supply-chain compromise | Will provenance drift block a modified AI component before trusted deployment? | [TC-SC-009](TEST-CASES.md#tc-sc-009--model-artifact-provenance-drift) |
+
+Not every observed use of AI maps to a prompt-injection test. APT42 and UNC2970, for example, are primarily useful here as evidence of **AI as an offensive enabler** for reconnaissance and target research, not as proof of a new vulnerability class.
+
+---
+
 ## Important corrections and caveats
 
 ### Famous Chollima is not automatically APT37
