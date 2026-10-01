@@ -8,7 +8,7 @@ MITRE ATLAS is essential, but it is only one lens. LLMInjection deliberately use
 |---|---|---|---|
 | MITRE ATLAS | Adversary knowledge base | How do adversaries attack AI-enabled systems? | Technique mapping and campaign behavior |
 | MITRE ATT&CK | Adversary knowledge base | How do intrusions operate across enterprise/cloud? | Classic TTPs around AI-enabled campaigns |
-| OWASP Top 10 for LLM Apps 2025 | AppSec risk list | What fails in LLM/GenAI applications? | Prompt injection, disclosure, supply chain, poisoning, output handling |
+| OWASP Top 10 for LLM Apps 2026 | AppSec risk list | What fails in LLM/GenAI applications? | Current LLM risk ordering: prompt injection, disclosure, agency, supply chain, poisoning, consumption, context and output handling |\n| OWASP Top 10 for LLM Apps 2025 | Historical AppSec risk list | How were LLM/GenAI application risks numbered in 2025? | Legacy mapping for reports and evidence created before the 2026 renumbering |
 | OWASP Top 10 for Agentic Apps 2026 | Agentic risk list | What fails when AI can plan and act? | Agent identity, tools, autonomy, memory and orchestration risks |
 | NIST AI 100-2e2025 | AML taxonomy | How should adversarial ML attacks and mitigations be described? | Canonical AML terminology |
 | NIST AI RMF 1.0 + AI 600-1 | Risk framework/profile | How should organizations govern AI risk? | Governance, lifecycle and assurance mapping |
@@ -44,9 +44,30 @@ Use for adversary tactics and techniques targeting AI systems. ATLAS is the clos
 
 Source: https://atlas.mitre.org/
 
-### OWASP Top 10 for LLM Applications 2025
+### OWASP Top 10 for LLM Applications 2026
 
-The 2025 list includes Prompt Injection, Sensitive Information Disclosure, Supply Chain, Data and Model Poisoning, Improper Output Handling and other application-level risks.
+The current release was published in August 2026. Its canonical ordering is:
+
+1. LLM01 Prompt Injection
+2. LLM02 Sensitive Information Disclosure
+3. LLM03 Excessive Agency
+4. LLM04 Supply Chain
+5. LLM05 Data and Model Poisoning
+6. LLM06 Unbounded Consumption
+7. LLM07 Misinformation
+8. LLM08 Hidden Context Exposure
+9. LLM09 Vector and Embedding Weaknesses
+10. LLM10 Improper Output Handling
+
+The 2026 edition combines community judgment with analysis of real-world incidents. Because eight entries moved or changed scope, LLMInjection preserves the 2025 list for historical mappings rather than silently rewriting old evidence.
+
+Sources:
+- https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/
+- https://github.com/GenAI-Security-Project/GenAI-LLM-Top10/tree/main/2026
+
+### OWASP Top 10 for LLM Applications 2025 — historical
+
+The 2025 numbering remains useful when reading reports, tickets and incidents created before August 2026. Do not translate identifiers one-to-one without checking the edition.
 
 Source: https://genai.owasp.org/llm-top-10/
 
