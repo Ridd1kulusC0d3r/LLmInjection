@@ -1,0 +1,252 @@
+[
+  {
+    "id": "SRC-MITRE-ATLAS",
+    "type": "source",
+    "name": "MITRE ATLAS",
+    "publisher": "MITRE",
+    "grade": "A",
+    "role": "canonical-framework",
+    "url": "https://atlas.mitre.org/",
+    "last_verified": "2026-09-30"
+  },
+  {
+    "id": "SRC-OWASP-LLM-2026",
+    "type": "source",
+    "name": "OWASP GenAI LLM Top 10 2026",
+    "publisher": "OWASP GenAI Security Project",
+    "grade": "A",
+    "role": "canonical-framework",
+    "url": "https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/",
+    "last_verified": "2026-09-30"
+  },
+  {
+    "id": "SRC-OWASP-AGENTIC-2026",
+    "type": "source",
+    "name": "OWASP Top 10 for Agentic Applications 2026",
+    "publisher": "OWASP GenAI Security Project",
+    "grade": "A",
+    "role": "canonical-framework",
+    "url": "https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/",
+    "last_verified": "2026-09-30"
+  },
+  {
+    "id": "SRC-OWASP-ACS",
+    "type": "source",
+    "name": "Agent Control Standard",
+    "publisher": "OWASP GenAI Security Project",
+    "grade": "A",
+    "role": "runtime-control-standard",
+    "url": "https://genai.owasp.org/resource/agent-control-standard-acs/",
+    "last_verified": "2026-09-30"
+  },
+  {
+    "id": "SRC-OWASP-MCP-GUIDE",
+    "type": "source",
+    "name": "A Practical Guide for Secure MCP Server Development",
+    "publisher": "OWASP GenAI Security Project",
+    "grade": "A",
+    "role": "secure-development-guidance",
+    "url": "https://genai.owasp.org/resource/a-practical-guide-for-secure-mcp-server-development/",
+    "last_verified": "2026-09-30"
+  },
+  {
+    "id": "SRC-NIST-AML-2025",
+    "type": "source",
+    "name": "NIST AI 100-2e2025",
+    "publisher": "NIST",
+    "grade": "A",
+    "role": "canonical-taxonomy",
+    "url": "https://www.nist.gov/publications/adversarial-machine-learning-taxonomy-and-terminology-attacks-and-mitigations-0",
+    "last_verified": "2026-09-30"
+  },
+  {
+    "id": "SRC-GOOGLE-SAIF",
+    "type": "source",
+    "name": "Secure AI Framework",
+    "publisher": "Google",
+    "grade": "A",
+    "role": "secure-ai-framework",
+    "url": "https://saif.google/",
+    "last_verified": "2026-09-30"
+  },
+  {
+    "id": "SRC-CSA-MAESTRO",
+    "type": "source",
+    "name": "MAESTRO",
+    "publisher": "Cloud Security Alliance",
+    "grade": "A",
+    "role": "agentic-threat-modeling",
+    "url": "https://labs.cloudsecurityalliance.org/maestro/",
+    "last_verified": "2026-09-30"
+  },
+  {
+    "id": "SRC-CSA-AICM-11",
+    "type": "source",
+    "name": "AI Controls Matrix v1.1",
+    "publisher": "Cloud Security Alliance",
+    "grade": "A",
+    "role": "control-framework",
+    "url": "https://cloudsecurityalliance.org/blog/2026/07/14/ai-controls-matrix-v1-1-strengthening-the-foundation-for-trustworthy-ai",
+    "last_verified": "2026-09-30"
+  },
+  {
+    "id": "SRC-MCP-SECURITY-2026",
+    "type": "source",
+    "name": "MCP Security Best Practices 2026-07-28",
+    "publisher": "Model Context Protocol",
+    "grade": "A",
+    "role": "protocol-security",
+    "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/blob/main/docs/docs/2026-07-28/tutorials/security/security_best_practices.mdx",
+    "last_verified": "2026-09-30"
+  },
+  {
+    "id": "SRC-CYCLONEDX-MLBOM",
+    "type": "source",
+    "name": "CycloneDX AI/ML-BOM",
+    "publisher": "CycloneDX",
+    "grade": "A",
+    "role": "supply-chain-transparency",
+    "url": "https://www.cyclonedx.org/capabilities/mlbom/",
+    "last_verified": "2026-09-30"
+  },
+  {
+    "id": "SRC-OASIS-STIX21",
+    "type": "source",
+    "name": "STIX 2.1",
+    "publisher": "OASIS Open",
+    "grade": "A",
+    "role": "cti-interchange-standard",
+    "url": "https://docs.oasis-open.org/cti/stix/v2.1/os/stix-v2.1-os.html",
+    "last_verified": "2026-09-30"
+  },
+  {
+    "id": "SRC-ANTHROPIC-GTG1002",
+    "type": "source",
+    "name": "Disrupting the first reported AI-orchestrated cyber espionage campaign",
+    "publisher": "Anthropic",
+    "grade": "A",
+    "role": "threat-report",
+    "url": "https://www.anthropic.com/news/disrupting-AI-espionage",
+    "last_verified": "2026-09-30"
+  },
+  {
+    "id": "SRC-GTIG-AI-THREATS",
+    "type": "source",
+    "name": "GTIG AI Threat Tracker",
+    "publisher": "Google Threat Intelligence Group",
+    "grade": "A",
+    "role": "threat-report",
+    "url": "https://cloud.google.com/blog/topics/threat-intelligence/threat-actor-usage-of-ai-tools",
+    "last_verified": "2026-09-30"
+  },
+  {
+    "id": "SRC-GTIG-MISUSE",
+    "type": "source",
+    "name": "Adversarial Misuse of Generative AI",
+    "publisher": "Google Threat Intelligence Group",
+    "grade": "A",
+    "role": "threat-report",
+    "url": "https://cloud.google.com/blog/topics/threat-intelligence/adversarial-misuse-generative-ai",
+    "last_verified": "2026-09-30"
+  },
+  {
+    "id": "SRC-GTIG-INTEGRATION",
+    "type": "source",
+    "name": "Distillation, Experimentation, and Integration of AI for Adversarial Use",
+    "publisher": "Google Threat Intelligence Group",
+    "grade": "A",
+    "role": "threat-report",
+    "url": "https://cloud.google.com/blog/topics/threat-intelligence/distillation-experimentation-integration-ai-adversarial-use",
+    "last_verified": "2026-09-30"
+  },
+  {
+    "id": "SRC-GENIANS-KIMSUKY",
+    "type": "source",
+    "name": "Kimsuky Integrates AI into Attack Operations",
+    "publisher": "Genians Security Center",
+    "grade": "A",
+    "role": "threat-report",
+    "url": "https://www.genians.co.kr/blog/threat_intelligence/kimsuky_ai_llm",
+    "last_verified": "2026-09-30"
+  },
+  {
+    "id": "SRC-CSA-PROMPTMINK",
+    "type": "source",
+    "name": "PromptMink: AI-Optimized DPRK Supply Chain Attack",
+    "publisher": "Cloud Security Alliance",
+    "grade": "B",
+    "role": "threat-research",
+    "url": "https://labs.cloudsecurityalliance.org/research/csa-research-note-promptmink-dprk-ai-generated-supply-chain/",
+    "last_verified": "2026-09-30"
+  },
+  {
+    "id": "SRC-ENDOR-TEAMPCP",
+    "type": "source",
+    "name": "TeamPCP Isn't Done",
+    "publisher": "Endor Labs",
+    "grade": "A",
+    "role": "supply-chain-report",
+    "url": "https://www.endorlabs.com/learn/teampcp-isnt-done",
+    "last_verified": "2026-09-30"
+  },
+  {
+    "id": "SRC-WIZ-TEAMPCP",
+    "type": "source",
+    "name": "TeamPCP trojanizes LiteLLM",
+    "publisher": "Wiz",
+    "grade": "B",
+    "role": "supply-chain-report",
+    "url": "https://www.wiz.io/blog/threes-a-crowd-teampcp-trojanizes-litellm-in-continuation-of-campaign",
+    "last_verified": "2026-09-30"
+  },
+  {
+    "id": "SRC-CISCO-CLOSEDQUORUM",
+    "type": "source",
+    "name": "CLOSEDQUORUM autonomous AI C2 implant research",
+    "publisher": "Cisco Talos",
+    "grade": "A",
+    "role": "research-report",
+    "url": "https://blog.talosintelligence.com/the-closed-quorum-inside-the-first-reported-autonomous-ai-c2-implant/",
+    "last_verified": "2026-09-30"
+  },
+  {
+    "id": "SRC-CHECKPOINT-VOIDLINK",
+    "type": "source",
+    "name": "VoidLink: Early AI-Generated Malware Framework",
+    "publisher": "Check Point Research",
+    "grade": "A",
+    "role": "research-report",
+    "url": "https://research.checkpoint.com/2026/voidlink-early-ai-generated-malware-framework/",
+    "last_verified": "2026-09-30"
+  },
+  {
+    "id": "SRC-CROWDSTRIKE-THR2026",
+    "type": "source",
+    "name": "2026 Threat Hunting Report",
+    "publisher": "CrowdStrike",
+    "grade": "A",
+    "role": "threat-landscape",
+    "url": "https://www.crowdstrike.com/en-us/blog/crowdstrike-2026-threat-hunting-report/",
+    "last_verified": "2026-09-30"
+  },
+  {
+    "id": "SRC-UNIT42-PERTURBATION",
+    "type": "source",
+    "name": "Perturbation Probing of LLM Safety",
+    "publisher": "Palo Alto Networks Unit 42",
+    "grade": "A",
+    "role": "defensive-research",
+    "url": "https://unit42.paloaltonetworks.com/perturbation-probing-llm-safety/",
+    "last_verified": "2026-09-30"
+  },
+  {
+    "id": "SRC-PROMPTWARE-PAPER",
+    "type": "source",
+    "name": "The Promptware Kill Chain",
+    "publisher": "Academic research",
+    "grade": "A",
+    "role": "research-paper",
+    "url": "https://arxiv.org/abs/2601.09625",
+    "last_verified": "2026-09-30"
+  }
+]
