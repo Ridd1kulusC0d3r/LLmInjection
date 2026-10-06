@@ -1,5 +1,23 @@
 const state={graph:null,landscape:null,diff:null,search:"",type:"",confidence:""};
-const colors={actor:"#ff7c8c",campaign:"#f3c969",incident:"#e98bff",technique:"#6ea8ff",model:"#43d7ff",framework:"#9f8cff","test-case":"#55d98d",control:"#6ed5b0",detection:"#ffae6e",source:"#71839e",vulnerability:"#ff5b8d"};
+const TYPE_ORDER=["actor","campaign","incident","vulnerability","technique","test-case","detection","control","framework","model","source"];
+const CONF_ORDER=["confirmed","high","medium","low","unverified"];
+const CONF_NOTE={confirmed:"direct authoritative evidence",high:"strong or multiple sources",medium:"plausible, gaps remain",low:"limited support",unverified:"research lead only"};
+
+function esc(v){return String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+const $=s=>document.querySelector(s);
+
+/* Confidence is encoded by shape so it survives greyscale and colour-blindness. */
+function confShape(c,x=6,y=6,r=4.5){
+  switch(c){
+    case"confirmed":return`<rect class="mk" x="${x-r}" y="${y-r}" width="${2*r}" height="${2*r}"/>`;
+    case"high":return`<circle class="mk" cx="${x}" cy="${y}" r="${r}"/>`;
+    case"medium":return`<circle cx="${x}" cy="${y}" r="${r}" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M${x} ${y-r}A${r} ${r} 0 0 0 ${x} ${y+r}Z" fill="currentColor"/>`;
+    case"low":return`<circle cx="${x}" cy="${y}" r="${r}" fill="none" stroke="currentColor" stroke-width="1.4"/>`;
+    case"unverified":return`<circle cx="${x}" cy="${y}" r="${r}" fill="none" stroke="currentColor" stroke-width="1.4" stroke-dasharray="2.2 2"/>`;
+    default:return`<path d="M${x} ${y-r}L${x+r} ${y}L${x} ${y+r}L${x-r} ${y}Z" fill="none" stroke="currentColor" stroke-width="1.2"/>`;
+  }
+}
+const conf=c=>c?`<span class="conf"><svg viewBox="0 0 12 12" aria-hidden="true" fill="currentColor">${confShape(c)}</svg>${esc(c)}</span>`:"";
 
 async function load(){
   const [g,l,d]=await Promise.all([
@@ -7,10 +25,9 @@ async function load(){
     fetch("landscape.json").then(r=>r.json()),
     fetch("intelligence-diff.json").then(r=>r.ok?r.json():null).catch(()=>null)
   ]);
-  state.graph=g;state.landscape=l;state.diff=d;
-  initFilters();renderAll();
+  Object.assign(state,{graph:g,landscape:l,diff:d});
+  initControls();renderAll();
 }
-function esc(v){return String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
 function visibleNodes(){
   const q=state.search.toLowerCase();
   return state.graph.nodes.filter(n=>{
@@ -18,89 +35,111 @@ function visibleNodes(){
     return(!state.type||n.type===state.type)&&(!state.confidence||c===state.confidence)&&(!q||(n.label+" "+JSON.stringify(n.data)).toLowerCase().includes(q));
   });
 }
-function initFilters(){
-  const types=[...new Set(state.graph.nodes.map(n=>n.type))].sort();
-  const s=document.querySelector("#typeFilter");types.forEach(t=>s.insertAdjacentHTML("beforeend",`<option value="${esc(t)}">${esc(t)}</option>`));
-  document.querySelector("#search").addEventListener("input",e=>{state.search=e.target.value;renderAll()});
+function initControls(){
+  const s=$("#typeFilter");
+  [...new Set(state.graph.nodes.map(n=>n.type))].sort().forEach(t=>s.insertAdjacentHTML("beforeend",`<option value="${esc(t)}">${esc(t)}</option>`));
+  $("#search").addEventListener("input",e=>{state.search=e.target.value;renderAll()});
   s.addEventListener("change",e=>{state.type=e.target.value;renderAll()});
-  document.querySelector("#confidenceFilter").addEventListener("change",e=>{state.confidence=e.target.value;renderAll()});
+  $("#confidenceFilter").addEventListener("change",e=>{state.confidence=e.target.value;renderAll()});
   document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>{
-    document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));b.classList.add("active");
-    document.querySelectorAll(".view").forEach(x=>x.classList.remove("active"));document.querySelector("#"+b.dataset.tab).classList.add("active");
+    document.querySelectorAll(".tab,.view").forEach(x=>x.classList.remove("active"));
+    b.classList.add("active");$("#"+b.dataset.tab).classList.add("active");
   });
-  document.querySelector("#closeDrawer").onclick=()=>document.querySelector("#drawer").classList.remove("open");
+  $("#closeDrawer").onclick=closeDrawer;
+  document.addEventListener("keydown",e=>{if(e.key==="Escape")closeDrawer()});
+  document.addEventListener("click",e=>{const t=e.target.closest("[data-id]");if(t){if(e.target.closest("a[href]"))e.preventDefault();openNode(t.dataset.id)}});
+  $("#theme").onclick=()=>{
+    const cur=document.documentElement.dataset.theme||(matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light");
+    const next=cur==="dark"?"light":"dark";document.documentElement.dataset.theme=next;
+    try{localStorage.setItem("llmi-theme",next)}catch(_){}
+  };
+  try{const t=localStorage.getItem("llmi-theme");if(t)document.documentElement.dataset.theme=t}catch(_){}
+  $("#asof").textContent="As of "+(state.landscape.meta?.as_of||"n/a");
+  $("#confLegend").innerHTML=$("#graphLegend").innerHTML=CONF_ORDER.map(c=>`<span title="${esc(CONF_NOTE[c])}">${conf(c)}</span>`).join("")+`<span class="conf"><svg viewBox="0 0 12 12" aria-hidden="true" fill="currentColor">${confShape("")}</svg>not rated</span>`;
 }
+const stat=(v,k)=>`<div class="stat"><b>${v}</b><span>${esc(k)}</span></div>`;
 function renderMetrics(){
-  const counts={};state.graph.nodes.forEach(n=>counts[n.type]=(counts[n.type]||0)+1);
-  const items=[["Actors",counts.actor],["Campaigns",counts.campaign],["Techniques",counts.technique],["Tests",counts["test-case"]],["Detections",counts.detection],["Controls",counts.control]];
-  document.querySelector("#metrics").innerHTML=items.map(([k,v])=>`<div class="metric"><strong>${v||0}</strong><span>${k}</span></div>`).join("");
+  const c={};state.graph.nodes.forEach(n=>c[n.type]=(c[n.type]||0)+1);
+  $("#metrics").innerHTML=[["Actors",c.actor],["Campaigns",c.campaign],["Incidents",c.incident],["Vulnerabilities",c.vulnerability],["Techniques",c.technique],["Sources",c.source]].map(([k,v])=>stat(v||0,k)).join("");
 }
 function renderActors(){
-  const ns=visibleNodes().filter(n=>n.type==="actor").slice(0,12);
-  document.querySelector("#actors").innerHTML=ns.map(n=>`<div class="actor-row" onclick="openNode('${n.id}')"><b>${esc(n.label)}</b><span>${esc(n.data.nexus||"")}</span><span>${esc(n.data.summary||"")}</span><i class="pill">${esc(n.data.confidence||"")}</i></div>`).join("")||'<p class="muted">No matching actors.</p>';
+  const ns=visibleNodes().filter(n=>n.type==="actor");
+  $("#actors").innerHTML=ns.map(n=>`<div class="row" data-id="${esc(n.id)}"><div class="k">${esc(n.data.nexus||"Unattributed")}</div><div><h3>${esc(n.label)}</h3><p>${esc(n.data.summary||"")}</p></div>${conf(n.data.confidence)}</div>`).join("")||'<p class="empty">No matching actors.</p>';
 }
+function renderDomains(){
+  const arrow={rising:"↑ rising",stable:"→ stable",falling:"↓ falling"};
+  $("#domains").innerHTML=(state.landscape.domains||[]).map(d=>`<div class="dom"><header><h3>${esc(d.name)}</h3><span class="trend ${esc(d.trend)}">${esc(arrow[d.trend]||d.trend)}</span></header><p>${esc(d.summary)}</p><div class="tags">${(d.defensive_focus||[]).slice(0,4).map(x=>`<span>${esc(x)}</span>`).join("")}</div></div>`).join("");
+}
+const fmt=v=>v&&typeof v==="object"&&"from"in v?`${esc(v.from)} → ${esc(v.to)}`:typeof v==="number"?(v>=1e6?new Intl.NumberFormat("en",{notation:"compact",maximumFractionDigits:1}).format(v):v.toLocaleString("en")):esc(v);
 function renderLandscape(){
-  const domains=state.landscape.domains||[];
-  document.querySelector("#landscape").innerHTML=domains.slice(0,9).map(d=>`<div class="card"><h3>${esc(d.name)}</h3><div class="meta">${esc(d.trend)} · ${esc(d.confidence)}</div><p>${esc(d.summary)}</p></div>`).join("");
+  const L=state.landscape;
+  $("#metricTable").innerHTML="<thead><tr><th>Metric</th><th class='num'>Value</th><th>Unit and window</th><th>Source</th><th>Confidence</th></tr></thead><tbody>"+
+    (L.key_metrics||[]).map(m=>`<tr><td>${esc(m.name)}</td><td class="num"><b>${fmt(m.value)}</b></td><td>${esc(m.unit)}<br><span class="id">${esc(m.timeframe)}</span></td><td><a href="${esc(m.source.url)}" rel="noopener">${esc(m.source.publisher)}</a> <span class="id">grade ${esc(m.source.grade)}</span></td><td>${conf(m.confidence)}</td></tr>`).join("")+"</tbody>";
+  const groups={};(L.sector_signals||[]).forEach(s=>(groups[s.metric]=groups[s.metric]||[]).push(s));
+  $("#sectors").innerHTML=Object.entries(groups).map(([metric,rows])=>{
+    const max=Math.max(...rows.map(r=>r.value));
+    return`<h3 style="margin:0 0 8px">${esc(metric)}</h3><div class="bars">`+rows.map(r=>`<div class="bar"><span>${esc(r.sector)}</span><i style="width:${(100*r.value/max).toFixed(1)}%" title="${esc(r.source)}"></i><b>${fmt(r.value)}${r.unit==="percent"?"%":""}</b></div>`).join("")+`</div><p class="note" style="margin:-14px 0 24px">${esc(rows[0].source)}${rows[0].timeframe?", "+esc(rows[0].timeframe):""}</p>`;
+  }).join("");
+  $("#leads").innerHTML=(L.research_queue||[]).map(q=>`<div class="dom"><header><h3 style="font-weight:500">${esc(q.claim)}</h3></header><p>${esc(q.reason)}</p><div class="tags"><span>${esc(q.status)}</span></div></div>`).join("");
 }
+const TYPE_LABEL={"test-case":"test case"};
 function renderGraph(){
-  const svg=document.querySelector("#graphSvg");svg.innerHTML="";
-  let nodes=visibleNodes().slice(0,100);const ids=new Set(nodes.map(n=>n.id));
-  const edges=state.graph.edges.filter(e=>ids.has(e.source)&&ids.has(e.target)).slice(0,240);
-  document.querySelector("#graphCount").textContent=`${nodes.length} nodes · ${edges.length} edges`;
-  const types=[...new Set(nodes.map(n=>n.type))];
-  const width=1400,height=760,pad=70;
-  const pos={};
-  types.forEach((t,ti)=>{
-    const group=nodes.filter(n=>n.type===t);const x=pad+(types.length===1?width/2:ti*(width-2*pad)/(types.length-1));
-    group.forEach((n,i)=>{const y=80+(i+1)*(height-150)/(group.length+1);pos[n.id]={x,y};});
-  });
-  const NS="http://www.w3.org/2000/svg";
-  edges.forEach(e=>{const a=pos[e.source],b=pos[e.target];if(!a||!b)return;const line=document.createElementNS(NS,"line");line.setAttribute("x1",a.x);line.setAttribute("y1",a.y);line.setAttribute("x2",b.x);line.setAttribute("y2",b.y);line.setAttribute("class","edge");svg.appendChild(line);});
-  nodes.forEach(n=>{const p=pos[n.id],g=document.createElementNS(NS,"g");g.setAttribute("class","node");g.onclick=()=>openNode(n.id);
-    const c=document.createElementNS(NS,"circle");c.setAttribute("cx",p.x);c.setAttribute("cy",p.y);c.setAttribute("r",7);c.setAttribute("fill",colors[n.type]||"#8ba3c4");g.appendChild(c);
-    const t=document.createElementNS(NS,"text");t.setAttribute("x",p.x+11);t.setAttribute("y",p.y+4);t.textContent=n.label.length>26?n.label.slice(0,24)+"…":n.label;g.appendChild(t);svg.appendChild(g);});
+  const nodes=visibleNodes().slice(0,400),ids=new Set(nodes.map(n=>n.id));
+  const edges=state.graph.edges.filter(e=>ids.has(e.source)&&ids.has(e.target));
+  $("#graphCount").textContent=`${nodes.length} nodes · ${edges.length} edges`;
+  const types=[...TYPE_ORDER.filter(t=>nodes.some(n=>n.type===t)),...[...new Set(nodes.map(n=>n.type))].filter(t=>!TYPE_ORDER.includes(t))];
+  const W=1900,pad=44,rowH=22,top=64,groups=types.map(t=>nodes.filter(n=>n.type===t));
+  const H=top+Math.max(1,...groups.map(g=>g.length))*rowH+30,pos={};
+  const colX=i=>types.length===1?W/2:pad+i*(W-2*pad-150)/(types.length-1);
+  types.forEach((t,i)=>groups[i].forEach((n,j)=>pos[n.id]={x:colX(i),y:top+j*rowH}));
+  const svg=$("#graphSvg");svg.setAttribute("viewBox",`0 0 ${W} ${H}`);
+  svg.innerHTML=types.map((t,i)=>`<text class="gcol" x="${colX(i)-6}" y="30">${esc((TYPE_LABEL[t]||t))} · ${groups[i].length}</text><line x1="${colX(i)-6}" x2="${colX(i)+150}" y1="40" y2="40" stroke="currentColor" opacity=".35"/>`).join("")+
+    edges.map(e=>{const a=pos[e.source],b=pos[e.target];return`<line class="edge" data-a="${esc(e.source)}" data-b="${esc(e.target)}" x1="${a.x}" y1="${a.y}" x2="${b.x}" y2="${b.y}"/>`}).join("")+
+    nodes.map(n=>{const p=pos[n.id];return`<g class="node" data-id="${esc(n.id)}" transform="translate(${p.x} ${p.y})" style="color:var(--ink)"><title>${esc(n.label)} (${esc(n.data.confidence||"not rated")})</title><g transform="translate(-6 -6)">${confShape(n.data.confidence)}</g><text x="12" y="4">${esc(n.label.length>23?n.label.slice(0,22)+"…":n.label)}</text></g>`}).join("");
+  const trace=(id,on)=>{
+    const near=new Set([id]);svg.querySelectorAll(".edge").forEach(l=>{const hit=l.dataset.a===id||l.dataset.b===id;l.classList.toggle("on",on&&hit);if(hit){near.add(l.dataset.a);near.add(l.dataset.b)}});
+    svg.querySelectorAll(".node").forEach(g=>{g.classList.toggle("dim",on&&!near.has(g.dataset.id));g.classList.toggle("on",on&&g.dataset.id===id)});
+  };
+  svg.onmouseover=e=>{const g=e.target.closest(".node");if(g)trace(g.dataset.id,true)};
+  svg.onmouseout=e=>{const g=e.target.closest(".node");if(g)trace(g.dataset.id,false)};
 }
-function edgeCounts(id){
+function counts(id){
   const es=state.graph.edges.filter(e=>e.source===id||e.target===id);
-  const targets=rel=>es.filter(e=>e.relationship===rel).map(e=>e.source===id?e.target:e.source);
-  return {tests:targets("validates"),detections:targets("detects"),controls:targets("mitigated-by")};
+  const n=rel=>es.filter(e=>e.relationship===rel).length;
+  return{tests:n("validates"),detections:n("detects"),controls:n("mitigated-by")};
 }
+const heat=n=>`<span class="heat h${Math.min(n,4)}">${n||"0"}</span>`;
 function renderCoverage(){
-  const techniques=visibleNodes().filter(n=>n.type==="technique");
-  document.querySelector("#coverageTable").innerHTML="<thead><tr><th>Technique</th><th>Tests</th><th>Detections</th><th>Controls</th></tr></thead><tbody>"+techniques.map(n=>{const c=edgeCounts(n.id);return`<tr onclick="openNode('${n.id}')"><td><b>${esc(n.label)}</b><br><span class="muted">${esc(n.id)}</span></td><td>${c.tests.length}</td><td>${c.detections.length}</td><td>${c.controls.length}</td></tr>`}).join("")+"</tbody>";
+  const ts=visibleNodes().filter(n=>n.type==="technique");
+  $("#coverageTable").innerHTML="<thead><tr><th>Technique</th><th>Tests</th><th>Detections</th><th>Controls</th></tr></thead><tbody>"+ts.map(n=>{
+    const c=counts(n.id),gaps=[c.tests?"":"no test",c.detections?"":"no detection"].filter(Boolean);
+    return`<tr data-id="${esc(n.id)}"><td><b>${esc(n.label)}</b>${gaps.map(g=>`<span class="gap">${g}</span>`).join("")}<br><span class="id">${esc(n.id)}</span></td><td>${heat(c.tests)}</td><td>${heat(c.detections)}</td><td>${heat(c.controls)}</td></tr>`;
+  }).join("")+"</tbody>";
 }
 function renderTimeline(){
-  const items=visibleNodes().filter(n=>["campaign","incident","vulnerability"].includes(n.type)).map(n=>({n,date:n.data.first_seen||n.data.date||n.data.published||n.data.last_seen||"unknown"})).sort((a,b)=>String(b.date).localeCompare(String(a.date)));
-  document.querySelector("#timelineList").innerHTML=items.map(({n,date})=>`<div class="timeline-item" onclick="openNode('${n.id}')"><div class="date">${esc(date)}</div><h3>${esc(n.label)}</h3><div class="meta">${esc(n.type)} · ${esc(n.data.confidence||n.data.status||"")}</div><p>${esc(n.data.summary||"")}</p></div>`).join("");
+  const items=visibleNodes().filter(n=>["campaign","incident","vulnerability"].includes(n.type)).map(n=>({n,date:String(n.data.first_seen||n.data.date||n.data.published||n.data.last_seen||"undated")})).sort((a,b)=>b.date.localeCompare(a.date));
+  $("#timelineList").innerHTML=items.map(({n,date})=>`<div class="d">${esc(date)}</div><div class="e" data-id="${esc(n.id)}"><div class="kind">${esc(n.type)}</div><h3>${esc(n.label)}</h3><p>${esc(n.data.summary||"")}</p><div style="margin-top:6px">${conf(n.data.confidence)}</div></div>`).join("")||'<p class="empty">Nothing matches.</p>';
 }
 function renderSources(){
-  const ns=visibleNodes().filter(n=>n.type==="source");
-  document.querySelector("#sourceList").innerHTML=ns.map(n=>`<div class="card" onclick="openNode('${n.id}')"><h3>${esc(n.label)}</h3><div class="meta">Grade ${esc(n.data.grade)} · ${esc(n.data.role)}</div><p>${esc(n.data.publisher||"")}</p></div>`).join("");
+  $("#sourceList").innerHTML=visibleNodes().filter(n=>n.type==="source").map(n=>`<div class="it" data-id="${esc(n.id)}"><div class="grade">${esc(n.data.grade)}</div><div><h3>${esc(n.label)}</h3><p>${esc(n.data.publisher||"")} · ${esc(n.data.role||"")}</p></div></div>`).join("")||'<p class="empty">Nothing matches.</p>';
 }
 function renderWhatsNew(){
-  const box=document.querySelector("#diffSummary"),table=document.querySelector("#diffTable");
-  if(!box||!table)return;
-  if(!state.diff){
-    box.innerHTML='<div class="metric"><strong>—</strong><span>No diff available</span></div>';
-    table.innerHTML="";
-    return;
-  }
+  const box=$("#diffSummary"),table=$("#diffTable");
+  if(!state.diff){box.innerHTML=stat("–","no diff available");table.innerHTML="";return}
   const s=state.diff.summary||{};
-  box.innerHTML=[
-    ["Added",s.added||0],["Removed",s.removed||0],["Changed",s.changed||0]
-  ].map(([k,v])=>`<div class="metric"><strong>${v}</strong><span>${k}</span></div>`).join("");
+  box.innerHTML=stat(s.added||0,"added")+stat(s.removed||0,"removed")+stat(s.changed||0,"changed");
   const rows=Object.entries(state.diff.datasets||{}).filter(([,v])=>v.added.length||v.removed.length||v.changed.length);
-  table.innerHTML="<thead><tr><th>Dataset</th><th>Added</th><th>Removed</th><th>Changed</th></tr></thead><tbody>"+
-    (rows.length?rows.map(([name,v])=>`<tr><td><b>${esc(name)}</b></td><td>${v.added.length}</td><td>${v.removed.length}</td><td>${v.changed.length}</td></tr>`).join(""):'<tr><td colspan="4">No structured-intelligence changes since the latest committed snapshot.</td></tr>')+
-    "</tbody>";
+  table.innerHTML="<thead><tr><th>Dataset</th><th class='num'>Added</th><th class='num'>Removed</th><th class='num'>Changed</th></tr></thead><tbody>"+
+    (rows.length?rows.map(([k,v])=>`<tr><td>${esc(k)}</td><td class="num">${v.added.length}</td><td class="num">${v.removed.length}</td><td class="num">${v.changed.length}</td></tr>`).join(""):'<tr><td colspan="4">No changes since the latest snapshot.</td></tr>')+"</tbody>";
 }
+function closeDrawer(){$("#drawer").classList.remove("open");$("#drawer").setAttribute("aria-hidden","true")}
 function openNode(id){
   const n=state.graph.nodes.find(x=>x.id===id);if(!n)return;
-  const edges=state.graph.edges.filter(e=>e.source===id||e.target===id);
-  const links=edges.map(e=>{const other=e.source===id?e.target:e.source;const on=state.graph.nodes.find(x=>x.id===other);return `<li><b>${esc(e.relationship)}</b> → <a href="#" onclick="openNode('${other}');return false">${esc(on?.label||other)}</a> <span class="pill">${esc(e.confidence)}</span></li>`}).join("");
-  document.querySelector("#drawerBody").innerHTML=`<div class="eyebrow">${esc(n.type)}</div><h2>${esc(n.label)}</h2><p class="muted">${esc(n.id)}</p><h3>Relationships</h3><ul>${links||"<li>None</li>"}</ul><h3>Record</h3><pre>${esc(JSON.stringify(n.data,null,2))}</pre>`;
-  document.querySelector("#drawer").classList.add("open");
+  const links=state.graph.edges.filter(e=>e.source===id||e.target===id).map(e=>{
+    const other=e.source===id?e.target:e.source,on=state.graph.nodes.find(x=>x.id===other);
+    return`<li><span class="id">${esc(e.relationship)}</span> <a href="#" data-id="${esc(other)}">${esc(on?.label||other)}</a> ${conf(e.confidence)}</li>`}).join("");
+  $("#drawerBody").innerHTML=`<div class="eyebrow">${esc(TYPE_LABEL[n.type]||n.type)}</div><h2>${esc(n.label)}</h2><p class="id">${esc(n.id)}</p>${conf(n.data.confidence)}<h3>Relationships</h3><ul>${links||"<li>None recorded</li>"}</ul><h3>Record</h3><pre>${esc(JSON.stringify(n.data,null,2))}</pre>`;
+  $("#drawer").classList.add("open");$("#drawer").setAttribute("aria-hidden","false");
 }
-function renderAll(){if(!state.graph)return;renderMetrics();renderActors();renderLandscape();renderWhatsNew();renderGraph();renderCoverage();renderTimeline();renderSources();}
-window.openNode=openNode;load().catch(e=>{document.body.insertAdjacentHTML("afterbegin",`<div style="padding:12px;background:#6d1b2d;color:white">Explorer data failed to load: ${esc(e.message)}</div>`)});
+function renderAll(){if(!state.graph)return;renderMetrics();renderActors();renderDomains();renderLandscape();renderWhatsNew();renderGraph();renderCoverage();renderTimeline();renderSources()}
+load().catch(e=>{document.body.insertAdjacentHTML("afterbegin",`<p style="padding:12px 28px;background:var(--signal);color:var(--signal-ink);margin:0">Explorer data failed to load: ${esc(e.message)}</p>`)});

@@ -1,43 +1,16 @@
 <p align="center">
-  <img src="assets/llminjection-banner.svg" alt="LLMInjection — AI / LLM Cyber Threat Intelligence" width="100%">
+  <img src="assets/llminjection-banner.svg" alt="LLMInjection: threat landscape for LLM and agentic systems" width="100%">
 </p>
 
 <p align="center">
-  <a href="https://github.com/Ridd1kulusC0d3r/LLmInjection/stargazers"><img src="https://img.shields.io/github/stars/Ridd1kulusC0d3r/LLmInjection?style=for-the-badge&logo=github&label=Stars" alt="GitHub stars"></a>
-  <a href="https://github.com/Ridd1kulusC0d3r/LLmInjection/actions/workflows/validate-intel.yml"><img src="https://img.shields.io/github/actions/workflow/status/Ridd1kulusC0d3r/LLmInjection/validate-intel.yml?style=for-the-badge&label=Intel%20CI" alt="Intel CI"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/github/license/Ridd1kulusC0d3r/LLmInjection?style=for-the-badge" alt="Apache-2.0 license"></a>
-  <img src="https://img.shields.io/badge/Focus-AI%20Threat%20Intelligence-0ea5e9?style=for-the-badge" alt="AI Threat Intelligence">
+  <a href="https://github.com/Ridd1kulusC0d3r/LLmInjection/actions/workflows/validate-intel.yml"><img src="https://img.shields.io/github/actions/workflow/status/Ridd1kulusC0d3r/LLmInjection/validate-intel.yml?style=flat-square&label=intel%20CI&labelColor=17150f&color=b43c0e" alt="Intel CI"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/Ridd1kulusC0d3r/LLmInjection?style=flat-square&labelColor=17150f&color=4a463c" alt="Apache-2.0"></a>
+  <img src="https://img.shields.io/badge/mode-defensive--first-4a463c?style=flat-square&labelColor=17150f" alt="Defensive first">
 </p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/MITRE-ATLAS-ef4444?style=flat-square" alt="MITRE ATLAS">
-  <img src="https://img.shields.io/badge/OWASP-GenAI-7c3aed?style=flat-square" alt="OWASP GenAI">
-  <img src="https://img.shields.io/badge/NIST-AI%20RMF-2563eb?style=flat-square" alt="NIST AI RMF">
-  <img src="https://img.shields.io/badge/CSA-MAESTRO-0891b2?style=flat-square" alt="CSA MAESTRO">
-  <img src="https://img.shields.io/badge/Mode-Defensive--First-16a34a?style=flat-square" alt="Defensive first">
-</p>
+Open threat intelligence for AI, LLM and agentic systems: actors, campaigns, attack techniques, safe test cases, detections and controls, linked to the evidence behind each claim.
 
-<h3 align="center">Open cyber threat intelligence for AI, LLM and agentic systems.</h3>
-
-<p align="center">
-LLMInjection connects <strong>threat actors, campaigns, prompt injection, agent abuse, model supply chain, adversarial ML, safe test cases, detections, mitigations and security frameworks</strong> in one evidence-driven repository.
-</p>
-
-<p align="center">
-  <a href="https://ridd1kulusc0d3r.github.io/LLmInjection/"><strong>Threat Intelligence Explorer</strong></a> ·
-  <a href="docs/PUBLISHING.md">Publishing / API</a> ·
-  <a href="docs/METHODOLOGY.md">Methodology</a>
-</p>
-
-<p align="center">
-  <a href="#threat-actors--campaigns">Threat Actors</a> ·
-  <a href="#security-test-lab">Test Cases</a> ·
-  <a href="#threat-landscape">Threat Landscape</a> ·
-  <a href="#framework-stack">Frameworks</a> ·
-  <a href="#model--runtime-intelligence">Models</a> ·
-  <a href="#detection-engineering">Detection</a> ·
-  <a href="docs/ROADMAP.md">Roadmap</a>
-</p>
+**[Explorer](https://ridd1kulusc0d3r.github.io/LLmInjection/)** · [Methodology](docs/METHODOLOGY.md) · [Publishing / API](docs/PUBLISHING.md) · [Roadmap](docs/ROADMAP.md) · [Actors](#threat-actors--campaigns) · [Test cases](#security-test-lab) · [Landscape](#threat-landscape) · [Frameworks](#framework-stack) · [Detection](#detection-engineering)
 
 ---
 
@@ -54,6 +27,12 @@ LLMInjection connects <strong>threat actors, campaigns, prompt injection, agent 
 **Exports:** `graph.json` · GraphML · STIX 2.1 · `/api/v1/` static JSON API · current snapshot/diff · provenance-attested tagged releases · interactive GitHub Pages Explorer.
 
 ---
+
+### Coverage at a glance
+
+<img src="assets/coverage-matrix.svg" alt="Technique coverage matrix: tests, detections and controls per technique" width="100%">
+
+Regenerate with `python scripts/build_charts.py`. Rows flagged *no test* or *no detection* are the open work.
 
 ## OSINT indicator extractor
 

@@ -7,4 +7,4 @@ validate:
 	python3 scripts/validate_intel.py
 
 build:
-	python3 scripts/build_graph.py && python3 scripts/build_api.py
+	python3 scripts/build_graph.py && python3 scripts/build_api.py && python3 scripts/build_charts.py

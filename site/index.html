@@ -3,116 +3,131 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="LLMInjection AI/LLM Cyber Threat Intelligence Explorer">
-  <title>LLMInjection · AI Threat Intelligence Explorer</title>
+  <meta name="description" content="Open threat intelligence for LLM, AI and agentic systems: actors, campaigns, techniques, detections and evidence.">
+  <title>LLMInjection · AI Threat Landscape</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="hero">
-    <div class="hero-inner">
-      <div>
-        <div class="eyebrow">AI / LLM CYBER THREAT INTELLIGENCE</div>
-        <h1>LLMInjection Explorer</h1>
-        <p>Evidence-driven actors, campaigns, techniques, models, tests, detections, controls and sources in one navigable graph.</p>
+  <header class="mast">
+    <div class="wrap">
+      <div class="mast-bar">
+        <span>LLMInjection &nbsp;/&nbsp; AI &amp; LLM threat intelligence</span>
+        <span id="asof"></span>
+        <button id="theme" type="button" aria-label="Toggle colour theme">Theme</button>
       </div>
-      <div class="hero-actions">
-        <a class="button primary" href="https://github.com/Ridd1kulusC0d3r/LLmInjection">GitHub</a>
-        <a class="button" href="llminjection-stix.json">STIX 2.1</a>
-        <a class="button" href="graph.graphml">GraphML</a>\n        <a class="button" href="api/v1/index.json">API v1</a>
+      <div class="mast-title">
+        <h1>Threat landscape for LLM and agentic systems</h1>
+        <div>
+          <p class="dek">Who is using AI against whom, how the attacks work, and what detects or stops them. Every claim carries a source grade and a confidence level.</p>
+          <div class="links">
+            <a href="https://github.com/Ridd1kulusC0d3r/LLmInjection">Repository</a>
+            <a href="api/v1/index.json">API v1</a>
+            <a href="llminjection-stix.json">STIX 2.1</a>
+            <a href="graph.graphml">GraphML</a>
+            <a href="intelligence-diff.md">Latest diff</a>
+          </div>
+        </div>
       </div>
+      <div id="metrics" class="strip"></div>
     </div>
-    <div id="metrics" class="metrics"></div>
   </header>
 
-  <main>
-    <section class="toolbar panel">
-      <input id="search" type="search" placeholder="Search actor, campaign, technique, model, control...">
-      <select id="typeFilter"><option value="">All object types</option></select>
-      <select id="confidenceFilter">
-        <option value="">All confidence</option>
+  <div class="wrap">
+    <div class="controls">
+      <input id="search" type="search" placeholder="Search actor, campaign, technique, CVE, control" aria-label="Search">
+      <select id="typeFilter" aria-label="Object type"><option value="">All types</option></select>
+      <select id="confidenceFilter" aria-label="Confidence">
+        <option value="">Any confidence</option>
         <option>confirmed</option><option>high</option><option>medium</option><option>low</option><option>unverified</option>
       </select>
-    </section>
+    </div>
 
-    <nav class="tabs">
+    <nav class="tabs" role="tablist">
       <button class="tab active" data-tab="overview">Overview</button>
-      <button class="tab" data-tab="whatsnew">What's New</button>
+      <button class="tab" data-tab="landscape">Landscape</button>
+      <button class="tab" data-tab="whatsnew">What's new</button>
       <button class="tab" data-tab="graph">Graph</button>
       <button class="tab" data-tab="coverage">Coverage</button>
       <button class="tab" data-tab="timeline">Timeline</button>
       <button class="tab" data-tab="sources">Sources</button>
     </nav>
 
-    <section id="overview" class="view active">
-      <div class="grid two">
-        <article class="panel">
-          <h2>Threat actors & campaigns</h2>
-          <div id="actors"></div>
-        </article>
-        <article class="panel">
-          <h2>Landscape</h2>
-          <div id="landscape"></div>
-        </article>
-      </div>
-      <article class="panel">
-        <h2>Intelligence path</h2>
-        <div class="path">
-          <span>Evidence</span><b>→</b><span>Actor</span><b>→</b><span>Campaign</span><b>→</b><span>Technique</span><b>→</b><span>Test</span><b>→</b><span>Detection</span><b>→</b><span>Control</span>
-        </div>
-      </article>
-    </section>
-
-    <section id="whatsnew" class="view">
-      <article class="panel">
-        <h2>What's New</h2>
-        <p class="muted">Entity-level changes against the latest committed intelligence snapshot.</p>
-        <div id="diffSummary" class="metrics"></div>
-        <div class="table-wrap"><table id="diffTable"></table></div>
-      </article>
-    </section>
-
-    <section id="graph" class="view">
-      <div class="panel graph-panel">
-        <div class="graph-head">
+    <main>
+      <section id="overview" class="view active">
+        <div class="cols">
           <div>
-            <h2>Intelligence graph</h2>
-            <p class="muted">Click a node to inspect evidence and relationships.</p>
+            <div class="eyebrow">Tracked actors</div>
+            <h2>Who is operating</h2>
+            <p class="sub">Vendor tracking labels are kept as published; aliases are not merged without evidence.</p>
+            <div id="actors"></div>
           </div>
-          <span id="graphCount" class="pill"></span>
+          <div>
+            <div class="eyebrow">Domains</div>
+            <h2>Where it is moving</h2>
+            <p class="sub">Direction of travel per domain, with the defensive focus that follows.</p>
+            <div id="domains"></div>
+          </div>
         </div>
-        <svg id="graphSvg" viewBox="0 0 1400 760" role="img" aria-label="LLMInjection intelligence graph"></svg>
-      </div>
-    </section>
+      </section>
 
-    <section id="coverage" class="view">
-      <article class="panel">
+      <section id="landscape" class="view">
+        <div class="eyebrow">Key metrics</div>
+        <h2>What the numbers say</h2>
+        <p class="sub">Each figure keeps its original population and time window. Do not compare across rows.</p>
+        <div id="confLegend" class="legend"></div>
+        <div class="table-wrap"><table id="metricTable" class="tbl"></table></div>
+        <div class="cols" style="margin-top:44px">
+          <div><h2>Sector signals</h2><p class="sub">Single-source figures from the cited reports.</p><div id="sectors"></div></div>
+          <div><h2>Open leads</h2><p class="sub">Claims held back until a primary source is attached.</p><div id="leads"></div></div>
+        </div>
+      </section>
+
+      <section id="whatsnew" class="view">
+        <div class="eyebrow">Change log</div>
+        <h2>What's new</h2>
+        <p class="sub">Entity-level changes against the latest committed monthly snapshot.</p>
+        <div id="diffSummary" class="strip" style="grid-template-columns:repeat(3,1fr);margin-bottom:24px"></div>
+        <table id="diffTable" class="tbl"></table>
+      </section>
+
+      <section id="graph" class="view">
+        <div class="gmeta">
+          <div><h2>Intelligence graph</h2><p class="sub" style="margin:0">One column per object type. Hover to trace a node; click to open its record.</p></div>
+          <span id="graphCount" class="mono" style="font-size:12px;color:var(--ink-3)"></span>
+        </div>
+        <div id="graphLegend" class="legend"></div>
+        <div class="gwrap"><svg id="graphSvg" role="img" aria-label="LLMInjection intelligence graph"></svg></div>
+      </section>
+
+      <section id="coverage" class="view">
+        <div class="eyebrow">Defensive coverage</div>
         <h2>Technique coverage</h2>
-        <p class="muted">Computed from graph relationships, not manually maintained status icons.</p>
-        <div class="table-wrap"><table id="coverageTable"></table></div>
-      </article>
-    </section>
+        <p class="sub">Counted from graph relationships. A flagged gap means no test case or no detection is linked to that technique yet.</p>
+        <table id="coverageTable" class="tbl"></table>
+      </section>
 
-    <section id="timeline" class="view">
-      <article class="panel">
-        <h2>Timeline</h2>
-        <div id="timelineList" class="timeline"></div>
-      </article>
-    </section>
+      <section id="timeline" class="view">
+        <div class="eyebrow">Chronology</div>
+        <h2>Campaigns, incidents and vulnerabilities</h2>
+        <p class="sub">Newest first.</p>
+        <div id="timelineList" class="tl"></div>
+      </section>
 
-    <section id="sources" class="view">
-      <article class="panel">
-        <h2>Evidence sources</h2>
-        <div id="sourceList" class="cards"></div>
-      </article>
-    </section>
-  </main>
+      <section id="sources" class="view">
+        <div class="eyebrow">Evidence</div>
+        <h2>Source registry</h2>
+        <p class="sub">A = primary or authoritative, B = strong secondary, C = reputable press, D = community, E = unsupported.</p>
+        <div id="sourceList" class="src"></div>
+      </section>
+    </main>
+
+    <footer><span>Evidence over hype. Generated from validated repository data.</span><span>Apache-2.0</span></footer>
+  </div>
 
   <aside id="drawer" class="drawer" aria-hidden="true">
-    <button id="closeDrawer" class="close">×</button>
+    <button id="closeDrawer" class="close" aria-label="Close">&times;</button>
     <div id="drawerBody"></div>
   </aside>
-
-  <footer>LLMInjection · evidence over hype · generated from validated repository data</footer>
   <script src="app.js"></script>
 </body>
 </html>
