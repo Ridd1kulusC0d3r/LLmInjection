@@ -358,5 +358,45 @@
     "role": "canonical-framework-release",
     "url": "https://github.com/mitre-atlas/atlas-data/releases/tag/v2026.09",
     "last_verified": "2026-10-01"
+  },
+  {
+    "id": "SRC-MSFT-SK-RCE",
+    "type": "source",
+    "name": "When prompts become shells: RCE vulnerabilities in AI agent frameworks",
+    "publisher": "Microsoft Security",
+    "grade": "A",
+    "role": "vulnerability-research",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks/",
+    "last_verified": "2026-10-06"
+  },
+  {
+    "id": "SRC-OX-MCP-STDIO",
+    "type": "source",
+    "name": "MCP Supply Chain Advisory: RCE Vulnerabilities Across the AI Ecosystem",
+    "publisher": "OX Security",
+    "grade": "B",
+    "role": "vulnerability-research",
+    "url": "https://www.ox.security/blog/mcp-supply-chain-advisory-rce-vulnerabilities-across-the-ai-ecosystem/",
+    "last_verified": "2026-10-06"
+  },
+  {
+    "id": "SRC-GTIG-PROMPTING-TO-AUTONOMY",
+    "type": "source",
+    "name": "GTIG AI Threat Tracker: From Prompting to Autonomy",
+    "publisher": "Google Threat Intelligence Group",
+    "grade": "A",
+    "role": "threat-report",
+    "url": "https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai",
+    "last_verified": "2026-10-06"
+  },
+  {
+    "id": "SRC-THN-ANTHROPIC-2026-09",
+    "type": "source",
+    "name": "Claude Used to Automate Exploitation and Data Theft Across Multiple Victims",
+    "publisher": "The Hacker News",
+    "grade": "C",
+    "role": "journalism",
+    "url": "https://thehackernews.com/2026/09/claude-used-to-automate-exploitation.html",
+    "last_verified": "2026-10-06"
   }
 ]

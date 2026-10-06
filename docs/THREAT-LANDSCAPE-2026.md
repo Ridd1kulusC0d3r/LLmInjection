@@ -366,3 +366,12 @@ This is what evidence discipline looks like. Exciting numbers are not automatica
   https://unit42.paloaltonetworks.com/perturbation-probing-llm-safety/
 - Promptware Kill Chain paper  
   https://arxiv.org/abs/2601.09625
+
+## Update 2026-10-06
+
+Two attack surfaces moved from research to observed activity:
+
+1. **Agent workspace as attack surface.** GTIG reports DUSTMAKER hiding in `.claude/`, `.vscode/` and `.cursor/`, steering AI assistants through config files, and prompt-injecting LLM scanners (LLMI-T017, LLMI-T018). Defence: review agent config like code, tool allowlists, least-privilege CI tokens.
+2. **MCP / framework parameters.** Semantic Kernel (CVE-2026-26030, CVE-2026-25592) and the disputed MCP STDIO class show model-controlled parameters becoming execution primitives. Defence: validate parameters outside the model, never build STDIO commands from untrusted input.
+
+Scale signals (GTIG): a multi-agent credential harvest planned and run in under six hours; distillation campaigns exceeding 100 million prompts. See `data/threat-landscape-2026.json` for sources and confidence.
