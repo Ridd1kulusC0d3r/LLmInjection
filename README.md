@@ -55,6 +55,21 @@ LLMInjection connects <strong>threat actors, campaigns, prompt injection, agent 
 
 ---
 
+## OSINT indicator extractor
+
+`scripts/osint_ioc.py` turns any report, advisory or web page into structured indicators using only the Python standard library:
+
+```bash
+python scripts/osint_ioc.py report.md                    # file
+python scripts/osint_ioc.py --url https://example.com/x --enrich   # URL + CISA KEV / EPSS for CVEs
+```
+
+It re-fangs `hxxp` / `[.]` / `[at]`, drops private IPs and noisy domains, and extracts CVE/GHSA/ATLAS/OWASP IDs, hashes, npm/PyPI install lures and **prompt-injection signals** (hidden comments, invisible Unicode, markdown-image exfiltration). Output feeds the human-reviewed research queue, never the official datasets directly.
+
+Run the tests with `make test`.
+
+---
+
 # Living Intelligence
 
 LLMInjection now has a **review-gated living-intelligence pipeline** instead of depending on occasional manual bulk updates.

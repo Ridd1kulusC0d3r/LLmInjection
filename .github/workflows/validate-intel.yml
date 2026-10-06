@@ -40,6 +40,9 @@ jobs:
       - name: Compile Python
         run: python -m compileall -q scripts integrations
 
+      - name: Unit tests
+        run: python -m unittest discover -s tests -v
+
       - name: Smoke test local intelligence queries
         run: |
           python scripts/query_intel.py search "prompt injection" --limit 3 > /dev/null
