@@ -43,15 +43,30 @@ LLMInjection connects <strong>threat actors, campaigns, prompt injection, agent 
 
 ## At a glance
 
-| **7** tracked actors | **15** safe test cases | **16** threat techniques | **19** frameworks / taxonomies | **12** model families |
+| **7** tracked actors | **15** safe test cases | **19** threat techniques | **19** frameworks / taxonomies | **12** model families |
 |:---:|:---:|:---:|:---:|:---:|
 | APT & criminal activity | Prompt · RAG · Agent · MCP · Supply chain | Machine-readable JSON | ATLAS · OWASP · NIST · SAIF · MAESTRO | API · open-weight · local |
 
 > **LLMInjection is not a prompt dump.** The project is structured as cyber threat intelligence: every meaningful claim should have evidence, confidence, last-verification date, framework context and defensive relevance.
 
-**Graph layer:** 7 campaigns · 5 incident/research cases · 6 CVE/GHSA/malicious-package records · 10 detection hypotheses · 20 controls · 36 curated sources · 52 explicit evidence-backed relationships.
+**Graph layer:** 7 campaigns · 7 incident/research cases · 9 CVE/GHSA/malicious-package records · 10 detection hypotheses · 20 controls · 40 curated sources · 64 explicit evidence-backed relationships.
 
 **Exports:** `graph.json` · GraphML · STIX 2.1 · `/api/v1/` static JSON API · current snapshot/diff · provenance-attested tagged releases · interactive GitHub Pages Explorer.
+
+---
+
+## OSINT indicator extractor
+
+`scripts/osint_ioc.py` turns any report, advisory or web page into structured indicators using only the Python standard library:
+
+```bash
+python scripts/osint_ioc.py report.md                    # file
+python scripts/osint_ioc.py --url https://example.com/x --enrich   # URL + CISA KEV / EPSS for CVEs
+```
+
+It re-fangs `hxxp` / `[.]` / `[at]`, drops private IPs and noisy domains, and extracts CVE/GHSA/ATLAS/OWASP IDs, hashes, npm/PyPI install lures and **prompt-injection signals** (hidden comments, invisible Unicode, markdown-image exfiltration). Output feeds the human-reviewed research queue, never the official datasets directly.
+
+Run the tests with `make test`.
 
 ---
 

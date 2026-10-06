@@ -2,6 +2,22 @@
 
 This changelog records material changes to attribution, confidence, external mappings and structured intelligence. Ordinary prose edits do not belong here.
 
+## 2026-10-06 — Agent workspace, MCP transport and autonomy update
+
+### Added
+
+- GTIG "From Prompting to Autonomy" (2026-09-08): DUSTMAKER incident, sub-six-hour multi-agent credential harvest incident, three landscape metrics (6 h, 100M+ distillation prompts, 23,800+ secrets);
+- Microsoft Semantic Kernel CVE-2026-26030 and CVE-2026-25592 (prompt injection reaching eval() and file helpers);
+- OX Security MCP STDIO command-injection record (only CVE-2026-30623 and CVE-2026-30615 listed; vendor dispute noted);
+- techniques LLMI-T017 (prompt injection against AI security scanners), LLMI-T018 (AI coding-assistant workspace abuse), LLMI-T019 (model distillation campaign);
+- landscape domains LANDSCAPE-DEVTOOL-WORKSPACE and LANDSCAPE-MCP-TRANSPORT; 12 new evidence-backed relationships.
+
+### Confidence notes
+
+- Anthropic's September 2026 report is held in the research queue (grade C press coverage only) until the primary document is attached; no new actors were promoted from it.
+- OX Security's remaining CVE identifiers were not cross-checked and are queued as unverified.
+- New techniques carry no external framework mapping yet rather than an unsupported one.
+
 ## 2026-09-30 — Initial structured baseline
 
 ### Added

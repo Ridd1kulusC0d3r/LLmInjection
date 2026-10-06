@@ -450,5 +450,40 @@
         "url": "https://attack.mitre.org/techniques/T1552/"
       }
     ]
+  },
+  {
+    "id": "LLMI-T017",
+    "type": "technique",
+    "name": "Prompt Injection Against AI Security Scanners",
+    "category": "defense-evasion",
+    "summary": "Malware or packages embed adversarial or policy-triggering text so LLM-based code scanners refuse or skip analysis of the payload.",
+    "mappings": [
+      "OWASP LLM"
+    ],
+    "external_mappings": []
+  },
+  {
+    "id": "LLMI-T018",
+    "type": "technique",
+    "name": "AI Coding-Assistant Workspace Abuse",
+    "category": "agentic-supply-chain",
+    "summary": "Hidden assistant/IDE configuration files and hooks in a repository instruct a coding agent to run attacker scripts during routine developer interaction.",
+    "mappings": [
+      "OWASP LLM",
+      "CSA MAESTRO"
+    ],
+    "external_mappings": []
+  },
+  {
+    "id": "LLMI-T019",
+    "type": "technique",
+    "name": "Model Distillation Campaign",
+    "category": "model-theft",
+    "summary": "Coordinated high-volume prompting to extract a proprietary model's behaviour or reasoning into a student model. Related to LLMI-T005; tracked separately because of its campaign scale.",
+    "mappings": [
+      "OWASP LLM",
+      "MITRE ATLAS"
+    ],
+    "external_mappings": []
   }
 ]

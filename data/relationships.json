@@ -575,5 +575,137 @@
       "SRC-GHSA-LITELLM-MCP-12773",
       "SRC-MCP-SECURITY-2026"
     ]
+  },
+  {
+    "id": "REL-053",
+    "type": "relationship",
+    "source": "INCIDENT-DUSTMAKER",
+    "relationship": "demonstrates",
+    "target": "LLMI-T017",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-PROMPTING-TO-AUTONOMY"
+    ]
+  },
+  {
+    "id": "REL-054",
+    "type": "relationship",
+    "source": "INCIDENT-DUSTMAKER",
+    "relationship": "demonstrates",
+    "target": "LLMI-T018",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-PROMPTING-TO-AUTONOMY"
+    ]
+  },
+  {
+    "id": "REL-055",
+    "type": "relationship",
+    "source": "INCIDENT-DUSTMAKER",
+    "relationship": "demonstrates",
+    "target": "LLMI-T011",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-GTIG-PROMPTING-TO-AUTONOMY"
+    ]
+  },
+  {
+    "id": "REL-056",
+    "type": "relationship",
+    "source": "INCIDENT-GTIG-AUTONOMOUS-HARVEST",
+    "relationship": "demonstrates",
+    "target": "LLMI-T015",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-PROMPTING-TO-AUTONOMY"
+    ]
+  },
+  {
+    "id": "REL-057",
+    "type": "relationship",
+    "source": "VULN-SK-CVE-2026-26030",
+    "relationship": "demonstrates",
+    "target": "LLMI-T008",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-MSFT-SK-RCE"
+    ]
+  },
+  {
+    "id": "REL-058",
+    "type": "relationship",
+    "source": "VULN-SK-CVE-2026-25592",
+    "relationship": "demonstrates",
+    "target": "LLMI-T008",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-MSFT-SK-RCE"
+    ]
+  },
+  {
+    "id": "REL-059",
+    "type": "relationship",
+    "source": "VULN-MCP-STDIO-OX-2026",
+    "relationship": "demonstrates",
+    "target": "LLMI-T008",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-OX-MCP-STDIO"
+    ]
+  },
+  {
+    "id": "REL-060",
+    "type": "relationship",
+    "source": "LLMI-T018",
+    "relationship": "mitigated-by",
+    "target": "CTRL-HUMAN-CHECKPOINT",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-GTIG-PROMPTING-TO-AUTONOMY"
+    ]
+  },
+  {
+    "id": "REL-061",
+    "type": "relationship",
+    "source": "LLMI-T018",
+    "relationship": "mitigated-by",
+    "target": "CTRL-TOOL-ALLOWLIST",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-GTIG-PROMPTING-TO-AUTONOMY"
+    ]
+  },
+  {
+    "id": "REL-062",
+    "type": "relationship",
+    "source": "LLMI-T008",
+    "relationship": "mitigated-by",
+    "target": "CTRL-CONTEXTUAL-AUTHZ",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MSFT-SK-RCE"
+    ]
+  },
+  {
+    "id": "REL-063",
+    "type": "relationship",
+    "source": "LLMI-T019",
+    "relationship": "mitigated-by",
+    "target": "CTRL-ACTION-BUDGET",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-GTIG-PROMPTING-TO-AUTONOMY"
+    ]
+  },
+  {
+    "id": "REL-064",
+    "type": "relationship",
+    "source": "LLMI-T017",
+    "relationship": "mitigated-by",
+    "target": "CTRL-DEPENDENCY-POLICY",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-GTIG-PROMPTING-TO-AUTONOMY"
+    ]
   }
 ]

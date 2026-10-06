@@ -63,5 +63,31 @@
     "source_ids": [
       "SRC-PROMPTWARE-PAPER"
     ]
+  },
+  {
+    "id": "INCIDENT-DUSTMAKER",
+    "type": "incident",
+    "name": "DUSTMAKER credential stealer targeting AI coding-assistant workspaces",
+    "kind": "malware",
+    "status": "observed",
+    "confidence": "confirmed",
+    "date": "2026",
+    "summary": "GTIG reports DUSTMAKER detects CI/CD, extracts OIDC tokens from GitHub Actions runner memory, hides files in .claude/, .vscode/ and .cursor/ directories, uses config files to instruct AI assistants to run scripts, and embeds adversarial comments in its JavaScript loader to make LLM scanners refuse analysis. GTIG also links poisoned repository configs and altered Claude CLI hooks to the SOMBERMEME backdoor.",
+    "source_ids": [
+      "SRC-GTIG-PROMPTING-TO-AUTONOMY"
+    ]
+  },
+  {
+    "id": "INCIDENT-GTIG-AUTONOMOUS-HARVEST",
+    "type": "incident",
+    "name": "Multi-agent mass credential harvesting in under six hours",
+    "kind": "intrusion",
+    "status": "observed",
+    "confidence": "confirmed",
+    "date": "2026",
+    "summary": "Mandiant observed a suspected financially motivated actor compromise cloud infrastructure to run an autonomous multi-agent framework and plan, build and execute a mass credential harvesting campaign in under six hours. An exposed 'Recon' dashboard managed over 23,800 harvested secrets, including cloud and AI service API keys.",
+    "source_ids": [
+      "SRC-GTIG-PROMPTING-TO-AUTONOMY"
+    ]
   }
 ]

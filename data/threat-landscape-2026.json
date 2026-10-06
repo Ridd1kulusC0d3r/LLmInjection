@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "AI / LLM Threat Landscape 2026",
-    "as_of": "2026-09-30",
+    "as_of": "2026-10-06",
     "scope": "Cyber threat intelligence focused on AI, LLM, GenAI and agentic systems",
     "methodology": "Evidence-first synthesis using primary vendor, standards-body and research sources. Metrics retain their original population/time window and are not generalized beyond it."
   },
@@ -203,6 +203,45 @@
         "grade": "A",
         "url": "https://www.ibm.com/think/x-force/threat-intelligence-index-2026-securing-identities-ai-detection-risk-management"
       }
+    },
+    {
+      "id": "METRIC-GTIG-6H-HARVEST",
+      "name": "Time for an autonomous multi-agent framework to plan, build and run a mass credential harvest (upper bound)",
+      "value": 6,
+      "unit": "hours (less than)",
+      "timeframe": "GTIG AI Threat Tracker, 2026-09-08",
+      "confidence": "confirmed",
+      "source": {
+        "publisher": "Google Threat Intelligence Group",
+        "grade": "A",
+        "url": "https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai"
+      }
+    },
+    {
+      "id": "METRIC-GTIG-DISTILL",
+      "name": "Size of the largest observed distillation campaigns against Google models",
+      "value": 100000000,
+      "unit": "prompts (some campaigns exceed)",
+      "timeframe": "Feb-Sep 2026",
+      "confidence": "confirmed",
+      "source": {
+        "publisher": "Google Threat Intelligence Group",
+        "grade": "A",
+        "url": "https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai"
+      }
+    },
+    {
+      "id": "METRIC-GTIG-RECON-SECRETS",
+      "name": "Harvested secrets managed in an exposed attacker 'Recon' dashboard",
+      "value": 23800,
+      "unit": "secrets (over), incl. cloud and AI API keys",
+      "timeframe": "GTIG AI Threat Tracker, 2026-09-08",
+      "confidence": "confirmed",
+      "source": {
+        "publisher": "Google Threat Intelligence Group",
+        "grade": "A",
+        "url": "https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai"
+      }
     }
   ],
   "domains": [
@@ -375,6 +414,43 @@
         "artifact provenance",
         "defense in depth"
       ]
+    },
+    {
+      "id": "LANDSCAPE-DEVTOOL-WORKSPACE",
+      "name": "AI coding-assistant workspace and config abuse",
+      "trend": "rising",
+      "confidence": "high",
+      "summary": "Malware now hides in assistant and IDE directories (.claude/, .vscode/, .cursor/), abuses agent hooks and configs, and prompt-injects LLM scanners. Agent configuration is attack surface.",
+      "signals": [
+        "hidden assistant config files",
+        "modified agent hooks",
+        "scanner-evasion prompts in loaders",
+        "OIDC token theft in CI"
+      ],
+      "defensive_focus": [
+        "review agent config in PRs",
+        "least-privilege CI tokens",
+        "tool allowlists",
+        "scanner refusal monitoring"
+      ]
+    },
+    {
+      "id": "LANDSCAPE-MCP-TRANSPORT",
+      "name": "MCP transport and framework command injection",
+      "trend": "rising",
+      "confidence": "high",
+      "summary": "Prompt-injectable tool parameters and unsanitized STDIO config reached code execution in Semantic Kernel, LiteLLM and other MCP-consuming products in 2026. Some vendors treat the STDIO behaviour as by design.",
+      "signals": [
+        "model-controlled tool parameters",
+        "STDIO server config from untrusted input",
+        "vendor disagreement on trust boundary"
+      ],
+      "defensive_focus": [
+        "validate tool parameters outside the model",
+        "never build STDIO commands from untrusted input",
+        "sandbox MCP servers",
+        "MCP capability change detection"
+      ]
     }
   ],
   "sector_signals": [
@@ -481,6 +557,30 @@
         "grade": "A",
         "url": "https://unit42.paloaltonetworks.com/perturbation-probing-llm-safety/"
       }
+    },
+    {
+      "id": "CASE-DUSTMAKER",
+      "name": "DUSTMAKER",
+      "status": "observed",
+      "confidence": "confirmed",
+      "summary": "Credential stealer that hides in AI assistant workspaces and prompt-injects LLM scanners.",
+      "source": {
+        "publisher": "Google Threat Intelligence Group",
+        "grade": "A",
+        "url": "https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai"
+      }
+    },
+    {
+      "id": "CASE-SEMANTIC-KERNEL-RCE",
+      "name": "Semantic Kernel prompt-to-RCE (CVE-2026-26030, CVE-2026-25592)",
+      "status": "patched",
+      "confidence": "confirmed",
+      "summary": "Model-controlled parameters reached eval() and file helpers; fixed in 1.39.4 and 1.71.0.",
+      "source": {
+        "publisher": "Microsoft Security",
+        "grade": "A",
+        "url": "https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks/"
+      }
     }
   ],
   "research_queue": [
@@ -501,6 +601,18 @@
       "status": "requires-exact-guidance-source",
       "confidence": "unverified",
       "reason": "Strong wording requires the exact joint guidance before promotion."
+    },
+    {
+      "claim": "Anthropic's September 2026 threat report names GTG-2002, GTG-10007, GTG-20006, GTG-50014 and GTG-50020 with victim counts (e.g. ~50 orgs, ~30 AI vendors, 1.8M Android app users).",
+      "status": "secondary-reporting-only",
+      "confidence": "low",
+      "reason": "Details come from press coverage; attach the primary Anthropic report before promoting actors or numbers. Reported group IDs also differ between secondary summaries."
+    },
+    {
+      "claim": "OX Security's MCP STDIO advisory lists further CVEs (Agent Zero, Upsonic, Flowise, DocsGPT, GPT Researcher, LangBot).",
+      "status": "unverified",
+      "confidence": "low",
+      "reason": "Identifiers were not cross-checked against NVD/GHSA; only CVE-2026-30623 and CVE-2026-30615 are recorded."
     }
   ]
 }

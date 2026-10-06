@@ -146,5 +146,77 @@
     "source_ids": [
       "SRC-GHSA-TRIVY-PATH"
     ]
+  },
+  {
+    "id": "VULN-SK-CVE-2026-26030",
+    "type": "vulnerability",
+    "name": "Semantic Kernel In-Memory Vector Store filter injection to RCE",
+    "kind": "remote-code-execution",
+    "package": "semantic-kernel",
+    "ecosystem": "PyPI",
+    "identifiers": [
+      "CVE-2026-26030"
+    ],
+    "severity": "unrated",
+    "affected": [
+      "<1.39.4"
+    ],
+    "patched": [
+      "1.39.4"
+    ],
+    "published": "2026-05-07",
+    "confidence": "confirmed",
+    "summary": "Prompt injection could reach unsafe string interpolation in Python lambda filters executed via eval(), turning a data lookup into code execution. Microsoft did not publish a CVSS score in the cited post.",
+    "source_ids": [
+      "SRC-MSFT-SK-RCE"
+    ]
+  },
+  {
+    "id": "VULN-SK-CVE-2026-25592",
+    "type": "vulnerability",
+    "name": "Semantic Kernel SessionsPythonPlugin arbitrary file access",
+    "kind": "sandbox-escape",
+    "package": "Microsoft.SemanticKernel",
+    "ecosystem": "NuGet",
+    "identifiers": [
+      "CVE-2026-25592"
+    ],
+    "severity": "unrated",
+    "affected": [
+      "<1.71.0"
+    ],
+    "patched": [
+      "1.71.0"
+    ],
+    "published": "2026-05-07",
+    "confidence": "confirmed",
+    "summary": "A helper (DownloadFileAsync) was exposed to the model with unvalidated path parameters, allowing model-controlled file read/write outside the intended sandbox.",
+    "source_ids": [
+      "SRC-MSFT-SK-RCE"
+    ]
+  },
+  {
+    "id": "VULN-MCP-STDIO-OX-2026",
+    "type": "vulnerability",
+    "name": "MCP STDIO configuration command injection across AI frameworks",
+    "kind": "command-injection",
+    "package": "mcp-stdio-transport",
+    "ecosystem": "multi",
+    "identifiers": [
+      "CVE-2026-30623",
+      "CVE-2026-30615"
+    ],
+    "severity": "unrated",
+    "affected": [
+      "LiteLLM (CVE-2026-30623)",
+      "Windsurf (CVE-2026-30615)"
+    ],
+    "patched": [],
+    "published": "2026-04-15",
+    "confidence": "high",
+    "summary": "OX Security reports that unsanitized STDIO server parameters let attacker-influenced MCP configuration execute OS commands across SDK-derived products. Several vendors disputed the finding as intended behaviour of the transport; only identifiers corroborated by more than one source are listed here.",
+    "source_ids": [
+      "SRC-OX-MCP-STDIO"
+    ]
   }
 ]
