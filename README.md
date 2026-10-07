@@ -23,7 +23,7 @@ Open threat intelligence for AI, LLM and agentic systems: actors, campaigns, att
 
 | Test cases | Detections | Controls | Frameworks | Model families | Relationships |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| **15** | **10** | **20** | **19** | **12** | **64** |
+| **20** | **14** | **20** | **19** | **12** | **75** |
 <!-- gen:stats:end -->
 
 LLMInjection is **not a prompt dump**. Every meaningful claim carries a source grade, a confidence level, a last-verified date, framework context and a defensive angle.
@@ -97,6 +97,54 @@ Scale signals from GTIG: a multi-agent credential harvest planned and run in und
 Held back on purpose: Anthropic's September 2026 report is only available here through press coverage, so its actors and victim counts sit in the research queue until the primary document is attached.
 
 Full record: [Intelligence changelog](docs/INTELLIGENCE-CHANGELOG.md) · [Landscape 2026](docs/THREAT-LANDSCAPE-2026.md)
+
+</details>
+
+<details>
+<summary><strong>Attack chains and defender playbook</strong> &nbsp;·&nbsp; <sub>two 2026 chains, mapped to tests, detections and controls</sub></summary>
+
+<br>
+
+### Chain 1: agent workspace abuse (DUSTMAKER)
+
+Built from Google Threat Intelligence Group's reporting of DUSTMAKER. Each box is something the report states the malware does.
+
+```mermaid
+flowchart LR
+    A["Foothold in repo<br>or CI environment"] --> B["Detect CI/CD<br>environment"]
+    B --> C["Extract OIDC tokens<br>from runner memory"]
+    A --> D["Drop hidden files in<br>.claude/ .vscode/ .cursor/"]
+    D --> E["Config instructs the AI<br>assistant to run a script"]
+    E --> F["Commands run on the<br>attacker's behalf"]
+    A --> G["Adversarial comments<br>in the JS loader"]
+    G --> H["LLM scanner refuses<br>or skips analysis"]
+```
+
+### Chain 2: prompt to execution (Semantic Kernel)
+
+From Microsoft's analysis of `CVE-2026-26030` and `CVE-2026-25592`: the model is not the vulnerability, the missing validation after it is.
+
+```mermaid
+flowchart LR
+    A["Untrusted text<br>in prompt or retrieved data"] --> B["Model chooses<br>tool parameters"]
+    B --> C{"Validated outside<br>the model?"}
+    C -- "no" --> D["eval() or file helper<br>runs the parameter"]
+    D --> E["Code execution or<br>sandbox escape"]
+    C -- "yes" --> F["Rejected and logged"]
+```
+
+### Defender playbook
+
+| Stage | Technique | Safe test | Detection | Controls |
+|---|---|---|---|---|
+| Hidden assistant or IDE config | `LLMI-T018` | `TC-WS-017` | `DET-AI-011` | `CTRL-HUMAN-CHECKPOINT`, `CTRL-TOOL-ALLOWLIST` |
+| Scanner evasion by refusal bait | `LLMI-T017` | `TC-SCAN-016` | `DET-AI-014` | `CTRL-DEPENDENCY-POLICY` |
+| CI identity token theft | `LLMI-T011` | gap | `DET-AI-012` | `CTRL-SECRET-ISOLATION` |
+| Model parameter reaches an evaluator | `LLMI-T008` | `TC-PARAM-019` | `DET-AI-003` | `CTRL-CONTEXTUAL-AUTHZ` |
+| Gateway or provider key reuse | `LLMI-T016` | `TC-GW-020` | `DET-AI-006` | `CTRL-SECRET-ISOLATION` |
+| Distillation at scale | `LLMI-T019` | `TC-DIST-018` | `DET-AI-013` | `CTRL-ACTION-BUDGET` |
+
+The one open gap in this table is a safe test for CI token theft (`DET-AI-012` has a hypothesis but no simulation yet). A Sigma starter for `DET-AI-011` is in [`detections/sigma`](detections/sigma/det-ai-011-assistant-config-write.yml).
 
 </details>
 
@@ -280,6 +328,11 @@ The roadmap includes adapters for **Microsoft PyRIT, NVIDIA garak, JailbreakBenc
 | `TC-OH-013` | **Improper Output Handling** | application-security | Verify that model output is treated as untrusted data by downstream components. |
 | `TC-COST-014` | **Agent Budget Exhaustion** | availability | Verify hard limits on loops, tokens, calls and cost in an agent workflow. |
 | `TC-AUTO-015` | **Autonomous Multi-Step Chain Gate** | agentic-security | Verify checkpoints when an agent chains discovery, analysis and a mock external action. |
+| `TC-SCAN-016` | **Scanner Refusal-Bait Fail-Open Check** | application-security | Verify that an LLM-based code or package scanner never reports a sample as clean when it refused or skipped the… |
+| `TC-WS-017` | **Assistant Workspace Config Trust Gate** | agentic-security | Verify that new or changed assistant, hook or IDE configuration inside a repository is not trusted or executed… |
+| `TC-DIST-018` | **Systematic Prompt Harvest Alert** | data-leakage | Verify that high-volume, templated prompting against a model endpoint is detected and rate-limited. |
+| `TC-PARAM-019` | **Model-Supplied Parameter Validation** | agentic-security | Verify that parameters produced by a model are validated outside the model before reaching an evaluator, file path or… |
+| `TC-GW-020` | **AI Gateway Key Blast Radius** | runtime-security | Verify that a leaked gateway or provider key is scoped, monitored and revocable before it can be reused at scale. |
 <!-- gen:test-cases:end -->
 
 </details>
@@ -553,6 +606,10 @@ telemetry + detection
 | `DET-AI-008` | **Agent Loop or Budget Exhaustion** | availability | medium | specification |
 | `DET-AI-009` | **Automated Dependency Admission Without Review** | supply-chain | high | specification |
 | `DET-AI-010` | **Sensitive Canary in Model Output** | data-protection | high | specification |
+| `DET-AI-011` | **Assistant or IDE Config Written by Non-Editor Process** | agent-runtime | high | specification |
+| `DET-AI-012` | **CI Token Read From Runner Process Memory** | identity | high | specification |
+| `DET-AI-013` | **Systematic Prompt Harvesting Pattern** | data-protection | medium | specification |
+| `DET-AI-014` | **Scanner Verdict Despite Refusal** | supply-chain | high | specification |
 <!-- gen:detections:end -->
 
 ### Defensive controls

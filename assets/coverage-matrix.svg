@@ -48,13 +48,13 @@
 <text x="734" y="187" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#b43c0e">NO DETECTION</text>
 <line x1="40" x2="926" y1="196" y2="196" stroke="#e0dacb"/>
 <text x="40" y="213" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T005  </tspan>Model Extraction / Theft</text>
-<rect x="469.0" y="199" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
-<text x="486.0" y="214" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
+<rect x="469.0" y="199" width="34" height="20" fill="#e9b394"/>
+<text x="486.0" y="214" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
 <rect x="561.0" y="199" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <text x="578.0" y="214" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
 <rect x="653.0" y="199" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <text x="670.0" y="214" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
-<text x="734" y="213" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#b43c0e">NO TEST / NO DETECTION</text>
+<text x="734" y="213" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#b43c0e">NO DETECTION</text>
 <line x1="40" x2="926" y1="222" y2="222" stroke="#e0dacb"/>
 <text x="40" y="239" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T006  </tspan>Data or Model Poisoning</text>
 <rect x="469.0" y="225" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
@@ -74,8 +74,8 @@
 <text x="670.0" y="266" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
 <line x1="40" x2="926" y1="274" y2="274" stroke="#e0dacb"/>
 <text x="40" y="291" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T008  </tspan>Agent Tool Misuse</text>
-<rect x="469.0" y="277" width="34" height="20" fill="#e9b394"/>
-<text x="486.0" y="292" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
+<rect x="469.0" y="277" width="34" height="20" fill="#d4804f"/>
+<text x="486.0" y="292" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
 <rect x="561.0" y="277" width="34" height="20" fill="#e9b394"/>
 <text x="578.0" y="292" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
 <rect x="653.0" y="277" width="34" height="20" fill="#d4804f"/>
@@ -101,11 +101,11 @@
 <text x="40" y="369" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T011  </tspan>AI Software Supply Chain Compromise</text>
 <rect x="469.0" y="355" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <text x="486.0" y="370" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
-<rect x="561.0" y="355" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
-<text x="578.0" y="370" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
+<rect x="561.0" y="355" width="34" height="20" fill="#e9b394"/>
+<text x="578.0" y="370" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
 <rect x="653.0" y="355" width="34" height="20" fill="#e9b394"/>
 <text x="670.0" y="370" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
-<text x="734" y="369" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#b43c0e">NO TEST / NO DETECTION</text>
+<text x="734" y="369" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#b43c0e">NO TEST</text>
 <line x1="40" x2="926" y1="378" y2="378" stroke="#e0dacb"/>
 <text x="40" y="395" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T012  </tspan>Coding-Agent Dependency Manipulation</text>
 <rect x="469.0" y="381" width="34" height="20" fill="#e9b394"/>
@@ -144,39 +144,35 @@
 <text x="734" y="473" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#b43c0e">NO DETECTION</text>
 <line x1="40" x2="926" y1="482" y2="482" stroke="#e0dacb"/>
 <text x="40" y="499" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T016  </tspan>AI Gateway Credential Compromise</text>
-<rect x="469.0" y="485" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
-<text x="486.0" y="500" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
-<rect x="561.0" y="485" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
-<text x="578.0" y="500" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
+<rect x="469.0" y="485" width="34" height="20" fill="#e9b394"/>
+<text x="486.0" y="500" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
+<rect x="561.0" y="485" width="34" height="20" fill="#e9b394"/>
+<text x="578.0" y="500" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
 <rect x="653.0" y="485" width="34" height="20" fill="#e9b394"/>
 <text x="670.0" y="500" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
-<text x="734" y="499" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#b43c0e">NO TEST / NO DETECTION</text>
 <line x1="40" x2="926" y1="508" y2="508" stroke="#e0dacb"/>
 <text x="40" y="525" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T017  </tspan>Prompt Injection Against AI Security Scanners</text>
-<rect x="469.0" y="511" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
-<text x="486.0" y="526" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
-<rect x="561.0" y="511" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
-<text x="578.0" y="526" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
+<rect x="469.0" y="511" width="34" height="20" fill="#e9b394"/>
+<text x="486.0" y="526" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
+<rect x="561.0" y="511" width="34" height="20" fill="#e9b394"/>
+<text x="578.0" y="526" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
 <rect x="653.0" y="511" width="34" height="20" fill="#e9b394"/>
 <text x="670.0" y="526" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
-<text x="734" y="525" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#b43c0e">NO TEST / NO DETECTION</text>
 <line x1="40" x2="926" y1="534" y2="534" stroke="#e0dacb"/>
 <text x="40" y="551" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T018  </tspan>AI Coding-Assistant Workspace Abuse</text>
-<rect x="469.0" y="537" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
-<text x="486.0" y="552" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
-<rect x="561.0" y="537" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
-<text x="578.0" y="552" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
+<rect x="469.0" y="537" width="34" height="20" fill="#e9b394"/>
+<text x="486.0" y="552" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
+<rect x="561.0" y="537" width="34" height="20" fill="#e9b394"/>
+<text x="578.0" y="552" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
 <rect x="653.0" y="537" width="34" height="20" fill="#d4804f"/>
 <text x="670.0" y="552" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
-<text x="734" y="551" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#b43c0e">NO TEST / NO DETECTION</text>
 <line x1="40" x2="926" y1="560" y2="560" stroke="#e0dacb"/>
 <text x="40" y="577" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T019  </tspan>Model Distillation Campaign</text>
-<rect x="469.0" y="563" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
-<text x="486.0" y="578" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
-<rect x="561.0" y="563" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
-<text x="578.0" y="578" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
+<rect x="469.0" y="563" width="34" height="20" fill="#e9b394"/>
+<text x="486.0" y="578" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
+<rect x="561.0" y="563" width="34" height="20" fill="#e9b394"/>
+<text x="578.0" y="578" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
 <rect x="653.0" y="563" width="34" height="20" fill="#e9b394"/>
 <text x="670.0" y="578" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
-<text x="734" y="577" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#b43c0e">NO TEST / NO DETECTION</text>
 <line x1="40" x2="926" y1="586" y2="586" stroke="#e0dacb"/>
 </svg>

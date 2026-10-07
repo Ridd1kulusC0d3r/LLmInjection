@@ -38,6 +38,16 @@ class SiteDataTests(unittest.TestCase):
                     broken.append(f"{page.relative_to(ROOT)} -> {target}")
         self.assertEqual(broken, [])
 
+    def test_ids_cited_in_readme_exist(self):
+        known = set()
+        for path in (ROOT / "data").glob("*.json"):
+            data = json.loads(path.read_text(encoding="utf-8"))
+            if isinstance(data, list):
+                known |= {row["id"] for row in data if isinstance(row, dict) and "id" in row}
+        text = (ROOT / "README.md").read_text(encoding="utf-8")
+        cited = set(re.findall(r"\b(?:TC-[A-Z]+-\d{3}|DET-AI-\d{3}|LLMI-T\d{3}|CTRL-[A-Z]+(?:-[A-Z]+)*)\b", text))
+        self.assertEqual(sorted(cited - known), [])
+
 
 if __name__ == "__main__":
     unittest.main()

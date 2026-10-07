@@ -106,7 +106,9 @@
       "cloud-audit",
       "provider-auth"
     ],
-    "test_ids": []
+    "test_ids": [
+      "TC-GW-020"
+    ]
   },
   {
     "id": "DET-AI-007",
@@ -177,6 +179,76 @@
     ],
     "test_ids": [
       "TC-DL-003"
+    ]
+  },
+  {
+    "id": "DET-AI-011",
+    "type": "detection",
+    "name": "Assistant or IDE Config Written by Non-Editor Process",
+    "category": "agent-runtime",
+    "severity": "high",
+    "status": "specification",
+    "hypothesis": "A process that is not an approved editor, package manager or version-control client creates or modifies assistant or IDE configuration files (.claude/, .cursor/, .vscode/) or agent hook definitions.",
+    "telemetry": [
+      "file-events",
+      "process-lineage",
+      "git-diff",
+      "hook-registration"
+    ],
+    "test_ids": [
+      "TC-WS-017"
+    ]
+  },
+  {
+    "id": "DET-AI-012",
+    "type": "detection",
+    "name": "CI Token Read From Runner Process Memory",
+    "category": "identity",
+    "severity": "high",
+    "status": "specification",
+    "hypothesis": "A build step process reads the memory of the CI runner worker process or otherwise extracts short-lived identity tokens outside the runner's normal token interface.",
+    "telemetry": [
+      "process-access",
+      "runner-process-tree",
+      "token-mint-events",
+      "cloud-audit"
+    ],
+    "test_ids": []
+  },
+  {
+    "id": "DET-AI-013",
+    "type": "detection",
+    "name": "Systematic Prompt Harvesting Pattern",
+    "category": "data-protection",
+    "severity": "medium",
+    "status": "specification",
+    "hypothesis": "Linked accounts send templated, high-volume prompts that cover a model's capability space far beyond the baseline for that account class.",
+    "telemetry": [
+      "api-request-log",
+      "account-linkage",
+      "prompt-template-similarity",
+      "request-rate"
+    ],
+    "test_ids": [
+      "TC-DIST-018"
+    ]
+  },
+  {
+    "id": "DET-AI-014",
+    "type": "detection",
+    "name": "Scanner Verdict Despite Refusal",
+    "category": "supply-chain",
+    "severity": "high",
+    "status": "specification",
+    "hypothesis": "An LLM-based scanner returns a clean or approved verdict for an artifact in the same run where it recorded a refusal, an error or an incomplete analysis.",
+    "telemetry": [
+      "scanner-verdict",
+      "refusal-flag",
+      "input-digest",
+      "admission-decision"
+    ],
+    "test_ids": [
+      "TC-SCAN-016"
     ]
   }
 ]

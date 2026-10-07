@@ -1,0 +1,41 @@
+title: Assistant or IDE Config Written by Non-Editor Process
+id: 9d8a30f8-5318-4772-afa5-9a705941dad5
+status: experimental
+description: >
+  Detects creation or modification of AI assistant and IDE configuration or hook files by processes
+  that are not approved editors, version-control clients or package managers. Hidden assistant
+  configuration inside a repository can instruct a coding agent to run attacker-controlled commands.
+references:
+  - https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai
+  - https://github.com/Ridd1kulusC0d3r/LLmInjection
+author: LLMInjection
+date: 2026-10-07
+tags:
+  - llminjection.det-ai-011
+  - llminjection.llmi-t018
+logsource:
+  category: file_event
+detection:
+  selection_path:
+    TargetFilename|contains:
+      - '/.claude/'
+      - '\\.claude\\'
+      - '/.cursor/'
+      - '\\.cursor\\'
+      - '/.vscode/'
+      - '\\.vscode\\'
+  filter_approved_writers:
+    Image|endswith:
+      - '/git'
+      - '\\git.exe'
+      - '/code'
+      - '\\Code.exe'
+      - '/cursor'
+      - '\\Cursor.exe'
+      - '/claude'
+      - '\\claude.exe'
+  condition: selection_path and not filter_approved_writers
+falsepositives:
+  - Approved bootstrap scripts, dotfile managers and enterprise IDE provisioning tools; allowlist them by path and signer.
+  - Language servers and extension hosts that write workspace settings; allowlist after inventory.
+level: high
