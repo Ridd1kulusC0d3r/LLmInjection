@@ -41,7 +41,7 @@ MITRE ATLAS · OWASP · MCP · GitHub Advisories · CISA KEV
              Explorer · What's New
 ```
 
-The daily collector **cannot auto-create attribution, incidents, CVE relationships or framework mappings**. It only creates review candidates. Monthly automation produces deterministic snapshots and added/removed/changed diffs.
+The daily collectors **cannot auto-create attribution, incidents, CVE relationships or framework mappings**. It only creates review candidates. Monthly automation produces deterministic snapshots and added/removed/changed diffs.
 
 **Living intelligence methodology:** [docs/LIVING-INTELLIGENCE.md](LIVING-INTELLIGENCE.md) · **Feed registry:** [data/source-feeds.json](../data/source-feeds.json) · **Research queue:** [data/research-queue.json](../data/research-queue.json)
 
