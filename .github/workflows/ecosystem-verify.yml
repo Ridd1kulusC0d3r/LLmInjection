@@ -16,7 +16,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Check repositories against the GitHub API
+      - name: Re-verify every repository with git (reachability, last commit, licence)
+        run: python scripts/verify_ecosystem.py --write
+      - name: Add GitHub archive flag and renames from the API
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: |

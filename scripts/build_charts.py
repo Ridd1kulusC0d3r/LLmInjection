@@ -141,7 +141,7 @@ def coverage_matrix() -> str:
 
 def framework_coverage() -> str:
     rows = technique_stats()
-    frameworks = sorted({m for r in rows for m in r["mappings"]}, key=lambda m: -sum(m in r["mappings"] for r in rows))
+    frameworks = sorted({m for r in rows for m in r["mappings"]}, key=lambda m: (-sum(m in r["mappings"] for r in rows), m))
     row_h, top, left, name_w, col_w = 26, 112, 40, 392, 104
     width = left + name_w + col_w * len(frameworks) + 90
     height = top + row_h * len(rows) + 90
@@ -195,7 +195,7 @@ def ecosystem_map() -> str:
     ly = top + row_h * len(classes) + 22
     legend(out, left, ly, "Cells count projects. A dashed cell means none.")
     out.append(f'<text x="{left}" y="{ly + 40}" font-family="{MONO}" font-size="10" fill="{INK3}">No project in this map can support attribution or campaign claims. See docs/ECOSYSTEM.md.</text>')
-    out.append(f'<text x="{left}" y="{ly + 56}" font-family="{MONO}" font-size="10" fill="{INK3}">Provenance: maintainer research, 2026-10-07. Repository state not independently verified.</text>')
+    out.append(f'<text x="{left}" y="{ly + 56}" font-family="{MONO}" font-size="10" fill="{INK3}">Provenance: maintainer research, cross-checked by shallow clone on 2026-10-07. Archive flags come from the GitHub API check.</text>')
     out.append("</svg>")
     return "\n".join(out) + "\n"
 

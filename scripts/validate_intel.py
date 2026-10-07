@@ -252,8 +252,10 @@ def validate():
             errors.append(f"{prefix}: invalid section")
         if entry.get("status") not in {"listed", "archived-reported", "active-verified", "archived-verified", "not-found"}:
             errors.append(f"{prefix}: invalid status")
-        if entry.get("verified_at") is not None and not valid_date(entry["verified_at"]):
-            errors.append(f"{prefix}: invalid verified_at")
+        verification = entry.get("verification", {})
+        for stamp in ("checked", "last_commit", "api_checked"):
+            if stamp in verification and not valid_date(verification[stamp]):
+                errors.append(f"{prefix}: invalid verification.{stamp}")
         if entry.get("priority") not in {"start-here", "standard"}:
             errors.append(f"{prefix}: invalid priority")
         if entry.get("source_grade") not in GRADES:

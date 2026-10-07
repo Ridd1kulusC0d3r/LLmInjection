@@ -7,11 +7,12 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 import check_ecosystem  # noqa: E402
 
 ENTRIES = [
-    {"id": "ECO-001", "owner": "a", "name": "active", "status": "listed"},
+    {"id": "ECO-001", "owner": "a", "name": "active", "status": "listed", "verification": {"method": "git clone --depth 1", "last_commit": "2026-09-30"}},
     {"id": "ECO-002", "owner": "a", "name": "gone", "status": "listed"},
     {"id": "ECO-003", "owner": "a", "name": "old", "status": "archived-reported"},
     {"id": "ECO-004", "owner": "a", "name": "moved", "status": "listed"},
     {"id": "ECO-005", "owner": "a", "name": "wrong", "status": "archived-reported"},
+    {"id": "ECO-006", "owner": "a", "name": "surprise", "status": "listed"},
 ]
 
 
@@ -20,33 +21,40 @@ def fake(url):
     if name == "gone":
         raise check_ecosystem.NotFound(url)
     return {
-        "active": {"archived": False, "pushed_at": "2026-09-30T10:00:00Z", "full_name": "a/active"},
-        "old": {"archived": True, "pushed_at": "2025-01-02T00:00:00Z", "full_name": "a/old"},
-        "moved": {"archived": False, "pushed_at": "2026-01-01T00:00:00Z", "full_name": "b/moved"},
-        "wrong": {"archived": False, "pushed_at": "2026-02-01T00:00:00Z", "full_name": "a/wrong"},
+        "active": {"archived": False, "full_name": "a/active"},
+        "old": {"archived": True, "full_name": "a/old"},
+        "moved": {"archived": False, "full_name": "b/moved"},
+        "wrong": {"archived": False, "full_name": "a/wrong"},
+        "surprise": {"archived": True, "full_name": "a/surprise"},
     }[name]
 
 
 class EcosystemCheckTests(unittest.TestCase):
-    def test_states_and_drift(self):
-        updated, notes = check_ecosystem.run(ENTRIES, fake, today="2026-10-07")
-        by_id = {e["id"]: e for e in updated}
-        self.assertEqual(by_id["ECO-001"]["status"], "active-verified")
-        self.assertEqual(by_id["ECO-001"]["last_push"], "2026-09-30")
-        self.assertEqual(by_id["ECO-002"]["status"], "not-found")
-        self.assertEqual(by_id["ECO-003"]["status"], "archived-verified")
-        self.assertEqual(by_id["ECO-004"]["renamed_to"], "b/moved")
-        text = "\n".join(notes)
-        self.assertIn("ECO-002", text)
-        self.assertIn("ECO-004", text)
-        self.assertIn("recorded as archived but active", text)
-        self.assertNotIn("ECO-001", text)
+    def setUp(self):
+        self.updated, self.notes = check_ecosystem.run(ENTRIES, fake, today="2026-10-07")
+        self.by_id = {e["id"]: e for e in self.updated}
+        self.text = "\n".join(self.notes)
+
+    def test_drift_is_reported(self):
+        self.assertIn("ECO-002", self.text)  # not found
+        self.assertIn("ECO-004", self.text)  # renamed
+        self.assertIn("recorded as archived but active", self.text)  # ECO-005
+        self.assertIn("archived on GitHub but not recorded as archived", self.text)  # ECO-006
+        self.assertNotIn("ECO-001", self.text)
+        self.assertNotIn("ECO-003", self.text)  # reported archived and still archived: consistent
+
+    def test_adds_api_fields_and_keeps_git_fields(self):
+        v = self.by_id["ECO-001"]["verification"]
+        self.assertEqual(v["method"], "git clone --depth 1")
+        self.assertEqual(v["last_commit"], "2026-09-30")
+        self.assertIs(v["archived"], False)
+        self.assertEqual(v["api_checked"], "2026-10-07")
+        self.assertEqual(self.by_id["ECO-004"]["verification"]["renamed_to"], "b/moved")
 
     def test_never_changes_analyst_fields(self):
-        entry = {**ENTRIES[0], "evidence_class": "benchmark", "section": "evaluation", "techniques": ["LLMI-T001"]}
-        updated, _ = check_ecosystem.run([entry], fake, today="2026-10-07")
-        for key in ("evidence_class", "section", "techniques"):
-            self.assertEqual(updated[0][key], entry[key])
+        for before, after in zip(ENTRIES, self.updated, strict=True):
+            for key in ("status", "evidence_class", "section", "techniques"):
+                self.assertEqual(before.get(key), after.get(key))
 
     def test_rate_limit_stops_without_losing_entries(self):
         def limited(url):

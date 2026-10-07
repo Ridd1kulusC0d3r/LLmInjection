@@ -24,6 +24,27 @@
         "name": "LLM Prompt Injection: Direct",
         "relation": "exact",
         "url": "https://atlas.mitre.org/techniques/AML.T0051.000"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0068",
+        "name": "LLM Prompt Obfuscation",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0068"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0093",
+        "name": "Prompt Infiltration via Public-Facing Application",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0093"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0065",
+        "name": "LLM Prompt Crafting",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0065"
       }
     ],
     "maturity": "research-demonstrated"
@@ -54,6 +75,20 @@
         "name": "LLM Prompt Injection: Indirect",
         "relation": "exact",
         "url": "https://atlas.mitre.org/techniques/AML.T0051.001"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0051.002",
+        "name": "LLM Prompt Injection: Triggered",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0051.002"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0066",
+        "name": "Retrieval Content Crafting",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0066"
       }
     ],
     "maturity": "research-demonstrated"
@@ -84,7 +119,7 @@
         "url": "https://atlas.mitre.org/techniques/AML.T0054"
       }
     ],
-    "maturity": "research-demonstrated"
+    "maturity": "observed-in-the-wild"
   },
   {
     "id": "LLMI-T004",
@@ -94,7 +129,8 @@
     "summary": "Model or application reveals sensitive information beyond authorization.",
     "mappings": [
       "OWASP LLM",
-      "Google SAIF"
+      "Google SAIF",
+      "MITRE ATLAS"
     ],
     "external_mappings": [
       {
@@ -110,9 +146,30 @@
         "name": "LLM Data Leakage",
         "relation": "exact",
         "url": "https://atlas.mitre.org/techniques/AML.T0057"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0056",
+        "name": "Extract LLM System Prompt",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0056"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0069",
+        "name": "Discover LLM System Information",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0069"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0085",
+        "name": "Data from AI Services",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0085"
       }
     ],
-    "maturity": "no-linked-evidence"
+    "maturity": "research-demonstrated"
   },
   {
     "id": "LLMI-T005",
@@ -169,9 +226,23 @@
         "name": "Manipulate AI Model",
         "relation": "related",
         "url": "https://atlas.mitre.org/techniques/AML.T0018"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0115.000",
+        "name": "Publish Poisoned AI Artifacts: Datasets",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0115.000"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0059",
+        "name": "Erode Dataset Integrity",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0059"
       }
     ],
-    "maturity": "no-linked-evidence"
+    "maturity": "research-demonstrated"
   },
   {
     "id": "LLMI-T007",
@@ -198,6 +269,27 @@
         "name": "RAG Poisoning",
         "relation": "exact",
         "url": "https://atlas.mitre.org/techniques/AML.T0070"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0071",
+        "name": "False RAG Entry Injection",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0071"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0082",
+        "name": "RAG Credential Harvesting",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0082"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0064",
+        "name": "Gather RAG-Indexed Targets",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0064"
       }
     ],
     "maturity": "research-demonstrated"
@@ -211,7 +303,8 @@
     "mappings": [
       "OWASP Agentic",
       "CSA MAESTRO",
-      "Google SAIF"
+      "Google SAIF",
+      "MITRE ATLAS"
     ],
     "external_mappings": [
       {
@@ -227,9 +320,37 @@
         "name": "AI Agent Tool Invocation",
         "relation": "exact",
         "url": "https://atlas.mitre.org/techniques/AML.T0053"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0086",
+        "name": "Exfiltration via AI Agent Tool Invocation",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0086"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0101",
+        "name": "Data Destruction via AI Agent Tool Invocation",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0101"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0100",
+        "name": "AI Agent Clickbait",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0100"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0085.001",
+        "name": "Data from AI Services: AI Agent Tools",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0085.001"
       }
     ],
-    "maturity": "disclosed-vulnerability"
+    "maturity": "observed-in-the-wild"
   },
   {
     "id": "LLMI-T009",
@@ -239,7 +360,8 @@
     "summary": "Persistent or session context is manipulated to influence later decisions.",
     "mappings": [
       "OWASP Agentic",
-      "CSA MAESTRO"
+      "CSA MAESTRO",
+      "MITRE ATLAS"
     ],
     "external_mappings": [
       {
@@ -255,6 +377,27 @@
         "name": "AI Agent Context Poisoning",
         "relation": "exact",
         "url": "https://atlas.mitre.org/techniques/AML.T0080"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0094",
+        "name": "Delay Execution of LLM Instructions",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0094"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0080.000",
+        "name": "AI Agent Context Poisoning: Memory",
+        "relation": "exact",
+        "url": "https://atlas.mitre.org/techniques/AML.T0080.000"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0092",
+        "name": "Manipulate User LLM Chat History",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0092"
       }
     ],
     "maturity": "research-demonstrated"
@@ -283,9 +426,30 @@
         "name": "AI Supply Chain Compromise: Model",
         "relation": "exact",
         "url": "https://atlas.mitre.org/techniques/AML.T0010.003"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0115.001",
+        "name": "Publish Poisoned AI Artifacts: Models",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0115.001"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0011.000",
+        "name": "User Execution: Unsafe AI Artifacts",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0011.000"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0076",
+        "name": "Corrupt AI Model",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0076"
       }
     ],
-    "maturity": "no-linked-evidence"
+    "maturity": "observed-in-the-wild"
   },
   {
     "id": "LLMI-T011",
@@ -363,6 +527,20 @@
         "name": "AI Supply Chain Reputation Inflation",
         "relation": "related",
         "url": "https://atlas.mitre.org/techniques/AML.T0111"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0060",
+        "name": "Publish Hallucinated Entities",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0060"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0062",
+        "name": "Discover LLM Hallucinations",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0062"
       }
     ],
     "maturity": "observed-in-the-wild"
@@ -384,6 +562,13 @@
         "name": "Generate Malicious Commands",
         "relation": "exact",
         "url": "https://atlas.mitre.org/techniques/AML.T0102"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0096",
+        "name": "AI Service API",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0096"
       }
     ],
     "maturity": "observed-in-the-wild"
@@ -427,6 +612,27 @@
         "name": "Autonomous Attack Orchestration",
         "relation": "exact",
         "url": "https://atlas.mitre.org/techniques/AML.T0124"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0116",
+        "name": "Autonomous Reconnaissance",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0116"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0117",
+        "name": "Autonomous Attack-Path Adaptation",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0117"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0017.001",
+        "name": "Develop Capabilities: Autonomous Exploit Development",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0017.001"
       }
     ],
     "maturity": "observed-in-the-wild"
@@ -463,6 +669,20 @@
         "name": "Unsecured Credentials",
         "relation": "related",
         "url": "https://attack.mitre.org/techniques/T1552/"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0098",
+        "name": "AI Agent Tool Credential Harvesting",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0098"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0040",
+        "name": "AI Model Inference API Access",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0040"
       }
     ],
     "maturity": "observed-in-the-wild"
@@ -474,9 +694,32 @@
     "category": "defense-evasion",
     "summary": "Malware or packages embed adversarial or policy-triggering text so LLM-based code scanners refuse or skip analysis of the payload.",
     "mappings": [
-      "OWASP LLM"
+      "OWASP LLM",
+      "MITRE ATLAS"
     ],
-    "external_mappings": [],
+    "external_mappings": [
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0051.001",
+        "name": "LLM Prompt Injection: Indirect",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0051.001"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0015",
+        "name": "Evade AI Model",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0015"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0134",
+        "name": "AI Targeted Cloaking",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0134"
+      }
+    ],
     "maturity": "observed-in-the-wild"
   },
   {
@@ -486,11 +729,39 @@
     "category": "agentic-supply-chain",
     "summary": "Hidden assistant/IDE configuration files and hooks in a repository instruct a coding agent to run attacker scripts during routine developer interaction.",
     "mappings": [
+      "OWASP LLM",
       "CSA MAESTRO",
-      "MITRE ATLAS",
-      "OWASP LLM"
+      "MITRE ATLAS"
     ],
     "external_mappings": [
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0081",
+        "name": "Modify AI Agent Configuration",
+        "relation": "exact",
+        "url": "https://atlas.mitre.org/techniques/AML.T0081"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0084",
+        "name": "Discover AI Agent Configuration",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0084"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0112.000",
+        "name": "Local AI Agent",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0112.000"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0002.002",
+        "name": "Acquire Public AI Artifacts: AI Agent Configuration",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0002.002"
+      },
       {
         "framework": "MITRE ATLAS",
         "id": "AML.T0080",
@@ -518,34 +789,254 @@
       "OWASP LLM",
       "MITRE ATLAS"
     ],
-    "external_mappings": [],
+    "external_mappings": [
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0024.002",
+        "name": "Extract AI Model",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0024.002"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0005",
+        "name": "Create Proxy AI Model",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0005"
+      }
+    ],
     "maturity": "observed-in-the-wild"
   },
   {
     "id": "LLMI-T020",
     "type": "technique",
-    "name": "Improper Output Handling",
-    "category": "application-security",
-    "summary": "Model output is passed unsanitized to a browser, interpreter, shell or downstream tool, turning generated text into an execution or injection primitive.",
+    "name": "Improper Output Handling and Rendering Exfiltration",
+    "category": "application",
+    "summary": "Model output is rendered or executed downstream without validation, so markdown images, links, HTML or terminal escape sequences leak data or act on the client.",
     "mappings": [
-      "OWASP LLM",
-      "Google SAIF"
+      "MITRE ATLAS"
     ],
-    "external_mappings": [],
-    "maturity": "no-linked-evidence"
+    "external_mappings": [
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0077",
+        "name": "LLM Response Rendering",
+        "relation": "exact",
+        "url": "https://atlas.mitre.org/techniques/AML.T0077"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0067",
+        "name": "LLM Trusted Output Components Manipulation",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0067"
+      }
+    ],
+    "maturity": "research-demonstrated"
+  },
+  {
+    "id": "LLMI-T021",
+    "type": "technique",
+    "name": "Agent Tool Poisoning and Rug Pull",
+    "category": "agentic-supply-chain",
+    "summary": "A tool's model-visible definition, implementation or response is poisoned, or silently changed after approval, to steer the agent or exfiltrate through it.",
+    "mappings": [
+      "MITRE ATLAS"
+    ],
+    "external_mappings": [
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0110",
+        "name": "AI Agent Tool Poisoning",
+        "relation": "exact",
+        "url": "https://atlas.mitre.org/techniques/AML.T0110"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0011.002",
+        "name": "User Execution: Poisoned AI Agent Tool",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0011.002"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0010.005",
+        "name": "AI Supply Chain Compromise: AI Agent Tool",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0010.005"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0109",
+        "name": "AI Supply Chain Rug Pull",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0109"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0115.002",
+        "name": "Publish Poisoned AI Artifacts: AI Agent Tools",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0115.002"
+      }
+    ],
+    "maturity": "observed-in-the-wild"
   },
   {
     "id": "LLMI-T022",
     "type": "technique",
-    "name": "Resource Exhaustion and Cost Abuse",
+    "name": "Agentic Resource Consumption and Cost Harvesting",
     "category": "availability",
-    "summary": "Looping agents or high-volume requests exhaust compute, tokens or budget, causing denial of service or unbounded spend.",
+    "summary": "Inputs coerce a model or agent into expensive reasoning, recursive planning or tool loops that exhaust budgets or degrade service.",
     "mappings": [
-      "OWASP LLM",
-      "OWASP Agentic"
+      "MITRE ATLAS"
     ],
-    "external_mappings": [],
+    "external_mappings": [
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0034.002",
+        "name": "Cost Harvesting: Agentic Resource Consumption",
+        "relation": "exact",
+        "url": "https://atlas.mitre.org/techniques/AML.T0034.002"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0034",
+        "name": "Cost Harvesting",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0034"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0029",
+        "name": "Denial of AI Service",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0029"
+      }
+    ],
     "maturity": "no-linked-evidence"
+  },
+  {
+    "id": "LLMI-T023",
+    "type": "technique",
+    "name": "Crafted AI Assistant Links and Recommendation Poisoning",
+    "category": "prompt-context",
+    "summary": "Links that pre-fill an assistant prompt carry hidden instructions, often to write durable memory that biases later answers toward the link author.",
+    "mappings": [
+      "MITRE ATLAS"
+    ],
+    "external_mappings": [
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0131",
+        "name": "Crafted AI Assistant Links",
+        "relation": "exact",
+        "url": "https://atlas.mitre.org/techniques/AML.T0131"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0130",
+        "name": "AI Agent Response Biasing",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0130"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0080.000",
+        "name": "AI Agent Context Poisoning: Memory",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0080.000"
+      }
+    ],
+    "maturity": "observed-in-the-wild"
+  },
+  {
+    "id": "LLMI-T024",
+    "type": "technique",
+    "name": "Exposed or Misconfigured AI Services",
+    "category": "infrastructure",
+    "summary": "Model-serving endpoints, agent builders, vector stores or MCP servers are reachable without adequate authentication and are scanned for and abused.",
+    "mappings": [
+      "MITRE ATLAS"
+    ],
+    "external_mappings": [
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0132",
+        "name": "Misconfigured or Publicly Exposed AI Services",
+        "relation": "exact",
+        "url": "https://atlas.mitre.org/techniques/AML.T0132"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0006.002",
+        "name": "Active Scanning: Scan for Exposed AI Infrastructure",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0006.002"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0006",
+        "name": "Active Scanning",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0006"
+      }
+    ],
+    "maturity": "observed-in-the-wild"
+  },
+  {
+    "id": "LLMI-T025",
+    "type": "technique",
+    "name": "Multimodal Instruction Triggers",
+    "category": "prompt-context",
+    "summary": "Instructions hidden in images, audio, documents or image-scaling artifacts reach the model while staying unnoticed by human reviewers and text filters.",
+    "mappings": [
+      "MITRE ATLAS"
+    ],
+    "external_mappings": [
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0129",
+        "name": "Triggers in Multimodal Inputs",
+        "relation": "exact",
+        "url": "https://atlas.mitre.org/techniques/AML.T0129"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0051.001",
+        "name": "LLM Prompt Injection: Indirect",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0051.001"
+      }
+    ],
+    "maturity": "research-demonstrated"
+  },
+  {
+    "id": "LLMI-T026",
+    "type": "technique",
+    "name": "Inter-Agent Instruction Propagation",
+    "category": "agentic",
+    "summary": "Injected instructions or operational data move between agents, sub-agents or orchestrators, including self-replicating prompts that spread across agent hops.",
+    "mappings": [
+      "MITRE ATLAS"
+    ],
+    "external_mappings": [
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0118",
+        "name": "Autonomous AI Agent Communication",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0118"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0061",
+        "name": "LLM Prompt Self-Replication",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0061"
+      }
+    ],
+    "maturity": "observed-in-the-wild"
   },
   {
     "id": "LLMI-T027",

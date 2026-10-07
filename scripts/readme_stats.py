@@ -171,12 +171,14 @@ def eco_rows(entries: list[dict]) -> list[list[str]]:
         if e["status"] == "archived-reported":
             flags.append("archived (as reported)")
         note = cell(e["summary"]) + (" · " + ", ".join(flags) if flags else "")
+        ver = e.get("verification", {})
+        state = f"{ver.get('last_commit', 'n/a')} · {cell(ver.get('license', 'n/a'))}" if ver.get("reachable") else "not reachable"
         rows.append([f"[{cell(e['owner'])}/{cell(e['name'])}]({e['url']})", f"`{e['evidence_class']}`",
-                     cell([f"`{t}`" for t in e["techniques"]]) or "none", note])
+                     cell([f"`{t}`" for t in e["techniques"]]) or "none", state, note])
     return rows
 
 
-ECO_HEAD = ["Repository", "Evidence class", "Techniques", "Scope"]
+ECO_HEAD = ["Repository", "Evidence class", "Techniques", "Last commit · License", "Scope"]
 
 
 def eco_classes() -> str:

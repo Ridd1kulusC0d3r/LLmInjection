@@ -254,6 +254,420 @@
     ]
   },
   {
+    "id": "DET-AI-015",
+    "type": "detection",
+    "name": "MCP Tool Description Changed After Approval (Rug Pull)",
+    "category": "mcp",
+    "severity": "high",
+    "status": "specification",
+    "hypothesis": "An approved MCP server whose tool name and schema are unchanged but whose description or parameter descriptions hash differs from the pinned baseline indicates a rug-pull or silent redefinition attempting to steer the agent.",
+    "telemetry": [
+      "MCP tools/list responses captured by client or proxy",
+      "per-tool sha256 of name+description+inputSchema",
+      "approval/consent events with timestamp",
+      "MCP server package version/digest"
+    ],
+    "test_ids": [
+      "TC-MCP-031"
+    ]
+  },
+  {
+    "id": "DET-AI-016",
+    "type": "detection",
+    "name": "Cross-Server Tool Reference in MCP Description (Shadowing)",
+    "category": "mcp",
+    "severity": "high",
+    "status": "specification",
+    "hypothesis": "A tool description from one MCP server that references tool names or behaviour belonging to a different configured server indicates tool shadowing intended to hijack trusted tools.",
+    "telemetry": [
+      "aggregated tools/list across all configured servers",
+      "server-to-tool ownership map",
+      "tool-name token matches inside foreign descriptions"
+    ],
+    "test_ids": []
+  },
+  {
+    "id": "DET-AI-017",
+    "type": "detection",
+    "name": "Hidden Content in Agent-Facing Metadata",
+    "category": "mcp",
+    "severity": "medium",
+    "status": "specification",
+    "hypothesis": "Unicode Tag Block, zero-width, bidi-override characters, HTML comments or large whitespace padding in tool descriptions, SKILL.md or assistant instruction files indicate content hidden from human review but visible to the model.",
+    "telemetry": [
+      "tool/skill/instruction file text",
+      "codepoint class histogram (U+E0000-E007F, U+200B-U+200F, U+202A-U+202E)",
+      "max contiguous whitespace run length",
+      "file path and commit author"
+    ],
+    "test_ids": [
+      "TC-OBF-021"
+    ]
+  },
+  {
+    "id": "DET-AI-018",
+    "type": "detection",
+    "name": "Repository Assistant Settings Grant Broad Pre-Approval",
+    "category": "workspace",
+    "severity": "high",
+    "status": "specification",
+    "hypothesis": "A repository-scoped assistant settings file that pre-approves wildcard shell, bypasses permission prompts, auto-approves MCP servers or defines hooks that fetch and execute remote content indicates workspace abuse targeting developers who open the repo.",
+    "telemetry": [
+      "file create/modify events for .claude/settings*.json, .cursor/*, .vscode/settings.json, .codex/*, AGENTS.md",
+      "parsed permission allow-lists and hook definitions",
+      "git commit metadata (author, PR origin)",
+      "first-open time by developer"
+    ],
+    "test_ids": []
+  },
+  {
+    "id": "DET-AI-019",
+    "type": "detection",
+    "name": "Agent Session Executes Repo Helper Script Referenced by Instruction File",
+    "category": "workspace",
+    "severity": "high",
+    "status": "specification",
+    "hypothesis": "An agent process spawning a script that is referenced by a mandatory instruction in a repo instruction/skill file and was not invoked by the user indicates instruction-driven execution of attacker-supplied helpers.",
+    "telemetry": [
+      "agent session log tool_use events (Bash/exec)",
+      "process creation with parent = agent CLI",
+      "instruction/skill file references to local paths",
+      "user prompt text for explicit invocation"
+    ],
+    "test_ids": []
+  },
+  {
+    "id": "DET-AI-020",
+    "type": "detection",
+    "name": "Skill Installs With Remote Fetch-and-Execute or Shipped Bytecode",
+    "category": "supply-chain",
+    "severity": "high",
+    "status": "specification",
+    "hypothesis": "An agent skill that contains a download-then-execute chain, compiled bytecode, concealed executables or package-source redirection indicates skill supply-chain compromise that static review of SKILL.md would miss.",
+    "telemetry": [
+      "skill bundle file inventory with types and hashes",
+      "presence of __pycache__/.pyc and nested executables",
+      "package-manager source/index config inside bundle",
+      "install-time network and process events"
+    ],
+    "test_ids": []
+  },
+  {
+    "id": "DET-AI-021",
+    "type": "detection",
+    "name": "Skill Declared Capabilities Under-Report Observed Behaviour",
+    "category": "supply-chain",
+    "severity": "medium",
+    "status": "specification",
+    "hypothesis": "A skill or MCP server whose code uses network, filesystem or process capabilities not declared in its manifest or description indicates deceptive packaging intended to pass consent review.",
+    "telemetry": [
+      "declared permissions/allowed-tools from SKILL.md or manifest",
+      "static capability extraction (imports, syscalls, network sinks)",
+      "runtime syscall/network trace in sandbox"
+    ],
+    "test_ids": []
+  },
+  {
+    "id": "DET-AI-022",
+    "type": "detection",
+    "name": "Unsafe Deserialization Import in Model Artifact",
+    "category": "model",
+    "severity": "critical",
+    "status": "specification",
+    "hypothesis": "A model artifact whose pickle stream or Keras/TF graph references process, network or code-execution globals or file-I/O ops indicates a weaponised model file that executes on load.",
+    "telemetry": [
+      "model file hash and format",
+      "pickle opcode GLOBAL/STACK_GLOBAL module.name list",
+      "Keras Lambda layer presence",
+      "TF SavedModel op list (ReadFile/WriteFile)",
+      "model registry download events"
+    ],
+    "test_ids": []
+  },
+  {
+    "id": "DET-AI-023",
+    "type": "detection",
+    "name": "Model Load Followed by Unexpected Child Process or Egress",
+    "category": "model",
+    "severity": "high",
+    "status": "specification",
+    "hypothesis": "A training or inference process that spawns a shell or opens a new outbound connection within seconds of loading a model file indicates load-time code execution from a malicious artifact.",
+    "telemetry": [
+      "file open events on model extensions (.pt, .pth, .bin, .ckpt, .pkl, .joblib, .h5, .keras)",
+      "process creation with parent = python/ML runtime",
+      "network connections from ML runtime",
+      "model file hash"
+    ],
+    "test_ids": []
+  },
+  {
+    "id": "DET-AI-024",
+    "type": "detection",
+    "name": "Sensitive File Read Flows Into Outbound Tool Argument",
+    "category": "agent",
+    "severity": "high",
+    "status": "specification",
+    "hypothesis": "An agent tool call whose arguments contain content read earlier in the same session from credential or config paths (SSH keys, cloud creds, MCP config, .env) and whose destination is a network-capable tool indicates tool-call exfiltration driven by poisoned instructions.",
+    "telemetry": [
+      "agent session tool_use events with arguments (hashed or canaried)",
+      "file read events by agent with path classification",
+      "tool capability classification (network sink vs local)",
+      "argument length and padding anomalies"
+    ],
+    "test_ids": [
+      "TC-TOOL-030"
+    ]
+  },
+  {
+    "id": "DET-AI-025",
+    "type": "detection",
+    "name": "MCP Client Config Server Added With Inline Exec, Privileged Container or Unpinned Package",
+    "category": "mcp",
+    "severity": "medium",
+    "status": "specification",
+    "hypothesis": "A newly added MCP server entry that launches via inline interpreter code, sudo, privileged/host-mounted containers or an unpinned package runner indicates unsafe or malicious server registration.",
+    "telemetry": [
+      "diffs of MCP client configs (claude_desktop_config.json, ~/.cursor/mcp.json, windsurf mcp_config.json, VS Code mcp.json)",
+      "parsed command/args/env",
+      "writer process identity"
+    ],
+    "test_ids": []
+  },
+  {
+    "id": "DET-AI-026",
+    "type": "detection",
+    "name": "Systematic Decision-Boundary Probing via Inference API",
+    "category": "inference-api",
+    "severity": "critical",
+    "status": "specification",
+    "hypothesis": "If an identity issues high volumes of near-duplicate prompts varying a single attribute or requesting confidence scores, it is likely attempting model extraction.",
+    "telemetry": [
+      "inference-api-request-log",
+      "requested-logprobs-or-parameters",
+      "per-identity-query-cadence"
+    ],
+    "test_ids": []
+  },
+  {
+    "id": "DET-AI-027",
+    "type": "detection",
+    "name": "Assistant Hook Executes Before Workspace Trust",
+    "category": "workspace",
+    "severity": "critical",
+    "status": "specification",
+    "hypothesis": "If a coding assistant spawns a child process from a repo-scoped hook before a trust decision is recorded, the repository is likely abusing assistant hooks for code execution.",
+    "telemetry": [
+      "repository-scan-at-checkout",
+      "process-creation-parent-assistant",
+      "workspace-trust-dialog-events"
+    ],
+    "test_ids": [
+      "TC-WS-017"
+    ]
+  },
+  {
+    "id": "DET-AI-028",
+    "type": "detection",
+    "name": "Model-Provider Base URL Redirected by Repository Config",
+    "category": "workspace",
+    "severity": "critical",
+    "status": "specification",
+    "hypothesis": "If an AI assistant sends provider-authenticated requests to a host outside the approved provider allowlist after a repository config change, its API credential is likely being exfiltrated.",
+    "telemetry": [
+      "assistant-config-snapshot",
+      "dns",
+      "tls-egress-from-assistant",
+      "provider-endpoint-allowlist"
+    ],
+    "test_ids": [
+      "TC-WS-017"
+    ]
+  },
+  {
+    "id": "DET-AI-029",
+    "type": "detection",
+    "name": "Package Install Writes AI Agent Config",
+    "category": "supply-chain",
+    "severity": "critical",
+    "status": "specification",
+    "hypothesis": "If a dependency installation process writes or modifies AI assistant configuration files, the package is likely a supply-chain implant targeting coding agents.",
+    "telemetry": [
+      "package-install-process-tree",
+      "file-write-to-agent-config-dir",
+      "package-metadata"
+    ],
+    "test_ids": []
+  },
+  {
+    "id": "DET-AI-030",
+    "type": "detection",
+    "name": "Agent-Proposed Package With No Registry Reputation",
+    "category": "supply-chain",
+    "severity": "high",
+    "status": "specification",
+    "hypothesis": "If a coding agent proposes or installs a package that is newly registered, low-reputation or absent from internal allowlists, it may be a hallucination-squatted package.",
+    "telemetry": [
+      "agent-generated-dependency-manifest",
+      "registry-metadata-age-downloads-maintainer",
+      "resolver-log"
+    ],
+    "test_ids": [
+      "TC-SC-027"
+    ]
+  },
+  {
+    "id": "DET-AI-031",
+    "type": "detection",
+    "name": "Cross-Scope Memory Write",
+    "category": "rag-memory",
+    "severity": "critical",
+    "status": "specification",
+    "hypothesis": "If an agent memory write targets a conversation or tenant ID different from the active trace, isolation has been bypassed, likely via injection or a scoping bug.",
+    "telemetry": [
+      "agent-trace-spans-with-tenant-and-session",
+      "memory-and-vector-store-writes"
+    ],
+    "test_ids": [
+      "TC-LEAK-028"
+    ]
+  },
+  {
+    "id": "DET-AI-032",
+    "type": "detection",
+    "name": "Agent Runtime Launched in Unattended Auto-Approve Mode",
+    "category": "agent-runtime",
+    "severity": "high",
+    "status": "specification",
+    "hypothesis": "If an agent runtime starts with approvals disabled on a host where it is not sanctioned, it is likely being used for autonomous attack orchestration.",
+    "telemetry": [
+      "agent-runtime-command-line",
+      "approval-mode-config-change",
+      "edr-process-telemetry"
+    ],
+    "test_ids": []
+  },
+  {
+    "id": "DET-AI-033",
+    "type": "detection",
+    "name": "Agent Widens Own Auto-Approval Policy",
+    "category": "agent-runtime",
+    "severity": "high",
+    "status": "specification",
+    "hypothesis": "If an assistant configuration change sets approval or trusted-command keys to a wildcard or disables confirmation, and the writer is the agent itself, the agent has likely been manipulated into self-escalation.",
+    "telemetry": [
+      "config-change-before-after-approval-keys",
+      "agent-tool-call-log"
+    ],
+    "test_ids": []
+  },
+  {
+    "id": "DET-AI-034",
+    "type": "detection",
+    "name": "Rendered Model Output References External Image Host",
+    "category": "application",
+    "severity": "high",
+    "status": "specification",
+    "hypothesis": "A model response that will be rendered in a client contains an image or link to a host outside the allowlist, with a query string that carries data drawn from the conversation or retrieved context.",
+    "telemetry": [
+      "rendered-response",
+      "url-host",
+      "query-string-entropy",
+      "context-source"
+    ],
+    "test_ids": [
+      "TC-OH-024"
+    ]
+  },
+  {
+    "id": "DET-AI-035",
+    "type": "detection",
+    "name": "Assistant Deep-Link With Persistence Clause",
+    "category": "email-web",
+    "severity": "medium",
+    "status": "specification",
+    "hypothesis": "An email or web page contains an AI assistant URL whose pre-filled prompt parameter asks the assistant to remember, trust or always cite a source.",
+    "telemetry": [
+      "email-url",
+      "proxy-url",
+      "decoded-query-parameter",
+      "destination-assistant"
+    ],
+    "test_ids": [
+      "TC-LINK-033"
+    ]
+  },
+  {
+    "id": "DET-AI-036",
+    "type": "detection",
+    "name": "Inbound Scan of AI Service Ports",
+    "category": "network",
+    "severity": "medium",
+    "status": "specification",
+    "hypothesis": "External sources probe model-serving, agent-builder or MCP endpoints, for example requesting model lists or agent flow APIs, across several hosts in a short window.",
+    "telemetry": [
+      "network-flow",
+      "http-request",
+      "service-inventory"
+    ],
+    "test_ids": [
+      "TC-EXP-034"
+    ]
+  },
+  {
+    "id": "DET-AI-037",
+    "type": "detection",
+    "name": "Agent Forwards Received Instructions to Peer Agents",
+    "category": "agent-runtime",
+    "severity": "high",
+    "status": "specification",
+    "hypothesis": "An agent sends another agent or sub-agent a message that repeats instruction text it received from untrusted content, especially a request to propagate the same text.",
+    "telemetry": [
+      "agent-message-log",
+      "content-provenance",
+      "message-similarity"
+    ],
+    "test_ids": [
+      "TC-MA-032"
+    ]
+  },
+  {
+    "id": "DET-AI-038",
+    "type": "detection",
+    "name": "Hidden Instruction Text in Image or Audio Input",
+    "category": "multimodal",
+    "severity": "medium",
+    "status": "specification",
+    "hypothesis": "OCR or transcription of an image, audio clip or downscaled image contains imperative instruction text that was not visible in the original at review size.",
+    "telemetry": [
+      "ocr-text",
+      "transcript",
+      "downscale-diff",
+      "input-source"
+    ],
+    "test_ids": [
+      "TC-MM-022",
+      "TC-MM-023"
+    ]
+  },
+  {
+    "id": "DET-AI-039",
+    "type": "detection",
+    "name": "Reasoning or Tool-Loop Cost Spike Per Session",
+    "category": "availability",
+    "severity": "medium",
+    "status": "specification",
+    "hypothesis": "A single session or key consumes reasoning tokens or tool calls far above its baseline, or re-plans recursively without completing the task.",
+    "telemetry": [
+      "token-usage",
+      "tool-call-count",
+      "session-id",
+      "budget-events"
+    ],
+    "test_ids": [
+      "TC-DOS-026"
+    ]
+  },
+  {
     "id": "DET-AI-040",
     "type": "detection",
     "name": "Policy Deviation After Untrusted Content Ingestion",

@@ -72,10 +72,7 @@
     "status": {
       "enum": [
         "listed",
-        "archived-reported",
-        "active-verified",
-        "archived-verified",
-        "not-found"
+        "archived-reported"
       ]
     },
     "techniques": {
@@ -104,24 +101,43 @@
       "type": "string",
       "format": "date"
     },
-    "verified_at": {
-      "type": "string",
-      "format": "date"
-    },
-    "last_push": {
-      "type": [
-        "string",
-        "null"
+    "verification": {
+      "type": "object",
+      "description": "How and when the repository state was last checked. last_commit and license come from a shallow clone; GitHub archive status is not visible to git.",
+      "required": [
+        "method",
+        "checked",
+        "reachable"
       ],
-      "format": "date"
-    },
-    "renamed_to": {
-      "type": "string"
-    },
-    "regions": {
-      "type": "array",
-      "items": {
-        "type": "string"
+      "properties": {
+        "method": {
+          "type": "string"
+        },
+        "checked": {
+          "type": "string",
+          "format": "date"
+        },
+        "reachable": {
+          "type": "boolean"
+        },
+        "last_commit": {
+          "type": "string",
+          "format": "date"
+        },
+        "license": {
+          "type": "string"
+        },
+        "archived": {
+          "type": "boolean",
+          "description": "GitHub archive flag from the API check (scripts/check_ecosystem.py); not visible to git."
+        },
+        "renamed_to": {
+          "type": "string"
+        },
+        "api_checked": {
+          "type": "string",
+          "format": "date"
+        }
       }
     }
   }

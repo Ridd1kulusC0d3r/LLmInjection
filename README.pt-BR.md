@@ -15,11 +15,11 @@ Inteligência de ameaças aberta para sistemas de IA, LLMs e agentes: atores, ca
 <!-- gen:stats-pt:start -->
 | Atores | Campanhas | Incidentes | Vulnerabilidades | Técnicas | Fontes |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| **8** | **10** | **8** | **9** | **23** | **44** |
+| **8** | **10** | **30** | **9** | **28** | **54** |
 
 | Casos de teste | Detecções | Controles | Frameworks | Famílias de modelos | Relações | Projetos do ecossistema |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| **26** | **20** | **21** | **19** | **12** | **119** | **75** |
+| **40** | **45** | **32** | **19** | **12** | **215** | **106** |
 <!-- gen:stats-pt:end -->
 
 O LLMInjection **não é um repositório de prompts**. Cada afirmação relevante traz nota da fonte, nível de confiança, data de verificação, contexto de frameworks e um ângulo defensivo.
@@ -34,7 +34,7 @@ O LLMInjection **não é um repositório de prompts**. Cada afirmação relevant
 | **Técnicas e frameworks** | Técnicas mapeadas para ATLAS, OWASP, NIST, SAIF e MAESTRO, com nível de maturidade | [Frameworks](docs/FRAMEWORKS.md) |
 | **Laboratório seguro** | Casos de teste defensivos para prompt, RAG, agentes, MCP e cadeia de suprimentos | [Casos de teste](docs/TEST-CASES.md) |
 | **Detecção** | Hipóteses de detecção e regras Sigma de partida | [Engenharia de detecção](docs/DETECTION-ENGINEERING.md) |
-| **Ecossistema** | 75 projetos relacionados, classificados pelo que cada um pode sustentar | [Mapa do ecossistema](docs/ECOSYSTEM.md) |
+| **Ecossistema** | Projetos relacionados, classificados pelo que cada um pode sustentar | [Mapa do ecossistema](docs/ECOSYSTEM.md) |
 
 ## Princípios
 

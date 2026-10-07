@@ -1,0 +1,625 @@
+{
+  "generated": "2026-10-07",
+  "provenance": "10 agent, MCP, skill and model scanners",
+  "note": "Derived from shallow clones read on 2026-10-07. Names and identifiers only; descriptions are paraphrased. Discovery and test-design material, not evidence of in-the-wild activity.",
+  "scanners": [
+    {
+      "repo": "cisco-ai-defense/mcp-scanner",
+      "license": "Apache-2.0",
+      "last_commit": "2026-10-07",
+      "inputs": [
+        "live MCP servers (stdio, SSE, streamable HTTP)",
+        "MCP client configs (--scan-known-configs: Claude Desktop, Cursor, Windsurf, VS Code)",
+        "pre-generated tool JSON (static/offline)",
+        "MCP server source code (behavioural)",
+        "PyPI/npm packages in Docker sandbox",
+        "bundled binaries (VirusTotal hash lookup)",
+        "Python deps (pip-audit)"
+      ],
+      "engines": [
+        "YARA (10 rule files)",
+        "LLM analyzer",
+        "Cisco AI Defense API",
+        "behavioural code analyzer (Py/JS, taint)",
+        "prompt-defense analyzer",
+        "protocol analyzer",
+        "readiness analyzer",
+        "VirusTotal",
+        "vulnerable package"
+      ],
+      "categories": {
+        "LLM": [
+          "PROMPT INJECTION",
+          "DATA EXFILTRATION",
+          "TOOL POISONING",
+          "TOOL SHADOWING"
+        ],
+        "YARA (7 threats; files code_execution, script_injection, system_manipulation, credential_harvesting, sql_injection, command_injection, tool_poisoning, data_exfiltration, coercive_injection, prompt_injection)": [
+          "PROMPT INJECTION",
+          "CODE EXECUTION",
+          "INJECTION ATTACK",
+          "CREDENTIAL HARVESTING",
+          "SYSTEM MANIPULATION",
+          "DATA EXFILTRATION",
+          "TOOL POISONING"
+        ],
+        "Behavioural (14)": [
+          "PROMPT INJECTION",
+          "INJECTION ATTACKS",
+          "TEMPLATE INJECTION",
+          "TOOL POISONING",
+          "GOAL MANIPULATION",
+          "DATA EXFILTRATION",
+          "UNAUTHORIZED NETWORK ACCESS",
+          "UNAUTHORIZED SYSTEM ACCESS",
+          "ARBITRARY RESOURCE READ/WRITE",
+          "UNAUTHORIZED CODE EXECUTION",
+          "BACKDOOR",
+          "DEFENSE EVASION",
+          "RESOURCE EXHAUSTION",
+          "GENERAL DESCRIPTION-CODE MISMATCH"
+        ],
+        "Prompt defense (12)": [
+          "INSTRUCTION_OVERRIDE",
+          "DATA_LEAKAGE",
+          "ROLE_ESCAPE",
+          "INDIRECT_INJECTION",
+          "OUTPUT_WEAPONIZATION",
+          "OUTPUT_MANIPULATION",
+          "MULTILANG_BYPASS",
+          "UNICODE_ATTACK",
+          "CONTEXT_OVERFLOW",
+          "SOCIAL_ENGINEERING",
+          "INPUT_VALIDATION",
+          "ABUSE_PREVENTION"
+        ],
+        "AI Defense API (9)": [
+          "PROMPT_INJECTION",
+          "HARASSMENT",
+          "HATE_SPEECH",
+          "PROFANITY",
+          "SEXUAL_CONTENT_AND_EXPLOITATION",
+          "SOCIAL_DIVISION_AND_POLARIZATION",
+          "VIOLENCE_AND_PUBLIC_SAFETY_THREATS",
+          "CODE_DETECTION",
+          "SECURITY_VIOLATION"
+        ],
+        "Protocol MCPS (8 active)": [
+          "MCPS-001 unencrypted HTTP",
+          "MCPS-002 unauthenticated requests",
+          "MCPS-003 no message signing",
+          "MCPS-004 no replay protection",
+          "MCPS-005 tool definitions lack integrity hashes",
+          "MCPS-007 spoofed agent identity",
+          "MCPS-008 fail-open",
+          "MCPS-009 no rate limiting"
+        ],
+        "Readiness": [
+          "HEUR-001..HEUR-020 (timeouts, retries, error handling)"
+        ],
+        "Other": [
+          "MALWARE (VirusTotal)",
+          "VULNERABLE_DEPENDENCY"
+        ]
+      },
+      "output_formats": [
+        "summary",
+        "detailed",
+        "table",
+        "by_tool",
+        "by_analyzer",
+        "by_severity",
+        "raw JSON"
+      ],
+      "llmi_mapping": {
+        "TOOL POISONING / TOOL SHADOWING / GOAL MANIPULATION": "LLMI-T008",
+        "DATA EXFILTRATION / CREDENTIAL HARVESTING": "LLMI-T004, LLMI-T008",
+        "PROMPT INJECTION / INDIRECT_INJECTION": "LLMI-T002",
+        "GENERAL DESCRIPTION-CODE MISMATCH / BACKDOOR": "LLMI-T008, LLMI-T011",
+        "MCPS-005 integrity hashes": "LLMI-T011 (rug-pull precondition)",
+        "VULNERABLE_DEPENDENCY / MALWARE / PyPI sandbox": "LLMI-T011",
+        "known client configs": "LLMI-T018"
+      }
+    },
+    {
+      "repo": "cisco-ai-defense/skill-scanner",
+      "license": "Apache-2.0",
+      "last_commit": "2026-10-05",
+      "inputs": [
+        "Agent Skill directories (SKILL.md + scripts; Codex and Cursor skill formats per agentskills.io)",
+        "recursive skill collections (scan-all)",
+        "pre-commit hook",
+        "GitHub Action"
+      ],
+      "engines": [
+        "YAML signature packs (784 rules: ATR 712, core 46, promptguard 26)",
+        "YARA-X (16 rule files)",
+        "AST + dataflow behavioural analyzer",
+        "CEL decision correlation",
+        "LLM judge",
+        "meta-analyzer",
+        "AI Defense / OSV analyzers"
+      ],
+      "categories": {
+        "Threat taxonomy (Cisco AITech)": [
+          "Prompt Injection (AITech-1.1)",
+          "Jailbreak (2.1)",
+          "Transitive Trust Abuse (1.2)",
+          "Skill Discovery Abuse (4.3)",
+          "Data Exfiltration (8.2)",
+          "Tool Chaining Abuse (8.2)",
+          "Hardcoded Secrets (8.2)",
+          "Command Injection (9.1)",
+          "Code Execution (9.1)",
+          "Obfuscation (9.2)",
+          "ASCII Smuggling (9.2, Unicode Tag Block)",
+          "Supply Chain Attack (9.3)",
+          "Unauthorized Tool Use (12.1)",
+          "Tool Poisoning (12.1)",
+          "Tool Shadowing (12.1)",
+          "Resource Abuse (13.1)",
+          "Autonomy Abuse (13.1)",
+          "Social Engineering (15.1)"
+        ],
+        "Rule counts by category": {
+          "prompt_injection": 247,
+          "data_exfiltration": 133,
+          "social_engineering": 106,
+          "transitive_trust_abuse": 95,
+          "supply_chain_attack": 46,
+          "unauthorized_tool_use": 45,
+          "harmful_content": 38,
+          "autonomy_abuse": 31,
+          "hardcoded_secrets": 20,
+          "command_injection": 12,
+          "obfuscation": 4,
+          "policy_violation": 3,
+          "resource_abuse": 3,
+          "malware": 1
+        }
+      },
+      "output_formats": [
+        "summary",
+        "table",
+        "json",
+        "markdown",
+        "html",
+        "sarif"
+      ],
+      "measured_performance": "MaliciousSkillBench held-out (839 malicious / 545 harmless): rules alone 7.7% recall at HIGH, 4.0% FPR; best F1 setup with LLM judge 66.7% recall / 15.4% FPR / 75.5% F1",
+      "llmi_mapping": {
+        "Supply Chain Attack / Obfuscation / ASCII Smuggling": "LLMI-T011",
+        "Tool Poisoning / Shadowing / Unauthorized Tool Use / Tool Chaining": "LLMI-T008",
+        "Data Exfiltration / Hardcoded Secrets": "LLMI-T004",
+        "Transitive Trust Abuse": "LLMI-T002",
+        "Autonomy Abuse": "LLMI-T015",
+        "Skill Discovery Abuse (capability inflation)": "LLMI-T012"
+      }
+    },
+    {
+      "repo": "snyk/agent-scan",
+      "license": "Apache-2.0",
+      "last_commit": "2026-10-06",
+      "inputs": [
+        "auto-discovered agent harness configs (Claude Code/Desktop, Cursor, Gemini CLI, Windsurf, VS Code, Codex, GitHub Copilot, OpenCode, Claude plugins)",
+        "explicit MCP config files",
+        "SKILL.md / skills directories (~/.claude/skills)",
+        "live MCP servers (starts stdio servers; consent prompt)"
+      ],
+      "engines": [
+        "remote Snyk analysis API (requires SNYK_TOKEN)",
+        "toxic-flow analysis",
+        "Agent Guard hooks for Claude Code, Cursor, Codex, Copilot"
+      ],
+      "categories": {
+        "v0.5 issue codes": [
+          "E001 prompt injection in tool description (tool poisoning)",
+          "E002 cross-server tool reference (tool shadowing)",
+          "W015/W016 untrusted content (toxic flow)",
+          "W017 sensitive data exposure",
+          "W018 workspace data exposure",
+          "W019/W020 destructive capabilities",
+          "E004 prompt injection in skill",
+          "E005 suspicious download URL in skill",
+          "E006 malicious code patterns in skill",
+          "W007 insecure credential handling",
+          "W008 hardcoded secrets",
+          "W009 direct financial execution",
+          "W011 untrusted third-party content",
+          "W012 unverifiable external dependency",
+          "W013 system service modification",
+          "W014 missing SKILL.md",
+          "W021 hidden Unicode characters",
+          "W003-W006 internal warnings",
+          "X001-X010 failure codes"
+        ],
+        "v0.6 risk indicators": [
+          "prompt_injection_tool_desc",
+          "untrusted_content",
+          "private_data",
+          "destructive_capabilities",
+          "prompt_injection_skill_instructions",
+          "suspicious_download_url",
+          "malicious_code",
+          "insecure_credential_handling",
+          "secret_detection",
+          "direct_money_access",
+          "third_party_content_exposure",
+          "unverifiable_dependencies",
+          "modifying_system_services",
+          "missing_skill_md"
+        ]
+      },
+      "output_formats": [
+        "terminal (pretty)",
+        "JSON (--json; schema version-dependent, marked experimental)"
+      ],
+      "llmi_mapping": {
+        "E001/E002/toxic flows": "LLMI-T008",
+        "E004-E006/W012": "LLMI-T011",
+        "W021 hidden unicode": "LLMI-T011, LLMI-T017",
+        "config discovery + Agent Guard hooks": "LLMI-T018",
+        "W017/W018": "LLMI-T004"
+      }
+    },
+    {
+      "repo": "NVIDIA/SkillSpector",
+      "license": "Apache-2.0",
+      "last_commit": "2026-10-07",
+      "inputs": [
+        "Git repos",
+        "URLs",
+        "zip files",
+        "directories",
+        "single files (agent skills for Claude Code, Codex CLI, Gemini CLI)",
+        "MCP tool metadata within skills"
+      ],
+      "engines": [
+        "static patterns",
+        "AST",
+        "taint tracking",
+        "YARA",
+        "OSV.dev live lookup",
+        "optional LLM semantic stage"
+      ],
+      "categories": {
+        "17 categories / ~71-73 pattern IDs": [
+          "Prompt injection P1-P5,P9",
+          "Anti-refusal AR1-AR3",
+          "Data exfiltration E1-E4",
+          "Privilege escalation PE1-PE3",
+          "Supply chain SC1-SC6,SC8-SC10 (unpinned, curl|bash, obfuscation, CVE deps, abandoned, typosquatting, shipped .pyc, concealed executable, dependency source redirection)",
+          "Excessive agency EA1-EA5 (incl. external model/provider selection)",
+          "Output handling OH1-OH3",
+          "System prompt leakage P6-P8",
+          "Memory poisoning MP1-MP3",
+          "Tool misuse TM1-TM3",
+          "Rogue agent RA1-RA2 (self-modification, session persistence)",
+          "Trigger abuse TR1-TR3",
+          "Dangerous code AST1-AST9",
+          "Taint tracking TT1-TT5",
+          "YARA YR1-YR4",
+          "MCP least privilege LP1-LP4",
+          "MCP tool poisoning TP1-TP4 (hidden instructions, unicode deception, parameter description injection, description-behaviour mismatch)"
+        ]
+      },
+      "output_formats": [
+        "terminal",
+        "json",
+        "markdown",
+        "sarif"
+      ],
+      "llmi_mapping": {
+        "SC1-SC10": "LLMI-T011",
+        "SC6 typosquatting / SC10 source redirection": "LLMI-T012",
+        "TP1-TP4, TM1-TM3, LP1-LP4": "LLMI-T008",
+        "RA1 self-modification / RA2 persistence": "LLMI-T018",
+        "EA5 external provider selection": "LLMI-T016",
+        "MP1-MP3": "LLMI-T009",
+        "E2/TT3 env/credential exfil": "LLMI-T004"
+      }
+    },
+    {
+      "repo": "garagon/aguara",
+      "license": "Apache-2.0",
+      "last_commit": "2026-09-10",
+      "inputs": [
+        "agent skills and instruction files",
+        "MCP client configs (scan --auto discovery)",
+        "Claude Code .claude/settings.json and settings.local.json",
+        "npm/pnpm/pip lockfiles and package-manager policy",
+        "project code and GitHub Actions workflows"
+      ],
+      "engines": [
+        "192 YAML pattern rules in 13 categories",
+        "analyzers: ci-trust, pkgmeta, jsrisk, pyrisk, script-risk, skill-policy, skill-chain, npm/pnpm-policy, agent-policy, NLP, toxicflow, rug-pull (258 cataloged total)",
+        "malicious-package advisory check",
+        "local only, no LLM"
+      ],
+      "categories": {
+        "Prompt Injection": 18,
+        "Data Exfiltration": 16,
+        "Credential Leak": 22,
+        "MCP Attack (MCP_001..; tool description injection, tool name shadowing, resource URI manipulation, parameter schema injection, hidden tool registration, tool output interception, cross-tool leakage, manifest tampering, capability escalation, prompt cache poisoning, arbitrary MCP server execution)": 16,
+        "MCP Config (MCPCFG_001..: unpinned npx, shell metachars, env secrets, remote URL, sudo, inline code exec, docker privileged/host mount, auto-confirm)": 13,
+        "Supply Chain (SUPPLY_001-025)": "~25",
+        "External Download": 16,
+        "Command Execution": 16,
+        "Indirect Injection": 10,
+        "Third-Party Content": 10,
+        "SSRF & Cloud": 11,
+        "Unicode Attack": 10,
+        "Toxic Flow (TOXIC_001-003, TOXIC_CROSS_001-003)": 6,
+        "Agent Trust / AGENTCFG": [
+          "AGENTCFG_BROAD_ALLOW_001",
+          "AGENTCFG_BYPASS_PERMS_001",
+          "AGENTCFG_ENV_EXEC_001",
+          "AGENTCFG_HELPER_REPO_SCRIPT_001",
+          "AGENTCFG_HOOK_FETCH_EXEC_001",
+          "AGENTCFG_MCP_AUTOAPPROVE_001",
+          "AGENTCFG_PERMS_WEAK_MODE_001",
+          "AGENTCFG_SECRET_READ_ALLOW_001",
+          "AGENT_SKILL_WILDCARD_TOOLS_001",
+          "AGENT_FORCED_HELPER_RISK_001"
+        ],
+        "Rug pull": [
+          "RUGPULL_001 (stateful hash comparison of tool descriptions; CRITICAL when changed content matches dangerous patterns)"
+        ]
+      },
+      "output_formats": [
+        "terminal",
+        "json",
+        "markdown",
+        "sarif"
+      ],
+      "llmi_mapping": {
+        "AGENTCFG_* / hooks / settings.json": "LLMI-T018",
+        "MCP_* / TOXIC_*": "LLMI-T008",
+        "RUGPULL_001 / MCPCFG_001": "LLMI-T011",
+        "SUPPLY_* / package checks": "LLMI-T011, LLMI-T012",
+        "Credential Leak / AGENTCFG_SECRET_READ_ALLOW": "LLMI-T004, LLMI-T016",
+        "Unicode Attack": "LLMI-T017"
+      }
+    },
+    {
+      "repo": "splx-ai/agentic-radar",
+      "license": "Apache-2.0",
+      "last_commit": "2025-11-27",
+      "inputs": [
+        "agentic workflow source code (LangGraph, CrewAI, n8n, OpenAI Agents, AutoGen)",
+        "runtime entrypoint for test mode (OpenAI Agents only)"
+      ],
+      "engines": [
+        "static workflow graph extraction",
+        "tool -> vulnerability mapper (vulnerabilities.json, 11 mapping entries)",
+        "runtime adversarial test oracle (LLM)",
+        "prompt hardening"
+      ],
+      "categories": {
+        "Report sections": [
+          "workflow visualisation",
+          "tool identification",
+          "MCP server detection",
+          "vulnerability mapping (OWASP LLM Top 10, OWASP Agentic AI threats)"
+        ],
+        "Mapped vulns": [
+          "Prompt Injection (llm tools)",
+          "Indirect Prompt Injection (web_search, document_loader)",
+          "Arbitrary Code Execution (code_interpreter)",
+          "Unrestricted External Access / SSRF (WebBaseLoader)",
+          "RAG Poisoning (vector/graph retrievers)"
+        ],
+        "Runtime tests": [
+          "Prompt Injection",
+          "PII Leakage",
+          "Harmful Content Generation",
+          "Fake News Generation"
+        ]
+      },
+      "output_formats": [
+        "HTML report",
+        "JSON (test results)"
+      ],
+      "llmi_mapping": {
+        "Indirect Prompt Injection": "LLMI-T002",
+        "RAG Poisoning": "LLMI-T007",
+        "Arbitrary Code Execution / SSRF": "LLMI-T008",
+        "MCP server inventory": "LLMI-T011 (inventory only)"
+      }
+    },
+    {
+      "repo": "scadastrangelove/agent-audit",
+      "license": "MIT",
+      "last_commit": "2026-07-16",
+      "inputs": [
+        "local agent homes (Claude Code, Codex CLI, OpenClaw): configs, hooks, session logs",
+        "repos with skills, plugins, MCP manifests (scan-project)",
+        "cross-mode (static + session)"
+      ],
+      "engines": [
+        "573 imported normalised rules (ATR 104, Aguara-derived 180, Cisco PromptGuard 26, Gitleaks 217, NOVA 46)",
+        "10 vendored Cisco MCP YARA",
+        "native detectors",
+        "tool-pinning rug-pull tracker (stateful baseline under ~/.agent-audit/tool-pinning)",
+        "optional LLM/CLI cross-verification"
+      ],
+      "categories": {
+        "Native detector IDs": [
+          "AD-02.out-of-cwd-write",
+          "AD-03.adjacent-repo-reach",
+          "AG-02.unversioned-mcp",
+          "AG-04.destructive-without-backup",
+          "AI-04.mcp-config-mutation",
+          "AI-04.persistence-write",
+          "AI-05.agent-version-vulnerable",
+          "AI-05.invisible-unicode",
+          "AI-05.poisoned-project-config",
+          "AI-05.secrets-in-agent-config",
+          "AI-06.indirect-prompt-injection-vector",
+          "AV-01.test-touches-prod",
+          "C2.credential-exfil-chain",
+          "C2.private-key-exfil",
+          "C3.autonomy-window-context / -with-exfil-chain / -with-persistence / -with-sensitive-sink",
+          "MCP-08.poisoned-tool-description",
+          "N2.cross-server-toxic-flow",
+          "behavior.confirmation-bypass / cascading-destructive-chain / hypothetical-executed / unverified-completion-claim / user-interruptions",
+          "config.claude-code.permissive",
+          "config.codex.permissive",
+          "credential.context-bleed",
+          "probe.ssh-key-unencrypted",
+          "resource.api-storm / unbounded-loop",
+          "asamm.AD-02.autonomous-loop-with-writes / broad-action-without-approval",
+          "asamm.AI-04.persistent-identity-rewrite",
+          "asamm.AI-05.identity-redefinition-language"
+        ]
+      },
+      "output_formats": [
+        "project-findings.json/.md",
+        "clustered-findings.json",
+        "security-profile.json",
+        "files-of-concern.json",
+        "report-profiles.json",
+        "forensic report bundle"
+      ],
+      "corpus": "509-repository article-support dataset with TP/FP adjudication (Zenodo)",
+      "llmi_mapping": {
+        "AI-05.poisoned-project-config / config.*.permissive / AI-04.mcp-config-mutation / persistence-write": "LLMI-T018",
+        "MCP-08 / N2 toxic flow / tool pinning": "LLMI-T008, LLMI-T011",
+        "C2.* credential exfil": "LLMI-T004",
+        "resource.api-storm / C3 autonomy": "LLMI-T015",
+        "AI-05.invisible-unicode": "LLMI-T017"
+      }
+    },
+    {
+      "repo": "Tencent/AI-Infra-Guard",
+      "license": "Apache-2.0",
+      "last_commit": "2026-10-07",
+      "note": "tencent__AI-Infra-Guard clone is the same commit",
+      "inputs": [
+        "AI infra endpoints (fingerprinting 165 component fingerprints; ~2,440 vuln rule files over 144 components)",
+        "MCP server source or remote URL",
+        "Agent Skills (aig-skill-scan)",
+        "OpenClaw installs (ClawScan)",
+        "agent endpoints (Agent-Scan)",
+        "LLM APIs (jailbreak evaluation, API poisoning / model substitution probes)"
+      ],
+      "engines": [
+        "Go fingerprint + CVE matcher",
+        "LLM-agent-driven MCP-scan and skill-scan",
+        "jailbreak eval datasets (17 bundled sets)"
+      ],
+      "categories": {
+        "MCP rule files (15)": [
+          "cors",
+          "mcp_command_injection",
+          "mcp_credential_exfiltration",
+          "mcp_excessive_permissions",
+          "mcp_hardcoded_secrets",
+          "mcp_insecure_deserialization",
+          "mcp_missing_authentication",
+          "mcp_path_traversal",
+          "mcp_prompt_injection_tool_results",
+          "mcp_resource_prompt_injection",
+          "mcp_sql_injection",
+          "mcp_ssrf",
+          "mcp_tool_rug_pull",
+          "mcp_unsafe_deserialization",
+          "tool_poisoning"
+        ],
+        "Skill risks (SkillTrustBench T01-T09)": [
+          "T01 Skill Instruction Hijacking",
+          "T02 Memory Poisoning",
+          "T03 Remote Payload Download & Execution",
+          "T04 Embedded Malicious Code",
+          "T05 Privilege Escalation & Unauthorized Access",
+          "T06 System Persistence",
+          "T07 Tool Hijacking & Spoofing",
+          "T08 Insecure Dependencies",
+          "T09 Insecure Coding Practices"
+        ],
+        "Eval datasets": [
+          "advbench",
+          "JailBench-Tiny",
+          "JADE-db-v3.0",
+          "agentic-tool-misuse",
+          "privacy-leakage",
+          "cyberattack",
+          "CBRN-weapon",
+          "misinformation",
+          "copyright-violation",
+          "etc."
+        ]
+      },
+      "output_formats": [
+        "JSON (-o result.json)",
+        "web UI reports",
+        "API"
+      ],
+      "llmi_mapping": {
+        "mcp_tool_rug_pull / tool_poisoning / T07": "LLMI-T008, LLMI-T011",
+        "mcp_*deserialization": "LLMI-T010",
+        "infra CVE scan (vLLM, Ollama, ComfyUI, LangFlow, n8n, MLflow)": "LLMI-T011, LLMI-T016",
+        "LLM API poisoning / model substitution": "LLMI-T010",
+        "T02 memory poisoning": "LLMI-T009",
+        "T06 persistence": "LLMI-T018",
+        "jailbreak eval": "LLMI-T003"
+      }
+    },
+    {
+      "repo": "invariantlabs-ai/mcp-injection-experiments",
+      "license": "none declared",
+      "last_commit": "2025-04-10",
+      "inputs": [
+        "n/a - three proof-of-concept MCP servers (not a scanner)"
+      ],
+      "engines": [],
+      "categories": {
+        "Demonstrated attack classes": [
+          "direct tool poisoning (tool description instructs agent to read local secret/config files and pass via tool args)",
+          "tool shadowing (description alters behaviour of another trusted server's email tool)",
+          "sleeper rug pull + shadowing (tool interface changes on second load; exfil hidden beyond visible width via whitespace padding)"
+        ]
+      },
+      "output_formats": [],
+      "llmi_mapping": {
+        "tool poisoning / shadowing": "LLMI-T008",
+        "sleeper rug pull": "LLMI-T011",
+        "hidden whitespace exfil": "LLMI-T004"
+      },
+      "note": "Reference ground truth for E001/E002 (snyk), MCP_001/MCP_002/RUGPULL_001 (aguara), TP1/P9 (SkillSpector). No license file: cite, do not vendor."
+    },
+    {
+      "repo": "protectai/modelscan",
+      "license": "Apache-2.0",
+      "last_commit": "2026-02-18",
+      "inputs": [
+        "model files: Pickle family (.pkl, .pickle, joblib, dill, cloudpickle), PyTorch (.bin .pt .pth .ckpt), NumPy (.npy), Keras H5 (.h5), Keras v3 (.keras), TF SavedModel (.pb), zip/npz containers"
+      ],
+      "engines": [
+        "H5LambdaDetectScan",
+        "KerasLambdaDetectScan",
+        "SavedModelLambdaDetectScan",
+        "SavedModelTensorflowOpScan",
+        "NumpyUnsafeOpScan",
+        "PickleUnsafeOpScan",
+        "PyTorchUnsafeOpScan"
+      ],
+      "categories": {
+        "Severity-ranked unsafe globals": {
+          "CRITICAL": "builtins eval/exec/open etc., runpy, os/nt/posix, socket, subprocess, sys, operator.attrgetter, pty, pickle, bdb/pdb, shutil, asyncio",
+          "HIGH": "webbrowser, httplib, requests.api, aiohttp.client",
+          "MEDIUM": "Keras Lambda layers",
+          "HIGH (TF ops)": "ReadFile, WriteFile"
+        }
+      },
+      "output_formats": [
+        "console",
+        "json",
+        "custom reporter via settings file"
+      ],
+      "llmi_mapping": {
+        "unsafe pickle globals / Lambda layers / TF file ops": "LLMI-T010, LLMI-T011"
+      }
+    }
+  ]
+}

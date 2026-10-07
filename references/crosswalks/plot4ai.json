@@ -1,0 +1,757 @@
+{
+  "generated": "2026-10-07",
+  "provenance": "PLOT4ai/plot4ai-library",
+  "note": "Derived from shallow clones read on 2026-10-07. Names and identifiers only; descriptions are paraphrased. Discovery and test-design material, not evidence of in-the-wild activity.",
+  "plot4ai": {
+    "source": "PLOT4ai/plot4ai-library deck.json",
+    "total_threats": 138,
+    "categories": [
+      {
+        "id": 1,
+        "category": "Data & Data Governance",
+        "threat_count": 10,
+        "threats": [
+          "Data Quality",
+          "Target Leakage",
+          "Drift",
+          "Data Continuity",
+          "Update Latency",
+          "Data Legitimacy",
+          "Data Collection",
+          "Data Traceability",
+          "Copyright, IP & Legal Restrictions",
+          "Data Integrity"
+        ]
+      },
+      {
+        "id": 2,
+        "category": "Transparency & Accessibility",
+        "threat_count": 7,
+        "threats": [
+          "Explainability",
+          "Inclusivity",
+          "Consent",
+          "Perception",
+          "Learning Curve",
+          "AI Interaction Awareness",
+          "System Transparency for Effective Use"
+        ]
+      },
+      {
+        "id": 3,
+        "category": "Privacy & Data Protection",
+        "threat_count": 18,
+        "threats": [
+          "Linkability",
+          "Information Disclosure",
+          "Local Restrictions",
+          "Data Minimization",
+          "Sensitive Data",
+          "Automated Decision-Making (ADM)",
+          "Lawful Basis",
+          "Purpose Limitation",
+          "Data Subject Rights",
+          "Privacy Impact Assessment",
+          "Third-party Data Processing",
+          "Metadata",
+          "Privacy Rights",
+          "Transparent Information",
+          "Storing of User Data",
+          "Inaccurate Output",
+          "Data Transfers",
+          "Storage Limitation"
+        ]
+      },
+      {
+        "id": 4,
+        "category": "Cybersecurity",
+        "threat_count": 37,
+        "threats": [
+          "Security Testing",
+          "API & Model Interface Security",
+          "Storage Protection",
+          "Randomness Protection",
+          "Confidential Information",
+          "Insider Threats",
+          "Model Sabotage",
+          "Model Evasion",
+          "Poisoning Attacks",
+          "Model Inversion",
+          "Membership Inference",
+          "Model Stealing",
+          "DNN Attacks",
+          "Adversarial Examples",
+          "AI Supply Chain Access",
+          "Jailbreaking",
+          "Prompt Injection",
+          "Environment Unauthorized Access",
+          "System Unauthorized Access",
+          "AI Supply Chain Tools",
+          "Unsafe SQL",
+          "Remote Code Execution (RCE)",
+          "Agentic AI Interaction",
+          "Agentic AI Memory",
+          "Agentic AI Misuse of Tools",
+          "Agentic AI Hallucinations",
+          "Agentic AI Actions Traceability",
+          "Agentic AI Malicious Agent",
+          "Agentic AI Unauthorized Access",
+          "Resource Overload",
+          "Identity Spoofing & Impersonation",
+          "Misuse of AI Agents to Deceive Users",
+          "Agent Communication Tampering",
+          "File Upload",
+          "Model Serialization",
+          "Fine-tuning Attacks",
+          "RAG & Vector Databases"
+        ]
+      },
+      {
+        "id": 5,
+        "category": "Safety & Environmental Impact",
+        "threat_count": 25,
+        "threats": [
+          "Input Channel Failure",
+          "Misinformation",
+          "Interpretability",
+          "Over-reliance",
+          "Performance & Scalability",
+          "System Failure",
+          "Contextual Robustness & Goal Alignment",
+          "Benchmark Misalignment",
+          "Persuasive AI",
+          "Reward Hacking",
+          "Child Safety & Age-Appropriate Design",
+          "Malicious Use of AI",
+          "CBRNE Threats",
+          "Deepfakes & Synthetic Deception",
+          "Toxicity",
+          "Deceptive Behaviour",
+          "Infrastructure Disruption",
+          "GenAI Version Drift",
+          "Loss of Control",
+          "Climate & Disaster Resilience",
+          "Unsafe Exploration & Environmental Harm",
+          "CO2 Emissions",
+          "Data Centers Cooling Process",
+          "AI Hardware",
+          "Environmental Footprint"
+        ]
+      },
+      {
+        "id": 6,
+        "category": "Bias, Fairness & Discrimination",
+        "threat_count": 15,
+        "threats": [
+          "Deployment, Representation & Sampling Bias",
+          "Incorrect Attribution",
+          "Unfair Disproportion",
+          "Institutional Bias",
+          "Abstraction Traps",
+          "Construction Validity Bias",
+          "Historical Bias",
+          "Labeling Bias",
+          "Proxy Variables",
+          "Design Choices",
+          "Over-reliance",
+          "Popularity Bias",
+          "Diversity of Opinions",
+          "Social Division",
+          "People Categorization"
+        ]
+      },
+      {
+        "id": 7,
+        "category": "Ethics & Human Rights",
+        "threat_count": 13,
+        "threats": [
+          "Right to Work",
+          "Human Dignity",
+          "Right to Democracy",
+          "User Redress & Remedy",
+          "Right to Life",
+          "Freedom of Expression",
+          "Access to Essential Services",
+          "Human Autonomy",
+          "Freedom of Thought",
+          "Vulnerable Groups",
+          "Children’s Rights",
+          "Proportionality",
+          "Behavioral Data"
+        ]
+      },
+      {
+        "id": 8,
+        "category": "Accountability & Human Oversight",
+        "threat_count": 13,
+        "threats": [
+          "Unclear Task Definition",
+          "Stakeholders' Involvement",
+          "Training and Oversight Readiness",
+          "AI Agents’ Feedback Supervision",
+          "Oversight Capacity",
+          "Escalation Path",
+          "Defined Responsibilities",
+          "Continuous Assessment",
+          "Human Override Mechanisms",
+          "Contestability of AI Decisions",
+          "Liability Risk",
+          "Lack of Governance Practices",
+          "Shared Responsibility"
+        ]
+      }
+    ],
+    "llm_agent_security_relevant": [
+      {
+        "category": "Data & Data Governance",
+        "label": "Data Legitimacy",
+        "question": "Are all required data sources legitimate, authorized, and verified?",
+        "aitypes": [
+          "Traditional",
+          "Generative"
+        ],
+        "llmi": [
+          "LLMI-T006"
+        ]
+      },
+      {
+        "category": "Data & Data Governance",
+        "label": "Data Traceability",
+        "question": "Can we trace the provenance and lineage of the data used to train or fine-tune the AI model?",
+        "aitypes": [
+          "Traditional",
+          "Generative"
+        ],
+        "llmi": [
+          "LLMI-T006"
+        ]
+      },
+      {
+        "category": "Data & Data Governance",
+        "label": "Data Integrity",
+        "question": "Can we detect and prevent data tampering across the AI lifecycle?",
+        "aitypes": [
+          "Traditional",
+          "Generative"
+        ],
+        "llmi": [
+          "LLMI-T006"
+        ]
+      },
+      {
+        "category": "Privacy & Data Protection",
+        "label": "Information Disclosure",
+        "question": "Could the AI system infer and reveal information that a person has not explicitly shared?",
+        "aitypes": [
+          "Traditional",
+          "Generative"
+        ],
+        "llmi": [
+          "LLMI-T004"
+        ]
+      },
+      {
+        "category": "Privacy & Data Protection",
+        "label": "Storing of User Data",
+        "question": "Are we logging or storing user input data in ways that may violate privacy?",
+        "aitypes": [
+          "Traditional",
+          "Generative"
+        ],
+        "llmi": [
+          "LLMI-T004"
+        ]
+      },
+      {
+        "category": "Cybersecurity",
+        "label": "Security Testing",
+        "question": "Could we be deploying the AI system without testing for adversarial robustness and systemic vulnerabilities?",
+        "aitypes": [
+          "Traditional",
+          "Generative"
+        ],
+        "llmi": [
+          "LLMI-T001",
+          "LLMI-T003"
+        ]
+      },
+      {
+        "category": "Cybersecurity",
+        "label": "API & Model Interface Security",
+        "question": "Are our AI inference APIs and function-calling interfaces securely implemented?",
+        "aitypes": [
+          "Traditional",
+          "Generative"
+        ],
+        "llmi": [
+          "LLMI-T008",
+          "LLMI-T016"
+        ]
+      },
+      {
+        "category": "Cybersecurity",
+        "label": "Storage Protection",
+        "question": "Are training data, model output, and other sensitive AI assets securely stored?",
+        "aitypes": [
+          "Traditional",
+          "Generative"
+        ],
+        "llmi": [
+          "LLMI-T005",
+          "LLMI-T010"
+        ]
+      },
+      {
+        "category": "Cybersecurity",
+        "label": "Confidential Information",
+        "question": "Is the AI model suited for processing confidential information?",
+        "aitypes": [
+          "Traditional",
+          "Generative"
+        ],
+        "llmi": [
+          "LLMI-T004"
+        ]
+      },
+      {
+        "category": "Cybersecurity",
+        "label": "Insider Threats",
+        "question": "Have we implemented safeguards to detect and prevent insider threats to our AI systems?",
+        "aitypes": [
+          "Traditional",
+          "Generative"
+        ],
+        "llmi": [
+          "LLMI-T005",
+          "LLMI-T010"
+        ]
+      },
+      {
+        "category": "Cybersecurity",
+        "label": "Model Sabotage",
+        "question": "Have we protected our AI system against model sabotage?",
+        "aitypes": [
+          "Traditional",
+          "Generative"
+        ],
+        "llmi": [
+          "LLMI-T010",
+          "LLMI-T006"
+        ]
+      },
+      {
+        "category": "Cybersecurity",
+        "label": "Model Evasion",
+        "question": "Is our AI model resilient to evasion attacks?",
+        "aitypes": [
+          "Traditional",
+          "Generative"
+        ],
+        "llmi": [
+          "LLMI-T003"
+        ]
+      },
+      {
+        "category": "Cybersecurity",
+        "label": "Poisoning Attacks",
+        "question": "Are we protected from poisoning attacks?",
+        "aitypes": [
+          "Traditional",
+          "Generative"
+        ],
+        "llmi": [
+          "LLMI-T006"
+        ]
+      },
+      {
+        "category": "Cybersecurity",
+        "label": "Model Inversion",
+        "question": "Are we protected from model inversion attacks?",
+        "aitypes": [
+          "Traditional",
+          "Generative"
+        ],
+        "llmi": [
+          "LLMI-T004"
+        ]
+      },
+      {
+        "category": "Cybersecurity",
+        "label": "Membership Inference",
+        "question": "Are we protected from membership inference attacks?",
+        "aitypes": [
+          "Traditional",
+          "Generative"
+        ],
+        "llmi": [
+          "LLMI-T004"
+        ]
+      },
+      {
+        "category": "Cybersecurity",
+        "label": "Model Stealing",
+        "question": "Are we protected from model stealing attacks?",
+        "aitypes": [
+          "Traditional",
+          "Generative"
+        ],
+        "llmi": [
+          "LLMI-T005",
+          "LLMI-T019"
+        ]
+      },
+      {
+        "category": "Cybersecurity",
+        "label": "DNN Attacks",
+        "question": "Are we protected from reprogramming deep neural nets attacks?",
+        "aitypes": [
+          "Traditional",
+          "Generative"
+        ],
+        "llmi": [
+          "LLMI-T003"
+        ]
+      },
+      {
+        "category": "Cybersecurity",
+        "label": "Adversarial Examples",
+        "question": "Are we protected from adversarial examples?",
+        "aitypes": [
+          "Traditional",
+          "Generative"
+        ],
+        "llmi": [
+          "LLMI-T003"
+        ]
+      },
+      {
+        "category": "Cybersecurity",
+        "label": "AI Supply Chain Access",
+        "question": "Could third-party AI/ML providers compromise our training data or insert backdoors?",
+        "aitypes": [
+          "Traditional",
+          "Generative"
+        ],
+        "llmi": [
+          "LLMI-T011",
+          "LLMI-T006"
+        ]
+      },
+      {
+        "category": "Cybersecurity",
+        "label": "Jailbreaking",
+        "question": "Could the AI system be vulnerable to jailbreak techniques, allowing attackers to bypass safety restrictions?",
+        "aitypes": [
+          "Generative"
+        ],
+        "llmi": [
+          "LLMI-T003"
+        ]
+      },
+      {
+        "category": "Cybersecurity",
+        "label": "Prompt Injection",
+        "question": "Could the AI system be vulnerable to prompt injection attacks, leading to unauthorized access or manipulation?",
+        "aitypes": [
+          "Generative"
+        ],
+        "llmi": [
+          "LLMI-T001",
+          "LLMI-T002"
+        ]
+      },
+      {
+        "category": "Cybersecurity",
+        "label": "Environment Unauthorized Access",
+        "question": "Is the AI training environment secured against unauthorized access and manipulation?",
+        "aitypes": [
+          "Traditional",
+          "Generative"
+        ],
+        "llmi": [
+          "LLMI-T010",
+          "LLMI-T011"
+        ]
+      },
+      {
+        "category": "Cybersecurity",
+        "label": "System Unauthorized Access",
+        "question": "Is the deployed AI system protected from unauthorized access and misuse?",
+        "aitypes": [
+          "Traditional",
+          "Generative"
+        ],
+        "llmi": [
+          "LLMI-T016"
+        ]
+      },
+      {
+        "category": "Cybersecurity",
+        "label": "AI Supply Chain Tools",
+        "question": "Could third-party tools, plugins, or dependencies introduce vulnerabilities in our AI system?",
+        "aitypes": [
+          "Traditional",
+          "Generative"
+        ],
+        "llmi": [
+          "LLMI-T011",
+          "LLMI-T012"
+        ]
+      },
+      {
+        "category": "Cybersecurity",
+        "label": "Unsafe SQL",
+        "question": "Could the AI system generate or execute unsafe SQL queries from user input?",
+        "aitypes": [
+          "Generative"
+        ],
+        "llmi": [
+          "LLMI-T008"
+        ]
+      },
+      {
+        "category": "Cybersecurity",
+        "label": "Remote Code Execution (RCE)",
+        "question": "Could the AI system generate or execute unsafe code based on user input?",
+        "aitypes": [
+          "Generative"
+        ],
+        "llmi": [
+          "LLMI-T008",
+          "LLMI-T018"
+        ]
+      },
+      {
+        "category": "Cybersecurity",
+        "label": "Agentic AI Interaction",
+        "question": "Could autonomous AI agents access or interact with malicious web content?",
+        "aitypes": [
+          "Generative"
+        ],
+        "llmi": [
+          "LLMI-T002"
+        ]
+      },
+      {
+        "category": "Cybersecurity",
+        "label": "Agentic AI Memory",
+        "question": "Could agent memory be poisoned with malicious or misleading information?",
+        "aitypes": [
+          "Generative"
+        ],
+        "llmi": [
+          "LLMI-T009"
+        ]
+      },
+      {
+        "category": "Cybersecurity",
+        "label": "Agentic AI Misuse of Tools",
+        "question": "Could agents misuse tools or APIs they are authorized to access?",
+        "aitypes": [
+          "Generative"
+        ],
+        "llmi": [
+          "LLMI-T008"
+        ]
+      },
+      {
+        "category": "Cybersecurity",
+        "label": "Agentic AI Hallucinations",
+        "question": "Could hallucinated output from one agent propagate and mislead others in multi-agent systems?",
+        "aitypes": [
+          "Generative"
+        ],
+        "llmi": [
+          "LLMI-T015"
+        ]
+      },
+      {
+        "category": "Cybersecurity",
+        "label": "Agentic AI Actions Traceability",
+        "question": "Can we trace and audit the actions and decisions of autonomous agents in our system?",
+        "aitypes": [
+          "Generative"
+        ],
+        "llmi": [
+          "LLMI-T015"
+        ]
+      },
+      {
+        "category": "Cybersecurity",
+        "label": "Agentic AI Malicious Agent",
+        "question": "Could a compromised or malicious agent sabotage a multi-agent system?",
+        "aitypes": [
+          "Generative"
+        ],
+        "llmi": [
+          "LLMI-T015"
+        ]
+      },
+      {
+        "category": "Cybersecurity",
+        "label": "Agentic AI Unauthorized Access",
+        "question": "Could an agent gain access to functions or data beyond its intended permissions?",
+        "aitypes": [
+          "Generative"
+        ],
+        "llmi": [
+          "LLMI-T008"
+        ]
+      },
+      {
+        "category": "Cybersecurity",
+        "label": "Resource Overload",
+        "question": "Could an attacker or user intentionally overload the AI system’s resources to degrade performance or cause failures?",
+        "aitypes": [
+          "Traditional",
+          "Generative"
+        ],
+        "llmi": []
+      },
+      {
+        "category": "Cybersecurity",
+        "label": "Identity Spoofing & Impersonation",
+        "question": "Could an attacker or agent impersonate a user or AI identity to gain unauthorized influence?",
+        "aitypes": [
+          "Traditional",
+          "Generative"
+        ],
+        "llmi": [
+          "LLMI-T016"
+        ]
+      },
+      {
+        "category": "Cybersecurity",
+        "label": "Misuse of AI Agents to Deceive Users",
+        "question": "Could an agent be misused to manipulate or deceive users?",
+        "aitypes": [
+          "Traditional",
+          "Generative"
+        ],
+        "llmi": [
+          "LLMI-T014"
+        ]
+      },
+      {
+        "category": "Cybersecurity",
+        "label": "Agent Communication Tampering",
+        "question": "Could an attacker intercept or manipulate communications between agents to alter system behavior?",
+        "aitypes": [
+          "Traditional",
+          "Generative"
+        ],
+        "llmi": [
+          "LLMI-T015"
+        ]
+      },
+      {
+        "category": "Cybersecurity",
+        "label": "File Upload",
+        "question": "Could unsafe file uploads introduce security risks?",
+        "aitypes": [
+          "Traditional",
+          "Generative"
+        ],
+        "llmi": [
+          "LLMI-T002"
+        ]
+      },
+      {
+        "category": "Cybersecurity",
+        "label": "Model Serialization",
+        "question": "Could unsafe deserialization of model artifacts lead to code execution or system compromise?",
+        "aitypes": [
+          "Traditional",
+          "Generative"
+        ],
+        "llmi": [
+          "LLMI-T010",
+          "LLMI-T011"
+        ]
+      },
+      {
+        "category": "Cybersecurity",
+        "label": "Fine-tuning Attacks",
+        "question": "Could malicious fine-tuning compromise the safety or alignment of our GenAI model?",
+        "aitypes": [
+          "Generative"
+        ],
+        "llmi": [
+          "LLMI-T006",
+          "LLMI-T003"
+        ]
+      },
+      {
+        "category": "Cybersecurity",
+        "label": "RAG & Vector Databases",
+        "question": "Are we protected from vulnerabilities in vector databases and RAG pipelines?",
+        "aitypes": [
+          "Generative"
+        ],
+        "llmi": [
+          "LLMI-T007"
+        ]
+      },
+      {
+        "category": "Safety & Environmental Impact",
+        "label": "Malicious Use of AI",
+        "question": "Could the AI system be misused for malicious purposes such as disinformation, cyberattacks or warfare?",
+        "aitypes": [
+          "Traditional",
+          "Generative"
+        ],
+        "llmi": [
+          "LLMI-T013",
+          "LLMI-T014",
+          "LLMI-T015"
+        ]
+      },
+      {
+        "category": "Safety & Environmental Impact",
+        "label": "Deepfakes & Synthetic Deception",
+        "question": "Could the AI system generate or disseminate deepfakes or synthetic media that mislead users, impersonate individuals, or cause harm?",
+        "aitypes": [
+          "Generative"
+        ],
+        "llmi": [
+          "LLMI-T014"
+        ]
+      },
+      {
+        "category": "Safety & Environmental Impact",
+        "label": "GenAI Version Drift",
+        "question": "Do we monitor how version updates from third-party GenAI models can affect our system's behaviour?",
+        "aitypes": [
+          "Generative"
+        ],
+        "llmi": [
+          "LLMI-T010"
+        ]
+      },
+      {
+        "category": "Accountability & Human Oversight",
+        "label": "AI Agents’ Feedback Supervision",
+        "question": "Do we have qualified people available to supervise the behavior of AI agents and provide feedback during learning?",
+        "aitypes": [
+          "Generative"
+        ],
+        "llmi": [
+          "LLMI-T015"
+        ]
+      },
+      {
+        "category": "Accountability & Human Oversight",
+        "label": "Human Override Mechanisms",
+        "question": "Can human operators safely interrupt or override the AI system at any time?",
+        "aitypes": [
+          "Traditional",
+          "Generative"
+        ],
+        "llmi": [
+          "LLMI-T015"
+        ]
+      }
+    ],
+    "note": "Cybersecurity category (37) holds most LLM/agent threats incl. 7 \"Agentic AI *\" cards; Resource Overload maps to TC-COST-014 but has no LLMI technique. Same label \"Over-reliance\" appears in two categories."
+  }
+}

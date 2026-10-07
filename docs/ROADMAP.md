@@ -115,6 +115,17 @@ The goal is a **living AI cyber threat-intelligence platform**, not a static awe
 - [ ] stateful TAXII service
 - [x] read-only MCP v2 intelligence server
 
+## v1.2 — Ecosystem intelligence 🟡 sweep 2026-10-07
+
+- [x] Clone-verify every ecosystem repository; record last commit and licence (`scripts/verify_ecosystem.py`)
+- [x] MITRE ATLAS 2026.09 crosswalk with gap list (`references/crosswalks/atlas-crosswalk.json`)
+- [x] Seven techniques (T020–T026), 14 tests, 25 detections, 11 controls, 22 ATLAS case studies
+- [ ] Promote research-queue candidates (47) after clone-and-classify review
+- [ ] Re-verify OWASP `LLMxx:2026` and `ASIxx` IDs against `GenAI-Security-Project/GenAI-LLM-Top10`
+- [ ] Test cases for training-data exposure, fine-tune poisoning and dev-time model theft (OWASP AITG DAT-01, INF-05, INF-06)
+- [ ] Decide on held-back technique candidates: approval-gate subversion, tool-argument injection, MCP protocol abuse
+- [ ] Write rule files (Sigma / KQL) for the highest-severity new specifications (DET-AI-022, 027, 028, 029, 031)
+
 ## North star
 
 An analyst should be able to start from:
@@ -127,12 +138,17 @@ Evidence → Campaign → Technique → Test → Detection → Control → Frame
 
 …and move through the chain without leaving the project.
 
-## Proposed next (2026-10-07)
+## v1.3 — Evidence levels, regional lens and tooling 🟡 2026-10-07
 
-1. **Close the coverage gaps** reported by `python scripts/audit_graph.py`, starting with the priority gaps: a safe test for CI identity-token theft (LLMI-T011) and detections for agentic attack orchestration (LLMI-T015).
-2. **Add a maturity field to techniques** (`observed-in-the-wild`, `incident`, `research-demonstrated`, `theoretical`) so the data model carries the same distinction the ecosystem map enforces.
-3. **Verify the ecosystem automatically**: a scheduled job that checks each listed repository's archived flag and last activity through the GitHub API, plus release feeds for the start-here tools.
-4. **Export an ATT&CK Navigator and ATLAS layer** from the coverage data so SOC teams can overlay it on their own view.
-5. **Fill external mappings** for LLMI-T017 to T022 from the primary ATLAS and OWASP data.
-6. **Brazil and LATAM lens**: a regional view of AI-enabled activity, in Portuguese, linked to the existing actor and campaign records.
-
+- [x] Close every technique coverage gap: each technique has a safe test and a detection; `scripts/audit_graph.py` keeps it that way
+- [x] Derived `maturity` field on techniques, enforced by the validator
+- [x] Weekly ecosystem verification workflow combining the git check and the GitHub API check (not yet run on GitHub)
+- [x] ATT&CK Navigator layer export (`scripts/build_navigator.py`)
+- [x] Brazil and Latin America lens in Portuguese, linked to actor and campaign records
+- [x] Source `published` and record `reported` dates, with validator checks
+- [x] Explorer: deep links, CSV export, region filter, maturity and dashboard
+- [ ] External ATLAS and OWASP IDs for LLMI-T027 and LLMI-T028 (the ATLAS technique pages were unreachable from the authoring environment)
+- [ ] Link observed prompt-injection incidents to LLMI-T001 and LLMI-T002 so their maturity reflects the evidence
+- [ ] Verify the Navigator layer's ATLAS `domain` value against an ATLAS-aware Navigator build
+- [ ] Primary reports for the Brazil leads in the research queue (Zscaler, Serasa, Banco Central)
+- [ ] Evaluate SHADOW-AETHER-064 as its own record once the overlap with BREEZE COMET is resolved

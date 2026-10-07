@@ -25,11 +25,11 @@ Open threat intelligence for AI, LLM and agentic systems: actors, campaigns, att
 <!-- gen:stats:start -->
 | Actors | Campaigns | Incidents | Vulnerabilities | Techniques | Sources |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| **8** | **10** | **8** | **9** | **23** | **44** |
+| **8** | **10** | **30** | **9** | **28** | **54** |
 
 | Test cases | Detections | Controls | Frameworks | Model families | Relationships | Ecosystem repos |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| **26** | **20** | **21** | **19** | **12** | **119** | **75** |
+| **40** | **45** | **32** | **19** | **12** | **215** | **106** |
 <!-- gen:stats:end -->
 
 LLMInjection is **not a prompt dump**. Every meaningful claim carries a source grade, a confidence level, a last-verified date, framework context and a defensive angle.
@@ -49,7 +49,7 @@ LLMInjection is **not a prompt dump**. Every meaningful claim carries a source g
 | **Safe test lab** | Defensive test cases for prompt, RAG, agent, MCP and supply-chain risks | [Test cases](docs/TEST-CASES.md) · [Lab](docs/LAB.md) |
 | **Detection engineering** | Sigma, KQL, SPL, ES\|QL and YARA-L starter detections | [Detection engineering](docs/DETECTION-ENGINEERING.md) |
 | **Evidence** | Graded sources and explicit relationships behind every record | [Source grading](docs/SOURCE-GRADING.md) · [Methodology](docs/METHODOLOGY.md) |
-| **Ecosystem** | 75 related projects classified by what they can support | [Ecosystem map](docs/ECOSYSTEM.md) |
+| **Ecosystem** | Related projects classified by what they can support | [Ecosystem map](docs/ECOSYSTEM.md) |
 
 Exports: `graph.json`, GraphML, STIX 2.1, a static `/api/v1/` JSON API, monthly snapshots with entity-level diffs, and an interactive [Explorer](https://ridd1kulusc0d3r.github.io/LLmInjection/).
 
@@ -91,7 +91,21 @@ Re-fangs `hxxp` and `[.]`, drops private IPs and noisy domains, and extracts CVE
 Each section opens in place: click the arrow. Tables inside are generated from the datasets, so they never drift.
 
 <details open>
-<summary><strong>Latest update, 2026-10-07</strong> &nbsp;·&nbsp; <sub>Latin America lens, coverage gaps closed, technique maturity</sub></summary>
+<summary><strong>Latest update, 2026-10-07: ecosystem sweep</strong> &nbsp;·&nbsp; <sub>107 repositories read, ATLAS 2026.09 crosswalk</sub></summary>
+
+<br>
+
+Every related repository was cloned and read, not just listed ([sweep report](docs/ECOSYSTEM-INTELLIGENCE.md)).
+
+1. **Seven new techniques** anchored on ATLAS 2026.09: rendering exfiltration (`LLMI-T020`), tool poisoning and rug pull (`LLMI-T021`), agentic cost harvesting (`LLMI-T022`), crafted assistant links (`LLMI-T023`), exposed AI services (`LLMI-T024`), multimodal triggers (`LLMI-T025`) and inter-agent propagation (`LLMI-T026`). ATLAS coverage of generative and agentic techniques rose from 52% to 78%.
+2. **22 ATLAS case studies** joined the incident set, from LLMjacking and LAMEHUG to the Postmark MCP server and recommendation poisoning.
+3. **25 detection specifications and 14 safe-lab tests** derived from Agent Threat Rules, agent and skill scanners and the gaps in 13 red-team tools.
+4. **Verified ecosystem:** 106 entries with last commit and licence read from the repository; 47 more repositories wait in the research queue. `scripts/verify_ecosystem.py` repeats the check with git alone.
+
+</details>
+
+<details open>
+<summary><strong>Latest update, 2026-10-07: Latin America, coverage and maturity</strong> &nbsp;·&nbsp; <sub>regional lens, gaps closed, evidence levels</sub></summary>
 
 <br>
 
@@ -104,7 +118,7 @@ Each section opens in place: click the arrow. Tables inside are generated from t
 </details>
 
 <details>
-<summary><strong>Update, 2026-10-06</strong> &nbsp;·&nbsp; <sub>agent workspaces, MCP transport, autonomy at scale</sub></summary>
+<summary><strong>Previous update, 2026-10-06</strong> &nbsp;·&nbsp; <sub>agent workspaces, MCP transport, autonomy at scale</sub></summary>
 
 <br>
 
@@ -131,10 +145,10 @@ Maturity is **derived, not asserted**: `scripts/maturity.py` computes it from th
 <!-- gen:maturity:start -->
 | Maturity | Derived from | Techniques | IDs |
 |---|---|---|---|
-| `observed-in-the-wild` | Linked to a campaign, or to an incident whose status is observed | 11 | T005, T011, T012, T013, T014, T015, T016, T017, T018, T019, T023 |
-| `disclosed-vulnerability` | Linked to a vulnerability record (CVE, GHSA or malicious package) | 1 | T008 |
-| `research-demonstrated` | Linked to a research or lab incident, or mapped by a research or benchmark project | 5 | T001, T002, T003, T007, T009 |
-| `no-linked-evidence` | Nothing in this repository links to it yet. Not a claim that it is theoretical | 6 | T004, T006, T010, T020, T021, T022 |
+| `observed-in-the-wild` | Linked to a campaign, or to an incident whose status is observed | 18 | T003, T005, T008, T010, T011, T012, T013, T014, T015, T016, T017, T018, T019, T021, T023, T024, T026, T028 |
+| `disclosed-vulnerability` | Linked to a vulnerability record (CVE, GHSA or malicious package) | 0 |  |
+| `research-demonstrated` | Linked to a research or lab incident, or mapped by a research or benchmark project | 8 | T001, T002, T004, T006, T007, T009, T020, T025 |
+| `no-linked-evidence` | Nothing in this repository links to it yet. Not a claim that it is theoretical | 2 | T022, T027 |
 <!-- gen:maturity:end -->
 
 A low level means few records link to the technique so far, not that it is theoretical. For example, prompt injection is widely discussed but its maturity here is only as strong as the incidents and campaigns actually linked to it.
@@ -345,6 +359,28 @@ Real-world reporting is intentionally placed on the front page because AI securi
 | **DUSTMAKER credential stealer targeting AI coding-assistant workspaces** | malware | observed | confirmed |
 | **Multi-agent mass credential harvesting in under six hours** | intrusion | observed | confirmed |
 | **Model distillation campaigns against Google models** | model-extraction | observed | confirmed |
+| **LLM Jacking (AML.CS0030)** | atlas-incident | observed | high |
+| **Malicious Models on Hugging Face (AML.CS0031)** | atlas-incident | observed | high |
+| **Malware Prototype with Embedded Prompt Injection (AML.CS0043)** | atlas-incident | observed | high |
+| **LAMEHUG: Malware Leveraging Dynamic AI-Generated Commands (AML.CS0044)** | atlas-incident | observed | high |
+| **Code to Deploy Destructive AI Agent Discovered in Amazon Q VS Code Extension (AML.CS0047)** | atlas-incident | observed | high |
+| **Poisoned Postmark MCP Server Email Exfiltration (AML.CS0053)** | atlas-incident | observed | high |
+| **Model Distillation Campaigns Targeting Anthropic Claude (AML.CS0056)** | atlas-incident | observed | high |
+| **Storm-2139 Azure OpenAI Guardrail Bypass (AML.CS0057)** | atlas-incident | observed | high |
+| **Autonomous OpenAI Evaluation Agents Compromise Hugging Face Infrastructure (AML.CS0068)** | atlas-incident | observed | high |
+| **Threat Actor Uses a DeepSeek-Powered Hermes Agent in Langflow and n8n Exploitation Attempts (AML.CS0070)** | atlas-incident | observed | high |
+| **Multi-Agent Framework Compromises Taiwanese Government Systems (AML.CS0071)** | atlas-incident | observed | high |
+| **AI Recommendation Poisoning via Crafted AI Assistant Links (AML.CS0072)** | atlas-incident | observed | high |
+| **Morris II Worm: RAG-Based Attack (AML.CS0024)** | atlas-exercise | research | confirmed |
+| **Hacking ChatGPT's Memories with Prompt Injection (AML.CS0040)** | atlas-exercise | research | confirmed |
+| **Rules File Backdoor: Supply Chain Attack on AI Coding Assistants (AML.CS0041)** | atlas-exercise | research | confirmed |
+| **Data Exfiltration via an MCP Server used by Cursor (AML.CS0045)** | atlas-exercise | research | confirmed |
+| **Data Destruction via Indirect Prompt Injection Targeting Claude Computer-Use (AML.CS0046)** | atlas-exercise | research | confirmed |
+| **AI ClickFix: Hijacking Computer-Use Agents Using ClickFix (AML.CS0055)** | atlas-exercise | research | confirmed |
+| **EchoLeak: Zero-Click Prompt Injection Targeting M365 Copilot for Data Exfiltration (AML.CS0059)** | atlas-exercise | research | confirmed |
+| **Cross-Site Scripting via Prompt Manipulation in Lenovo AI Chatbot (AML.CS0060)** | atlas-exercise | research | confirmed |
+| **Prompt-Based Attacks Against Gemini via Calendar Invitations (AML.CS0063)** | atlas-exercise | research | confirmed |
+| **ZombieAgent: Data Exfiltration Attack on ChatGPT (AML.CS0066)** | atlas-exercise | research | confirmed |
 <!-- gen:incidents:end -->
 
 </details>
@@ -400,6 +436,20 @@ The roadmap includes adapters for **Microsoft PyRIT, NVIDIA garak, JailbreakBenc
 | `TC-DIST-018` | **Systematic Prompt Harvest Alert** | data-leakage | Verify that high-volume, templated prompting against a model endpoint is detected and rate-limited. |
 | `TC-PARAM-019` | **Model-Supplied Parameter Validation** | agentic-security | Verify that parameters produced by a model are validated outside the model before reaching an evaluator, file path or… |
 | `TC-GW-020` | **AI Gateway Key Blast Radius** | runtime-security | Verify that a leaked gateway or provider key is scoped, monitored and revocable before it can be reused at scale. |
+| `TC-OBF-021` | **Invisible-Character Instruction Smuggling** | prompt-injection | Verify that instructions hidden via Unicode tag characters, zero-width or bidi controls are normalized or flagged… |
+| `TC-MM-022` | **Image-Borne Indirect Instruction** | multimodal | Confirm that text rendered inside an uploaded image is treated as data, not instruction, by a vision-enabled assistant. |
+| `TC-MM-023` | **Audio Channel Instruction Injection** | multimodal | Check voice/speech pipelines do not elevate spoken instructions embedded in user-supplied audio. |
+| `TC-OH-024` | **Markdown Image Exfiltration via Rendering** | application-security | Ensure model output cannot cause the client to fetch attacker URLs carrying context data (render-time exfil). |
+| `TC-OH-025` | **Terminal Escape Sequence Passthrough** | application-security | Verify CLI/log surfaces neutralize ANSI/OSC control sequences emitted by the model. |
+| `TC-DOS-026` | **Reasoning Loop / Token Exhaustion Guard** | availability | Confirm per-request token, time and recursion budgets stop inputs that induce unbounded reasoning or repetition. |
+| `TC-SC-027` | **Hallucinated Package Admission Check** | supply-chain | Verify that dependencies proposed by a coding assistant are checked against an allowlisted/mirrored registry before… |
+| `TC-LEAK-028` | **Cross-Session Context Leakage** | data-leakage | Verify session/tenant isolation of conversation memory and caches. |
+| `TC-AUTHZ-029` | **Agent BOLA Object Reference Check** | agentic-security | Confirm agent tools enforce object-level authorization using the caller identity, not the model's claim. |
+| `TC-TOOL-030` | **LLM-Mediated SSRF via Fetch Tool** | agentic-security | Ensure URL-fetch tools enforce destination allowlists independent of model output. |
+| `TC-MCP-031` | **MCP Tool Description Rug Pull** | agentic-protocol | Detect tool metadata that changes after user approval and contains instruction-like text. |
+| `TC-MA-032` | **Inter-Agent Instruction Propagation** | agentic-security | Verify that output from one agent is treated as untrusted data by downstream agents and cannot self-replicate. |
+| `TC-LINK-033` | **Pre-filled Assistant Link Memory Write** | prompt-injection | Verify that a prompt delivered through an assistant deep-link cannot write persistent memory without explicit user… |
+| `TC-EXP-034` | **Unauthenticated AI Endpoint Discovery** | network-detection | Verify that model servers, agent builders and MCP endpoints in the lab perimeter require authentication and that scans… |
 | `TC-JB-035` | **Refusal Consistency Under Rephrasing** | prompt-injection | Verify that a policy-covered refusal stays consistent when the same benign-but-restricted request is rephrased… |
 | `TC-POI-036` | **Training Data Poisoning Canary** | supply-chain | Verify that a poisoned or tampered sample in a fine-tuning or retrieval-training set is detected before it changes… |
 | `TC-CI-037` | **CI Identity Token Scope Under Untrusted Steps** | supply-chain | Verify that short-lived CI identity tokens are unavailable to untrusted steps and cannot be reused outside the intended… |
@@ -458,25 +508,30 @@ Read the full model: [AI-THREAT-MODEL.md](docs/AI-THREAT-MODEL.md).
 |---|---|---|---|---|
 | `LLMI-T001` | **Direct Prompt Injection** | prompt-context | research-demonstrated | OWASP LLM, MITRE ATLAS, Google SAIF |
 | `LLMI-T002` | **Indirect Prompt Injection** | prompt-context | research-demonstrated | OWASP LLM, MITRE ATLAS, Google SAIF, CSA MAESTRO |
-| `LLMI-T003` | **Jailbreak / Safety Boundary Manipulation** | model-behavior | research-demonstrated | OWASP LLM, NIST AI 100-2e2025 |
-| `LLMI-T004` | **Sensitive Information Disclosure** | confidentiality | no-linked-evidence | OWASP LLM, Google SAIF |
+| `LLMI-T003` | **Jailbreak / Safety Boundary Manipulation** | model-behavior | observed-in-the-wild | OWASP LLM, NIST AI 100-2e2025 |
+| `LLMI-T004` | **Sensitive Information Disclosure** | confidentiality | research-demonstrated | OWASP LLM, Google SAIF, MITRE ATLAS |
 | `LLMI-T005` | **Model Extraction / Theft** | model | observed-in-the-wild | MITRE ATLAS, NIST AI 100-2e2025, Google SAIF |
-| `LLMI-T006` | **Data or Model Poisoning** | training-data | no-linked-evidence | OWASP LLM, MITRE ATLAS, NIST AI 100-2e2025, Google SAIF |
+| `LLMI-T006` | **Data or Model Poisoning** | training-data | research-demonstrated | OWASP LLM, MITRE ATLAS, NIST AI 100-2e2025, Google SAIF |
 | `LLMI-T007` | **RAG Knowledge Poisoning** | rag | research-demonstrated | OWASP LLM, CSA MAESTRO, Google SAIF |
-| `LLMI-T008` | **Agent Tool Misuse** | agentic | disclosed-vulnerability | OWASP Agentic, CSA MAESTRO, Google SAIF |
-| `LLMI-T009` | **Memory / Context Poisoning** | agentic | research-demonstrated | OWASP Agentic, CSA MAESTRO |
-| `LLMI-T010` | **Model Source Tampering** | supply-chain | no-linked-evidence | Google SAIF, MITRE ATLAS |
+| `LLMI-T008` | **Agent Tool Misuse** | agentic | observed-in-the-wild | OWASP Agentic, CSA MAESTRO, Google SAIF, MITRE ATLAS |
+| `LLMI-T009` | **Memory / Context Poisoning** | agentic | research-demonstrated | OWASP Agentic, CSA MAESTRO, MITRE ATLAS |
+| `LLMI-T010` | **Model Source Tampering** | supply-chain | observed-in-the-wild | Google SAIF, MITRE ATLAS |
 | `LLMI-T011` | **AI Software Supply Chain Compromise** | supply-chain | observed-in-the-wild | OWASP LLM, Google SAIF, CSA MAESTRO, MITRE ATT&CK |
 | `LLMI-T012` | **Coding-Agent Dependency Manipulation** | supply-chain | observed-in-the-wild | OWASP Agentic, OWASP LLM, CSA MAESTRO |
 | `LLMI-T013` | **Runtime LLM Command Generation** | ai-offensive-enabler | observed-in-the-wild | MITRE ATT&CK, MITRE ATLAS |
 | `LLMI-T014` | **AI-Assisted Reconnaissance and Social Engineering** | ai-offensive-enabler | observed-in-the-wild | MITRE ATT&CK, MITRE ATLAS |
 | `LLMI-T015` | **Agentic Attack Orchestration** | ai-autonomous-operator | observed-in-the-wild | MITRE ATT&CK, MITRE ATLAS, CSA MAESTRO |
 | `LLMI-T016` | **AI Gateway Credential Compromise** | supply-chain | observed-in-the-wild | OWASP LLM, Google SAIF, MITRE ATT&CK |
-| `LLMI-T017` | **Prompt Injection Against AI Security Scanners** | defense-evasion | observed-in-the-wild | OWASP LLM |
-| `LLMI-T018` | **AI Coding-Assistant Workspace Abuse** | agentic-supply-chain | observed-in-the-wild | CSA MAESTRO, MITRE ATLAS, OWASP LLM |
+| `LLMI-T017` | **Prompt Injection Against AI Security Scanners** | defense-evasion | observed-in-the-wild | OWASP LLM, MITRE ATLAS |
+| `LLMI-T018` | **AI Coding-Assistant Workspace Abuse** | agentic-supply-chain | observed-in-the-wild | OWASP LLM, CSA MAESTRO, MITRE ATLAS |
 | `LLMI-T019` | **Model Distillation Campaign** | model-theft | observed-in-the-wild | OWASP LLM, MITRE ATLAS |
-| `LLMI-T020` | **Improper Output Handling** | application-security | no-linked-evidence | OWASP LLM, Google SAIF |
-| `LLMI-T022` | **Resource Exhaustion and Cost Abuse** | availability | no-linked-evidence | OWASP LLM, OWASP Agentic |
+| `LLMI-T020` | **Improper Output Handling and Rendering Exfiltration** | application | research-demonstrated | MITRE ATLAS |
+| `LLMI-T021` | **Agent Tool Poisoning and Rug Pull** | agentic-supply-chain | observed-in-the-wild | MITRE ATLAS |
+| `LLMI-T022` | **Agentic Resource Consumption and Cost Harvesting** | availability | no-linked-evidence | MITRE ATLAS |
+| `LLMI-T023` | **Crafted AI Assistant Links and Recommendation Poisoning** | prompt-context | observed-in-the-wild | MITRE ATLAS |
+| `LLMI-T024` | **Exposed or Misconfigured AI Services** | infrastructure | observed-in-the-wild | MITRE ATLAS |
+| `LLMI-T025` | **Multimodal Instruction Triggers** | prompt-context | research-demonstrated | MITRE ATLAS |
+| `LLMI-T026` | **Inter-Agent Instruction Propagation** | agentic | observed-in-the-wild | MITRE ATLAS |
 | `LLMI-T027` | **Unsanctioned AI Runtime (Shadow AI)** | runtime-security | no-linked-evidence | MITRE ATT&CK, MITRE ATLAS |
 | `LLMI-T028` | **AI-Assisted Tooling Development** | offensive-enablement | observed-in-the-wild | MITRE ATLAS |
 <!-- gen:techniques:end -->
@@ -687,6 +742,31 @@ telemetry + detection
 | `DET-AI-012` | **CI Token Read From Runner Process Memory** | identity | high | specification |
 | `DET-AI-013` | **Systematic Prompt Harvesting Pattern** | data-protection | medium | specification |
 | `DET-AI-014` | **Scanner Verdict Despite Refusal** | supply-chain | high | specification |
+| `DET-AI-015` | **MCP Tool Description Changed After Approval (Rug Pull)** | mcp | high | specification |
+| `DET-AI-016` | **Cross-Server Tool Reference in MCP Description (Shadowing)** | mcp | high | specification |
+| `DET-AI-017` | **Hidden Content in Agent-Facing Metadata** | mcp | medium | specification |
+| `DET-AI-018` | **Repository Assistant Settings Grant Broad Pre-Approval** | workspace | high | specification |
+| `DET-AI-019` | **Agent Session Executes Repo Helper Script Referenced by Instruction File** | workspace | high | specification |
+| `DET-AI-020` | **Skill Installs With Remote Fetch-and-Execute or Shipped Bytecode** | supply-chain | high | specification |
+| `DET-AI-021` | **Skill Declared Capabilities Under-Report Observed Behaviour** | supply-chain | medium | specification |
+| `DET-AI-022` | **Unsafe Deserialization Import in Model Artifact** | model | critical | specification |
+| `DET-AI-023` | **Model Load Followed by Unexpected Child Process or Egress** | model | high | specification |
+| `DET-AI-024` | **Sensitive File Read Flows Into Outbound Tool Argument** | agent | high | specification |
+| `DET-AI-025` | **MCP Client Config Server Added With Inline Exec, Privileged Container or Unpinned Package** | mcp | medium | specification |
+| `DET-AI-026` | **Systematic Decision-Boundary Probing via Inference API** | inference-api | critical | specification |
+| `DET-AI-027` | **Assistant Hook Executes Before Workspace Trust** | workspace | critical | specification |
+| `DET-AI-028` | **Model-Provider Base URL Redirected by Repository Config** | workspace | critical | specification |
+| `DET-AI-029` | **Package Install Writes AI Agent Config** | supply-chain | critical | specification |
+| `DET-AI-030` | **Agent-Proposed Package With No Registry Reputation** | supply-chain | high | specification |
+| `DET-AI-031` | **Cross-Scope Memory Write** | rag-memory | critical | specification |
+| `DET-AI-032` | **Agent Runtime Launched in Unattended Auto-Approve Mode** | agent-runtime | high | specification |
+| `DET-AI-033` | **Agent Widens Own Auto-Approval Policy** | agent-runtime | high | specification |
+| `DET-AI-034` | **Rendered Model Output References External Image Host** | application | high | specification |
+| `DET-AI-035` | **Assistant Deep-Link With Persistence Clause** | email-web | medium | specification |
+| `DET-AI-036` | **Inbound Scan of AI Service Ports** | network | medium | specification |
+| `DET-AI-037` | **Agent Forwards Received Instructions to Peer Agents** | agent-runtime | high | specification |
+| `DET-AI-038` | **Hidden Instruction Text in Image or Audio Input** | multimodal | medium | specification |
+| `DET-AI-039` | **Reasoning or Tool-Loop Cost Spike Per Session** | availability | medium | specification |
 | `DET-AI-040` | **Policy Deviation After Untrusted Content Ingestion** | agent-runtime | high | specification |
 | `DET-AI-041` | **Repeated Refusal-Bypass Sequence** | application | medium | specification |
 | `DET-AI-042` | **Training Data Provenance Drift** | supply-chain | high | specification |
@@ -720,6 +800,17 @@ telemetry + detection
 | `CTRL-SECRET-ISOLATION` | **Secret Isolation** | identity |
 | `CTRL-ACTION-BUDGET` | **Agent Action and Resource Budgets** | availability |
 | `CTRL-AGENT-TELEMETRY` | **Agent Decision and Action Telemetry** | observability |
+| `CTRL-IO-GUARDRAIL` | **Input/Output Injection & Policy Classifier** | prompt-context |
+| `CTRL-CONTEXT-CANARY` | **Privileged-Context Canary Tokens** | observability |
+| `CTRL-PRIVILEGE-SEPARATED-LLM` | **Privileged / Quarantined LLM Separation** | agentic |
+| `CTRL-DATAFLOW-TAINT` | **Data-Flow Provenance and Taint Policy** | authorization |
+| `CTRL-TASK-ALIGNMENT-CHECK` | **Task-Alignment Verification of Agent Actions** | agentic |
+| `CTRL-INPUT-TRANSFORM` | **Untrusted Input Transformation and Spotlighting** | prompt-context |
+| `CTRL-STRUCTURED-OUTPUT` | **Typed / Templated Model Output** | application |
+| `CTRL-MODEL-ROBUSTNESS-EVAL` | **Model Injection-Robustness Selection and Evaluation** | governance |
+| `CTRL-MCP-TOOL-PINNING` | **Tool Definition Pinning** | mcp |
+| `CTRL-AI-SERVICE-EXPOSURE` | **AI Service Exposure Management** | infrastructure |
+| `CTRL-PREFILL-LINK-POLICY` | **Pre-filled Prompt and Memory Write Policy** | memory |
 | `CTRL-EXEC-POLICY` | **Script and Unknown Binary Execution Policy** | endpoint |
 <!-- gen:controls:end -->
 
@@ -779,10 +870,10 @@ Every intelligence item should answer:
 <!-- gen:source-grades:start -->
 | Grade | Class | Sources |
 |---|---|---|
-| **A** | Primary or authoritative | 39 |
-| **B** | Strong secondary | 3 |
+| **A** | Primary or authoritative | 40 |
+| **B** | Strong secondary | 7 |
 | **C** | Reputable press | 2 |
-| **D** | Community | 0 |
+| **D** | Community | 5 |
 | **E** | Unsupported | 0 |
 <!-- gen:source-grades:end -->
 
@@ -807,43 +898,44 @@ Community corpora are discovery sources, **not self-authenticating intelligence*
 
 See [REFERENCE-LIBRARY.md](references/REFERENCE-LIBRARY.md), [BENCHMARKS.md](docs/BENCHMARKS.md), [AI-SUPPLY-CHAIN.md](docs/AI-SUPPLY-CHAIN.md) and [community-corpora.md](references/community-corpora.md).
 
-### Ecosystem map: 75 related projects
+### Ecosystem map: related projects
 
 The [ecosystem map](docs/ECOSYSTEM.md) classifies related repositories by **what each can honestly support**, so observed incidents, techniques demonstrated in research and lab examples never blur together. These entries inform taxonomy, tests, detections and controls. They never create an actor, campaign or incident record, and the validator rejects any entry that claims to support attribution.
 
 <!-- gen:eco-classes:start -->
 | Evidence class | What it is | Can support | Cannot support | Entries |
 |---|---|---|---|---|
-| `framework-data` | Taxonomies and knowledge bases | Technique definitions and framework mappings | Observed activity | 6 |
+| `framework-data` | Taxonomies and knowledge bases | Technique definitions and framework mappings | Observed activity | 7 |
 | `incident-data` | Incident databases | Incident references, citing the primary report | Actor attribution or cyber campaigns (scope is broader than cybersecurity) | 1 |
-| `detection-content` | Community detection rules | Detection ideas and telemetry requirements | Proof of in-the-wild behavior | 1 |
-| `curated-list` | Curated lists | Discovering sources and tools | Any claim on their own | 16 |
-| `assessment-tool` | Scanners and red-team tools | Test design and control evaluation | Effectiveness against current models | 18 |
+| `detection-content` | Community detection rules | Detection ideas and telemetry requirements | Proof of in-the-wild behavior | 3 |
+| `curated-list` | Curated lists | Discovering sources and tools | Any claim on their own | 22 |
+| `assessment-tool` | Scanners and red-team tools | Test design and control evaluation | Effectiveness against current models | 26 |
 | `benchmark` | Benchmarks and environments | Reproducible tests and coverage measurement | Real-world prevalence | 8 |
-| `research-technique` | Attack research code | Techniques demonstrated in research | Use in the wild | 12 |
-| `defence-tool` | Defences and guardrails | Control design and comparison | Proven protection | 7 |
-| `lab-exercise` | Training labs | Analyst training and onboarding | Threat intelligence | 4 |
-| `prompt-corpus` | Prompt corpora and datasets | Test inspiration and measurement | Threat intelligence or attribution | 2 |
+| `research-technique` | Attack research code | Techniques demonstrated in research | Use in the wild | 15 |
+| `defence-tool` | Defences and guardrails | Control design and comparison | Proven protection | 10 |
+| `lab-exercise` | Training labs | Analyst training and onboarding | Threat intelligence | 7 |
+| `prompt-corpus` | Prompt corpora and datasets | Test inspiration and measurement | Threat intelligence or attribution | 7 |
 <!-- gen:eco-classes:end -->
 
 #### Start here
 
 <!-- gen:eco-start:start -->
-| Repository | Evidence class | Techniques | Scope |
-|---|---|---|---|
-| [mitre-atlas/atlas-data](https://github.com/mitre-atlas/atlas-data) | `framework-data` | none | Data for tactics, techniques and case studies of threats against AI systems. · **start here** |
-| [PLOT4ai/plot4ai-library](https://github.com/PLOT4ai/plot4ai-library) | `framework-data` | none | Threat library for AI threat modeling. · **start here** |
-| [Arcanum-Sec/arc_pi_taxonomy](https://github.com/Arcanum-Sec/arc_pi_taxonomy) | `framework-data` | `LLMI-T001`, `LLMI-T002` | Taxonomy specialised in prompt injection. · **start here** |
-| [responsible-ai-collaborative/aiid](https://github.com/responsible-ai-collaborative/aiid) | `incident-data` | none | AI Incident Database: incidents and harms involving AI, broader than cybersecurity. · **start here** |
-| [Agent-Threat-Rule/agent-threat-rules](https://github.com/Agent-Threat-Rule/agent-threat-rules) | `detection-content` | `LLMI-T001`, `LLMI-T002`, `LLMI-T008` | Detection rules for agent threats, including injection, tools and MCP. · **start here** |
-| [tldrsec/prompt-injection-defenses](https://github.com/tldrsec/prompt-injection-defenses) | `curated-list` | `LLMI-T001`, `LLMI-T002` | Practical and proposed defences against prompt injection. · **start here** |
-| [ShenaoW/awesome-llm-supply-chain-security](https://github.com/ShenaoW/awesome-llm-supply-chain-security) | `curated-list` | `LLMI-T011` | LLM supply chain: papers, reports and CVEs. · **start here** |
-| [NVIDIA/garak](https://github.com/NVIDIA/garak) | `assessment-tool` | none | LLM vulnerability scanner. · **start here** |
-| [microsoft/PyRIT](https://github.com/microsoft/PyRIT) | `assessment-tool` | none | Framework for identifying risks in generative AI systems. · **start here** |
-| [ethz-spylab/agentdojo](https://github.com/ethz-spylab/agentdojo) | `benchmark` | `LLMI-T002`, `LLMI-T008` | Environment for evaluating attacks and defences of LLM agents. · **start here** |
+| Repository | Evidence class | Techniques | Last commit · License | Scope |
+|---|---|---|---|---|
+| [mitre-atlas/atlas-data](https://github.com/mitre-atlas/atlas-data) | `framework-data` | none | 2026-09-10 · Apache-2.0 | Data for tactics, techniques and case studies of threats against AI systems. · **start here** |
+| [PLOT4ai/plot4ai-library](https://github.com/PLOT4ai/plot4ai-library) | `framework-data` | none | 2025-06-20 · CC | Threat library for AI threat modeling. · **start here** |
+| [Arcanum-Sec/arc_pi_taxonomy](https://github.com/Arcanum-Sec/arc_pi_taxonomy) | `framework-data` | `LLMI-T001`, `LLMI-T002`, `LLMI-T003` | 2026-06-29 · CC | Taxonomy specialised in prompt injection. · **start here** |
+| [responsible-ai-collaborative/aiid](https://github.com/responsible-ai-collaborative/aiid) | `incident-data` | none | 2026-10-05 · Apache-2.0 | AI Incident Database: incidents and harms involving AI, broader than cybersecurity. · **start here** |
+| [Agent-Threat-Rule/agent-threat-rules](https://github.com/Agent-Threat-Rule/agent-threat-rules) | `detection-content` | `LLMI-T001`, `LLMI-T002`, `LLMI-T004`, `LLMI-T008`, `LLMI-T009`, `LLMI-T011`, `LLMI-T018`, `LLMI-T021` | 2026-10-07 · MIT | Detection rules for agent threats, including injection, tools and MCP. · **start here** |
+| [tldrsec/prompt-injection-defenses](https://github.com/tldrsec/prompt-injection-defenses) | `curated-list` | `LLMI-T001`, `LLMI-T002` | 2025-02-22 · none-found | Practical and proposed defences against prompt injection. · **start here** |
+| [ShenaoW/awesome-llm-supply-chain-security](https://github.com/ShenaoW/awesome-llm-supply-chain-security) | `curated-list` | `LLMI-T011` | 2025-01-20 · CC | LLM supply chain: papers, reports and CVEs. · **start here** |
+| [NVIDIA/garak](https://github.com/NVIDIA/garak) | `assessment-tool` | `LLMI-T001`, `LLMI-T002`, `LLMI-T003`, `LLMI-T004`, `LLMI-T005`, `LLMI-T008`, `LLMI-T012`, `LLMI-T013`, `LLMI-T014`, `LLMI-T016`, `LLMI-T017` | 2026-10-07 · Apache-2.0 | LLM vulnerability scanner. · **start here** |
+| [microsoft/PyRIT](https://github.com/microsoft/PyRIT) | `assessment-tool` | `LLMI-T001`, `LLMI-T002`, `LLMI-T003`, `LLMI-T004`, `LLMI-T008`, `LLMI-T013`, `LLMI-T014` | 2026-10-07 · MIT | Framework for identifying risks in generative AI systems. · **start here** |
+| [ethz-spylab/agentdojo](https://github.com/ethz-spylab/agentdojo) | `benchmark` | `LLMI-T001`, `LLMI-T002`, `LLMI-T004`, `LLMI-T008` | 2026-06-02 · MIT | Environment for evaluating attacks and defences of LLM agents. · **start here** |
+| [OWASP/www-project-ai-testing-guide](https://github.com/OWASP/www-project-ai-testing-guide) | `framework-data` | none | 2026-06-01 · other | OWASP AI Testing Guide: 32 test procedures across application, data, infrastructure and model layers. · **start here** |
 <!-- gen:eco-start:end -->
 
-All 75 entries, by section: [docs/ECOSYSTEM.md](docs/ECOSYSTEM.md). Provenance: supplied by the maintainer's research on 2026-10-07; repository state is recorded as reported and not independently verified.
+All entries, by section: [docs/ECOSYSTEM.md](docs/ECOSYSTEM.md). Provenance: maintainer research, cross-checked by shallow clone on 2026-10-07 (reachability, last commit, licence). The GitHub archive flag is not visible to git and is added by `scripts/check_ecosystem.py`.
 
 </details>
 
@@ -879,7 +971,8 @@ make readme     # refresh generated tables in README.md and docs/ECOSYSTEM.md
 make charts     # refresh the SVG charts in assets/
 python scripts/audit_graph.py   # list orphaned records and coverage gaps
 make navigator  # export ATT&CK Navigator layers (also in make build)
-python scripts/check_ecosystem.py   # verify the 75 ecosystem repositories against the GitHub API
+python scripts/verify_ecosystem.py   # re-verify ecosystem repositories by shallow clone
+python scripts/check_ecosystem.py    # add the GitHub archive flag and renames (API)
 ```
 
 The graph audit separates **hard findings** (a test, detection or control linked to nothing, which fails CI) from **coverage gaps** (a technique with no test or detection, which is the work queue).

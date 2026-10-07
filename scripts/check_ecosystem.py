@@ -1,13 +1,20 @@
 #!/usr/bin/env python3
-"""Verify the ecosystem map against the GitHub API (stdlib only).
+"""Add GitHub-API-only signals to the ecosystem verification block (stdlib only).
 
-For each entry in data/ecosystem.json this records whether the repository still exists, whether it
-is archived, when it was last pushed to, and whether it was renamed. It never changes an entry's
-evidence class, section or technique mapping: those are analyst decisions.
+scripts/verify_ecosystem.py clones each repository with git and records reachability, last commit and
+licence, but the GitHub archive flag and renames are not visible to git. This script asks the GitHub API
+for exactly those two things and stores them in each entry's `verification` block:
 
-    python scripts/check_ecosystem.py                       # report only
-    python scripts/check_ecosystem.py --write               # also update verified_at, last_push, status
-    python scripts/check_ecosystem.py --fail-on-drift       # exit 1 if a verified state differs from the recorded one
+    archived      the GitHub archive flag
+    renamed_to    set when the API reports a different owner/name
+    api_checked   the date of this check
+
+It never changes an entry's status, evidence class, section or technique mapping: those are analyst
+decisions. It reports drift (for example "listed" but archived) so an analyst can decide.
+
+    python scripts/check_ecosystem.py                  # report only
+    python scripts/check_ecosystem.py --write          # also update verification blocks
+    python scripts/check_ecosystem.py --fail-on-drift  # exit 1 when any drift is found
 
 Set GITHUB_TOKEN to raise the API rate limit from 60 to 5000 requests per hour.
 """
@@ -57,67 +64,66 @@ def fetch_repo(url: str) -> dict[str, Any]:
         raise
 
 
-def check_entry(entry: dict[str, Any], fetch: Fetcher, today: str) -> dict[str, Any]:
-    """Return the verified fields for one entry."""
+def check_entry(entry: dict[str, Any], fetch: Fetcher, today: str) -> dict[str, Any] | None:
+    """Return the API-only fields for one entry, or None when the repository was not found."""
     try:
         repo = fetch(API.format(owner=entry["owner"], name=entry["name"]))
     except NotFound:
-        return {"status": "not-found", "verified_at": today}
-    result: dict[str, Any] = {
-        "status": "archived-verified" if repo.get("archived") else "active-verified",
-        "verified_at": today,
-        "last_push": (repo.get("pushed_at") or "")[:10] or None,
-    }
+        return None
+    fields: dict[str, Any] = {"archived": bool(repo.get("archived")), "api_checked": today}
     full = repo.get("full_name", "")
     if full and full.lower() != f"{entry['owner']}/{entry['name']}".lower():
-        result["renamed_to"] = full
-    return result
+        fields["renamed_to"] = full
+    return fields
 
 
-def drift(entry: dict[str, Any], verified: dict[str, Any]) -> str | None:
-    """Describe a meaningful change between the recorded and the verified state."""
-    old, new = entry.get("status"), verified["status"]
-    if new == "not-found":
-        return "repository not found"
-    if new == "archived-verified" and old != "archived-verified":
-        return "now archived" if old != "archived-reported" else "archived, as previously reported (now verified)"
-    if old in ("archived-verified", "archived-reported") and new == "active-verified":
-        return "recorded as archived but active"
-    if "renamed_to" in verified:
-        return f"renamed to {verified['renamed_to']}"
+def drift(entry: dict[str, Any], fields: dict[str, Any] | None) -> str | None:
+    """Describe a meaningful difference between the recorded state and the API."""
+    if fields is None:
+        return "not found on GitHub"
+    status = entry.get("status")
+    if fields["archived"] and status != "archived-reported":
+        return "archived on GitHub but not recorded as archived"
+    if not fields["archived"] and status == "archived-reported":
+        return "recorded as archived but active on GitHub"
+    if "renamed_to" in fields:
+        return f"renamed to {fields['renamed_to']}"
     return None
 
 
 def run(entries: list[dict[str, Any]], fetch: Fetcher = fetch_repo, today: str | None = None) -> tuple[list[dict], list[str]]:
     today = today or datetime.now(UTC).date().isoformat()
-    updated, notes = [], []
+    updated: list[dict] = []
+    notes: list[str] = []
     for entry in entries:
         try:
-            verified = check_entry(entry, fetch, today)
+            fields = check_entry(entry, fetch, today)
         except RateLimited:
             notes.append(f"{entry['id']}: rate limited, stopped; set GITHUB_TOKEN and re-run")
             updated.extend(entries[len(updated):])
             break
-        change = drift(entry, verified)
+        change = drift(entry, fields)
         if change:
             notes.append(f"{entry['id']} {entry['owner']}/{entry['name']}: {change}")
-        updated.append({**entry, **verified})
+        merged = {**entry}
+        if fields is not None:
+            merged["verification"] = {**entry.get("verification", {}), **fields}
+        updated.append(merged)
     return updated, notes
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("--write", action="store_true", help="update data/ecosystem.json with verified fields")
+    parser.add_argument("--write", action="store_true", help="update verification blocks in data/ecosystem.json")
     parser.add_argument("--fail-on-drift", action="store_true")
     parser.add_argument("--report", help="write a Markdown report to this path")
     args = parser.parse_args()
     entries = load_data("ecosystem")
     updated, notes = run(entries)
-    verified = sum(1 for e in updated if e.get("verified_at") and e.get("status", "").endswith("verified"))
-    lines = [f"Ecosystem check: {len(entries)} entries, {verified} verified, {len(notes)} finding(s)"] + [f"- {n}" for n in notes]
+    lines = [f"Ecosystem API check: {len(entries)} entries, {len(notes)} finding(s)"] + [f"- {n}" for n in notes]
     print("\n".join(lines))
     if args.report:
-        Path(args.report).write_text("# Ecosystem verification\n\n" + "\n".join(lines) + "\n", encoding="utf-8")
+        Path(args.report).write_text("# Ecosystem API check\n\n" + "\n".join(lines) + "\n", encoding="utf-8")
     if args.write:
         write_json(DATA / "ecosystem.json", updated)
     return 1 if args.fail_on_drift and notes else 0

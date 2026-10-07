@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1312" height="802" viewBox="0 0 1312 802" role="img" aria-labelledby="t">
+<svg xmlns="http://www.w3.org/2000/svg" width="1312" height="932" viewBox="0 0 1312 932" role="img" aria-labelledby="t">
 <title id="t">Technique coverage matrix: evidence, tests, detections, controls and tools per technique</title>
-<rect width="1312" height="802" fill="#f3f0e8"/>
-<rect x=".5" y=".5" width="1311" height="801" fill="none" stroke="#17150f"/>
+<rect width="1312" height="932" fill="#f3f0e8"/>
+<rect x=".5" y=".5" width="1311" height="931" fill="none" stroke="#17150f"/>
 <text x="40" y="44" font-family="Georgia,serif" font-size="22" font-weight="700" fill="#17150f">Technique coverage</text>
 <text x="40" y="64" font-family="'Courier New',monospace" font-size="11" fill="#7b766a">Evidence, tests, detections, controls and tools per technique.</text>
-<text x="1272" y="44" text-anchor="end" font-family="'Courier New',monospace" font-size="22" font-weight="700" fill="#17150f">18<tspan font-size="12" fill="#7b766a"> / 23 fully covered</tspan></text>
+<text x="1272" y="44" text-anchor="end" font-family="'Courier New',monospace" font-size="22" font-weight="700" fill="#17150f">24<tspan font-size="12" fill="#7b766a"> / 28 fully covered</tspan></text>
 <text x="1272" y="64" text-anchor="end" font-family="'Courier New',monospace" font-size="11" fill="#4a463c">Every technique with linked evidence has a test and a detection</text>
 <text x="478.0" y="78" text-anchor="middle" font-family="'Courier New',monospace" font-size="9" font-weight="700" letter-spacing="2" fill="#7b766a">THREAT</text>
 <line x1="438" x2="518" y1="84" y2="84" stroke="#17150f" stroke-width="1.5"/>
@@ -22,66 +22,66 @@
 <text x="40" y="129" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T001  </tspan>Direct Prompt Injection</text>
 <rect x="461.0" y="115" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <text x="478.0" y="130" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
-<rect x="553.0" y="115" width="34" height="20" fill="#e9b394"/>
-<text x="570.0" y="130" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
-<rect x="645.0" y="115" width="34" height="20" fill="#e9b394"/>
-<text x="662.0" y="130" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
-<rect x="737.0" y="115" width="34" height="20" fill="#e9b394"/>
-<text x="754.0" y="130" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
+<rect x="553.0" y="115" width="34" height="20" fill="#d4804f"/>
+<text x="570.0" y="130" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
+<rect x="645.0" y="115" width="34" height="20" fill="#d4804f"/>
+<text x="662.0" y="130" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
+<rect x="737.0" y="115" width="34" height="20" fill="#d4804f"/>
+<text x="754.0" y="130" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
 <rect x="829.0" y="115" width="34" height="20" fill="#7c2406"/>
-<text x="846.0" y="130" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">14</text>
+<text x="846.0" y="130" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">45</text>
 <text x="910" y="129" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#7b766a">RESEARCH DEMONSTRATED</text>
 <line x1="40" x2="1272" y1="138" y2="138" stroke="#e0dacb"/>
 <text x="40" y="155" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T002  </tspan>Indirect Prompt Injection</text>
-<rect x="461.0" y="141" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
-<text x="478.0" y="156" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
+<rect x="461.0" y="141" width="34" height="20" fill="#7c2406"/>
+<text x="478.0" y="156" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">4</text>
 <rect x="553.0" y="141" width="34" height="20" fill="#e9b394"/>
 <text x="570.0" y="156" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
-<rect x="645.0" y="141" width="34" height="20" fill="#e9b394"/>
-<text x="662.0" y="156" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
-<rect x="737.0" y="141" width="34" height="20" fill="#e9b394"/>
-<text x="754.0" y="156" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
+<rect x="645.0" y="141" width="34" height="20" fill="#d4804f"/>
+<text x="662.0" y="156" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
+<rect x="737.0" y="141" width="34" height="20" fill="#b43c0e"/>
+<text x="754.0" y="156" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">3</text>
 <rect x="829.0" y="141" width="34" height="20" fill="#7c2406"/>
-<text x="846.0" y="156" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">16</text>
+<text x="846.0" y="156" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">42</text>
 <text x="910" y="155" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#7b766a">RESEARCH DEMONSTRATED</text>
 <line x1="40" x2="1272" y1="164" y2="164" stroke="#e0dacb"/>
 <text x="40" y="181" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T003  </tspan>Jailbreak / Safety Boundary Manipulation</text>
-<rect x="461.0" y="167" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
-<text x="478.0" y="182" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
+<rect x="461.0" y="167" width="34" height="20" fill="#e9b394"/>
+<text x="478.0" y="182" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
 <rect x="553.0" y="167" width="34" height="20" fill="#e9b394"/>
 <text x="570.0" y="182" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
 <rect x="645.0" y="167" width="34" height="20" fill="#e9b394"/>
 <text x="662.0" y="182" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
-<rect x="737.0" y="167" width="34" height="20" fill="#e9b394"/>
-<text x="754.0" y="182" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
+<rect x="737.0" y="167" width="34" height="20" fill="#d4804f"/>
+<text x="754.0" y="182" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
 <rect x="829.0" y="167" width="34" height="20" fill="#7c2406"/>
-<text x="846.0" y="182" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">16</text>
-<text x="910" y="181" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#7b766a">RESEARCH DEMONSTRATED</text>
+<text x="846.0" y="182" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">34</text>
+<text x="910" y="181" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#b43c0e">OBSERVED IN THE WILD</text>
 <line x1="40" x2="1272" y1="190" y2="190" stroke="#e0dacb"/>
 <text x="40" y="207" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T004  </tspan>Sensitive Information Disclosure</text>
-<rect x="461.0" y="193" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
-<text x="478.0" y="208" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
-<rect x="553.0" y="193" width="34" height="20" fill="#e9b394"/>
-<text x="570.0" y="208" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
+<rect x="461.0" y="193" width="34" height="20" fill="#e9b394"/>
+<text x="478.0" y="208" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
+<rect x="553.0" y="193" width="34" height="20" fill="#d4804f"/>
+<text x="570.0" y="208" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
 <rect x="645.0" y="193" width="34" height="20" fill="#e9b394"/>
 <text x="662.0" y="208" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
-<rect x="737.0" y="193" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
-<text x="754.0" y="208" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
-<rect x="829.0" y="193" width="34" height="20" fill="#b43c0e"/>
-<text x="846.0" y="208" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">3</text>
-<text x="910" y="207" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#7b766a">NO LINKED EVIDENCE</text>
+<rect x="737.0" y="193" width="34" height="20" fill="#e9b394"/>
+<text x="754.0" y="208" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
+<rect x="829.0" y="193" width="34" height="20" fill="#7c2406"/>
+<text x="846.0" y="208" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">29</text>
+<text x="910" y="207" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#7b766a">RESEARCH DEMONSTRATED</text>
 <line x1="40" x2="1272" y1="216" y2="216" stroke="#e0dacb"/>
 <text x="40" y="233" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T005  </tspan>Model Extraction / Theft</text>
 <rect x="461.0" y="219" width="34" height="20" fill="#e9b394"/>
 <text x="478.0" y="234" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
 <rect x="553.0" y="219" width="34" height="20" fill="#e9b394"/>
 <text x="570.0" y="234" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
-<rect x="645.0" y="219" width="34" height="20" fill="#e9b394"/>
-<text x="662.0" y="234" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
+<rect x="645.0" y="219" width="34" height="20" fill="#d4804f"/>
+<text x="662.0" y="234" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
 <rect x="737.0" y="219" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <text x="754.0" y="234" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
-<rect x="829.0" y="219" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
-<text x="846.0" y="234" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
+<rect x="829.0" y="219" width="34" height="20" fill="#7c2406"/>
+<text x="846.0" y="234" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">4</text>
 <text x="910" y="233" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#b43c0e">OBSERVED IN THE WILD</text>
 <line x1="40" x2="1272" y1="242" y2="242" stroke="#e0dacb"/>
 <text x="40" y="259" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T006  </tspan>Data or Model Poisoning</text>
@@ -93,99 +93,99 @@
 <text x="662.0" y="260" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
 <rect x="737.0" y="245" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <text x="754.0" y="260" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
-<rect x="829.0" y="245" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
-<text x="846.0" y="260" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
-<text x="910" y="259" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#7b766a">NO LINKED EVIDENCE</text>
+<rect x="829.0" y="245" width="34" height="20" fill="#7c2406"/>
+<text x="846.0" y="260" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">5</text>
+<text x="910" y="259" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#7b766a">RESEARCH DEMONSTRATED</text>
 <line x1="40" x2="1272" y1="268" y2="268" stroke="#e0dacb"/>
 <text x="40" y="285" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T007  </tspan>RAG Knowledge Poisoning</text>
-<rect x="461.0" y="271" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
-<text x="478.0" y="286" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
+<rect x="461.0" y="271" width="34" height="20" fill="#e9b394"/>
+<text x="478.0" y="286" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
 <rect x="553.0" y="271" width="34" height="20" fill="#e9b394"/>
 <text x="570.0" y="286" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
 <rect x="645.0" y="271" width="34" height="20" fill="#e9b394"/>
 <text x="662.0" y="286" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
 <rect x="737.0" y="271" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <text x="754.0" y="286" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
-<rect x="829.0" y="271" width="34" height="20" fill="#e9b394"/>
-<text x="846.0" y="286" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
+<rect x="829.0" y="271" width="34" height="20" fill="#7c2406"/>
+<text x="846.0" y="286" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">10</text>
 <text x="910" y="285" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#7b766a">RESEARCH DEMONSTRATED</text>
 <line x1="40" x2="1272" y1="294" y2="294" stroke="#e0dacb"/>
 <text x="40" y="311" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T008  </tspan>Agent Tool Misuse</text>
-<rect x="461.0" y="297" width="34" height="20" fill="#b43c0e"/>
-<text x="478.0" y="312" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">3</text>
+<rect x="461.0" y="297" width="34" height="20" fill="#7c2406"/>
+<text x="478.0" y="312" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">8</text>
 <rect x="553.0" y="297" width="34" height="20" fill="#7c2406"/>
-<text x="570.0" y="312" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">4</text>
-<rect x="645.0" y="297" width="34" height="20" fill="#d4804f"/>
-<text x="662.0" y="312" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
+<text x="570.0" y="312" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">6</text>
+<rect x="645.0" y="297" width="34" height="20" fill="#b43c0e"/>
+<text x="662.0" y="312" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">3</text>
 <rect x="737.0" y="297" width="34" height="20" fill="#d4804f"/>
 <text x="754.0" y="312" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
 <rect x="829.0" y="297" width="34" height="20" fill="#7c2406"/>
-<text x="846.0" y="312" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">12</text>
-<text x="910" y="311" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#7b766a">DISCLOSED VULNERABILITY</text>
+<text x="846.0" y="312" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">26</text>
+<text x="910" y="311" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#b43c0e">OBSERVED IN THE WILD</text>
 <line x1="40" x2="1272" y1="320" y2="320" stroke="#e0dacb"/>
 <text x="40" y="337" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T009  </tspan>Memory / Context Poisoning</text>
-<rect x="461.0" y="323" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
-<text x="478.0" y="338" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
+<rect x="461.0" y="323" width="34" height="20" fill="#d4804f"/>
+<text x="478.0" y="338" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
 <rect x="553.0" y="323" width="34" height="20" fill="#e9b394"/>
 <text x="570.0" y="338" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
-<rect x="645.0" y="323" width="34" height="20" fill="#e9b394"/>
-<text x="662.0" y="338" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
+<rect x="645.0" y="323" width="34" height="20" fill="#d4804f"/>
+<text x="662.0" y="338" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
 <rect x="737.0" y="323" width="34" height="20" fill="#e9b394"/>
 <text x="754.0" y="338" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
-<rect x="829.0" y="323" width="34" height="20" fill="#e9b394"/>
-<text x="846.0" y="338" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
+<rect x="829.0" y="323" width="34" height="20" fill="#7c2406"/>
+<text x="846.0" y="338" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">9</text>
 <text x="910" y="337" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#7b766a">RESEARCH DEMONSTRATED</text>
 <line x1="40" x2="1272" y1="346" y2="346" stroke="#e0dacb"/>
 <text x="40" y="363" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T010  </tspan>Model Source Tampering</text>
-<rect x="461.0" y="349" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
-<text x="478.0" y="364" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
+<rect x="461.0" y="349" width="34" height="20" fill="#e9b394"/>
+<text x="478.0" y="364" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
 <rect x="553.0" y="349" width="34" height="20" fill="#e9b394"/>
 <text x="570.0" y="364" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
-<rect x="645.0" y="349" width="34" height="20" fill="#e9b394"/>
-<text x="662.0" y="364" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
+<rect x="645.0" y="349" width="34" height="20" fill="#b43c0e"/>
+<text x="662.0" y="364" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">3</text>
 <rect x="737.0" y="349" width="34" height="20" fill="#d4804f"/>
 <text x="754.0" y="364" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
-<rect x="829.0" y="349" width="34" height="20" fill="#e9b394"/>
-<text x="846.0" y="364" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
-<text x="910" y="363" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#7b766a">NO LINKED EVIDENCE</text>
+<rect x="829.0" y="349" width="34" height="20" fill="#b43c0e"/>
+<text x="846.0" y="364" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">3</text>
+<text x="910" y="363" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#b43c0e">OBSERVED IN THE WILD</text>
 <line x1="40" x2="1272" y1="372" y2="372" stroke="#e0dacb"/>
 <text x="40" y="389" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T011  </tspan>AI Software Supply Chain Compromise</text>
 <rect x="461.0" y="375" width="34" height="20" fill="#7c2406"/>
-<text x="478.0" y="390" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">4</text>
-<rect x="553.0" y="375" width="34" height="20" fill="#e9b394"/>
-<text x="570.0" y="390" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
-<rect x="645.0" y="375" width="34" height="20" fill="#e9b394"/>
-<text x="662.0" y="390" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
+<text x="478.0" y="390" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">6</text>
+<rect x="553.0" y="375" width="34" height="20" fill="#d4804f"/>
+<text x="570.0" y="390" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
+<rect x="645.0" y="375" width="34" height="20" fill="#7c2406"/>
+<text x="662.0" y="390" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">5</text>
 <rect x="737.0" y="375" width="34" height="20" fill="#e9b394"/>
 <text x="754.0" y="390" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
 <rect x="829.0" y="375" width="34" height="20" fill="#7c2406"/>
-<text x="846.0" y="390" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">7</text>
+<text x="846.0" y="390" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">15</text>
 <text x="910" y="389" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#b43c0e">OBSERVED IN THE WILD</text>
 <line x1="40" x2="1272" y1="398" y2="398" stroke="#e0dacb"/>
 <text x="40" y="415" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T012  </tspan>Coding-Agent Dependency Manipulation</text>
 <rect x="461.0" y="401" width="34" height="20" fill="#e9b394"/>
 <text x="478.0" y="416" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
-<rect x="553.0" y="401" width="34" height="20" fill="#e9b394"/>
-<text x="570.0" y="416" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
-<rect x="645.0" y="401" width="34" height="20" fill="#e9b394"/>
-<text x="662.0" y="416" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
+<rect x="553.0" y="401" width="34" height="20" fill="#d4804f"/>
+<text x="570.0" y="416" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
+<rect x="645.0" y="401" width="34" height="20" fill="#d4804f"/>
+<text x="662.0" y="416" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
 <rect x="737.0" y="401" width="34" height="20" fill="#e9b394"/>
 <text x="754.0" y="416" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
-<rect x="829.0" y="401" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
-<text x="846.0" y="416" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
+<rect x="829.0" y="401" width="34" height="20" fill="#7c2406"/>
+<text x="846.0" y="416" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">6</text>
 <text x="910" y="415" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#b43c0e">OBSERVED IN THE WILD</text>
 <line x1="40" x2="1272" y1="424" y2="424" stroke="#e0dacb"/>
 <text x="40" y="441" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T013  </tspan>Runtime LLM Command Generation</text>
-<rect x="461.0" y="427" width="34" height="20" fill="#e9b394"/>
-<text x="478.0" y="442" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
+<rect x="461.0" y="427" width="34" height="20" fill="#d4804f"/>
+<text x="478.0" y="442" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
 <rect x="553.0" y="427" width="34" height="20" fill="#e9b394"/>
 <text x="570.0" y="442" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
 <rect x="645.0" y="427" width="34" height="20" fill="#e9b394"/>
 <text x="662.0" y="442" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
 <rect x="737.0" y="427" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <text x="754.0" y="442" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
-<rect x="829.0" y="427" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
-<text x="846.0" y="442" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
+<rect x="829.0" y="427" width="34" height="20" fill="#7c2406"/>
+<text x="846.0" y="442" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">6</text>
 <text x="910" y="441" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#b43c0e">OBSERVED IN THE WILD</text>
 <line x1="40" x2="1272" y1="450" y2="450" stroke="#e0dacb"/>
 <text x="40" y="467" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T014  </tspan>AI-Assisted Reconnaissance and Social Engineering</text>
@@ -197,138 +197,203 @@
 <text x="662.0" y="468" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
 <rect x="737.0" y="453" width="34" height="20" fill="#e9b394"/>
 <text x="754.0" y="468" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
-<rect x="829.0" y="453" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
-<text x="846.0" y="468" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
+<rect x="829.0" y="453" width="34" height="20" fill="#7c2406"/>
+<text x="846.0" y="468" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">5</text>
 <text x="910" y="467" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#b43c0e">OBSERVED IN THE WILD</text>
 <line x1="40" x2="1272" y1="476" y2="476" stroke="#e0dacb"/>
 <text x="40" y="493" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T015  </tspan>Agentic Attack Orchestration</text>
 <rect x="461.0" y="479" width="34" height="20" fill="#7c2406"/>
-<text x="478.0" y="494" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">4</text>
+<text x="478.0" y="494" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">7</text>
 <rect x="553.0" y="479" width="34" height="20" fill="#e9b394"/>
 <text x="570.0" y="494" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
-<rect x="645.0" y="479" width="34" height="20" fill="#e9b394"/>
-<text x="662.0" y="494" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
+<rect x="645.0" y="479" width="34" height="20" fill="#d4804f"/>
+<text x="662.0" y="494" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
 <rect x="737.0" y="479" width="34" height="20" fill="#d4804f"/>
 <text x="754.0" y="494" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
-<rect x="829.0" y="479" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
-<text x="846.0" y="494" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
+<rect x="829.0" y="479" width="34" height="20" fill="#7c2406"/>
+<text x="846.0" y="494" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">7</text>
 <text x="910" y="493" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#b43c0e">OBSERVED IN THE WILD</text>
 <line x1="40" x2="1272" y1="502" y2="502" stroke="#e0dacb"/>
 <text x="40" y="519" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T016  </tspan>AI Gateway Credential Compromise</text>
-<rect x="461.0" y="505" width="34" height="20" fill="#e9b394"/>
-<text x="478.0" y="520" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
+<rect x="461.0" y="505" width="34" height="20" fill="#b43c0e"/>
+<text x="478.0" y="520" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">3</text>
 <rect x="553.0" y="505" width="34" height="20" fill="#e9b394"/>
 <text x="570.0" y="520" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
 <rect x="645.0" y="505" width="34" height="20" fill="#e9b394"/>
 <text x="662.0" y="520" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
 <rect x="737.0" y="505" width="34" height="20" fill="#e9b394"/>
 <text x="754.0" y="520" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
-<rect x="829.0" y="505" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
-<text x="846.0" y="520" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
+<rect x="829.0" y="505" width="34" height="20" fill="#7c2406"/>
+<text x="846.0" y="520" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">5</text>
 <text x="910" y="519" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#b43c0e">OBSERVED IN THE WILD</text>
 <line x1="40" x2="1272" y1="528" y2="528" stroke="#e0dacb"/>
 <text x="40" y="545" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T017  </tspan>Prompt Injection Against AI Security Scanners</text>
-<rect x="461.0" y="531" width="34" height="20" fill="#e9b394"/>
-<text x="478.0" y="546" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
+<rect x="461.0" y="531" width="34" height="20" fill="#d4804f"/>
+<text x="478.0" y="546" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
 <rect x="553.0" y="531" width="34" height="20" fill="#e9b394"/>
 <text x="570.0" y="546" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
-<rect x="645.0" y="531" width="34" height="20" fill="#e9b394"/>
-<text x="662.0" y="546" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
-<rect x="737.0" y="531" width="34" height="20" fill="#e9b394"/>
-<text x="754.0" y="546" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
-<rect x="829.0" y="531" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
-<text x="846.0" y="546" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
+<rect x="645.0" y="531" width="34" height="20" fill="#d4804f"/>
+<text x="662.0" y="546" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
+<rect x="737.0" y="531" width="34" height="20" fill="#d4804f"/>
+<text x="754.0" y="546" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
+<rect x="829.0" y="531" width="34" height="20" fill="#7c2406"/>
+<text x="846.0" y="546" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">7</text>
 <text x="910" y="545" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#b43c0e">OBSERVED IN THE WILD</text>
 <line x1="40" x2="1272" y1="554" y2="554" stroke="#e0dacb"/>
 <text x="40" y="571" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T018  </tspan>AI Coding-Assistant Workspace Abuse</text>
-<rect x="461.0" y="557" width="34" height="20" fill="#e9b394"/>
-<text x="478.0" y="572" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
+<rect x="461.0" y="557" width="34" height="20" fill="#d4804f"/>
+<text x="478.0" y="572" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
 <rect x="553.0" y="557" width="34" height="20" fill="#e9b394"/>
 <text x="570.0" y="572" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
-<rect x="645.0" y="557" width="34" height="20" fill="#e9b394"/>
-<text x="662.0" y="572" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
+<rect x="645.0" y="557" width="34" height="20" fill="#7c2406"/>
+<text x="662.0" y="572" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">6</text>
 <rect x="737.0" y="557" width="34" height="20" fill="#d4804f"/>
 <text x="754.0" y="572" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
-<rect x="829.0" y="557" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
-<text x="846.0" y="572" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
+<rect x="829.0" y="557" width="34" height="20" fill="#7c2406"/>
+<text x="846.0" y="572" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">9</text>
 <text x="910" y="571" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#b43c0e">OBSERVED IN THE WILD</text>
 <line x1="40" x2="1272" y1="580" y2="580" stroke="#e0dacb"/>
 <text x="40" y="597" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T019  </tspan>Model Distillation Campaign</text>
-<rect x="461.0" y="583" width="34" height="20" fill="#e9b394"/>
-<text x="478.0" y="598" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
+<rect x="461.0" y="583" width="34" height="20" fill="#d4804f"/>
+<text x="478.0" y="598" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
 <rect x="553.0" y="583" width="34" height="20" fill="#e9b394"/>
 <text x="570.0" y="598" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
 <rect x="645.0" y="583" width="34" height="20" fill="#e9b394"/>
 <text x="662.0" y="598" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
 <rect x="737.0" y="583" width="34" height="20" fill="#e9b394"/>
 <text x="754.0" y="598" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
-<rect x="829.0" y="583" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
-<text x="846.0" y="598" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
+<rect x="829.0" y="583" width="34" height="20" fill="#7c2406"/>
+<text x="846.0" y="598" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">4</text>
 <text x="910" y="597" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#b43c0e">OBSERVED IN THE WILD</text>
 <line x1="40" x2="1272" y1="606" y2="606" stroke="#e0dacb"/>
-<text x="40" y="623" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T020  </tspan>Improper Output Handling</text>
-<rect x="461.0" y="609" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
-<text x="478.0" y="624" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
-<rect x="553.0" y="609" width="34" height="20" fill="#e9b394"/>
-<text x="570.0" y="624" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
-<rect x="645.0" y="609" width="34" height="20" fill="#e9b394"/>
-<text x="662.0" y="624" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
-<rect x="737.0" y="609" width="34" height="20" fill="#e9b394"/>
-<text x="754.0" y="624" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
-<rect x="829.0" y="609" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
-<text x="846.0" y="624" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
-<text x="910" y="623" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#7b766a">NO LINKED EVIDENCE</text>
+<text x="40" y="623" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T020  </tspan>Improper Output Handling and Rendering Exfiltration</text>
+<rect x="461.0" y="609" width="34" height="20" fill="#d4804f"/>
+<text x="478.0" y="624" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
+<rect x="553.0" y="609" width="34" height="20" fill="#b43c0e"/>
+<text x="570.0" y="624" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">3</text>
+<rect x="645.0" y="609" width="34" height="20" fill="#d4804f"/>
+<text x="662.0" y="624" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
+<rect x="737.0" y="609" width="34" height="20" fill="#b43c0e"/>
+<text x="754.0" y="624" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">3</text>
+<rect x="829.0" y="609" width="34" height="20" fill="#7c2406"/>
+<text x="846.0" y="624" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">4</text>
+<text x="910" y="623" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#7b766a">RESEARCH DEMONSTRATED</text>
 <line x1="40" x2="1272" y1="632" y2="632" stroke="#e0dacb"/>
-<text x="40" y="649" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T021  </tspan>Resource Exhaustion and Cost Abuse</text>
-<rect x="461.0" y="635" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
-<text x="478.0" y="650" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
+<text x="40" y="649" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T021  </tspan>Agent Tool Poisoning and Rug Pull</text>
+<rect x="461.0" y="635" width="34" height="20" fill="#d4804f"/>
+<text x="478.0" y="650" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
 <rect x="553.0" y="635" width="34" height="20" fill="#e9b394"/>
 <text x="570.0" y="650" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
-<rect x="645.0" y="635" width="34" height="20" fill="#e9b394"/>
-<text x="662.0" y="650" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
-<rect x="737.0" y="635" width="34" height="20" fill="#e9b394"/>
-<text x="754.0" y="650" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
-<rect x="829.0" y="635" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
-<text x="846.0" y="650" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
-<text x="910" y="649" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#7b766a">NO LINKED EVIDENCE</text>
+<rect x="645.0" y="635" width="34" height="20" fill="#d4804f"/>
+<text x="662.0" y="650" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
+<rect x="737.0" y="635" width="34" height="20" fill="#b43c0e"/>
+<text x="754.0" y="650" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">3</text>
+<rect x="829.0" y="635" width="34" height="20" fill="#7c2406"/>
+<text x="846.0" y="650" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">4</text>
+<text x="910" y="649" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#b43c0e">OBSERVED IN THE WILD</text>
 <line x1="40" x2="1272" y1="658" y2="658" stroke="#e0dacb"/>
-<text x="40" y="675" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T022  </tspan>Unsanctioned AI Runtime (Shadow AI)</text>
+<text x="40" y="675" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T022  </tspan>Agentic Resource Consumption and Cost Harvesting</text>
 <rect x="461.0" y="661" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <text x="478.0" y="676" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
 <rect x="553.0" y="661" width="34" height="20" fill="#d4804f"/>
 <text x="570.0" y="676" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
 <rect x="645.0" y="661" width="34" height="20" fill="#d4804f"/>
 <text x="662.0" y="676" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
-<rect x="737.0" y="661" width="34" height="20" fill="#d4804f"/>
-<text x="754.0" y="676" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
+<rect x="737.0" y="661" width="34" height="20" fill="#e9b394"/>
+<text x="754.0" y="676" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
 <rect x="829.0" y="661" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <text x="846.0" y="676" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
 <text x="910" y="675" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#7b766a">NO LINKED EVIDENCE</text>
 <line x1="40" x2="1272" y1="684" y2="684" stroke="#e0dacb"/>
-<text x="40" y="701" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T023  </tspan>AI-Assisted Tooling Development</text>
-<rect x="461.0" y="687" width="34" height="20" fill="#7c2406"/>
-<text x="478.0" y="702" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">4</text>
+<text x="40" y="701" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T023  </tspan>Crafted AI Assistant Links and Recommendation Poisoning</text>
+<rect x="461.0" y="687" width="34" height="20" fill="#e9b394"/>
+<text x="478.0" y="702" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
 <rect x="553.0" y="687" width="34" height="20" fill="#e9b394"/>
 <text x="570.0" y="702" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
 <rect x="645.0" y="687" width="34" height="20" fill="#e9b394"/>
 <text x="662.0" y="702" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
-<rect x="737.0" y="687" width="34" height="20" fill="#e9b394"/>
-<text x="754.0" y="702" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
+<rect x="737.0" y="687" width="34" height="20" fill="#d4804f"/>
+<text x="754.0" y="702" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
 <rect x="829.0" y="687" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <text x="846.0" y="702" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
 <text x="910" y="701" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#b43c0e">OBSERVED IN THE WILD</text>
 <line x1="40" x2="1272" y1="710" y2="710" stroke="#e0dacb"/>
-<text x="40" y="743" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#4a463c">SCALE</text>
-<rect x="90" y="732" width="28" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
-<text x="104" y="744" text-anchor="middle" font-family="'Courier New',monospace" font-size="10" font-weight="700" fill="#7b766a">0</text>
-<rect x="130" y="732" width="28" height="16" fill="#e9b394"/>
-<text x="144" y="744" text-anchor="middle" font-family="'Courier New',monospace" font-size="10" font-weight="700" fill="#17150f">1</text>
-<rect x="170" y="732" width="28" height="16" fill="#d4804f"/>
-<text x="184" y="744" text-anchor="middle" font-family="'Courier New',monospace" font-size="10" font-weight="700" fill="#ffffff">2</text>
-<rect x="210" y="732" width="28" height="16" fill="#b43c0e"/>
-<text x="224" y="744" text-anchor="middle" font-family="'Courier New',monospace" font-size="10" font-weight="700" fill="#ffffff">3</text>
-<rect x="250" y="732" width="28" height="16" fill="#7c2406"/>
-<text x="264" y="744" text-anchor="middle" font-family="'Courier New',monospace" font-size="10" font-weight="700" fill="#ffffff">4+</text>
-<text x="330" y="744" font-family="'Courier New',monospace" font-size="10" fill="#7b766a">Evidence: linked campaigns, incidents and vulnerabilities. Tools: mapped ecosystem projects.</text>
-<text x="40" y="772" font-family="'Courier New',monospace" font-size="10" fill="#7b766a">Counted from data/relationships.json and data/ecosystem.json. Regenerate with make charts.</text>
+<text x="40" y="727" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T024  </tspan>Exposed or Misconfigured AI Services</text>
+<rect x="461.0" y="713" width="34" height="20" fill="#e9b394"/>
+<text x="478.0" y="728" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
+<rect x="553.0" y="713" width="34" height="20" fill="#e9b394"/>
+<text x="570.0" y="728" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
+<rect x="645.0" y="713" width="34" height="20" fill="#e9b394"/>
+<text x="662.0" y="728" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
+<rect x="737.0" y="713" width="34" height="20" fill="#d4804f"/>
+<text x="754.0" y="728" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
+<rect x="829.0" y="713" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<text x="846.0" y="728" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
+<text x="910" y="727" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#b43c0e">OBSERVED IN THE WILD</text>
+<line x1="40" x2="1272" y1="736" y2="736" stroke="#e0dacb"/>
+<text x="40" y="753" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T025  </tspan>Multimodal Instruction Triggers</text>
+<rect x="461.0" y="739" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<text x="478.0" y="754" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
+<rect x="553.0" y="739" width="34" height="20" fill="#d4804f"/>
+<text x="570.0" y="754" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
+<rect x="645.0" y="739" width="34" height="20" fill="#e9b394"/>
+<text x="662.0" y="754" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
+<rect x="737.0" y="739" width="34" height="20" fill="#d4804f"/>
+<text x="754.0" y="754" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
+<rect x="829.0" y="739" width="34" height="20" fill="#d4804f"/>
+<text x="846.0" y="754" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
+<text x="910" y="753" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#7b766a">RESEARCH DEMONSTRATED</text>
+<line x1="40" x2="1272" y1="762" y2="762" stroke="#e0dacb"/>
+<text x="40" y="779" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T026  </tspan>Inter-Agent Instruction Propagation</text>
+<rect x="461.0" y="765" width="34" height="20" fill="#d4804f"/>
+<text x="478.0" y="780" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
+<rect x="553.0" y="765" width="34" height="20" fill="#e9b394"/>
+<text x="570.0" y="780" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
+<rect x="645.0" y="765" width="34" height="20" fill="#e9b394"/>
+<text x="662.0" y="780" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
+<rect x="737.0" y="765" width="34" height="20" fill="#b43c0e"/>
+<text x="754.0" y="780" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">3</text>
+<rect x="829.0" y="765" width="34" height="20" fill="#e9b394"/>
+<text x="846.0" y="780" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
+<text x="910" y="779" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#b43c0e">OBSERVED IN THE WILD</text>
+<line x1="40" x2="1272" y1="788" y2="788" stroke="#e0dacb"/>
+<text x="40" y="805" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T027  </tspan>Unsanctioned AI Runtime (Shadow AI)</text>
+<rect x="461.0" y="791" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<text x="478.0" y="806" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
+<rect x="553.0" y="791" width="34" height="20" fill="#d4804f"/>
+<text x="570.0" y="806" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
+<rect x="645.0" y="791" width="34" height="20" fill="#d4804f"/>
+<text x="662.0" y="806" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
+<rect x="737.0" y="791" width="34" height="20" fill="#d4804f"/>
+<text x="754.0" y="806" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
+<rect x="829.0" y="791" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<text x="846.0" y="806" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
+<text x="910" y="805" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#7b766a">NO LINKED EVIDENCE</text>
+<line x1="40" x2="1272" y1="814" y2="814" stroke="#e0dacb"/>
+<text x="40" y="831" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T028  </tspan>AI-Assisted Tooling Development</text>
+<rect x="461.0" y="817" width="34" height="20" fill="#7c2406"/>
+<text x="478.0" y="832" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">4</text>
+<rect x="553.0" y="817" width="34" height="20" fill="#e9b394"/>
+<text x="570.0" y="832" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
+<rect x="645.0" y="817" width="34" height="20" fill="#e9b394"/>
+<text x="662.0" y="832" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
+<rect x="737.0" y="817" width="34" height="20" fill="#e9b394"/>
+<text x="754.0" y="832" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
+<rect x="829.0" y="817" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<text x="846.0" y="832" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
+<text x="910" y="831" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#b43c0e">OBSERVED IN THE WILD</text>
+<line x1="40" x2="1272" y1="840" y2="840" stroke="#e0dacb"/>
+<text x="40" y="873" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#4a463c">SCALE</text>
+<rect x="90" y="862" width="28" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<text x="104" y="874" text-anchor="middle" font-family="'Courier New',monospace" font-size="10" font-weight="700" fill="#7b766a">0</text>
+<rect x="130" y="862" width="28" height="16" fill="#e9b394"/>
+<text x="144" y="874" text-anchor="middle" font-family="'Courier New',monospace" font-size="10" font-weight="700" fill="#17150f">1</text>
+<rect x="170" y="862" width="28" height="16" fill="#d4804f"/>
+<text x="184" y="874" text-anchor="middle" font-family="'Courier New',monospace" font-size="10" font-weight="700" fill="#ffffff">2</text>
+<rect x="210" y="862" width="28" height="16" fill="#b43c0e"/>
+<text x="224" y="874" text-anchor="middle" font-family="'Courier New',monospace" font-size="10" font-weight="700" fill="#ffffff">3</text>
+<rect x="250" y="862" width="28" height="16" fill="#7c2406"/>
+<text x="264" y="874" text-anchor="middle" font-family="'Courier New',monospace" font-size="10" font-weight="700" fill="#ffffff">4+</text>
+<text x="330" y="874" font-family="'Courier New',monospace" font-size="10" fill="#7b766a">Evidence: linked campaigns, incidents and vulnerabilities. Tools: mapped ecosystem projects.</text>
+<text x="40" y="902" font-family="'Courier New',monospace" font-size="10" fill="#7b766a">Counted from data/relationships.json and data/ecosystem.json. Regenerate with make charts.</text>
 </svg>

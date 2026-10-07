@@ -111,6 +111,16 @@
       ]
     },
     {
+      "id": "FEED-ECOSYSTEM-SWEEP",
+      "name": "Manual ecosystem sweep of curated AI-security lists",
+      "kind": "manual-ecosystem-sweep",
+      "url": "https://github.com/Ridd1kulusC0d3r/LLmInjection/blob/main/docs/ECOSYSTEM-INTELLIGENCE.md",
+      "source_grade": "D",
+      "enabled": false,
+      "max_items": 0,
+      "relevance_mode": "all"
+    },
+    {
       "id": "FEED-GARAK-RELEASES",
       "name": "NVIDIA/garak releases",
       "kind": "github-releases",

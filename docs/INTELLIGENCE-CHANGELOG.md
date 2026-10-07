@@ -2,6 +2,14 @@
 
 This changelog records material changes to attribution, confidence, external mappings and structured intelligence. Ordinary prose edits do not belong here.
 
+## 2026-10-07 — Merge with the ecosystem sweep
+
+The ecosystem sweep (107 repositories read, ATLAS 2026.09 crosswalk) and this branch were developed in parallel and both created techniques T020 to T023 and detections DET-AI-015 to DET-AI-020. Resolution:
+
+- the sweep's IDs are kept as published; this branch's equivalents were unified where they meant the same thing (improper output handling is T020, resource exhaustion and cost harvesting is T022) and renumbered where they did not: unsanctioned AI runtime is now LLMI-T027, AI-assisted tooling development LLMI-T028, detections DET-AI-040 to DET-AI-045 and tests TC-JB-035 to TC-TOOL-040;
+- maturity was recomputed for all 28 techniques from the merged graph;
+- the two ecosystem verifiers were reconciled: `scripts/verify_ecosystem.py` (git, no token) records reachability, last commit and licence; `scripts/check_ecosystem.py` (API) adds only the archive flag and renames to the same `verification` block.
+
 ## 2026-10-07 — Latin America, closed coverage gaps and technique maturity
 
 ### Added
@@ -21,13 +29,13 @@ This changelog records material changes to attribution, confidence, external map
 
 - In all three Latin America campaigns the AI use is inferred or reported by one vendor; the records say so and no model is asserted except where Trend reports it with high confidence from leaked conversations.
 - Press-reported overlaps (for example CL-CRI-1163 with BREEZE COMET) are noted in summaries, not merged as aliases. Google's own reported overlaps (Plump Spider, SHADOW-AETHER-064) are likewise not merged.
-- Not done: external ATLAS and OWASP IDs for T017 and T019 to T023. The ATLAS technique pages were unreachable (HTTP 404) from this environment, so those mappings are left empty rather than guessed. The ecosystem verification script was tested with fixtures but not run against GitHub from this environment.
+- Not done: external ATLAS and OWASP IDs for LLMI-T027 and LLMI-T028. The ATLAS technique pages were unreachable (HTTP 404) from this environment, so those mappings are left empty rather than guessed. The ecosystem verification script was tested with fixtures but not run against GitHub from this environment.
 
 ## 2026-10-07 — Graph audit, taxonomy completion and Explorer dashboard
 
 ### Added
 
-- techniques LLMI-T020 (improper output handling), LLMI-T022 (resource exhaustion and cost abuse), LLMI-T027 (unsanctioned AI runtime), covering risks that existing tests and detections already addressed but the taxonomy did not name;
+- technique LLMI-T027 (unsanctioned AI runtime), and links tying existing tests and detections for improper output handling and resource exhaustion to the techniques now named LLMI-T020 and LLMI-T022, so those risks have a taxonomy home;
 - seventeen relationships linking six previously unlinked test cases, five detections and four controls to techniques;
 - `scripts/audit_graph.py`: fails CI on test cases, detections or controls linked to nothing, and lists techniques without a test or detection;
 - charts: coverage matrix extended with evidence and tool columns and a priority-gap flag; new framework-mapping and ecosystem-map charts;
@@ -37,7 +45,7 @@ This changelog records material changes to attribution, confidence, external map
 ### Confidence notes
 
 - The new relationships are the maintainer's analytic links. They use medium or high confidence and cite the nearest supporting source; none asserts observed activity.
-- LLMI-T020 to T022 carry no external framework mapping yet. IDs will be added from the primary framework data rather than guessed.
+- LLMI-T027 carries no external framework mapping yet. IDs will be added from the primary framework data rather than guessed.
 
 ## 2026-10-07 — Ecosystem map
 

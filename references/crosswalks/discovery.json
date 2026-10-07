@@ -1,0 +1,1696 @@
+{
+  "generated": "2026-10-07",
+  "provenance": "20 curated lists; responsible-ai-collaborative/aiid",
+  "note": "Derived from shallow clones read on 2026-10-07. Names and identifiers only; descriptions are paraphrased. Discovery and test-design material, not evidence of in-the-wild activity.",
+  "lists_scanned": [
+    {
+      "list": "7WaySecurity__ai_osint",
+      "repo": "7WaySecurity/ai_osint"
+    },
+    {
+      "list": "CryptoAILab__Awesome-LM-SSP",
+      "repo": "CryptoAILab/Awesome-LM-SSP"
+    },
+    {
+      "list": "Joe-B-Security__awesome-prompt-injection",
+      "repo": "Joe-B-Security/awesome-prompt-injection"
+    },
+    {
+      "list": "LLMSecurity__awesome-agent-skills-security",
+      "repo": "LLMSecurity/awesome-agent-skills-security"
+    },
+    {
+      "list": "PromptLabs__Prompt-Hacking-Resources",
+      "repo": "PromptLabs/Prompt-Hacking-Resources"
+    },
+    {
+      "list": "Puliczek__awesome-mcp-security",
+      "repo": "Puliczek/awesome-mcp-security"
+    },
+    {
+      "list": "ShenaoW__awesome-llm-supply-chain-security",
+      "repo": "ShenaoW/awesome-llm-supply-chain-security"
+    },
+    {
+      "list": "Shiva108__ai-llm-red-team-handbook",
+      "repo": "Shiva108/ai-llm-red-team-handbook"
+    },
+    {
+      "list": "cckuailong__awesome-gpt-security",
+      "repo": "cckuailong/awesome-gpt-security"
+    },
+    {
+      "list": "corca-ai__awesome-llm-security",
+      "repo": "corca-ai/awesome-llm-security"
+    },
+    {
+      "list": "mcp-security-project__awesome-agentic-mcp-security",
+      "repo": "mcp-security-project/awesome-agentic-mcp-security"
+    },
+    {
+      "list": "pathakabhi24__LLM-MCP-Security-Field-Guide",
+      "repo": "pathakabhi24/LLM-MCP-Security-Field-Guide"
+    },
+    {
+      "list": "scadastrangelove__awesome-ai-security-tools",
+      "repo": "scadastrangelove/awesome-ai-security-tools"
+    },
+    {
+      "list": "ubikron__Awesome-AI-OSINT",
+      "repo": "ubikron/Awesome-AI-OSINT"
+    },
+    {
+      "list": "ucsb-mlsec__Awesome-Agent-Security",
+      "repo": "ucsb-mlsec/Awesome-Agent-Security"
+    },
+    {
+      "list": "user1342__Awesome-LLM-Red-Teaming",
+      "repo": "user1342/Awesome-LLM-Red-Teaming"
+    },
+    {
+      "list": "wearetyomsmnv__Awesome-LLM-agent-Security",
+      "repo": "wearetyomsmnv/Awesome-LLM-agent-Security"
+    },
+    {
+      "list": "wearetyomsmnv__Awesome-LLMSecOps",
+      "repo": "wearetyomsmnv/Awesome-LLMSecOps"
+    },
+    {
+      "list": "ydyjya__Awesome-LLM-Safety",
+      "repo": "ydyjya/Awesome-LLM-Safety"
+    },
+    {
+      "list": "yueliu1999__Awesome-Jailbreak-on-LLMs",
+      "repo": "yueliu1999/Awesome-Jailbreak-on-LLMs"
+    }
+  ],
+  "candidate_repos": [
+    {
+      "repo": "ArmorerLabs/Armorer-Guard",
+      "url": "https://github.com/ArmorerLabs/Armorer-Guard",
+      "count": 6,
+      "lists": [
+        "LLMSecurity__awesome-agent-skills-security",
+        "cckuailong__awesome-gpt-security",
+        "mcp-security-project__awesome-agentic-mcp-security",
+        "scadastrangelove__awesome-ai-security-tools",
+        "ucsb-mlsec__Awesome-Agent-Security",
+        "wearetyomsmnv__Awesome-LLMSecOps"
+      ],
+      "description": "Local Rust scanner for agent prompt injection, credential redaction, exfiltration text and risky tool calls.",
+      "section": "defence",
+      "evidence_class": "defence-tool",
+      "rank": 1
+    },
+    {
+      "repo": "meta-llama/PurpleLlama",
+      "url": "https://github.com/meta-llama/PurpleLlama",
+      "count": 6,
+      "lists": [
+        "CryptoAILab__Awesome-LM-SSP",
+        "cckuailong__awesome-gpt-security",
+        "corca-ai__awesome-llm-security",
+        "scadastrangelove__awesome-ai-security-tools",
+        "wearetyomsmnv__Awesome-LLMSecOps",
+        "yueliu1999__Awesome-Jailbreak-on-LLMs"
+      ],
+      "description": "Meta suite: Llama Guard classifiers, CodeShield and CyberSecEval benchmarks (also cited as facebookresearch/PurpleLlama).",
+      "section": "defence",
+      "evidence_class": "defence-tool",
+      "rank": 2
+    },
+    {
+      "repo": "OWASP/www-project-agent-memory-guard",
+      "url": "https://github.com/OWASP/www-project-agent-memory-guard",
+      "count": 6,
+      "lists": [
+        "Joe-B-Security__awesome-prompt-injection",
+        "LLMSecurity__awesome-agent-skills-security",
+        "scadastrangelove__awesome-ai-security-tools",
+        "ucsb-mlsec__Awesome-Agent-Security",
+        "wearetyomsmnv__Awesome-LLM-agent-Security",
+        "wearetyomsmnv__Awesome-LLMSecOps"
+      ],
+      "description": "OWASP scanner for agent memory poisoning (ASI06): injected payloads and memory manipulation patterns.",
+      "section": "agent-security",
+      "evidence_class": "defence-tool",
+      "rank": 3
+    },
+    {
+      "repo": "EasyJailbreak/EasyJailbreak",
+      "url": "https://github.com/EasyJailbreak/EasyJailbreak",
+      "count": 4,
+      "lists": [
+        "CryptoAILab__Awesome-LM-SSP",
+        "scadastrangelove__awesome-ai-security-tools",
+        "wearetyomsmnv__Awesome-LLMSecOps",
+        "yueliu1999__Awesome-Jailbreak-on-LLMs"
+      ],
+      "description": "Unified framework packaging many jailbreak attack recipes for evaluating LLM robustness.",
+      "section": "evaluation",
+      "evidence_class": "assessment-tool",
+      "rank": 4
+    },
+    {
+      "repo": "euanong/image-hijacks",
+      "url": "https://github.com/euanong/image-hijacks",
+      "count": 4,
+      "lists": [
+        "CryptoAILab__Awesome-LM-SSP",
+        "corca-ai__awesome-llm-security",
+        "wearetyomsmnv__Awesome-LLMSecOps",
+        "yueliu1999__Awesome-Jailbreak-on-LLMs"
+      ],
+      "description": "Code for adversarial images that control multimodal model behaviour at runtime.",
+      "section": "attack-research",
+      "evidence_class": "research-technique",
+      "rank": 5
+    },
+    {
+      "repo": "hashgraph-online/hol-guard",
+      "url": "https://github.com/hashgraph-online/hol-guard",
+      "count": 4,
+      "lists": [
+        "LLMSecurity__awesome-agent-skills-security",
+        "cckuailong__awesome-gpt-security",
+        "scadastrangelove__awesome-ai-security-tools",
+        "wearetyomsmnv__Awesome-LLMSecOps"
+      ],
+      "description": "Local-first runtime firewall for coding agents intercepting shell, secrets, MCP config and package installs.",
+      "section": "agent-security",
+      "evidence_class": "defence-tool",
+      "rank": 6
+    },
+    {
+      "repo": "LLM-Tuning-Safety/LLMs-Finetuning-Safety",
+      "url": "https://github.com/LLM-Tuning-Safety/LLMs-Finetuning-Safety",
+      "count": 4,
+      "lists": [
+        "CryptoAILab__Awesome-LM-SSP",
+        "corca-ai__awesome-llm-security",
+        "wearetyomsmnv__Awesome-LLMSecOps",
+        "yueliu1999__Awesome-Jailbreak-on-LLMs"
+      ],
+      "description": "Shows fine-tuning aligned models, even benignly, erodes safety guardrails.",
+      "section": "attack-research",
+      "evidence_class": "research-technique",
+      "rank": 7
+    },
+    {
+      "repo": "RobustNLP/CipherChat",
+      "url": "https://github.com/RobustNLP/CipherChat",
+      "count": 4,
+      "lists": [
+        "CryptoAILab__Awesome-LM-SSP",
+        "corca-ai__awesome-llm-security",
+        "wearetyomsmnv__Awesome-LLMSecOps",
+        "yueliu1999__Awesome-Jailbreak-on-LLMs"
+      ],
+      "description": "Cipher-encoded conversations that bypass GPT-4 safety alignment.",
+      "section": "attack-research",
+      "evidence_class": "research-technique",
+      "rank": 8
+    },
+    {
+      "repo": "sherdencooper/GPTFuzz",
+      "url": "https://github.com/sherdencooper/GPTFuzz",
+      "count": 4,
+      "lists": [
+        "CryptoAILab__Awesome-LM-SSP",
+        "corca-ai__awesome-llm-security",
+        "scadastrangelove__awesome-ai-security-tools",
+        "yueliu1999__Awesome-Jailbreak-on-LLMs"
+      ],
+      "description": "GPTFuzzer: fuzzing framework auto-generating jailbreak templates for red teaming.",
+      "section": "evaluation",
+      "evidence_class": "assessment-tool",
+      "rank": 9
+    },
+    {
+      "repo": "82ch/MCP-Dandan",
+      "url": "https://github.com/82ch/MCP-Dandan",
+      "count": 3,
+      "lists": [
+        "Puliczek__awesome-mcp-security",
+        "mcp-security-project__awesome-agentic-mcp-security",
+        "scadastrangelove__awesome-ai-security-tools"
+      ],
+      "description": "Desktop tool monitoring and controlling MCP tool invocations with threat detection.",
+      "section": "agent-security",
+      "evidence_class": "defence-tool",
+      "rank": 10
+    },
+    {
+      "repo": "ASCIT31/Dark-Moon",
+      "url": "https://github.com/ASCIT31/Dark-Moon",
+      "count": 3,
+      "lists": [
+        "cckuailong__awesome-gpt-security",
+        "scadastrangelove__awesome-ai-security-tools",
+        "wearetyomsmnv__Awesome-LLM-agent-Security"
+      ],
+      "description": "Autonomous AI pentest platform orchestrating offensive tools via MCP playbooks (dual-use).",
+      "section": "lab",
+      "evidence_class": "assessment-tool",
+      "rank": 11
+    },
+    {
+      "repo": "BurtTheCoder/mcp-dnstwist",
+      "url": "https://github.com/BurtTheCoder/mcp-dnstwist",
+      "count": 3,
+      "lists": [
+        "Puliczek__awesome-mcp-security",
+        "mcp-security-project__awesome-agentic-mcp-security",
+        "scadastrangelove__awesome-ai-security-tools"
+      ],
+      "description": "MCP server wrapping dnstwist for phishing and typosquat domain detection.",
+      "section": "catalog",
+      "evidence_class": "defence-tool",
+      "rank": 12
+    },
+    {
+      "repo": "BurtTheCoder/mcp-maigret",
+      "url": "https://github.com/BurtTheCoder/mcp-maigret",
+      "count": 3,
+      "lists": [
+        "Puliczek__awesome-mcp-security",
+        "mcp-security-project__awesome-agentic-mcp-security",
+        "ubikron__Awesome-AI-OSINT"
+      ],
+      "description": "MCP server wrapping Maigret username OSINT collection.",
+      "section": "catalog",
+      "evidence_class": "assessment-tool",
+      "rank": 13
+    },
+    {
+      "repo": "cisco-ai-defense/defenseclaw",
+      "url": "https://github.com/cisco-ai-defense/defenseclaw",
+      "count": 3,
+      "lists": [
+        "7WaySecurity__ai_osint",
+        "mcp-security-project__awesome-agentic-mcp-security",
+        "scadastrangelove__awesome-ai-security-tools"
+      ],
+      "description": "Cisco agent governance layer scanning skills, MCP servers and plugins before execution; AI-BOM.",
+      "section": "agent-security",
+      "evidence_class": "defence-tool",
+      "rank": 14
+    },
+    {
+      "repo": "Continuum-AI-Corp/Orca-AI-Incident-Archive",
+      "url": "https://github.com/Continuum-AI-Corp/Orca-AI-Incident-Archive",
+      "count": 3,
+      "lists": [
+        "LLMSecurity__awesome-agent-skills-security",
+        "scadastrangelove__awesome-ai-security-tools",
+        "wearetyomsmnv__Awesome-LLMSecOps"
+      ],
+      "description": "Archive of real agent security incidents (MCP, skill supply chain, indirect injection) with confirmation flags.",
+      "section": "knowledge",
+      "evidence_class": "incident-data",
+      "rank": 15
+    },
+    {
+      "repo": "CyberSunil/LLMVault",
+      "url": "https://github.com/CyberSunil/LLMVault",
+      "count": 3,
+      "lists": [
+        "Joe-B-Security__awesome-prompt-injection",
+        "scadastrangelove__awesome-ai-security-tools",
+        "wearetyomsmnv__Awesome-LLMSecOps"
+      ],
+      "description": "Self-hosted CTF range with 25 labs mapped to OWASP LLM Top 10.",
+      "section": "lab",
+      "evidence_class": "lab-exercise",
+      "rank": 16
+    },
+    {
+      "repo": "elliotllliu/agent-shield",
+      "url": "https://github.com/elliotllliu/agent-shield",
+      "count": 3,
+      "lists": [
+        "CryptoAILab__Awesome-LM-SSP",
+        "cckuailong__awesome-gpt-security",
+        "mcp-security-project__awesome-agentic-mcp-security"
+      ],
+      "description": "AgentShield agent security scanning/defence project.",
+      "section": "agent-security",
+      "evidence_class": "defence-tool",
+      "rank": 17
+    },
+    {
+      "repo": "google/mcp-security",
+      "url": "https://github.com/google/mcp-security",
+      "count": 3,
+      "lists": [
+        "Puliczek__awesome-mcp-security",
+        "mcp-security-project__awesome-agentic-mcp-security",
+        "scadastrangelove__awesome-ai-security-tools"
+      ],
+      "description": "Google SecOps and Threat Intelligence MCP servers for security products.",
+      "section": "catalog",
+      "evidence_class": "defence-tool",
+      "rank": 18
+    },
+    {
+      "repo": "invariantlabs-ai/invariant",
+      "url": "https://github.com/invariantlabs-ai/invariant",
+      "count": 3,
+      "lists": [
+        "LLMSecurity__awesome-agent-skills-security",
+        "mcp-security-project__awesome-agentic-mcp-security",
+        "wearetyomsmnv__Awesome-LLMSecOps"
+      ],
+      "description": "Invariant Guardrails: policy-based runtime rules for agent traces and tool calls.",
+      "section": "agent-security",
+      "evidence_class": "defence-tool",
+      "rank": 19
+    },
+    {
+      "repo": "Junjie-Ye/ToolSword",
+      "url": "https://github.com/Junjie-Ye/ToolSword",
+      "count": 3,
+      "lists": [
+        "CryptoAILab__Awesome-LM-SSP",
+        "LLMSecurity__awesome-agent-skills-security",
+        "yueliu1999__Awesome-Jailbreak-on-LLMs"
+      ],
+      "description": "ToolSword: safety issues of LLMs across three stages of tool learning.",
+      "section": "benchmark",
+      "evidence_class": "benchmark",
+      "rank": 20
+    },
+    {
+      "repo": "lasso-security/mcp-gateway",
+      "url": "https://github.com/lasso-security/mcp-gateway",
+      "count": 3,
+      "lists": [
+        "Puliczek__awesome-mcp-security",
+        "mcp-security-project__awesome-agentic-mcp-security",
+        "scadastrangelove__awesome-ai-security-tools"
+      ],
+      "description": "Gateway proxy between LLMs and MCP servers applying security plugins.",
+      "section": "agent-security",
+      "evidence_class": "defence-tool",
+      "rank": 21
+    },
+    {
+      "repo": "LaurieWired/GhidraMCP",
+      "url": "https://github.com/LaurieWired/GhidraMCP",
+      "count": 3,
+      "lists": [
+        "Puliczek__awesome-mcp-security",
+        "mcp-security-project__awesome-agentic-mcp-security",
+        "scadastrangelove__awesome-ai-security-tools"
+      ],
+      "description": "MCP server exposing Ghidra reverse engineering to LLMs.",
+      "section": "catalog",
+      "evidence_class": "assessment-tool",
+      "rank": 22
+    },
+    {
+      "repo": "Libr-AI/do-not-answer",
+      "url": "https://github.com/Libr-AI/do-not-answer",
+      "count": 3,
+      "lists": [
+        "corca-ai__awesome-llm-security",
+        "scadastrangelove__awesome-ai-security-tools",
+        "wearetyomsmnv__Awesome-LLMSecOps"
+      ],
+      "description": "Do-Not-Answer dataset for evaluating LLM safeguards against harmful prompts.",
+      "section": "benchmark",
+      "evidence_class": "prompt-corpus",
+      "rank": 23
+    },
+    {
+      "repo": "luckyPipewrench/pipelock",
+      "url": "https://github.com/luckyPipewrench/pipelock",
+      "count": 3,
+      "lists": [
+        "LLMSecurity__awesome-agent-skills-security",
+        "mcp-security-project__awesome-agentic-mcp-security",
+        "scadastrangelove__awesome-ai-security-tools"
+      ],
+      "description": "Agent firewall and MCP-aware egress proxy with DLP and injection scanning.",
+      "section": "agent-security",
+      "evidence_class": "defence-tool",
+      "rank": 24
+    },
+    {
+      "repo": "MCP-Defender/MCP-Defender",
+      "url": "https://github.com/MCP-Defender/MCP-Defender",
+      "count": 3,
+      "lists": [
+        "Puliczek__awesome-mcp-security",
+        "mcp-security-project__awesome-agentic-mcp-security",
+        "scadastrangelove__awesome-ai-security-tools"
+      ],
+      "description": "Desktop proxy that blocks malicious MCP traffic.",
+      "section": "agent-security",
+      "evidence_class": "defence-tool",
+      "rank": 25
+    },
+    {
+      "repo": "MCPPhalanx/binaryninja-mcp",
+      "url": "https://github.com/MCPPhalanx/binaryninja-mcp",
+      "count": 3,
+      "lists": [
+        "Puliczek__awesome-mcp-security",
+        "mcp-security-project__awesome-agentic-mcp-security",
+        "scadastrangelove__awesome-ai-security-tools"
+      ],
+      "description": "MCP server for Binary Ninja binary analysis.",
+      "section": "catalog",
+      "evidence_class": "assessment-tool",
+      "rank": 26
+    },
+    {
+      "repo": "mnns/LLMFuzzer",
+      "url": "https://github.com/mnns/LLMFuzzer",
+      "count": 3,
+      "lists": [
+        "cckuailong__awesome-gpt-security",
+        "corca-ai__awesome-llm-security",
+        "scadastrangelove__awesome-ai-security-tools"
+      ],
+      "description": "Fuzzing framework for LLM-integrated application APIs.",
+      "section": "evaluation",
+      "evidence_class": "assessment-tool",
+      "rank": 27
+    },
+    {
+      "repo": "mrexodia/ida-pro-mcp",
+      "url": "https://github.com/mrexodia/ida-pro-mcp",
+      "count": 3,
+      "lists": [
+        "Puliczek__awesome-mcp-security",
+        "mcp-security-project__awesome-agentic-mcp-security",
+        "scadastrangelove__awesome-ai-security-tools"
+      ],
+      "description": "MCP server for IDA Pro reverse engineering.",
+      "section": "catalog",
+      "evidence_class": "assessment-tool",
+      "rank": 28
+    },
+    {
+      "repo": "pasquini-dario/LLMmap",
+      "url": "https://github.com/pasquini-dario/LLMmap",
+      "count": 3,
+      "lists": [
+        "corca-ai__awesome-llm-security",
+        "scadastrangelove__awesome-ai-security-tools",
+        "wearetyomsmnv__Awesome-LLMSecOps"
+      ],
+      "description": "LLMmap: fingerprints which LLM sits behind an application.",
+      "section": "attack-research",
+      "evidence_class": "assessment-tool",
+      "rank": 29
+    },
+    {
+      "repo": "PortSwigger/mcp-server",
+      "url": "https://github.com/PortSwigger/mcp-server",
+      "count": 3,
+      "lists": [
+        "Puliczek__awesome-mcp-security",
+        "mcp-security-project__awesome-agentic-mcp-security",
+        "scadastrangelove__awesome-ai-security-tools"
+      ],
+      "description": "Burp Suite MCP integration for web security testing.",
+      "section": "catalog",
+      "evidence_class": "assessment-tool",
+      "rank": 30
+    },
+    {
+      "repo": "Privatris/AgentLeak",
+      "url": "https://github.com/Privatris/AgentLeak",
+      "count": 3,
+      "lists": [
+        "CryptoAILab__Awesome-LM-SSP",
+        "wearetyomsmnv__Awesome-LLMSecOps",
+        "yueliu1999__Awesome-Jailbreak-on-LLMs"
+      ],
+      "description": "Full-stack benchmark for privacy leakage in multi-agent LLM systems.",
+      "section": "benchmark",
+      "evidence_class": "benchmark",
+      "rank": 31
+    },
+    {
+      "repo": "prompt-security/ps-fuzz",
+      "url": "https://github.com/prompt-security/ps-fuzz",
+      "count": 3,
+      "lists": [
+        "corca-ai__awesome-llm-security",
+        "scadastrangelove__awesome-ai-security-tools",
+        "wearetyomsmnv__Awesome-LLMSecOps"
+      ],
+      "description": "Prompt Fuzzer: tests system prompts against injection and jailbreak attacks.",
+      "section": "evaluation",
+      "evidence_class": "assessment-tool",
+      "rank": 32
+    },
+    {
+      "repo": "Repello-AI/whistleblower",
+      "url": "https://github.com/Repello-AI/whistleblower",
+      "count": 3,
+      "lists": [
+        "corca-ai__awesome-llm-security",
+        "scadastrangelove__awesome-ai-security-tools",
+        "wearetyomsmnv__Awesome-LLMSecOps"
+      ],
+      "description": "Infers an agent system prompt from its outputs (prompt leakage testing).",
+      "section": "evaluation",
+      "evidence_class": "assessment-tool",
+      "rank": 33
+    },
+    {
+      "repo": "slowmist/MCP-Security-Checklist",
+      "url": "https://github.com/slowmist/MCP-Security-Checklist",
+      "count": 3,
+      "lists": [
+        "Puliczek__awesome-mcp-security",
+        "mcp-security-project__awesome-agentic-mcp-security",
+        "scadastrangelove__awesome-ai-security-tools"
+      ],
+      "description": "SlowMist security checklist for MCP-based AI tool ecosystems.",
+      "section": "knowledge",
+      "evidence_class": "framework-data",
+      "rank": 34
+    },
+    {
+      "repo": "sunglasses-dev/sunglasses",
+      "url": "https://github.com/sunglasses-dev/sunglasses",
+      "count": 3,
+      "lists": [
+        "LLMSecurity__awesome-agent-skills-security",
+        "scadastrangelove__awesome-ai-security-tools",
+        "wearetyomsmnv__Awesome-LLMSecOps"
+      ],
+      "description": "Runtime trust scanner for agent skills/tools with pattern library over 100+ attack categories.",
+      "section": "agent-security",
+      "evidence_class": "detection-content",
+      "rank": 35
+    },
+    {
+      "repo": "taoq-ai/ziran",
+      "url": "https://github.com/taoq-ai/ziran",
+      "count": 3,
+      "lists": [
+        "CryptoAILab__Awesome-LM-SSP",
+        "LLMSecurity__awesome-agent-skills-security",
+        "scadastrangelove__awesome-ai-security-tools"
+      ],
+      "description": "Ziran: security testing framework for AI agents.",
+      "section": "evaluation",
+      "evidence_class": "assessment-tool",
+      "rank": 36
+    },
+    {
+      "repo": "tenuo-ai/tenuo",
+      "url": "https://github.com/tenuo-ai/tenuo",
+      "count": 3,
+      "lists": [
+        "scadastrangelove__awesome-ai-security-tools",
+        "wearetyomsmnv__Awesome-LLM-agent-Security",
+        "wearetyomsmnv__Awesome-LLMSecOps"
+      ],
+      "description": "Capability-based authorization for agent tool calls via signed holder-bound warrants.",
+      "section": "agent-security",
+      "evidence_class": "defence-tool",
+      "rank": 37
+    },
+    {
+      "repo": "ThuCCSLab/FigStep",
+      "url": "https://github.com/ThuCCSLab/FigStep",
+      "count": 3,
+      "lists": [
+        "CryptoAILab__Awesome-LM-SSP",
+        "wearetyomsmnv__Awesome-LLMSecOps",
+        "yueliu1999__Awesome-Jailbreak-on-LLMs"
+      ],
+      "description": "FigStep: typographic visual prompts jailbreaking vision-language models.",
+      "section": "attack-research",
+      "evidence_class": "research-technique",
+      "rank": 38
+    },
+    {
+      "repo": "trailofbits/mcp-context-protector",
+      "url": "https://github.com/trailofbits/mcp-context-protector",
+      "count": 3,
+      "lists": [
+        "Puliczek__awesome-mcp-security",
+        "mcp-security-project__awesome-agentic-mcp-security",
+        "scadastrangelove__awesome-ai-security-tools"
+      ],
+      "description": "Trail of Bits security wrapper for MCP servers (trust-on-first-use, injection guarding).",
+      "section": "agent-security",
+      "evidence_class": "defence-tool",
+      "rank": 39
+    },
+    {
+      "repo": "Unispac/Visual-Adversarial-Examples-Jailbreak-Large-Language-Models",
+      "url": "https://github.com/Unispac/Visual-Adversarial-Examples-Jailbreak-Large-Language-Models",
+      "count": 3,
+      "lists": [
+        "CryptoAILab__Awesome-LM-SSP",
+        "corca-ai__awesome-llm-security",
+        "wearetyomsmnv__Awesome-LLMSecOps"
+      ],
+      "description": "Visual adversarial examples that jailbreak multimodal LLMs.",
+      "section": "attack-research",
+      "evidence_class": "research-technique",
+      "rank": 40
+    },
+    {
+      "repo": "utkusen/promptmap",
+      "url": "https://github.com/utkusen/promptmap",
+      "count": 3,
+      "lists": [
+        "7WaySecurity__ai_osint",
+        "cckuailong__awesome-gpt-security",
+        "scadastrangelove__awesome-ai-security-tools"
+      ],
+      "description": "Automated prompt injection scanner for LLM apps; also source of ChatGPT share dorks.",
+      "section": "evaluation",
+      "evidence_class": "assessment-tool",
+      "rank": 41
+    },
+    {
+      "repo": "Virtue-Research/guard-eval-harness",
+      "url": "https://github.com/Virtue-Research/guard-eval-harness",
+      "count": 3,
+      "lists": [
+        "CryptoAILab__Awesome-LM-SSP",
+        "scadastrangelove__awesome-ai-security-tools",
+        "yueliu1999__Awesome-Jailbreak-on-LLMs"
+      ],
+      "description": "CLI harness benchmarking guardrail/moderation classifiers on 80+ safety datasets.",
+      "section": "evaluation",
+      "evidence_class": "benchmark",
+      "rank": 42
+    },
+    {
+      "repo": "wegodev2/virtual-prompt-injection",
+      "url": "https://github.com/wegodev2/virtual-prompt-injection",
+      "count": 3,
+      "lists": [
+        "CryptoAILab__Awesome-LM-SSP",
+        "corca-ai__awesome-llm-security",
+        "wearetyomsmnv__Awesome-LLMSecOps"
+      ],
+      "description": "Virtual Prompt Injection: backdooring instruction-tuned LLMs via poisoned data.",
+      "section": "attack-research",
+      "evidence_class": "research-technique",
+      "rank": 43
+    },
+    {
+      "repo": "wuyoscar/ISC-Bench",
+      "url": "https://github.com/wuyoscar/ISC-Bench",
+      "count": 3,
+      "lists": [
+        "CryptoAILab__Awesome-LM-SSP",
+        "wearetyomsmnv__Awesome-LLM-agent-Security",
+        "yueliu1999__Awesome-Jailbreak-on-LLMs"
+      ],
+      "description": "Benchmark for Internal Safety Collapse in frontier LLMs.",
+      "section": "benchmark",
+      "evidence_class": "benchmark",
+      "rank": 44
+    },
+    {
+      "repo": "x-zheng16/Awesome-Embodied-AI-Safety",
+      "url": "https://github.com/x-zheng16/Awesome-Embodied-AI-Safety",
+      "count": 3,
+      "lists": [
+        "CryptoAILab__Awesome-LM-SSP",
+        "Joe-B-Security__awesome-prompt-injection",
+        "yueliu1999__Awesome-Jailbreak-on-LLMs"
+      ],
+      "description": "Curated survey list on embodied AI safety risks, attacks and defences.",
+      "section": "knowledge",
+      "evidence_class": "curated-list",
+      "rank": 45
+    },
+    {
+      "repo": "XuandongZhao/weak-to-strong",
+      "url": "https://github.com/XuandongZhao/weak-to-strong",
+      "count": 3,
+      "lists": [
+        "CryptoAILab__Awesome-LM-SSP",
+        "corca-ai__awesome-llm-security",
+        "wearetyomsmnv__Awesome-LLMSecOps"
+      ],
+      "description": "Weak-to-strong jailbreaking using small models to steer large ones.",
+      "section": "attack-research",
+      "evidence_class": "research-technique",
+      "rank": 46
+    },
+    {
+      "repo": "YihanWang617/LLM-Jailbreaking-Defense-Backtranslation",
+      "url": "https://github.com/YihanWang617/LLM-Jailbreaking-Defense-Backtranslation",
+      "count": 3,
+      "lists": [
+        "CryptoAILab__Awesome-LM-SSP",
+        "scadastrangelove__awesome-ai-security-tools",
+        "yueliu1999__Awesome-Jailbreak-on-LLMs"
+      ],
+      "description": "Jailbreak defence via backtranslation of model responses.",
+      "section": "defence",
+      "evidence_class": "research-technique",
+      "rank": 47
+    },
+    {
+      "repo": "uiuc-kang-lab/InjecAgent",
+      "url": "https://github.com/uiuc-kang-lab/InjecAgent",
+      "count": 2,
+      "lists": [
+        "CryptoAILab__Awesome-LM-SSP",
+        "LLMSecurity__awesome-agent-skills-security"
+      ],
+      "description": "InjecAgent benchmark of indirect prompt injection in tool-integrated agents.",
+      "section": "benchmark",
+      "evidence_class": "benchmark",
+      "rank": 48
+    },
+    {
+      "repo": "protectai/ai-exploits",
+      "url": "https://github.com/protectai/ai-exploits",
+      "count": 2,
+      "lists": [
+        "cckuailong__awesome-gpt-security",
+        "scadastrangelove__awesome-ai-security-tools"
+      ],
+      "description": "Real-world exploits for responsibly disclosed AI/ML infrastructure vulnerabilities.",
+      "section": "attack-research",
+      "evidence_class": "incident-data",
+      "rank": 49
+    },
+    {
+      "repo": "harishsg993010/damn-vulnerable-MCP-server",
+      "url": "https://github.com/harishsg993010/damn-vulnerable-MCP-server",
+      "count": 2,
+      "lists": [
+        "Puliczek__awesome-mcp-security",
+        "mcp-security-project__awesome-agentic-mcp-security"
+      ],
+      "description": "Intentionally vulnerable MCP server for hands-on security training.",
+      "section": "lab",
+      "evidence_class": "lab-exercise",
+      "rank": 50
+    },
+    {
+      "repo": "whylabs/langkit",
+      "url": "https://github.com/whylabs/langkit",
+      "count": 2,
+      "lists": [
+        "scadastrangelove__awesome-ai-security-tools",
+        "wearetyomsmnv__Awesome-LLMSecOps"
+      ],
+      "description": "LLM monitoring toolkit extracting jailbreak similarity and injection signals.",
+      "section": "defence",
+      "evidence_class": "detection-content",
+      "rank": 51
+    },
+    {
+      "repo": "sleeepeer/PoisonedRAG",
+      "url": "https://github.com/sleeepeer/PoisonedRAG",
+      "count": 2,
+      "lists": [
+        "CryptoAILab__Awesome-LM-SSP",
+        "wearetyomsmnv__Awesome-LLMSecOps"
+      ],
+      "description": "PoisonedRAG: knowledge-poisoning attacks against retrieval-augmented generation.",
+      "section": "attack-research",
+      "evidence_class": "research-technique",
+      "rank": 52
+    },
+    {
+      "repo": "BishopFox/BrokenHill",
+      "url": "https://github.com/BishopFox/BrokenHill",
+      "count": 2,
+      "lists": [
+        "user1342__Awesome-LLM-Red-Teaming",
+        "wearetyomsmnv__Awesome-LLMSecOps"
+      ],
+      "description": "Bishop Fox GCG implementation crafting adversarial suffix prompts.",
+      "section": "attack-research",
+      "evidence_class": "assessment-tool",
+      "rank": 53
+    },
+    {
+      "repo": "doronp/agentshield-benchmark",
+      "url": "https://github.com/doronp/agentshield-benchmark",
+      "count": 2,
+      "lists": [
+        "scadastrangelove__awesome-ai-security-tools",
+        "yueliu1999__Awesome-Jailbreak-on-LLMs"
+      ],
+      "description": "Benchmark corpus and adapters comparing commercial agent-security services.",
+      "section": "benchmark",
+      "evidence_class": "benchmark",
+      "rank": 54
+    },
+    {
+      "repo": "AmenRa/guardbench",
+      "url": "https://github.com/AmenRa/guardbench",
+      "count": 2,
+      "lists": [
+        "CryptoAILab__Awesome-LM-SSP",
+        "yueliu1999__Awesome-Jailbreak-on-LLMs"
+      ],
+      "description": "GuardBench: large-scale benchmark for guardrail models.",
+      "section": "benchmark",
+      "evidence_class": "benchmark",
+      "rank": 55
+    },
+    {
+      "repo": "Continuum-AI-Corp/OrcaReplay",
+      "url": "https://github.com/Continuum-AI-Corp/OrcaReplay",
+      "count": 2,
+      "lists": [
+        "wearetyomsmnv__Awesome-LLMSecOps",
+        "yueliu1999__Awesome-Jailbreak-on-LLMs"
+      ],
+      "description": "Records coding-agent HTTP traffic so incidents can be replayed offline.",
+      "section": "agent-security",
+      "evidence_class": "incident-data",
+      "rank": 56
+    },
+    {
+      "repo": "precize/OWASP-Agentic-AI",
+      "url": "https://github.com/precize/OWASP-Agentic-AI",
+      "count": 2,
+      "lists": [
+        "wearetyomsmnv__Awesome-LLM-agent-Security",
+        "wearetyomsmnv__Awesome-LLMSecOps"
+      ],
+      "description": "Agentic AI threat catalogue (AAC-xx) for authorization/control hijacking and more.",
+      "section": "knowledge",
+      "evidence_class": "framework-data",
+      "rank": 57
+    },
+    {
+      "repo": "probityai/agent-evidence-vectors",
+      "url": "https://github.com/probityai/agent-evidence-vectors",
+      "count": 2,
+      "lists": [
+        "scadastrangelove__awesome-ai-security-tools",
+        "wearetyomsmnv__Awesome-LLMSecOps"
+      ],
+      "description": "Conformance and adversarial test vectors for agent evidence with a Go verifier.",
+      "section": "evaluation",
+      "evidence_class": "prompt-corpus",
+      "rank": 58
+    },
+    {
+      "repo": "riseandignite/mcp-shield",
+      "url": "https://github.com/riseandignite/mcp-shield",
+      "count": 2,
+      "lists": [
+        "Puliczek__awesome-mcp-security",
+        "mcp-security-project__awesome-agentic-mcp-security"
+      ],
+      "description": "MCP-Shield: scans installed MCP servers for poisoning and exfiltration patterns.",
+      "section": "agent-security",
+      "evidence_class": "assessment-tool",
+      "rank": 59
+    },
+    {
+      "repo": "aminrj-labs/mcp-attack-labs",
+      "url": "https://github.com/aminrj-labs/mcp-attack-labs",
+      "count": 2,
+      "lists": [
+        "mcp-security-project__awesome-agentic-mcp-security",
+        "scadastrangelove__awesome-ai-security-tools"
+      ],
+      "description": "Hands-on MCP attack lab exercises.",
+      "section": "lab",
+      "evidence_class": "lab-exercise",
+      "rank": 60
+    }
+  ],
+  "papers": [
+    {
+      "id": "2302.12173",
+      "url": "https://arxiv.org/abs/2302.12173",
+      "title": "Not what you've signed up for: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection",
+      "count": 8,
+      "lists": [
+        "CryptoAILab__Awesome-LM-SSP",
+        "Joe-B-Security__awesome-prompt-injection",
+        "LLMSecurity__awesome-agent-skills-security",
+        "Shiva108__ai-llm-red-team-handbook",
+        "cckuailong__awesome-gpt-security",
+        "ucsb-mlsec__Awesome-Agent-Security",
+        "ydyjya__Awesome-LLM-Safety",
+        "yueliu1999__Awesome-Jailbreak-on-LLMs"
+      ]
+    },
+    {
+      "id": "2504.03767",
+      "url": "https://arxiv.org/abs/2504.03767",
+      "title": "MCP Safety Audit: LLMs with the Model Context Protocol Allow Major Security Exploits",
+      "count": 7,
+      "lists": [
+        "7WaySecurity__ai_osint",
+        "CryptoAILab__Awesome-LM-SSP",
+        "LLMSecurity__awesome-agent-skills-security",
+        "Puliczek__awesome-mcp-security",
+        "mcp-security-project__awesome-agentic-mcp-security",
+        "ucsb-mlsec__Awesome-Agent-Security",
+        "ydyjya__Awesome-LLM-Safety"
+      ]
+    },
+    {
+      "id": "2306.05499",
+      "url": "https://arxiv.org/abs/2306.05499",
+      "title": "Prompt Injection attack against LLM-integrated Applications (HouYi)",
+      "count": 6,
+      "lists": [
+        "CryptoAILab__Awesome-LM-SSP",
+        "LLMSecurity__awesome-agent-skills-security",
+        "Shiva108__ai-llm-red-team-handbook",
+        "ucsb-mlsec__Awesome-Agent-Security",
+        "ydyjya__Awesome-LLM-Safety",
+        "yueliu1999__Awesome-Jailbreak-on-LLMs"
+      ]
+    },
+    {
+      "id": "2307.15043",
+      "url": "https://arxiv.org/abs/2307.15043",
+      "title": "Universal and Transferable Adversarial Attacks on Aligned Language Models (GCG)",
+      "count": 6,
+      "lists": [
+        "CryptoAILab__Awesome-LM-SSP",
+        "Joe-B-Security__awesome-prompt-injection",
+        "Shiva108__ai-llm-red-team-handbook",
+        "user1342__Awesome-LLM-Red-Teaming",
+        "ydyjya__Awesome-LLM-Safety",
+        "yueliu1999__Awesome-Jailbreak-on-LLMs"
+      ]
+    },
+    {
+      "id": "2209.07858",
+      "url": "https://arxiv.org/abs/2209.07858",
+      "title": "Red Teaming Language Models to Reduce Harms: Methods, Scaling Behaviors, and Lessons Learned",
+      "count": 5,
+      "lists": [
+        "CryptoAILab__Awesome-LM-SSP",
+        "Shiva108__ai-llm-red-team-handbook",
+        "cckuailong__awesome-gpt-security",
+        "ydyjya__Awesome-LLM-Safety",
+        "yueliu1999__Awesome-Jailbreak-on-LLMs"
+      ]
+    },
+    {
+      "id": "2305.13860",
+      "url": "https://arxiv.org/abs/2305.13860",
+      "title": "Jailbreaking ChatGPT via Prompt Engineering: An Empirical Study",
+      "count": 5,
+      "lists": [
+        "CryptoAILab__Awesome-LM-SSP",
+        "LLMSecurity__awesome-agent-skills-security",
+        "Shiva108__ai-llm-red-team-handbook",
+        "ydyjya__Awesome-LLM-Safety",
+        "yueliu1999__Awesome-Jailbreak-on-LLMs"
+      ]
+    },
+    {
+      "id": "2211.09527",
+      "url": "https://arxiv.org/abs/2211.09527",
+      "title": "Ignore Previous Prompt: Attack Techniques For Language Models",
+      "count": 5,
+      "lists": [
+        "Shiva108__ai-llm-red-team-handbook",
+        "cckuailong__awesome-gpt-security",
+        "ucsb-mlsec__Awesome-Agent-Security",
+        "ydyjya__Awesome-LLM-Safety",
+        "yueliu1999__Awesome-Jailbreak-on-LLMs"
+      ]
+    },
+    {
+      "id": "2603.22489",
+      "url": "https://arxiv.org/abs/2603.22489",
+      "title": "Model Context Protocol Threat Modeling and Analyzing Vulnerabilities to Prompt Injection (STRIDE/DREAD)",
+      "count": 4,
+      "lists": [
+        "7WaySecurity__ai_osint",
+        "LLMSecurity__awesome-agent-skills-security",
+        "mcp-security-project__awesome-agentic-mcp-security",
+        "ydyjya__Awesome-LLM-Safety"
+      ]
+    },
+    {
+      "id": "2403.02691",
+      "url": "https://arxiv.org/abs/2403.02691",
+      "title": "InjecAgent: Benchmarking Indirect Prompt Injections in Tool-Integrated LLM Agents",
+      "count": 4,
+      "lists": [
+        "CryptoAILab__Awesome-LM-SSP",
+        "LLMSecurity__awesome-agent-skills-security",
+        "ucsb-mlsec__Awesome-Agent-Security",
+        "ydyjya__Awesome-LLM-Safety"
+      ]
+    },
+    {
+      "id": "2311.16119",
+      "url": "https://arxiv.org/abs/2311.16119",
+      "title": "Ignore This Title and HackAPrompt: Exposing Systemic Vulnerabilities of LLMs through a Global Scale Prompt Hacking Competition",
+      "count": 4,
+      "lists": [
+        "CryptoAILab__Awesome-LM-SSP",
+        "PromptLabs__Prompt-Hacking-Resources",
+        "ucsb-mlsec__Awesome-Agent-Security",
+        "ydyjya__Awesome-LLM-Safety"
+      ]
+    },
+    {
+      "id": "2312.06674",
+      "url": "https://arxiv.org/abs/2312.06674",
+      "title": "Llama Guard: LLM-based Input-Output Safeguard for Human-AI Conversations",
+      "count": 4,
+      "lists": [
+        "CryptoAILab__Awesome-LM-SSP",
+        "ucsb-mlsec__Awesome-Agent-Security",
+        "ydyjya__Awesome-LLM-Safety",
+        "yueliu1999__Awesome-Jailbreak-on-LLMs"
+      ]
+    },
+    {
+      "id": "2204.05862",
+      "url": "https://arxiv.org/abs/2204.05862",
+      "title": "Training a Helpful and Harmless Assistant with RLHF",
+      "count": 4,
+      "lists": [
+        "CryptoAILab__Awesome-LM-SSP",
+        "Shiva108__ai-llm-red-team-handbook",
+        "ydyjya__Awesome-LLM-Safety",
+        "yueliu1999__Awesome-Jailbreak-on-LLMs"
+      ]
+    },
+    {
+      "id": "2009.11462",
+      "url": "https://arxiv.org/abs/2009.11462",
+      "title": "RealToxicityPrompts: Evaluating Neural Toxic Degeneration in Language Models",
+      "count": 4,
+      "lists": [
+        "CryptoAILab__Awesome-LM-SSP",
+        "Shiva108__ai-llm-red-team-handbook",
+        "cckuailong__awesome-gpt-security",
+        "ydyjya__Awesome-LLM-Safety"
+      ]
+    },
+    {
+      "id": "2603.23509",
+      "url": "https://arxiv.org/abs/2603.23509",
+      "title": "Internal Safety Collapse in Frontier Large Language Models",
+      "count": 4,
+      "lists": [
+        "CryptoAILab__Awesome-LM-SSP",
+        "wearetyomsmnv__Awesome-LLM-agent-Security",
+        "ydyjya__Awesome-LLM-Safety",
+        "yueliu1999__Awesome-Jailbreak-on-LLMs"
+      ]
+    },
+    {
+      "id": "2510.09023",
+      "url": "https://arxiv.org/abs/2510.09023",
+      "title": "The Attacker Moves Second: Stronger Adaptive Attacks Bypass Defenses Against LLM Jailbreaks and Prompt Injections",
+      "count": 4,
+      "lists": [
+        "CryptoAILab__Awesome-LM-SSP",
+        "Joe-B-Security__awesome-prompt-injection",
+        "ydyjya__Awesome-LLM-Safety",
+        "yueliu1999__Awesome-Jailbreak-on-LLMs"
+      ]
+    },
+    {
+      "id": "2503.20823",
+      "url": "https://arxiv.org/abs/2503.20823",
+      "title": "Playing the Fool: Jailbreaking LLMs and Multimodal LLMs with Out-of-Distribution Strategy",
+      "count": 4,
+      "lists": [
+        "CryptoAILab__Awesome-LM-SSP",
+        "corca-ai__awesome-llm-security",
+        "ydyjya__Awesome-LLM-Safety",
+        "yueliu1999__Awesome-Jailbreak-on-LLMs"
+      ]
+    },
+    {
+      "id": "2501.18280",
+      "url": "https://arxiv.org/abs/2501.18280",
+      "title": "Jailbreaking LLMs' Safeguard with Universal Magic Words for Text Embedding Models",
+      "count": 4,
+      "lists": [
+        "CryptoAILab__Awesome-LM-SSP",
+        "Joe-B-Security__awesome-prompt-injection",
+        "ydyjya__Awesome-LLM-Safety",
+        "yueliu1999__Awesome-Jailbreak-on-LLMs"
+      ]
+    },
+    {
+      "id": "2410.11317",
+      "url": "https://arxiv.org/abs/2410.11317",
+      "title": "Deciphering the Chaos: Enhancing Jailbreak Attacks via Adversarial Prompt Translation",
+      "count": 4,
+      "lists": [
+        "CryptoAILab__Awesome-LM-SSP",
+        "PromptLabs__Prompt-Hacking-Resources",
+        "ydyjya__Awesome-LLM-Safety",
+        "yueliu1999__Awesome-Jailbreak-on-LLMs"
+      ]
+    },
+    {
+      "id": "2407.01902",
+      "url": "https://arxiv.org/abs/2407.01902",
+      "title": "SoP: Unlock the Power of Social Facilitation for Automatic Jailbreak Attack",
+      "count": 4,
+      "lists": [
+        "CryptoAILab__Awesome-LM-SSP",
+        "PromptLabs__Prompt-Hacking-Resources",
+        "ydyjya__Awesome-LLM-Safety",
+        "yueliu1999__Awesome-Jailbreak-on-LLMs"
+      ]
+    },
+    {
+      "id": "2402.13457",
+      "url": "https://arxiv.org/abs/2402.13457",
+      "title": "LLM Jailbreak Attack versus Defense Techniques -- A Comprehensive Study",
+      "count": 4,
+      "lists": [
+        "CryptoAILab__Awesome-LM-SSP",
+        "LLMSecurity__awesome-agent-skills-security",
+        "ydyjya__Awesome-LLM-Safety",
+        "yueliu1999__Awesome-Jailbreak-on-LLMs"
+      ]
+    },
+    {
+      "id": "2312.02119",
+      "url": "https://arxiv.org/abs/2312.02119",
+      "title": "Tree of Attacks: Jailbreaking Black-Box LLMs Automatically (TAP)",
+      "count": 4,
+      "lists": [
+        "CryptoAILab__Awesome-LM-SSP",
+        "Shiva108__ai-llm-red-team-handbook",
+        "ydyjya__Awesome-LLM-Safety",
+        "yueliu1999__Awesome-Jailbreak-on-LLMs"
+      ]
+    },
+    {
+      "id": "2302.05733",
+      "url": "https://arxiv.org/abs/2302.05733",
+      "title": "Exploiting Programmatic Behavior of LLMs: Dual-Use Through Standard Security Attacks",
+      "count": 4,
+      "lists": [
+        "CryptoAILab__Awesome-LM-SSP",
+        "Shiva108__ai-llm-red-team-handbook",
+        "cckuailong__awesome-gpt-security",
+        "yueliu1999__Awesome-Jailbreak-on-LLMs"
+      ]
+    },
+    {
+      "id": "2310.03684",
+      "url": "https://arxiv.org/abs/2310.03684",
+      "title": "SmoothLLM: Defending Large Language Models Against Jailbreaking Attacks",
+      "count": 4,
+      "lists": [
+        "CryptoAILab__Awesome-LM-SSP",
+        "Shiva108__ai-llm-red-team-handbook",
+        "ydyjya__Awesome-LLM-Safety",
+        "yueliu1999__Awesome-Jailbreak-on-LLMs"
+      ]
+    },
+    {
+      "id": "2310.15140",
+      "url": "https://arxiv.org/abs/2310.15140",
+      "title": "AutoDAN: Interpretable Gradient-Based Adversarial Attacks on Large Language Models",
+      "count": 4,
+      "lists": [
+        "CryptoAILab__Awesome-LM-SSP",
+        "user1342__Awesome-LLM-Red-Teaming",
+        "ydyjya__Awesome-LLM-Safety",
+        "yueliu1999__Awesome-Jailbreak-on-LLMs"
+      ]
+    },
+    {
+      "id": "2310.06387",
+      "url": "https://arxiv.org/abs/2310.06387",
+      "title": "Jailbreak and Guard Aligned Language Models with Only Few In-Context Demonstrations",
+      "count": 4,
+      "lists": [
+        "CryptoAILab__Awesome-LM-SSP",
+        "Shiva108__ai-llm-red-team-handbook",
+        "ydyjya__Awesome-LLM-Safety",
+        "yueliu1999__Awesome-Jailbreak-on-LLMs"
+      ]
+    },
+    {
+      "id": "2307.02483",
+      "url": "https://arxiv.org/abs/2307.02483",
+      "title": "Jailbroken: How Does LLM Safety Training Fail?",
+      "count": 4,
+      "lists": [
+        "CryptoAILab__Awesome-LM-SSP",
+        "Shiva108__ai-llm-red-team-handbook",
+        "ydyjya__Awesome-LLM-Safety",
+        "yueliu1999__Awesome-Jailbreak-on-LLMs"
+      ]
+    },
+    {
+      "id": "2307.08715",
+      "url": "https://arxiv.org/abs/2307.08715",
+      "title": "MasterKey: Automated Jailbreak Across Multiple Large Language Model Chatbots",
+      "count": 4,
+      "lists": [
+        "CryptoAILab__Awesome-LM-SSP",
+        "LLMSecurity__awesome-agent-skills-security",
+        "ydyjya__Awesome-LLM-Safety",
+        "yueliu1999__Awesome-Jailbreak-on-LLMs"
+      ]
+    },
+    {
+      "id": "2410.02644",
+      "url": "https://arxiv.org/abs/2410.02644",
+      "title": "Agent Security Bench (ASB): Formalizing and Benchmarking Attacks and Defenses in LLM-based Agents",
+      "count": 4,
+      "lists": [
+        "CryptoAILab__Awesome-LM-SSP",
+        "LLMSecurity__awesome-agent-skills-security",
+        "ucsb-mlsec__Awesome-Agent-Security",
+        "ydyjya__Awesome-LLM-Safety"
+      ]
+    },
+    {
+      "id": "2406.08689",
+      "url": "https://arxiv.org/abs/2406.08689",
+      "title": "Security of AI Agents",
+      "count": 4,
+      "lists": [
+        "CryptoAILab__Awesome-LM-SSP",
+        "LLMSecurity__awesome-agent-skills-security",
+        "ucsb-mlsec__Awesome-Agent-Security",
+        "ydyjya__Awesome-LLM-Safety"
+      ]
+    },
+    {
+      "id": "2602.14281",
+      "url": "https://arxiv.org/abs/2602.14281",
+      "title": "MCPShield: A Security Cognition Layer for Adaptive Trust Calibration in Model Context Protocol Agents",
+      "count": 4,
+      "lists": [
+        "CryptoAILab__Awesome-LM-SSP",
+        "LLMSecurity__awesome-agent-skills-security",
+        "mcp-security-project__awesome-agentic-mcp-security",
+        "ydyjya__Awesome-LLM-Safety"
+      ]
+    },
+    {
+      "id": "2506.02040",
+      "url": "https://arxiv.org/abs/2506.02040",
+      "title": "Beyond the Protocol: Unveiling Attack Vectors in the Model Context Protocol Ecosystem",
+      "count": 4,
+      "lists": [
+        "CryptoAILab__Awesome-LM-SSP",
+        "Puliczek__awesome-mcp-security",
+        "mcp-security-project__awesome-agentic-mcp-security",
+        "ydyjya__Awesome-LLM-Safety"
+      ]
+    },
+    {
+      "id": "2504.19793",
+      "url": "https://arxiv.org/abs/2504.19793",
+      "title": "Prompt Injection Attack to Tool Selection in LLM Agents (ToolHijacker)",
+      "count": 4,
+      "lists": [
+        "CryptoAILab__Awesome-LM-SSP",
+        "Joe-B-Security__awesome-prompt-injection",
+        "ucsb-mlsec__Awesome-Agent-Security",
+        "ydyjya__Awesome-LLM-Safety"
+      ]
+    },
+    {
+      "id": "2504.12757",
+      "url": "https://arxiv.org/abs/2504.12757",
+      "title": "MCP Guardian: A Security-First Layer for Safeguarding MCP-Based AI System",
+      "count": 4,
+      "lists": [
+        "CryptoAILab__Awesome-LM-SSP",
+        "Puliczek__awesome-mcp-security",
+        "mcp-security-project__awesome-agentic-mcp-security",
+        "ydyjya__Awesome-LLM-Safety"
+      ]
+    },
+    {
+      "id": "2503.23278",
+      "url": "https://arxiv.org/abs/2503.23278",
+      "title": "Model Context Protocol (MCP): Landscape, Security Threats, and Future Research Directions",
+      "count": 4,
+      "lists": [
+        "CryptoAILab__Awesome-LM-SSP",
+        "Puliczek__awesome-mcp-security",
+        "mcp-security-project__awesome-agentic-mcp-security",
+        "ucsb-mlsec__Awesome-Agent-Security"
+      ]
+    },
+    {
+      "id": "2601.17549",
+      "url": "https://arxiv.org/abs/2601.17549",
+      "title": "Breaking the Protocol (PROTOAMP / ATTESTMCP)",
+      "count": 3,
+      "lists": [
+        "7WaySecurity__ai_osint",
+        "mcp-security-project__awesome-agentic-mcp-security",
+        "ydyjya__Awesome-LLM-Safety"
+      ]
+    },
+    {
+      "id": "2407.14937",
+      "url": "https://arxiv.org/abs/2407.14937",
+      "title": "Operationalizing a Threat Model for Red-Teaming Large Language Models (LLMs)",
+      "count": 3,
+      "lists": [
+        "CryptoAILab__Awesome-LM-SSP",
+        "ydyjya__Awesome-LLM-Safety",
+        "yueliu1999__Awesome-Jailbreak-on-LLMs"
+      ]
+    },
+    {
+      "id": "2407.19354",
+      "url": "https://arxiv.org/abs/2407.19354",
+      "title": "The Emerged Security and Privacy of LLM Agent: A Survey with Case Studies",
+      "count": 3,
+      "lists": [
+        "CryptoAILab__Awesome-LM-SSP",
+        "LLMSecurity__awesome-agent-skills-security",
+        "ydyjya__Awesome-LLM-Safety"
+      ]
+    },
+    {
+      "id": "2402.09283",
+      "url": "https://arxiv.org/abs/2402.09283",
+      "title": "Attacks, Defenses and Evaluations for LLM Conversation Safety: A Survey",
+      "count": 3,
+      "lists": [
+        "CryptoAILab__Awesome-LM-SSP",
+        "LLMSecurity__awesome-agent-skills-security",
+        "ydyjya__Awesome-LLM-Safety"
+      ]
+    },
+    {
+      "id": "2401.10019",
+      "url": "https://arxiv.org/abs/2401.10019",
+      "title": "R-Judge: Benchmarking Safety Risk Awareness for LLM Agents",
+      "count": 3,
+      "lists": [
+        "CryptoAILab__Awesome-LM-SSP",
+        "LLMSecurity__awesome-agent-skills-security",
+        "ydyjya__Awesome-LLM-Safety"
+      ]
+    },
+    {
+      "id": "2406.09321",
+      "url": "https://arxiv.org/abs/2406.09321",
+      "title": "JailbreakEval: An Integrated Safety Evaluator Toolkit for Assessing Jailbreaks Against LLMs",
+      "count": 3,
+      "lists": [
+        "CryptoAILab__Awesome-LM-SSP",
+        "ydyjya__Awesome-LLM-Safety",
+        "yueliu1999__Awesome-Jailbreak-on-LLMs"
+      ]
+    }
+  ],
+  "osint_tools": [
+    {
+      "name": "OpenOSINT",
+      "url": "https://github.com/OpenOSINT/OpenOSINT",
+      "source_list": "OpenOSINT__OpenOSINT",
+      "note": "LLM agent + MCP server chaining 21 OSINT tools (email, username, WHOIS, Shodan, VirusTotal, breach) with entity graph."
+    },
+    {
+      "name": "Taranis AI",
+      "url": "https://github.com/taranis-ai/taranis-ai",
+      "source_list": "ubikron__Awesome-AI-OSINT",
+      "note": "Self-hosted AI-assisted OSINT/news collection and analysis platform for intel teams."
+    },
+    {
+      "name": "osintgpt",
+      "url": "https://github.com/estebanpdl/osintgpt",
+      "source_list": "ubikron__Awesome-AI-OSINT",
+      "note": "OpenAI embeddings + Qdrant semantic search over OSINT corpora (Telegram etc.)."
+    },
+    {
+      "name": "Robin",
+      "url": "https://github.com/apurvsinghgautam/robin",
+      "source_list": "ubikron__Awesome-AI-OSINT",
+      "note": "LLM-powered dark web OSINT search and summarisation."
+    },
+    {
+      "name": "OSINT-Assistant (Perplexity Sonar)",
+      "url": "https://github.com/AXRoux/OSINT-Assistant",
+      "source_list": "ubikron__Awesome-AI-OSINT",
+      "note": "Perplexity Sonar-based research assistant for OSINT queries."
+    },
+    {
+      "name": "DarkGPT",
+      "url": "https://github.com/binaco/DarkGPT",
+      "source_list": "ubikron__Awesome-AI-OSINT",
+      "note": "Self-hosted GPT-based OSINT assistant (listed under CLI tools)."
+    },
+    {
+      "name": "mcp-maigret",
+      "url": "https://github.com/BurtTheCoder/mcp-maigret",
+      "source_list": "ubikron__Awesome-AI-OSINT",
+      "note": "MCP server exposing Maigret username enumeration to LLM clients."
+    },
+    {
+      "name": "OSINT Tools MCP Server",
+      "url": "https://github.com/frishtik/osint-tools-mcp-server",
+      "source_list": "ubikron__Awesome-AI-OSINT",
+      "note": "MCP server bundling multiple OSINT tools for AI-assisted recon."
+    },
+    {
+      "name": "Claude-OSINT-Investigator",
+      "url": "https://github.com/danielrosehill/Claude-OSINT-Investigator",
+      "source_list": "ubikron__Awesome-AI-OSINT",
+      "note": "Claude Code template/workflow for structured OSINT investigations."
+    },
+    {
+      "name": "osint-skill",
+      "url": "https://github.com/smixs/osint-skill",
+      "source_list": "ubikron__Awesome-AI-OSINT",
+      "note": "Agent skill for OSINT across Claude Code, Codex, OpenCode."
+    },
+    {
+      "name": "OSINT360-GPT",
+      "url": "https://github.com/oryon-osint/OSINT360-GPT",
+      "source_list": "ubikron__Awesome-AI-OSINT",
+      "note": "Custom GPT configuration for cyber intelligence OSINT."
+    },
+    {
+      "name": "Sherlock Mail",
+      "url": "https://github.com/Hamed233/Sherlock-Mail-AI-Powered-Email-Intelligence",
+      "source_list": "ubikron__Awesome-AI-OSINT",
+      "note": "AI-powered email intelligence/enrichment."
+    },
+    {
+      "name": "ArkhamMirror",
+      "url": "https://github.com/1n3202/ArkhamMirror",
+      "source_list": "ubikron__Awesome-AI-OSINT",
+      "note": "Self-hosted AI document analysis for investigations."
+    },
+    {
+      "name": "GeoIntel",
+      "url": "https://github.com/atiilla/GeoIntel",
+      "source_list": "ubikron__Awesome-AI-OSINT",
+      "note": "Python package for AI-assisted image geolocation (GEOINT)."
+    },
+    {
+      "name": "GeoSentinel",
+      "url": "https://github.com/acuestamd/geosentinel",
+      "source_list": "ubikron__Awesome-AI-OSINT",
+      "note": "Geospatial monitoring/OSINT dashboard with AI features."
+    },
+    {
+      "name": "PANO",
+      "url": "https://github.com/ALW1EZ/PANO",
+      "source_list": "ubikron__Awesome-AI-OSINT",
+      "note": "Platform for analysis and network investigation (link analysis) with AI assist."
+    },
+    {
+      "name": "globalthreatmap",
+      "url": "https://github.com/unicodeveloper/globalthreatmap",
+      "source_list": "ubikron__Awesome-AI-OSINT",
+      "note": "AI-driven worldwide events/threat monitoring map."
+    },
+    {
+      "name": "god-eye / aisubs / SmartSubAI",
+      "url": "https://github.com/Vyntral/god-eye",
+      "source_list": "ubikron__Awesome-AI-OSINT",
+      "note": "AI-assisted subdomain enumeration tools (also topscoder/aisubs, OCEANOFANYTHING/SmartSubAI)."
+    },
+    {
+      "name": "CensysGPT",
+      "url": "https://gpt.censys.io/",
+      "source_list": "ubikron__Awesome-AI-OSINT",
+      "note": "Natural-language to Censys query translation for host search."
+    },
+    {
+      "name": "ZoomEye GPT",
+      "url": "https://www.zoomeye.ai/gpt",
+      "source_list": "ubikron__Awesome-AI-OSINT",
+      "note": "LLM interface over ZoomEye internet-asset search."
+    },
+    {
+      "name": "GeoSpy",
+      "url": "https://geospy.ai/",
+      "source_list": "ubikron__Awesome-AI-OSINT",
+      "note": "AI photo geolocation service (GEOINT)."
+    },
+    {
+      "name": "Picarta",
+      "url": "https://picarta.ai/",
+      "source_list": "ubikron__Awesome-AI-OSINT",
+      "note": "AI image geolocation."
+    },
+    {
+      "name": "Sensity / DeepWare / ImageWhisperer",
+      "url": "https://sensity.ai/",
+      "source_list": "ubikron__Awesome-AI-OSINT",
+      "note": "Deepfake / AI-generated content detection (also deepware.ai, imagewhisperer.org)."
+    },
+    {
+      "name": "Cylect.io",
+      "url": "https://cylect.io/",
+      "source_list": "ubikron__Awesome-AI-OSINT",
+      "note": "AI OSINT meta search engine."
+    },
+    {
+      "name": "Research Pilot (Digital Digging)",
+      "url": "https://digitaldigging.org/research/",
+      "source_list": "ubikron__Awesome-AI-OSINT",
+      "note": "AI research assistant for open-source investigators."
+    },
+    {
+      "name": "AI OSINT dorks & queries (7WaySecurity)",
+      "url": "https://github.com/7WaySecurity/ai_osint",
+      "source_list": "7WaySecurity__ai_osint",
+      "note": "Google/Shodan/Censys/GitHub dorks for exposed LLM endpoints, vector DBs, MCP servers, leaked AI keys; plus Sigma rules and AI threat-intel notes."
+    },
+    {
+      "name": "Agent Threat Rules (ATR)",
+      "url": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+      "source_list": "7WaySecurity__ai_osint",
+      "note": "Sigma-like detection rule format (425 rules) for agent/skill/MCP threats mapped to OWASP/ATLAS."
+    },
+    {
+      "name": "Vulnerable MCP Project",
+      "url": "https://vulnerablemcp.info/",
+      "source_list": "7WaySecurity__ai_osint",
+      "note": "MCP vulnerability database with CVEs, CVSS, PoCs and remediation."
+    },
+    {
+      "name": "MCP Landscape",
+      "url": "https://github.com/security-pride/MCP_Landscape",
+      "source_list": "7WaySecurity__ai_osint",
+      "note": "Academic MCP attack-surface research with PoC servers."
+    },
+    {
+      "name": "mcpSafetyScanner",
+      "url": "https://github.com/johnhalloran321/mcpSafetyScanner",
+      "source_list": "7WaySecurity__ai_osint",
+      "note": "Audits MCP server configs for injection, tool poisoning, excess permissions."
+    },
+    {
+      "name": "API Radar",
+      "url": "https://apiradar.live/",
+      "source_list": "7WaySecurity__ai_osint",
+      "note": "Live monitor of leaked AI API keys on GitHub."
+    },
+    {
+      "name": "KeyLeak Detector",
+      "url": "https://github.com/Amal-David/keyleak-detector",
+      "source_list": "7WaySecurity__ai_osint",
+      "note": "Web scanner with 200+ secret patterns incl. AI providers."
+    },
+    {
+      "name": "KeySentry",
+      "url": "https://github.com/AdityaBhatt3010/KeySentry",
+      "source_list": "7WaySecurity__ai_osint",
+      "note": "Scans GitHub repos for AI/LLM provider API keys."
+    },
+    {
+      "name": "KeyHacks",
+      "url": "https://github.com/streaak/keyhacks",
+      "source_list": "7WaySecurity__ai_osint",
+      "note": "Commands to validate whether discovered API keys are live."
+    },
+    {
+      "name": "OSINT MCP Server (Glama)",
+      "url": "https://glama.ai/mcp/servers/Krisparenthetic284/osint-mcp-server",
+      "source_list": "7WaySecurity__ai_osint",
+      "note": "37 OSINT tools over 12 sources exposed via MCP."
+    },
+    {
+      "name": "AI-Red-Teaming-Guide / LLMSecurityGuide",
+      "url": "https://github.com/requie/AI-Red-Teaming-Guide",
+      "source_list": "7WaySecurity__ai_osint",
+      "note": "OWASP GenAI red teaming + LLM/Agentic Top 10 guides with ATLAS mapping (also requie/LLMSecurityGuide)."
+    }
+  ],
+  "aiid": {
+    "repo": "responsible-ai-collaborative/aiid",
+    "commit": "b74f812497e9a33812593dda003a145dd5957b89 (2026-10-05)",
+    "storage": "Incident data lives in a MongoDB Atlas database (aiidprod; plus translations, history, customData). The repo is a Gatsby/Netlify site + serverless GraphQL; it does NOT ship the incident corpus.",
+    "structured_data_in_repo": [
+      {
+        "path": "site/gatsby-site/playwright/seeds/aiidprod/taxa.ts",
+        "what": "~306KB full taxonomy definitions (field_list, enums, descriptions) for namespaces CSETv1, CSETv1_Annotator-1/-2, GMF (Goals/Methods/Failures), MIT (Risk Domain/Subdomain incl. 2.x Privacy & Security, 4.2 Cyberattacks, Entity, Intent, Timing). Most reusable artefact for a schema/crosswalk."
+      },
+      {
+        "path": "site/gatsby-site/playwright/seeds/aiidprod/{incidents,reports,classifications,entities,...}.ts",
+        "what": "Small synthetic/test seed docs (≈6 incidents) — illustrate the document schema only."
+      },
+      {
+        "path": "site/gatsby-site/migrations/2022.12.16T22.19.00.add-cset2-taxonomy.js, 2023.02.03T19.20.24.add-gmf-taxonomy.js, 2025.02.25T16.25.48.add-mylius-mit-taxonomy.js (+ cset/gmf update migrations)",
+        "what": "Authoritative taxonomy definitions as migration code (CSET v1, GMF, MIT AI Risk Repository mapping)."
+      },
+      {
+        "path": "site/gatsby-site/data/mit-mapping.json",
+        "what": "Field/value normalisation map for MIT Risk Domain/Subdomain, Entity, Intent, Timing."
+      },
+      {
+        "path": "site/gatsby-site/data/sample-incident-classifications.csv",
+        "what": "1-row sample (75 columns) of MIT/severity/harm/EU-AI-Act classification import format."
+      },
+      {
+        "path": "site/gatsby-site/migrations/data/oecd_relationships*.json",
+        "what": "Crosswalk AIID incident_id -> OECD AIM incident URL (sameAs); 2026-07-30 file has 1166 links. Useful for dedup/linking."
+      },
+      {
+        "path": "site/db-backup/bin/backup.sh, taxonomy_csv_export.py",
+        "what": "Documents snapshot contents: incidents.csv, reports.csv, submissions.csv, duplicates.csv, quickadd.csv, per-taxonomy classifications CSVs, plus mongodump."
+      },
+      {
+        "path": "site/excel-export-pipeline/ (config.yaml, MAINTENANCE_GUIDE.md)",
+        "what": "Weekly AIID_Excel_Export-*.xlsx: Incidents (joined with MIT, GMF, CSETv1), Reports, Entities, Data Dictionary, Coverage Map."
+      }
+    ],
+    "security_relevance": "No security-specific incident feed; security relevance comes from taxonomy classifications (MIT 2.x Privacy & Security and 4.x Malicious Actors & Misuse incl. 4.2 Cyberattacks; GMF Methods/Failures; CSET harm fields) that can filter AIID incidents to adversarial/misuse cases.",
+    "consumption": {
+      "weekly_snapshots_page": "https://incidentdatabase.ai/research/snapshots/",
+      "snapshot_formats": "backup-YYYYMMDDHHmmss.tar.bz2 (mongodump + CSVs) and AIID_Excel_Export-<date>.xlsx, served from a public Cloudflare R2 bucket whose base URL is env GATSBY_CLOUDFLARE_R2_PUBLIC_BUCKET_URL (not hard-coded in repo); site/gatsby-site/README.md also names files aiid-backup-<timestamp>.tar.gz.",
+      "graphql": "https://incidentdatabase.ai/api/graphql",
+      "graphql_auth": "Login required since 2026 (HTTP 401 API_LOGIN_REQUIRED for anonymous); use session cookie or per-account API token via \"Authorization: Bearer aiid_...\" (docs/API_ACCESS.md, #4070). Schema introspection remains open.",
+      "graphql_example": "curl -X POST https://incidentdatabase.ai/api/graphql -H \"Authorization: Bearer aiid_...\" -H \"Content-Type: application/json\" -d '{\"query\":\"{ incidents(pagination: {limit: 3}) { incident_id title } }\"}'",
+      "rss": "https://incidentdatabase.ai/rss.xml",
+      "other_urls": [
+        "https://incidentdatabase.ai/cite/<incident_id>",
+        "https://incidentdatabase.ai/taxonomies",
+        "https://incidentdatabase.ai/taxonomy/cset",
+        "https://incidentdatabase.ai/apps/discover",
+        "https://incidentdatabase.ai/entities",
+        "https://incidentdatabase.ai/summaries/leaderboard"
+      ],
+      "recommendation": "For a static, offline-reproducible pipeline: download the weekly tar.bz2 snapshot (CSV incidents + classifications_MIT/GMF/CSETv1 CSVs), filter by MIT 2.x/4.x and GMF Methods for adversarial/misuse, link to OECD via oecd_relationships JSON, cite /cite/<id>. Use GraphQL (token) only for incremental updates; RSS for new-incident alerts. Vendor taxa.ts taxonomy definitions for crosswalk to ATLAS."
+    }
+  }
+}

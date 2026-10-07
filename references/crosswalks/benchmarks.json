@@ -1,0 +1,440 @@
+{
+  "generated": "2026-10-07",
+  "provenance": "12 benchmark repositories",
+  "note": "Derived from shallow clones read on 2026-10-07. Names and identifiers only; descriptions are paraphrased. Discovery and test-design material, not evidence of in-the-wild activity.",
+  "benchmarks": [
+    {
+      "repo": "ethz-spylab/agentdojo",
+      "name": "AgentDojo",
+      "license": "MIT",
+      "last_commit": "2026-06-02",
+      "measures": "Prompt-injection robustness of tool-using LLM agents in a dynamic, stateful environment; jointly scores task utility and attacker goal achievement.",
+      "task_suites": [
+        "workspace (email/calendar/cloud drive)",
+        "slack",
+        "banking",
+        "travel"
+      ],
+      "dataset_size": "v1 suites: 97 user tasks (workspace 33, travel 20, slack 17, banking 16) x 27 injection tasks (banking 9, travel 7, workspace 6, slack 5); paper reports 629 security test cases; versioned suites v1..v1.2.2",
+      "attack_families": [
+        "direct",
+        "ignore_previous",
+        "system_message",
+        "injecagent",
+        "important_instructions (+ name/model-name variants)",
+        "tool_knowledge",
+        "dos family (dos, captcha_dos, felony_dos, offensive_email_dos, swearwords_dos)",
+        "manual"
+      ],
+      "defence_baselines": [
+        "tool_filter",
+        "transformers_pi_detector",
+        "spotlighting_with_delimiting",
+        "repeat_user_prompt"
+      ],
+      "metrics": [
+        "benign utility",
+        "utility under attack",
+        "targeted ASR (security = injection goal achieved)"
+      ],
+      "llmi_techniques": [
+        "LLMI-T002",
+        "LLMI-T008",
+        "LLMI-T004",
+        "LLMI-T001"
+      ],
+      "reproducibility": "Results tied to dated model snapshots (e.g. gpt-4o-2024-05-13); suites are versioned (v1..v1.2.2) so cite suite version + model id; live results page changes over time."
+    },
+    {
+      "repo": "agiresearch/ASB",
+      "name": "Agent Security Bench (ASB)",
+      "license": "MIT",
+      "last_commit": "2026-09-29",
+      "measures": "Attacks and defences on LLM agents across user prompt, observation, system prompt (backdoor) and memory retrieval stages.",
+      "task_suites": [
+        "10 scenarios/agents: academic_search, aerospace_engineer, autonomous_driving, ecommerce_manager, education_consultant, financial_analyst, legal_consultant, medical_advisor, psychological_counselor, system_admin"
+      ],
+      "dataset_size": "10 agent task files; 400 attacker tools (aggressive / non-aggressive split); 20 normal tools; 13 LLM backbones evaluated",
+      "attack_families": [
+        "DPI (direct prompt injection)",
+        "OPI (observation prompt injection)",
+        "Memory Poisoning",
+        "Mixed attack",
+        "PoT (Plan-of-Thought) backdoor",
+        "PoT clean"
+      ],
+      "defence_baselines": [
+        "delimiters_defense",
+        "ob_sandwich_defense",
+        "instructional_prevention",
+        "direct_paraphrase_defense",
+        "pot_paraphrase_defense",
+        "pot_shuffling_defense",
+        "PPL (perplexity) detection",
+        "LLM-based detection"
+      ],
+      "metrics": [
+        "ASR",
+        "RR (refusal rate)",
+        "PNA (performance under no attack)",
+        "ASR-d / PNA-d (under defence)",
+        "FPR / FNR for detection defences"
+      ],
+      "llmi_techniques": [
+        "LLMI-T001",
+        "LLMI-T002",
+        "LLMI-T008",
+        "LLMI-T009",
+        "LLMI-T006"
+      ],
+      "reproducibility": "Backbones pinned by name in YAML (gpt-4o-2024-08-06, claude-3-5-sonnet-20240620, ollama tags without digests); ollama tags are mutable so re-pulls may change weights."
+    },
+    {
+      "repo": "AI-secure/AgentPoison",
+      "name": "AgentPoison",
+      "license": "MIT",
+      "last_commit": "2026-10-06",
+      "measures": "Backdoor poisoning of agent long-term memory / RAG knowledge base via optimised retrieval triggers.",
+      "task_suites": [
+        "Agent-Driver (autonomous driving planning)",
+        "ReAct-StrategyQA (knowledge QA)",
+        "EHRAgent (healthcare records)"
+      ],
+      "dataset_size": "Not stated as a fixed count in README; external datasets downloaded per agent; 6 supported RAG embedders (BERT, DPR, ANCE, BGE, REALM, ORQA)",
+      "attack_families": [
+        "AgentPoison trigger optimisation (ap)",
+        "CPA baseline (cpa)",
+        "memory/knowledge-base backdoor injection"
+      ],
+      "defence_baselines": [
+        "perplexity filter (ppl_filter used as coherence constraint)",
+        "benign-run comparison (no dedicated defence suite)"
+      ],
+      "metrics": [
+        "ASR-r (retrieval)",
+        "ASR-a (target action)",
+        "ASR-t (end-to-end target)",
+        "ACC (benign utility)"
+      ],
+      "llmi_techniques": [
+        "LLMI-T007",
+        "LLMI-T009",
+        "LLMI-T006"
+      ],
+      "reproducibility": "Relies on GPT-3.5 fine-tuned planner (OpenAI fine-tune, deprecated endpoints) and Replicate-hosted LLaMA-3-70B; dataset hosted on Google Drive."
+    },
+    {
+      "repo": "CheckPointSW/pint-benchmark",
+      "name": "PINT (Lakera Prompt Injection Test)",
+      "license": "MIT",
+      "last_commit": "2026-04-02",
+      "measures": "Accuracy of prompt-injection detection systems (guardrail classifiers/services) on a held-out mixed dataset including hard negatives.",
+      "task_suites": [
+        "prompt_injection",
+        "jailbreak",
+        "hard_negatives",
+        "chat",
+        "documents"
+      ],
+      "dataset_size": "4,314 inputs (3,016 English, 1,298 non-English); categories: injections 5.2%, jailbreaks 0.9%, hard negatives 20.9%, chat 36.5%, documents 36.5%; dataset itself not public (proprietary blend)",
+      "attack_families": [
+        "prompt injection (incl. embedded in long documents)",
+        "jailbreak directives",
+        "multilingual injections"
+      ],
+      "defence_baselines": [
+        "Lakera Guard",
+        "AWS Bedrock Guardrails",
+        "Azure Prompt Shields",
+        "protectai deberta-v3 v2",
+        "Llama Prompt Guard / Prompt Guard 2",
+        "Google Model Armor",
+        "Aporia Guardrails"
+      ],
+      "metrics": [
+        "PINT score (balanced accuracy across categories)"
+      ],
+      "llmi_techniques": [
+        "LLMI-T001",
+        "LLMI-T002",
+        "LLMI-T003"
+      ],
+      "reproducibility": "Scores dated per row (2025-05-02 .. 2025-08-27); best config chosen per vendor (upper bound); maintainer is the vendor of one ranked product; hosted services change silently."
+    },
+    {
+      "repo": "microsoft/BIPIA",
+      "name": "BIPIA",
+      "license": "MIT (Web QA / Summarization source data under their own terms)",
+      "last_commit": "2024-04-15",
+      "measures": "Robustness of LLMs to indirect prompt injection embedded in external content consumed by LLM-integrated applications.",
+      "task_suites": [
+        "EmailQA",
+        "WebQA",
+        "Summarization (abstract)",
+        "TableQA",
+        "CodeQA"
+      ],
+      "dataset_size": "Attack sets: text 15+15 categories (75 train / 75 test), code 10+10 categories (50 train / 50 test); test contexts email 50, code 50, table 100 (+qa/abstract generated from source); 25 LLMs evaluated",
+      "attack_families": [
+        "text task-irrelevant (Task Automation, Business Intelligence, Conversational Agent, Research Assistance, Sentiment Analysis)",
+        "text targeted (Information Dissemination, Marketing & Advertising, Entertainment, Scams & Fraud, Misinformation & Propaganda)",
+        "encoding/obfuscation (Substitution Ciphers, Base Encoding, Reverse Text, Emoji Substitution, Language Translation)",
+        "code attacks (Data Eavesdropping, Traffic Analysis, Keylogging, Screen Scraping, System Fingerprinting, Blocking Internet, OS Corruption, Ransomware, Compromising Computers, DoS)"
+      ],
+      "defence_baselines": [
+        "border strings",
+        "in-context learning (few-shot)",
+        "multi-turn dialogue",
+        "white-box fine-tuning (special tokens)"
+      ],
+      "metrics": [
+        "ASR (LLM-judged)",
+        "task quality (ROUGE etc.) for capability retention"
+      ],
+      "llmi_techniques": [
+        "LLMI-T002",
+        "LLMI-T004"
+      ],
+      "reproducibility": "Evaluator is a GPT model via config file (judge drift); last commit 2024; 25 LLMs as of 2023-12 paper."
+    },
+    {
+      "repo": "liu00222/Open-Prompt-Injection",
+      "name": "Open-Prompt-Injection",
+      "license": "MIT",
+      "last_commit": "2026-09-27",
+      "measures": "Formal benchmark of prompt injection against LLM-integrated apps: target task vs injected task matrix; also detection (DataSentinel) and localisation (PromptLocate).",
+      "task_suites": [
+        "sst2",
+        "mrpc",
+        "rte",
+        "hsol",
+        "sms_spam",
+        "jfleg",
+        "gigaword",
+        "math500",
+        "compromise"
+      ],
+      "dataset_size": "Configurable; 100 samples per target/injected task in examples; experiment matrix in configs/experiment_matrix.json",
+      "attack_families": [
+        "naive",
+        "escape characters",
+        "context ignoring",
+        "fake completion",
+        "combined"
+      ],
+      "defence_baselines": [
+        "no defence in default matrix",
+        "DataSentinel detector (fine-tuned)",
+        "PromptLocate localisation + recovery"
+      ],
+      "metrics": [
+        "ASV (attack success value)",
+        "MR (matching rate)",
+        "PNA-T / PNA-I (performance under no attack)"
+      ],
+      "llmi_techniques": [
+        "LLMI-T001",
+        "LLMI-T002"
+      ],
+      "reproducibility": "Model configs include PaLM2 (retired API), GPT, Llama; checkpoints on Google Drive."
+    },
+    {
+      "repo": "centerforaisafety/HarmBench",
+      "name": "HarmBench",
+      "license": "MIT",
+      "last_commit": "2024-08-05",
+      "measures": "Standardised evaluation of automated red-teaming methods and LLM refusal robustness.",
+      "task_suites": [
+        "standard behaviours",
+        "contextual behaviours",
+        "copyright behaviours",
+        "multimodal behaviours"
+      ],
+      "dataset_size": "400 text behaviours (200 standard, 100 contextual, 100 copyright) + 110 multimodal; semantic categories: cybercrime_intrusion, illegal, misinformation_disinformation, chemical_biological, harassment_bullying, harmful, copyright; 33 LLMs and 18 methods at release",
+      "attack_families": [
+        "GCG",
+        "GCG-ensemble",
+        "AutoDAN",
+        "AutoPrompt",
+        "PAIR",
+        "TAP",
+        "PAP",
+        "PEZ",
+        "GBDA",
+        "UAT",
+        "GPTFuzz",
+        "ArtPrompt",
+        "few-shot",
+        "zero-shot",
+        "human jailbreaks",
+        "direct request",
+        "multimodal PGD / render-text / direct"
+      ],
+      "defence_baselines": [
+        "adversarial training (R2D2 via alignment-handbook)",
+        "model-side refusal (no input filters)"
+      ],
+      "metrics": [
+        "ASR judged by HarmBench-Llama-2-13b-cls (+ multimodal cls, Mistral-7b validation cls)",
+        "copyright hash matching"
+      ],
+      "llmi_techniques": [
+        "LLMI-T003",
+        "LLMI-T001"
+      ],
+      "reproducibility": "Last commit 2024-08; API model versions at 2024-02 release; classifier-judged ASR."
+    },
+    {
+      "repo": "JailbreakBench/jailbreakbench",
+      "name": "JailbreakBench",
+      "license": "MIT",
+      "last_commit": "2025-03-31",
+      "measures": "Reproducible jailbreak robustness leaderboard with stored jailbreak artifacts and standard judges.",
+      "task_suites": [
+        "JBB-Behaviors harmful (100)",
+        "JBB-Behaviors benign (100)",
+        "judge comparison dataset"
+      ],
+      "dataset_size": "100 harmful + 100 benign behaviours (sources: original, TDC/HarmBench, AdvBench); 10 OpenAI-policy-derived categories",
+      "attack_families": [
+        "PAIR",
+        "GCG",
+        "JBC (manual)",
+        "prompt_with_random_search",
+        "transfer/manual artifact submissions"
+      ],
+      "defence_baselines": [
+        "SmoothLLM",
+        "PerplexityFilter",
+        "Remove non-dictionary words",
+        "Synonym substitution",
+        "Erase-and-check"
+      ],
+      "metrics": [
+        "ASR (Llama-3-70B jailbreak judge)",
+        "refusal rate on benign (Llama-3-8B refusal judge)",
+        "queries/tokens per jailbreak"
+      ],
+      "llmi_techniques": [
+        "LLMI-T003"
+      ],
+      "reproducibility": "Targets vicuna-13b-v1.5, llama-2-7b-chat, gpt-3.5-turbo-1106, gpt-4-0125-preview (dated snapshots, several retired)."
+    },
+    {
+      "repo": "verazuo/jailbreak_llms",
+      "name": "In-The-Wild Jailbreak Prompts (JailbreakHub)",
+      "license": "MIT",
+      "last_commit": "2024-12-24",
+      "measures": "Measurement study of community jailbreak prompts and their effectiveness against forbidden-scenario questions.",
+      "task_suites": [
+        "jailbreak prompts 2023-05-07 / 2023-12-25 snapshots",
+        "regular prompts",
+        "forbidden question set"
+      ],
+      "dataset_size": "15,140 prompts (1,405 jailbreaks) from Reddit, Discord, websites, datasets (Dec 2022 - Dec 2023); 390 questions across 13 forbidden scenarios",
+      "attack_families": [
+        "community jailbreak prompt communities (persona/DAN-style, privilege escalation, etc. per paper clustering)"
+      ],
+      "defence_baselines": [
+        "vendor safeguards evaluated in paper (OpenAI moderation, NeMo Guardrails, etc.) - not shipped as code"
+      ],
+      "metrics": [
+        "ASR per scenario (ChatGLMEval evaluator)"
+      ],
+      "llmi_techniques": [
+        "LLMI-T003"
+      ],
+      "reproducibility": "Prompts frozen to 2023 snapshots; evaluated against 2023 model versions; data contains harmful language."
+    },
+    {
+      "repo": "agencyenterprise/PromptInject",
+      "name": "PromptInject",
+      "license": "MIT",
+      "last_commit": "2022-11-18",
+      "measures": "Modular prompt assembly for quantitative analysis of goal hijacking and prompt leaking against completion models.",
+      "task_suites": [
+        "OpenAI-playground-style application prompts (base prompts from examples)"
+      ],
+      "dataset_size": "Combinatorial (prompt x attack x escape settings x model config); no fixed size",
+      "attack_families": [
+        "goal hijacking",
+        "prompt leaking",
+        "escape/delimiter variations"
+      ],
+      "defence_baselines": [
+        "none (prompt-level variations only)"
+      ],
+      "metrics": [
+        "success via rogue-string match or prompt-to-output similarity score"
+      ],
+      "llmi_techniques": [
+        "LLMI-T001",
+        "LLMI-T004"
+      ],
+      "reproducibility": "Built for GPT-3 text-davinci-era completion API (retired); last commit 2022."
+    },
+    {
+      "repo": "microsoft/BinaryShield",
+      "name": "BinaryShield",
+      "license": "MIT",
+      "last_commit": "2026-08-03",
+      "measures": "Not an attack benchmark: privacy-preserving binary fingerprints of prompts for cross-service sharing of prompt-injection/jailbreak threat intelligence (SaTML 2026 reference implementation).",
+      "task_suites": [
+        "fingerprint pipeline: PII redaction -> embedding -> binary quantisation -> DP bit-flip"
+      ],
+      "dataset_size": "Not stated in repo (paper evaluates on jailbreak/injection corpora)",
+      "attack_families": [
+        "prompt injection",
+        "jailbreak (as fingerprinted inputs)"
+      ],
+      "defence_baselines": [
+        "fuzzy Hamming-distance matching of fingerprints"
+      ],
+      "metrics": [
+        "similarity preservation / matching under epsilon-DP (paper)"
+      ],
+      "llmi_techniques": [
+        "LLMI-T001",
+        "LLMI-T003",
+        "LLMI-T019"
+      ],
+      "reproducibility": "Depends on Azure OpenAI text-embedding-3-large; embedding model change breaks fingerprint comparability."
+    },
+    {
+      "repo": "OMGstacks/llm-threat-triage",
+      "name": "llm-threat-triage (llm-log-triage)",
+      "license": "MIT",
+      "last_commit": "2026-08-17",
+      "measures": "Not a benchmark: stdlib-only log-triage pipeline that normalises LLM/agent telemetry and runs 9 detectors with OWASP LLM Top 10 + ATLAS mapping; includes synthetic dataset and red-team labs.",
+      "task_suites": [
+        "synthetic messy log corpus",
+        "7 SQL analyst queries (attack overview, repeat offenders, injection timeline, indirect injection via RAG, exfil and disclosure, consumption anomaly, session escalation)"
+      ],
+      "dataset_size": "800 synthetic log records; 83 tests",
+      "attack_families": [
+        "direct_prompt_injection",
+        "indirect_prompt_injection",
+        "jailbreak_persona_override",
+        "system_prompt_extraction",
+        "excessive_agency_probe",
+        "encoded_injection_payload",
+        "sensitive_information_disclosure/inbound",
+        "improper_output_handling (markdown exfil)"
+      ],
+      "defence_baselines": [
+        "regex/entropy/Luhn detectors"
+      ],
+      "metrics": [
+        "findings by severity / OWASP category (no ASR)"
+      ],
+      "llmi_techniques": [
+        "LLMI-T001",
+        "LLMI-T002",
+        "LLMI-T003",
+        "LLMI-T004",
+        "LLMI-T008"
+      ],
+      "reproducibility": "Synthetic data only; useful as telemetry schema reference, not as robustness evidence."
+    }
+  ]
+}

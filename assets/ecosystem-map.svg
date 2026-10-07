@@ -3,7 +3,7 @@
 <rect width="1158" height="512" fill="#f3f0e8"/>
 <rect x=".5" y=".5" width="1157" height="511" fill="none" stroke="#17150f"/>
 <text x="40" y="44" font-family="Georgia,serif" font-size="22" font-weight="700" fill="#17150f">Ecosystem map</text>
-<text x="40" y="64" font-family="'Courier New',monospace" font-size="11" fill="#7b766a">75 related projects by evidence class and section. Class decides what a project can support.</text>
+<text x="40" y="64" font-family="'Courier New',monospace" font-size="11" fill="#7b766a">106 related projects by evidence class and section. Class decides what a project can support.</text>
 <text x="336.0" y="100" text-anchor="middle" font-family="'Courier New',monospace" font-size="11" font-weight="700" letter-spacing="1.5" fill="#4a463c">KNOWLEDGE</text>
 <text x="428.0" y="100" text-anchor="middle" font-family="'Courier New',monospace" font-size="11" font-weight="700" letter-spacing="1.5" fill="#4a463c">CATALOGS</text>
 <text x="520.0" y="100" text-anchor="middle" font-family="'Courier New',monospace" font-size="11" font-weight="700" letter-spacing="1.5" fill="#4a463c">EVALUATION</text>
@@ -16,7 +16,7 @@
 <line x1="40" x2="1118" y1="106" y2="106" stroke="#17150f"/>
 <text x="40" y="130" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f">Taxonomies and knowledge bases</text>
 <rect x="319.0" y="115" width="34" height="20" fill="#7c2406"/>
-<text x="336.0" y="130" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">6</text>
+<text x="336.0" y="130" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">7</text>
 <rect x="411.0" y="115" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <text x="428.0" y="130" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
 <rect x="503.0" y="115" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
@@ -32,7 +32,7 @@
 <rect x="963.0" y="115" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <text x="980.0" y="130" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
 <rect x="1052.0" y="115" width="40" height="20" fill="#7c2406"/>
-<text x="1072.0" y="130" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">6</text>
+<text x="1072.0" y="130" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">7</text>
 <line x1="40" x2="1118" y1="140" y2="140" stroke="#e0dacb"/>
 <text x="40" y="158" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f">Incident databases</text>
 <rect x="319.0" y="143" width="34" height="20" fill="#e9b394"/>
@@ -65,20 +65,20 @@
 <text x="612.0" y="186" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
 <rect x="687.0" y="171" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <text x="704.0" y="186" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
-<rect x="779.0" y="171" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
-<text x="796.0" y="186" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
+<rect x="779.0" y="171" width="34" height="20" fill="#d4804f"/>
+<text x="796.0" y="186" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
 <rect x="871.0" y="171" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <text x="888.0" y="186" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
 <rect x="963.0" y="171" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <text x="980.0" y="186" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
-<rect x="1052.0" y="171" width="40" height="20" fill="#e9b394"/>
-<text x="1072.0" y="186" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
+<rect x="1052.0" y="171" width="40" height="20" fill="#b43c0e"/>
+<text x="1072.0" y="186" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">3</text>
 <line x1="40" x2="1118" y1="196" y2="196" stroke="#e0dacb"/>
 <text x="40" y="214" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f">Curated lists</text>
 <rect x="319.0" y="199" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <text x="336.0" y="214" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
 <rect x="411.0" y="199" width="34" height="20" fill="#7c2406"/>
-<text x="428.0" y="214" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">16</text>
+<text x="428.0" y="214" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">22</text>
 <rect x="503.0" y="199" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <text x="520.0" y="214" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
 <rect x="595.0" y="199" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
@@ -92,15 +92,15 @@
 <rect x="963.0" y="199" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <text x="980.0" y="214" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
 <rect x="1052.0" y="199" width="40" height="20" fill="#7c2406"/>
-<text x="1072.0" y="214" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">16</text>
+<text x="1072.0" y="214" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">22</text>
 <line x1="40" x2="1118" y1="224" y2="224" stroke="#e0dacb"/>
 <text x="40" y="242" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f">Scanners and red-team tools</text>
 <rect x="319.0" y="227" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <text x="336.0" y="242" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
-<rect x="411.0" y="227" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
-<text x="428.0" y="242" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
+<rect x="411.0" y="227" width="34" height="20" fill="#e9b394"/>
+<text x="428.0" y="242" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
 <rect x="503.0" y="227" width="34" height="20" fill="#7c2406"/>
-<text x="520.0" y="242" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">11</text>
+<text x="520.0" y="242" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">18</text>
 <rect x="595.0" y="227" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <text x="612.0" y="242" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
 <rect x="687.0" y="227" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
@@ -112,7 +112,7 @@
 <rect x="963.0" y="227" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <text x="980.0" y="242" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
 <rect x="1052.0" y="227" width="40" height="20" fill="#7c2406"/>
-<text x="1072.0" y="242" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">18</text>
+<text x="1072.0" y="242" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">26</text>
 <line x1="40" x2="1118" y1="252" y2="252" stroke="#e0dacb"/>
 <text x="40" y="270" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f">Benchmarks and environments</text>
 <rect x="319.0" y="255" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
@@ -144,15 +144,15 @@
 <rect x="595.0" y="283" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <text x="612.0" y="298" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
 <rect x="687.0" y="283" width="34" height="20" fill="#7c2406"/>
-<text x="704.0" y="298" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">11</text>
+<text x="704.0" y="298" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">13</text>
 <rect x="779.0" y="283" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <text x="796.0" y="298" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
-<rect x="871.0" y="283" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
-<text x="888.0" y="298" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
+<rect x="871.0" y="283" width="34" height="20" fill="#e9b394"/>
+<text x="888.0" y="298" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
 <rect x="963.0" y="283" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <text x="980.0" y="298" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
 <rect x="1052.0" y="283" width="40" height="20" fill="#7c2406"/>
-<text x="1072.0" y="298" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">12</text>
+<text x="1072.0" y="298" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">15</text>
 <line x1="40" x2="1118" y1="308" y2="308" stroke="#e0dacb"/>
 <text x="40" y="326" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f">Defences and guardrails</text>
 <rect x="319.0" y="311" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
@@ -166,13 +166,13 @@
 <rect x="687.0" y="311" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <text x="704.0" y="326" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
 <rect x="779.0" y="311" width="34" height="20" fill="#7c2406"/>
-<text x="796.0" y="326" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">7</text>
+<text x="796.0" y="326" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">10</text>
 <rect x="871.0" y="311" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <text x="888.0" y="326" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
 <rect x="963.0" y="311" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <text x="980.0" y="326" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
 <rect x="1052.0" y="311" width="40" height="20" fill="#7c2406"/>
-<text x="1072.0" y="326" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">7</text>
+<text x="1072.0" y="326" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">10</text>
 <line x1="40" x2="1118" y1="336" y2="336" stroke="#e0dacb"/>
 <text x="40" y="354" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f">Training labs</text>
 <rect x="319.0" y="339" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
@@ -190,29 +190,29 @@
 <rect x="871.0" y="339" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <text x="888.0" y="354" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
 <rect x="963.0" y="339" width="34" height="20" fill="#7c2406"/>
-<text x="980.0" y="354" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">4</text>
+<text x="980.0" y="354" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">7</text>
 <rect x="1052.0" y="339" width="40" height="20" fill="#7c2406"/>
-<text x="1072.0" y="354" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">4</text>
+<text x="1072.0" y="354" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">7</text>
 <line x1="40" x2="1118" y1="364" y2="364" stroke="#e0dacb"/>
 <text x="40" y="382" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f">Prompt corpora and datasets</text>
 <rect x="319.0" y="367" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <text x="336.0" y="382" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
-<rect x="411.0" y="367" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
-<text x="428.0" y="382" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
+<rect x="411.0" y="367" width="34" height="20" fill="#e9b394"/>
+<text x="428.0" y="382" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
 <rect x="503.0" y="367" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <text x="520.0" y="382" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
 <rect x="595.0" y="367" width="34" height="20" fill="#e9b394"/>
 <text x="612.0" y="382" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
-<rect x="687.0" y="367" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
-<text x="704.0" y="382" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
+<rect x="687.0" y="367" width="34" height="20" fill="#b43c0e"/>
+<text x="704.0" y="382" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">3</text>
 <rect x="779.0" y="367" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <text x="796.0" y="382" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
 <rect x="871.0" y="367" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <text x="888.0" y="382" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
-<rect x="963.0" y="367" width="34" height="20" fill="#e9b394"/>
-<text x="980.0" y="382" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
-<rect x="1052.0" y="367" width="40" height="20" fill="#d4804f"/>
-<text x="1072.0" y="382" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
+<rect x="963.0" y="367" width="34" height="20" fill="#d4804f"/>
+<text x="980.0" y="382" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
+<rect x="1052.0" y="367" width="40" height="20" fill="#7c2406"/>
+<text x="1072.0" y="382" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">7</text>
 <line x1="40" x2="1118" y1="392" y2="392" stroke="#e0dacb"/>
 <text x="40" y="425" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#4a463c">SCALE</text>
 <rect x="90" y="414" width="28" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
@@ -227,5 +227,5 @@
 <text x="264" y="426" text-anchor="middle" font-family="'Courier New',monospace" font-size="10" font-weight="700" fill="#ffffff">4+</text>
 <text x="330" y="426" font-family="'Courier New',monospace" font-size="10" fill="#7b766a">Cells count projects. A dashed cell means none.</text>
 <text x="40" y="454" font-family="'Courier New',monospace" font-size="10" fill="#7b766a">No project in this map can support attribution or campaign claims. See docs/ECOSYSTEM.md.</text>
-<text x="40" y="470" font-family="'Courier New',monospace" font-size="10" fill="#7b766a">Provenance: maintainer research, 2026-10-07. Repository state not independently verified.</text>
+<text x="40" y="470" font-family="'Courier New',monospace" font-size="10" fill="#7b766a">Provenance: maintainer research, cross-checked by shallow clone on 2026-10-07. Archive flags come from the GitHub API check.</text>
 </svg>
