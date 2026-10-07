@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Ridd1kulusC0d3r/LLmInjection/schemas/ecosystem.schema.json",
+  "title": "LLMInjection ecosystem entry",
+  "description": "A related external repository. Discovery and test-design material only: never evidence for attribution or campaigns.",
+  "type": "object",
+  "required": [
+    "id",
+    "type",
+    "name",
+    "owner",
+    "url",
+    "section",
+    "evidence_class",
+    "priority",
+    "status",
+    "summary",
+    "source_grade",
+    "provenance",
+    "added"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^ECO-\\d{3}$"
+    },
+    "type": {
+      "const": "ecosystem"
+    },
+    "name": {
+      "type": "string"
+    },
+    "owner": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string",
+      "pattern": "^https://github\\.com/"
+    },
+    "section": {
+      "enum": [
+        "knowledge",
+        "catalog",
+        "evaluation",
+        "benchmark",
+        "attack-research",
+        "defence",
+        "agent-security",
+        "lab"
+      ]
+    },
+    "evidence_class": {
+      "enum": [
+        "framework-data",
+        "incident-data",
+        "detection-content",
+        "curated-list",
+        "assessment-tool",
+        "benchmark",
+        "research-technique",
+        "defence-tool",
+        "lab-exercise",
+        "prompt-corpus"
+      ]
+    },
+    "priority": {
+      "enum": [
+        "start-here",
+        "standard"
+      ]
+    },
+    "status": {
+      "enum": [
+        "listed",
+        "archived-reported"
+      ]
+    },
+    "techniques": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^LLMI-T\\d{3}$"
+      }
+    },
+    "summary": {
+      "type": "string"
+    },
+    "source_grade": {
+      "enum": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ]
+    },
+    "provenance": {
+      "type": "string"
+    },
+    "added": {
+      "type": "string",
+      "format": "date"
+    }
+  }
+}

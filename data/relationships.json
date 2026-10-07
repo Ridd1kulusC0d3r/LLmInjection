@@ -707,5 +707,126 @@
     "evidence_sources": [
       "SRC-GTIG-PROMPTING-TO-AUTONOMY"
     ]
+  },
+  {
+    "id": "REL-065",
+    "type": "relationship",
+    "source": "TC-SCAN-016",
+    "relationship": "validates",
+    "target": "LLMI-T017",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-GTIG-PROMPTING-TO-AUTONOMY"
+    ]
+  },
+  {
+    "id": "REL-066",
+    "type": "relationship",
+    "source": "TC-WS-017",
+    "relationship": "validates",
+    "target": "LLMI-T018",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-GTIG-PROMPTING-TO-AUTONOMY"
+    ]
+  },
+  {
+    "id": "REL-067",
+    "type": "relationship",
+    "source": "TC-DIST-018",
+    "relationship": "validates",
+    "target": "LLMI-T019",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-GTIG-PROMPTING-TO-AUTONOMY"
+    ]
+  },
+  {
+    "id": "REL-068",
+    "type": "relationship",
+    "source": "TC-DIST-018",
+    "relationship": "validates",
+    "target": "LLMI-T005",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-GTIG-PROMPTING-TO-AUTONOMY"
+    ]
+  },
+  {
+    "id": "REL-069",
+    "type": "relationship",
+    "source": "TC-PARAM-019",
+    "relationship": "validates",
+    "target": "LLMI-T008",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MSFT-SK-RCE"
+    ]
+  },
+  {
+    "id": "REL-070",
+    "type": "relationship",
+    "source": "TC-GW-020",
+    "relationship": "validates",
+    "target": "LLMI-T016",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-WIZ-TEAMPCP"
+    ]
+  },
+  {
+    "id": "REL-071",
+    "type": "relationship",
+    "source": "DET-AI-011",
+    "relationship": "detects",
+    "target": "LLMI-T018",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-GTIG-PROMPTING-TO-AUTONOMY"
+    ]
+  },
+  {
+    "id": "REL-072",
+    "type": "relationship",
+    "source": "DET-AI-012",
+    "relationship": "detects",
+    "target": "LLMI-T011",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-GTIG-PROMPTING-TO-AUTONOMY"
+    ]
+  },
+  {
+    "id": "REL-073",
+    "type": "relationship",
+    "source": "DET-AI-013",
+    "relationship": "detects",
+    "target": "LLMI-T019",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-GTIG-PROMPTING-TO-AUTONOMY"
+    ]
+  },
+  {
+    "id": "REL-074",
+    "type": "relationship",
+    "source": "DET-AI-014",
+    "relationship": "detects",
+    "target": "LLMI-T017",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-GTIG-PROMPTING-TO-AUTONOMY"
+    ]
+  },
+  {
+    "id": "REL-075",
+    "type": "relationship",
+    "source": "DET-AI-006",
+    "relationship": "detects",
+    "target": "LLMI-T016",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-WIZ-TEAMPCP"
+    ]
   }
 ]

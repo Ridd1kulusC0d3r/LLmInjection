@@ -12,6 +12,9 @@ ROOT = Path(__file__).resolve().parents[1]
 CONFIDENCE = {"confirmed", "high", "medium", "low", "unverified"}
 GRADES = {"A", "B", "C", "D", "E"}
 LAB_MODES = {"safe-lab", "detection-simulation"}
+ECO_CLASSES = {"framework-data", "incident-data", "detection-content", "curated-list", "assessment-tool",
+               "benchmark", "research-technique", "defence-tool", "lab-exercise", "prompt-corpus"}
+ECO_SECTIONS = {"knowledge", "catalog", "evaluation", "benchmark", "attack-research", "defence", "agent-security", "lab"}
 
 LIST_DATASETS = {
     "frameworks": "frameworks.json",
@@ -26,6 +29,7 @@ LIST_DATASETS = {
     "sources": "sources.json",
     "vulnerabilities": "vulnerabilities.json",
     "relationships": "relationships.json",
+    "ecosystem": "ecosystem.json",
 }
 
 def load_json(path: Path):
@@ -201,6 +205,36 @@ def validate():
         for source_id in rel.get("evidence_sources", []):
             if source_id not in index or index[source_id][0] != "sources":
                 errors.append(f"{prefix}: unknown evidence source {source_id}")
+
+    eco_urls: set[str] = set()
+    for i, entry in enumerate(datasets["ecosystem"]):
+        prefix = f"ecosystem[{i}]"
+        if entry.get("type") != "ecosystem":
+            errors.append(f"{prefix}: type must be ecosystem")
+        if entry.get("evidence_class") not in ECO_CLASSES:
+            errors.append(f"{prefix}: invalid evidence_class")
+        if entry.get("section") not in ECO_SECTIONS:
+            errors.append(f"{prefix}: invalid section")
+        if entry.get("priority") not in {"start-here", "standard"}:
+            errors.append(f"{prefix}: invalid priority")
+        if entry.get("source_grade") not in GRADES:
+            errors.append(f"{prefix}: invalid source_grade")
+        url = entry.get("url", "")
+        if not check_https(url) or not url.startswith("https://github.com/"):
+            errors.append(f"{prefix}: url must be an https GitHub URL")
+        elif url.lower() in eco_urls:
+            errors.append(f"{prefix}: duplicate url {url}")
+        eco_urls.add(url.lower())
+        if not entry.get("summary") or not entry.get("provenance"):
+            errors.append(f"{prefix}: summary and provenance are required")
+        if not valid_date(entry.get("added")):
+            errors.append(f"{prefix}: invalid added date")
+        for tid in entry.get("techniques", []):
+            if tid not in index or index[tid][0] != "techniques":
+                errors.append(f"{prefix}: unknown technique {tid}")
+        # Ecosystem entries are discovery and test-design material. They never support attribution or campaign claims.
+        if {"attribution", "campaign"} & set(entry.get("supports", [])):
+            errors.append(f"{prefix}: ecosystem entries cannot support attribution or campaign claims")
 
     feed_ids: set[str] = set()
     if not isinstance(source_feeds, dict) or not isinstance(source_feeds.get("feeds"), list):

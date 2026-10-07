@@ -1,15 +1,16 @@
 # Documentation
 
-Start with the [overview](OVERVIEW.md) for the full tour, or jump to a topic below.
+Start with the [README](../README.md#explore-the-project) for the full expandable tour, or jump to a topic below.
 
 ## Start here
 
 | Document | Read it to |
 |---|---|
-| [Overview](OVERVIEW.md) | See every layer of the project in one long page |
+| [README](../README.md#explore-the-project) | See every layer of the project, expandable in place |
 | [Methodology](METHODOLOGY.md) | Understand how claims are collected, graded and promoted |
 | [Source grading](SOURCE-GRADING.md) | Read source grades (A to E) and analytic confidence |
 | [Roadmap](ROADMAP.md) | See what is done and what is next |
+| [Ecosystem map](ECOSYSTEM.md) | Find related projects, classified by evidence class |
 
 ## Threat intelligence
 

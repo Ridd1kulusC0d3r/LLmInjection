@@ -2,6 +2,35 @@
 
 This changelog records material changes to attribution, confidence, external mappings and structured intelligence. Ordinary prose edits do not belong here.
 
+## 2026-10-07 — Ecosystem map
+
+### Added
+
+- `data/ecosystem.json`: 75 related GitHub projects with an evidence class, section, priority and technique mapping, plus a schema and validator rules;
+- `docs/ECOSYSTEM.md`: generated tables by section, evidence-class definitions and the rule that these entries never support attribution or campaign claims;
+- ten entries flagged `start-here` (ATLAS Data, Arcanum taxonomy, PLOT4ai, Agent Threat Rules, prompt-injection-defenses, AgentDojo, PyRIT, garak, AIID, awesome-llm-supply-chain-security).
+
+### Confidence notes
+
+- The list is the maintainer's own research. Repository state, including three entries recorded as archived (BIPIA, rebuff, llm-guard), is as reported and was not independently verified.
+- Source grades follow the publisher: A for the MITRE and OWASP projects, D for everything else. A grade describes the repository as a source of claims, not the quality of the tool.
+- Technique mappings are made only where the project's stated scope clearly matches; many entries have none.
+
+## 2026-10-07 — Defensive coverage for the 2026-10-06 techniques
+
+### Added
+
+- five safe test cases: TC-SCAN-016, TC-WS-017, TC-DIST-018, TC-PARAM-019, TC-GW-020;
+- four detection hypotheses: DET-AI-011 to DET-AI-014, plus a Sigma starter rule for DET-AI-011;
+- DET-AI-006 (AI gateway credential anomaly) now has a test, TC-GW-020, closing a documented gap;
+- eleven relationships linking the new tests and detections to techniques;
+- README attack-chain diagrams and a defender playbook.
+
+### Open gaps
+
+- DET-AI-012 (CI token read from runner memory) has a hypothesis but no safe simulation yet.
+- The new tests and detections are specifications. None has been exercised against a production telemetry source.
+
 ## 2026-10-06 — Agent workspace, MCP transport and autonomy update
 
 ### Added
