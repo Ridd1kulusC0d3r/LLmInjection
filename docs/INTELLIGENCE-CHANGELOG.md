@@ -2,6 +2,20 @@
 
 This changelog records material changes to attribution, confidence, external mappings and structured intelligence. Ordinary prose edits do not belong here.
 
+## 2026-10-07 — Ecosystem map
+
+### Added
+
+- `data/ecosystem.json`: 75 related GitHub projects with an evidence class, section, priority and technique mapping, plus a schema and validator rules;
+- `docs/ECOSYSTEM.md`: generated tables by section, evidence-class definitions and the rule that these entries never support attribution or campaign claims;
+- ten entries flagged `start-here` (ATLAS Data, Arcanum taxonomy, PLOT4ai, Agent Threat Rules, prompt-injection-defenses, AgentDojo, PyRIT, garak, AIID, awesome-llm-supply-chain-security).
+
+### Confidence notes
+
+- The list is the maintainer's own research. Repository state, including three entries recorded as archived (BIPIA, rebuff, llm-guard), is as reported and was not independently verified.
+- Source grades follow the publisher: A for the MITRE and OWASP projects, D for everything else. A grade describes the repository as a source of claims, not the quality of the tool.
+- Technique mappings are made only where the project's stated scope clearly matches; many entries have none.
+
 ## 2026-10-07 — Defensive coverage for the 2026-10-06 techniques
 
 ### Added

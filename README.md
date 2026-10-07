@@ -21,9 +21,9 @@ Open threat intelligence for AI, LLM and agentic systems: actors, campaigns, att
 |:---:|:---:|:---:|:---:|:---:|:---:|
 | **7** | **7** | **7** | **9** | **19** | **40** |
 
-| Test cases | Detections | Controls | Frameworks | Model families | Relationships |
-|:---:|:---:|:---:|:---:|:---:|:---:|
-| **20** | **14** | **20** | **19** | **12** | **75** |
+| Test cases | Detections | Controls | Frameworks | Model families | Relationships | Ecosystem repos |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| **20** | **14** | **20** | **19** | **12** | **75** | **75** |
 <!-- gen:stats:end -->
 
 LLMInjection is **not a prompt dump**. Every meaningful claim carries a source grade, a confidence level, a last-verified date, framework context and a defensive angle.
@@ -42,6 +42,7 @@ LLMInjection is **not a prompt dump**. Every meaningful claim carries a source g
 | **Safe test lab** | Defensive test cases for prompt, RAG, agent, MCP and supply-chain risks | [Test cases](docs/TEST-CASES.md) · [Lab](docs/LAB.md) |
 | **Detection engineering** | Sigma, KQL, SPL, ES\|QL and YARA-L starter detections | [Detection engineering](docs/DETECTION-ENGINEERING.md) |
 | **Evidence** | Graded sources and explicit relationships behind every record | [Source grading](docs/SOURCE-GRADING.md) · [Methodology](docs/METHODOLOGY.md) |
+| **Ecosystem** | 75 related projects classified by what they can support | [Ecosystem map](docs/ECOSYSTEM.md) |
 
 Exports: `graph.json`, GraphML, STIX 2.1, a static `/api/v1/` JSON API, monthly snapshots with entity-level diffs, and an interactive [Explorer](https://ridd1kulusc0d3r.github.io/LLmInjection/).
 
@@ -722,6 +723,44 @@ LLMInjection indexes external projects for discovery and reproducible evaluation
 Community corpora are discovery sources, **not self-authenticating intelligence**. Claims are promoted only after evidence review.
 
 See [REFERENCE-LIBRARY.md](references/REFERENCE-LIBRARY.md), [BENCHMARKS.md](docs/BENCHMARKS.md), [AI-SUPPLY-CHAIN.md](docs/AI-SUPPLY-CHAIN.md) and [community-corpora.md](references/community-corpora.md).
+
+### Ecosystem map: 75 related projects
+
+The [ecosystem map](docs/ECOSYSTEM.md) classifies related repositories by **what each can honestly support**, so observed incidents, techniques demonstrated in research and lab examples never blur together. These entries inform taxonomy, tests, detections and controls. They never create an actor, campaign or incident record, and the validator rejects any entry that claims to support attribution.
+
+<!-- gen:eco-classes:start -->
+| Evidence class | What it is | Can support | Cannot support | Entries |
+|---|---|---|---|---|
+| `framework-data` | Taxonomies and knowledge bases | Technique definitions and framework mappings | Observed activity | 6 |
+| `incident-data` | Incident databases | Incident references, citing the primary report | Actor attribution or cyber campaigns (scope is broader than cybersecurity) | 1 |
+| `detection-content` | Community detection rules | Detection ideas and telemetry requirements | Proof of in-the-wild behavior | 1 |
+| `curated-list` | Curated lists | Discovering sources and tools | Any claim on their own | 16 |
+| `assessment-tool` | Scanners and red-team tools | Test design and control evaluation | Effectiveness against current models | 18 |
+| `benchmark` | Benchmarks and environments | Reproducible tests and coverage measurement | Real-world prevalence | 8 |
+| `research-technique` | Attack research code | Techniques demonstrated in research | Use in the wild | 12 |
+| `defence-tool` | Defences and guardrails | Control design and comparison | Proven protection | 7 |
+| `lab-exercise` | Training labs | Analyst training and onboarding | Threat intelligence | 4 |
+| `prompt-corpus` | Prompt corpora and datasets | Test inspiration and measurement | Threat intelligence or attribution | 2 |
+<!-- gen:eco-classes:end -->
+
+#### Start here
+
+<!-- gen:eco-start:start -->
+| Repository | Evidence class | Techniques | Scope |
+|---|---|---|---|
+| [mitre-atlas/atlas-data](https://github.com/mitre-atlas/atlas-data) | `framework-data` | none | Data for tactics, techniques and case studies of threats against AI systems. · **start here** |
+| [PLOT4ai/plot4ai-library](https://github.com/PLOT4ai/plot4ai-library) | `framework-data` | none | Threat library for AI threat modeling. · **start here** |
+| [Arcanum-Sec/arc_pi_taxonomy](https://github.com/Arcanum-Sec/arc_pi_taxonomy) | `framework-data` | `LLMI-T001`, `LLMI-T002` | Taxonomy specialised in prompt injection. · **start here** |
+| [responsible-ai-collaborative/aiid](https://github.com/responsible-ai-collaborative/aiid) | `incident-data` | none | AI Incident Database: incidents and harms involving AI, broader than cybersecurity. · **start here** |
+| [Agent-Threat-Rule/agent-threat-rules](https://github.com/Agent-Threat-Rule/agent-threat-rules) | `detection-content` | `LLMI-T001`, `LLMI-T002`, `LLMI-T008` | Detection rules for agent threats, including injection, tools and MCP. · **start here** |
+| [tldrsec/prompt-injection-defenses](https://github.com/tldrsec/prompt-injection-defenses) | `curated-list` | `LLMI-T001`, `LLMI-T002` | Practical and proposed defences against prompt injection. · **start here** |
+| [ShenaoW/awesome-llm-supply-chain-security](https://github.com/ShenaoW/awesome-llm-supply-chain-security) | `curated-list` | `LLMI-T011` | LLM supply chain: papers, reports and CVEs. · **start here** |
+| [NVIDIA/garak](https://github.com/NVIDIA/garak) | `assessment-tool` | none | LLM vulnerability scanner. · **start here** |
+| [microsoft/PyRIT](https://github.com/microsoft/PyRIT) | `assessment-tool` | none | Framework for identifying risks in generative AI systems. · **start here** |
+| [ethz-spylab/agentdojo](https://github.com/ethz-spylab/agentdojo) | `benchmark` | `LLMI-T002`, `LLMI-T008` | Environment for evaluating attacks and defences of LLM agents. · **start here** |
+<!-- gen:eco-start:end -->
+
+All 75 entries, by section: [docs/ECOSYSTEM.md](docs/ECOSYSTEM.md). Provenance: supplied by the maintainer's research on 2026-10-07; repository state is recorded as reported and not independently verified.
 
 </details>
 

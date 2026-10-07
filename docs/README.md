@@ -10,6 +10,7 @@ Start with the [README](../README.md#explore-the-project) for the full expandabl
 | [Methodology](METHODOLOGY.md) | Understand how claims are collected, graded and promoted |
 | [Source grading](SOURCE-GRADING.md) | Read source grades (A to E) and analytic confidence |
 | [Roadmap](ROADMAP.md) | See what is done and what is next |
+| [Ecosystem map](ECOSYSTEM.md) | Find related projects, classified by evidence class |
 
 ## Threat intelligence
 

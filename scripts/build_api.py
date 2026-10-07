@@ -24,6 +24,7 @@ FILES = [
     "detections.json",
     "sources.json",
     "relationships.json",
+    "ecosystem.json",
     "vulnerabilities.json",
     "threat-landscape-2026.json",
     "dataset-manifest.json",

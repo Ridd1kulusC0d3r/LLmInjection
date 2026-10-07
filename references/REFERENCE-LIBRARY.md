@@ -62,3 +62,5 @@ A reference enters one of four roles:
 4. **discovery** — community index used to find stronger evidence.
 
 Claims promoted into actors, campaigns, incidents or landscape metrics should normally resolve to category 1–3 sources.
+
+For a classified map of 75 related repositories (taxonomies, scanners, benchmarks, attack research, defences, agent security and labs), see [docs/ECOSYSTEM.md](../docs/ECOSYSTEM.md).

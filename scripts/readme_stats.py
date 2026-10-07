@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Keep the generated blocks of README.md in sync with the datasets (stdlib only).
+"""Keep the generated blocks of README.md and docs/ECOSYSTEM.md in sync with the datasets (stdlib only).
 
 Blocks sit between <!-- gen:NAME:start --> and <!-- gen:NAME:end --> markers.
 
@@ -17,12 +17,14 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 README = ROOT / "README.md"
+FILES = [README, ROOT / "docs" / "ECOSYSTEM.md"]
 
 GROUPS = [
     [("Actors", "actors"), ("Campaigns", "campaigns"), ("Incidents", "incidents"),
      ("Vulnerabilities", "vulnerabilities"), ("Techniques", "techniques"), ("Sources", "sources")],
     [("Test cases", "test-cases"), ("Detections", "detections"), ("Controls", "controls"),
-     ("Frameworks", "frameworks"), ("Model families", "models"), ("Relationships", "relationships")],
+     ("Frameworks", "frameworks"), ("Model families", "models"), ("Relationships", "relationships"),
+     ("Ecosystem repos", "ecosystem")],
 ]
 
 
@@ -110,11 +112,63 @@ def source_grades() -> str:
                  [[f"**{g}**", label, str(sum(1 for s in sources if s["grade"] == g))] for g, label in grades.items()], False)
 
 
+EVIDENCE_CLASSES = {
+    "framework-data": ("Taxonomies and knowledge bases", "Technique definitions and framework mappings", "Observed activity"),
+    "incident-data": ("Incident databases", "Incident references, citing the primary report", "Actor attribution or cyber campaigns (scope is broader than cybersecurity)"),
+    "detection-content": ("Community detection rules", "Detection ideas and telemetry requirements", "Proof of in-the-wild behavior"),
+    "curated-list": ("Curated lists", "Discovering sources and tools", "Any claim on their own"),
+    "assessment-tool": ("Scanners and red-team tools", "Test design and control evaluation", "Effectiveness against current models"),
+    "benchmark": ("Benchmarks and environments", "Reproducible tests and coverage measurement", "Real-world prevalence"),
+    "research-technique": ("Attack research code", "Techniques demonstrated in research", "Use in the wild"),
+    "defence-tool": ("Defences and guardrails", "Control design and comparison", "Proven protection"),
+    "lab-exercise": ("Training labs", "Analyst training and onboarding", "Threat intelligence"),
+    "prompt-corpus": ("Prompt corpora and datasets", "Test inspiration and measurement", "Threat intelligence or attribution"),
+}
+SECTIONS = {
+    "knowledge": "Knowledge bases, taxonomies and incident data", "catalog": "Catalogs and awesome lists",
+    "evaluation": "Evaluation tools, scanners and red teaming", "benchmark": "Benchmarks, datasets and environments",
+    "attack-research": "Attack technique research", "defence": "Defences, detection and controls",
+    "agent-security": "Agent, skill and MCP security", "lab": "Labs, training and example collections",
+}
+
+
+def eco_rows(entries: list[dict]) -> list[list[str]]:
+    rows = []
+    for e in entries:
+        flags = []
+        if e["priority"] == "start-here":
+            flags.append("**start here**")
+        if e["status"] == "archived-reported":
+            flags.append("archived (as reported)")
+        note = cell(e["summary"]) + (" · " + ", ".join(flags) if flags else "")
+        rows.append([f"[{cell(e['owner'])}/{cell(e['name'])}]({e['url']})", f"`{e['evidence_class']}`",
+                     cell([f"`{t}`" for t in e["techniques"]]) or "none", note])
+    return rows
+
+
+ECO_HEAD = ["Repository", "Evidence class", "Techniques", "Scope"]
+
+
+def eco_classes() -> str:
+    entries = load("ecosystem")
+    return table(["Evidence class", "What it is", "Can support", "Cannot support", "Entries"],
+                 [[f"`{k}`", v[0], v[1], v[2], str(sum(1 for e in entries if e["evidence_class"] == k))] for k, v in EVIDENCE_CLASSES.items()])
+
+
+def eco_start() -> str:
+    return table(ECO_HEAD, eco_rows([e for e in load("ecosystem") if e["priority"] == "start-here"]))
+
+
+def eco_section(name: str):
+    return lambda: table(ECO_HEAD, eco_rows([e for e in load("ecosystem") if e["section"] == name]))
+
+
 BLOCKS = {
     "stats": stats, "actors": actors, "campaigns": campaigns, "incidents": incidents,
     "vulnerabilities": vulnerabilities, "techniques": techniques, "test-cases": test_cases,
     "detections": detections, "controls": controls, "frameworks": frameworks, "models": models,
-    "source-grades": source_grades,
+    "source-grades": source_grades, "eco-classes": eco_classes, "eco-start": eco_start,
+    **{f"eco-{name}": eco_section(name) for name in SECTIONS},
 }
 
 
@@ -132,15 +186,19 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--check", action="store_true")
     args = parser.parse_args()
-    current = README.read_text(encoding="utf-8")
-    new = updated(current)
-    if args.check:
+    stale = []
+    for path in FILES:
+        current = path.read_text(encoding="utf-8")
+        new = updated(current)
         if new != current:
-            print("README generated blocks are stale; run python scripts/readme_stats.py", file=sys.stderr)
-            return 1
-        return 0
-    README.write_text(new, encoding="utf-8")
-    print("README generated blocks updated")
+            stale.append(path.name)
+            if not args.check:
+                path.write_text(new, encoding="utf-8")
+    if args.check and stale:
+        print(f"generated blocks are stale in {', '.join(stale)}; run python scripts/readme_stats.py", file=sys.stderr)
+        return 1
+    if not args.check:
+        print("generated blocks updated" + (f": {', '.join(stale)}" if stale else " (nothing to change)"))
     return 0
 
 
