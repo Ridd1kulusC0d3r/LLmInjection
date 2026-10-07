@@ -126,3 +126,13 @@ Evidence → Campaign → Technique → Test → Detection → Control → Frame
 ```
 
 …and move through the chain without leaving the project.
+
+## Proposed next (2026-10-07)
+
+1. **Close the coverage gaps** reported by `python scripts/audit_graph.py`, starting with the priority gaps: a safe test for CI identity-token theft (LLMI-T011) and detections for agentic attack orchestration (LLMI-T015).
+2. **Add a maturity field to techniques** (`observed-in-the-wild`, `incident`, `research-demonstrated`, `theoretical`) so the data model carries the same distinction the ecosystem map enforces.
+3. **Verify the ecosystem automatically**: a scheduled job that checks each listed repository's archived flag and last activity through the GitHub API, plus release feeds for the start-here tools.
+4. **Export an ATT&CK Navigator and ATLAS layer** from the coverage data so SOC teams can overlay it on their own view.
+5. **Fill external mappings** for LLMI-T017 to T022 from the primary ATLAS and OWASP data.
+6. **Brazil and LATAM lens**: a regional view of AI-enabled activity, in Portuguese, linked to the existing actor and campaign records.
+

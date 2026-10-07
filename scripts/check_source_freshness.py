@@ -2,6 +2,7 @@
 """Check whether curated sources and actor records need re-verification."""
 
 from __future__ import annotations
+
 import argparse
 import json
 from datetime import date

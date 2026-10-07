@@ -828,5 +828,192 @@
     "evidence_sources": [
       "SRC-WIZ-TEAMPCP"
     ]
+  },
+  {
+    "id": "REL-076",
+    "type": "relationship",
+    "source": "TC-AG-006",
+    "relationship": "validates",
+    "target": "LLMI-T008",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-OWASP-AGENTIC-2026"
+    ]
+  },
+  {
+    "id": "REL-077",
+    "type": "relationship",
+    "source": "TC-MCP-010",
+    "relationship": "validates",
+    "target": "LLMI-T008",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MCP-SECURITY-2026"
+    ]
+  },
+  {
+    "id": "REL-078",
+    "type": "relationship",
+    "source": "DET-AI-007",
+    "relationship": "detects",
+    "target": "LLMI-T008",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-MCP-SECURITY-2026"
+    ]
+  },
+  {
+    "id": "REL-079",
+    "type": "relationship",
+    "source": "TC-OH-013",
+    "relationship": "validates",
+    "target": "LLMI-T020",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-OWASP-LLM-2026"
+    ]
+  },
+  {
+    "id": "REL-080",
+    "type": "relationship",
+    "source": "LLMI-T020",
+    "relationship": "mitigated-by",
+    "target": "CTRL-OUTPUT-SANITIZATION",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-OWASP-LLM-2026"
+    ]
+  },
+  {
+    "id": "REL-081",
+    "type": "relationship",
+    "source": "TC-COST-014",
+    "relationship": "validates",
+    "target": "LLMI-T021",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-OWASP-LLM-2026"
+    ]
+  },
+  {
+    "id": "REL-082",
+    "type": "relationship",
+    "source": "DET-AI-008",
+    "relationship": "detects",
+    "target": "LLMI-T021",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-OWASP-LLM-2026"
+    ]
+  },
+  {
+    "id": "REL-083",
+    "type": "relationship",
+    "source": "LLMI-T021",
+    "relationship": "mitigated-by",
+    "target": "CTRL-ACTION-BUDGET",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-OWASP-LLM-2026"
+    ]
+  },
+  {
+    "id": "REL-084",
+    "type": "relationship",
+    "source": "TC-RUN-011",
+    "relationship": "validates",
+    "target": "LLMI-T022",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-GENIANS-KIMSUKY"
+    ]
+  },
+  {
+    "id": "REL-085",
+    "type": "relationship",
+    "source": "TC-NET-012",
+    "relationship": "validates",
+    "target": "LLMI-T022",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-GENIANS-KIMSUKY"
+    ]
+  },
+  {
+    "id": "REL-086",
+    "type": "relationship",
+    "source": "DET-AI-002",
+    "relationship": "detects",
+    "target": "LLMI-T022",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-GENIANS-KIMSUKY"
+    ]
+  },
+  {
+    "id": "REL-087",
+    "type": "relationship",
+    "source": "DET-AI-001",
+    "relationship": "detects",
+    "target": "LLMI-T022",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-GENIANS-KIMSUKY"
+    ]
+  },
+  {
+    "id": "REL-088",
+    "type": "relationship",
+    "source": "LLMI-T022",
+    "relationship": "mitigated-by",
+    "target": "CTRL-AI-INVENTORY",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-GENIANS-KIMSUKY"
+    ]
+  },
+  {
+    "id": "REL-089",
+    "type": "relationship",
+    "source": "LLMI-T022",
+    "relationship": "mitigated-by",
+    "target": "CTRL-EGRESS-POLICY",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-GENIANS-KIMSUKY"
+    ]
+  },
+  {
+    "id": "REL-090",
+    "type": "relationship",
+    "source": "DET-AI-009",
+    "relationship": "detects",
+    "target": "LLMI-T012",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-CSA-PROMPTMINK"
+    ]
+  },
+  {
+    "id": "REL-091",
+    "type": "relationship",
+    "source": "DET-AI-010",
+    "relationship": "detects",
+    "target": "LLMI-T004",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-OWASP-LLM-2026"
+    ]
+  },
+  {
+    "id": "REL-092",
+    "type": "relationship",
+    "source": "LLMI-T010",
+    "relationship": "mitigated-by",
+    "target": "CTRL-SIGNATURE-VERIFICATION",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-SIGSTORE-COSIGN"
+    ]
   }
 ]

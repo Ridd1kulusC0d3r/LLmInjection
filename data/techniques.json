@@ -485,5 +485,41 @@
       "MITRE ATLAS"
     ],
     "external_mappings": []
+  },
+  {
+    "id": "LLMI-T020",
+    "type": "technique",
+    "name": "Improper Output Handling",
+    "category": "application-security",
+    "summary": "Model output is passed unsanitized to a browser, interpreter, shell or downstream tool, turning generated text into an execution or injection primitive.",
+    "mappings": [
+      "OWASP LLM",
+      "Google SAIF"
+    ],
+    "external_mappings": []
+  },
+  {
+    "id": "LLMI-T021",
+    "type": "technique",
+    "name": "Resource Exhaustion and Cost Abuse",
+    "category": "availability",
+    "summary": "Looping agents or high-volume requests exhaust compute, tokens or budget, causing denial of service or unbounded spend.",
+    "mappings": [
+      "OWASP LLM",
+      "OWASP Agentic"
+    ],
+    "external_mappings": []
+  },
+  {
+    "id": "LLMI-T022",
+    "type": "technique",
+    "name": "Unsanctioned AI Runtime (Shadow AI)",
+    "category": "runtime-security",
+    "summary": "AI runtimes, local models or provider endpoints are used outside the approved inventory, hiding data flows and capability from security teams.",
+    "mappings": [
+      "MITRE ATT&CK",
+      "MITRE ATLAS"
+    ],
+    "external_mappings": []
   }
 ]
