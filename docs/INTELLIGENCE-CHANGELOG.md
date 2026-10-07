@@ -2,6 +2,27 @@
 
 This changelog records material changes to attribution, confidence, external mappings and structured intelligence. Ordinary prose edits do not belong here.
 
+## 2026-10-07 — Latin America, closed coverage gaps and technique maturity
+
+### Added
+
+- Latin America: actor BREEZE COMET; campaigns BREEZE-COMET-PAYMENTS, SHADOW-AETHER-040 and CL-CRI-1131 from Google/Mandiant, Trend Micro and Unit 42 primary reports; four sources; technique LLMI-T023 (AI-assisted tooling development); control CTRL-EXEC-POLICY; landscape domain and four research-queue leads; `regions` field; Portuguese regional document and README;
+- coverage: tests TC-JB-021 to TC-TOOL-026 and detections DET-AI-015 to DET-AI-020, so every technique now has a test and a detection; INCIDENT-GTIG-DISTILLATION links the distillation technique to observed activity;
+- technique `maturity` field, derived from the graph by `scripts/maturity.py` and enforced by the validator; level `no-linked-evidence` replaces the misleading word theoretical;
+- dates: `published` on sources, `reported` on campaigns and incidents; the validator checks `reported` equals the earliest source date and rejects a record first seen after its primary report;
+- ATT&CK Navigator layer export, ecosystem verification script and weekly workflow, release feeds for garak, PyRIT and AgentDojo, T018 external mappings.
+
+### Corrected
+
+- CAMPAIGN-GTG1002-AI-ESPIONAGE first_seen set to 2025-09: Anthropic reports detection in mid-September 2025 and published on 2025-11-13, not in 2026;
+- CAMPAIGN-APT28-PROMPTSTEAL first_seen set to 2025: GTIG reported it on 2025-11-05.
+
+### Confidence notes
+
+- In all three Latin America campaigns the AI use is inferred or reported by one vendor; the records say so and no model is asserted except where Trend reports it with high confidence from leaked conversations.
+- Press-reported overlaps (for example CL-CRI-1163 with BREEZE COMET) are noted in summaries, not merged as aliases. Google's own reported overlaps (Plump Spider, SHADOW-AETHER-064) are likewise not merged.
+- Not done: external ATLAS and OWASP IDs for T017 and T019 to T023. The ATLAS technique pages were unreachable (HTTP 404) from this environment, so those mappings are left empty rather than guessed. The ecosystem verification script was tested with fixtures but not run against GitHub from this environment.
+
 ## 2026-10-07 — Graph audit, taxonomy completion and Explorer dashboard
 
 ### Added

@@ -17,9 +17,15 @@ LLMInjection separates **intelligence**, **test coverage** and **production dete
 | DET-AI-009 | Automated Dependency Admission Without Review | Package manager, CI, review state | TC-SC-008 |
 | DET-AI-010 | Sensitive Canary in Model Output | Response classification, canary hit | TC-DL-003 |
 | DET-AI-011 | Assistant or IDE Config Written by Non-Editor Process | File events, process lineage, git diff, hook registration | TC-WS-017 |
-| DET-AI-012 | CI Token Read From Runner Process Memory | Process access, runner process tree, token mint, cloud audit | gap |
+| DET-AI-012 | CI Token Read From Runner Process Memory | Process access, runner process tree, token mint, cloud audit | TC-CI-023 |
 | DET-AI-013 | Systematic Prompt Harvesting Pattern | API request log, account linkage, template similarity | TC-DIST-018 |
 | DET-AI-014 | Scanner Verdict Despite Refusal | Scanner verdict, refusal flag, admission decision | TC-SCAN-016 |
+| DET-AI-015 | Policy Deviation After Untrusted Content Ingestion | Content trust, tool call, task plan, policy decision | TC-PI-001 / PI-002 |
+| DET-AI-016 | Repeated Refusal-Bypass Sequence | Refusal flag, request framing, session risk | TC-JB-021 |
+| DET-AI-017 | Training Data Provenance Drift | Dataset digest, contributor, source mix, review state | TC-POI-022 |
+| DET-AI-018 | Agent Outbound Communication Anomaly | Recipient, new-domain flag, volume, approval state | TC-SOC-025 |
+| DET-AI-019 | Model Output Reaching an Interpreter Unsanitized | Output sink, sanitizer bypass, interpreter event | TC-OH-013 |
+| DET-AI-020 | Rapid Iterative Script Variants on One Host | Process creation, script hash, naming pattern, exit code | TC-TOOL-026 |
 
 ## Detection-as-code starter pack
 

@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1250" height="774" viewBox="0 0 1250 774" role="img" aria-labelledby="t">
+<svg xmlns="http://www.w3.org/2000/svg" width="1250" height="800" viewBox="0 0 1250 800" role="img" aria-labelledby="t">
 <title id="t">Technique to framework mapping matrix</title>
-<rect width="1250" height="774" fill="#f3f0e8"/>
-<rect x=".5" y=".5" width="1249" height="773" fill="none" stroke="#17150f"/>
+<rect width="1250" height="800" fill="#f3f0e8"/>
+<rect x=".5" y=".5" width="1249" height="799" fill="none" stroke="#17150f"/>
 <text x="40" y="44" font-family="Georgia,serif" font-size="22" font-weight="700" fill="#17150f">Framework mapping</text>
 <text x="40" y="64" font-family="'Courier New',monospace" font-size="11" fill="#7b766a">Which external frameworks each LLMInjection technique maps to.</text>
 <text x="484.0" y="100" text-anchor="middle" font-family="'Courier New',monospace" font-size="11" font-weight="700" letter-spacing="1.5" fill="#4a463c">OWASP LLM</text>
-<text x="588.0" y="100" text-anchor="middle" font-family="'Courier New',monospace" font-size="11" font-weight="700" letter-spacing="1.5" fill="#4a463c">SAIF</text>
-<text x="692.0" y="100" text-anchor="middle" font-family="'Courier New',monospace" font-size="11" font-weight="700" letter-spacing="1.5" fill="#4a463c">ATLAS</text>
+<text x="588.0" y="100" text-anchor="middle" font-family="'Courier New',monospace" font-size="11" font-weight="700" letter-spacing="1.5" fill="#4a463c">ATLAS</text>
+<text x="692.0" y="100" text-anchor="middle" font-family="'Courier New',monospace" font-size="11" font-weight="700" letter-spacing="1.5" fill="#4a463c">SAIF</text>
 <text x="796.0" y="100" text-anchor="middle" font-family="'Courier New',monospace" font-size="11" font-weight="700" letter-spacing="1.5" fill="#4a463c">CSA MAESTRO</text>
 <text x="900.0" y="100" text-anchor="middle" font-family="'Courier New',monospace" font-size="11" font-weight="700" letter-spacing="1.5" fill="#4a463c">ATT&amp;CK</text>
 <text x="1004.0" y="100" text-anchor="middle" font-family="'Courier New',monospace" font-size="11" font-weight="700" letter-spacing="1.5" fill="#4a463c">OWASP AGENTIC</text>
@@ -48,8 +48,8 @@
 <line x1="40" x2="1210" y1="190" y2="190" stroke="#e0dacb"/>
 <text x="40" y="207" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T004  </tspan>Sensitive Information Disclosure</text>
 <rect x="476.0" y="195" width="16" height="16" fill="#17150f"/>
-<rect x="580.0" y="195" width="16" height="16" fill="#17150f"/>
-<rect x="684.0" y="195" width="16" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="580.0" y="195" width="16" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="684.0" y="195" width="16" height="16" fill="#17150f"/>
 <rect x="788.0" y="195" width="16" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <rect x="892.0" y="195" width="16" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <rect x="996.0" y="195" width="16" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
@@ -81,8 +81,8 @@
 <line x1="40" x2="1210" y1="268" y2="268" stroke="#e0dacb"/>
 <text x="40" y="285" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T007  </tspan>RAG Knowledge Poisoning</text>
 <rect x="476.0" y="273" width="16" height="16" fill="#17150f"/>
-<rect x="580.0" y="273" width="16" height="16" fill="#17150f"/>
-<rect x="684.0" y="273" width="16" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="580.0" y="273" width="16" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="684.0" y="273" width="16" height="16" fill="#17150f"/>
 <rect x="788.0" y="273" width="16" height="16" fill="#17150f"/>
 <rect x="892.0" y="273" width="16" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <rect x="996.0" y="273" width="16" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
@@ -92,8 +92,8 @@
 <line x1="40" x2="1210" y1="294" y2="294" stroke="#e0dacb"/>
 <text x="40" y="311" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T008  </tspan>Agent Tool Misuse</text>
 <rect x="476.0" y="299" width="16" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
-<rect x="580.0" y="299" width="16" height="16" fill="#17150f"/>
-<rect x="684.0" y="299" width="16" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="580.0" y="299" width="16" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="684.0" y="299" width="16" height="16" fill="#17150f"/>
 <rect x="788.0" y="299" width="16" height="16" fill="#17150f"/>
 <rect x="892.0" y="299" width="16" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <rect x="996.0" y="299" width="16" height="16" fill="#17150f"/>
@@ -125,8 +125,8 @@
 <line x1="40" x2="1210" y1="372" y2="372" stroke="#e0dacb"/>
 <text x="40" y="389" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T011  </tspan>AI Software Supply Chain Compromise</text>
 <rect x="476.0" y="377" width="16" height="16" fill="#17150f"/>
-<rect x="580.0" y="377" width="16" height="16" fill="#17150f"/>
-<rect x="684.0" y="377" width="16" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="580.0" y="377" width="16" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="684.0" y="377" width="16" height="16" fill="#17150f"/>
 <rect x="788.0" y="377" width="16" height="16" fill="#17150f"/>
 <rect x="892.0" y="377" width="16" height="16" fill="#17150f"/>
 <rect x="996.0" y="377" width="16" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
@@ -147,8 +147,8 @@
 <line x1="40" x2="1210" y1="424" y2="424" stroke="#e0dacb"/>
 <text x="40" y="441" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T013  </tspan>Runtime LLM Command Generation</text>
 <rect x="476.0" y="429" width="16" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
-<rect x="580.0" y="429" width="16" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
-<rect x="684.0" y="429" width="16" height="16" fill="#17150f"/>
+<rect x="580.0" y="429" width="16" height="16" fill="#17150f"/>
+<rect x="684.0" y="429" width="16" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <rect x="788.0" y="429" width="16" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <rect x="892.0" y="429" width="16" height="16" fill="#17150f"/>
 <rect x="996.0" y="429" width="16" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
@@ -158,8 +158,8 @@
 <line x1="40" x2="1210" y1="450" y2="450" stroke="#e0dacb"/>
 <text x="40" y="467" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T014  </tspan>AI-Assisted Reconnaissance and Social Engineering</text>
 <rect x="476.0" y="455" width="16" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
-<rect x="580.0" y="455" width="16" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
-<rect x="684.0" y="455" width="16" height="16" fill="#17150f"/>
+<rect x="580.0" y="455" width="16" height="16" fill="#17150f"/>
+<rect x="684.0" y="455" width="16" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <rect x="788.0" y="455" width="16" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <rect x="892.0" y="455" width="16" height="16" fill="#17150f"/>
 <rect x="996.0" y="455" width="16" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
@@ -169,8 +169,8 @@
 <line x1="40" x2="1210" y1="476" y2="476" stroke="#e0dacb"/>
 <text x="40" y="493" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T015  </tspan>Agentic Attack Orchestration</text>
 <rect x="476.0" y="481" width="16" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
-<rect x="580.0" y="481" width="16" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
-<rect x="684.0" y="481" width="16" height="16" fill="#17150f"/>
+<rect x="580.0" y="481" width="16" height="16" fill="#17150f"/>
+<rect x="684.0" y="481" width="16" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <rect x="788.0" y="481" width="16" height="16" fill="#17150f"/>
 <rect x="892.0" y="481" width="16" height="16" fill="#17150f"/>
 <rect x="996.0" y="481" width="16" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
@@ -180,8 +180,8 @@
 <line x1="40" x2="1210" y1="502" y2="502" stroke="#e0dacb"/>
 <text x="40" y="519" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T016  </tspan>AI Gateway Credential Compromise</text>
 <rect x="476.0" y="507" width="16" height="16" fill="#17150f"/>
-<rect x="580.0" y="507" width="16" height="16" fill="#17150f"/>
-<rect x="684.0" y="507" width="16" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="580.0" y="507" width="16" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="684.0" y="507" width="16" height="16" fill="#17150f"/>
 <rect x="788.0" y="507" width="16" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <rect x="892.0" y="507" width="16" height="16" fill="#17150f"/>
 <rect x="996.0" y="507" width="16" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
@@ -202,19 +202,19 @@
 <line x1="40" x2="1210" y1="554" y2="554" stroke="#e0dacb"/>
 <text x="40" y="571" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T018  </tspan>AI Coding-Assistant Workspace Abuse</text>
 <rect x="476.0" y="559" width="16" height="16" fill="#17150f"/>
-<rect x="580.0" y="559" width="16" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="580.0" y="559" width="16" height="16" fill="#17150f"/>
 <rect x="684.0" y="559" width="16" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <rect x="788.0" y="559" width="16" height="16" fill="#17150f"/>
 <rect x="892.0" y="559" width="16" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <rect x="996.0" y="559" width="16" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <rect x="1100.0" y="559" width="16" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
-<rect x="1188.0" y="557" width="34" height="20" fill="#d4804f"/>
-<text x="1205" y="572" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
+<rect x="1188.0" y="557" width="34" height="20" fill="#b43c0e"/>
+<text x="1205" y="572" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">3</text>
 <line x1="40" x2="1210" y1="580" y2="580" stroke="#e0dacb"/>
 <text x="40" y="597" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T019  </tspan>Model Distillation Campaign</text>
 <rect x="476.0" y="585" width="16" height="16" fill="#17150f"/>
-<rect x="580.0" y="585" width="16" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
-<rect x="684.0" y="585" width="16" height="16" fill="#17150f"/>
+<rect x="580.0" y="585" width="16" height="16" fill="#17150f"/>
+<rect x="684.0" y="585" width="16" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <rect x="788.0" y="585" width="16" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <rect x="892.0" y="585" width="16" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <rect x="996.0" y="585" width="16" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
@@ -224,8 +224,8 @@
 <line x1="40" x2="1210" y1="606" y2="606" stroke="#e0dacb"/>
 <text x="40" y="623" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T020  </tspan>Improper Output Handling</text>
 <rect x="476.0" y="611" width="16" height="16" fill="#17150f"/>
-<rect x="580.0" y="611" width="16" height="16" fill="#17150f"/>
-<rect x="684.0" y="611" width="16" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="580.0" y="611" width="16" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="684.0" y="611" width="16" height="16" fill="#17150f"/>
 <rect x="788.0" y="611" width="16" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <rect x="892.0" y="611" width="16" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <rect x="996.0" y="611" width="16" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
@@ -246,8 +246,8 @@
 <line x1="40" x2="1210" y1="658" y2="658" stroke="#e0dacb"/>
 <text x="40" y="675" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T022  </tspan>Unsanctioned AI Runtime (Shadow AI)</text>
 <rect x="476.0" y="663" width="16" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
-<rect x="580.0" y="663" width="16" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
-<rect x="684.0" y="663" width="16" height="16" fill="#17150f"/>
+<rect x="580.0" y="663" width="16" height="16" fill="#17150f"/>
+<rect x="684.0" y="663" width="16" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <rect x="788.0" y="663" width="16" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <rect x="892.0" y="663" width="16" height="16" fill="#17150f"/>
 <rect x="996.0" y="663" width="16" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
@@ -255,13 +255,24 @@
 <rect x="1188.0" y="661" width="34" height="20" fill="#d4804f"/>
 <text x="1205" y="676" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
 <line x1="40" x2="1210" y1="684" y2="684" stroke="#e0dacb"/>
-<text x="40" y="718" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#4a463c">TECHNIQUES MAPPED</text>
-<text x="484.0" y="718" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">14</text>
-<text x="588.0" y="718" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">11</text>
-<text x="692.0" y="718" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">10</text>
-<text x="796.0" y="718" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">8</text>
-<text x="900.0" y="718" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">6</text>
-<text x="1004.0" y="718" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">4</text>
-<text x="1108.0" y="718" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">3</text>
-<text x="40" y="744" font-family="'Courier New',monospace" font-size="10" fill="#7b766a">Filled square: mapped. Dashed: not mapped. Exact and related relations are listed in data/techniques.json.</text>
+<text x="40" y="701" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T023  </tspan>AI-Assisted Tooling Development</text>
+<rect x="476.0" y="689" width="16" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="580.0" y="689" width="16" height="16" fill="#17150f"/>
+<rect x="684.0" y="689" width="16" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="788.0" y="689" width="16" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="892.0" y="689" width="16" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="996.0" y="689" width="16" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="1100.0" y="689" width="16" height="16" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
+<rect x="1188.0" y="687" width="34" height="20" fill="#e9b394"/>
+<text x="1205" y="702" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
+<line x1="40" x2="1210" y1="710" y2="710" stroke="#e0dacb"/>
+<text x="40" y="744" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#4a463c">TECHNIQUES MAPPED</text>
+<text x="484.0" y="744" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">14</text>
+<text x="588.0" y="744" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">12</text>
+<text x="692.0" y="744" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">11</text>
+<text x="796.0" y="744" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">8</text>
+<text x="900.0" y="744" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">6</text>
+<text x="1004.0" y="744" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">4</text>
+<text x="1108.0" y="744" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">3</text>
+<text x="40" y="770" font-family="'Courier New',monospace" font-size="10" fill="#7b766a">Filled square: mapped. Dashed: not mapped. Exact and related relations are listed in data/techniques.json.</text>
 </svg>

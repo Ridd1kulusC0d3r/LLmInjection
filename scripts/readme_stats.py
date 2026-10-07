@@ -19,7 +19,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from common import ROOT, load_data  # noqa: E402
 
 README = ROOT / "README.md"
-FILES = [README, ROOT / "docs" / "ECOSYSTEM.md"]
+FILES = [README, ROOT / "README.pt-BR.md", ROOT / "docs" / "ECOSYSTEM.md"]
 
 GROUPS = [
     [("Actors", "actors"), ("Campaigns", "campaigns"), ("Incidents", "incidents"),
@@ -56,14 +56,43 @@ def stats() -> str:
     return "\n\n".join(out)
 
 
+PT_LABELS = {"actors": "Atores", "campaigns": "Campanhas", "incidents": "Incidentes", "vulnerabilities": "Vulnerabilidades", "techniques": "Técnicas",
+             "sources": "Fontes", "test-cases": "Casos de teste", "detections": "Detecções", "controls": "Controles", "frameworks": "Frameworks",
+             "models": "Famílias de modelos", "relationships": "Relações", "ecosystem": "Projetos do ecossistema"}
+
+
+def stats_pt() -> str:
+    out = []
+    for group in GROUPS:
+        out.append(table([PT_LABELS[key] for _, key in group], [[f"**{len(load(key))}**" for _, key in group]], True))
+    return "\n\n".join(out)
+
+
+MATURITY_MEANING = {
+    "observed-in-the-wild": "Linked to a campaign, or to an incident whose status is observed",
+    "disclosed-vulnerability": "Linked to a vulnerability record (CVE, GHSA or malicious package)",
+    "research-demonstrated": "Linked to a research or lab incident, or mapped by a research or benchmark project",
+    "no-linked-evidence": "Nothing in this repository links to it yet. Not a claim that it is theoretical",
+}
+
+
+def maturity() -> str:
+    techniques = load("techniques")
+    rows = []
+    for level, meaning in MATURITY_MEANING.items():
+        ids = [t["id"][-4:] for t in techniques if t.get("maturity") == level]
+        rows.append([f"`{level}`", meaning, str(len(ids)), cell(ids)])
+    return table(["Maturity", "Derived from", "Techniques", "IDs"], rows)
+
+
 def actors() -> str:
     return table(["Actor", "Nexus", "AI role", "Activity", "Confidence"],
                  [[f"**{cell(a['name'])}**", cell(a["nexus"]), cell(a["ai_role"]), cell(a["summary"], 130), cell(a["confidence"])] for a in load("actors")])
 
 
 def campaigns() -> str:
-    return table(["Campaign", "Seen", "Confidence", "Summary"],
-                 [[f"**{cell(c['name'])}**", cell(c["first_seen"]), cell(c["confidence"]), cell(c["summary"], 150)] for c in load("campaigns")])
+    return table(["Campaign", "First seen", "Reported", "Regions", "Confidence", "Summary"],
+                 [[f"**{cell(c['name'])}**", cell(c["first_seen"]), cell(c.get("reported", "")), cell(c.get("regions", [])), cell(c["confidence"]), cell(c["summary"], 140)] for c in load("campaigns")])
 
 
 def incidents() -> str:
@@ -77,8 +106,8 @@ def vulnerabilities() -> str:
 
 
 def techniques() -> str:
-    return table(["ID", "Technique", "Category", "Mapped to"],
-                 [[f"`{t['id']}`", f"**{cell(t['name'])}**", cell(t["category"]), cell(t["mappings"])] for t in load("techniques")])
+    return table(["ID", "Technique", "Category", "Maturity", "Mapped to"],
+                 [[f"`{t['id']}`", f"**{cell(t['name'])}**", cell(t["category"]), cell(t.get("maturity", "")), cell(t["mappings"])] for t in load("techniques")])
 
 
 def test_cases() -> str:
@@ -165,7 +194,7 @@ def eco_section(name: str):
 
 
 BLOCKS = {
-    "stats": stats, "actors": actors, "campaigns": campaigns, "incidents": incidents,
+    "stats": stats, "stats-pt": stats_pt, "maturity": maturity, "actors": actors, "campaigns": campaigns, "incidents": incidents,
     "vulnerabilities": vulnerabilities, "techniques": techniques, "test-cases": test_cases,
     "detections": detections, "controls": controls, "frameworks": frameworks, "models": models,
     "source-grades": source_grades, "eco-classes": eco_classes, "eco-start": eco_start,

@@ -25,7 +25,8 @@
         "relation": "exact",
         "url": "https://atlas.mitre.org/techniques/AML.T0051.000"
       }
-    ]
+    ],
+    "maturity": "research-demonstrated"
   },
   {
     "id": "LLMI-T002",
@@ -54,7 +55,8 @@
         "relation": "exact",
         "url": "https://atlas.mitre.org/techniques/AML.T0051.001"
       }
-    ]
+    ],
+    "maturity": "research-demonstrated"
   },
   {
     "id": "LLMI-T003",
@@ -81,7 +83,8 @@
         "relation": "exact",
         "url": "https://atlas.mitre.org/techniques/AML.T0054"
       }
-    ]
+    ],
+    "maturity": "research-demonstrated"
   },
   {
     "id": "LLMI-T004",
@@ -108,7 +111,8 @@
         "relation": "exact",
         "url": "https://atlas.mitre.org/techniques/AML.T0057"
       }
-    ]
+    ],
+    "maturity": "no-linked-evidence"
   },
   {
     "id": "LLMI-T005",
@@ -129,7 +133,8 @@
         "relation": "related",
         "url": "https://atlas.mitre.org/techniques/AML.T0044"
       }
-    ]
+    ],
+    "maturity": "observed-in-the-wild"
   },
   {
     "id": "LLMI-T006",
@@ -165,7 +170,8 @@
         "relation": "related",
         "url": "https://atlas.mitre.org/techniques/AML.T0018"
       }
-    ]
+    ],
+    "maturity": "no-linked-evidence"
   },
   {
     "id": "LLMI-T007",
@@ -193,7 +199,8 @@
         "relation": "exact",
         "url": "https://atlas.mitre.org/techniques/AML.T0070"
       }
-    ]
+    ],
+    "maturity": "research-demonstrated"
   },
   {
     "id": "LLMI-T008",
@@ -221,7 +228,8 @@
         "relation": "exact",
         "url": "https://atlas.mitre.org/techniques/AML.T0053"
       }
-    ]
+    ],
+    "maturity": "disclosed-vulnerability"
   },
   {
     "id": "LLMI-T009",
@@ -248,7 +256,8 @@
         "relation": "exact",
         "url": "https://atlas.mitre.org/techniques/AML.T0080"
       }
-    ]
+    ],
+    "maturity": "research-demonstrated"
   },
   {
     "id": "LLMI-T010",
@@ -275,7 +284,8 @@
         "relation": "exact",
         "url": "https://atlas.mitre.org/techniques/AML.T0010.003"
       }
-    ]
+    ],
+    "maturity": "no-linked-evidence"
   },
   {
     "id": "LLMI-T011",
@@ -318,7 +328,8 @@
         "relation": "exact",
         "url": "https://atlas.mitre.org/techniques/AML.T0010.001"
       }
-    ]
+    ],
+    "maturity": "observed-in-the-wild"
   },
   {
     "id": "LLMI-T012",
@@ -353,7 +364,8 @@
         "relation": "related",
         "url": "https://atlas.mitre.org/techniques/AML.T0111"
       }
-    ]
+    ],
+    "maturity": "observed-in-the-wild"
   },
   {
     "id": "LLMI-T013",
@@ -373,7 +385,8 @@
         "relation": "exact",
         "url": "https://atlas.mitre.org/techniques/AML.T0102"
       }
-    ]
+    ],
+    "maturity": "observed-in-the-wild"
   },
   {
     "id": "LLMI-T014",
@@ -393,7 +406,8 @@
         "relation": "related",
         "url": "https://atlas.mitre.org/techniques/AML.T0052.000"
       }
-    ]
+    ],
+    "maturity": "observed-in-the-wild"
   },
   {
     "id": "LLMI-T015",
@@ -414,7 +428,8 @@
         "relation": "exact",
         "url": "https://atlas.mitre.org/techniques/AML.T0124"
       }
-    ]
+    ],
+    "maturity": "observed-in-the-wild"
   },
   {
     "id": "LLMI-T016",
@@ -449,7 +464,8 @@
         "relation": "related",
         "url": "https://attack.mitre.org/techniques/T1552/"
       }
-    ]
+    ],
+    "maturity": "observed-in-the-wild"
   },
   {
     "id": "LLMI-T017",
@@ -460,7 +476,8 @@
     "mappings": [
       "OWASP LLM"
     ],
-    "external_mappings": []
+    "external_mappings": [],
+    "maturity": "observed-in-the-wild"
   },
   {
     "id": "LLMI-T018",
@@ -469,10 +486,27 @@
     "category": "agentic-supply-chain",
     "summary": "Hidden assistant/IDE configuration files and hooks in a repository instruct a coding agent to run attacker scripts during routine developer interaction.",
     "mappings": [
-      "OWASP LLM",
-      "CSA MAESTRO"
+      "CSA MAESTRO",
+      "MITRE ATLAS",
+      "OWASP LLM"
     ],
-    "external_mappings": []
+    "external_mappings": [
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0080",
+        "name": "AI Agent Context Poisoning",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0080"
+      },
+      {
+        "framework": "OWASP Agentic Top 10 2026",
+        "id": "ASI04:2026",
+        "name": "Agentic Supply Chain Vulnerabilities",
+        "relation": "related",
+        "url": "https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/"
+      }
+    ],
+    "maturity": "observed-in-the-wild"
   },
   {
     "id": "LLMI-T019",
@@ -484,7 +518,8 @@
       "OWASP LLM",
       "MITRE ATLAS"
     ],
-    "external_mappings": []
+    "external_mappings": [],
+    "maturity": "observed-in-the-wild"
   },
   {
     "id": "LLMI-T020",
@@ -496,7 +531,8 @@
       "OWASP LLM",
       "Google SAIF"
     ],
-    "external_mappings": []
+    "external_mappings": [],
+    "maturity": "no-linked-evidence"
   },
   {
     "id": "LLMI-T021",
@@ -508,7 +544,8 @@
       "OWASP LLM",
       "OWASP Agentic"
     ],
-    "external_mappings": []
+    "external_mappings": [],
+    "maturity": "no-linked-evidence"
   },
   {
     "id": "LLMI-T022",
@@ -520,6 +557,19 @@
       "MITRE ATT&CK",
       "MITRE ATLAS"
     ],
-    "external_mappings": []
+    "external_mappings": [],
+    "maturity": "no-linked-evidence"
+  },
+  {
+    "id": "LLMI-T023",
+    "type": "technique",
+    "name": "AI-Assisted Tooling Development",
+    "category": "offensive-enablement",
+    "summary": "Operators use LLMs to generate or iterate on reconnaissance, exploitation, credential-validation and deployment scripts or malware, compressing development time without changing the underlying attack paths.",
+    "mappings": [
+      "MITRE ATLAS"
+    ],
+    "external_mappings": [],
+    "maturity": "observed-in-the-wild"
   }
 ]

@@ -8,10 +8,15 @@ import sys
 from datetime import date, datetime
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+from maturity import derive_all as derive_maturity  # noqa: E402
+
 ROOT = Path(__file__).resolve().parents[1]
 CONFIDENCE = {"confirmed", "high", "medium", "low", "unverified"}
 GRADES = {"A", "B", "C", "D", "E"}
 LAB_MODES = {"safe-lab", "detection-simulation"}
+MATURITY = {"observed-in-the-wild", "disclosed-vulnerability", "research-demonstrated", "no-linked-evidence"}
 ECO_CLASSES = {"framework-data", "incident-data", "detection-content", "curated-list", "assessment-tool",
                "benchmark", "research-technique", "defence-tool", "lab-exercise", "prompt-corpus"}
 ECO_SECTIONS = {"knowledge", "catalog", "evaluation", "benchmark", "attack-research", "defence", "agent-security", "lab"}
@@ -206,6 +211,36 @@ def validate():
             if source_id not in index or index[source_id][0] != "sources":
                 errors.append(f"{prefix}: unknown evidence source {source_id}")
 
+    published = {s["id"]: s.get("published") for s in datasets["sources"]}
+    for i, source in enumerate(datasets["sources"]):
+        if source.get("published") is not None and not valid_date(source["published"]):
+            errors.append(f"sources[{i}]: invalid published date")
+    for name in ("campaigns", "incidents"):
+        for i, record in enumerate(datasets[name]):
+            prefix = f"{name}[{i}]"
+            reported = record.get("reported")
+            if reported is None:
+                continue
+            if not valid_date(reported):
+                errors.append(f"{prefix}: invalid reported date")
+                continue
+            dates = [published.get(sid) for sid in record.get("source_ids", [])]
+            if dates and all(dates) and reported != min(dates):
+                errors.append(f"{prefix}: reported {reported} must equal the earliest source publication date {min(dates)}")
+            seen = record.get("first_seen") if name == "campaigns" else record.get("date")
+            if seen and str(seen)[:4].isdigit() and str(seen)[:4] > reported[:4]:
+                errors.append(f"{prefix}: {seen} is later than the primary report ({reported})")
+            if "regions" in record and not all(isinstance(r, str) for r in record["regions"]):
+                errors.append(f"{prefix}: regions must be strings")
+
+    derived_maturity = derive_maturity()
+    for i, technique in enumerate(datasets["techniques"]):
+        level = technique.get("maturity")
+        if level not in MATURITY:
+            errors.append(f"techniques[{i}]: invalid maturity")
+        elif level != derived_maturity.get(technique["id"]):
+            errors.append(f"techniques[{i}]: maturity {level} does not match the graph-derived {derived_maturity.get(technique['id'])}")
+
     eco_urls: set[str] = set()
     for i, entry in enumerate(datasets["ecosystem"]):
         prefix = f"ecosystem[{i}]"
@@ -215,6 +250,10 @@ def validate():
             errors.append(f"{prefix}: invalid evidence_class")
         if entry.get("section") not in ECO_SECTIONS:
             errors.append(f"{prefix}: invalid section")
+        if entry.get("status") not in {"listed", "archived-reported", "active-verified", "archived-verified", "not-found"}:
+            errors.append(f"{prefix}: invalid status")
+        if entry.get("verified_at") is not None and not valid_date(entry["verified_at"]):
+            errors.append(f"{prefix}: invalid verified_at")
         if entry.get("priority") not in {"start-here", "standard"}:
             errors.append(f"{prefix}: invalid priority")
         if entry.get("source_grade") not in GRADES:

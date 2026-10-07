@@ -179,3 +179,10 @@ a.out{text-decoration-color:var(--rule)}
 .drawer details{margin-top:14px}.drawer summary{cursor:pointer;font:600 11px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3)}
 .grp{margin:6px 0 14px}.grp h4{font:600 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);margin:12px 0 4px}
 @media(max-width:860px){.dash.three,.dash.two{grid-template-columns:1fr;gap:26px}.heads{grid-template-columns:1fr 1fr}}
+
+.head-row{display:flex;justify-content:space-between;align-items:baseline;gap:16px}
+.export{font:600 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);background:none;border:1px solid var(--rule);padding:6px 10px;cursor:pointer;white-space:nowrap}
+.export:hover{border-color:var(--ink);color:var(--ink)}
+.mat{font:600 10px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);white-space:nowrap}
+.mat.observed-in-the-wild{color:var(--signal)}
+@media print{.mast-bar button,.controls,.tabs,.export,.drawer{display:none!important}.view{display:block!important}body{background:#fff}}

@@ -72,7 +72,10 @@
     "status": {
       "enum": [
         "listed",
-        "archived-reported"
+        "archived-reported",
+        "active-verified",
+        "archived-verified",
+        "not-found"
       ]
     },
     "techniques": {
@@ -100,6 +103,26 @@
     "added": {
       "type": "string",
       "format": "date"
+    },
+    "verified_at": {
+      "type": "string",
+      "format": "date"
+    },
+    "last_push": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "renamed_to": {
+      "type": "string"
+    },
+    "regions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     }
   }
 }

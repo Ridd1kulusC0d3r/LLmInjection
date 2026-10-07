@@ -27,6 +27,7 @@ MONO = "'Courier New',monospace"
 SERIF = "Georgia,serif"
 SANS = "system-ui,Helvetica,Arial,sans-serif"
 EVIDENCE_PREFIXES = ("CAMPAIGN-", "INCIDENT-", "VULN-")
+MATURITY_LABEL = {"observed-in-the-wild": "OBSERVED IN THE WILD", "disclosed-vulnerability": "DISCLOSED VULNERABILITY", "research-demonstrated": "RESEARCH DEMONSTRATED", "no-linked-evidence": "NO LINKED EVIDENCE"}
 
 
 def frame(width: int, height: int, title: str, subtitle: str, label: str) -> list[str]:
@@ -80,7 +81,7 @@ def technique_stats() -> list[dict]:
         others = [r["target"] if r["source"] == tid else r["source"] for r in linked]
         evidence = {o for o in others if o.startswith(EVIDENCE_PREFIXES)}
         rows.append({
-            "id": tid, "name": t["name"], "mappings": t["mappings"],
+            "id": tid, "name": t["name"], "mappings": t["mappings"], "maturity": t.get("maturity", ""),
             "evidence": len(evidence),
             "tests": sum(1 for r in linked if r["relationship"] == "validates"),
             "detections": sum(1 for r in linked if r["relationship"] == "detects"),
@@ -93,7 +94,7 @@ def technique_stats() -> list[dict]:
 def coverage_matrix() -> str:
     rows = technique_stats()
     cols = [("evidence", "EVIDENCE"), ("tests", "TESTS"), ("detections", "DETECTIONS"), ("controls", "CONTROLS"), ("tools", "TOOLS")]
-    row_h, top, left, name_w, col_w, flag_w = 26, 112, 40, 392, 92, 300
+    row_h, top, left, name_w, col_w, flag_w = 26, 112, 40, 392, 92, 420
     width = left + name_w + col_w * len(cols) + flag_w
     height = top + row_h * len(rows) + 92
     full = sum(1 for r in rows if r["tests"] and r["detections"] and r["controls"])
@@ -103,11 +104,15 @@ def coverage_matrix() -> str:
     # summary block, top right
     sx = width - left
     out.append(f'<text x="{sx}" y="44" text-anchor="end" font-family="{MONO}" font-size="22" font-weight="700" fill="{INK}">{full}<tspan font-size="12" fill="{INK3}"> / {len(rows)} fully covered</tspan></text>')
-    out.append(f'<text x="{sx}" y="64" text-anchor="end" font-family="{MONO}" font-size="11" font-weight="700" fill="{SIGNAL}">{observed_gap} techniques with linked evidence lack a test or detection</text>')
+    if observed_gap:
+        out.append(f'<text x="{sx}" y="64" text-anchor="end" font-family="{MONO}" font-size="11" font-weight="700" fill="{SIGNAL}">{observed_gap} techniques with linked evidence lack a test or detection</text>')
+    else:
+        out.append(f'<text x="{sx}" y="64" text-anchor="end" font-family="{MONO}" font-size="11" fill="{INK2}">Every technique with linked evidence has a test and a detection</text>')
     x0 = left + name_w
     group_header(out, x0, x0 + col_w, top - 28, "THREAT")
     group_header(out, x0 + col_w, x0 + 4 * col_w, top - 28, "DEFENCE")
     group_header(out, x0 + 4 * col_w, x0 + 5 * col_w, top - 28, "ECOSYSTEM")
+    col_header(out, x0 + 5 * col_w + 18 + 70, top - 12, "MATURITY")
     for i, (_, label) in enumerate(cols):
         col_header(out, x0 + i * col_w + col_w / 2, top - 12, label)
     out.append(f'<line x1="{left}" x2="{width - left}" y1="{top - 6}" y2="{top - 6}" stroke="{INK}"/>')
@@ -121,10 +126,11 @@ def coverage_matrix() -> str:
         for i, (key, _) in enumerate(cols):
             heat(out, x0 + i * col_w + col_w / 2, y, row[key])
         gaps = [g for g, ok in (("no test", row["tests"]), ("no detection", row["detections"])) if not ok]
-        if gaps:
-            priority = row["evidence"] > 0
-            text = ("PRIORITY GAP: " if priority else "") + " / ".join(gaps).upper()
-            out.append(f'<text x="{flag_x}" y="{y + 17}" font-family="{MONO}" font-size="10" font-weight="700" letter-spacing="1" fill="{SIGNAL if priority else INK3}">{escape(text)}</text>')
+        label = MATURITY_LABEL.get(row["maturity"], row["maturity"].upper())
+        if gaps and row["evidence"] > 0:
+            label += "  ·  PRIORITY GAP: " + " / ".join(gaps).upper()
+        observed = row["maturity"] == "observed-in-the-wild"
+        out.append(f'<text x="{flag_x}" y="{y + 17}" font-family="{MONO}" font-size="10" font-weight="700" letter-spacing="1" fill="{SIGNAL if observed else INK3}">{escape(label)}</text>')
         out.append(f'<line x1="{left}" x2="{width - left}" y1="{y + row_h}" y2="{y + row_h}" stroke="{RULE2}"/>')
     ly = top + row_h * len(rows) + 22
     legend(out, left, ly, "Evidence: linked campaigns, incidents and vulnerabilities. Tools: mapped ecosystem projects.")

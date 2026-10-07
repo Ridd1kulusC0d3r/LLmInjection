@@ -1015,5 +1015,302 @@
     "evidence_sources": [
       "SRC-SIGSTORE-COSIGN"
     ]
+  },
+  {
+    "id": "REL-093",
+    "type": "relationship",
+    "source": "TC-JB-021",
+    "relationship": "validates",
+    "target": "LLMI-T003",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-OWASP-LLM-2026"
+    ]
+  },
+  {
+    "id": "REL-094",
+    "type": "relationship",
+    "source": "TC-POI-022",
+    "relationship": "validates",
+    "target": "LLMI-T006",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-OWASP-LLM-2026"
+    ]
+  },
+  {
+    "id": "REL-095",
+    "type": "relationship",
+    "source": "TC-CI-023",
+    "relationship": "validates",
+    "target": "LLMI-T011",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-GTIG-PROMPTING-TO-AUTONOMY"
+    ]
+  },
+  {
+    "id": "REL-096",
+    "type": "relationship",
+    "source": "TC-RLC-024",
+    "relationship": "validates",
+    "target": "LLMI-T013",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-GTIG-INTEGRATION"
+    ]
+  },
+  {
+    "id": "REL-097",
+    "type": "relationship",
+    "source": "TC-SOC-025",
+    "relationship": "validates",
+    "target": "LLMI-T014",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS"
+    ]
+  },
+  {
+    "id": "REL-098",
+    "type": "relationship",
+    "source": "DET-AI-015",
+    "relationship": "detects",
+    "target": "LLMI-T001",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-OWASP-LLM-2026"
+    ]
+  },
+  {
+    "id": "REL-099",
+    "type": "relationship",
+    "source": "DET-AI-015",
+    "relationship": "detects",
+    "target": "LLMI-T002",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-OWASP-LLM-2026"
+    ]
+  },
+  {
+    "id": "REL-100",
+    "type": "relationship",
+    "source": "DET-AI-016",
+    "relationship": "detects",
+    "target": "LLMI-T003",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-OWASP-LLM-2026"
+    ]
+  },
+  {
+    "id": "REL-101",
+    "type": "relationship",
+    "source": "DET-AI-017",
+    "relationship": "detects",
+    "target": "LLMI-T006",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-OWASP-LLM-2026"
+    ]
+  },
+  {
+    "id": "REL-102",
+    "type": "relationship",
+    "source": "DET-AI-018",
+    "relationship": "detects",
+    "target": "LLMI-T014",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS"
+    ]
+  },
+  {
+    "id": "REL-103",
+    "type": "relationship",
+    "source": "DET-AI-019",
+    "relationship": "detects",
+    "target": "LLMI-T020",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-OWASP-LLM-2026"
+    ]
+  },
+  {
+    "id": "REL-104",
+    "type": "relationship",
+    "source": "DET-AI-013",
+    "relationship": "detects",
+    "target": "LLMI-T005",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-GTIG-PROMPTING-TO-AUTONOMY"
+    ]
+  },
+  {
+    "id": "REL-105",
+    "type": "relationship",
+    "source": "DET-AI-004",
+    "relationship": "detects",
+    "target": "LLMI-T009",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-OWASP-AGENTIC-2026"
+    ]
+  },
+  {
+    "id": "REL-106",
+    "type": "relationship",
+    "source": "DET-AI-003",
+    "relationship": "detects",
+    "target": "LLMI-T015",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-GTG1002"
+    ]
+  },
+  {
+    "id": "REL-107",
+    "type": "relationship",
+    "source": "ACTOR-BREEZE-COMET",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-BREEZE-COMET-PAYMENTS",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-BREEZE-COMET"
+    ]
+  },
+  {
+    "id": "REL-108",
+    "type": "relationship",
+    "source": "CAMPAIGN-BREEZE-COMET-PAYMENTS",
+    "relationship": "uses",
+    "target": "LLMI-T023",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-GTIG-BREEZE-COMET"
+    ]
+  },
+  {
+    "id": "REL-109",
+    "type": "relationship",
+    "source": "CAMPAIGN-SHADOW-AETHER-040",
+    "relationship": "uses",
+    "target": "LLMI-T023",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-TREND-SHADOW-AETHER"
+    ]
+  },
+  {
+    "id": "REL-110",
+    "type": "relationship",
+    "source": "CAMPAIGN-SHADOW-AETHER-040",
+    "relationship": "uses",
+    "target": "LLMI-T015",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-TREND-SHADOW-AETHER"
+    ]
+  },
+  {
+    "id": "REL-111",
+    "type": "relationship",
+    "source": "CAMPAIGN-SHADOW-AETHER-040",
+    "relationship": "uses-model-family",
+    "target": "MODEL-FAMILY-CLAUDE",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-TREND-SHADOW-AETHER"
+    ]
+  },
+  {
+    "id": "REL-112",
+    "type": "relationship",
+    "source": "CAMPAIGN-CL-CRI-1131",
+    "relationship": "uses",
+    "target": "LLMI-T023",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-UNIT42-LATAM-AI"
+    ]
+  },
+  {
+    "id": "REL-113",
+    "type": "relationship",
+    "source": "INCIDENT-VOIDLINK",
+    "relationship": "demonstrates",
+    "target": "LLMI-T023",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-CHECKPOINT-VOIDLINK"
+    ]
+  },
+  {
+    "id": "REL-114",
+    "type": "relationship",
+    "source": "LLMI-T023",
+    "relationship": "mitigated-by",
+    "target": "CTRL-EXEC-POLICY",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-UNIT42-LATAM-AI"
+    ]
+  },
+  {
+    "id": "REL-115",
+    "type": "relationship",
+    "source": "TC-TOOL-026",
+    "relationship": "validates",
+    "target": "LLMI-T023",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-UNIT42-LATAM-AI"
+    ]
+  },
+  {
+    "id": "REL-116",
+    "type": "relationship",
+    "source": "DET-AI-020",
+    "relationship": "detects",
+    "target": "LLMI-T023",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-UNIT42-LATAM-AI"
+    ]
+  },
+  {
+    "id": "REL-117",
+    "type": "relationship",
+    "source": "INCIDENT-GTIG-DISTILLATION",
+    "relationship": "demonstrates",
+    "target": "LLMI-T019",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-PROMPTING-TO-AUTONOMY"
+    ]
+  },
+  {
+    "id": "REL-118",
+    "type": "relationship",
+    "source": "INCIDENT-GTIG-DISTILLATION",
+    "relationship": "demonstrates",
+    "target": "LLMI-T005",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-GTIG-PROMPTING-TO-AUTONOMY"
+    ]
+  },
+  {
+    "id": "REL-119",
+    "type": "relationship",
+    "source": "LLMI-T014",
+    "relationship": "mitigated-by",
+    "target": "CTRL-HUMAN-CHECKPOINT",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS"
+    ]
   }
 ]

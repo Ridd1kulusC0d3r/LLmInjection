@@ -165,5 +165,32 @@
         "url": "https://www.wiz.io/blog/threes-a-crowd-teampcp-trojanizes-litellm-in-continuation-of-campaign"
       }
     ]
+  },
+  {
+    "id": "ACTOR-BREEZE-COMET",
+    "type": "actor",
+    "name": "BREEZE COMET",
+    "aliases": [
+      "UNC5669"
+    ],
+    "nexus": "Unattributed, financially motivated, Brazil-focused",
+    "ai_role": [
+      "offensive-enabler",
+      "tooling-development"
+    ],
+    "confidence": "high",
+    "regions": [
+      "BR"
+    ],
+    "summary": "Google and Mandiant describe a financially motivated actor manipulating payment systems and banking software in Brazil, and report evidence that it used LLMs to accelerate custom script development. Google reports overlap with operations publicly named Plump Spider and SHADOW-AETHER-064; those labels are not merged here.",
+    "last_verified": "2026-10-07",
+    "sources": [
+      {
+        "title": "Financially Motivated Threat Actor BREEZE COMET Targets Brazil",
+        "publisher": "Google Threat Intelligence Group and Mandiant",
+        "grade": "A",
+        "url": "https://cloud.google.com/blog/topics/threat-intelligence/financially-motivated-threat-actor-breeze-comet-targets-brazil/"
+      }
+    ]
   }
 ]

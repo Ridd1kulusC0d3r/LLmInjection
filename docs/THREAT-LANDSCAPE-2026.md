@@ -375,3 +375,7 @@ Two attack surfaces moved from research to observed activity:
 2. **MCP / framework parameters.** Semantic Kernel (CVE-2026-26030, CVE-2026-25592) and the disputed MCP STDIO class show model-controlled parameters becoming execution primitives. Defence: validate parameters outside the model, never build STDIO commands from untrusted input.
 
 Scale signals (GTIG): a multi-agent credential harvest planned and run in under six hours; distillation campaigns exceeding 100 million prompts. See `data/threat-landscape-2026.json` for sources and confidence.
+
+## Update 2026-10-07: Latin America
+
+Three 2026 primary reports describe AI-assisted tooling against Brazilian and Latin American targets: Google and Mandiant on BREEZE COMET (Pix, STR and Boleto fraud), Trend Micro on SHADOW-AETHER-040 (Mexican government, operator-supervised agentic tool prompting Claude) and Unit 42 on CL-CRI-1131 (Mexico and Ecuador, LLM use inferred from script iteration). In each, the AI use is largely inferred from artifacts, the models are not confirmed, and initial access is unchanged. The regional view, in Portuguese, is [docs/pt-BR/PANORAMA-BRASIL-LATAM.md](pt-BR/PANORAMA-BRASIL-LATAM.md). Related new technique: `LLMI-T023`, AI-assisted tooling development.
