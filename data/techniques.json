@@ -535,7 +535,7 @@
     "maturity": "no-linked-evidence"
   },
   {
-    "id": "LLMI-T021",
+    "id": "LLMI-T022",
     "type": "technique",
     "name": "Resource Exhaustion and Cost Abuse",
     "category": "availability",
@@ -548,7 +548,7 @@
     "maturity": "no-linked-evidence"
   },
   {
-    "id": "LLMI-T022",
+    "id": "LLMI-T027",
     "type": "technique",
     "name": "Unsanctioned AI Runtime (Shadow AI)",
     "category": "runtime-security",
@@ -561,7 +561,7 @@
     "maturity": "no-linked-evidence"
   },
   {
-    "id": "LLMI-T023",
+    "id": "LLMI-T028",
     "type": "technique",
     "name": "AI-Assisted Tooling Development",
     "category": "offensive-enablement",

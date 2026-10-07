@@ -889,7 +889,7 @@
     "type": "relationship",
     "source": "TC-COST-014",
     "relationship": "validates",
-    "target": "LLMI-T021",
+    "target": "LLMI-T022",
     "confidence": "high",
     "evidence_sources": [
       "SRC-OWASP-LLM-2026"
@@ -900,7 +900,7 @@
     "type": "relationship",
     "source": "DET-AI-008",
     "relationship": "detects",
-    "target": "LLMI-T021",
+    "target": "LLMI-T022",
     "confidence": "medium",
     "evidence_sources": [
       "SRC-OWASP-LLM-2026"
@@ -909,7 +909,7 @@
   {
     "id": "REL-083",
     "type": "relationship",
-    "source": "LLMI-T021",
+    "source": "LLMI-T022",
     "relationship": "mitigated-by",
     "target": "CTRL-ACTION-BUDGET",
     "confidence": "high",
@@ -922,7 +922,7 @@
     "type": "relationship",
     "source": "TC-RUN-011",
     "relationship": "validates",
-    "target": "LLMI-T022",
+    "target": "LLMI-T027",
     "confidence": "medium",
     "evidence_sources": [
       "SRC-GENIANS-KIMSUKY"
@@ -933,7 +933,7 @@
     "type": "relationship",
     "source": "TC-NET-012",
     "relationship": "validates",
-    "target": "LLMI-T022",
+    "target": "LLMI-T027",
     "confidence": "medium",
     "evidence_sources": [
       "SRC-GENIANS-KIMSUKY"
@@ -944,7 +944,7 @@
     "type": "relationship",
     "source": "DET-AI-002",
     "relationship": "detects",
-    "target": "LLMI-T022",
+    "target": "LLMI-T027",
     "confidence": "medium",
     "evidence_sources": [
       "SRC-GENIANS-KIMSUKY"
@@ -955,7 +955,7 @@
     "type": "relationship",
     "source": "DET-AI-001",
     "relationship": "detects",
-    "target": "LLMI-T022",
+    "target": "LLMI-T027",
     "confidence": "medium",
     "evidence_sources": [
       "SRC-GENIANS-KIMSUKY"
@@ -964,7 +964,7 @@
   {
     "id": "REL-088",
     "type": "relationship",
-    "source": "LLMI-T022",
+    "source": "LLMI-T027",
     "relationship": "mitigated-by",
     "target": "CTRL-AI-INVENTORY",
     "confidence": "high",
@@ -975,7 +975,7 @@
   {
     "id": "REL-089",
     "type": "relationship",
-    "source": "LLMI-T022",
+    "source": "LLMI-T027",
     "relationship": "mitigated-by",
     "target": "CTRL-EGRESS-POLICY",
     "confidence": "high",
@@ -1019,7 +1019,7 @@
   {
     "id": "REL-093",
     "type": "relationship",
-    "source": "TC-JB-021",
+    "source": "TC-JB-035",
     "relationship": "validates",
     "target": "LLMI-T003",
     "confidence": "high",
@@ -1030,7 +1030,7 @@
   {
     "id": "REL-094",
     "type": "relationship",
-    "source": "TC-POI-022",
+    "source": "TC-POI-036",
     "relationship": "validates",
     "target": "LLMI-T006",
     "confidence": "high",
@@ -1041,7 +1041,7 @@
   {
     "id": "REL-095",
     "type": "relationship",
-    "source": "TC-CI-023",
+    "source": "TC-CI-037",
     "relationship": "validates",
     "target": "LLMI-T011",
     "confidence": "high",
@@ -1052,7 +1052,7 @@
   {
     "id": "REL-096",
     "type": "relationship",
-    "source": "TC-RLC-024",
+    "source": "TC-RLC-038",
     "relationship": "validates",
     "target": "LLMI-T013",
     "confidence": "high",
@@ -1063,7 +1063,7 @@
   {
     "id": "REL-097",
     "type": "relationship",
-    "source": "TC-SOC-025",
+    "source": "TC-SOC-039",
     "relationship": "validates",
     "target": "LLMI-T014",
     "confidence": "medium",
@@ -1074,7 +1074,7 @@
   {
     "id": "REL-098",
     "type": "relationship",
-    "source": "DET-AI-015",
+    "source": "DET-AI-040",
     "relationship": "detects",
     "target": "LLMI-T001",
     "confidence": "medium",
@@ -1085,7 +1085,7 @@
   {
     "id": "REL-099",
     "type": "relationship",
-    "source": "DET-AI-015",
+    "source": "DET-AI-040",
     "relationship": "detects",
     "target": "LLMI-T002",
     "confidence": "high",
@@ -1096,7 +1096,7 @@
   {
     "id": "REL-100",
     "type": "relationship",
-    "source": "DET-AI-016",
+    "source": "DET-AI-041",
     "relationship": "detects",
     "target": "LLMI-T003",
     "confidence": "medium",
@@ -1107,7 +1107,7 @@
   {
     "id": "REL-101",
     "type": "relationship",
-    "source": "DET-AI-017",
+    "source": "DET-AI-042",
     "relationship": "detects",
     "target": "LLMI-T006",
     "confidence": "medium",
@@ -1118,7 +1118,7 @@
   {
     "id": "REL-102",
     "type": "relationship",
-    "source": "DET-AI-018",
+    "source": "DET-AI-043",
     "relationship": "detects",
     "target": "LLMI-T014",
     "confidence": "medium",
@@ -1129,7 +1129,7 @@
   {
     "id": "REL-103",
     "type": "relationship",
-    "source": "DET-AI-019",
+    "source": "DET-AI-044",
     "relationship": "detects",
     "target": "LLMI-T020",
     "confidence": "high",
@@ -1186,7 +1186,7 @@
     "type": "relationship",
     "source": "CAMPAIGN-BREEZE-COMET-PAYMENTS",
     "relationship": "uses",
-    "target": "LLMI-T023",
+    "target": "LLMI-T028",
     "confidence": "high",
     "evidence_sources": [
       "SRC-GTIG-BREEZE-COMET"
@@ -1197,7 +1197,7 @@
     "type": "relationship",
     "source": "CAMPAIGN-SHADOW-AETHER-040",
     "relationship": "uses",
-    "target": "LLMI-T023",
+    "target": "LLMI-T028",
     "confidence": "high",
     "evidence_sources": [
       "SRC-TREND-SHADOW-AETHER"
@@ -1230,7 +1230,7 @@
     "type": "relationship",
     "source": "CAMPAIGN-CL-CRI-1131",
     "relationship": "uses",
-    "target": "LLMI-T023",
+    "target": "LLMI-T028",
     "confidence": "medium",
     "evidence_sources": [
       "SRC-UNIT42-LATAM-AI"
@@ -1241,7 +1241,7 @@
     "type": "relationship",
     "source": "INCIDENT-VOIDLINK",
     "relationship": "demonstrates",
-    "target": "LLMI-T023",
+    "target": "LLMI-T028",
     "confidence": "high",
     "evidence_sources": [
       "SRC-CHECKPOINT-VOIDLINK"
@@ -1250,7 +1250,7 @@
   {
     "id": "REL-114",
     "type": "relationship",
-    "source": "LLMI-T023",
+    "source": "LLMI-T028",
     "relationship": "mitigated-by",
     "target": "CTRL-EXEC-POLICY",
     "confidence": "medium",
@@ -1261,9 +1261,9 @@
   {
     "id": "REL-115",
     "type": "relationship",
-    "source": "TC-TOOL-026",
+    "source": "TC-TOOL-040",
     "relationship": "validates",
-    "target": "LLMI-T023",
+    "target": "LLMI-T028",
     "confidence": "medium",
     "evidence_sources": [
       "SRC-UNIT42-LATAM-AI"
@@ -1272,9 +1272,9 @@
   {
     "id": "REL-116",
     "type": "relationship",
-    "source": "DET-AI-020",
+    "source": "DET-AI-045",
     "relationship": "detects",
-    "target": "LLMI-T023",
+    "target": "LLMI-T028",
     "confidence": "medium",
     "evidence_sources": [
       "SRC-UNIT42-LATAM-AI"

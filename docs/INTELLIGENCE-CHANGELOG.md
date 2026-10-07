@@ -6,8 +6,8 @@ This changelog records material changes to attribution, confidence, external map
 
 ### Added
 
-- Latin America: actor BREEZE COMET; campaigns BREEZE-COMET-PAYMENTS, SHADOW-AETHER-040 and CL-CRI-1131 from Google/Mandiant, Trend Micro and Unit 42 primary reports; four sources; technique LLMI-T023 (AI-assisted tooling development); control CTRL-EXEC-POLICY; landscape domain and four research-queue leads; `regions` field; Portuguese regional document and README;
-- coverage: tests TC-JB-021 to TC-TOOL-026 and detections DET-AI-015 to DET-AI-020, so every technique now has a test and a detection; INCIDENT-GTIG-DISTILLATION links the distillation technique to observed activity;
+- Latin America: actor BREEZE COMET; campaigns BREEZE-COMET-PAYMENTS, SHADOW-AETHER-040 and CL-CRI-1131 from Google/Mandiant, Trend Micro and Unit 42 primary reports; four sources; technique LLMI-T028 (AI-assisted tooling development); control CTRL-EXEC-POLICY; landscape domain and four research-queue leads; `regions` field; Portuguese regional document and README;
+- coverage: tests TC-JB-035 to TC-TOOL-040 and detections DET-AI-040 to DET-AI-045, so every technique now has a test and a detection; INCIDENT-GTIG-DISTILLATION links the distillation technique to observed activity;
 - technique `maturity` field, derived from the graph by `scripts/maturity.py` and enforced by the validator; level `no-linked-evidence` replaces the misleading word theoretical;
 - dates: `published` on sources, `reported` on campaigns and incidents; the validator checks `reported` equals the earliest source date and rejects a record first seen after its primary report;
 - ATT&CK Navigator layer export, ecosystem verification script and weekly workflow, release feeds for garak, PyRIT and AgentDojo, T018 external mappings.
@@ -27,7 +27,7 @@ This changelog records material changes to attribution, confidence, external map
 
 ### Added
 
-- techniques LLMI-T020 (improper output handling), LLMI-T021 (resource exhaustion and cost abuse), LLMI-T022 (unsanctioned AI runtime), covering risks that existing tests and detections already addressed but the taxonomy did not name;
+- techniques LLMI-T020 (improper output handling), LLMI-T022 (resource exhaustion and cost abuse), LLMI-T027 (unsanctioned AI runtime), covering risks that existing tests and detections already addressed but the taxonomy did not name;
 - seventeen relationships linking six previously unlinked test cases, five detections and four controls to techniques;
 - `scripts/audit_graph.py`: fails CI on test cases, detections or controls linked to nothing, and lists techniques without a test or detection;
 - charts: coverage matrix extended with evidence and tool columns and a priority-gap flag; new framework-mapping and ecosystem-map charts;

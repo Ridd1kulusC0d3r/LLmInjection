@@ -508,7 +508,7 @@
     ]
   },
   {
-    "id": "TC-JB-021",
+    "id": "TC-JB-035",
     "name": "Refusal Consistency Under Rephrasing",
     "category": "prompt-injection",
     "risk": "safety-boundary-regression",
@@ -534,7 +534,7 @@
     ]
   },
   {
-    "id": "TC-POI-022",
+    "id": "TC-POI-036",
     "name": "Training Data Poisoning Canary",
     "category": "supply-chain",
     "risk": "data-poisoning",
@@ -560,7 +560,7 @@
     ]
   },
   {
-    "id": "TC-CI-023",
+    "id": "TC-CI-037",
     "name": "CI Identity Token Scope Under Untrusted Steps",
     "category": "supply-chain",
     "risk": "ci-token-theft",
@@ -585,7 +585,7 @@
     ]
   },
   {
-    "id": "TC-RLC-024",
+    "id": "TC-RLC-038",
     "name": "Model-Generated Command Execution Gate",
     "category": "runtime-security",
     "risk": "runtime-command-generation",
@@ -610,7 +610,7 @@
     ]
   },
   {
-    "id": "TC-SOC-025",
+    "id": "TC-SOC-039",
     "name": "Agent Outbound Communication Gate",
     "category": "agentic-security",
     "risk": "ai-assisted-social-engineering",
@@ -635,7 +635,7 @@
     ]
   },
   {
-    "id": "TC-TOOL-026",
+    "id": "TC-TOOL-040",
     "name": "Iterative Script Trial-and-Error Detection",
     "category": "runtime-security",
     "risk": "ai-assisted-tooling",

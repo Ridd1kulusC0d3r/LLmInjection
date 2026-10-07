@@ -214,7 +214,7 @@
       "cloud-audit"
     ],
     "test_ids": [
-      "TC-CI-023"
+      "TC-CI-037"
     ]
   },
   {
@@ -254,7 +254,7 @@
     ]
   },
   {
-    "id": "DET-AI-015",
+    "id": "DET-AI-040",
     "type": "detection",
     "name": "Policy Deviation After Untrusted Content Ingestion",
     "category": "agent-runtime",
@@ -273,7 +273,7 @@
     ]
   },
   {
-    "id": "DET-AI-016",
+    "id": "DET-AI-041",
     "type": "detection",
     "name": "Repeated Refusal-Bypass Sequence",
     "category": "application",
@@ -287,11 +287,11 @@
       "user-identity"
     ],
     "test_ids": [
-      "TC-JB-021"
+      "TC-JB-035"
     ]
   },
   {
-    "id": "DET-AI-017",
+    "id": "DET-AI-042",
     "type": "detection",
     "name": "Training Data Provenance Drift",
     "category": "supply-chain",
@@ -305,11 +305,11 @@
       "review-state"
     ],
     "test_ids": [
-      "TC-POI-022"
+      "TC-POI-036"
     ]
   },
   {
-    "id": "DET-AI-018",
+    "id": "DET-AI-043",
     "type": "detection",
     "name": "Agent Outbound Communication Anomaly",
     "category": "agent-runtime",
@@ -323,11 +323,11 @@
       "approval-state"
     ],
     "test_ids": [
-      "TC-SOC-025"
+      "TC-SOC-039"
     ]
   },
   {
-    "id": "DET-AI-019",
+    "id": "DET-AI-044",
     "type": "detection",
     "name": "Model Output Reaching an Interpreter Unsanitized",
     "category": "application",
@@ -345,7 +345,7 @@
     ]
   },
   {
-    "id": "DET-AI-020",
+    "id": "DET-AI-045",
     "type": "detection",
     "name": "Rapid Iterative Script Variants on One Host",
     "category": "endpoint",
@@ -359,7 +359,7 @@
       "exit-code"
     ],
     "test_ids": [
-      "TC-TOOL-026"
+      "TC-TOOL-040"
     ]
   }
 ]

@@ -50,9 +50,9 @@ Itens abaixo ficam **fora dos dados** até haver fonte primária. Estão na fila
 
 | Comportamento | Técnica | Teste seguro | Detecção | Controle |
 |---|---|---|---|---|
-| Scripts de reconhecimento e implantação gerados por LLM | `LLMI-T023` | `TC-TOOL-026` | `DET-AI-020` | `CTRL-EXEC-POLICY` |
+| Scripts de reconhecimento e implantação gerados por LLM | `LLMI-T028` | `TC-TOOL-040` | `DET-AI-045` | `CTRL-EXEC-POLICY` |
 | Agente supervisionado executando comandos de ataque | `LLMI-T015` | `TC-AUTO-015` | `DET-AI-003` | `CTRL-HUMAN-CHECKPOINT` |
-| Mensagens de engenharia social enviadas por agentes | `LLMI-T014` | `TC-SOC-025` | `DET-AI-018` | `CTRL-HUMAN-CHECKPOINT` |
+| Mensagens de engenharia social enviadas por agentes | `LLMI-T014` | `TC-SOC-039` | `DET-AI-043` | `CTRL-HUMAN-CHECKPOINT` |
 
 Para organizações brasileiras que operam Pix, STR ou Boleto, o ponto prático é que, no caso do BREEZE COMET, **os vetores de acesso inicial relatados são os de sempre** (força bruta de senhas, ligações se passando por suporte de TI, instalação de ferramentas de acesso remoto). O que muda é a **velocidade com que o atacante produz ferramentas** sob medida para o seu ambiente.
 
