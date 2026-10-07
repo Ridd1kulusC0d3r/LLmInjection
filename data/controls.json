@@ -204,5 +204,121 @@
     "source_ids": [
       "SRC-OWASP-ACS"
     ]
+  },
+  {
+    "id": "CTRL-IO-GUARDRAIL",
+    "type": "control",
+    "name": "Input/Output Injection & Policy Classifier",
+    "category": "prompt-context",
+    "description": "Run a dedicated classifier/guard model (and heuristics such as perplexity) on untrusted inputs and on model outputs/tool calls; log verdicts; never rely on it as sole control (defence-in-depth, measure false-positive/over-defence).",
+    "source_ids": [
+      "SRC-TLDRSEC-PI-DEFENSES"
+    ]
+  },
+  {
+    "id": "CTRL-CONTEXT-CANARY",
+    "type": "control",
+    "name": "Privileged-Context Canary Tokens",
+    "category": "observability",
+    "description": "Insert unique per-session canaries into system prompts/secret-bearing context and alert when they appear in output, tool arguments or egress (pairs with DET-AI-010).",
+    "source_ids": [
+      "SRC-TLDRSEC-PI-DEFENSES"
+    ]
+  },
+  {
+    "id": "CTRL-PRIVILEGE-SEPARATED-LLM",
+    "type": "control",
+    "name": "Privileged / Quarantined LLM Separation",
+    "category": "agentic",
+    "description": "Planner model with tool access only sees trusted instructions; untrusted content is processed by a tool-less model returning schema-typed values that cannot alter control flow.",
+    "source_ids": [
+      "SRC-CAMEL",
+      "SRC-TLDRSEC-PI-DEFENSES"
+    ]
+  },
+  {
+    "id": "CTRL-DATAFLOW-TAINT",
+    "type": "control",
+    "name": "Data-Flow Provenance and Taint Policy",
+    "category": "authorization",
+    "description": "Attach source/reader capability tags to all data, propagate through derivations, and deny side-effecting tool calls whose arguments depend on untrusted or non-shareable data unless an explicit policy allows it (default deny).",
+    "source_ids": [
+      "SRC-CAMEL",
+      "SRC-TLDRSEC-PI-DEFENSES"
+    ]
+  },
+  {
+    "id": "CTRL-TASK-ALIGNMENT-CHECK",
+    "type": "control",
+    "name": "Task-Alignment Verification of Agent Actions",
+    "category": "agentic",
+    "description": "Verify each planned tool call contributes to the user-stated goal (Task Shield) or remains stable when untrusted context is masked/re-executed (MELON) or cross-checked by an independent model.",
+    "source_ids": [
+      "SRC-TLDRSEC-PI-DEFENSES"
+    ]
+  },
+  {
+    "id": "CTRL-INPUT-TRANSFORM",
+    "type": "control",
+    "name": "Untrusted Input Transformation and Spotlighting",
+    "category": "prompt-context",
+    "description": "Mark/encode untrusted content (spotlighting, datamarking, random delimiters) and optionally paraphrase/retokenize/normalise (Unicode, invisible chars) before inference.",
+    "source_ids": [
+      "SRC-TLDRSEC-PI-DEFENSES"
+    ]
+  },
+  {
+    "id": "CTRL-STRUCTURED-OUTPUT",
+    "type": "control",
+    "name": "Typed / Templated Model Output",
+    "category": "application",
+    "description": "Constrain model output to schemas/enums/templates validated by deterministic code before use (complements CTRL-OUTPUT-SANITIZATION).",
+    "source_ids": [
+      "SRC-TLDRSEC-PI-DEFENSES"
+    ]
+  },
+  {
+    "id": "CTRL-MODEL-ROBUSTNESS-EVAL",
+    "type": "control",
+    "name": "Model Injection-Robustness Selection and Evaluation",
+    "category": "governance",
+    "description": "Select/finetune models with instruction-hierarchy or injection-resistant training and re-evaluate with adversarial suites (e.g., AgentDojo-style) on each model/version change.",
+    "source_ids": [
+      "SRC-AGENTDOJO",
+      "SRC-OWASP-AITG"
+    ]
+  },
+  {
+    "id": "CTRL-MCP-TOOL-PINNING",
+    "type": "control",
+    "name": "Tool Definition Pinning",
+    "category": "mcp",
+    "description": "Hash each approved tool's name, description and input schema; block or re-prompt for consent when any of them changes after approval.",
+    "source_ids": [
+      "SRC-MCP-SECURITY-2026",
+      "SRC-AGUARA"
+    ]
+  },
+  {
+    "id": "CTRL-AI-SERVICE-EXPOSURE",
+    "type": "control",
+    "name": "AI Service Exposure Management",
+    "category": "infrastructure",
+    "description": "Inventory model servers, agent builders, vector stores and MCP endpoints, require authentication on every one and scan the external perimeter for them.",
+    "source_ids": [
+      "SRC-MITRE-ATLAS-2026-09",
+      "SRC-CSA-AICM-11"
+    ]
+  },
+  {
+    "id": "CTRL-PREFILL-LINK-POLICY",
+    "type": "control",
+    "name": "Pre-filled Prompt and Memory Write Policy",
+    "category": "memory",
+    "description": "Treat prompts arriving through URL parameters as untrusted, show them to the user before sending, and require confirmation before any memory write they request.",
+    "source_ids": [
+      "SRC-MITRE-ATLAS-2026-09",
+      "SRC-OWASP-AGENTIC-2026"
+    ]
   }
 ]

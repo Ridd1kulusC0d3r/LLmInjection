@@ -1,6 +1,6 @@
 # Benchmarks, Evaluation & Research Tools
 
-This index focuses on reproducible **security evaluation**. Inclusion is not an endorsement and does not imply that a tool covers the full AI threat model.
+This index focuses on reproducible **security evaluation**. A verified comparison of 12 benchmarks (suites, metrics, last commit, techniques) is in the [ecosystem intelligence sweep](ECOSYSTEM-INTELLIGENCE.md#7-benchmarks). Inclusion is not an endorsement and does not imply that a tool covers the full AI threat model.
 
 ## LLM / GenAI security evaluation
 

@@ -89,5 +89,291 @@
     "source_ids": [
       "SRC-GTIG-PROMPTING-TO-AUTONOMY"
     ]
+  },
+  {
+    "id": "INCIDENT-ATLAS-CS0030",
+    "type": "incident",
+    "name": "LLM Jacking (AML.CS0030)",
+    "kind": "atlas-incident",
+    "status": "observed",
+    "confidence": "high",
+    "date": "2024-05-06",
+    "summary": "MITRE ATLAS case study AML.CS0030. Reported by Sysdig Threat Research. The Sysdig Threat Research Team discovered that malicious actors utilized stolen credentials to gain access to cloud-hosted large language models (LLMs). The actors covertly gathered information about which models were enabled on the cloud service and created a reverse proxy for LLMs that would...",
+    "source_ids": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "INCIDENT-ATLAS-CS0031",
+    "type": "incident",
+    "name": "Malicious Models on Hugging Face (AML.CS0031)",
+    "kind": "atlas-incident",
+    "status": "observed",
+    "confidence": "high",
+    "date": "2025-02-25",
+    "summary": "MITRE ATLAS case study AML.CS0031. Reported by ReversingLabs. Researchers at ReversingLabs have identified malicious models containing embedded malware hosted on the Hugging Face model repository. The models were found to execute reverse shells when loaded, which grants the threat actor command and control capabilities on the victim's system. Hugging Face...",
+    "source_ids": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "INCIDENT-ATLAS-CS0043",
+    "type": "incident",
+    "name": "Malware Prototype with Embedded Prompt Injection (AML.CS0043)",
+    "kind": "atlas-incident",
+    "status": "observed",
+    "confidence": "high",
+    "date": "2025-06-25",
+    "summary": "MITRE ATLAS case study AML.CS0043. Reported by Check Point Research. Check Point Research identified a prototype malware sample in the wild that contained a prompt injection, which appeared to be designed to manipulate LLM-based malware detectors and/or analysis tools. However, the researchers did not find the prompt injection to be effective on the models they...",
+    "source_ids": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "INCIDENT-ATLAS-CS0044",
+    "type": "incident",
+    "name": "LAMEHUG: Malware Leveraging Dynamic AI-Generated Commands (AML.CS0044)",
+    "kind": "atlas-incident",
+    "status": "observed",
+    "confidence": "high",
+    "date": "2025-06-03",
+    "summary": "MITRE ATLAS case study AML.CS0044. Reported by CERT-UA. In July 2025, Ukrainian authorities reported the emergence of LAMEHUG, a new AI-powered malware attributed to the Russian state-backed threat actor [APT28](https://attack.mitre.org/groups/G0007/) (also tracked as Forest Blizzard or UAC-0001). LAMEHUG uses a large language model (LLM) to...",
+    "source_ids": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "INCIDENT-ATLAS-CS0047",
+    "type": "incident",
+    "name": "Code to Deploy Destructive AI Agent Discovered in Amazon Q VS Code Extension (AML.CS0047)",
+    "kind": "atlas-incident",
+    "status": "observed",
+    "confidence": "high",
+    "date": "2025-07-13",
+    "summary": "MITRE ATLAS case study AML.CS0047. Reported by AWS. On July 13th, 2025, a malicious actor using the GitHub username \"lkmanka58\" used an inappropriately scoped GitHub token to make a commit containing malicious code to the Amazon Q Developer Visual Studio Code (VS Code) extension repository. The commit was designed to cause the VS Code extension...",
+    "source_ids": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "INCIDENT-ATLAS-CS0053",
+    "type": "incident",
+    "name": "Poisoned Postmark MCP Server Email Exfiltration (AML.CS0053)",
+    "kind": "atlas-incident",
+    "status": "observed",
+    "confidence": "high",
+    "date": "2025-09-01",
+    "summary": "MITRE ATLAS case study AML.CS0053. Reported by Koi Research. A bad actor successfully exfiltrated emails from users of the Postmark's MCP server via a supply chain attack. Postmark is an email delivery service that allows organizations to send marketing and transactional emails via API. The Postmark MCP server allows users to interact with Postmark via AI...",
+    "source_ids": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "INCIDENT-ATLAS-CS0056",
+    "type": "incident",
+    "name": "Model Distillation Campaigns Targeting Anthropic Claude (AML.CS0056)",
+    "kind": "atlas-incident",
+    "status": "observed",
+    "confidence": "high",
+    "date": "2026-02-23",
+    "summary": "MITRE ATLAS case study AML.CS0056. Reported by Anthropic. Anthropic uncovered campaigns to extract Claude's capabilities carried out by the three Chinese AI Labs: DeepSeek, Moonshot, and MiniMax. Collectively, these campaigns used approximately 24,000 accounts and 16 million queries. They used model distillation to train their own models on the outputs...",
+    "source_ids": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "INCIDENT-ATLAS-CS0057",
+    "type": "incident",
+    "name": "Storm-2139 Azure OpenAI Guardrail Bypass (AML.CS0057)",
+    "kind": "atlas-incident",
+    "status": "observed",
+    "confidence": "high",
+    "date": "2024-12-01",
+    "summary": "MITRE ATLAS case study AML.CS0057. Reported by Microsoft. Storm-2139 built custom jailbreak tooling to bypass guardrails on Azure OpenAI Services, allowing users to generate harmful synthetic content.",
+    "source_ids": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "INCIDENT-ATLAS-CS0068",
+    "type": "incident",
+    "name": "Autonomous OpenAI Evaluation Agents Compromise Hugging Face Infrastructure (AML.CS0068)",
+    "kind": "atlas-incident",
+    "status": "observed",
+    "confidence": "high",
+    "date": "2026-07-08",
+    "summary": "MITRE ATLAS case study AML.CS0068. Reported by OpenAI, Hugging Face. During large-scale internal OpenAI cyber evaluations from May 26 through July 13, 2026, a partially coordinated collective of autonomous agent runs crossed evaluation boundaries, established external infrastructure, and compromised Hugging Face production systems. The activity was driven...",
+    "source_ids": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "INCIDENT-ATLAS-CS0070",
+    "type": "incident",
+    "name": "Threat Actor Uses a DeepSeek-Powered Hermes Agent in Langflow and n8n Exploitation Attempts (AML.CS0070)",
+    "kind": "atlas-incident",
+    "status": "observed",
+    "confidence": "high",
+    "date": "2026-05-07",
+    "summary": "MITRE ATLAS case study AML.CS0070. Reported by Palo Alto Networks Unit 42. A Chinese-speaking threat actor operating as knaithe or KnYuan configured Hermes Agent to use DeepSeek as its reasoning engine. Hermes supplied terminal access, Telegram-based operator control, and a skills system containing both bundled and actor-created red-team skills. The actor also...",
+    "source_ids": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "INCIDENT-ATLAS-CS0071",
+    "type": "incident",
+    "name": "Multi-Agent Framework Compromises Taiwanese Government Systems (AML.CS0071)",
+    "kind": "atlas-incident",
+    "status": "observed",
+    "confidence": "high",
+    "date": "2026-07-01",
+    "summary": "MITRE ATLAS case study AML.CS0071. Reported by Dream Research Labs. In early July 2026, an unknown Chinese-language operator used a multi-agent framework built on Hermes and OpenClaw against government systems that subsequent public reporting identified as Taiwanese.[[financial-times-taiwan-ai-attack]] Dream Research Labs recovered a 160 MB operational workspace...",
+    "source_ids": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "INCIDENT-ATLAS-CS0072",
+    "type": "incident",
+    "name": "AI Recommendation Poisoning via Crafted AI Assistant Links (AML.CS0072)",
+    "kind": "atlas-incident",
+    "status": "observed",
+    "confidence": "high",
+    "date": "2026-02-10",
+    "summary": "MITRE ATLAS case study AML.CS0072. Reported by Microsoft Defender Security Research Team. The [Microsoft Defender Security Research Team](https://www.microsoft.com/en-us/security/blog/author/windows-defender-research/) identified a widespread pattern of AI assistant memory manipulation carried out for promotional purposes, which they named AI Recommendation Poisoning.",
+    "source_ids": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "INCIDENT-ATLAS-CS0024",
+    "type": "incident",
+    "name": "Morris II Worm: RAG-Based Attack (AML.CS0024)",
+    "kind": "atlas-exercise",
+    "status": "research",
+    "confidence": "confirmed",
+    "date": "2024-03-05",
+    "summary": "MITRE ATLAS case study AML.CS0024. Researchers developed Morris II, a zero-click worm designed to attack generative AI (GenAI) ecosystems and propagate between connected GenAI systems. The worm uses an adversarial self-replicating prompt which uses prompt injection to replicate the prompt as output and perform malicious activity.",
+    "source_ids": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "INCIDENT-ATLAS-CS0040",
+    "type": "incident",
+    "name": "Hacking ChatGPT's Memories with Prompt Injection (AML.CS0040)",
+    "kind": "atlas-exercise",
+    "status": "research",
+    "confidence": "confirmed",
+    "date": "2024-02-01",
+    "summary": "MITRE ATLAS case study AML.CS0040. [Embrace the Red](https://embracethered.com/blog/) demonstrated that ChatGPT's memory feature is vulnerable to manipulation via prompt injections. To execute the attack, the researcher hid a prompt injection in a shared Google Doc. When a user references the document, its contents is placed into...",
+    "source_ids": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "INCIDENT-ATLAS-CS0041",
+    "type": "incident",
+    "name": "Rules File Backdoor: Supply Chain Attack on AI Coding Assistants (AML.CS0041)",
+    "kind": "atlas-exercise",
+    "status": "research",
+    "confidence": "confirmed",
+    "date": "2025-03-18",
+    "summary": "MITRE ATLAS case study AML.CS0041. Pillar Security researchers demonstrated how adversaries can compromise AI-generated code by injecting malicious instructions into rules files used to configure AI coding assistants like Cursor and GitHub Copilot. The attack uses invisible Unicode characters to hide malicious prompts that...",
+    "source_ids": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "INCIDENT-ATLAS-CS0045",
+    "type": "incident",
+    "name": "Data Exfiltration via an MCP Server used by Cursor (AML.CS0045)",
+    "kind": "atlas-exercise",
+    "status": "research",
+    "confidence": "confirmed",
+    "date": "2025-06-24",
+    "summary": "MITRE ATLAS case study AML.CS0045. The Backslash Security Research Team demonstrated that a Model Context Protocol (MCP) tool can be used as a vector for an indirect prompt injection attack on Cursor, potentially leading to the execution of malicious shell commands.",
+    "source_ids": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "INCIDENT-ATLAS-CS0046",
+    "type": "incident",
+    "name": "Data Destruction via Indirect Prompt Injection Targeting Claude Computer-Use (AML.CS0046)",
+    "kind": "atlas-exercise",
+    "status": "research",
+    "confidence": "confirmed",
+    "date": "2024-10-24",
+    "summary": "MITRE ATLAS case study AML.CS0046. Security researchers at HiddenLayer demonstrated that an indirect prompt injection targeting Claude's Computer Use AI can lead to execution of shell commands on the victim system and destruction of user data.",
+    "source_ids": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "INCIDENT-ATLAS-CS0055",
+    "type": "incident",
+    "name": "AI ClickFix: Hijacking Computer-Use Agents Using ClickFix (AML.CS0055)",
+    "kind": "atlas-exercise",
+    "status": "research",
+    "confidence": "confirmed",
+    "date": "2025-05-24",
+    "summary": "MITRE ATLAS case study AML.CS0055. [Embrace the Red]( https://embracethered.com/) demonstrated that AI computer-use agents are vulnerable to social engineering attacks and can be manipulated into executing arbitrary code on a victim's machine. The attack is a variation on \"ClickFix\" which is a social engineering attack that fools...",
+    "source_ids": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "INCIDENT-ATLAS-CS0059",
+    "type": "incident",
+    "name": "EchoLeak: Zero-Click Prompt Injection Targeting M365 Copilot for Data Exfiltration (AML.CS0059)",
+    "kind": "atlas-exercise",
+    "status": "research",
+    "confidence": "confirmed",
+    "date": "2025-05-25",
+    "summary": "MITRE ATLAS case study AML.CS0059. Aim Security researchers discovered EchoLeak, a zero-click vulnerability in Microsoft 365 Copilot that could allow an attacker to exfiltrate sensitive enterprise data without user interaction.",
+    "source_ids": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "INCIDENT-ATLAS-CS0060",
+    "type": "incident",
+    "name": "Cross-Site Scripting via Prompt Manipulation in Lenovo AI Chatbot (AML.CS0060)",
+    "kind": "atlas-exercise",
+    "status": "research",
+    "confidence": "confirmed",
+    "date": "2025-08-18",
+    "summary": "MITRE ATLAS case study AML.CS0060. Cybernews researchers demonstrated that Lenovo's AI chatbot \"Lena\" was vulnerable to a prompt injection that produced malicious HTML which was saved in the chat history and could exfiltrate a human support agent's session cookie when rendered in their browser.",
+    "source_ids": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "INCIDENT-ATLAS-CS0063",
+    "type": "incident",
+    "name": "Prompt-Based Attacks Against Gemini via Calendar Invitations (AML.CS0063)",
+    "kind": "atlas-exercise",
+    "status": "research",
+    "confidence": "confirmed",
+    "date": "2025-08-06",
+    "summary": "MITRE ATLAS case study AML.CS0063. SafeBreach researchers demonstrated how adversary-controlled instructions embedded in productivity content, including Google Calendar invitations, emails, and shared files, could influence the behavior of Gemini-powered assistants when that content was later retrieved.",
+    "source_ids": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "INCIDENT-ATLAS-CS0066",
+    "type": "incident",
+    "name": "ZombieAgent: Data Exfiltration Attack on ChatGPT (AML.CS0066)",
+    "kind": "atlas-exercise",
+    "status": "research",
+    "confidence": "confirmed",
+    "date": "2025-09-25",
+    "summary": "MITRE ATLAS case study AML.CS0066. ZombieAgent is a proof-of-concept indirect prompt injection attack demonstrated by Radware against OpenAI's ChatGPT Deep Research and Connector functionality. The attacks showed how instructions concealed in externally controlled content, such as emails and documents, could be ingested and...",
+    "source_ids": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
   }
 ]

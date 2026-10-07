@@ -398,5 +398,105 @@
     "role": "journalism",
     "url": "https://thehackernews.com/2026/09/claude-used-to-automate-exploitation.html",
     "last_verified": "2026-10-06"
+  },
+  {
+    "id": "SRC-ATR",
+    "type": "source",
+    "name": "Agent Threat Rules (ATR)",
+    "publisher": "ATR Contributors",
+    "grade": "D",
+    "role": "community-detection-rules",
+    "url": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+    "last_verified": "2026-10-07"
+  },
+  {
+    "id": "SRC-TLDRSEC-PI-DEFENSES",
+    "type": "source",
+    "name": "prompt-injection-defenses",
+    "publisher": "tl;dr sec",
+    "grade": "D",
+    "role": "curated-defence-catalog",
+    "url": "https://github.com/tldrsec/prompt-injection-defenses",
+    "last_verified": "2026-10-07"
+  },
+  {
+    "id": "SRC-CAMEL",
+    "type": "source",
+    "name": "CaMeL: Defeating Prompt Injections by Design (code)",
+    "publisher": "Google Research",
+    "grade": "B",
+    "role": "research-paper-code",
+    "url": "https://github.com/google-research/camel-prompt-injection",
+    "last_verified": "2026-10-07"
+  },
+  {
+    "id": "SRC-OWASP-AITG",
+    "type": "source",
+    "name": "OWASP AI Testing Guide",
+    "publisher": "OWASP",
+    "grade": "A",
+    "role": "testing-standard",
+    "url": "https://github.com/OWASP/www-project-ai-testing-guide",
+    "last_verified": "2026-10-07"
+  },
+  {
+    "id": "SRC-ARCANUM-PI-TAXONOMY",
+    "type": "source",
+    "name": "Arcanum Prompt Injection Taxonomy",
+    "publisher": "Arcanum Information Security",
+    "grade": "D",
+    "role": "community-taxonomy",
+    "url": "https://github.com/Arcanum-Sec/arc_pi_taxonomy",
+    "last_verified": "2026-10-07"
+  },
+  {
+    "id": "SRC-PLOT4AI",
+    "type": "source",
+    "name": "PLOT4ai threat library",
+    "publisher": "PLOT4ai",
+    "grade": "D",
+    "role": "threat-modeling-library",
+    "url": "https://github.com/PLOT4ai/plot4ai-library",
+    "last_verified": "2026-10-07"
+  },
+  {
+    "id": "SRC-AGENTDOJO",
+    "type": "source",
+    "name": "AgentDojo",
+    "publisher": "ETH Zurich SPY Lab",
+    "grade": "B",
+    "role": "research-benchmark",
+    "url": "https://github.com/ethz-spylab/agentdojo",
+    "last_verified": "2026-10-07"
+  },
+  {
+    "id": "SRC-CISCO-AI-DEFENSE-SCANNERS",
+    "type": "source",
+    "name": "Cisco AI Defense MCP and skill scanners",
+    "publisher": "Cisco",
+    "grade": "B",
+    "role": "vendor-open-source-tooling",
+    "url": "https://github.com/cisco-ai-defense/skill-scanner",
+    "last_verified": "2026-10-07"
+  },
+  {
+    "id": "SRC-AGUARA",
+    "type": "source",
+    "name": "Aguara agent security checks",
+    "publisher": "garagon",
+    "grade": "D",
+    "role": "community-scanner",
+    "url": "https://github.com/garagon/aguara",
+    "last_verified": "2026-10-07"
+  },
+  {
+    "id": "SRC-ANAMORPHER",
+    "type": "source",
+    "name": "Anamorpher image-scaling prompt injection",
+    "publisher": "Trail of Bits",
+    "grade": "B",
+    "role": "vendor-research",
+    "url": "https://github.com/trailofbits/anamorpher",
+    "last_verified": "2026-10-07"
   }
 ]

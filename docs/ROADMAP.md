@@ -115,6 +115,17 @@ The goal is a **living AI cyber threat-intelligence platform**, not a static awe
 - [ ] stateful TAXII service
 - [x] read-only MCP v2 intelligence server
 
+## v1.2 — Ecosystem intelligence 🟡 sweep 2026-10-07
+
+- [x] Clone-verify every ecosystem repository; record last commit and licence (`scripts/verify_ecosystem.py`)
+- [x] MITRE ATLAS 2026.09 crosswalk with gap list (`references/crosswalks/atlas-crosswalk.json`)
+- [x] Seven techniques (T020–T026), 14 tests, 25 detections, 11 controls, 22 ATLAS case studies
+- [ ] Promote research-queue candidates (47) after clone-and-classify review
+- [ ] Re-verify OWASP `LLMxx:2026` and `ASIxx` IDs against `GenAI-Security-Project/GenAI-LLM-Top10`
+- [ ] Test cases for training-data exposure, fine-tune poisoning and dev-time model theft (OWASP AITG DAT-01, INF-05, INF-06)
+- [ ] Decide on held-back technique candidates: approval-gate subversion, tool-argument injection, MCP protocol abuse
+- [ ] Write rule files (Sigma / KQL) for the highest-severity new specifications (DET-AI-022, 027, 028, 029, 031)
+
 ## North star
 
 An analyst should be able to start from:

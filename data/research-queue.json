@@ -1,7 +1,7 @@
 {
   "meta": {
     "schema_version": "1.0",
-    "last_run": null,
+    "last_run": "2026-10-07T22:00:00Z",
     "policy": "candidate-only; no automatic promotion into official intelligence datasets",
     "statuses": [
       "candidate",
@@ -11,5 +11,1040 @@
       "duplicate"
     ]
   },
-  "items": []
+  "items": [
+    {
+      "id": "RQ-ECO-0001",
+      "status": "candidate",
+      "source_feed_id": "FEED-ECOSYSTEM-SWEEP",
+      "source_grade": "D",
+      "kind": "ecosystem-candidate",
+      "title": "ArmorerLabs/Armorer-Guard",
+      "url": "https://github.com/ArmorerLabs/Armorer-Guard",
+      "published": null,
+      "observed_at": "2026-10-07T22:00:00Z",
+      "relevance_score": 100,
+      "matched_terms": [
+        "defence",
+        "defence-tool"
+      ],
+      "summary": "Cited by 6 curated lists. Local Rust scanner for agent prompt injection, credential redaction, exfiltration text and risky tool calls. Not cloned or verified yet.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "Clone, read README and license, classify before promotion into ecosystem.json."
+      }
+    },
+    {
+      "id": "RQ-ECO-0002",
+      "status": "candidate",
+      "source_feed_id": "FEED-ECOSYSTEM-SWEEP",
+      "source_grade": "D",
+      "kind": "ecosystem-candidate",
+      "title": "meta-llama/PurpleLlama",
+      "url": "https://github.com/meta-llama/PurpleLlama",
+      "published": null,
+      "observed_at": "2026-10-07T22:00:00Z",
+      "relevance_score": 100,
+      "matched_terms": [
+        "defence",
+        "defence-tool"
+      ],
+      "summary": "Cited by 6 curated lists. Meta suite: Llama Guard classifiers, CodeShield and CyberSecEval benchmarks (also cited as facebookresearch/PurpleLlama). Not cloned or verified yet.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "Clone, read README and license, classify before promotion into ecosystem.json."
+      }
+    },
+    {
+      "id": "RQ-ECO-0003",
+      "status": "candidate",
+      "source_feed_id": "FEED-ECOSYSTEM-SWEEP",
+      "source_grade": "D",
+      "kind": "ecosystem-candidate",
+      "title": "OWASP/www-project-agent-memory-guard",
+      "url": "https://github.com/OWASP/www-project-agent-memory-guard",
+      "published": null,
+      "observed_at": "2026-10-07T22:00:00Z",
+      "relevance_score": 100,
+      "matched_terms": [
+        "agent-security",
+        "defence-tool"
+      ],
+      "summary": "Cited by 6 curated lists. OWASP scanner for agent memory poisoning (ASI06): injected payloads and memory manipulation patterns. Not cloned or verified yet.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "Clone, read README and license, classify before promotion into ecosystem.json."
+      }
+    },
+    {
+      "id": "RQ-ECO-0004",
+      "status": "candidate",
+      "source_feed_id": "FEED-ECOSYSTEM-SWEEP",
+      "source_grade": "D",
+      "kind": "ecosystem-candidate",
+      "title": "EasyJailbreak/EasyJailbreak",
+      "url": "https://github.com/EasyJailbreak/EasyJailbreak",
+      "published": null,
+      "observed_at": "2026-10-07T22:00:00Z",
+      "relevance_score": 80,
+      "matched_terms": [
+        "evaluation",
+        "assessment-tool"
+      ],
+      "summary": "Cited by 4 curated lists. Unified framework packaging many jailbreak attack recipes for evaluating LLM robustness. Not cloned or verified yet.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "Clone, read README and license, classify before promotion into ecosystem.json."
+      }
+    },
+    {
+      "id": "RQ-ECO-0005",
+      "status": "candidate",
+      "source_feed_id": "FEED-ECOSYSTEM-SWEEP",
+      "source_grade": "D",
+      "kind": "ecosystem-candidate",
+      "title": "euanong/image-hijacks",
+      "url": "https://github.com/euanong/image-hijacks",
+      "published": null,
+      "observed_at": "2026-10-07T22:00:00Z",
+      "relevance_score": 80,
+      "matched_terms": [
+        "attack-research",
+        "research-technique"
+      ],
+      "summary": "Cited by 4 curated lists. Code for adversarial images that control multimodal model behaviour at runtime. Not cloned or verified yet.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "Clone, read README and license, classify before promotion into ecosystem.json."
+      }
+    },
+    {
+      "id": "RQ-ECO-0006",
+      "status": "candidate",
+      "source_feed_id": "FEED-ECOSYSTEM-SWEEP",
+      "source_grade": "D",
+      "kind": "ecosystem-candidate",
+      "title": "hashgraph-online/hol-guard",
+      "url": "https://github.com/hashgraph-online/hol-guard",
+      "published": null,
+      "observed_at": "2026-10-07T22:00:00Z",
+      "relevance_score": 80,
+      "matched_terms": [
+        "agent-security",
+        "defence-tool"
+      ],
+      "summary": "Cited by 4 curated lists. Local-first runtime firewall for coding agents intercepting shell, secrets, MCP config and package installs. Not cloned or verified yet.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "Clone, read README and license, classify before promotion into ecosystem.json."
+      }
+    },
+    {
+      "id": "RQ-ECO-0007",
+      "status": "candidate",
+      "source_feed_id": "FEED-ECOSYSTEM-SWEEP",
+      "source_grade": "D",
+      "kind": "ecosystem-candidate",
+      "title": "LLM-Tuning-Safety/LLMs-Finetuning-Safety",
+      "url": "https://github.com/LLM-Tuning-Safety/LLMs-Finetuning-Safety",
+      "published": null,
+      "observed_at": "2026-10-07T22:00:00Z",
+      "relevance_score": 80,
+      "matched_terms": [
+        "attack-research",
+        "research-technique"
+      ],
+      "summary": "Cited by 4 curated lists. Shows fine-tuning aligned models, even benignly, erodes safety guardrails. Not cloned or verified yet.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "Clone, read README and license, classify before promotion into ecosystem.json."
+      }
+    },
+    {
+      "id": "RQ-ECO-0008",
+      "status": "candidate",
+      "source_feed_id": "FEED-ECOSYSTEM-SWEEP",
+      "source_grade": "D",
+      "kind": "ecosystem-candidate",
+      "title": "RobustNLP/CipherChat",
+      "url": "https://github.com/RobustNLP/CipherChat",
+      "published": null,
+      "observed_at": "2026-10-07T22:00:00Z",
+      "relevance_score": 80,
+      "matched_terms": [
+        "attack-research",
+        "research-technique"
+      ],
+      "summary": "Cited by 4 curated lists. Cipher-encoded conversations that bypass GPT-4 safety alignment. Not cloned or verified yet.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "Clone, read README and license, classify before promotion into ecosystem.json."
+      }
+    },
+    {
+      "id": "RQ-ECO-0009",
+      "status": "candidate",
+      "source_feed_id": "FEED-ECOSYSTEM-SWEEP",
+      "source_grade": "D",
+      "kind": "ecosystem-candidate",
+      "title": "sherdencooper/GPTFuzz",
+      "url": "https://github.com/sherdencooper/GPTFuzz",
+      "published": null,
+      "observed_at": "2026-10-07T22:00:00Z",
+      "relevance_score": 80,
+      "matched_terms": [
+        "evaluation",
+        "assessment-tool"
+      ],
+      "summary": "Cited by 4 curated lists. GPTFuzzer: fuzzing framework auto-generating jailbreak templates for red teaming. Not cloned or verified yet.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "Clone, read README and license, classify before promotion into ecosystem.json."
+      }
+    },
+    {
+      "id": "RQ-ECO-0010",
+      "status": "candidate",
+      "source_feed_id": "FEED-ECOSYSTEM-SWEEP",
+      "source_grade": "D",
+      "kind": "ecosystem-candidate",
+      "title": "82ch/MCP-Dandan",
+      "url": "https://github.com/82ch/MCP-Dandan",
+      "published": null,
+      "observed_at": "2026-10-07T22:00:00Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "agent-security",
+        "defence-tool"
+      ],
+      "summary": "Cited by 3 curated lists. Desktop tool monitoring and controlling MCP tool invocations with threat detection. Not cloned or verified yet.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "Clone, read README and license, classify before promotion into ecosystem.json."
+      }
+    },
+    {
+      "id": "RQ-ECO-0011",
+      "status": "candidate",
+      "source_feed_id": "FEED-ECOSYSTEM-SWEEP",
+      "source_grade": "D",
+      "kind": "ecosystem-candidate",
+      "title": "ASCIT31/Dark-Moon",
+      "url": "https://github.com/ASCIT31/Dark-Moon",
+      "published": null,
+      "observed_at": "2026-10-07T22:00:00Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "lab",
+        "assessment-tool"
+      ],
+      "summary": "Cited by 3 curated lists. Autonomous AI pentest platform orchestrating offensive tools via MCP playbooks (dual-use). Not cloned or verified yet.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "Clone, read README and license, classify before promotion into ecosystem.json."
+      }
+    },
+    {
+      "id": "RQ-ECO-0012",
+      "status": "candidate",
+      "source_feed_id": "FEED-ECOSYSTEM-SWEEP",
+      "source_grade": "D",
+      "kind": "ecosystem-candidate",
+      "title": "BurtTheCoder/mcp-dnstwist",
+      "url": "https://github.com/BurtTheCoder/mcp-dnstwist",
+      "published": null,
+      "observed_at": "2026-10-07T22:00:00Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "catalog",
+        "defence-tool"
+      ],
+      "summary": "Cited by 3 curated lists. MCP server wrapping dnstwist for phishing and typosquat domain detection. Not cloned or verified yet.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "Clone, read README and license, classify before promotion into ecosystem.json."
+      }
+    },
+    {
+      "id": "RQ-ECO-0013",
+      "status": "candidate",
+      "source_feed_id": "FEED-ECOSYSTEM-SWEEP",
+      "source_grade": "D",
+      "kind": "ecosystem-candidate",
+      "title": "BurtTheCoder/mcp-maigret",
+      "url": "https://github.com/BurtTheCoder/mcp-maigret",
+      "published": null,
+      "observed_at": "2026-10-07T22:00:00Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "catalog",
+        "assessment-tool"
+      ],
+      "summary": "Cited by 3 curated lists. MCP server wrapping Maigret username OSINT collection. Not cloned or verified yet.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "Clone, read README and license, classify before promotion into ecosystem.json."
+      }
+    },
+    {
+      "id": "RQ-ECO-0014",
+      "status": "candidate",
+      "source_feed_id": "FEED-ECOSYSTEM-SWEEP",
+      "source_grade": "D",
+      "kind": "ecosystem-candidate",
+      "title": "cisco-ai-defense/defenseclaw",
+      "url": "https://github.com/cisco-ai-defense/defenseclaw",
+      "published": null,
+      "observed_at": "2026-10-07T22:00:00Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "agent-security",
+        "defence-tool"
+      ],
+      "summary": "Cited by 3 curated lists. Cisco agent governance layer scanning skills, MCP servers and plugins before execution; AI-BOM. Not cloned or verified yet.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "Clone, read README and license, classify before promotion into ecosystem.json."
+      }
+    },
+    {
+      "id": "RQ-ECO-0015",
+      "status": "candidate",
+      "source_feed_id": "FEED-ECOSYSTEM-SWEEP",
+      "source_grade": "D",
+      "kind": "ecosystem-candidate",
+      "title": "Continuum-AI-Corp/Orca-AI-Incident-Archive",
+      "url": "https://github.com/Continuum-AI-Corp/Orca-AI-Incident-Archive",
+      "published": null,
+      "observed_at": "2026-10-07T22:00:00Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "knowledge",
+        "incident-data"
+      ],
+      "summary": "Cited by 3 curated lists. Archive of real agent security incidents (MCP, skill supply chain, indirect injection) with confirmation flags. Not cloned or verified yet.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "Clone, read README and license, classify before promotion into ecosystem.json."
+      }
+    },
+    {
+      "id": "RQ-ECO-0016",
+      "status": "candidate",
+      "source_feed_id": "FEED-ECOSYSTEM-SWEEP",
+      "source_grade": "D",
+      "kind": "ecosystem-candidate",
+      "title": "CyberSunil/LLMVault",
+      "url": "https://github.com/CyberSunil/LLMVault",
+      "published": null,
+      "observed_at": "2026-10-07T22:00:00Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "lab",
+        "lab-exercise"
+      ],
+      "summary": "Cited by 3 curated lists. Self-hosted CTF range with 25 labs mapped to OWASP LLM Top 10. Not cloned or verified yet.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "Clone, read README and license, classify before promotion into ecosystem.json."
+      }
+    },
+    {
+      "id": "RQ-ECO-0017",
+      "status": "candidate",
+      "source_feed_id": "FEED-ECOSYSTEM-SWEEP",
+      "source_grade": "D",
+      "kind": "ecosystem-candidate",
+      "title": "elliotllliu/agent-shield",
+      "url": "https://github.com/elliotllliu/agent-shield",
+      "published": null,
+      "observed_at": "2026-10-07T22:00:00Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "agent-security",
+        "defence-tool"
+      ],
+      "summary": "Cited by 3 curated lists. AgentShield agent security scanning/defence project. Not cloned or verified yet.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "Clone, read README and license, classify before promotion into ecosystem.json."
+      }
+    },
+    {
+      "id": "RQ-ECO-0018",
+      "status": "candidate",
+      "source_feed_id": "FEED-ECOSYSTEM-SWEEP",
+      "source_grade": "D",
+      "kind": "ecosystem-candidate",
+      "title": "google/mcp-security",
+      "url": "https://github.com/google/mcp-security",
+      "published": null,
+      "observed_at": "2026-10-07T22:00:00Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "catalog",
+        "defence-tool"
+      ],
+      "summary": "Cited by 3 curated lists. Google SecOps and Threat Intelligence MCP servers for security products. Not cloned or verified yet.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "Clone, read README and license, classify before promotion into ecosystem.json."
+      }
+    },
+    {
+      "id": "RQ-ECO-0019",
+      "status": "candidate",
+      "source_feed_id": "FEED-ECOSYSTEM-SWEEP",
+      "source_grade": "D",
+      "kind": "ecosystem-candidate",
+      "title": "invariantlabs-ai/invariant",
+      "url": "https://github.com/invariantlabs-ai/invariant",
+      "published": null,
+      "observed_at": "2026-10-07T22:00:00Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "agent-security",
+        "defence-tool"
+      ],
+      "summary": "Cited by 3 curated lists. Invariant Guardrails: policy-based runtime rules for agent traces and tool calls. Not cloned or verified yet.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "Clone, read README and license, classify before promotion into ecosystem.json."
+      }
+    },
+    {
+      "id": "RQ-ECO-0020",
+      "status": "candidate",
+      "source_feed_id": "FEED-ECOSYSTEM-SWEEP",
+      "source_grade": "D",
+      "kind": "ecosystem-candidate",
+      "title": "Junjie-Ye/ToolSword",
+      "url": "https://github.com/Junjie-Ye/ToolSword",
+      "published": null,
+      "observed_at": "2026-10-07T22:00:00Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "benchmark",
+        "benchmark"
+      ],
+      "summary": "Cited by 3 curated lists. ToolSword: safety issues of LLMs across three stages of tool learning. Not cloned or verified yet.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "Clone, read README and license, classify before promotion into ecosystem.json."
+      }
+    },
+    {
+      "id": "RQ-ECO-0021",
+      "status": "candidate",
+      "source_feed_id": "FEED-ECOSYSTEM-SWEEP",
+      "source_grade": "D",
+      "kind": "ecosystem-candidate",
+      "title": "lasso-security/mcp-gateway",
+      "url": "https://github.com/lasso-security/mcp-gateway",
+      "published": null,
+      "observed_at": "2026-10-07T22:00:00Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "agent-security",
+        "defence-tool"
+      ],
+      "summary": "Cited by 3 curated lists. Gateway proxy between LLMs and MCP servers applying security plugins. Not cloned or verified yet.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "Clone, read README and license, classify before promotion into ecosystem.json."
+      }
+    },
+    {
+      "id": "RQ-ECO-0022",
+      "status": "candidate",
+      "source_feed_id": "FEED-ECOSYSTEM-SWEEP",
+      "source_grade": "D",
+      "kind": "ecosystem-candidate",
+      "title": "LaurieWired/GhidraMCP",
+      "url": "https://github.com/LaurieWired/GhidraMCP",
+      "published": null,
+      "observed_at": "2026-10-07T22:00:00Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "catalog",
+        "assessment-tool"
+      ],
+      "summary": "Cited by 3 curated lists. MCP server exposing Ghidra reverse engineering to LLMs. Not cloned or verified yet.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "Clone, read README and license, classify before promotion into ecosystem.json."
+      }
+    },
+    {
+      "id": "RQ-ECO-0023",
+      "status": "candidate",
+      "source_feed_id": "FEED-ECOSYSTEM-SWEEP",
+      "source_grade": "D",
+      "kind": "ecosystem-candidate",
+      "title": "Libr-AI/do-not-answer",
+      "url": "https://github.com/Libr-AI/do-not-answer",
+      "published": null,
+      "observed_at": "2026-10-07T22:00:00Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "benchmark",
+        "prompt-corpus"
+      ],
+      "summary": "Cited by 3 curated lists. Do-Not-Answer dataset for evaluating LLM safeguards against harmful prompts. Not cloned or verified yet.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "Clone, read README and license, classify before promotion into ecosystem.json."
+      }
+    },
+    {
+      "id": "RQ-ECO-0024",
+      "status": "candidate",
+      "source_feed_id": "FEED-ECOSYSTEM-SWEEP",
+      "source_grade": "D",
+      "kind": "ecosystem-candidate",
+      "title": "luckyPipewrench/pipelock",
+      "url": "https://github.com/luckyPipewrench/pipelock",
+      "published": null,
+      "observed_at": "2026-10-07T22:00:00Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "agent-security",
+        "defence-tool"
+      ],
+      "summary": "Cited by 3 curated lists. Agent firewall and MCP-aware egress proxy with DLP and injection scanning. Not cloned or verified yet.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "Clone, read README and license, classify before promotion into ecosystem.json."
+      }
+    },
+    {
+      "id": "RQ-ECO-0025",
+      "status": "candidate",
+      "source_feed_id": "FEED-ECOSYSTEM-SWEEP",
+      "source_grade": "D",
+      "kind": "ecosystem-candidate",
+      "title": "MCP-Defender/MCP-Defender",
+      "url": "https://github.com/MCP-Defender/MCP-Defender",
+      "published": null,
+      "observed_at": "2026-10-07T22:00:00Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "agent-security",
+        "defence-tool"
+      ],
+      "summary": "Cited by 3 curated lists. Desktop proxy that blocks malicious MCP traffic. Not cloned or verified yet.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "Clone, read README and license, classify before promotion into ecosystem.json."
+      }
+    },
+    {
+      "id": "RQ-ECO-0026",
+      "status": "candidate",
+      "source_feed_id": "FEED-ECOSYSTEM-SWEEP",
+      "source_grade": "D",
+      "kind": "ecosystem-candidate",
+      "title": "MCPPhalanx/binaryninja-mcp",
+      "url": "https://github.com/MCPPhalanx/binaryninja-mcp",
+      "published": null,
+      "observed_at": "2026-10-07T22:00:00Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "catalog",
+        "assessment-tool"
+      ],
+      "summary": "Cited by 3 curated lists. MCP server for Binary Ninja binary analysis. Not cloned or verified yet.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "Clone, read README and license, classify before promotion into ecosystem.json."
+      }
+    },
+    {
+      "id": "RQ-ECO-0027",
+      "status": "candidate",
+      "source_feed_id": "FEED-ECOSYSTEM-SWEEP",
+      "source_grade": "D",
+      "kind": "ecosystem-candidate",
+      "title": "mnns/LLMFuzzer",
+      "url": "https://github.com/mnns/LLMFuzzer",
+      "published": null,
+      "observed_at": "2026-10-07T22:00:00Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "evaluation",
+        "assessment-tool"
+      ],
+      "summary": "Cited by 3 curated lists. Fuzzing framework for LLM-integrated application APIs. Not cloned or verified yet.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "Clone, read README and license, classify before promotion into ecosystem.json."
+      }
+    },
+    {
+      "id": "RQ-ECO-0028",
+      "status": "candidate",
+      "source_feed_id": "FEED-ECOSYSTEM-SWEEP",
+      "source_grade": "D",
+      "kind": "ecosystem-candidate",
+      "title": "mrexodia/ida-pro-mcp",
+      "url": "https://github.com/mrexodia/ida-pro-mcp",
+      "published": null,
+      "observed_at": "2026-10-07T22:00:00Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "catalog",
+        "assessment-tool"
+      ],
+      "summary": "Cited by 3 curated lists. MCP server for IDA Pro reverse engineering. Not cloned or verified yet.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "Clone, read README and license, classify before promotion into ecosystem.json."
+      }
+    },
+    {
+      "id": "RQ-ECO-0029",
+      "status": "candidate",
+      "source_feed_id": "FEED-ECOSYSTEM-SWEEP",
+      "source_grade": "D",
+      "kind": "ecosystem-candidate",
+      "title": "pasquini-dario/LLMmap",
+      "url": "https://github.com/pasquini-dario/LLMmap",
+      "published": null,
+      "observed_at": "2026-10-07T22:00:00Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "attack-research",
+        "assessment-tool"
+      ],
+      "summary": "Cited by 3 curated lists. LLMmap: fingerprints which LLM sits behind an application. Not cloned or verified yet.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "Clone, read README and license, classify before promotion into ecosystem.json."
+      }
+    },
+    {
+      "id": "RQ-ECO-0030",
+      "status": "candidate",
+      "source_feed_id": "FEED-ECOSYSTEM-SWEEP",
+      "source_grade": "D",
+      "kind": "ecosystem-candidate",
+      "title": "PortSwigger/mcp-server",
+      "url": "https://github.com/PortSwigger/mcp-server",
+      "published": null,
+      "observed_at": "2026-10-07T22:00:00Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "catalog",
+        "assessment-tool"
+      ],
+      "summary": "Cited by 3 curated lists. Burp Suite MCP integration for web security testing. Not cloned or verified yet.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "Clone, read README and license, classify before promotion into ecosystem.json."
+      }
+    },
+    {
+      "id": "RQ-ECO-0031",
+      "status": "candidate",
+      "source_feed_id": "FEED-ECOSYSTEM-SWEEP",
+      "source_grade": "D",
+      "kind": "ecosystem-candidate",
+      "title": "Privatris/AgentLeak",
+      "url": "https://github.com/Privatris/AgentLeak",
+      "published": null,
+      "observed_at": "2026-10-07T22:00:00Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "benchmark",
+        "benchmark"
+      ],
+      "summary": "Cited by 3 curated lists. Full-stack benchmark for privacy leakage in multi-agent LLM systems. Not cloned or verified yet.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "Clone, read README and license, classify before promotion into ecosystem.json."
+      }
+    },
+    {
+      "id": "RQ-ECO-0032",
+      "status": "candidate",
+      "source_feed_id": "FEED-ECOSYSTEM-SWEEP",
+      "source_grade": "D",
+      "kind": "ecosystem-candidate",
+      "title": "prompt-security/ps-fuzz",
+      "url": "https://github.com/prompt-security/ps-fuzz",
+      "published": null,
+      "observed_at": "2026-10-07T22:00:00Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "evaluation",
+        "assessment-tool"
+      ],
+      "summary": "Cited by 3 curated lists. Prompt Fuzzer: tests system prompts against injection and jailbreak attacks. Not cloned or verified yet.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "Clone, read README and license, classify before promotion into ecosystem.json."
+      }
+    },
+    {
+      "id": "RQ-ECO-0033",
+      "status": "candidate",
+      "source_feed_id": "FEED-ECOSYSTEM-SWEEP",
+      "source_grade": "D",
+      "kind": "ecosystem-candidate",
+      "title": "Repello-AI/whistleblower",
+      "url": "https://github.com/Repello-AI/whistleblower",
+      "published": null,
+      "observed_at": "2026-10-07T22:00:00Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "evaluation",
+        "assessment-tool"
+      ],
+      "summary": "Cited by 3 curated lists. Infers an agent system prompt from its outputs (prompt leakage testing). Not cloned or verified yet.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "Clone, read README and license, classify before promotion into ecosystem.json."
+      }
+    },
+    {
+      "id": "RQ-ECO-0034",
+      "status": "candidate",
+      "source_feed_id": "FEED-ECOSYSTEM-SWEEP",
+      "source_grade": "D",
+      "kind": "ecosystem-candidate",
+      "title": "slowmist/MCP-Security-Checklist",
+      "url": "https://github.com/slowmist/MCP-Security-Checklist",
+      "published": null,
+      "observed_at": "2026-10-07T22:00:00Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "knowledge",
+        "framework-data"
+      ],
+      "summary": "Cited by 3 curated lists. SlowMist security checklist for MCP-based AI tool ecosystems. Not cloned or verified yet.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "Clone, read README and license, classify before promotion into ecosystem.json."
+      }
+    },
+    {
+      "id": "RQ-ECO-0035",
+      "status": "candidate",
+      "source_feed_id": "FEED-ECOSYSTEM-SWEEP",
+      "source_grade": "D",
+      "kind": "ecosystem-candidate",
+      "title": "sunglasses-dev/sunglasses",
+      "url": "https://github.com/sunglasses-dev/sunglasses",
+      "published": null,
+      "observed_at": "2026-10-07T22:00:00Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "agent-security",
+        "detection-content"
+      ],
+      "summary": "Cited by 3 curated lists. Runtime trust scanner for agent skills/tools with pattern library over 100+ attack categories. Not cloned or verified yet.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "Clone, read README and license, classify before promotion into ecosystem.json."
+      }
+    },
+    {
+      "id": "RQ-ECO-0036",
+      "status": "candidate",
+      "source_feed_id": "FEED-ECOSYSTEM-SWEEP",
+      "source_grade": "D",
+      "kind": "ecosystem-candidate",
+      "title": "taoq-ai/ziran",
+      "url": "https://github.com/taoq-ai/ziran",
+      "published": null,
+      "observed_at": "2026-10-07T22:00:00Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "evaluation",
+        "assessment-tool"
+      ],
+      "summary": "Cited by 3 curated lists. Ziran: security testing framework for AI agents. Not cloned or verified yet.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "Clone, read README and license, classify before promotion into ecosystem.json."
+      }
+    },
+    {
+      "id": "RQ-ECO-0037",
+      "status": "candidate",
+      "source_feed_id": "FEED-ECOSYSTEM-SWEEP",
+      "source_grade": "D",
+      "kind": "ecosystem-candidate",
+      "title": "tenuo-ai/tenuo",
+      "url": "https://github.com/tenuo-ai/tenuo",
+      "published": null,
+      "observed_at": "2026-10-07T22:00:00Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "agent-security",
+        "defence-tool"
+      ],
+      "summary": "Cited by 3 curated lists. Capability-based authorization for agent tool calls via signed holder-bound warrants. Not cloned or verified yet.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "Clone, read README and license, classify before promotion into ecosystem.json."
+      }
+    },
+    {
+      "id": "RQ-ECO-0038",
+      "status": "candidate",
+      "source_feed_id": "FEED-ECOSYSTEM-SWEEP",
+      "source_grade": "D",
+      "kind": "ecosystem-candidate",
+      "title": "ThuCCSLab/FigStep",
+      "url": "https://github.com/ThuCCSLab/FigStep",
+      "published": null,
+      "observed_at": "2026-10-07T22:00:00Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "attack-research",
+        "research-technique"
+      ],
+      "summary": "Cited by 3 curated lists. FigStep: typographic visual prompts jailbreaking vision-language models. Not cloned or verified yet.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "Clone, read README and license, classify before promotion into ecosystem.json."
+      }
+    },
+    {
+      "id": "RQ-ECO-0039",
+      "status": "candidate",
+      "source_feed_id": "FEED-ECOSYSTEM-SWEEP",
+      "source_grade": "D",
+      "kind": "ecosystem-candidate",
+      "title": "trailofbits/mcp-context-protector",
+      "url": "https://github.com/trailofbits/mcp-context-protector",
+      "published": null,
+      "observed_at": "2026-10-07T22:00:00Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "agent-security",
+        "defence-tool"
+      ],
+      "summary": "Cited by 3 curated lists. Trail of Bits security wrapper for MCP servers (trust-on-first-use, injection guarding). Not cloned or verified yet.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "Clone, read README and license, classify before promotion into ecosystem.json."
+      }
+    },
+    {
+      "id": "RQ-ECO-0040",
+      "status": "candidate",
+      "source_feed_id": "FEED-ECOSYSTEM-SWEEP",
+      "source_grade": "D",
+      "kind": "ecosystem-candidate",
+      "title": "Unispac/Visual-Adversarial-Examples-Jailbreak-Large-Language-Models",
+      "url": "https://github.com/Unispac/Visual-Adversarial-Examples-Jailbreak-Large-Language-Models",
+      "published": null,
+      "observed_at": "2026-10-07T22:00:00Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "attack-research",
+        "research-technique"
+      ],
+      "summary": "Cited by 3 curated lists. Visual adversarial examples that jailbreak multimodal LLMs. Not cloned or verified yet.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "Clone, read README and license, classify before promotion into ecosystem.json."
+      }
+    },
+    {
+      "id": "RQ-ECO-0041",
+      "status": "candidate",
+      "source_feed_id": "FEED-ECOSYSTEM-SWEEP",
+      "source_grade": "D",
+      "kind": "ecosystem-candidate",
+      "title": "utkusen/promptmap",
+      "url": "https://github.com/utkusen/promptmap",
+      "published": null,
+      "observed_at": "2026-10-07T22:00:00Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "evaluation",
+        "assessment-tool"
+      ],
+      "summary": "Cited by 3 curated lists. Automated prompt injection scanner for LLM apps; also source of ChatGPT share dorks. Not cloned or verified yet.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "Clone, read README and license, classify before promotion into ecosystem.json."
+      }
+    },
+    {
+      "id": "RQ-ECO-0042",
+      "status": "candidate",
+      "source_feed_id": "FEED-ECOSYSTEM-SWEEP",
+      "source_grade": "D",
+      "kind": "ecosystem-candidate",
+      "title": "Virtue-Research/guard-eval-harness",
+      "url": "https://github.com/Virtue-Research/guard-eval-harness",
+      "published": null,
+      "observed_at": "2026-10-07T22:00:00Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "evaluation",
+        "benchmark"
+      ],
+      "summary": "Cited by 3 curated lists. CLI harness benchmarking guardrail/moderation classifiers on 80+ safety datasets. Not cloned or verified yet.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "Clone, read README and license, classify before promotion into ecosystem.json."
+      }
+    },
+    {
+      "id": "RQ-ECO-0043",
+      "status": "candidate",
+      "source_feed_id": "FEED-ECOSYSTEM-SWEEP",
+      "source_grade": "D",
+      "kind": "ecosystem-candidate",
+      "title": "wegodev2/virtual-prompt-injection",
+      "url": "https://github.com/wegodev2/virtual-prompt-injection",
+      "published": null,
+      "observed_at": "2026-10-07T22:00:00Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "attack-research",
+        "research-technique"
+      ],
+      "summary": "Cited by 3 curated lists. Virtual Prompt Injection: backdooring instruction-tuned LLMs via poisoned data. Not cloned or verified yet.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "Clone, read README and license, classify before promotion into ecosystem.json."
+      }
+    },
+    {
+      "id": "RQ-ECO-0044",
+      "status": "candidate",
+      "source_feed_id": "FEED-ECOSYSTEM-SWEEP",
+      "source_grade": "D",
+      "kind": "ecosystem-candidate",
+      "title": "wuyoscar/ISC-Bench",
+      "url": "https://github.com/wuyoscar/ISC-Bench",
+      "published": null,
+      "observed_at": "2026-10-07T22:00:00Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "benchmark",
+        "benchmark"
+      ],
+      "summary": "Cited by 3 curated lists. Benchmark for Internal Safety Collapse in frontier LLMs. Not cloned or verified yet.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "Clone, read README and license, classify before promotion into ecosystem.json."
+      }
+    },
+    {
+      "id": "RQ-ECO-0045",
+      "status": "candidate",
+      "source_feed_id": "FEED-ECOSYSTEM-SWEEP",
+      "source_grade": "D",
+      "kind": "ecosystem-candidate",
+      "title": "x-zheng16/Awesome-Embodied-AI-Safety",
+      "url": "https://github.com/x-zheng16/Awesome-Embodied-AI-Safety",
+      "published": null,
+      "observed_at": "2026-10-07T22:00:00Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "knowledge",
+        "curated-list"
+      ],
+      "summary": "Cited by 3 curated lists. Curated survey list on embodied AI safety risks, attacks and defences. Not cloned or verified yet.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "Clone, read README and license, classify before promotion into ecosystem.json."
+      }
+    },
+    {
+      "id": "RQ-ECO-0046",
+      "status": "candidate",
+      "source_feed_id": "FEED-ECOSYSTEM-SWEEP",
+      "source_grade": "D",
+      "kind": "ecosystem-candidate",
+      "title": "XuandongZhao/weak-to-strong",
+      "url": "https://github.com/XuandongZhao/weak-to-strong",
+      "published": null,
+      "observed_at": "2026-10-07T22:00:00Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "attack-research",
+        "research-technique"
+      ],
+      "summary": "Cited by 3 curated lists. Weak-to-strong jailbreaking using small models to steer large ones. Not cloned or verified yet.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "Clone, read README and license, classify before promotion into ecosystem.json."
+      }
+    },
+    {
+      "id": "RQ-ECO-0047",
+      "status": "candidate",
+      "source_feed_id": "FEED-ECOSYSTEM-SWEEP",
+      "source_grade": "D",
+      "kind": "ecosystem-candidate",
+      "title": "YihanWang617/LLM-Jailbreaking-Defense-Backtranslation",
+      "url": "https://github.com/YihanWang617/LLM-Jailbreaking-Defense-Backtranslation",
+      "published": null,
+      "observed_at": "2026-10-07T22:00:00Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "defence",
+        "research-technique"
+      ],
+      "summary": "Cited by 3 curated lists. Jailbreak defence via backtranslation of model responses. Not cloned or verified yet.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "Clone, read README and license, classify before promotion into ecosystem.json."
+      }
+    }
+  ]
 }

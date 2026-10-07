@@ -1,0 +1,753 @@
+{
+  "generated": "2026-10-07",
+  "provenance": "Agent-Threat-Rule/agent-threat-rules",
+  "note": "Derived from shallow clones read on 2026-10-07. Names and identifiers only; descriptions are paraphrased. Discovery and test-design material, not evidence of in-the-wild activity.",
+  "repo": {
+    "url": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+    "local": "/root/work/clones/Agent-Threat-Rule__agent-threat-rules",
+    "commit": "eab4883eda763fbf8ea167edb4cd00f56d170c4a",
+    "commit_date": "2026-10-07",
+    "self_described_version": "v4.1.0 (CITATION.cff; 825 rules)"
+  },
+  "license": {
+    "spdx": "MIT",
+    "holder": "Copyright (c) 2026 ATR Contributors",
+    "attribution": "MIT requires retaining the copyright and permission notice in copies or substantial portions. CITATION.cff asks academic/research users to cite ATR. TRADEMARK.md: \"ATR\", \"ATR-Certified\" and \"Powered by ATR\" are claimed marks; do not imply certification; \"Powered by ATR\" only if incorporating rules/engine. Recommended: cite ATR rule IDs + repo URL + commit as source of hypotheses; since LLMInjection rewrites logic in its own words (no regex copied), MIT notice obligations are minimal but a credit line is good practice."
+  },
+  "rule_format": {
+    "language": "YAML, one rule per file under rules/<category>/ATR-YYYY-NNNNN-slug.yaml; schema spec/atr-schema.yaml (JSON-Schema-in-YAML), normative SPEC.md v1.0; category registry spec/category-registry/v1.0.yaml",
+    "required_fields": [
+      "schema_version",
+      "title",
+      "id",
+      "status",
+      "description",
+      "author",
+      "date",
+      "severity",
+      "maturity",
+      "tags",
+      "agent_source",
+      "detection",
+      "response"
+    ],
+    "key_fields": {
+      "id": "ATR-YYYY-NNNNN",
+      "status": "draft|experimental|stable|deprecated",
+      "maturity": "experimental|test|stable|deprecated (draft also seen in data)",
+      "severity": "critical|high|medium|low|informational",
+      "tags": "category, subcategory, scan_target (llm|mcp|runtime|both), confidence",
+      "agent_source.type": "llm_io|mcp_exchange|tool_call|multi_agent_comm|agent_trace|skill_lifecycle|memory_access|context_window|agent_behavior",
+      "detection": "conditions[] of {field, operator (mostly regex), value} with condition any/all + false_positives; optional detection.method pattern|semantic|behavioral|trace with behavioral aggregation (count/window/group-by) and trace forbid primitives",
+      "detection_tier": "legacy optional: pattern|semantic|...",
+      "references": "owasp_llm, owasp_agentic (ASI01-10), owasp_ast, mitre_atlas, mitre_attack, cve, safe_mcp, nist_csf, etsi_ts_104223, probe_id, external_references (sigma/yara/misp/stix), research",
+      "compliance": "eu_ai_act, nist_ai_rmf, iso_42001, owasp_* with auditor-readable context + strength",
+      "test_cases": "true_positives/true_negatives required by safety gate"
+    },
+    "detection_fields_used": [
+      "user_input",
+      "content",
+      "tool_response",
+      "tool_args",
+      "tool_name",
+      "tool_description",
+      "trace.forbid_violation",
+      "behavioral.metric_value"
+    ],
+    "framework_refs_coverage": "All 829 rules carry mitre_atlas, owasp_llm and owasp_agentic references."
+  },
+  "totals": {
+    "rule_files": 829,
+    "parse_errors": 0,
+    "by_status": {
+      "stable": 59,
+      "experimental": 763,
+      "draft": 5,
+      "deprecated": 2
+    },
+    "by_maturity": {
+      "stable": 106,
+      "test": 644,
+      "draft": 14,
+      "experimental": 65
+    },
+    "by_detection_tier": {
+      "pattern": 790,
+      "semantic": 33,
+      "None": 6
+    },
+    "by_detection_method": {
+      "None": 766,
+      "trace": 5,
+      "semantic": 20,
+      "pattern": 37,
+      "behavioral": 1
+    },
+    "by_agent_source": {
+      "multi_agent_comm": 6,
+      "llm_io": 404,
+      "tool_call": 73,
+      "mcp_exchange": 333,
+      "agent_trace": 5,
+      "memory_access": 2,
+      "context_window": 2,
+      "agent_behavior": 1,
+      "skill_lifecycle": 3
+    },
+    "note": "Counts by directory; tags.category differs slightly for a few rules (e.g. model-security dir has 4 files but 3 tag model-abuse). Overwhelmingly regex pattern rules (790); only 5 trace and 1 behavioral rules."
+  },
+  "by_category": {
+    "agent-manipulation": {
+      "total": 108,
+      "severity": {
+        "critical": 36,
+        "high": 68,
+        "medium": 4
+      },
+      "maturity": {
+        "stable": 3,
+        "test": 102,
+        "draft": 1,
+        "experimental": 2
+      },
+      "status": {
+        "stable": 1,
+        "experimental": 107
+      }
+    },
+    "context-exfiltration": {
+      "total": 135,
+      "severity": {
+        "high": 75,
+        "critical": 56,
+        "medium": 4
+      },
+      "maturity": {
+        "test": 93,
+        "draft": 1,
+        "stable": 31,
+        "experimental": 10
+      },
+      "status": {
+        "stable": 22,
+        "experimental": 113
+      }
+    },
+    "data-poisoning": {
+      "total": 9,
+      "severity": {
+        "high": 8,
+        "medium": 1
+      },
+      "maturity": {
+        "test": 5,
+        "experimental": 4
+      },
+      "status": {
+        "experimental": 9
+      }
+    },
+    "excessive-autonomy": {
+      "total": 39,
+      "severity": {
+        "high": 24,
+        "critical": 14,
+        "low": 1
+      },
+      "maturity": {
+        "test": 26,
+        "draft": 1,
+        "stable": 10,
+        "experimental": 2
+      },
+      "status": {
+        "experimental": 29,
+        "draft": 1,
+        "stable": 9
+      }
+    },
+    "model-abuse": {
+      "total": 41,
+      "severity": {
+        "medium": 12,
+        "high": 14,
+        "critical": 15
+      },
+      "maturity": {
+        "test": 32,
+        "stable": 7,
+        "experimental": 2
+      },
+      "status": {
+        "experimental": 40,
+        "stable": 1
+      }
+    },
+    "model-security": {
+      "total": 4,
+      "severity": {
+        "critical": 4
+      },
+      "maturity": {
+        "test": 3,
+        "stable": 1
+      },
+      "status": {
+        "experimental": 4
+      }
+    },
+    "privilege-escalation": {
+      "total": 76,
+      "severity": {
+        "critical": 36,
+        "medium": 1,
+        "high": 39
+      },
+      "maturity": {
+        "test": 52,
+        "stable": 4,
+        "draft": 2,
+        "experimental": 18
+      },
+      "status": {
+        "experimental": 75,
+        "stable": 1
+      }
+    },
+    "prompt-injection": {
+      "total": 252,
+      "severity": {
+        "high": 164,
+        "critical": 31,
+        "medium": 55,
+        "low": 2
+      },
+      "maturity": {
+        "test": 204,
+        "stable": 36,
+        "experimental": 11,
+        "draft": 1
+      },
+      "status": {
+        "stable": 12,
+        "experimental": 236,
+        "draft": 2,
+        "deprecated": 2
+      }
+    },
+    "skill-compromise": {
+      "total": 52,
+      "severity": {
+        "high": 19,
+        "medium": 3,
+        "critical": 30
+      },
+      "maturity": {
+        "test": 50,
+        "experimental": 1,
+        "stable": 1
+      },
+      "status": {
+        "experimental": 50,
+        "stable": 2
+      }
+    },
+    "tool-poisoning": {
+      "total": 113,
+      "severity": {
+        "critical": 58,
+        "high": 49,
+        "medium": 6
+      },
+      "maturity": {
+        "test": 77,
+        "stable": 13,
+        "draft": 8,
+        "experimental": 15
+      },
+      "status": {
+        "stable": 11,
+        "experimental": 100,
+        "draft": 2
+      }
+    }
+  },
+  "by_severity": {
+    "critical": 280,
+    "high": 460,
+    "medium": 86,
+    "low": 3
+  },
+  "category_to_llmi": {
+    "prompt-injection": {
+      "llmi": [
+        "LLMI-T001",
+        "LLMI-T002",
+        "LLMI-T003"
+      ],
+      "note": "Direct/indirect injection plus large jailbreak/persona/encoding-evasion subset (garak, HarmBench etc.)."
+    },
+    "context-exfiltration": {
+      "llmi": [
+        "LLMI-T004",
+        "LLMI-T002",
+        "LLMI-T008"
+      ],
+      "note": "System-prompt leakage, credential/PII disclosure, markdown-image and email exfil via indirect PI, SSRF/LFI."
+    },
+    "tool-poisoning": {
+      "llmi": [
+        "LLMI-T008",
+        "LLMI-T011",
+        "LLMI-T002"
+      ],
+      "note": "MCP tool description/response poisoning, rug-pull, shadow servers, plus many CVE rules for AI-framework command/SQL injection (supply-chain/vuln exploitation)."
+    },
+    "agent-manipulation": {
+      "llmi": [
+        "LLMI-T003",
+        "LLMI-T001",
+        "LLMI-T015"
+      ],
+      "note": "Mixes multi-agent trust attacks (identity spoofing, A2A injection, sybil consensus) with many jailbreak persona rules."
+    },
+    "privilege-escalation": {
+      "llmi": [
+        "LLMI-T008",
+        "LLMI-T018",
+        "LLMI-T016"
+      ],
+      "note": "Tool-argument injection, sandbox escape, self-trust-config widening, LiteLLM gateway authz bypass CVEs."
+    },
+    "skill-compromise": {
+      "llmi": [
+        "LLMI-T011",
+        "LLMI-T018",
+        "LLMI-T012",
+        "LLMI-T006"
+      ],
+      "note": "Malicious SKILL.md/MCP packages, typosquat, hooks pre-trust RCE, package hallucination, backdoor trigger rules."
+    },
+    "model-abuse": {
+      "llmi": [
+        "LLMI-T003",
+        "LLMI-T019",
+        "LLMI-T005"
+      ],
+      "note": "Mostly harmful-content elicitation; includes distillation (00517), training-data divergence, output-token DoS, watermark/provenance stripping."
+    },
+    "excessive-autonomy": {
+      "llmi": [
+        "LLMI-T015",
+        "LLMI-T008"
+      ],
+      "note": "Runaway loops, high-risk actions without confirmation, approval-gate disabling, agent-driven network sweeps/tunnels."
+    },
+    "data-poisoning": {
+      "llmi": [
+        "LLMI-T007",
+        "LLMI-T009",
+        "LLMI-T006"
+      ],
+      "note": "RAG/knowledge-base and memory poisoning; also some query-injection rules filed here."
+    },
+    "model-security": {
+      "llmi": [
+        "LLMI-T005",
+        "LLMI-T006",
+        "LLMI-T010"
+      ],
+      "note": "Model behavior extraction, malicious fine-tuning data, pickle/torch.load deserialization."
+    }
+  },
+  "gaps_llmi_uncovered": [
+    {
+      "llmi": "LLMI-T013",
+      "coverage": "none",
+      "note": "No rule detects malware/tooling querying an LLM at runtime to generate host commands (e.g. LameHug/PromptLock-style). ATR inspects agent I/O, not endpoint egress to provider APIs; LLMInjection DET-AI-001/002 already address this telemetry."
+    },
+    {
+      "llmi": "LLMI-T014",
+      "coverage": "none-to-marginal",
+      "note": "Only content-harm rules (01850 targeted doxxing, 00359 phishing-email code generation, 01852 romance-scam impersonation) touch it; nothing about OSINT synthesis/target profiling at scale."
+    },
+    {
+      "llmi": "LLMI-T017",
+      "coverage": "none",
+      "note": "No rule for adversarial/refusal-bait text embedded in packages to make LLM code scanners refuse or skip. Gap matches DET-AI-014 / TC-SCAN-016 — LLMInjection is ahead here."
+    },
+    {
+      "llmi": "LLMI-T010",
+      "coverage": "partial",
+      "note": "Only deserialization-at-load rules (00433, 02662, 00398); no weight/artifact hash drift or serving-artifact replacement detection (DET-AI-005 covers)."
+    },
+    {
+      "llmi": "LLMI-T016",
+      "coverage": "partial",
+      "note": "LiteLLM CVE rules (00451, 00529, 01933, 01934, 01935) and 00524 base-URL rebind cover exploitation signatures, but no behavioral detection of anomalous use of concentrated upstream keys (DET-AI-006 covers)."
+    },
+    {
+      "llmi": "LLMI-T006",
+      "coverage": "partial",
+      "note": "00073 malicious fine-tuning data and backdoor-trigger rules 01755/01756 only; no training-pipeline integrity telemetry."
+    },
+    {
+      "llmi": "LLMI-T019",
+      "coverage": "partial",
+      "note": "Single per-prompt rule 00517 (plus 00072); no volumetric/campaign aggregation — ATR detects intent wording, DET-AI-013 needs the cross-session aggregation."
+    }
+  ],
+  "gaps_new_technique_candidates": [
+    {
+      "atr_category": "agent-manipulation (multi-agent subset)",
+      "examples": [
+        "ATR-2026-00117",
+        "ATR-2026-00116",
+        "ATR-2026-00108",
+        "ATR-2026-00074",
+        "ATR-2026-00548"
+      ],
+      "candidate": "Inter-Agent Trust Abuse / Agent Identity Spoofing (A2A message injection, sybil consensus, cross-agent delegation leaks)"
+    },
+    {
+      "atr_category": "excessive-autonomy / tool-poisoning",
+      "examples": [
+        "ATR-2026-00099",
+        "ATR-2026-00118",
+        "ATR-2026-02641",
+        "ATR-2026-02667",
+        "ATR-2026-02102"
+      ],
+      "candidate": "Human-Approval Gate Subversion (approval fatigue, client-supplied approver identity, pre-approved tool lists, HTML injection into approval UI)"
+    },
+    {
+      "atr_category": "context-exfiltration",
+      "examples": [
+        "ATR-2026-00261",
+        "ATR-2026-01453",
+        "ATR-2026-00501",
+        "ATR-2026-02190"
+      ],
+      "candidate": "Output-Channel Exfiltration via Rendered Content (markdown image/link URLs, DNS) — currently folded into T002/T004; deserves its own technique given distinct telemetry (renderer/egress)."
+    },
+    {
+      "atr_category": "privilege-escalation / tool-poisoning (argument injection)",
+      "examples": [
+        "ATR-2026-02601",
+        "ATR-2026-02528",
+        "ATR-2026-00111",
+        "ATR-2026-01601",
+        "ATR-2026-00568"
+      ],
+      "candidate": "Model-Supplied Tool Argument Injection (LLM output flows into shell/SQL/Cypher/KQL/path/SSRF sinks) — aligns with TC-PARAM-019/TC-OH-013 but no technique ID."
+    },
+    {
+      "atr_category": "model-abuse (DoS)",
+      "examples": [
+        "ATR-2026-01750",
+        "ATR-2026-01760",
+        "ATR-2026-00051",
+        "ATR-2026-02106"
+      ],
+      "candidate": "Unbounded Consumption / Cost Harvesting (OWASP LLM10, ATLAS AML.T0034) — partially TC-COST-014/DET-AI-008 but no technique ID."
+    },
+    {
+      "atr_category": "model-abuse (provenance)",
+      "examples": [
+        "ATR-2026-02411",
+        "ATR-2026-02412",
+        "ATR-2026-02413"
+      ],
+      "candidate": "AI Content Provenance / Watermark Stripping"
+    },
+    {
+      "atr_category": "tool-poisoning (MCP protocol)",
+      "examples": [
+        "ATR-2026-01930",
+        "ATR-2026-01307",
+        "ATR-2026-00580",
+        "ATR-2026-02350"
+      ],
+      "candidate": "MCP Protocol Abuse (sampling/createMessage reverse injection, DNS rebinding, session-token leakage, JSON-RPC key smuggling) — could be a sub-technique of T008/T011."
+    }
+  ],
+  "selected_rules": [
+    {
+      "atr_id": "ATR-2026-00517",
+      "title": "Model Extraction / Distillation Attack via Systematic API Probing",
+      "path": "rules/model-abuse/ATR-2026-00517-model-extraction-distillation.yaml",
+      "category": "model-abuse",
+      "severity": "medium",
+      "maturity": "stable",
+      "status": "stable",
+      "agent_source": "llm_io",
+      "detection_logic": "Flags prompts that request bulk synthetic examples (hundreds to thousands) together with explicit training/fine-tuning, model-replication or chain-of-thought-capture intent.",
+      "telemetry": "Model API gateway prompt logs with per-key/account identity, request volume and token counts over time.",
+      "llmi_techniques": [
+        "LLMI-T019",
+        "LLMI-T005"
+      ],
+      "proposed_detection_name": "Distillation-Intent Prompt Clustering Per API Key",
+      "hypothesis": "If a single key or account repeatedly submits prompts that combine bulk example generation with training or replication intent, it is likely running a distillation campaign against the model."
+    },
+    {
+      "atr_id": "ATR-2026-00072",
+      "title": "Model Behavior Extraction",
+      "path": "rules/model-security/ATR-2026-00072-model-behavior-extraction.yaml",
+      "category": "model-security",
+      "severity": "critical",
+      "maturity": "test",
+      "status": "experimental",
+      "agent_source": "llm_io",
+      "detection_logic": "Flags systematic boundary-probing and confidence/logit harvesting queries intended to reverse-engineer model decision boundaries or parameters.",
+      "telemetry": "Inference API request logs including requested logprobs/parameters, prompt templates and per-identity query cadence.",
+      "llmi_techniques": [
+        "LLMI-T005"
+      ],
+      "proposed_detection_name": "Systematic Decision-Boundary Probing via Inference API",
+      "hypothesis": "If an identity issues high volumes of near-duplicate prompts varying a single attribute or requesting confidence scores, it is likely attempting model extraction."
+    },
+    {
+      "atr_id": "ATR-2026-00581",
+      "title": "MCP Tool Rug-Pull — Post-Approval Description Redefinition Injects Execution Instructions",
+      "path": "rules/tool-poisoning/ATR-2026-00581-mcp-tool-rug-pull-post-approval-redefinition.yaml",
+      "category": "tool-poisoning",
+      "severity": "high",
+      "maturity": "test",
+      "status": "experimental",
+      "agent_source": "mcp_exchange",
+      "detection_logic": "Flags MCP tool descriptions/docstrings whose content changes after approval or contains conditional logic to alter behavior on later runs, version bumps or post-approval.",
+      "telemetry": "MCP tools/list snapshots with content hashes per server/version, approval events and diff history.",
+      "llmi_techniques": [
+        "LLMI-T011",
+        "LLMI-T008"
+      ],
+      "proposed_detection_name": "MCP Tool Definition Changed After Approval",
+      "hypothesis": "If an approved MCP tool definition hash changes without a new approval event, the server may be executing a rug-pull to inject hidden instructions."
+    },
+    {
+      "atr_id": "ATR-2026-00105",
+      "title": "Silent Action Concealment Instructions in Tool Descriptions",
+      "path": "rules/tool-poisoning/ATR-2026-00105-silent-action-concealment.yaml",
+      "category": "tool-poisoning",
+      "severity": "high",
+      "maturity": "test",
+      "status": "experimental",
+      "agent_source": "tool_call",
+      "detection_logic": "Flags tool descriptions that instruct the model to perform actions silently or conceal operations from the user.",
+      "telemetry": "MCP tool manifests/descriptions captured at registration and at each tools/list call.",
+      "llmi_techniques": [
+        "LLMI-T008",
+        "LLMI-T002"
+      ],
+      "proposed_detection_name": "Concealment Directive in Tool Description",
+      "hypothesis": "If a tool description instructs the agent to hide actions from the user, the tool is likely designed to perform covert operations such as exfiltration."
+    },
+    {
+      "atr_id": "ATR-2026-01932",
+      "title": "Shadow / Undeclared MCP Server Registration (MCP-38: MCP-18)",
+      "path": "rules/tool-poisoning/ATR-2026-01932-shadow-undeclared-mcp-server-registration.yaml",
+      "category": "tool-poisoning",
+      "severity": "high",
+      "maturity": "test",
+      "status": "experimental",
+      "agent_source": "mcp_exchange",
+      "detection_logic": "Flags silent or deceptive registration of an undeclared MCP server or one impersonating a known server into an agent toolset.",
+      "telemetry": "Agent MCP client config files (file-integrity events), MCP connection/registration logs, approved-server inventory.",
+      "llmi_techniques": [
+        "LLMI-T011",
+        "LLMI-T008"
+      ],
+      "proposed_detection_name": "Undeclared MCP Server Registration",
+      "hypothesis": "If an MCP server appears in an agent configuration or connection log that is not in the approved inventory, or impersonates a known server name, it is a likely shadow server."
+    },
+    {
+      "atr_id": "ATR-2026-02626",
+      "title": "Agent Writes a New MCP Server Into Its Own Trust Configuration",
+      "path": "rules/privilege-escalation/ATR-2026-02626-agent-self-registers-mcp-server.yaml",
+      "category": "privilege-escalation",
+      "severity": "high",
+      "maturity": "test",
+      "status": "experimental",
+      "agent_source": "mcp_exchange",
+      "detection_logic": "Flags an agent tool call that writes a new entry into the MCP server block of the very trust configuration file the agent loads.",
+      "telemetry": "File write events on assistant/IDE config files attributed to agent tool-call process lineage; agent action logs.",
+      "llmi_techniques": [
+        "LLMI-T018",
+        "LLMI-T009"
+      ],
+      "proposed_detection_name": "Agent Self-Registers MCP Server in Own Trust Config",
+      "hypothesis": "If an agent process writes a new MCP server entry into its own trust configuration, it is likely establishing persistence or expanding its own privileges."
+    },
+    {
+      "atr_id": "ATR-2026-02192",
+      "title": "Agent Self-Modifying Its Own Trust/Approval Configuration to a Wildcard",
+      "path": "rules/privilege-escalation/ATR-2026-02192-self-privesc-wildcard-trust-config-write.yaml",
+      "category": "privilege-escalation",
+      "severity": "high",
+      "maturity": "experimental",
+      "status": "experimental",
+      "agent_source": "llm_io",
+      "detection_logic": "Flags an agent being directed to set wildcard auto-approve/trusted-command values or disable confirmation gates in its own IDE/agent configuration.",
+      "telemetry": "Config-file change events with before/after values for approval keys; agent tool-call logs.",
+      "llmi_techniques": [
+        "LLMI-T018",
+        "LLMI-T008"
+      ],
+      "proposed_detection_name": "Agent Widens Own Auto-Approval Policy",
+      "hypothesis": "If an assistant configuration change sets approval or trusted-command keys to a wildcard or disables confirmation, and the writer is the agent itself, the agent has likely been manipulated into self-escalation."
+    },
+    {
+      "atr_id": "ATR-2026-00523",
+      "title": "Claude Code Hooks SessionStart Pre-Trust RCE (CVE-2025-59536)",
+      "path": "rules/skill-compromise/ATR-2026-00523-claude-code-hooks-session-start-pre-trust-rce.yaml",
+      "category": "skill-compromise",
+      "severity": "critical",
+      "maturity": "test",
+      "status": "experimental",
+      "agent_source": "mcp_exchange",
+      "detection_logic": "Flags repository-scoped assistant settings that register a session-start hook command which executes before the workspace trust prompt.",
+      "telemetry": "Repository content scanning at clone/checkout, process creation events with parent = coding assistant at session start, trust-dialog events.",
+      "llmi_techniques": [
+        "LLMI-T018",
+        "LLMI-T011"
+      ],
+      "proposed_detection_name": "Assistant Hook Executes Before Workspace Trust",
+      "hypothesis": "If a coding assistant spawns a child process from a repo-scoped hook before a trust decision is recorded, the repository is likely abusing assistant hooks for code execution."
+    },
+    {
+      "atr_id": "ATR-2026-00524",
+      "title": "Claude Code ANTHROPIC_BASE_URL Credential Exfiltration (CVE-2026-21852)",
+      "path": "rules/context-exfiltration/ATR-2026-00524-claude-code-anthropic-base-url-credential-exfil.yaml",
+      "category": "context-exfiltration",
+      "severity": "critical",
+      "maturity": "test",
+      "status": "experimental",
+      "agent_source": "mcp_exchange",
+      "detection_logic": "Flags repository or environment configuration that redirects the coding assistant model-provider base URL to a non-vendor endpoint, leaking the API key.",
+      "telemetry": "Assistant config/env snapshots, DNS and TLS egress from assistant processes, allowlist of provider endpoints.",
+      "llmi_techniques": [
+        "LLMI-T018",
+        "LLMI-T016"
+      ],
+      "proposed_detection_name": "Model-Provider Base URL Redirected by Repository Config",
+      "hypothesis": "If an AI assistant sends provider-authenticated requests to a host outside the approved provider allowlist after a repository config change, its API credential is likely being exfiltrated."
+    },
+    {
+      "atr_id": "ATR-2026-00575",
+      "title": "Miasma / Phantom Gyp — npm Worm Backdoors AI-Agent Config Files (binding.gyp install-exec + auto-run config injection)",
+      "path": "rules/tool-poisoning/ATR-2026-00575-miasma-npm-worm-agent-config-backdoor.yaml",
+      "category": "tool-poisoning",
+      "severity": "critical",
+      "maturity": "test",
+      "status": "experimental",
+      "agent_source": "tool_call",
+      "detection_logic": "Flags package install-time build primitives that fetch remote payloads and write persistence into AI-agent configuration files.",
+      "telemetry": "Package-manager install process trees, file writes to agent config directories during install, SBOM/package metadata.",
+      "llmi_techniques": [
+        "LLMI-T011",
+        "LLMI-T018"
+      ],
+      "proposed_detection_name": "Package Install Writes AI Agent Config",
+      "hypothesis": "If a dependency installation process writes or modifies AI assistant configuration files, the package is likely a supply-chain implant targeting coding agents."
+    },
+    {
+      "atr_id": "ATR-2026-00260",
+      "title": "LLM Package Hallucination Typosquat Bait",
+      "path": "rules/skill-compromise/ATR-2026-00260-package-hallucination.yaml",
+      "category": "skill-compromise",
+      "severity": "high",
+      "maturity": "test",
+      "status": "experimental",
+      "agent_source": "mcp_exchange",
+      "detection_logic": "Flags prompts and responses likely to elicit or contain hallucinated package names that attackers can pre-register on public registries.",
+      "telemetry": "Coding-agent generated dependency manifests/install commands, registry metadata (package age, downloads, maintainer), resolver logs.",
+      "llmi_techniques": [
+        "LLMI-T012"
+      ],
+      "proposed_detection_name": "Agent-Proposed Package With No Registry Reputation",
+      "hypothesis": "If a coding agent proposes or installs a package that is newly registered, low-reputation or absent from internal allowlists, it may be a hallucination-squatted package."
+    },
+    {
+      "atr_id": "ATR-2026-01774",
+      "title": "RAG & Memory Poisoning — Embedded Directives, Trigger Tokens, False Authority & Coercion (Semantic)",
+      "path": "rules/data-poisoning/ATR-2026-01774-semantic-rag-memory-poisoning.yaml",
+      "category": "data-poisoning",
+      "severity": "high",
+      "maturity": "experimental",
+      "status": "experimental",
+      "agent_source": "context_window",
+      "detection_logic": "Semantic detector for retrieved or remembered content that carries embedded directives, trigger tokens, false authority or coercion aimed at the agent.",
+      "telemetry": "RAG retrieval logs with chunk IDs/source provenance, memory store read/write logs, tool_response content.",
+      "llmi_techniques": [
+        "LLMI-T007",
+        "LLMI-T009"
+      ],
+      "proposed_detection_name": "Directive-Bearing Content in Retrieval or Memory",
+      "hypothesis": "If retrieved chunks or memory entries contain agent-directed imperatives or authority claims, the corpus or memory store has likely been poisoned."
+    },
+    {
+      "atr_id": "ATR-2026-00551",
+      "title": "Cross-conversation memory write (scope-escape via memory store)",
+      "path": "rules/privilege-escalation/ATR-2026-00551-cross-conversation-memory-write.yaml",
+      "category": "privilege-escalation",
+      "severity": "critical",
+      "maturity": "draft",
+      "status": "experimental",
+      "agent_source": "agent_trace",
+      "detection_logic": "Trace rule that fires when an agent writes to a memory or vector store partition scoped to a different conversation or tenant than the active session.",
+      "telemetry": "Agent trace spans (OpenTelemetry) with conversation/session/tenant IDs on memory and vector-store write operations.",
+      "llmi_techniques": [
+        "LLMI-T009",
+        "LLMI-T004"
+      ],
+      "proposed_detection_name": "Cross-Scope Memory Write",
+      "hypothesis": "If an agent memory write targets a conversation or tenant ID different from the active trace, isolation has been bypassed, likely via injection or a scoping bug."
+    },
+    {
+      "atr_id": "ATR-2026-00553",
+      "title": "Runaway tool-call loop within a single session",
+      "path": "rules/excessive-autonomy/ATR-2026-00553-runaway-tool-loop-behavioral.yaml",
+      "category": "excessive-autonomy",
+      "severity": "high",
+      "maturity": "draft",
+      "status": "draft",
+      "agent_source": "agent_behavior",
+      "detection_logic": "Behavioral rule that fires when a single session emits more than about 100 tool-call spans in one minute.",
+      "telemetry": "Agent trace spans per session with tool name and timestamps; budget/rate counters.",
+      "llmi_techniques": [
+        "LLMI-T015",
+        "LLMI-T008"
+      ],
+      "proposed_detection_name": "Runaway Tool-Call Rate Per Session",
+      "hypothesis": "If a session exceeds a tool-call rate baseline by a large margin, the agent is likely looping due to injection, goal drift or autonomous orchestration."
+    },
+    {
+      "atr_id": "ATR-2026-02400",
+      "title": "Agent Human-Approval Gate Programmatically Disabled at Runtime (YOLO / auto-approve)",
+      "path": "rules/excessive-autonomy/ATR-2026-02400-agent-approval-gate-disabled-runtime.yaml",
+      "category": "excessive-autonomy",
+      "severity": "high",
+      "maturity": "test",
+      "status": "experimental",
+      "agent_source": "mcp_exchange",
+      "detection_logic": "Flags an agent runtime being switched into unattended auto-approve (YOLO-style) mode where subsequent destructive tool calls run without human review.",
+      "telemetry": "Agent runtime launch arguments/process command lines, config changes to approval mode, host EDR process telemetry.",
+      "llmi_techniques": [
+        "LLMI-T015",
+        "LLMI-T008"
+      ],
+      "proposed_detection_name": "Agent Runtime Launched in Unattended Auto-Approve Mode",
+      "hypothesis": "If an agent runtime starts with approvals disabled on a host where it is not sanctioned, it is likely being used for autonomous attack orchestration."
+    }
+  ],
+  "notes": [
+    "All selected rules are summarised in own words; no regex/payload strings copied.",
+    "Quality caveat: 763/829 status=experimental; README withdrew previously published FP rates (re-measurement pending) — treat ATR rules as hypothesis sources, not validated detections.",
+    "ATR detects on agent-content fields (prompt, tool args, tool response, descriptions); LLMInjection specs should translate to host/network/trace telemetry where possible.",
+    "A large share of prompt-injection/agent-manipulation/model-abuse rules are jailbreak-persona or harmful-content signatures derived from garak/HarmBench/AdvBench-style corpora (not precisely counted); low value as LLMInjection detection specs.",
+    "Useful cross-walks: every rule has mitre_atlas + owasp_llm + owasp_agentic; many have safe_mcp and CVE IDs (good for LLMInjection reference fields).",
+    "Distillation rule 00517 cites ATLAS case study AML.CS0056 — directly relevant to LLMI-T019.",
+    "Trace/behavioral method rules (00551, 00553, 00548, 00549) are the closest in spirit to LLMInjection hypothesis+telemetry style."
+  ]
+}

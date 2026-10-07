@@ -1,0 +1,629 @@
+{
+  "generated": "2026-10-07",
+  "provenance": "OWASP/www-project-ai-testing-guide; OWASP/www-project-top-10-for-large-language-model-applications",
+  "note": "Derived from shallow clones read on 2026-10-07. Names and identifiers only; descriptions are paraphrased. Discovery and test-design material, not evidence of in-the-wild activity.",
+  "owasp_ai_testing_guide": {
+    "source": "OWASP/www-project-ai-testing-guide Document/content/tests/*.md (v1; 32 tests: APP 14, DAT 5, INF 6, MOD 7)",
+    "tests": [
+      {
+        "id": "AITG-APP-01",
+        "title": "Testing for Prompt Injection",
+        "file": "Document/content/tests/AITG-APP-01_*.md"
+      },
+      {
+        "id": "AITG-APP-02",
+        "title": "Testing for Indirect Prompt Injection",
+        "file": "Document/content/tests/AITG-APP-02_*.md"
+      },
+      {
+        "id": "AITG-APP-03",
+        "title": "Testing for Sensitive Data Leak",
+        "file": "Document/content/tests/AITG-APP-03_*.md"
+      },
+      {
+        "id": "AITG-APP-04",
+        "title": "Testing for Input Leakage",
+        "file": "Document/content/tests/AITG-APP-04_*.md"
+      },
+      {
+        "id": "AITG-APP-05",
+        "title": "Testing for Unsafe Outputs",
+        "file": "Document/content/tests/AITG-APP-05_*.md"
+      },
+      {
+        "id": "AITG-APP-06",
+        "title": "Testing for Agentic Behavior Limits",
+        "file": "Document/content/tests/AITG-APP-06_*.md"
+      },
+      {
+        "id": "AITG-APP-07",
+        "title": "Testing for Prompt Disclosure",
+        "file": "Document/content/tests/AITG-APP-07_*.md"
+      },
+      {
+        "id": "AITG-APP-08",
+        "title": "Testing for Embedding Manipulation",
+        "file": "Document/content/tests/AITG-APP-08_*.md"
+      },
+      {
+        "id": "AITG-APP-09",
+        "title": "Testing for Model Extraction",
+        "file": "Document/content/tests/AITG-APP-09_*.md"
+      },
+      {
+        "id": "AITG-APP-10",
+        "title": "Testing for Content Bias",
+        "file": "Document/content/tests/AITG-APP-10_*.md"
+      },
+      {
+        "id": "AITG-APP-11",
+        "title": "Testing for Hallucinations",
+        "file": "Document/content/tests/AITG-APP-11_*.md"
+      },
+      {
+        "id": "AITG-APP-12",
+        "title": "Testing for Toxic Output",
+        "file": "Document/content/tests/AITG-APP-12_*.md"
+      },
+      {
+        "id": "AITG-APP-13",
+        "title": "Testing for Over-Reliance on AI",
+        "file": "Document/content/tests/AITG-APP-13_*.md"
+      },
+      {
+        "id": "AITG-APP-14",
+        "title": "Testing for Explainability and Interpretability",
+        "file": "Document/content/tests/AITG-APP-14_*.md"
+      },
+      {
+        "id": "AITG-DAT-01",
+        "title": "Testing for Training Data Exposure",
+        "file": "Document/content/tests/AITG-DAT-01_*.md"
+      },
+      {
+        "id": "AITG-DAT-02",
+        "title": "Testing for Runtime Exfiltration",
+        "file": "Document/content/tests/AITG-DAT-02_*.md"
+      },
+      {
+        "id": "AITG-DAT-03",
+        "title": "Testing for Dataset Diversity & Coverage",
+        "file": "Document/content/tests/AITG-DAT-03_*.md"
+      },
+      {
+        "id": "AITG-DAT-04",
+        "title": "Testing for Harmful Content in Data",
+        "file": "Document/content/tests/AITG-DAT-04_*.md"
+      },
+      {
+        "id": "AITG-DAT-05",
+        "title": "Testing for Data Minimization & Consent",
+        "file": "Document/content/tests/AITG-DAT-05_*.md"
+      },
+      {
+        "id": "AITG-INF-01",
+        "title": "Testing for Supply Chain Tampering",
+        "file": "Document/content/tests/AITG-INF-01_*.md"
+      },
+      {
+        "id": "AITG-INF-02",
+        "title": "Testing for Resource Exhaustion",
+        "file": "Document/content/tests/AITG-INF-02_*.md"
+      },
+      {
+        "id": "AITG-INF-03",
+        "title": "Testing for Plugin Boundary Violations",
+        "file": "Document/content/tests/AITG-INF-03_*.md"
+      },
+      {
+        "id": "AITG-INF-04",
+        "title": "Testing for Capability Misuse",
+        "file": "Document/content/tests/AITG-INF-04_*.md"
+      },
+      {
+        "id": "AITG-INF-05",
+        "title": "Testing for Fine-tuning Poisoning",
+        "file": "Document/content/tests/AITG-INF-05_*.md"
+      },
+      {
+        "id": "AITG-INF-06",
+        "title": "Testing for Dev-Time Model Theft",
+        "file": "Document/content/tests/AITG-INF-06_*.md"
+      },
+      {
+        "id": "AITG-MOD-01",
+        "title": "Testing for Evasion Attacks",
+        "file": "Document/content/tests/AITG-MOD-01_*.md"
+      },
+      {
+        "id": "AITG-MOD-02",
+        "title": "Testing for Runtime Model Poisoning",
+        "file": "Document/content/tests/AITG-MOD-02_*.md"
+      },
+      {
+        "id": "AITG-MOD-03",
+        "title": "Testing for Poisoned Training Sets",
+        "file": "Document/content/tests/AITG-MOD-03_*.md"
+      },
+      {
+        "id": "AITG-MOD-04",
+        "title": "Testing for Membership Inference",
+        "file": "Document/content/tests/AITG-MOD-04_*.md"
+      },
+      {
+        "id": "AITG-MOD-05",
+        "title": "Testing for Inversion Attacks",
+        "file": "Document/content/tests/AITG-MOD-05_*.md"
+      },
+      {
+        "id": "AITG-MOD-06",
+        "title": "Testing for Robustness to New Data",
+        "file": "Document/content/tests/AITG-MOD-06_*.md"
+      },
+      {
+        "id": "AITG-MOD-07",
+        "title": "Testing for Goal Alignment",
+        "file": "Document/content/tests/AITG-MOD-07_*.md"
+      }
+    ],
+    "mapping": [
+      {
+        "id": "AITG-APP-01",
+        "llmi": [
+          "LLMI-T001",
+          "LLMI-T003"
+        ],
+        "tc": [
+          "TC-PI-001"
+        ],
+        "tc_match": "exact"
+      },
+      {
+        "id": "AITG-APP-02",
+        "llmi": [
+          "LLMI-T002"
+        ],
+        "tc": [
+          "TC-PI-002"
+        ],
+        "tc_match": "exact"
+      },
+      {
+        "id": "AITG-APP-03",
+        "llmi": [
+          "LLMI-T004"
+        ],
+        "tc": [
+          "TC-DL-003"
+        ],
+        "tc_match": "exact"
+      },
+      {
+        "id": "AITG-APP-04",
+        "llmi": [
+          "LLMI-T004",
+          "LLMI-T009"
+        ],
+        "tc": [
+          "TC-DL-003"
+        ],
+        "tc_match": "partial"
+      },
+      {
+        "id": "AITG-APP-05",
+        "llmi": [
+          "LLMI-T003"
+        ],
+        "tc": [
+          "TC-OH-013"
+        ],
+        "tc_match": "partial"
+      },
+      {
+        "id": "AITG-APP-06",
+        "llmi": [
+          "LLMI-T008",
+          "LLMI-T015"
+        ],
+        "tc": [
+          "TC-AG-005",
+          "TC-AG-006",
+          "TC-AUTO-015",
+          "TC-COST-014",
+          "TC-PARAM-019"
+        ],
+        "tc_match": "exact"
+      },
+      {
+        "id": "AITG-APP-07",
+        "llmi": [
+          "LLMI-T004"
+        ],
+        "tc": [
+          "TC-DL-003"
+        ],
+        "tc_match": "partial"
+      },
+      {
+        "id": "AITG-APP-08",
+        "llmi": [
+          "LLMI-T007"
+        ],
+        "tc": [
+          "TC-RAG-004"
+        ],
+        "tc_match": "exact"
+      },
+      {
+        "id": "AITG-APP-09",
+        "llmi": [
+          "LLMI-T005",
+          "LLMI-T019"
+        ],
+        "tc": [
+          "TC-DIST-018"
+        ],
+        "tc_match": "partial"
+      },
+      {
+        "id": "AITG-APP-10",
+        "llmi": [],
+        "tc": [],
+        "tc_match": "none"
+      },
+      {
+        "id": "AITG-APP-11",
+        "llmi": [
+          "LLMI-T012"
+        ],
+        "tc": [],
+        "tc_match": "none"
+      },
+      {
+        "id": "AITG-APP-12",
+        "llmi": [
+          "LLMI-T003"
+        ],
+        "tc": [],
+        "tc_match": "none"
+      },
+      {
+        "id": "AITG-APP-13",
+        "llmi": [],
+        "tc": [],
+        "tc_match": "none"
+      },
+      {
+        "id": "AITG-APP-14",
+        "llmi": [],
+        "tc": [],
+        "tc_match": "none"
+      },
+      {
+        "id": "AITG-DAT-01",
+        "llmi": [
+          "LLMI-T004"
+        ],
+        "tc": [],
+        "tc_match": "none"
+      },
+      {
+        "id": "AITG-DAT-02",
+        "llmi": [
+          "LLMI-T004",
+          "LLMI-T002"
+        ],
+        "tc": [
+          "TC-DL-003",
+          "TC-GW-020"
+        ],
+        "tc_match": "partial"
+      },
+      {
+        "id": "AITG-DAT-03",
+        "llmi": [],
+        "tc": [],
+        "tc_match": "none"
+      },
+      {
+        "id": "AITG-DAT-04",
+        "llmi": [
+          "LLMI-T006"
+        ],
+        "tc": [],
+        "tc_match": "none"
+      },
+      {
+        "id": "AITG-DAT-05",
+        "llmi": [
+          "LLMI-T004"
+        ],
+        "tc": [],
+        "tc_match": "none"
+      },
+      {
+        "id": "AITG-INF-01",
+        "llmi": [
+          "LLMI-T010",
+          "LLMI-T011",
+          "LLMI-T012"
+        ],
+        "tc": [
+          "TC-SC-009",
+          "TC-SC-008"
+        ],
+        "tc_match": "exact"
+      },
+      {
+        "id": "AITG-INF-02",
+        "llmi": [],
+        "tc": [
+          "TC-COST-014"
+        ],
+        "tc_match": "exact-test-no-technique"
+      },
+      {
+        "id": "AITG-INF-03",
+        "llmi": [
+          "LLMI-T008",
+          "LLMI-T011"
+        ],
+        "tc": [
+          "TC-MCP-010",
+          "TC-AG-005",
+          "TC-PARAM-019"
+        ],
+        "tc_match": "exact"
+      },
+      {
+        "id": "AITG-INF-04",
+        "llmi": [
+          "LLMI-T008",
+          "LLMI-T013",
+          "LLMI-T014"
+        ],
+        "tc": [
+          "TC-AG-005"
+        ],
+        "tc_match": "partial"
+      },
+      {
+        "id": "AITG-INF-05",
+        "llmi": [
+          "LLMI-T006"
+        ],
+        "tc": [],
+        "tc_match": "none"
+      },
+      {
+        "id": "AITG-INF-06",
+        "llmi": [
+          "LLMI-T005",
+          "LLMI-T010"
+        ],
+        "tc": [],
+        "tc_match": "none"
+      },
+      {
+        "id": "AITG-MOD-01",
+        "llmi": [
+          "LLMI-T003"
+        ],
+        "tc": [],
+        "tc_match": "none"
+      },
+      {
+        "id": "AITG-MOD-02",
+        "llmi": [
+          "LLMI-T006",
+          "LLMI-T009"
+        ],
+        "tc": [
+          "TC-MEM-007"
+        ],
+        "tc_match": "partial"
+      },
+      {
+        "id": "AITG-MOD-03",
+        "llmi": [
+          "LLMI-T006"
+        ],
+        "tc": [],
+        "tc_match": "none"
+      },
+      {
+        "id": "AITG-MOD-04",
+        "llmi": [
+          "LLMI-T004"
+        ],
+        "tc": [],
+        "tc_match": "none"
+      },
+      {
+        "id": "AITG-MOD-05",
+        "llmi": [
+          "LLMI-T004",
+          "LLMI-T005"
+        ],
+        "tc": [],
+        "tc_match": "none"
+      },
+      {
+        "id": "AITG-MOD-06",
+        "llmi": [],
+        "tc": [],
+        "tc_match": "none"
+      },
+      {
+        "id": "AITG-MOD-07",
+        "llmi": [
+          "LLMI-T015"
+        ],
+        "tc": [],
+        "tc_match": "none"
+      }
+    ],
+    "gaps": {
+      "no_tc_with_llmi_technique": [
+        "AITG-APP-11",
+        "AITG-APP-12",
+        "AITG-DAT-01",
+        "AITG-DAT-04",
+        "AITG-DAT-05",
+        "AITG-INF-05",
+        "AITG-INF-06",
+        "AITG-MOD-01",
+        "AITG-MOD-03",
+        "AITG-MOD-04",
+        "AITG-MOD-05",
+        "AITG-MOD-07"
+      ],
+      "no_tc_and_no_llmi_technique": [
+        "AITG-APP-10",
+        "AITG-APP-13",
+        "AITG-APP-14",
+        "AITG-DAT-03",
+        "AITG-MOD-06"
+      ],
+      "tc_without_llmi_technique": [
+        "AITG-INF-02 (TC-COST-014 exists but no LLMI DoS / denial-of-wallet technique)"
+      ],
+      "partial_tc_only": [
+        "AITG-APP-04",
+        "AITG-APP-05",
+        "AITG-APP-07",
+        "AITG-APP-09",
+        "AITG-DAT-02",
+        "AITG-INF-04",
+        "AITG-MOD-02"
+      ],
+      "llmi_tcs_not_covered_by_aitg": [
+        "TC-RUN-011",
+        "TC-NET-012",
+        "TC-SCAN-016",
+        "TC-WS-017"
+      ],
+      "priority_suggestions": [
+        "TC for system-prompt/hidden-context disclosure (AITG-APP-07) separate from TC-DL-003",
+        "TC for training-data exposure / membership inference (AITG-DAT-01, MOD-04, MOD-05)",
+        "TC for fine-tuning / training-set poisoning (AITG-INF-05, MOD-03, DAT-04)",
+        "TC for dev-time model theft (AITG-INF-06)",
+        "TC for harmful/toxic output safety boundary (AITG-APP-12) to complement TC-PI-001 for LLMI-T003",
+        "TC for package hallucination feeding LLMI-T012 (AITG-APP-11)"
+      ]
+    }
+  },
+  "owasp_top10_verification": {
+    "repo_status": "OWASP/www-project-top-10-for-large-language-model-applications is a legacy archive (last commit 2026-08-05). README/index.md state current release = \"OWASP GenAI LLM Top 10 2026\", published 2026-08-04, canonical source GenAI-Security-Project/GenAI-LLM-Top10 tree main/2026/final (NOT in this clone). The 2026 item list/text is not present locally, so 2026 rank->name cannot be verified from this repo.",
+    "llm_top10_lists_present": {
+      "2025 (2_0_vulns/, latest full text in repo)": [
+        [
+          "LLM01:2025",
+          "Prompt Injection"
+        ],
+        [
+          "LLM02:2025",
+          "Sensitive Information Disclosure"
+        ],
+        [
+          "LLM03:2025",
+          "Supply Chain"
+        ],
+        [
+          "LLM04:2025",
+          "Data and Model Poisoning"
+        ],
+        [
+          "LLM05:2025",
+          "Improper Output Handling"
+        ],
+        [
+          "LLM06:2025",
+          "Excessive Agency"
+        ],
+        [
+          "LLM07:2025",
+          "System Prompt Leakage"
+        ],
+        [
+          "LLM08:2025",
+          "Vector and Embedding Weaknesses"
+        ],
+        [
+          "LLM09:2025",
+          "Misinformation"
+        ],
+        [
+          "LLM10:2025",
+          "Unbounded Consumption"
+        ]
+      ],
+      "2023 v1.1": "Archive/1_1_vulns (LLMxx:2023 ids, historical)"
+    },
+    "agentic_top10_lists_present": {
+      "Sprint 1 first public draft (initiatives/agent_security_initiative/agentic-top-10/Sprint 1-first-public-draft-expanded/README.md)": [
+        [
+          "ASI01",
+          "Agent Behaviour Hijack"
+        ],
+        [
+          "ASI02",
+          "Tool Misuse and Exploitation"
+        ],
+        [
+          "ASI03",
+          "Identity & Privilege Abuse"
+        ],
+        [
+          "ASI04",
+          "Agentic Supply Chain Vulnerabilities"
+        ],
+        [
+          "ASI05",
+          "Unexpected Code Execution (RCE)"
+        ],
+        [
+          "ASI06",
+          "Memory & Context Poisoning"
+        ],
+        [
+          "ASI07",
+          "Insecure Inter-Agent Communication"
+        ],
+        [
+          "ASI08",
+          "Cascading Failures"
+        ],
+        [
+          "ASI09",
+          "Human-Agent Trust Exploitation"
+        ],
+        [
+          "ASI10",
+          "Rogue Agents"
+        ]
+      ],
+      "0.5 initial candidates (DIFFERENT numbering, superseded)": "ASI01 Memory Poisoning, ASI02 Tool Misuse, ASI03 Privilege Compromise, ASI04 Resource Overload ... ASI16 Insecure Inter-Agent Protocol Abuse",
+      "year_suffix": "Draft files use bare ASI01..ASI10 (no :2026 suffix). Final \"Top 10 for Agentic Applications 2026\" is not in this repo."
+    },
+    "project_mappings_checked": {
+      "project_2026_table_source": "/root/LLmInjection/docs/THREAT-LANDSCAPE-2026.md section 5 (LLM01 PI, 02 SID, 03 Excessive Agency, 04 Supply Chain, 05 Data&Model Poisoning, 06 Unbounded Consumption, 07 Misinformation, 08 Hidden Context Exposure, 09 Vector&Embedding, 10 Improper Output Handling)",
+      "internally_consistent": [
+        "LLMI-T001/T002/T003 -> LLM01:2026",
+        "LLMI-T004 -> LLM02:2026",
+        "LLMI-T006 -> LLM05:2026 Data and Model Poisoning",
+        "LLMI-T007 -> LLM09:2026 Vector and Embedding Weaknesses",
+        "LLMI-T010/T011/T012 -> LLM04:2026 Supply Chain",
+        "ASI02/ASI03/ASI04/ASI06 names match draft names"
+      ]
+    },
+    "discrepancies": [
+      "UNVERIFIABLE LOCALLY: all LLMxx:2026 ranks/names (incl. new \"LLM08 Hidden Context Exposure\" and the rank changes) rely on the external 2026/final source; the cloned repo only contains 2025 text. Cross-check against GenAI-Security-Project/GenAI-LLM-Top10 2026/final before publishing.",
+      "Every 2026 number differs from 2025 for 7 of 10 items (e.g. Supply Chain LLM03:2025 -> LLM04:2026; Data&Model Poisoning LLM04:2025 -> LLM05:2026; Vector&Embedding LLM08:2025 -> LLM09:2026; Improper Output Handling LLM05:2025 -> LLM10:2026). High risk of mixing years: tests/test_osint_ioc.py sample uses LLM01:2025 (OK as IOC sample, but keep year explicit everywhere).",
+      "ASI01 name: project uses \"Goal Hijack\"; repo draft uses \"Agent Behaviour Hijack\". (Final 2026 publication is commonly cited as \"Agent Goal Hijack\" - not verifiable from this clone.) Use the final published title.",
+      "ASI IDs with \":2026\" suffix (ASI02:2026 etc.) are a project convention; repo draft has no year suffix. Do not use 0.5-candidate numbering (ASI01 Memory Poisoning etc.).",
+      "Missing mappings suggested: LLMI-T008 also LLM03:2026 Excessive Agency (related); LLMI-T005/T019 -> LLM06:2026 Unbounded Consumption (related; 2025 LLM10 text explicitly covers \"Model Extraction via API\" and \"Functional Model Replication\"); LLMI-T004 -> LLM08:2026 Hidden Context Exposure if that is the successor of System Prompt Leakage (verify); LLMI-T015 -> ASI10 Rogue Agents / ASI08 Cascading Failures (related) and LLM03:2026; LLMI-T018 -> ASI01 + ASI05 Unexpected Code Execution + ASI04; LLMI-T017 -> LLM01:2026 (related); LLMI-T016 -> LLM04:2026 Supply Chain + LLM02:2026 (related); LLMI-T009 -> ASI06 plus LLM01:2026 (related); TC-OH-013 -> LLM10:2026 Improper Output Handling.",
+      "Project ASI01-ASI10 list in THREAT-LANDSCAPE-2026.md uses short names (e.g. \"ASI04 Agentic Supply Chain\", \"ASI02 Tool Misuse\") while techniques.json uses full names - harmonise."
+    ]
+  }
+}
