@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "AI / LLM Threat Landscape 2026",
-    "as_of": "2026-10-06",
+    "as_of": "2026-10-07",
     "scope": "Cyber threat intelligence focused on AI, LLM, GenAI and agentic systems",
     "methodology": "Evidence-first synthesis using primary vendor, standards-body and research sources. Metrics retain their original population/time window and are not generalized beyond it."
   },
@@ -451,6 +451,25 @@
         "sandbox MCP servers",
         "MCP capability change detection"
       ]
+    },
+    {
+      "id": "LANDSCAPE-LATAM-AI-TOOLING",
+      "name": "AI-assisted tooling against Latin American targets",
+      "trend": "rising",
+      "confidence": "high",
+      "summary": "Three 2026 primary reports describe operators speeding tool development or command execution with LLMs against Brazilian financial and Latin American government targets. AI use is mostly inferred from artifacts; initial access and fraud mechanics are unchanged.",
+      "signals": [
+        "LLM-generated reconnaissance and deployment scripts",
+        "agentic CLI tools supervised by an operator",
+        "iterative trial-and-error script variants",
+        "Pix, STR and Boleto targeting"
+      ],
+      "defensive_focus": [
+        "script execution policy",
+        "iterative-script detection",
+        "agent telemetry",
+        "payment-system access controls"
+      ]
     }
   ],
   "sector_signals": [
@@ -613,6 +632,30 @@
       "status": "unverified",
       "confidence": "low",
       "reason": "Identifiers were not cross-checked against NVD/GHSA; only CVE-2026-30623 and CVE-2026-30615 are recorded."
+    },
+    {
+      "claim": "AI website builders were used to clone Brazilian government sites for Pix payment scams (Zscaler ThreatLabz, August 2025).",
+      "status": "secondary-reporting-only",
+      "confidence": "low",
+      "reason": "Known only through press coverage here; attach the primary Zscaler report before promoting."
+    },
+    {
+      "claim": "80% of Brazilians have encountered deepfakes online (Veriff, Kantar survey of 1,000 respondents, February 2026).",
+      "status": "vendor-survey",
+      "confidence": "low",
+      "reason": "Opinion survey from a vendor, not threat telemetry; do not use as a threat metric."
+    },
+    {
+      "claim": "28 million Pix scam cases in the first nine months of 2025 and a 126% rise in deepfake fraud (Rio Times citing Serasa Experian).",
+      "status": "secondary-reporting-only",
+      "confidence": "low",
+      "reason": "Not verified against Serasa or Banco Central primary data."
+    },
+    {
+      "claim": "PixRevolution Android banking trojan targets Pix with an operator-in-the-loop model that a human or AI agent could drive (Recorded Future H1 2026).",
+      "status": "requires-primary-source-validation",
+      "confidence": "low",
+      "reason": "The report raises an AI operator as a possibility; it is not an established finding."
     }
   ]
 }

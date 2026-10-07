@@ -213,7 +213,9 @@
       "token-mint-events",
       "cloud-audit"
     ],
-    "test_ids": []
+    "test_ids": [
+      "TC-CI-037"
+    ]
   },
   {
     "id": "DET-AI-013",
@@ -663,6 +665,115 @@
     ],
     "test_ids": [
       "TC-DOS-026"
+    ]
+  },
+  {
+    "id": "DET-AI-040",
+    "type": "detection",
+    "name": "Policy Deviation After Untrusted Content Ingestion",
+    "category": "agent-runtime",
+    "severity": "high",
+    "status": "specification",
+    "hypothesis": "Within a few steps of ingesting untrusted content (a document, page or tool result), the agent attempts a tool call or policy deviation that its task did not call for.",
+    "telemetry": [
+      "content-source-trust",
+      "tool-call",
+      "task-plan",
+      "policy-decision"
+    ],
+    "test_ids": [
+      "TC-PI-001",
+      "TC-PI-002"
+    ]
+  },
+  {
+    "id": "DET-AI-041",
+    "type": "detection",
+    "name": "Repeated Refusal-Bypass Sequence",
+    "category": "application",
+    "severity": "medium",
+    "status": "specification",
+    "hypothesis": "A session shows repeated rephrasing of refused requests, rising refusal rate, or role-framing shifts consistent with probing a safety boundary.",
+    "telemetry": [
+      "refusal-flag",
+      "request-framing",
+      "session-risk-score",
+      "user-identity"
+    ],
+    "test_ids": [
+      "TC-JB-035"
+    ]
+  },
+  {
+    "id": "DET-AI-042",
+    "type": "detection",
+    "name": "Training Data Provenance Drift",
+    "category": "supply-chain",
+    "severity": "high",
+    "status": "specification",
+    "hypothesis": "A fine-tuning or retrieval-training dataset changes digest, contributor or source mix without an approved review event.",
+    "telemetry": [
+      "dataset-digest",
+      "contributor-identity",
+      "source-mix",
+      "review-state"
+    ],
+    "test_ids": [
+      "TC-POI-036"
+    ]
+  },
+  {
+    "id": "DET-AI-043",
+    "type": "detection",
+    "name": "Agent Outbound Communication Anomaly",
+    "category": "agent-runtime",
+    "severity": "medium",
+    "status": "specification",
+    "hypothesis": "An agent sends messages to recipients or domains it has not contacted before, at unusual volume, or without the approval state its policy requires.",
+    "telemetry": [
+      "recipient",
+      "new-domain-flag",
+      "message-volume",
+      "approval-state"
+    ],
+    "test_ids": [
+      "TC-SOC-039"
+    ]
+  },
+  {
+    "id": "DET-AI-044",
+    "type": "detection",
+    "name": "Model Output Reaching an Interpreter Unsanitized",
+    "category": "application",
+    "severity": "high",
+    "status": "specification",
+    "hypothesis": "Model-generated text is observed at a shell, template, query or HTML sink without passing through the configured sanitizer.",
+    "telemetry": [
+      "output-sink",
+      "sanitizer-bypass-flag",
+      "interpreter-event",
+      "request-id"
+    ],
+    "test_ids": [
+      "TC-OH-013"
+    ]
+  },
+  {
+    "id": "DET-AI-045",
+    "type": "detection",
+    "name": "Rapid Iterative Script Variants on One Host",
+    "category": "endpoint",
+    "severity": "medium",
+    "status": "specification",
+    "hypothesis": "A host runs a series of near-identical scripts with incrementally changed names or content, failures followed by corrections, in a short window from a user-writable path. Unit 42 describes this trial-and-error pattern in the CL-CRI-1131 intrusions.",
+    "telemetry": [
+      "process-creation",
+      "script-content-hash",
+      "file-naming-pattern",
+      "exit-code"
+    ],
+    "test_ids": [
+      "TC-TOOL-040"
     ]
   }
 ]

@@ -137,3 +137,18 @@ Evidence → Campaign → Technique → Test → Detection → Control → Frame
 ```
 
 …and move through the chain without leaving the project.
+
+## v1.3 — Evidence levels, regional lens and tooling 🟡 2026-10-07
+
+- [x] Close every technique coverage gap: each technique has a safe test and a detection; `scripts/audit_graph.py` keeps it that way
+- [x] Derived `maturity` field on techniques, enforced by the validator
+- [x] Weekly ecosystem verification workflow combining the git check and the GitHub API check (not yet run on GitHub)
+- [x] ATT&CK Navigator layer export (`scripts/build_navigator.py`)
+- [x] Brazil and Latin America lens in Portuguese, linked to actor and campaign records
+- [x] Source `published` and record `reported` dates, with validator checks
+- [x] Explorer: deep links, CSV export, region filter, maturity and dashboard
+- [ ] External ATLAS and OWASP IDs for LLMI-T027 and LLMI-T028 (the ATLAS technique pages were unreachable from the authoring environment)
+- [ ] Link observed prompt-injection incidents to LLMI-T001 and LLMI-T002 so their maturity reflects the evidence
+- [ ] Verify the Navigator layer's ATLAS `domain` value against an ATLAS-aware Navigator build
+- [ ] Primary reports for the Brazil leads in the research queue (Zscaler, Serasa, Banco Central)
+- [ ] Evaluate SHADOW-AETHER-064 as its own record once the overlap with BREEZE COMET is resolved

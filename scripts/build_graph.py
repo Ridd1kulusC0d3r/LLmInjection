@@ -6,7 +6,7 @@ from __future__ import annotations
 import html
 import json
 import uuid
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -76,7 +76,7 @@ def graph():
     return {
         "meta": {
             "title": "LLMInjection Intelligence Graph",
-            "generated_at": datetime.now(timezone.utc).isoformat(),
+            "generated_at": datetime.now(UTC).isoformat(),
             "node_count": len(nodes),
             "edge_count": len(edges),
         },

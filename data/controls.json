@@ -320,5 +320,15 @@
       "SRC-MITRE-ATLAS-2026-09",
       "SRC-OWASP-AGENTIC-2026"
     ]
+  },
+  {
+    "id": "CTRL-EXEC-POLICY",
+    "type": "control",
+    "name": "Script and Unknown Binary Execution Policy",
+    "category": "endpoint",
+    "description": "Restrict execution of unsigned or unknown scripts and binaries from user-writable paths, so attacker tooling is stopped by behavior and provenance regardless of how it was written.",
+    "source_ids": [
+      "SRC-UNIT42-LATAM-AI"
+    ]
   }
 ]

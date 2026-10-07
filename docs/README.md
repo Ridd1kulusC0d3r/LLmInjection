@@ -19,6 +19,7 @@ Start with the [README](../README.md#explore-the-project) for the full expandabl
 |---|---|
 | [Threat landscape 2026](THREAT-LANDSCAPE-2026.md) | See cited metrics, domains and open leads |
 | [Actor tracker](ACTOR-TRACKER.md) | Follow tracked actors and their evidence |
+| [Panorama Brasil e América Latina](pt-BR/PANORAMA-BRASIL-LATAM.md) | Regional view in Portuguese, separating what reports claim from what they do not |
 | [Actors using AI](ACTORS-USING-AI.md) | See how actors use AI, by role |
 | [AI threat model](AI-THREAT-MODEL.md) | Reason about attack surfaces and trust boundaries |
 | [AI supply chain](AI-SUPPLY-CHAIN.md) | Cover packages, models, gateways and CI |

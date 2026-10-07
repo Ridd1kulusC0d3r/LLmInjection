@@ -25,6 +25,7 @@
             <a href="llminjection-stix.json">STIX 2.1</a>
             <a href="graph.graphml">GraphML</a>
             <a href="intelligence-diff.md">Latest diff</a>
+            <a href="navigator/atlas-coverage.layer.json">Navigator layer</a>
           </div>
         </div>
       </div>
@@ -36,6 +37,7 @@
     <div class="controls">
       <input id="search" type="search" placeholder="Search actor, campaign, technique, CVE, control" aria-label="Search">
       <select id="typeFilter" aria-label="Object type"><option value="">All types</option></select>
+      <select id="regionFilter" aria-label="Region"><option value="">Any region</option></select>
       <select id="confidenceFilter" aria-label="Confidence">
         <option value="">Any confidence</option>
         <option>confirmed</option><option>high</option><option>medium</option><option>low</option><option>unverified</option>
@@ -49,12 +51,29 @@
       <button class="tab" data-tab="graph">Graph</button>
       <button class="tab" data-tab="coverage">Coverage</button>
       <button class="tab" data-tab="timeline">Timeline</button>
+      <button class="tab" data-tab="ecosystem">Ecosystem</button>
       <button class="tab" data-tab="sources">Sources</button>
     </nav>
 
     <main>
       <section id="overview" class="view active">
-        <div class="cols">
+        <div class="eyebrow">Dashboard</div>
+        <h2>The state of the evidence</h2>
+        <p class="sub">Computed from the graph and datasets on every build. Click anything with an underline to open its record.</p>
+        <div class="dash three">
+          <div class="dp"><h3>Defensive coverage</h3><div id="dashCoverage"></div></div>
+          <div class="dp"><h3>Priority gaps</h3><p class="note">Techniques with linked evidence but no test or detection.</p><div id="dashGaps"></div></div>
+          <div class="dp"><h3>Confidence across records</h3><div id="dashConf"></div></div>
+        </div>
+        <div class="dash two">
+          <div class="dp"><h3>Headline numbers</h3><div id="dashHeadlines" class="heads"></div></div>
+          <div class="dp"><h3>What changed</h3><div id="dashChanges"></div></div>
+        </div>
+        <div class="dash two">
+          <div class="dp"><h3>Recent chronology</h3><div id="dashTimeline"></div></div>
+          <div class="dp"><h3>Technique maturity</h3><div id="dashMaturity"></div><h3 style="margin-top:22px">Evidence base</h3><div id="dashGrades"></div><h3 style="margin-top:22px">Ecosystem by evidence class</h3><div id="dashEco"></div></div>
+        </div>
+        <div class="cols" style="margin-top:44px">
           <div>
             <div class="eyebrow">Tracked actors</div>
             <h2>Who is operating</h2>
@@ -101,21 +120,30 @@
 
       <section id="coverage" class="view">
         <div class="eyebrow">Defensive coverage</div>
-        <h2>Technique coverage</h2>
+        <div class="head-row"><h2>Technique coverage</h2><button class="export" type="button" data-export="coverage">Export CSV</button></div>
         <p class="sub">Counted from graph relationships. A flagged gap means no test case or no detection is linked to that technique yet.</p>
         <table id="coverageTable" class="tbl"></table>
       </section>
 
       <section id="timeline" class="view">
         <div class="eyebrow">Chronology</div>
-        <h2>Campaigns, incidents and vulnerabilities</h2>
-        <p class="sub">Newest first.</p>
+        <div class="head-row"><h2>Campaigns, incidents and vulnerabilities</h2><button class="export" type="button" data-export="timeline">Export CSV</button></div>
+        <p class="sub">Newest first, by the date of the primary report where known.</p>
         <div id="timelineList" class="tl"></div>
+      </section>
+
+      <section id="ecosystem" class="view">
+        <div class="eyebrow">Related projects</div>
+        <div class="head-row"><h2>Ecosystem map</h2><button class="export" type="button" data-export="ecosystem">Export CSV</button></div>
+        <p class="sub">Discovery and test-design material, classified by what each project can support. None of these can support attribution or campaign claims. State as reported, not independently verified.</p>
+        <div class="controls" style="padding-top:0"><select id="ecoClass" aria-label="Evidence class"><option value="">All evidence classes</option></select><select id="ecoSection" aria-label="Section"><option value="">All sections</option></select></div>
+        <div id="ecoCount" class="note" style="margin:10px 0"></div>
+        <table id="ecoTable" class="tbl"></table>
       </section>
 
       <section id="sources" class="view">
         <div class="eyebrow">Evidence</div>
-        <h2>Source registry</h2>
+        <div class="head-row"><h2>Source registry</h2><button class="export" type="button" data-export="sources">Export CSV</button></div>
         <p class="sub">A = primary or authoritative, B = strong secondary, C = reputable press, D = community, E = unsupported.</p>
         <div id="sourceList" class="src"></div>
       </section>

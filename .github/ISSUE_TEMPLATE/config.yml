@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Report a vulnerability in this repository
+    url: https://github.com/Ridd1kulusC0d3r/LLmInjection/security/policy
+    about: Use the security policy, not a public issue.

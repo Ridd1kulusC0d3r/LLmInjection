@@ -1,0 +1,27 @@
+[project]
+name = "llminjection"
+version = "1.1.0"
+description = "Open threat intelligence for AI, LLM and agentic systems"
+readme = "README.md"
+license = { text = "Apache-2.0" }
+requires-python = ">=3.12"
+dependencies = []  # scripts are standard library only
+
+[project.urls]
+Homepage = "https://github.com/Ridd1kulusC0d3r/LLmInjection"
+Explorer = "https://ridd1kulusc0d3r.github.io/LLmInjection/"
+
+[tool.ruff]
+line-length = 160
+target-version = "py312"
+extend-exclude = ["dist"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["E501"]  # long literal tables in data-heavy scripts
+
+[tool.ruff.lint.per-file-ignores]
+# scripts add their own directory to sys.path before importing siblings
+"scripts/*.py" = ["E402"]
+"tests/*.py" = ["E402"]
+"integrations/mcp/server.py" = ["E402"]

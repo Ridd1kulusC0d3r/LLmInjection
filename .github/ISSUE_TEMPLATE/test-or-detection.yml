@@ -1,0 +1,33 @@
+name: Propose a test case or detection
+description: Add a safe test case, detection hypothesis or control for an existing technique.
+labels: [coverage]
+body:
+  - type: input
+    id: technique
+    attributes:
+      label: Technique ID
+      description: The LLMI-T### technique this covers. Run `python scripts/audit_graph.py` to see current gaps.
+      placeholder: LLMI-T011
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What are you proposing?
+      options: [Safe test case, Detection hypothesis, Control, Sigma or vendor rule]
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Behavior and expected secure outcome
+      description: Describe the observable behavior. Use synthetic data and mock tools only. Do not include working exploit payloads.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Link primary sources where possible. Say what is observed in the wild, what is shown in research and what is your own reasoning.
+    validations:
+      required: true

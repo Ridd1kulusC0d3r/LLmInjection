@@ -119,6 +119,36 @@
       "enabled": false,
       "max_items": 0,
       "relevance_mode": "all"
+    },
+    {
+      "id": "FEED-GARAK-RELEASES",
+      "name": "NVIDIA/garak releases",
+      "kind": "github-releases",
+      "url": "https://api.github.com/repos/NVIDIA/garak/releases?per_page=5",
+      "source_grade": "D",
+      "enabled": true,
+      "max_items": 3,
+      "relevance_mode": "all"
+    },
+    {
+      "id": "FEED-PYRIT-RELEASES",
+      "name": "microsoft/PyRIT releases",
+      "kind": "github-releases",
+      "url": "https://api.github.com/repos/microsoft/PyRIT/releases?per_page=5",
+      "source_grade": "D",
+      "enabled": true,
+      "max_items": 3,
+      "relevance_mode": "all"
+    },
+    {
+      "id": "FEED-AGENTDOJO-RELEASES",
+      "name": "ethz-spylab/agentdojo releases",
+      "kind": "github-releases",
+      "url": "https://api.github.com/repos/ethz-spylab/agentdojo/releases?per_page=5",
+      "source_grade": "D",
+      "enabled": true,
+      "max_items": 3,
+      "relevance_mode": "all"
     }
   ]
 }

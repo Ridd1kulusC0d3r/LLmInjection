@@ -77,7 +77,7 @@ def main() -> int:
         results = list(pool.map(lambda e: check(e, args.timeout), todo))
 
     changed, unreachable, stale = 0, [], []
-    for entry, res in zip(todo, results):
+    for entry, res in zip(todo, results, strict=True):
         name = f"{entry['owner']}/{entry['name']}"
         old = entry.get("verification", {})
         if not res["reachable"]:

@@ -1917,5 +1917,456 @@
     "evidence_sources": [
       "SRC-MCP-SECURITY-2026"
     ]
+  },
+  {
+    "id": "REL-175",
+    "type": "relationship",
+    "source": "TC-AG-006",
+    "relationship": "validates",
+    "target": "LLMI-T008",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-OWASP-AGENTIC-2026"
+    ]
+  },
+  {
+    "id": "REL-176",
+    "type": "relationship",
+    "source": "TC-MCP-010",
+    "relationship": "validates",
+    "target": "LLMI-T008",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MCP-SECURITY-2026"
+    ]
+  },
+  {
+    "id": "REL-177",
+    "type": "relationship",
+    "source": "DET-AI-007",
+    "relationship": "detects",
+    "target": "LLMI-T008",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-MCP-SECURITY-2026"
+    ]
+  },
+  {
+    "id": "REL-178",
+    "type": "relationship",
+    "source": "TC-OH-013",
+    "relationship": "validates",
+    "target": "LLMI-T020",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-OWASP-LLM-2026"
+    ]
+  },
+  {
+    "id": "REL-179",
+    "type": "relationship",
+    "source": "TC-COST-014",
+    "relationship": "validates",
+    "target": "LLMI-T022",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-OWASP-LLM-2026"
+    ]
+  },
+  {
+    "id": "REL-180",
+    "type": "relationship",
+    "source": "DET-AI-008",
+    "relationship": "detects",
+    "target": "LLMI-T022",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-OWASP-LLM-2026"
+    ]
+  },
+  {
+    "id": "REL-181",
+    "type": "relationship",
+    "source": "TC-RUN-011",
+    "relationship": "validates",
+    "target": "LLMI-T027",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-GENIANS-KIMSUKY"
+    ]
+  },
+  {
+    "id": "REL-182",
+    "type": "relationship",
+    "source": "TC-NET-012",
+    "relationship": "validates",
+    "target": "LLMI-T027",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-GENIANS-KIMSUKY"
+    ]
+  },
+  {
+    "id": "REL-183",
+    "type": "relationship",
+    "source": "DET-AI-002",
+    "relationship": "detects",
+    "target": "LLMI-T027",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-GENIANS-KIMSUKY"
+    ]
+  },
+  {
+    "id": "REL-184",
+    "type": "relationship",
+    "source": "DET-AI-001",
+    "relationship": "detects",
+    "target": "LLMI-T027",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-GENIANS-KIMSUKY"
+    ]
+  },
+  {
+    "id": "REL-185",
+    "type": "relationship",
+    "source": "LLMI-T027",
+    "relationship": "mitigated-by",
+    "target": "CTRL-AI-INVENTORY",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-GENIANS-KIMSUKY"
+    ]
+  },
+  {
+    "id": "REL-186",
+    "type": "relationship",
+    "source": "LLMI-T027",
+    "relationship": "mitigated-by",
+    "target": "CTRL-EGRESS-POLICY",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-GENIANS-KIMSUKY"
+    ]
+  },
+  {
+    "id": "REL-187",
+    "type": "relationship",
+    "source": "DET-AI-009",
+    "relationship": "detects",
+    "target": "LLMI-T012",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-CSA-PROMPTMINK"
+    ]
+  },
+  {
+    "id": "REL-188",
+    "type": "relationship",
+    "source": "LLMI-T010",
+    "relationship": "mitigated-by",
+    "target": "CTRL-SIGNATURE-VERIFICATION",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-SIGSTORE-COSIGN"
+    ]
+  },
+  {
+    "id": "REL-189",
+    "type": "relationship",
+    "source": "TC-JB-035",
+    "relationship": "validates",
+    "target": "LLMI-T003",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-OWASP-LLM-2026"
+    ]
+  },
+  {
+    "id": "REL-190",
+    "type": "relationship",
+    "source": "TC-POI-036",
+    "relationship": "validates",
+    "target": "LLMI-T006",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-OWASP-LLM-2026"
+    ]
+  },
+  {
+    "id": "REL-191",
+    "type": "relationship",
+    "source": "TC-CI-037",
+    "relationship": "validates",
+    "target": "LLMI-T011",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-GTIG-PROMPTING-TO-AUTONOMY"
+    ]
+  },
+  {
+    "id": "REL-192",
+    "type": "relationship",
+    "source": "TC-RLC-038",
+    "relationship": "validates",
+    "target": "LLMI-T013",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-GTIG-INTEGRATION"
+    ]
+  },
+  {
+    "id": "REL-193",
+    "type": "relationship",
+    "source": "TC-SOC-039",
+    "relationship": "validates",
+    "target": "LLMI-T014",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS"
+    ]
+  },
+  {
+    "id": "REL-194",
+    "type": "relationship",
+    "source": "DET-AI-040",
+    "relationship": "detects",
+    "target": "LLMI-T001",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-OWASP-LLM-2026"
+    ]
+  },
+  {
+    "id": "REL-195",
+    "type": "relationship",
+    "source": "DET-AI-040",
+    "relationship": "detects",
+    "target": "LLMI-T002",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-OWASP-LLM-2026"
+    ]
+  },
+  {
+    "id": "REL-196",
+    "type": "relationship",
+    "source": "DET-AI-041",
+    "relationship": "detects",
+    "target": "LLMI-T003",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-OWASP-LLM-2026"
+    ]
+  },
+  {
+    "id": "REL-197",
+    "type": "relationship",
+    "source": "DET-AI-042",
+    "relationship": "detects",
+    "target": "LLMI-T006",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-OWASP-LLM-2026"
+    ]
+  },
+  {
+    "id": "REL-198",
+    "type": "relationship",
+    "source": "DET-AI-043",
+    "relationship": "detects",
+    "target": "LLMI-T014",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS"
+    ]
+  },
+  {
+    "id": "REL-199",
+    "type": "relationship",
+    "source": "DET-AI-044",
+    "relationship": "detects",
+    "target": "LLMI-T020",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-OWASP-LLM-2026"
+    ]
+  },
+  {
+    "id": "REL-200",
+    "type": "relationship",
+    "source": "DET-AI-013",
+    "relationship": "detects",
+    "target": "LLMI-T005",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-GTIG-PROMPTING-TO-AUTONOMY"
+    ]
+  },
+  {
+    "id": "REL-201",
+    "type": "relationship",
+    "source": "DET-AI-004",
+    "relationship": "detects",
+    "target": "LLMI-T009",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-OWASP-AGENTIC-2026"
+    ]
+  },
+  {
+    "id": "REL-202",
+    "type": "relationship",
+    "source": "DET-AI-003",
+    "relationship": "detects",
+    "target": "LLMI-T015",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-GTG1002"
+    ]
+  },
+  {
+    "id": "REL-203",
+    "type": "relationship",
+    "source": "ACTOR-BREEZE-COMET",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-BREEZE-COMET-PAYMENTS",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-BREEZE-COMET"
+    ]
+  },
+  {
+    "id": "REL-204",
+    "type": "relationship",
+    "source": "CAMPAIGN-BREEZE-COMET-PAYMENTS",
+    "relationship": "uses",
+    "target": "LLMI-T028",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-GTIG-BREEZE-COMET"
+    ]
+  },
+  {
+    "id": "REL-205",
+    "type": "relationship",
+    "source": "CAMPAIGN-SHADOW-AETHER-040",
+    "relationship": "uses",
+    "target": "LLMI-T028",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-TREND-SHADOW-AETHER"
+    ]
+  },
+  {
+    "id": "REL-206",
+    "type": "relationship",
+    "source": "CAMPAIGN-SHADOW-AETHER-040",
+    "relationship": "uses",
+    "target": "LLMI-T015",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-TREND-SHADOW-AETHER"
+    ]
+  },
+  {
+    "id": "REL-207",
+    "type": "relationship",
+    "source": "CAMPAIGN-SHADOW-AETHER-040",
+    "relationship": "uses-model-family",
+    "target": "MODEL-FAMILY-CLAUDE",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-TREND-SHADOW-AETHER"
+    ]
+  },
+  {
+    "id": "REL-208",
+    "type": "relationship",
+    "source": "CAMPAIGN-CL-CRI-1131",
+    "relationship": "uses",
+    "target": "LLMI-T028",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-UNIT42-LATAM-AI"
+    ]
+  },
+  {
+    "id": "REL-209",
+    "type": "relationship",
+    "source": "INCIDENT-VOIDLINK",
+    "relationship": "demonstrates",
+    "target": "LLMI-T028",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-CHECKPOINT-VOIDLINK"
+    ]
+  },
+  {
+    "id": "REL-210",
+    "type": "relationship",
+    "source": "LLMI-T028",
+    "relationship": "mitigated-by",
+    "target": "CTRL-EXEC-POLICY",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-UNIT42-LATAM-AI"
+    ]
+  },
+  {
+    "id": "REL-211",
+    "type": "relationship",
+    "source": "TC-TOOL-040",
+    "relationship": "validates",
+    "target": "LLMI-T028",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-UNIT42-LATAM-AI"
+    ]
+  },
+  {
+    "id": "REL-212",
+    "type": "relationship",
+    "source": "DET-AI-045",
+    "relationship": "detects",
+    "target": "LLMI-T028",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-UNIT42-LATAM-AI"
+    ]
+  },
+  {
+    "id": "REL-213",
+    "type": "relationship",
+    "source": "INCIDENT-GTIG-DISTILLATION",
+    "relationship": "demonstrates",
+    "target": "LLMI-T019",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-PROMPTING-TO-AUTONOMY"
+    ]
+  },
+  {
+    "id": "REL-214",
+    "type": "relationship",
+    "source": "INCIDENT-GTIG-DISTILLATION",
+    "relationship": "demonstrates",
+    "target": "LLMI-T005",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-GTIG-PROMPTING-TO-AUTONOMY"
+    ]
+  },
+  {
+    "id": "REL-215",
+    "type": "relationship",
+    "source": "LLMI-T014",
+    "relationship": "mitigated-by",
+    "target": "CTRL-HUMAN-CHECKPOINT",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS"
+    ]
   }
 ]

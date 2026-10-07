@@ -11,6 +11,8 @@ on:
       - "reports/**"
       - "integrations/**"
       - "docs/**"
+      - "assets/**"
+      - "pyproject.toml"
       - "README.md"
       - ".github/workflows/validate-intel.yml"
   pull_request:
@@ -23,6 +25,8 @@ on:
       - "reports/**"
       - "integrations/**"
       - "docs/**"
+      - "assets/**"
+      - "pyproject.toml"
       - "README.md"
       - ".github/workflows/validate-intel.yml"
 
@@ -41,6 +45,11 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Lint
+        run: |
+          pip install --quiet ruff==0.15.20
+          ruff check scripts tests integrations
+
       - name: Compile Python
         run: python -m compileall -q scripts integrations
 
@@ -55,6 +64,9 @@ jobs:
 
       - name: Validate structured intelligence
         run: python scripts/validate_intel.py
+
+      - name: Audit graph for orphaned records
+        run: python scripts/audit_graph.py --strict
 
       - name: Exercise living-intelligence intake with fixtures
         run: |

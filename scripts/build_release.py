@@ -2,6 +2,7 @@
 """Package a LLMInjection data release and write its SHA-256 digest."""
 
 from __future__ import annotations
+
 import hashlib
 import json
 import zipfile

@@ -9,7 +9,7 @@ from __future__ import annotations
 
 import argparse
 import json
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -45,7 +45,7 @@ def run_mock(case, adapter):
         "name": case["name"],
         "adapter": adapter,
         "result": result,
-        "timestamp": datetime.now(timezone.utc).isoformat(),
+        "timestamp": datetime.now(UTC).isoformat(),
         "observations": [observation],
         "telemetry_expected": case.get("telemetry", []),
         "controls_expected": case.get("controls", []),

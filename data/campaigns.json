@@ -4,24 +4,26 @@
     "type": "campaign",
     "name": "GTG-1002 AI-orchestrated espionage",
     "confidence": "confirmed",
-    "first_seen": "2026",
+    "first_seen": "2025-09",
     "last_seen": "2026",
     "summary": "Campaign assessed by Anthropic as Chinese state-sponsored in which Claude Code performed the majority of tactical operations against roughly 30 targets.",
     "source_ids": [
       "SRC-ANTHROPIC-GTG1002"
-    ]
+    ],
+    "reported": "2025-11-13"
   },
   {
     "id": "CAMPAIGN-APT28-PROMPTSTEAL",
     "type": "campaign",
     "name": "APT28 PROMPTSTEAL / LAMEHUG runtime LLM use",
     "confidence": "confirmed",
-    "first_seen": "2026",
+    "first_seen": "2025",
     "last_seen": "2026",
     "summary": "APT28-linked activity used a public LLM at runtime to generate host-relevant commands.",
     "source_ids": [
       "SRC-GTIG-AI-THREATS"
-    ]
+    ],
+    "reported": "2025-11-05"
   },
   {
     "id": "CAMPAIGN-APT42-GEMINI",
@@ -33,7 +35,8 @@
     "summary": "GTIG documented Gemini use for reconnaissance, target research, phishing content and localization.",
     "source_ids": [
       "SRC-GTIG-MISUSE"
-    ]
+    ],
+    "reported": "2025-01-29"
   },
   {
     "id": "CAMPAIGN-UNC2970-GEMINI",
@@ -45,7 +48,8 @@
     "summary": "GTIG documented Gemini use to synthesize OSINT and profile high-value targets.",
     "source_ids": [
       "SRC-GTIG-INTEGRATION"
-    ]
+    ],
+    "reported": "2026-02-12"
   },
   {
     "id": "CAMPAIGN-KIMSUKY-LOCAL-LLM",
@@ -57,7 +61,8 @@
     "summary": "Genians reported local LLM tooling and RAG-related artifacts on infrastructure linked to Kimsuky.",
     "source_ids": [
       "SRC-GENIANS-KIMSUKY"
-    ]
+    ],
+    "reported": "2026-08-10"
   },
   {
     "id": "CAMPAIGN-PROMPTMINK",
@@ -69,7 +74,8 @@
     "summary": "Reporting describes malicious package activity optimized to influence AI coding-agent dependency selection and attributes it to Famous Chollima.",
     "source_ids": [
       "SRC-CSA-PROMPTMINK"
-    ]
+    ],
+    "reported": "2026-04-30"
   },
   {
     "id": "CAMPAIGN-TEAMPCP-LITELLM",
@@ -82,6 +88,58 @@
     "source_ids": [
       "SRC-ENDOR-TEAMPCP",
       "SRC-WIZ-TEAMPCP"
+    ],
+    "reported": "2026-03-24"
+  },
+  {
+    "id": "CAMPAIGN-BREEZE-COMET-PAYMENTS",
+    "type": "campaign",
+    "name": "BREEZE COMET payment-system fraud in Brazil",
+    "confidence": "confirmed",
+    "first_seen": "2024",
+    "last_seen": "2026",
+    "reported": "2026-09-01",
+    "regions": [
+      "BR"
+    ],
+    "summary": "Intrusions into Brazilian financial services, retail and e-commerce organizations that can move money through Pix, STR and Boleto, reported by Google and Mandiant as at least one heist of tens of thousands of USD in two waves of hundreds of fraudulent transactions. Mandiant reports evidence that LLMs sped up custom reconnaissance, credential-validation and deployment scripts; the report does not name the models or quantify the effect. Press coverage reports overlap with Unit 42's CL-CRI-1163, which Unit 42's own article does not state.",
+    "source_ids": [
+      "SRC-GTIG-BREEZE-COMET",
+      "SRC-THN-BREEZE-COMET"
+    ]
+  },
+  {
+    "id": "CAMPAIGN-SHADOW-AETHER-040",
+    "type": "campaign",
+    "name": "SHADOW-AETHER-040 agentic intrusions against Latin American governments",
+    "confidence": "high",
+    "first_seen": "2025-12-27",
+    "last_seen": "2026",
+    "reported": "2026-05-11",
+    "regions": [
+      "MX",
+      "LATAM"
+    ],
+    "summary": "Trend Micro reports Spanish-speaking operators intruding into six Mexican government entities between 2025-12-27 and 2026-01-04, with high confidence that the operator drove an agentic command-line tool prompting Claude, based on conversations leaked on an exposed C&C server. The operator supervised and corrected the agent rather than fully delegating. One vendor, a limited number of cases; attribution beyond language cues is uncertain.",
+    "source_ids": [
+      "SRC-TREND-SHADOW-AETHER"
+    ]
+  },
+  {
+    "id": "CAMPAIGN-CL-CRI-1131",
+    "type": "campaign",
+    "name": "CL-CRI-1131 LLM-assisted intrusions in Mexico and Ecuador",
+    "confidence": "medium",
+    "first_seen": "2026",
+    "last_seen": "2026",
+    "reported": "2026-09-03",
+    "regions": [
+      "MX",
+      "EC"
+    ],
+    "summary": "Unit 42 assesses that operators used LLMs to generate workaround scripts against a Mexican transportation organization, federal ministries and municipal water utilities in Mexico and Ecuador, inferred from trial-and-error script iteration and an exposed self-hosted NextChat interface. The article does not confirm which models were used and does not attribute the cluster to a named group.",
+    "source_ids": [
+      "SRC-UNIT42-LATAM-AI"
     ]
   }
 ]

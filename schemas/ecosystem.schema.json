@@ -126,6 +126,17 @@
         },
         "license": {
           "type": "string"
+        },
+        "archived": {
+          "type": "boolean",
+          "description": "GitHub archive flag from the API check (scripts/check_ecosystem.py); not visible to git."
+        },
+        "renamed_to": {
+          "type": "string"
+        },
+        "api_checked": {
+          "type": "string",
+          "format": "date"
         }
       }
     }

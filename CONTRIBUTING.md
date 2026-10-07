@@ -62,3 +62,7 @@ before opening a pull request.
 - [ ] I updated `last_verified`.
 - [ ] I did not include victim-sensitive data or secrets.
 - [ ] `python scripts/validate_intel.py` passes.
+
+## Before you open a pull request
+
+Run `make check`. It lints the code, runs the unit tests, validates every dataset against its rules and audits the graph for orphaned records. If you changed data, run `make readme charts` to refresh the generated tables and charts; a test fails if they are stale.

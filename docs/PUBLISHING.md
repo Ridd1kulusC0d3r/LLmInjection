@@ -90,3 +90,12 @@ python scripts/build_release.py
 ```
 
 Outputs live under `dist/`.
+
+## ATT&CK Navigator layers
+
+`python scripts/build_navigator.py` writes `dist/navigator/atlas-coverage.layer.json` and `attack-coverage.layer.json` (layer format 4.5), published with the Explorer at `/navigator/`. Each external technique ID is scored 0 to 3: one point each for a linked safe test, detection and control, taking the best of the LLMInjection techniques that map to it. The `domain` value of the ATLAS layer is an assumption about how an ATLAS-aware Navigator names its matrix; adjust it if your build expects another.
+
+## Ecosystem verification
+
+`scripts/check_ecosystem.py` checks each project in `data/ecosystem.json` against the GitHub API (existence, archived flag, last push, renames). The weekly workflow `ecosystem-verify.yml` runs it and uploads a report and a refreshed dataset as an artifact; it never edits the repository on its own. Analyst fields (evidence class, section, techniques) are never changed by the script.
+

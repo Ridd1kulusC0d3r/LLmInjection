@@ -127,7 +127,8 @@
     "grade": "A",
     "role": "threat-report",
     "url": "https://www.anthropic.com/news/disrupting-AI-espionage",
-    "last_verified": "2026-09-30"
+    "last_verified": "2026-09-30",
+    "published": "2025-11-13"
   },
   {
     "id": "SRC-GTIG-AI-THREATS",
@@ -137,7 +138,8 @@
     "grade": "A",
     "role": "threat-report",
     "url": "https://cloud.google.com/blog/topics/threat-intelligence/threat-actor-usage-of-ai-tools",
-    "last_verified": "2026-09-30"
+    "last_verified": "2026-09-30",
+    "published": "2025-11-05"
   },
   {
     "id": "SRC-GTIG-MISUSE",
@@ -147,7 +149,8 @@
     "grade": "A",
     "role": "threat-report",
     "url": "https://cloud.google.com/blog/topics/threat-intelligence/adversarial-misuse-generative-ai",
-    "last_verified": "2026-09-30"
+    "last_verified": "2026-09-30",
+    "published": "2025-01-29"
   },
   {
     "id": "SRC-GTIG-INTEGRATION",
@@ -157,7 +160,8 @@
     "grade": "A",
     "role": "threat-report",
     "url": "https://cloud.google.com/blog/topics/threat-intelligence/distillation-experimentation-integration-ai-adversarial-use",
-    "last_verified": "2026-09-30"
+    "last_verified": "2026-09-30",
+    "published": "2026-02-12"
   },
   {
     "id": "SRC-GENIANS-KIMSUKY",
@@ -167,7 +171,8 @@
     "grade": "A",
     "role": "threat-report",
     "url": "https://www.genians.co.kr/blog/threat_intelligence/kimsuky_ai_llm",
-    "last_verified": "2026-09-30"
+    "last_verified": "2026-09-30",
+    "published": "2026-08-10"
   },
   {
     "id": "SRC-CSA-PROMPTMINK",
@@ -177,7 +182,8 @@
     "grade": "B",
     "role": "threat-research",
     "url": "https://labs.cloudsecurityalliance.org/research/csa-research-note-promptmink-dprk-ai-generated-supply-chain/",
-    "last_verified": "2026-09-30"
+    "last_verified": "2026-09-30",
+    "published": "2026-04-30"
   },
   {
     "id": "SRC-ENDOR-TEAMPCP",
@@ -187,7 +193,8 @@
     "grade": "A",
     "role": "supply-chain-report",
     "url": "https://www.endorlabs.com/learn/teampcp-isnt-done",
-    "last_verified": "2026-09-30"
+    "last_verified": "2026-09-30",
+    "published": "2026-03-24"
   },
   {
     "id": "SRC-WIZ-TEAMPCP",
@@ -197,7 +204,8 @@
     "grade": "B",
     "role": "supply-chain-report",
     "url": "https://www.wiz.io/blog/threes-a-crowd-teampcp-trojanizes-litellm-in-continuation-of-campaign",
-    "last_verified": "2026-09-30"
+    "last_verified": "2026-09-30",
+    "published": "2026-03-24"
   },
   {
     "id": "SRC-CISCO-CLOSEDQUORUM",
@@ -207,7 +215,8 @@
     "grade": "A",
     "role": "research-report",
     "url": "https://blog.talosintelligence.com/the-closed-quorum-inside-the-first-reported-autonomous-ai-c2-implant/",
-    "last_verified": "2026-09-30"
+    "last_verified": "2026-09-30",
+    "published": "2026-09-22"
   },
   {
     "id": "SRC-CHECKPOINT-VOIDLINK",
@@ -217,7 +226,8 @@
     "grade": "A",
     "role": "research-report",
     "url": "https://research.checkpoint.com/2026/voidlink-early-ai-generated-malware-framework/",
-    "last_verified": "2026-09-30"
+    "last_verified": "2026-09-30",
+    "published": "2026-01-20"
   },
   {
     "id": "SRC-CROWDSTRIKE-THR2026",
@@ -237,7 +247,8 @@
     "grade": "A",
     "role": "defensive-research",
     "url": "https://unit42.paloaltonetworks.com/perturbation-probing-llm-safety/",
-    "last_verified": "2026-09-30"
+    "last_verified": "2026-09-30",
+    "published": "2026-08-28"
   },
   {
     "id": "SRC-PROMPTWARE-PAPER",
@@ -247,7 +258,8 @@
     "grade": "A",
     "role": "research-paper",
     "url": "https://arxiv.org/abs/2601.09625",
-    "last_verified": "2026-09-30"
+    "last_verified": "2026-09-30",
+    "published": "2026-01-14"
   },
   {
     "id": "SRC-GHSA-LITELLM-MALWARE",
@@ -367,7 +379,8 @@
     "grade": "A",
     "role": "vulnerability-research",
     "url": "https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks/",
-    "last_verified": "2026-10-06"
+    "last_verified": "2026-10-06",
+    "published": "2026-05-07"
   },
   {
     "id": "SRC-OX-MCP-STDIO",
@@ -377,7 +390,8 @@
     "grade": "B",
     "role": "vulnerability-research",
     "url": "https://www.ox.security/blog/mcp-supply-chain-advisory-rce-vulnerabilities-across-the-ai-ecosystem/",
-    "last_verified": "2026-10-06"
+    "last_verified": "2026-10-06",
+    "published": "2026-04-15"
   },
   {
     "id": "SRC-GTIG-PROMPTING-TO-AUTONOMY",
@@ -387,7 +401,8 @@
     "grade": "A",
     "role": "threat-report",
     "url": "https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai",
-    "last_verified": "2026-10-06"
+    "last_verified": "2026-10-06",
+    "published": "2026-09-08"
   },
   {
     "id": "SRC-THN-ANTHROPIC-2026-09",
@@ -497,6 +512,50 @@
     "grade": "B",
     "role": "vendor-research",
     "url": "https://github.com/trailofbits/anamorpher",
+    "last_verified": "2026-10-07"
+  },
+  {
+    "id": "SRC-GTIG-BREEZE-COMET",
+    "type": "source",
+    "name": "Financially Motivated Threat Actor BREEZE COMET Targets Brazil",
+    "publisher": "Google Threat Intelligence Group and Mandiant",
+    "grade": "A",
+    "role": "threat-report",
+    "url": "https://cloud.google.com/blog/topics/threat-intelligence/financially-motivated-threat-actor-breeze-comet-targets-brazil/",
+    "published": "2026-09-01",
+    "last_verified": "2026-10-07"
+  },
+  {
+    "id": "SRC-UNIT42-LATAM-AI",
+    "type": "source",
+    "name": "Attackers Expose Ongoing AI Tool Use Targeting Organizations in Latin America",
+    "publisher": "Palo Alto Networks Unit 42",
+    "grade": "A",
+    "role": "threat-report",
+    "url": "https://unit42.paloaltonetworks.com/ai-tool-use-targeting-latam-orgs/",
+    "published": "2026-09-03",
+    "last_verified": "2026-10-07"
+  },
+  {
+    "id": "SRC-TREND-SHADOW-AETHER",
+    "type": "source",
+    "name": "Vibe Hacking: Two AI-Augmented Campaigns Target Government and Financial Sectors in Latin America",
+    "publisher": "Trend Micro",
+    "grade": "A",
+    "role": "threat-report",
+    "url": "https://www.trendmicro.com/en_us/research/26/e/vibe-hacking-two-ai-augmented-campaigns-target-government-and-financial-sectors-in-latin-america.html",
+    "published": "2026-05-11",
+    "last_verified": "2026-10-07"
+  },
+  {
+    "id": "SRC-THN-BREEZE-COMET",
+    "type": "source",
+    "name": "Breeze Comet Executes Hundreds of Fraudulent Transactions via Brazilian Payment Systems",
+    "publisher": "The Hacker News",
+    "grade": "C",
+    "role": "journalism",
+    "url": "https://thehackernews.com/2026/09/breeze-comet-executes-hundreds-of.html",
+    "published": "2026-09-01",
     "last_verified": "2026-10-07"
   }
 ]

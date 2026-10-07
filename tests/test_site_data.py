@@ -6,15 +6,17 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
+import re
+
 import build_charts  # noqa: E402
 import readme_stats  # noqa: E402
-import re
 
 
 class SiteDataTests(unittest.TestCase):
-    def test_coverage_chart_is_current(self):
-        """assets/coverage-matrix.svg must match the data; run scripts/build_charts.py to refresh."""
-        self.assertEqual((ROOT / "assets" / "coverage-matrix.svg").read_text(encoding="utf-8"), build_charts.build())
+    def test_charts_are_current(self):
+        """Every SVG in assets/ must match the data; run scripts/build_charts.py to refresh."""
+        for name, svg in build_charts.build_all().items():
+            self.assertEqual((ROOT / "assets" / name).read_text(encoding="utf-8"), svg, name)
 
     def test_landscape_metric_values_are_renderable(self):
         landscape = json.loads((ROOT / "data" / "threat-landscape-2026.json").read_text(encoding="utf-8"))
@@ -26,11 +28,12 @@ class SiteDataTests(unittest.TestCase):
     def test_readme_statistics_are_current(self):
         text = (ROOT / "README.md").read_text(encoding="utf-8")
         self.assertEqual(readme_stats.updated(text), text, "run python scripts/readme_stats.py")
-        eco = (ROOT / "docs" / "ECOSYSTEM.md").read_text(encoding="utf-8")
-        self.assertEqual(readme_stats.updated(eco), eco, "run python scripts/readme_stats.py")
+        for other in (ROOT / "README.pt-BR.md", ROOT / "docs" / "ECOSYSTEM.md"):
+            body = other.read_text(encoding="utf-8")
+            self.assertEqual(readme_stats.updated(body), body, f"run python scripts/readme_stats.py ({other.name})")
 
     def test_relative_markdown_links_resolve(self):
-        pages = [ROOT / "README.md", *sorted((ROOT / "docs").glob("*.md")), *sorted((ROOT / "references").glob("*.md"))]
+        pages = [ROOT / "README.md", ROOT / "README.pt-BR.md", *sorted((ROOT / "docs").rglob("*.md")), *sorted((ROOT / "references").glob("*.md"))]
         broken = []
         for page in pages:
             for target in re.findall(r"\]\(([^)\s]+)\)", page.read_text(encoding="utf-8")):
