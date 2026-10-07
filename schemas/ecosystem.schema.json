@@ -100,6 +100,34 @@
     "added": {
       "type": "string",
       "format": "date"
+    },
+    "verification": {
+      "type": "object",
+      "description": "How and when the repository state was last checked. last_commit and license come from a shallow clone; GitHub archive status is not visible to git.",
+      "required": [
+        "method",
+        "checked",
+        "reachable"
+      ],
+      "properties": {
+        "method": {
+          "type": "string"
+        },
+        "checked": {
+          "type": "string",
+          "format": "date"
+        },
+        "reachable": {
+          "type": "boolean"
+        },
+        "last_commit": {
+          "type": "string",
+          "format": "date"
+        },
+        "license": {
+          "type": "string"
+        }
+      }
     }
   }
 }

@@ -12,8 +12,15 @@
     "techniques": [],
     "summary": "Data for tactics, techniques and case studies of threats against AI systems.",
     "source_grade": "A",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-09-10",
+      "license": "Apache-2.0"
+    }
   },
   {
     "id": "ECO-002",
@@ -28,8 +35,15 @@
     "techniques": [],
     "summary": "Implementation of the ATLAS knowledge portal.",
     "source_grade": "A",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-09-15",
+      "license": "Apache-2.0"
+    }
   },
   {
     "id": "ECO-003",
@@ -44,8 +58,15 @@
     "techniques": [],
     "summary": "Risk taxonomy and security guidance for LLM applications.",
     "source_grade": "A",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-08-05",
+      "license": "CC"
+    }
   },
   {
     "id": "ECO-004",
@@ -60,8 +81,15 @@
     "techniques": [],
     "summary": "Security and privacy references for AI systems.",
     "source_grade": "A",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-10-07",
+      "license": "none-found"
+    }
   },
   {
     "id": "ECO-005",
@@ -76,8 +104,15 @@
     "techniques": [],
     "summary": "Threat library for AI threat modeling.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2025-06-20",
+      "license": "CC"
+    }
   },
   {
     "id": "ECO-006",
@@ -91,12 +126,20 @@
     "status": "listed",
     "techniques": [
       "LLMI-T001",
-      "LLMI-T002"
+      "LLMI-T002",
+      "LLMI-T003"
     ],
     "summary": "Taxonomy specialised in prompt injection.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-06-29",
+      "license": "CC"
+    }
   },
   {
     "id": "ECO-007",
@@ -111,8 +154,15 @@
     "techniques": [],
     "summary": "AI Incident Database: incidents and harms involving AI, broader than cybersecurity.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-10-05",
+      "license": "Apache-2.0"
+    }
   },
   {
     "id": "ECO-008",
@@ -127,12 +177,24 @@
     "techniques": [
       "LLMI-T001",
       "LLMI-T002",
-      "LLMI-T008"
+      "LLMI-T004",
+      "LLMI-T008",
+      "LLMI-T009",
+      "LLMI-T011",
+      "LLMI-T018",
+      "LLMI-T021"
     ],
     "summary": "Detection rules for agent threats, including injection, tools and MCP.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-10-07",
+      "license": "MIT"
+    }
   },
   {
     "id": "ECO-009",
@@ -147,8 +209,15 @@
     "techniques": [],
     "summary": "Tools, papers and projects on LLM security.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2025-08-20",
+      "license": "none-found"
+    }
   },
   {
     "id": "ECO-010",
@@ -166,8 +235,15 @@
     ],
     "summary": "Resources on prompt injection.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-09-11",
+      "license": "CC"
+    }
   },
   {
     "id": "ECO-011",
@@ -185,8 +261,15 @@
     ],
     "summary": "Practical and proposed defences against prompt injection.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2025-02-22",
+      "license": "none-found"
+    }
   },
   {
     "id": "ECO-012",
@@ -201,8 +284,15 @@
     "techniques": [],
     "summary": "Training, tools and material for LLM red teaming.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2025-09-04",
+      "license": "MIT"
+    }
   },
   {
     "id": "ECO-013",
@@ -219,8 +309,15 @@
     ],
     "summary": "Papers, code, datasets and evaluations of jailbreaks.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-10-07",
+      "license": "MIT"
+    }
   },
   {
     "id": "ECO-014",
@@ -235,8 +332,15 @@
     "techniques": [],
     "summary": "Tools and experiments on GPT and LLM security.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-07-24",
+      "license": "CC"
+    }
   },
   {
     "id": "ECO-015",
@@ -251,8 +355,15 @@
     "techniques": [],
     "summary": "Literature on safety, security and privacy of large models.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-09-02",
+      "license": "Apache-2.0"
+    }
   },
   {
     "id": "ECO-016",
@@ -267,8 +378,15 @@
     "techniques": [],
     "summary": "Security and operations for LLMs and agents.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-09-27",
+      "license": "none-found"
+    }
   },
   {
     "id": "ECO-017",
@@ -283,8 +401,15 @@
     "techniques": [],
     "summary": "Vulnerabilities, threats, tools and research on agents.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-07-11",
+      "license": "other"
+    }
   },
   {
     "id": "ECO-018",
@@ -299,8 +424,15 @@
     "techniques": [],
     "summary": "Agent security references.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-06-23",
+      "license": "none-found"
+    }
   },
   {
     "id": "ECO-019",
@@ -318,8 +450,15 @@
     ],
     "summary": "Attacks, defences and benchmarks for agent skills and tools.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-10-08",
+      "license": "none-found"
+    }
   },
   {
     "id": "ECO-020",
@@ -336,8 +475,15 @@
     ],
     "summary": "Security of agentic systems and MCP.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-09-27",
+      "license": "CC0"
+    }
   },
   {
     "id": "ECO-021",
@@ -354,8 +500,15 @@
     ],
     "summary": "LLM supply chain: papers, reports and CVEs.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2025-01-20",
+      "license": "CC"
+    }
   },
   {
     "id": "ECO-022",
@@ -370,8 +523,15 @@
     "techniques": [],
     "summary": "Broad catalogue of AI security tools and AI applied to security.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-10-05",
+      "license": "CC0"
+    }
   },
   {
     "id": "ECO-023",
@@ -386,8 +546,15 @@
     "techniques": [],
     "summary": "References on jailbreak, prompt injection and red teaming.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-07-29",
+      "license": "MIT"
+    }
   },
   {
     "id": "ECO-024",
@@ -402,8 +569,15 @@
     "techniques": [],
     "summary": "Guide to LLM fundamentals, attacks and defences.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2023-04-14",
+      "license": "none-found"
+    }
   },
   {
     "id": "ECO-025",
@@ -415,11 +589,30 @@
     "evidence_class": "assessment-tool",
     "priority": "start-here",
     "status": "listed",
-    "techniques": [],
+    "techniques": [
+      "LLMI-T001",
+      "LLMI-T002",
+      "LLMI-T003",
+      "LLMI-T004",
+      "LLMI-T005",
+      "LLMI-T008",
+      "LLMI-T012",
+      "LLMI-T013",
+      "LLMI-T014",
+      "LLMI-T016",
+      "LLMI-T017"
+    ],
     "summary": "LLM vulnerability scanner.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-10-07",
+      "license": "Apache-2.0"
+    }
   },
   {
     "id": "ECO-026",
@@ -431,11 +624,26 @@
     "evidence_class": "assessment-tool",
     "priority": "start-here",
     "status": "listed",
-    "techniques": [],
+    "techniques": [
+      "LLMI-T001",
+      "LLMI-T002",
+      "LLMI-T003",
+      "LLMI-T004",
+      "LLMI-T008",
+      "LLMI-T013",
+      "LLMI-T014"
+    ],
     "summary": "Framework for identifying risks in generative AI systems.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-10-07",
+      "license": "MIT"
+    }
   },
   {
     "id": "ECO-027",
@@ -447,11 +655,35 @@
     "evidence_class": "assessment-tool",
     "priority": "standard",
     "status": "listed",
-    "techniques": [],
+    "techniques": [
+      "LLMI-T001",
+      "LLMI-T002",
+      "LLMI-T003",
+      "LLMI-T004",
+      "LLMI-T005",
+      "LLMI-T006",
+      "LLMI-T007",
+      "LLMI-T008",
+      "LLMI-T009",
+      "LLMI-T012",
+      "LLMI-T013",
+      "LLMI-T014",
+      "LLMI-T015",
+      "LLMI-T017",
+      "LLMI-T018",
+      "LLMI-T019"
+    ],
     "summary": "Security evaluation and testing of prompts, agents and RAG.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-10-07",
+      "license": "MIT"
+    }
   },
   {
     "id": "ECO-028",
@@ -463,11 +695,28 @@
     "evidence_class": "assessment-tool",
     "priority": "standard",
     "status": "listed",
-    "techniques": [],
+    "techniques": [
+      "LLMI-T001",
+      "LLMI-T002",
+      "LLMI-T003",
+      "LLMI-T004",
+      "LLMI-T007",
+      "LLMI-T008",
+      "LLMI-T009",
+      "LLMI-T014",
+      "LLMI-T015"
+    ],
     "summary": "Red teaming for LLMs and AI agents.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-10-01",
+      "license": "Apache-2.0"
+    }
   },
   {
     "id": "ECO-029",
@@ -480,12 +729,20 @@
     "priority": "standard",
     "status": "listed",
     "techniques": [
+      "LLMI-T001",
       "LLMI-T003"
     ],
     "summary": "Automated fuzzing to find weaknesses and jailbreaks.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-02-06",
+      "license": "Apache-2.0"
+    }
   },
   {
     "id": "ECO-030",
@@ -497,11 +754,24 @@
     "evidence_class": "assessment-tool",
     "priority": "standard",
     "status": "listed",
-    "techniques": [],
+    "techniques": [
+      "LLMI-T001",
+      "LLMI-T003",
+      "LLMI-T004",
+      "LLMI-T008",
+      "LLMI-T013"
+    ],
     "summary": "LLM vulnerability scanner and red-teaming kit.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-09-22",
+      "license": "Apache-2.0"
+    }
   },
   {
     "id": "ECO-031",
@@ -515,12 +785,23 @@
     "status": "listed",
     "techniques": [
       "LLMI-T001",
-      "LLMI-T002"
+      "LLMI-T002",
+      "LLMI-T003",
+      "LLMI-T004",
+      "LLMI-T007",
+      "LLMI-T017"
     ],
     "summary": "Prompt injection evaluation kit.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-09-11",
+      "license": "Apache-2.0"
+    }
   },
   {
     "id": "ECO-032",
@@ -533,12 +814,30 @@
     "priority": "standard",
     "status": "listed",
     "techniques": [
-      "LLMI-T008"
+      "LLMI-T001",
+      "LLMI-T002",
+      "LLMI-T003",
+      "LLMI-T004",
+      "LLMI-T006",
+      "LLMI-T008",
+      "LLMI-T009",
+      "LLMI-T010",
+      "LLMI-T011",
+      "LLMI-T013",
+      "LLMI-T016",
+      "LLMI-T018"
     ],
     "summary": "Assessment of AI infrastructure, agents, skills, MCP and jailbreaks.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-10-07",
+      "license": "Apache-2.0"
+    }
   },
   {
     "id": "ECO-033",
@@ -550,11 +849,22 @@
     "evidence_class": "assessment-tool",
     "priority": "standard",
     "status": "listed",
-    "techniques": [],
+    "techniques": [
+      "LLMI-T001",
+      "LLMI-T003",
+      "LLMI-T004"
+    ],
     "summary": "Python framework for testing chatbots and GenAI systems.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-01-15",
+      "license": "CC"
+    }
   },
   {
     "id": "ECO-034",
@@ -566,11 +876,20 @@
     "evidence_class": "assessment-tool",
     "priority": "standard",
     "status": "listed",
-    "techniques": [],
+    "techniques": [
+      "LLMI-T003"
+    ],
     "summary": "Modular evaluation and red teaming of LLM applications.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-02-05",
+      "license": "Apache-2.0"
+    }
   },
   {
     "id": "ECO-035",
@@ -588,8 +907,15 @@
     ],
     "summary": "Research and automation of prompt injection against LLM-integrated applications.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2024-09-12",
+      "license": "Apache-2.0"
+    }
   },
   {
     "id": "ECO-036",
@@ -603,12 +929,29 @@
     "status": "listed",
     "techniques": [
       "LLMI-T001",
-      "LLMI-T003"
+      "LLMI-T002",
+      "LLMI-T003",
+      "LLMI-T004",
+      "LLMI-T007",
+      "LLMI-T008",
+      "LLMI-T011",
+      "LLMI-T012",
+      "LLMI-T013",
+      "LLMI-T015",
+      "LLMI-T016",
+      "LLMI-T017"
     ],
     "summary": "Test framework for injection, jailbreaks and adversarial attacks.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-10-03",
+      "license": "Apache-2.0"
+    }
   },
   {
     "id": "ECO-037",
@@ -621,13 +964,22 @@
     "priority": "start-here",
     "status": "listed",
     "techniques": [
+      "LLMI-T001",
       "LLMI-T002",
+      "LLMI-T004",
       "LLMI-T008"
     ],
     "summary": "Environment for evaluating attacks and defences of LLM agents.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-06-02",
+      "license": "MIT"
+    }
   },
   {
     "id": "ECO-038",
@@ -640,12 +992,20 @@
     "priority": "standard",
     "status": "archived-reported",
     "techniques": [
-      "LLMI-T002"
+      "LLMI-T002",
+      "LLMI-T004"
     ],
     "summary": "Benchmark for indirect prompt injection.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2024-04-15",
+      "license": "MIT"
+    }
   },
   {
     "id": "ECO-039",
@@ -663,8 +1023,15 @@
     ],
     "summary": "Benchmark of prompt injection attacks and defences.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-09-27",
+      "license": "MIT"
+    }
   },
   {
     "id": "ECO-040",
@@ -681,8 +1048,15 @@
     ],
     "summary": "Open benchmark of robustness against jailbreaks.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2025-03-31",
+      "license": "MIT"
+    }
   },
   {
     "id": "ECO-041",
@@ -695,12 +1069,20 @@
     "priority": "standard",
     "status": "listed",
     "techniques": [
+      "LLMI-T001",
       "LLMI-T003"
     ],
     "summary": "Standardised evaluation of automated red teaming and refusals.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2024-08-05",
+      "license": "MIT"
+    }
   },
   {
     "id": "ECO-042",
@@ -713,12 +1095,23 @@
     "priority": "standard",
     "status": "listed",
     "techniques": [
-      "LLMI-T008"
+      "LLMI-T001",
+      "LLMI-T002",
+      "LLMI-T006",
+      "LLMI-T008",
+      "LLMI-T009"
     ],
     "summary": "Agent Security Bench.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-09-29",
+      "license": "MIT"
+    }
   },
   {
     "id": "ECO-043",
@@ -732,12 +1125,20 @@
     "status": "listed",
     "techniques": [
       "LLMI-T001",
-      "LLMI-T002"
+      "LLMI-T002",
+      "LLMI-T003"
     ],
     "summary": "Benchmark for prompt injection detection systems.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-04-02",
+      "license": "MIT"
+    }
   },
   {
     "id": "ECO-044",
@@ -754,8 +1155,15 @@
     ],
     "summary": "Dataset and research on prompts and jailbreaks collected from public sources.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2024-12-24",
+      "license": "MIT"
+    }
   },
   {
     "id": "ECO-045",
@@ -768,12 +1176,20 @@
     "priority": "standard",
     "status": "listed",
     "techniques": [
-      "LLMI-T001"
+      "LLMI-T001",
+      "LLMI-T004"
     ],
     "summary": "Modular evaluation of LLM robustness to adversarial prompts.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2022-11-18",
+      "license": "MIT"
+    }
   },
   {
     "id": "ECO-046",
@@ -786,12 +1202,20 @@
     "priority": "standard",
     "status": "listed",
     "techniques": [
-      "LLMI-T002"
+      "LLMI-T002",
+      "LLMI-T026"
     ],
     "summary": "Attacks on LLM-integrated applications, including indirect injection.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2025-07-17",
+      "license": "MIT"
+    }
   },
   {
     "id": "ECO-047",
@@ -808,8 +1232,15 @@
     ],
     "summary": "Universal and transferable adversarial attacks on aligned models.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2024-08-01",
+      "license": "MIT"
+    }
   },
   {
     "id": "ECO-048",
@@ -826,8 +1257,15 @@
     ],
     "summary": "Research code associated with the PAIR method.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2024-12-01",
+      "license": "MIT"
+    }
   },
   {
     "id": "ECO-049",
@@ -844,8 +1282,15 @@
     ],
     "summary": "Automated jailbreaking of black-box models.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2024-03-08",
+      "license": "MIT"
+    }
   },
   {
     "id": "ECO-050",
@@ -862,8 +1307,15 @@
     ],
     "summary": "Automated exploration of jailbreak strategies.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2025-10-08",
+      "license": "MIT"
+    }
   },
   {
     "id": "ECO-051",
@@ -880,8 +1332,15 @@
     ],
     "summary": "Adaptive attacks on aligned LLMs.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2025-01-23",
+      "license": "MIT"
+    }
   },
   {
     "id": "ECO-052",
@@ -898,8 +1357,15 @@
     ],
     "summary": "Persuasion-based jailbreaks.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2025-10-17",
+      "license": "Apache-2.0"
+    }
   },
   {
     "id": "ECO-053",
@@ -916,8 +1382,15 @@
     ],
     "summary": "Research on ASCII-art-based attacks.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2025-08-14",
+      "license": "MIT"
+    }
   },
   {
     "id": "ECO-054",
@@ -934,8 +1407,15 @@
     ],
     "summary": "Research on jailbreaks through scenario construction.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2024-02-20",
+      "license": "MIT"
+    }
   },
   {
     "id": "ECO-055",
@@ -948,13 +1428,21 @@
     "priority": "standard",
     "status": "listed",
     "techniques": [
+      "LLMI-T006",
       "LLMI-T007",
       "LLMI-T009"
     ],
     "summary": "Poisoning of agent memory or knowledge bases.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-10-06",
+      "license": "MIT"
+    }
   },
   {
     "id": "ECO-056",
@@ -967,12 +1455,20 @@
     "priority": "standard",
     "status": "listed",
     "techniques": [
-      "LLMI-T002"
+      "LLMI-T002",
+      "LLMI-T025"
     ],
     "summary": "Multimodal prompt injection through image resizing attacks.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-02-19",
+      "license": "Apache-2.0"
+    }
   },
   {
     "id": "ECO-057",
@@ -990,8 +1486,15 @@
     ],
     "summary": "Code for the research 'Defeating Prompt Injections by Design'.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2025-06-20",
+      "license": "Apache-2.0"
+    }
   },
   {
     "id": "ECO-058",
@@ -1009,8 +1512,15 @@
     ],
     "summary": "Prompt injection detection.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2024-01-25",
+      "license": "Apache-2.0"
+    }
   },
   {
     "id": "ECO-059",
@@ -1028,8 +1538,15 @@
     ],
     "summary": "Security controls for LLM interactions.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-07-09",
+      "license": "MIT"
+    }
   },
   {
     "id": "ECO-060",
@@ -1047,8 +1564,15 @@
     ],
     "summary": "Detection of injections, jailbreaks and risky inputs.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2024-01-31",
+      "license": "Apache-2.0"
+    }
   },
   {
     "id": "ECO-061",
@@ -1060,11 +1584,20 @@
     "evidence_class": "defence-tool",
     "priority": "standard",
     "status": "listed",
-    "techniques": [],
+    "techniques": [
+      "LLMI-T020"
+    ],
     "summary": "Validation and controls for LLM applications.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-08-26",
+      "license": "Apache-2.0"
+    }
   },
   {
     "id": "ECO-062",
@@ -1081,8 +1614,15 @@
     ],
     "summary": "Moderation and risk assessment for jailbreaks and refusals.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2024-12-02",
+      "license": "Apache-2.0"
+    }
   },
   {
     "id": "ECO-063",
@@ -1100,8 +1640,15 @@
     ],
     "summary": "Model inspection against serialization risks.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-02-18",
+      "license": "Apache-2.0"
+    }
   },
   {
     "id": "ECO-064",
@@ -1114,13 +1661,23 @@
     "priority": "standard",
     "status": "listed",
     "techniques": [
+      "LLMI-T004",
       "LLMI-T008",
-      "LLMI-T011"
+      "LLMI-T011",
+      "LLMI-T017",
+      "LLMI-T018"
     ],
     "summary": "Scanner for agents, MCP servers and skills.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-10-06",
+      "license": "Apache-2.0"
+    }
   },
   {
     "id": "ECO-065",
@@ -1133,12 +1690,23 @@
     "priority": "standard",
     "status": "listed",
     "techniques": [
-      "LLMI-T008"
+      "LLMI-T002",
+      "LLMI-T004",
+      "LLMI-T008",
+      "LLMI-T011",
+      "LLMI-T018"
     ],
     "summary": "Threat and security inspection of MCP servers.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-10-07",
+      "license": "Apache-2.0"
+    }
   },
   {
     "id": "ECO-066",
@@ -1151,13 +1719,24 @@
     "priority": "standard",
     "status": "listed",
     "techniques": [
+      "LLMI-T002",
+      "LLMI-T004",
       "LLMI-T008",
-      "LLMI-T011"
+      "LLMI-T011",
+      "LLMI-T012",
+      "LLMI-T015"
     ],
     "summary": "Security scanner for agent skills.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-10-05",
+      "license": "Apache-2.0"
+    }
   },
   {
     "id": "ECO-067",
@@ -1172,12 +1751,24 @@
     "techniques": [
       "LLMI-T002",
       "LLMI-T004",
-      "LLMI-T011"
+      "LLMI-T008",
+      "LLMI-T009",
+      "LLMI-T011",
+      "LLMI-T012",
+      "LLMI-T016",
+      "LLMI-T018"
     ],
     "summary": "Skill analysis for injection, exfiltration and supply-chain risk.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-10-07",
+      "license": "Apache-2.0"
+    }
   },
   {
     "id": "ECO-068",
@@ -1190,12 +1781,22 @@
     "priority": "standard",
     "status": "listed",
     "techniques": [
-      "LLMI-T008"
+      "LLMI-T002",
+      "LLMI-T007",
+      "LLMI-T008",
+      "LLMI-T011"
     ],
     "summary": "Security scanner for agentic workflows.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2025-11-27",
+      "license": "Apache-2.0"
+    }
   },
   {
     "id": "ECO-069",
@@ -1207,11 +1808,25 @@
     "evidence_class": "assessment-tool",
     "priority": "standard",
     "status": "listed",
-    "techniques": [],
+    "techniques": [
+      "LLMI-T004",
+      "LLMI-T008",
+      "LLMI-T011",
+      "LLMI-T015",
+      "LLMI-T017",
+      "LLMI-T018"
+    ],
     "summary": "Forensic audit of local agents, logs, configuration and instructions.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-07-16",
+      "license": "MIT"
+    }
   },
   {
     "id": "ECO-070",
@@ -1224,12 +1839,25 @@
     "priority": "standard",
     "status": "listed",
     "techniques": [
-      "LLMI-T011"
+      "LLMI-T004",
+      "LLMI-T008",
+      "LLMI-T011",
+      "LLMI-T012",
+      "LLMI-T016",
+      "LLMI-T017",
+      "LLMI-T018"
     ],
     "summary": "Security analysis of agents and their supply chain.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-09-10",
+      "license": "Apache-2.0"
+    }
   },
   {
     "id": "ECO-071",
@@ -1242,12 +1870,20 @@
     "priority": "standard",
     "status": "listed",
     "techniques": [
+      "LLMI-T002",
       "LLMI-T008"
     ],
     "summary": "Deliberately vulnerable agent for training.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2025-06-25",
+      "license": "Apache-2.0"
+    }
   },
   {
     "id": "ECO-072",
@@ -1259,11 +1895,20 @@
     "evidence_class": "lab-exercise",
     "priority": "standard",
     "status": "listed",
-    "techniques": [],
+    "techniques": [
+      "LLMI-T001"
+    ],
     "summary": "Local LLM security challenges in CTF format.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2024-08-21",
+      "license": "GPL"
+    }
   },
   {
     "id": "ECO-073",
@@ -1275,11 +1920,22 @@
     "evidence_class": "lab-exercise",
     "priority": "standard",
     "status": "listed",
-    "techniques": [],
+    "techniques": [
+      "LLMI-T001",
+      "LLMI-T002",
+      "LLMI-T020"
+    ],
     "summary": "Security lab with scenarios related to the OWASP LLM Top 10.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-04-24",
+      "license": "Apache-2.0"
+    }
   },
   {
     "id": "ECO-074",
@@ -1297,8 +1953,15 @@
     ],
     "summary": "Introduction to prompt injection for engineers.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2023-08-25",
+      "license": "none-found"
+    }
   },
   {
     "id": "ECO-075",
@@ -1315,7 +1978,829 @@
     ],
     "summary": "Collection of system prompts and material on prompt injection and leakage.",
     "source_grade": "D",
-    "provenance": "user-supplied research, 2026-10-07; repository state not independently verified",
-    "added": "2026-10-07"
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-09-30",
+      "license": "MIT"
+    }
+  },
+  {
+    "id": "ECO-076",
+    "type": "ecosystem",
+    "name": "LLMInjector",
+    "owner": "anmolksachan",
+    "url": "https://github.com/anmolksachan/LLMInjector",
+    "section": "evaluation",
+    "evidence_class": "assessment-tool",
+    "priority": "standard",
+    "status": "listed",
+    "techniques": [
+      "LLMI-T001",
+      "LLMI-T002",
+      "LLMI-T004"
+    ],
+    "summary": "Burp Suite extension that automates prompt-injection tests against HTTP endpoints backed by LLM APIs.",
+    "source_grade": "D",
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-04-06",
+      "license": "Apache-2.0"
+    }
+  },
+  {
+    "id": "ECO-077",
+    "type": "ecosystem",
+    "name": "basilisk",
+    "owner": "regaan",
+    "url": "https://github.com/regaan/basilisk",
+    "section": "evaluation",
+    "evidence_class": "assessment-tool",
+    "priority": "standard",
+    "status": "listed",
+    "techniques": [
+      "LLMI-T001",
+      "LLMI-T002",
+      "LLMI-T003",
+      "LLMI-T004",
+      "LLMI-T005",
+      "LLMI-T007",
+      "LLMI-T008",
+      "LLMI-T009",
+      "LLMI-T015",
+      "LLMI-T019"
+    ],
+    "summary": "AI red-team CLI with direct, indirect and tool-abuse modules and genetic prompt evolution (AGPL-3.0).",
+    "source_grade": "D",
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-10-01",
+      "license": "AGPL-3.0"
+    }
+  },
+  {
+    "id": "ECO-078",
+    "type": "ecosystem",
+    "name": "LLMrecon",
+    "owner": "perplext",
+    "url": "https://github.com/perplext/LLMrecon",
+    "section": "evaluation",
+    "evidence_class": "assessment-tool",
+    "priority": "standard",
+    "status": "listed",
+    "techniques": [
+      "LLMI-T001",
+      "LLMI-T002",
+      "LLMI-T003",
+      "LLMI-T004",
+      "LLMI-T005",
+      "LLMI-T006",
+      "LLMI-T007",
+      "LLMI-T008",
+      "LLMI-T009",
+      "LLMI-T010",
+      "LLMI-T011",
+      "LLMI-T014",
+      "LLMI-T015",
+      "LLMI-T018",
+      "LLMI-T019"
+    ],
+    "summary": "LLM security testing framework organised around the OWASP LLM Top 10 with a large attack-module library.",
+    "source_grade": "D",
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-09-15",
+      "license": "MIT"
+    }
+  },
+  {
+    "id": "ECO-079",
+    "type": "ecosystem",
+    "name": "InjectionForgeProX",
+    "owner": "Mafifrizi",
+    "url": "https://github.com/Mafifrizi/InjectionForgeProX",
+    "section": "evaluation",
+    "evidence_class": "assessment-tool",
+    "priority": "standard",
+    "status": "listed",
+    "techniques": [
+      "LLMI-T001",
+      "LLMI-T004"
+    ],
+    "summary": "Framework for authorised prompt-injection and sensitive-data-leak testing of chatbots and agents.",
+    "source_grade": "D",
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-06-21",
+      "license": "MIT"
+    }
+  },
+  {
+    "id": "ECO-080",
+    "type": "ecosystem",
+    "name": "thc-BloodMiami",
+    "owner": "byt3n33dl3",
+    "url": "https://github.com/byt3n33dl3/thc-BloodMiami",
+    "section": "evaluation",
+    "evidence_class": "assessment-tool",
+    "priority": "standard",
+    "status": "listed",
+    "techniques": [
+      "LLMI-T001",
+      "LLMI-T020"
+    ],
+    "summary": "Pentest tool for AI chat interfaces covering prompt injection and classic web injection through the chat channel.",
+    "source_grade": "D",
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2025-11-14",
+      "license": "LGPL"
+    }
+  },
+  {
+    "id": "ECO-081",
+    "type": "ecosystem",
+    "name": "HostileShop",
+    "owner": "mikeperry-tor",
+    "url": "https://github.com/mikeperry-tor/HostileShop",
+    "section": "evaluation",
+    "evidence_class": "assessment-tool",
+    "priority": "standard",
+    "status": "listed",
+    "techniques": [
+      "LLMI-T002",
+      "LLMI-T008"
+    ],
+    "summary": "Adversarial shopping-agent environment that generates injections and evaluates prompt filters against agents.",
+    "source_grade": "D",
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2025-12-25",
+      "license": "MIT"
+    }
+  },
+  {
+    "id": "ECO-082",
+    "type": "ecosystem",
+    "name": "LLM_Sentinel",
+    "owner": "jasoncobra3",
+    "url": "https://github.com/jasoncobra3/LLM_Sentinel",
+    "section": "evaluation",
+    "evidence_class": "assessment-tool",
+    "priority": "standard",
+    "status": "listed",
+    "techniques": [
+      "LLMI-T001",
+      "LLMI-T003"
+    ],
+    "summary": "Single-turn red-team harness with a library of pre-written test prompts.",
+    "source_grade": "D",
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-03-05",
+      "license": "MIT"
+    }
+  },
+  {
+    "id": "ECO-083",
+    "type": "ecosystem",
+    "name": "Redteam_LLM_Injection_payloads",
+    "owner": "crazywifi",
+    "url": "https://github.com/crazywifi/Redteam_LLM_Injection_payloads",
+    "section": "attack-research",
+    "evidence_class": "prompt-corpus",
+    "priority": "standard",
+    "status": "listed",
+    "techniques": [
+      "LLMI-T001",
+      "LLMI-T002"
+    ],
+    "summary": "Large categorised prompt-injection corpus; use only as test inspiration, never as intelligence.",
+    "source_grade": "D",
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-05-11",
+      "license": "none-found"
+    }
+  },
+  {
+    "id": "ECO-084",
+    "type": "ecosystem",
+    "name": "AI-Prompt-Injection-Cheatsheet",
+    "owner": "nukIeer",
+    "url": "https://github.com/nukIeer/AI-Prompt-Injection-Cheatsheet",
+    "section": "attack-research",
+    "evidence_class": "prompt-corpus",
+    "priority": "standard",
+    "status": "listed",
+    "techniques": [
+      "LLMI-T001",
+      "LLMI-T002",
+      "LLMI-T007"
+    ],
+    "summary": "Cheatsheet of injection techniques against reasoning pipelines, tool use and RAG.",
+    "source_grade": "D",
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-06-04",
+      "license": "none-found"
+    }
+  },
+  {
+    "id": "ECO-085",
+    "type": "ecosystem",
+    "name": "prmptinj",
+    "owner": "2alf",
+    "url": "https://github.com/2alf/prmptinj",
+    "section": "attack-research",
+    "evidence_class": "prompt-corpus",
+    "priority": "standard",
+    "status": "listed",
+    "techniques": [
+      "LLMI-T001"
+    ],
+    "summary": "Prompt-injection payloads used in public injection challenges.",
+    "source_grade": "D",
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-01-09",
+      "license": "none-found"
+    }
+  },
+  {
+    "id": "ECO-086",
+    "type": "ecosystem",
+    "name": "how-to-test-for-prompt-injection",
+    "owner": "Autonoma-Tools",
+    "url": "https://github.com/Autonoma-Tools/how-to-test-for-prompt-injection",
+    "section": "lab",
+    "evidence_class": "prompt-corpus",
+    "priority": "standard",
+    "status": "listed",
+    "techniques": [
+      "LLMI-T001",
+      "LLMI-T004"
+    ],
+    "summary": "Test payload guide for jailbreak, system-prompt leakage and data exfiltration checks.",
+    "source_grade": "D",
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-07-28",
+      "license": "MIT"
+    }
+  },
+  {
+    "id": "ECO-087",
+    "type": "ecosystem",
+    "name": "LLM-INJECTION-POC",
+    "owner": "Insider77Circle",
+    "url": "https://github.com/Insider77Circle/LLM-INJECTION-POC",
+    "section": "attack-research",
+    "evidence_class": "research-technique",
+    "priority": "standard",
+    "status": "listed",
+    "techniques": [
+      "LLMI-T002",
+      "LLMI-T025"
+    ],
+    "summary": "Proof of concept for injection through uploaded files using hidden text and metadata poisoning.",
+    "source_grade": "D",
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2025-12-10",
+      "license": "none-found"
+    }
+  },
+  {
+    "id": "ECO-088",
+    "type": "ecosystem",
+    "name": "JailPrompter",
+    "owner": "Asstar-X",
+    "url": "https://github.com/Asstar-X/JailPrompter",
+    "section": "attack-research",
+    "evidence_class": "research-technique",
+    "priority": "standard",
+    "status": "listed",
+    "techniques": [
+      "LLMI-T003"
+    ],
+    "summary": "Research project on jailbreak structures with attack and defence examples.",
+    "source_grade": "D",
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-01-21",
+      "license": "none-found"
+    }
+  },
+  {
+    "id": "ECO-089",
+    "type": "ecosystem",
+    "name": "rag-prompt-injection-echoleak",
+    "owner": "shreyansbhatt",
+    "url": "https://github.com/shreyansbhatt/rag-prompt-injection-echoleak",
+    "section": "lab",
+    "evidence_class": "lab-exercise",
+    "priority": "standard",
+    "status": "listed",
+    "techniques": [
+      "LLMI-T002",
+      "LLMI-T007",
+      "LLMI-T020"
+    ],
+    "summary": "Lab reproducing an EchoLeak-style injection and exfiltration against a defended RAG application.",
+    "source_grade": "D",
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-06-07",
+      "license": "MIT"
+    }
+  },
+  {
+    "id": "ECO-090",
+    "type": "ecosystem",
+    "name": "llm-injection-guard",
+    "owner": "maheshmakvana",
+    "url": "https://github.com/maheshmakvana/llm-injection-guard",
+    "section": "defence",
+    "evidence_class": "defence-tool",
+    "priority": "standard",
+    "status": "listed",
+    "techniques": [
+      "LLMI-T001",
+      "LLMI-T002"
+    ],
+    "summary": "Python library for detecting, blocking and auditing prompt-injection attempts in LLM apps and agents.",
+    "source_grade": "D",
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-04-10",
+      "license": "none-found"
+    }
+  },
+  {
+    "id": "ECO-091",
+    "type": "ecosystem",
+    "name": "Anti-LLM-Injection-Gateway",
+    "owner": "rana-m-ahmed",
+    "url": "https://github.com/rana-m-ahmed/Anti-LLM-Injection-Gateway",
+    "section": "defence",
+    "evidence_class": "defence-tool",
+    "priority": "standard",
+    "status": "listed",
+    "techniques": [
+      "LLMI-T001",
+      "LLMI-T002"
+    ],
+    "summary": "Lightweight pre-inference gateway applying block, mask or allow decisions to injection indicators.",
+    "source_grade": "D",
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-09-13",
+      "license": "none-found"
+    }
+  },
+  {
+    "id": "ECO-092",
+    "type": "ecosystem",
+    "name": "Guardrails",
+    "owner": "NVIDIA-NeMo",
+    "url": "https://github.com/NVIDIA-NeMo/Guardrails",
+    "section": "defence",
+    "evidence_class": "defence-tool",
+    "priority": "standard",
+    "status": "listed",
+    "techniques": [
+      "LLMI-T001",
+      "LLMI-T002",
+      "LLMI-T004"
+    ],
+    "summary": "Programmable guardrails toolkit for dialogue rails, PII masking, fact checking and injection blocking.",
+    "source_grade": "D",
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-10-07",
+      "license": "Apache-2.0"
+    }
+  },
+  {
+    "id": "ECO-093",
+    "type": "ecosystem",
+    "name": "BinaryShield",
+    "owner": "microsoft",
+    "url": "https://github.com/microsoft/BinaryShield",
+    "section": "defence",
+    "evidence_class": "detection-content",
+    "priority": "standard",
+    "status": "listed",
+    "techniques": [
+      "LLMI-T001",
+      "LLMI-T003",
+      "LLMI-T019"
+    ],
+    "summary": "Research on privacy-preserving sharing of LLM threat fingerprints across services.",
+    "source_grade": "D",
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-08-03",
+      "license": "MIT"
+    }
+  },
+  {
+    "id": "ECO-094",
+    "type": "ecosystem",
+    "name": "llm-threat-triage",
+    "owner": "OMGstacks",
+    "url": "https://github.com/OMGstacks/llm-threat-triage",
+    "section": "defence",
+    "evidence_class": "detection-content",
+    "priority": "standard",
+    "status": "listed",
+    "techniques": [
+      "LLMI-T001",
+      "LLMI-T002",
+      "LLMI-T003",
+      "LLMI-T004",
+      "LLMI-T008"
+    ],
+    "summary": "Python and SQL triage toolkit flagging injection, jailbreak and exfiltration mapped to OWASP LLM Top 10.",
+    "source_grade": "D",
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-08-17",
+      "license": "MIT"
+    }
+  },
+  {
+    "id": "ECO-095",
+    "type": "ecosystem",
+    "name": "mcp-injection-experiments",
+    "owner": "invariantlabs-ai",
+    "url": "https://github.com/invariantlabs-ai/mcp-injection-experiments",
+    "section": "agent-security",
+    "evidence_class": "research-technique",
+    "priority": "standard",
+    "status": "listed",
+    "techniques": [
+      "LLMI-T004",
+      "LLMI-T008",
+      "LLMI-T011",
+      "LLMI-T021"
+    ],
+    "summary": "Experiments on MCP tool poisoning, shadowing and exfiltration via malicious tool descriptions.",
+    "source_grade": "D",
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2025-04-10",
+      "license": "none-found"
+    }
+  },
+  {
+    "id": "ECO-096",
+    "type": "ecosystem",
+    "name": "LLM-MCP-Security-Field-Guide",
+    "owner": "pathakabhi24",
+    "url": "https://github.com/pathakabhi24/LLM-MCP-Security-Field-Guide",
+    "section": "catalog",
+    "evidence_class": "curated-list",
+    "priority": "standard",
+    "status": "listed",
+    "techniques": [
+      "LLMI-T021"
+    ],
+    "summary": "Field guide to LLM and MCP security aligned with OWASP.",
+    "source_grade": "D",
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-04-19",
+      "license": "none-found"
+    }
+  },
+  {
+    "id": "ECO-097",
+    "type": "ecosystem",
+    "name": "awesome-mcp-security",
+    "owner": "Puliczek",
+    "url": "https://github.com/Puliczek/awesome-mcp-security",
+    "section": "catalog",
+    "evidence_class": "curated-list",
+    "priority": "standard",
+    "status": "listed",
+    "techniques": [
+      "LLMI-T021"
+    ],
+    "summary": "Curated MCP security resources: specification guidance, audit checklists and scanners.",
+    "source_grade": "D",
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-03-03",
+      "license": "none-found"
+    }
+  },
+  {
+    "id": "ECO-098",
+    "type": "ecosystem",
+    "name": "ai-llm-red-team-handbook",
+    "owner": "Shiva108",
+    "url": "https://github.com/Shiva108/ai-llm-red-team-handbook",
+    "section": "catalog",
+    "evidence_class": "curated-list",
+    "priority": "standard",
+    "status": "listed",
+    "techniques": [],
+    "summary": "AI/LLM red-team field handbook with methodology and test material.",
+    "source_grade": "D",
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-05-08",
+      "license": "CC"
+    }
+  },
+  {
+    "id": "ECO-099",
+    "type": "ecosystem",
+    "name": "Awesome-LLM-Safety",
+    "owner": "ydyjya",
+    "url": "https://github.com/ydyjya/Awesome-LLM-Safety",
+    "section": "catalog",
+    "evidence_class": "curated-list",
+    "priority": "standard",
+    "status": "listed",
+    "techniques": [],
+    "summary": "Papers, tutorials and talks on LLM safety and alignment.",
+    "source_grade": "D",
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-07-12",
+      "license": "none-found"
+    }
+  },
+  {
+    "id": "ECO-100",
+    "type": "ecosystem",
+    "name": "PayloadsAllTheThings",
+    "owner": "swisskyrepo",
+    "url": "https://github.com/swisskyrepo/PayloadsAllTheThings",
+    "section": "catalog",
+    "evidence_class": "prompt-corpus",
+    "priority": "standard",
+    "status": "listed",
+    "techniques": [
+      "LLMI-T001",
+      "LLMI-T002"
+    ],
+    "summary": "Offensive payload reference; its Prompt Injection section documents direct and indirect vectors.",
+    "source_grade": "D",
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-08-27",
+      "license": "MIT"
+    }
+  },
+  {
+    "id": "ECO-101",
+    "type": "ecosystem",
+    "name": "Awesome-AI-OSINT",
+    "owner": "ubikron",
+    "url": "https://github.com/ubikron/Awesome-AI-OSINT",
+    "section": "catalog",
+    "evidence_class": "curated-list",
+    "priority": "standard",
+    "status": "listed",
+    "techniques": [],
+    "summary": "AI tools for OSINT: geolocation, reverse image, dork generation and AI-assisted search.",
+    "source_grade": "D",
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-05-05",
+      "license": "none-found"
+    }
+  },
+  {
+    "id": "ECO-102",
+    "type": "ecosystem",
+    "name": "ai_osint",
+    "owner": "7WaySecurity",
+    "url": "https://github.com/7WaySecurity/ai_osint",
+    "section": "catalog",
+    "evidence_class": "curated-list",
+    "priority": "standard",
+    "status": "listed",
+    "techniques": [],
+    "summary": "Resources mixing OSINT and AI, including Sigma rules and threat-intel tooling.",
+    "source_grade": "D",
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-06-19",
+      "license": "MIT"
+    }
+  },
+  {
+    "id": "ECO-103",
+    "type": "ecosystem",
+    "name": "OpenOSINT",
+    "owner": "OpenOSINT",
+    "url": "https://github.com/OpenOSINT/OpenOSINT",
+    "section": "catalog",
+    "evidence_class": "assessment-tool",
+    "priority": "standard",
+    "status": "listed",
+    "techniques": [],
+    "summary": "LLM agent and MCP server chaining OSINT collectors with an entity graph; analyst tooling, not threat data.",
+    "source_grade": "D",
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-10-06",
+      "license": "MIT"
+    }
+  },
+  {
+    "id": "ECO-104",
+    "type": "ecosystem",
+    "name": "AI-Red-Teaming-Playground-Labs",
+    "owner": "microsoft",
+    "url": "https://github.com/microsoft/AI-Red-Teaming-Playground-Labs",
+    "section": "lab",
+    "evidence_class": "lab-exercise",
+    "priority": "standard",
+    "status": "listed",
+    "techniques": [
+      "LLMI-T001",
+      "LLMI-T002",
+      "LLMI-T003"
+    ],
+    "summary": "Hands-on AI red-teaming challenges used in Microsoft training, including injection scenarios.",
+    "source_grade": "D",
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2025-10-07",
+      "license": "MIT"
+    }
+  },
+  {
+    "id": "ECO-105",
+    "type": "ecosystem",
+    "name": "ai-redteam-journey",
+    "owner": "Wisdomajoku",
+    "url": "https://github.com/Wisdomajoku/ai-redteam-journey",
+    "section": "lab",
+    "evidence_class": "lab-exercise",
+    "priority": "standard",
+    "status": "listed",
+    "techniques": [
+      "LLMI-T001"
+    ],
+    "summary": "Learning log for AI red teaming with Burp Suite based LLM testing notes.",
+    "source_grade": "D",
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-09-15",
+      "license": "none-found"
+    }
+  },
+  {
+    "id": "ECO-106",
+    "type": "ecosystem",
+    "name": "www-project-ai-testing-guide",
+    "owner": "OWASP",
+    "url": "https://github.com/OWASP/www-project-ai-testing-guide",
+    "section": "knowledge",
+    "evidence_class": "framework-data",
+    "priority": "start-here",
+    "status": "listed",
+    "techniques": [],
+    "summary": "OWASP AI Testing Guide: 32 test procedures across application, data, infrastructure and model layers.",
+    "source_grade": "A",
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-07",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-07",
+      "reachable": true,
+      "last_commit": "2026-06-01",
+      "license": "other"
+    }
   }
 ]

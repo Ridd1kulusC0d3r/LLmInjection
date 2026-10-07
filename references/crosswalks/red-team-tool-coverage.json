@@ -1,0 +1,2037 @@
+{
+  "generated": "2026-10-07",
+  "provenance": "13 red-team and evaluation repositories",
+  "note": "Derived from shallow clones read on 2026-10-07. Names and identifiers only; descriptions are paraphrased. Discovery and test-design material, not evidence of in-the-wild activity.",
+  "tools": [
+    {
+      "repo": "NVIDIA__garak",
+      "license": "Apache-2.0",
+      "last_commit": "2026-10-07",
+      "module_kind": "probe modules (garak/probes)",
+      "count": 41,
+      "modules": [
+        "adaptive_attacks",
+        "agent_breaker",
+        "ansiescape",
+        "apikey",
+        "atkgen",
+        "audio",
+        "av_spam_scanning",
+        "badchars",
+        "continuation",
+        "dan",
+        "divergence",
+        "doctor",
+        "donotanswer",
+        "dra",
+        "encoding",
+        "exploitation",
+        "fileformats",
+        "fitd",
+        "glitch",
+        "goat",
+        "goodside",
+        "grandma",
+        "latentinjection",
+        "leakreplay",
+        "lmrc",
+        "malwaregen",
+        "misleading",
+        "packagehallucination",
+        "phrasing",
+        "promptinject",
+        "propile",
+        "realtoxicityprompts",
+        "sata",
+        "smuggling",
+        "snowball",
+        "suffix",
+        "sysprompt_extraction",
+        "tap",
+        "topic",
+        "visual_jailbreak",
+        "web_injection"
+      ]
+    },
+    {
+      "repo": "microsoft__PyRIT",
+      "license": "MIT",
+      "last_commit": "2026-10-07",
+      "module_kind": "converters + attack strategies + scorers + AIRT scenarios",
+      "count": 148,
+      "modules": [
+        "attack/compound/sequential_attack",
+        "attack/multi_turn/chunked_request",
+        "attack/multi_turn/crescendo",
+        "attack/multi_turn/multi_prompt_sending",
+        "attack/multi_turn/pair",
+        "attack/multi_turn/red_teaming",
+        "attack/multi_turn/simulated_conversation",
+        "attack/multi_turn/tree_of_attacks",
+        "attack/single_turn/many_shot_jailbreak",
+        "attack/single_turn/prompt_sending",
+        "attack/single_turn/skeleton_key",
+        "attack/streaming/barge_in",
+        "converter/acrostic_converter",
+        "converter/add_image_text_converter",
+        "converter/add_image_to_video_converter",
+        "converter/add_text_image_converter",
+        "converter/ansi_escape",
+        "converter/arabic_presentation_form_converter",
+        "converter/arabizi_converter",
+        "converter/ascii_art_converter",
+        "converter/ask_to_decode_converter",
+        "converter/atbash_converter",
+        "converter/audio_echo_converter",
+        "converter/audio_frequency_converter",
+        "converter/audio_speed_converter",
+        "converter/audio_volume_converter",
+        "converter/audio_white_noise_converter",
+        "converter/azure_speech_audio_to_text_converter",
+        "converter/azure_speech_text_to_audio_converter",
+        "converter/base2048_converter",
+        "converter/base64_converter",
+        "converter/bidi_converter",
+        "converter/bijection_converter",
+        "converter/bin_ascii_converter",
+        "converter/binary_converter",
+        "converter/braille_converter",
+        "converter/caesar_converter",
+        "converter/char_noise_converter",
+        "converter/character_space_converter",
+        "converter/charswap_attack_converter",
+        "converter/code_attack_converter",
+        "converter/codechameleon_converter",
+        "converter/colloquial_wordswap_converter",
+        "converter/decomposition_converter",
+        "converter/denylist_converter",
+        "converter/diacritic_converter",
+        "converter/ecoji_converter",
+        "converter/emoji_converter",
+        "converter/first_letter_converter",
+        "converter/flip_converter",
+        "converter/grid_composite_converter",
+        "converter/image_color_saturation_converter",
+        "converter/image_compression_converter",
+        "converter/image_overlay_converter",
+        "converter/image_prompt_style_converter",
+        "converter/image_resizing_converter",
+        "converter/image_rotation_converter",
+        "converter/insert_punctuation_converter",
+        "converter/ipa_converter",
+        "converter/json_string_converter",
+        "converter/leetspeak_converter",
+        "converter/llm_generic_text_converter",
+        "converter/malicious_question_generator_converter",
+        "converter/math_obfuscation_converter",
+        "converter/math_prompt_converter",
+        "converter/morse_converter",
+        "converter/nato_converter",
+        "converter/negation_trap_converter",
+        "converter/noise_converter",
+        "converter/pdf_converter",
+        "converter/persuasion_converter",
+        "converter/pinyin_converter",
+        "converter/policy_puppetry_converter",
+        "converter/prompt_template_converter",
+        "converter/puzzled",
+        "converter/qr_code_converter",
+        "converter/random_capital_letters_converter",
+        "converter/random_translation_converter",
+        "converter/repeat_token_converter",
+        "converter/rot13_converter",
+        "converter/sata_masking_converter",
+        "converter/scientific_translation_converter",
+        "converter/search_replace_converter",
+        "converter/selective_text_converter",
+        "converter/string_join_converter",
+        "converter/suffix_append_converter",
+        "converter/superscript_converter",
+        "converter/task_framing_converter",
+        "converter/tatweel_converter",
+        "converter/template_segment_converter",
+        "converter/tense_converter",
+        "converter/text_jailbreak_converter",
+        "converter/token_smuggling",
+        "converter/tone_converter",
+        "converter/toxic_sentence_generator_converter",
+        "converter/translation_converter",
+        "converter/transparency_attack_converter",
+        "converter/unicode_confusable_converter",
+        "converter/unicode_replacement_converter",
+        "converter/unicode_sub_converter",
+        "converter/url_converter",
+        "converter/variation_converter",
+        "converter/vigenere_converter",
+        "converter/word_doc_converter",
+        "converter/word_level_converter",
+        "converter/zalgo_converter",
+        "converter/zero_width_converter",
+        "scenario/airt/cyber",
+        "scenario/airt/jailbreak",
+        "scenario/airt/leakage",
+        "scenario/airt/multilingual",
+        "scenario/airt/psychosocial",
+        "scenario/airt/rapid_response",
+        "scenario/airt/scam",
+        "scorer/float_scale/audio_float_scale_scorer",
+        "scorer/float_scale/azure_content_filter_scorer",
+        "scorer/float_scale/insecure_code_scorer",
+        "scorer/float_scale/likert_scale",
+        "scorer/float_scale/local_violence_classifier_scorer",
+        "scorer/float_scale/numeric_scale",
+        "scorer/float_scale/plagiarism_scorer",
+        "scorer/float_scale/roblox_pii_scorer",
+        "scorer/float_scale/self_ask_general_float_scale_scorer",
+        "scorer/float_scale/self_ask_likert_scorer",
+        "scorer/float_scale/self_ask_scale_scorer",
+        "scorer/float_scale/system_prompt_extraction_scorer",
+        "scorer/float_scale/video_float_scale_scorer",
+        "scorer/true_false/audio_true_false_scorer",
+        "scorer/true_false/decoding_scorer",
+        "scorer/true_false/gandalf_scorer",
+        "scorer/true_false/garak_exploitation_scorer",
+        "scorer/true_false/llamaguard_scorer",
+        "scorer/true_false/local_refusal_classifier_scorer",
+        "scorer/true_false/manual_scorer",
+        "scorer/true_false/message_tool_call_scorer",
+        "scorer/true_false/otel_tool_call_scorer",
+        "scorer/true_false/prompt_shield_scorer",
+        "scorer/true_false/question_answer_scorer",
+        "scorer/true_false/regex",
+        "scorer/true_false/self_ask_category_scorer",
+        "scorer/true_false/self_ask_general_true_false_scorer",
+        "scorer/true_false/self_ask_question_answer_scorer",
+        "scorer/true_false/self_ask_refusal_scorer",
+        "scorer/true_false/self_ask_true_false_scorer",
+        "scorer/true_false/shieldgemma_scorer",
+        "scorer/true_false/substring_scorer",
+        "scorer/true_false/video_true_false_scorer",
+        "scorer/true_false/wildguard_scorer"
+      ]
+    },
+    {
+      "repo": "promptfoo__promptfoo",
+      "license": "MIT",
+      "last_commit": "2026-10-07",
+      "module_kind": "redteam plugins",
+      "count": 173,
+      "modules": [
+        "plugin:aegis",
+        "plugin:agentic:memory-poisoning",
+        "plugin:ascii-smuggling",
+        "plugin:beavertails",
+        "plugin:bfla",
+        "plugin:bias",
+        "plugin:bias:age",
+        "plugin:bias:disability",
+        "plugin:bias:gender",
+        "plugin:bias:race",
+        "plugin:bola",
+        "plugin:cca",
+        "plugin:coding-agent:automation-poisoning",
+        "plugin:coding-agent:delayed-ci-exfil",
+        "plugin:coding-agent:generated-vulnerability",
+        "plugin:coding-agent:network-egress-bypass",
+        "plugin:coding-agent:procfs-credential-read",
+        "plugin:coding-agent:repo-prompt-injection",
+        "plugin:coding-agent:sandbox-read-escape",
+        "plugin:coding-agent:sandbox-write-escape",
+        "plugin:coding-agent:secret-env-read",
+        "plugin:coding-agent:secret-file-read",
+        "plugin:coding-agent:steganographic-exfil",
+        "plugin:coding-agent:terminal-output-injection",
+        "plugin:coding-agent:verifier-sabotage",
+        "plugin:competitors",
+        "plugin:contracts",
+        "plugin:coppa",
+        "plugin:cross-session-leak",
+        "plugin:cyberseceval",
+        "plugin:data-exfil",
+        "plugin:debug-access",
+        "plugin:default",
+        "plugin:divergent-repetition",
+        "plugin:donotanswer",
+        "plugin:ecommerce",
+        "plugin:ecommerce:compliance-bypass",
+        "plugin:ecommerce:order-fraud",
+        "plugin:ecommerce:pci-dss",
+        "plugin:ecommerce:price-manipulation",
+        "plugin:excessive-agency",
+        "plugin:ferpa",
+        "plugin:financial",
+        "plugin:financial:calculation-error",
+        "plugin:financial:compliance-violation",
+        "plugin:financial:confidential-disclosure",
+        "plugin:financial:counterfactual",
+        "plugin:financial:data-leakage",
+        "plugin:financial:defamation",
+        "plugin:financial:hallucination",
+        "plugin:financial:impartiality",
+        "plugin:financial:japan-fiea-suitability",
+        "plugin:financial:misconduct",
+        "plugin:financial:sox-compliance",
+        "plugin:financial:sycophancy",
+        "plugin:foundation",
+        "plugin:goal-misalignment",
+        "plugin:guardrails-eval",
+        "plugin:hallucination",
+        "plugin:harmbench",
+        "plugin:harmful",
+        "plugin:harmful:chemical-biological-weapons",
+        "plugin:harmful:child-exploitation",
+        "plugin:harmful:copyright-violations",
+        "plugin:harmful:cybercrime",
+        "plugin:harmful:cybercrime:malicious-code",
+        "plugin:harmful:graphic-content",
+        "plugin:harmful:harassment-bullying",
+        "plugin:harmful:hate",
+        "plugin:harmful:illegal-activities",
+        "plugin:harmful:illegal-drugs",
+        "plugin:harmful:illegal-drugs:meth",
+        "plugin:harmful:indiscriminate-weapons",
+        "plugin:harmful:insults",
+        "plugin:harmful:intellectual-property",
+        "plugin:harmful:misinformation-disinformation",
+        "plugin:harmful:non-violent-crime",
+        "plugin:harmful:privacy",
+        "plugin:harmful:privacy-violations",
+        "plugin:harmful:profanity",
+        "plugin:harmful:radicalization",
+        "plugin:harmful:self-harm",
+        "plugin:harmful:sex-crime",
+        "plugin:harmful:sexual-content",
+        "plugin:harmful:specialized-advice",
+        "plugin:harmful:unsafe-practices",
+        "plugin:harmful:violent-crime",
+        "plugin:harmful:weapons:ied",
+        "plugin:hijacking",
+        "plugin:imitation",
+        "plugin:indirect-prompt-injection",
+        "plugin:insurance",
+        "plugin:insurance:coverage-discrimination",
+        "plugin:insurance:data-disclosure",
+        "plugin:insurance:network-misinformation",
+        "plugin:insurance:phi-disclosure",
+        "plugin:intent",
+        "plugin:mcp",
+        "plugin:medical",
+        "plugin:medical:anchoring-bias",
+        "plugin:medical:fda:ai-disclosure",
+        "plugin:medical:fda:cyber-access-control",
+        "plugin:medical:fda:cyber-audit-tampering",
+        "plugin:medical:hallucination",
+        "plugin:medical:incorrect-knowledge",
+        "plugin:medical:off-label-use",
+        "plugin:medical:prioritization-error",
+        "plugin:medical:sycophancy",
+        "plugin:model-identification",
+        "plugin:off-topic",
+        "plugin:overreliance",
+        "plugin:pharmacy",
+        "plugin:pharmacy:controlled-substance-compliance",
+        "plugin:pharmacy:dosage-calculation",
+        "plugin:pharmacy:drug-interaction",
+        "plugin:pii",
+        "plugin:pii:api-db",
+        "plugin:pii:direct",
+        "plugin:pii:session",
+        "plugin:pii:social",
+        "plugin:pliny",
+        "plugin:policy",
+        "plugin:politics",
+        "plugin:prompt-extraction",
+        "plugin:rag-document-exfiltration",
+        "plugin:rag-poisoning",
+        "plugin:rag-source-attribution",
+        "plugin:rbac",
+        "plugin:realestate",
+        "plugin:realestate:accessibility-discrimination",
+        "plugin:realestate:advertising-discrimination",
+        "plugin:realestate:discriminatory-listings",
+        "plugin:realestate:fair-housing-discrimination",
+        "plugin:realestate:lending-discrimination",
+        "plugin:realestate:source-of-income",
+        "plugin:realestate:steering",
+        "plugin:realestate:valuation-bias",
+        "plugin:reasoning-dos",
+        "plugin:religion",
+        "plugin:replicate:moderation:meta/llama-guard-3-8b:146d1220d447cdcc639bc17c5f6137416042abee6ae153a2615e6ef5749205c8",
+        "plugin:replicate:moderation:meta/llama-guard-4-12b",
+        "plugin:scam_fraud_creation",
+        "plugin:shell-injection",
+        "plugin:special-token-injection",
+        "plugin:sql-injection",
+        "plugin:ssrf",
+        "plugin:system-prompt-override",
+        "plugin:teen-safety",
+        "plugin:teen-safety:age-restricted-goods-and-services",
+        "plugin:teen-safety:dangerous-content",
+        "plugin:teen-safety:dangerous-roleplay",
+        "plugin:teen-safety:harmful-body-ideals",
+        "plugin:telecom",
+        "plugin:telecom:accessibility-violation",
+        "plugin:telecom:account-takeover",
+        "plugin:telecom:billing-misinformation",
+        "plugin:telecom:coverage-misinformation",
+        "plugin:telecom:cpni-disclosure",
+        "plugin:telecom:e911-misinformation",
+        "plugin:telecom:fraud-enablement",
+        "plugin:telecom:law-enforcement-request-handling",
+        "plugin:telecom:location-disclosure",
+        "plugin:telecom:porting-misinformation",
+        "plugin:telecom:tcpa-violation",
+        "plugin:telecom:unauthorized-changes",
+        "plugin:tool-discovery",
+        "plugin:toxic-chat",
+        "plugin:unsafebench",
+        "plugin:unverifiable-claims",
+        "plugin:vlguard",
+        "plugin:vlsu",
+        "plugin:wordplay",
+        "plugin:xstest"
+      ]
+    },
+    {
+      "repo": "promptfoo__promptfoo",
+      "license": "MIT",
+      "last_commit": "2026-10-07",
+      "module_kind": "redteam strategies",
+      "count": 36,
+      "modules": [
+        "strategy:audio",
+        "strategy:authoritative-markup-injection",
+        "strategy:base64",
+        "strategy:basic",
+        "strategy:best-of-n",
+        "strategy:camelcase",
+        "strategy:citation",
+        "strategy:crescendo",
+        "strategy:custom",
+        "strategy:emoji",
+        "strategy:gcg",
+        "strategy:goat",
+        "strategy:hex",
+        "strategy:homoglyph",
+        "strategy:image",
+        "strategy:indirect-web-pwn",
+        "strategy:jailbreak",
+        "strategy:jailbreak-templates",
+        "strategy:jailbreak:composite",
+        "strategy:jailbreak:goblin",
+        "strategy:jailbreak:hydra",
+        "strategy:jailbreak:likert",
+        "strategy:jailbreak:meta",
+        "strategy:jailbreak:tree",
+        "strategy:layer",
+        "strategy:leetspeak",
+        "strategy:math-prompt",
+        "strategy:mischievous-user",
+        "strategy:morse",
+        "strategy:multilingual",
+        "strategy:other-encodings",
+        "strategy:piglatin",
+        "strategy:prompt-injection",
+        "strategy:retry",
+        "strategy:rot13",
+        "strategy:video"
+      ]
+    },
+    {
+      "repo": "confident-ai__deepteam",
+      "license": "Apache-2.0",
+      "last_commit": "2026-10-01",
+      "module_kind": "vulnerabilities",
+      "count": 37,
+      "modules": [
+        "vuln:agent_identity_abuse",
+        "vuln:autonomous_agent_drift",
+        "vuln:bfla",
+        "vuln:bias",
+        "vuln:bola",
+        "vuln:child_protection",
+        "vuln:competition",
+        "vuln:cross_context_retrieval",
+        "vuln:custom",
+        "vuln:debug_access",
+        "vuln:ethics",
+        "vuln:excessive_agency",
+        "vuln:exploit_tool_agent",
+        "vuln:external_system_abuse",
+        "vuln:fairness",
+        "vuln:goal_theft",
+        "vuln:graphic_content",
+        "vuln:hallucination",
+        "vuln:illegal_activity",
+        "vuln:indirect_instruction",
+        "vuln:insecure_inter_agent_communication",
+        "vuln:intellectual_property",
+        "vuln:misinformation",
+        "vuln:personal_safety",
+        "vuln:pii_leakage",
+        "vuln:prompt_leakage",
+        "vuln:rbac",
+        "vuln:recursive_hijacking",
+        "vuln:robustness",
+        "vuln:shell_injection",
+        "vuln:sql_injection",
+        "vuln:ssrf",
+        "vuln:system_reconnaissance",
+        "vuln:tool_metadata_poisoning",
+        "vuln:tool_orchestration_abuse",
+        "vuln:toxicity",
+        "vuln:unexpected_code_execution"
+      ]
+    },
+    {
+      "repo": "confident-ai__deepteam",
+      "license": "Apache-2.0",
+      "last_commit": "2026-10-01",
+      "module_kind": "attacks",
+      "count": 28,
+      "modules": [
+        "attack:multi_turn/bad_likert_judge",
+        "attack:multi_turn/crescendo_jailbreaking",
+        "attack:multi_turn/linear_jailbreaking",
+        "attack:multi_turn/progression",
+        "attack:multi_turn/sequential_break",
+        "attack:multi_turn/tree_jailbreaking",
+        "attack:single_turn/adversarial_poetry",
+        "attack:single_turn/authority_escalation",
+        "attack:single_turn/base64",
+        "attack:single_turn/character_stream",
+        "attack:single_turn/context_flooding",
+        "attack:single_turn/context_poisoning",
+        "attack:single_turn/embedded_instruction_json",
+        "attack:single_turn/emotional_manipulation",
+        "attack:single_turn/goal_redirection",
+        "attack:single_turn/gray_box",
+        "attack:single_turn/input_bypass",
+        "attack:single_turn/leetspeak",
+        "attack:single_turn/math_problem",
+        "attack:single_turn/multilingual",
+        "attack:single_turn/permission_escalation",
+        "attack:single_turn/prompt_injection",
+        "attack:single_turn/prompt_probing",
+        "attack:single_turn/roleplay",
+        "attack:single_turn/rot13",
+        "attack:single_turn/semantic_manipulation",
+        "attack:single_turn/synthetic_context_injection",
+        "attack:single_turn/system_override"
+      ]
+    },
+    {
+      "repo": "cyberark__FuzzyAI",
+      "license": "Apache-2.0",
+      "last_commit": "2026-02-06",
+      "module_kind": "attack handlers (src/fuzzyai/handlers/attacks)",
+      "count": 20,
+      "modules": [
+        "actor_attack",
+        "artprompt",
+        "ascii_smuggling",
+        "back_to_the_past",
+        "bon",
+        "crescendo",
+        "dan",
+        "genetic",
+        "gpt_fuzzer",
+        "hallucinations",
+        "history_framing",
+        "manyshot",
+        "paraphraser",
+        "persuasive",
+        "piglatin",
+        "please",
+        "shuffle_inconsistency",
+        "taxonomy",
+        "thought_experiment",
+        "word_game"
+      ]
+    },
+    {
+      "repo": "ReversecLabs__spikee",
+      "license": "Apache-2.0",
+      "last_commit": "2026-09-11",
+      "module_kind": "attacks + plugins + judges + seed datasets",
+      "count": 53,
+      "modules": [
+        "attack:anti_spotlighting",
+        "attack:best_of_n",
+        "attack:crescendo",
+        "attack:echo_chamber",
+        "attack:llm_jailbreaker",
+        "attack:llm_multi_language_jailbreaker",
+        "attack:llm_poetry_jailbreaker",
+        "attack:multi_turn",
+        "attack:prompt_decomposition",
+        "attack:rag_poisoner",
+        "attack:random_suffix_search",
+        "judge:canary",
+        "judge:regex",
+        "plugin:1337",
+        "plugin:anti_spotlighting",
+        "plugin:ascii_smuggler",
+        "plugin:atbash",
+        "plugin:base64",
+        "plugin:best_of_n",
+        "plugin:binary",
+        "plugin:caesar",
+        "plugin:decimal",
+        "plugin:digraphic_translate",
+        "plugin:flip",
+        "plugin:google_translate",
+        "plugin:hex",
+        "plugin:homoglyph",
+        "plugin:llm_jailbreaker",
+        "plugin:llm_multi_language_jailbreaker",
+        "plugin:llm_poetry_jailbreaker",
+        "plugin:mask",
+        "plugin:morse",
+        "plugin:octal",
+        "plugin:opus_translate",
+        "plugin:prompt_decomposition",
+        "plugin:rag_poisoner",
+        "plugin:shortener",
+        "plugin:splat",
+        "plugin:text2image",
+        "plugin:tts",
+        "seeds:seeds-cybersec-2026-01",
+        "seeds:seeds-empty",
+        "seeds:seeds-harmful-instructions-only",
+        "seeds:seeds-in-the-wild-jailbreak-prompts",
+        "seeds:seeds-investment-advice",
+        "seeds:seeds-investment-advice-fp",
+        "seeds:seeds-llm-mailbox",
+        "seeds:seeds-mini-test",
+        "seeds:seeds-simsonsun-high-quality-jailbreaks",
+        "seeds:seeds-sysmsg-extraction-2025-04",
+        "seeds:seeds-toxic-chat",
+        "seeds:seeds-wildguardmix-harmful",
+        "seeds:seeds-wildguardmix-harmful-fp"
+      ]
+    },
+    {
+      "repo": "praetorian-inc__augustus",
+      "license": "Apache-2.0",
+      "last_commit": "2026-10-03",
+      "module_kind": "probe packages (internal/probes)",
+      "count": 59,
+      "modules": [
+        "advpatch",
+        "ansiescape",
+        "apikey",
+        "artprompts",
+        "autodan",
+        "avspamscanning",
+        "badchars",
+        "browsing",
+        "continuation",
+        "crescendo",
+        "dan",
+        "divergence",
+        "donotanswer",
+        "dra",
+        "exploitation",
+        "flipattack",
+        "gcg",
+        "glitch",
+        "goat",
+        "goodside",
+        "grandma",
+        "guardrail",
+        "hcot",
+        "hydra",
+        "latentinjection",
+        "leakreplay",
+        "lmrc",
+        "malwaregen",
+        "mcpconfig",
+        "mcpprimitive",
+        "mcptool",
+        "mcptransport",
+        "mischievous",
+        "misleading",
+        "multiagent",
+        "multimodal",
+        "obscureprompt",
+        "packagehallucination",
+        "pair",
+        "pdf",
+        "phrasing",
+        "poetry",
+        "prefix",
+        "promptinject",
+        "ragpoisoning",
+        "realtoxicityprompts",
+        "reasoning",
+        "schemattack",
+        "snowball",
+        "stegoattack",
+        "suffix",
+        "tap",
+        "test",
+        "toolcoercion",
+        "tooluse",
+        "topic",
+        "treesearch",
+        "webinjection",
+        "wormattack"
+      ]
+    },
+    {
+      "repo": "msoedov__agentic_security",
+      "license": "Apache-2.0",
+      "last_commit": "2026-09-22",
+      "module_kind": "probe dataset families + probe modules",
+      "count": 18,
+      "modules": [
+        "dataset:AgenticBackend",
+        "dataset:DataLeak",
+        "dataset:GPT fuzzer",
+        "dataset:Hallucination",
+        "dataset:Malwaregen",
+        "dataset:Steganography",
+        "dataset:deepset/prompt-injections",
+        "dataset:jailbreak-corpora(HF, ~25 sets)",
+        "dataset:llm-adaptive-attacks",
+        "dataset:msj(many-shot)",
+        "dataset:refuse-to-answer",
+        "generator:audio",
+        "generator:image",
+        "module:adaptive_attacks",
+        "module:fine_tuned",
+        "module:garak_tool",
+        "module:inspect_ai_tool",
+        "module:rl_model"
+      ]
+    },
+    {
+      "repo": "LLAMATOR-Core__llamator",
+      "license": "CC-BY-NC-SA-4.0",
+      "last_commit": "2026-01-15",
+      "module_kind": "attacks (src/llamator/attacks)",
+      "count": 27,
+      "modules": [
+        "aim",
+        "autodan_turbo",
+        "base64_injection",
+        "bon",
+        "cop",
+        "crecsendo",
+        "dan",
+        "deceptive_delight",
+        "dialogue_injection_continuation",
+        "dialogue_injection_devmode",
+        "ethical_compliance",
+        "harmbench",
+        "linguistic",
+        "linguistic_sandwich",
+        "logical_inconsistencies",
+        "pair",
+        "repetition_token",
+        "semantic_game",
+        "shuffle",
+        "suffix",
+        "sycophancy",
+        "system_prompt_leakage",
+        "time_machine",
+        "ucar",
+        "vlm_lowres_docs",
+        "vlm_m_attack",
+        "vlm_text_hallucination"
+      ]
+    },
+    {
+      "repo": "aiverify-foundation__moonshot",
+      "license": "Apache-2.0",
+      "last_commit": "2026-02-05",
+      "module_kind": "attack modules (documented; code in moonshot-data repo)",
+      "count": 11,
+      "modules": [
+        "charswap_attack",
+        "colloquial_wordswap_attack",
+        "homoglyph_attack",
+        "insert_punctuation_attack",
+        "job_role_generator",
+        "malicious_question_generator",
+        "sg_sentence_generator",
+        "textbugger_attack",
+        "textfooler_attack",
+        "toxic_sentence_generator",
+        "violent_durian"
+      ]
+    },
+    {
+      "repo": "regaan__basilisk",
+      "license": "AGPL-3.0",
+      "last_commit": "2026-10-01",
+      "module_kind": "attack modules (basilisk/attacks/*)",
+      "count": 33,
+      "modules": [
+        "dos/context_bomb",
+        "dos/loop_trigger",
+        "dos/token_exhaustion",
+        "exfil/rag_data",
+        "exfil/tool_schema",
+        "exfil/training_data",
+        "extraction/gradient_walk",
+        "extraction/role_confusion",
+        "extraction/simulation",
+        "extraction/translation",
+        "guardrails/encoding_bypass",
+        "guardrails/logic_trap",
+        "guardrails/roleplay",
+        "guardrails/systematic",
+        "injection/direct",
+        "injection/encoding",
+        "injection/indirect",
+        "injection/multilingual",
+        "injection/split",
+        "multimodal",
+        "multiturn/authority_escalation",
+        "multiturn/cultivation",
+        "multiturn/escalation",
+        "multiturn/memory_manipulation",
+        "multiturn/persona_lock",
+        "multiturn/sycophancy",
+        "rag/document_injection",
+        "rag/knowledge_enum",
+        "rag/poisoning",
+        "toolabuse/chained",
+        "toolabuse/command_injection",
+        "toolabuse/sqli",
+        "toolabuse/ssrf"
+      ]
+    },
+    {
+      "repo": "perplext__LLMrecon",
+      "license": "MIT",
+      "last_commit": "2026-09-15",
+      "module_kind": "attack modules (src/attacks) + templates",
+      "count": 99,
+      "modules": [
+        "adaptive/agent_data_injection",
+        "adaptive/camel_bypass",
+        "adaptive/defense_bypass_optimizer",
+        "adaptive/diffusion_attacker",
+        "adaptive/iterinject",
+        "adaptive/jbfuzz",
+        "adaptive/persona_evolve",
+        "adaptive/salt_resistance",
+        "agentic/browser/document_injection",
+        "agentic/browser/hidden_instruction",
+        "agentic/browser/screenshot_injection",
+        "agentic/deception/agent_collusion",
+        "agentic/deception/deceptive_alignment",
+        "agentic/mcp/filesystem_escape",
+        "agentic/mcp/mcp_supply_chain",
+        "agentic/mcp/sampling_injection",
+        "agentic/mcp/tag_concealment",
+        "agentic/mcp/tool_poisoning",
+        "agentic/multi_agent/delegation_escalation",
+        "agentic/multi_agent/recursive_spawn_abuse",
+        "agentic/multi_agent/toxic_agent_flow",
+        "agentic/persistence/agent_config_rewrite",
+        "agentic/persistence/credential_harvest",
+        "agentic/persistence/mosaic_cmd_chain",
+        "agentic/persistence/rce_chain",
+        "agentic/persistence/symjack",
+        "agentic/persistence/trustfall",
+        "agentic/skill_injection/skill_poisoning",
+        "agentic/skill_injection/skill_takeover_chain",
+        "agentic/tool_use/agent_exploitation",
+        "agentic/tool_use/imist",
+        "audio/audio_jailbreak",
+        "audio/bon_audio",
+        "audio/multilingual_audio",
+        "audio/speech_model_exploit",
+        "evasion/advanced_evasion",
+        "evasion/best_of_n",
+        "evasion/content_concretization",
+        "evasion/immersive_world",
+        "evasion/metabreak",
+        "evasion/poetry_attacks",
+        "evasion/token_suppression",
+        "exfiltration/data_exfiltration",
+        "extraction/inference_attacks",
+        "extraction/knowledge_extractor",
+        "extraction/model_extractor",
+        "jailbreak/jailbreak_engine",
+        "memory/memmorph",
+        "memory/poisoning",
+        "memory/sleeper",
+        "multimodal/multimodal_attacks",
+        "multimodal/siva",
+        "multimodal/vsh",
+        "orchestration/bad_likert_judge",
+        "orchestration/conversation_flow",
+        "orchestration/crescendo",
+        "orchestration/many_shot",
+        "orchestration/multi_turn",
+        "orchestration/skeleton_key",
+        "orchestration/state_manager",
+        "persistence/persistent_attacks",
+        "rag/ghost_vectors",
+        "rag/indirect_rag_injection",
+        "rag/kg_rag_poisoning",
+        "rag/poisoned_rag",
+        "rag/vector_embedding_attack",
+        "reasoning/autonomous_jailbreak",
+        "reasoning/cot_exploitation",
+        "reasoning/h_cot",
+        "reasoning/prja",
+        "reasoning/reasoning_loop_exploit",
+        "supply_chain/supply_chain_attacks",
+        "template:advanced_injection",
+        "template:character_smuggling",
+        "template:cot_hijack_prepend",
+        "template:drattack",
+        "template:echoleak_chain",
+        "template:flipattack",
+        "template:genetic_persona_seeds",
+        "template:indirect_context_manipulation",
+        "template:indirect_data_poisoning",
+        "template:indirect_document_injection",
+        "template:indirect_multi_stage",
+        "template:indirect_url_fetch",
+        "template:owasp-llm/llm01-prompt-injection/system-prompt-override",
+        "template:owasp-llm/llm02-insecure-output/code-execution",
+        "template:owasp-llm/llm03-training-data-poisoning/knowledge-extraction",
+        "template:owasp-llm/llm04-model-denial-of-service/resource-consumption",
+        "template:owasp-llm/llm06-sensitive-information/pii-disclosure",
+        "template:owasp-llm/llm07-insecure-plugin-design/privilege-escalation",
+        "template:owasp-llm/llm09-overreliance/misinformation-generation",
+        "template:owasp-llm/llm10-model-theft/extraction-attack",
+        "template:pap_social_engineering",
+        "template:policy_puppetry",
+        "template:reverse_captcha",
+        "template:system_prompt_leakage",
+        "template:system_prompt_surface",
+        "template:unbounded_consumption",
+        "template:vector_embedding"
+      ]
+    },
+    {
+      "repo": "Tencent__AI-Infra-Guard",
+      "license": "Apache-2.0",
+      "last_commit": "2026-10-07",
+      "module_kind": "prompt-security attacks/vulns + MCP scan rules + eval datasets + agent red-team modules + infra CVE fingerprints",
+      "count": 91,
+      "modules": [
+        "agent-redteam:code-attack",
+        "agent-redteam:infra-attack",
+        "agent-redteam:mutation-attack",
+        "attack:multi_turn/actor_attack",
+        "attack:multi_turn/bad_likert_judge",
+        "attack:multi_turn/best_of_n",
+        "attack:multi_turn/crescendo_jailbreaking",
+        "attack:multi_turn/goat_jailbreaking",
+        "attack:multi_turn/linear_jailbreaking",
+        "attack:multi_turn/many_shot_jailbreaking",
+        "attack:multi_turn/pair_jailbreaking",
+        "attack:multi_turn/sequential_break",
+        "attack:multi_turn/tree_jailbreaking",
+        "attack:single_turn/code_chameleon",
+        "attack:single_turn/context_poisoning",
+        "attack:single_turn/deep_inception",
+        "attack:single_turn/encoding",
+        "attack:single_turn/equa_code",
+        "attack:single_turn/flip_attack",
+        "attack:single_turn/goal_redirection",
+        "attack:single_turn/gray_box",
+        "attack:single_turn/ica",
+        "attack:single_turn/icrt_jailbreak",
+        "attack:single_turn/input_bypass",
+        "attack:single_turn/jailbroken",
+        "attack:single_turn/jam",
+        "attack:single_turn/math_problem",
+        "attack:single_turn/multilingual",
+        "attack:single_turn/overload",
+        "attack:single_turn/past_tense",
+        "attack:single_turn/permission_escalation",
+        "attack:single_turn/prefill",
+        "attack:single_turn/promisqroute",
+        "attack:single_turn/prompt_injection",
+        "attack:single_turn/prompt_probing",
+        "attack:single_turn/raw",
+        "attack:single_turn/roleplay",
+        "attack:single_turn/semantic_manipulation",
+        "attack:single_turn/stego",
+        "attack:single_turn/stratasword",
+        "attack:single_turn/super_user",
+        "attack:single_turn/system_override",
+        "eval-dataset:CBRN-weapon",
+        "eval-dataset:ChatGPT-Jailbreak-Prompts",
+        "eval-dataset:HarmfulEvalBenchmark",
+        "eval-dataset:JADE-db-v3.0",
+        "eval-dataset:JailBench-Tiny",
+        "eval-dataset:JailbreakPrompts-Tiny",
+        "eval-dataset:advbench",
+        "eval-dataset:agentic-tool-misuse",
+        "eval-dataset:cnsafe",
+        "eval-dataset:copyright-violation",
+        "eval-dataset:cyberattack",
+        "eval-dataset:misinformation",
+        "eval-dataset:non-violent-illegal-activity",
+        "eval-dataset:privacy-leakage",
+        "eval-dataset:safebench",
+        "eval-dataset:unethical-behavior",
+        "eval-dataset:violent",
+        "infra-fingerprints(165 AI component fingerprints, data/fingerprints)",
+        "mcp-rule:cors",
+        "mcp-rule:mcp_command_injection",
+        "mcp-rule:mcp_credential_exfiltration",
+        "mcp-rule:mcp_excessive_permissions",
+        "mcp-rule:mcp_hardcoded_secrets",
+        "mcp-rule:mcp_insecure_deserialization",
+        "mcp-rule:mcp_missing_authentication",
+        "mcp-rule:mcp_path_traversal",
+        "mcp-rule:mcp_prompt_injection_tool_results",
+        "mcp-rule:mcp_resource_prompt_injection",
+        "mcp-rule:mcp_sql_injection",
+        "mcp-rule:mcp_ssrf",
+        "mcp-rule:mcp_tool_rug_pull",
+        "mcp-rule:mcp_unsafe_deserialization",
+        "mcp-rule:tool_poisoning",
+        "vuln:bias",
+        "vuln:competition",
+        "vuln:custom",
+        "vuln:custom_prompt",
+        "vuln:excessive_agency",
+        "vuln:graphic_content",
+        "vuln:illegal_activity",
+        "vuln:intellectual_property",
+        "vuln:misinformation",
+        "vuln:multi_dataset",
+        "vuln:personal_safety",
+        "vuln:pii_leakage",
+        "vuln:prompt_leakage",
+        "vuln:robustness",
+        "vuln:toxicity",
+        "vuln:unauthorized_access"
+      ]
+    }
+  ],
+  "coverage_matrix": [
+    {
+      "technique": "LLMI-T001",
+      "name": "Direct Prompt Injection",
+      "tool_count": 12,
+      "module_refs": 48,
+      "coverage_level": "strong",
+      "tools": {
+        "NVIDIA__garak": [
+          "promptinject",
+          "goodside",
+          "dan",
+          "phrasing",
+          "smuggling",
+          "encoding",
+          "badchars",
+          "ansiescape"
+        ],
+        "microsoft__PyRIT": [
+          "attack/single_turn/prompt_sending",
+          "attack/single_turn/skeleton_key",
+          "converter/* (obfuscation converters)",
+          "scorer/true_false/prompt_shield_scorer"
+        ],
+        "promptfoo__promptfoo": [
+          "plugin:hijacking",
+          "plugin:system-prompt-override",
+          "plugin:special-token-injection",
+          "strategy:prompt-injection",
+          "strategy:jailbreak-templates"
+        ],
+        "confident-ai__deepteam": [
+          "attack:single_turn/prompt_injection",
+          "attack:single_turn/system_override",
+          "attack:single_turn/goal_redirection",
+          "attack:single_turn/embedded_instruction_json"
+        ],
+        "cyberark__FuzzyAI": [
+          "ascii_smuggling",
+          "dan",
+          "default"
+        ],
+        "ReversecLabs__spikee": [
+          "plugin:anti_spotlighting",
+          "attack:anti_spotlighting",
+          "seeds:seeds-cybersec-2026-01"
+        ],
+        "praetorian-inc__augustus": [
+          "promptinject",
+          "goodside",
+          "prefix",
+          "badchars",
+          "schemattack"
+        ],
+        "msoedov__agentic_security": [
+          "dataset:deepset/prompt-injections"
+        ],
+        "LLAMATOR-Core__llamator": [
+          "dialogue_injection_continuation",
+          "dialogue_injection_devmode",
+          "base64_injection"
+        ],
+        "regaan__basilisk": [
+          "injection/direct",
+          "injection/encoding",
+          "injection/split",
+          "injection/multilingual"
+        ],
+        "perplext__LLMrecon": [
+          "template:advanced_injection",
+          "template:owasp-llm/llm01-prompt-injection/system-prompt-override",
+          "template:policy_puppetry",
+          "template:cot_hijack_prepend"
+        ],
+        "Tencent__AI-Infra-Guard": [
+          "attack:single_turn/prompt_injection",
+          "attack:single_turn/system_override",
+          "attack:single_turn/prefill",
+          "attack:single_turn/super_user"
+        ]
+      }
+    },
+    {
+      "technique": "LLMI-T002",
+      "name": "Indirect Prompt Injection",
+      "tool_count": 9,
+      "module_refs": 32,
+      "coverage_level": "strong",
+      "tools": {
+        "NVIDIA__garak": [
+          "latentinjection",
+          "web_injection",
+          "fileformats"
+        ],
+        "microsoft__PyRIT": [
+          "converter/pdf_converter",
+          "converter/word_doc_converter",
+          "converter/url_converter",
+          "converter/add_text_image_converter",
+          "converter/transparency_attack_converter"
+        ],
+        "promptfoo__promptfoo": [
+          "plugin:indirect-prompt-injection",
+          "strategy:indirect-web-pwn",
+          "strategy:authoritative-markup-injection",
+          "plugin:coding-agent:terminal-output-injection"
+        ],
+        "confident-ai__deepteam": [
+          "vuln:indirect_instruction",
+          "attack:single_turn/synthetic_context_injection"
+        ],
+        "ReversecLabs__spikee": [
+          "seeds:seeds-llm-mailbox",
+          "seeds:seeds-cybersec-2026-01",
+          "attack:rag_poisoner"
+        ],
+        "praetorian-inc__augustus": [
+          "latentinjection",
+          "webinjection",
+          "browsing",
+          "pdf",
+          "multimodal"
+        ],
+        "regaan__basilisk": [
+          "injection/indirect",
+          "rag/document_injection"
+        ],
+        "perplext__LLMrecon": [
+          "agentic/browser/document_injection",
+          "agentic/browser/hidden_instruction",
+          "agentic/browser/screenshot_injection",
+          "template:indirect_document_injection",
+          "template:indirect_url_fetch",
+          "template:echoleak_chain"
+        ],
+        "Tencent__AI-Infra-Guard": [
+          "mcp-rule:mcp_prompt_injection_tool_results",
+          "mcp-rule:mcp_resource_prompt_injection"
+        ]
+      }
+    },
+    {
+      "technique": "LLMI-T003",
+      "name": "Jailbreak / Safety Boundary Manipulation",
+      "tool_count": 13,
+      "module_refs": 95,
+      "coverage_level": "strong",
+      "tools": {
+        "NVIDIA__garak": [
+          "dan",
+          "tap",
+          "suffix",
+          "goat",
+          "fitd",
+          "grandma",
+          "dra",
+          "sata",
+          "visual_jailbreak",
+          "adaptive_attacks",
+          "phrasing",
+          "atkgen"
+        ],
+        "microsoft__PyRIT": [
+          "attack/multi_turn/crescendo",
+          "attack/multi_turn/tree_of_attacks",
+          "attack/multi_turn/pair",
+          "attack/single_turn/many_shot_jailbreak",
+          "converter/persuasion_converter",
+          "converter/policy_puppetry_converter",
+          "scenario/airt/jailbreak"
+        ],
+        "promptfoo__promptfoo": [
+          "strategy:jailbreak",
+          "strategy:jailbreak:tree",
+          "strategy:jailbreak:meta",
+          "strategy:crescendo",
+          "strategy:goat",
+          "strategy:gcg",
+          "strategy:best-of-n",
+          "plugin:harmful:*"
+        ],
+        "confident-ai__deepteam": [
+          "attack:multi_turn/crescendo_jailbreaking",
+          "attack:multi_turn/tree_jailbreaking",
+          "attack:multi_turn/linear_jailbreaking",
+          "attack:multi_turn/bad_likert_judge",
+          "attack:single_turn/roleplay"
+        ],
+        "cyberark__FuzzyAI": [
+          "genetic",
+          "gpt_fuzzer",
+          "crescendo",
+          "actor_attack",
+          "artprompt",
+          "manyshot",
+          "bon",
+          "back_to_the_past",
+          "thought_experiment",
+          "word_game",
+          "taxonomy",
+          "persuasive"
+        ],
+        "ReversecLabs__spikee": [
+          "attack:crescendo",
+          "attack:echo_chamber",
+          "attack:llm_jailbreaker",
+          "attack:llm_poetry_jailbreaker",
+          "attack:best_of_n",
+          "seeds:seeds-in-the-wild-jailbreak-prompts"
+        ],
+        "praetorian-inc__augustus": [
+          "dan",
+          "tap",
+          "pair",
+          "gcg",
+          "autodan",
+          "crescendo",
+          "goat",
+          "hydra",
+          "flipattack",
+          "poetry",
+          "artprompts",
+          "hcot"
+        ],
+        "msoedov__agentic_security": [
+          "dataset:jailbreak-corpora(HF, ~25 sets)",
+          "dataset:msj(many-shot)",
+          "module:adaptive_attacks"
+        ],
+        "LLAMATOR-Core__llamator": [
+          "pair",
+          "autodan_turbo",
+          "crecsendo",
+          "dan",
+          "aim",
+          "ucar",
+          "bon",
+          "cop",
+          "deceptive_delight",
+          "time_machine",
+          "linguistic_sandwich"
+        ],
+        "aiverify-foundation__moonshot": [
+          "violent_durian",
+          "malicious_question_generator",
+          "toxic_sentence_generator"
+        ],
+        "regaan__basilisk": [
+          "guardrails/roleplay",
+          "guardrails/logic_trap",
+          "guardrails/encoding_bypass",
+          "multiturn/escalation",
+          "multiturn/persona_lock"
+        ],
+        "perplext__LLMrecon": [
+          "jailbreak/jailbreak_engine",
+          "orchestration/crescendo",
+          "orchestration/many_shot",
+          "orchestration/skeleton_key",
+          "reasoning/h_cot",
+          "evasion/poetry_attacks"
+        ],
+        "Tencent__AI-Infra-Guard": [
+          "attack:multi_turn/pair_jailbreaking",
+          "attack:multi_turn/actor_attack",
+          "attack:single_turn/deep_inception",
+          "attack:single_turn/code_chameleon",
+          "eval-dataset:JailBench-Tiny"
+        ]
+      }
+    },
+    {
+      "technique": "LLMI-T004",
+      "name": "Sensitive Information Disclosure",
+      "tool_count": 11,
+      "module_refs": 39,
+      "coverage_level": "strong",
+      "tools": {
+        "NVIDIA__garak": [
+          "leakreplay",
+          "sysprompt_extraction",
+          "apikey",
+          "propile"
+        ],
+        "microsoft__PyRIT": [
+          "scorer/float_scale/system_prompt_extraction_scorer",
+          "scorer/float_scale/roblox_pii_scorer",
+          "scenario/airt/leakage"
+        ],
+        "promptfoo__promptfoo": [
+          "plugin:prompt-extraction",
+          "plugin:pii:direct",
+          "plugin:pii:session",
+          "plugin:pii:api-db",
+          "plugin:cross-session-leak",
+          "plugin:rag-document-exfiltration",
+          "plugin:data-exfil",
+          "plugin:coding-agent:secret-env-read",
+          "plugin:debug-access"
+        ],
+        "confident-ai__deepteam": [
+          "vuln:pii_leakage",
+          "vuln:prompt_leakage",
+          "vuln:cross_context_retrieval",
+          "vuln:debug_access",
+          "attack:single_turn/prompt_probing"
+        ],
+        "ReversecLabs__spikee": [
+          "seeds:seeds-sysmsg-extraction-2025-04",
+          "judge:canary"
+        ],
+        "praetorian-inc__augustus": [
+          "leakreplay",
+          "apikey"
+        ],
+        "msoedov__agentic_security": [
+          "dataset:DataLeak"
+        ],
+        "LLAMATOR-Core__llamator": [
+          "system_prompt_leakage"
+        ],
+        "regaan__basilisk": [
+          "exfil/rag_data",
+          "exfil/training_data",
+          "exfil/tool_schema",
+          "extraction/role_confusion",
+          "extraction/translation"
+        ],
+        "perplext__LLMrecon": [
+          "exfiltration/data_exfiltration",
+          "template:system_prompt_leakage",
+          "template:information_disclosure/pii_extraction_v1.0"
+        ],
+        "Tencent__AI-Infra-Guard": [
+          "vuln:pii_leakage",
+          "vuln:prompt_leakage",
+          "mcp-rule:mcp_credential_exfiltration",
+          "mcp-rule:mcp_hardcoded_secrets"
+        ]
+      }
+    },
+    {
+      "technique": "LLMI-T005",
+      "name": "Model Extraction / Theft",
+      "tool_count": 4,
+      "module_refs": 8,
+      "coverage_level": "moderate",
+      "tools": {
+        "promptfoo__promptfoo": [
+          "plugin:model-identification"
+        ],
+        "regaan__basilisk": [
+          "extraction/gradient_walk",
+          "extraction/simulation"
+        ],
+        "perplext__LLMrecon": [
+          "extraction/model_extractor",
+          "extraction/inference_attacks",
+          "extraction/knowledge_extractor",
+          "template:owasp-llm/llm10-model-theft/extraction-attack"
+        ],
+        "NVIDIA__garak": [
+          "divergence (memorization replay, partial)"
+        ]
+      }
+    },
+    {
+      "technique": "LLMI-T006",
+      "name": "Data or Model Poisoning",
+      "tool_count": 3,
+      "module_refs": 5,
+      "coverage_level": "weak",
+      "tools": {
+        "promptfoo__promptfoo": [
+          "plugin:rag-poisoning (corpus-level)"
+        ],
+        "perplext__LLMrecon": [
+          "template:indirect_data_poisoning",
+          "template:owasp-llm/llm03-training-data-poisoning",
+          "memory/sleeper"
+        ],
+        "Tencent__AI-Infra-Guard": [
+          "infra-fingerprints (exposed training/serving components)"
+        ]
+      }
+    },
+    {
+      "technique": "LLMI-T007",
+      "name": "RAG Knowledge Poisoning",
+      "tool_count": 6,
+      "module_refs": 16,
+      "coverage_level": "moderate",
+      "tools": {
+        "promptfoo__promptfoo": [
+          "plugin:rag-poisoning",
+          "plugin:rag-source-attribution",
+          "plugin:rag-document-exfiltration"
+        ],
+        "ReversecLabs__spikee": [
+          "attack:rag_poisoner",
+          "plugin:rag_poisoner"
+        ],
+        "regaan__basilisk": [
+          "rag/poisoning",
+          "rag/document_injection",
+          "rag/knowledge_enum"
+        ],
+        "perplext__LLMrecon": [
+          "rag/poisoned_rag",
+          "rag/kg_rag_poisoning",
+          "rag/ghost_vectors",
+          "rag/vector_embedding_attack",
+          "rag/indirect_rag_injection",
+          "template:vector_embedding"
+        ],
+        "praetorian-inc__augustus": [
+          "ragpoisoning"
+        ],
+        "confident-ai__deepteam": [
+          "attack:single_turn/context_poisoning"
+        ]
+      }
+    },
+    {
+      "technique": "LLMI-T008",
+      "name": "Agent Tool Misuse",
+      "tool_count": 9,
+      "module_refs": 47,
+      "coverage_level": "strong",
+      "tools": {
+        "promptfoo__promptfoo": [
+          "plugin:excessive-agency",
+          "plugin:bfla",
+          "plugin:bola",
+          "plugin:rbac",
+          "plugin:shell-injection",
+          "plugin:sql-injection",
+          "plugin:ssrf",
+          "plugin:mcp",
+          "plugin:tool-discovery"
+        ],
+        "confident-ai__deepteam": [
+          "vuln:excessive_agency",
+          "vuln:exploit_tool_agent",
+          "vuln:tool_orchestration_abuse",
+          "vuln:tool_metadata_poisoning",
+          "vuln:external_system_abuse",
+          "vuln:unexpected_code_execution",
+          "vuln:shell_injection",
+          "vuln:sql_injection",
+          "vuln:ssrf",
+          "vuln:bfla",
+          "vuln:bola"
+        ],
+        "praetorian-inc__augustus": [
+          "toolcoercion",
+          "tooluse",
+          "mcptool",
+          "mcpprimitive",
+          "mcpconfig",
+          "mcptransport"
+        ],
+        "NVIDIA__garak": [
+          "agent_breaker",
+          "exploitation"
+        ],
+        "microsoft__PyRIT": [
+          "scorer/true_false/message_tool_call_scorer",
+          "scorer/true_false/otel_tool_call_scorer"
+        ],
+        "regaan__basilisk": [
+          "toolabuse/chained",
+          "toolabuse/command_injection",
+          "toolabuse/sqli",
+          "toolabuse/ssrf"
+        ],
+        "perplext__LLMrecon": [
+          "agentic/tool_use/agent_exploitation",
+          "agentic/tool_use/imist",
+          "agentic/mcp/tool_poisoning",
+          "agentic/mcp/filesystem_escape",
+          "agentic/mcp/sampling_injection"
+        ],
+        "msoedov__agentic_security": [
+          "dataset:AgenticBackend"
+        ],
+        "Tencent__AI-Infra-Guard": [
+          "vuln:excessive_agency",
+          "vuln:unauthorized_access",
+          "mcp-rule:tool_poisoning",
+          "mcp-rule:mcp_command_injection",
+          "mcp-rule:mcp_excessive_permissions",
+          "mcp-rule:mcp_path_traversal",
+          "eval-dataset:agentic-tool-misuse"
+        ]
+      }
+    },
+    {
+      "technique": "LLMI-T009",
+      "name": "Memory / Context Poisoning",
+      "tool_count": 5,
+      "module_refs": 14,
+      "coverage_level": "moderate",
+      "tools": {
+        "promptfoo__promptfoo": [
+          "plugin:agentic:memory-poisoning",
+          "plugin:cross-session-leak"
+        ],
+        "confident-ai__deepteam": [
+          "attack:single_turn/context_poisoning",
+          "vuln:recursive_hijacking",
+          "vuln:autonomous_agent_drift",
+          "attack:single_turn/context_flooding"
+        ],
+        "regaan__basilisk": [
+          "multiturn/memory_manipulation",
+          "multiturn/cultivation"
+        ],
+        "perplext__LLMrecon": [
+          "memory/poisoning",
+          "memory/memmorph",
+          "memory/sleeper",
+          "persistence/persistent_attacks",
+          "agentic/persistence/agent_config_rewrite"
+        ],
+        "Tencent__AI-Infra-Guard": [
+          "attack:single_turn/context_poisoning"
+        ]
+      }
+    },
+    {
+      "technique": "LLMI-T010",
+      "name": "Model Source Tampering",
+      "tool_count": 2,
+      "module_refs": 3,
+      "coverage_level": "weak",
+      "tools": {
+        "Tencent__AI-Infra-Guard": [
+          "infra-fingerprints (vulnerable model-serving components)",
+          "agent-redteam:infra-attack"
+        ],
+        "perplext__LLMrecon": [
+          "supply_chain/supply_chain_attacks (partial)"
+        ]
+      }
+    },
+    {
+      "technique": "LLMI-T011",
+      "name": "AI Software Supply Chain Compromise",
+      "tool_count": 3,
+      "module_refs": 11,
+      "coverage_level": "weak",
+      "tools": {
+        "perplext__LLMrecon": [
+          "supply_chain/supply_chain_attacks",
+          "agentic/mcp/mcp_supply_chain",
+          "agentic/skill_injection/skill_poisoning",
+          "agentic/skill_injection/skill_takeover_chain"
+        ],
+        "Tencent__AI-Infra-Guard": [
+          "mcp-rule:mcp_tool_rug_pull",
+          "mcp-rule:mcp_unsafe_deserialization",
+          "mcp-rule:mcp_insecure_deserialization",
+          "mcp-rule:mcp_missing_authentication",
+          "infra-fingerprints"
+        ],
+        "praetorian-inc__augustus": [
+          "mcpconfig",
+          "mcptransport"
+        ]
+      }
+    },
+    {
+      "technique": "LLMI-T012",
+      "name": "Coding-Agent Dependency Manipulation",
+      "tool_count": 3,
+      "module_refs": 5,
+      "coverage_level": "weak",
+      "tools": {
+        "NVIDIA__garak": [
+          "packagehallucination"
+        ],
+        "praetorian-inc__augustus": [
+          "packagehallucination"
+        ],
+        "promptfoo__promptfoo": [
+          "plugin:coding-agent:repo-prompt-injection",
+          "plugin:coding-agent:generated-vulnerability",
+          "plugin:hallucination (indirect)"
+        ]
+      }
+    },
+    {
+      "technique": "LLMI-T013",
+      "name": "Runtime LLM Command Generation",
+      "tool_count": 6,
+      "module_refs": 7,
+      "coverage_level": "moderate",
+      "tools": {
+        "NVIDIA__garak": [
+          "malwaregen"
+        ],
+        "praetorian-inc__augustus": [
+          "malwaregen"
+        ],
+        "promptfoo__promptfoo": [
+          "plugin:harmful:cybercrime:malicious-code"
+        ],
+        "msoedov__agentic_security": [
+          "dataset:Malwaregen"
+        ],
+        "microsoft__PyRIT": [
+          "scenario/airt/cyber",
+          "scorer/float_scale/insecure_code_scorer"
+        ],
+        "Tencent__AI-Infra-Guard": [
+          "eval-dataset:cyberattack"
+        ]
+      }
+    },
+    {
+      "technique": "LLMI-T014",
+      "name": "AI-Assisted Reconnaissance and Social Engineering",
+      "tool_count": 5,
+      "module_refs": 9,
+      "coverage_level": "moderate",
+      "tools": {
+        "promptfoo__promptfoo": [
+          "plugin:imitation",
+          "plugin:harmful:privacy",
+          "plugin:scam_fraud_creation"
+        ],
+        "microsoft__PyRIT": [
+          "scenario/airt/scam",
+          "converter/persuasion_converter"
+        ],
+        "perplext__LLMrecon": [
+          "template:pap_social_engineering"
+        ],
+        "NVIDIA__garak": [
+          "lmrc (impersonation-adjacent)"
+        ],
+        "confident-ai__deepteam": [
+          "vuln:system_reconnaissance",
+          "vuln:agent_identity_abuse"
+        ]
+      }
+    },
+    {
+      "technique": "LLMI-T015",
+      "name": "Agentic Attack Orchestration",
+      "tool_count": 5,
+      "module_refs": 15,
+      "coverage_level": "moderate",
+      "tools": {
+        "perplext__LLMrecon": [
+          "agentic/multi_agent/delegation_escalation",
+          "agentic/multi_agent/recursive_spawn_abuse",
+          "agentic/multi_agent/toxic_agent_flow",
+          "agentic/persistence/mosaic_cmd_chain",
+          "agentic/persistence/rce_chain",
+          "agentic/deception/agent_collusion",
+          "reasoning/autonomous_jailbreak"
+        ],
+        "praetorian-inc__augustus": [
+          "multiagent",
+          "wormattack"
+        ],
+        "confident-ai__deepteam": [
+          "vuln:insecure_inter_agent_communication",
+          "vuln:goal_theft",
+          "vuln:autonomous_agent_drift"
+        ],
+        "promptfoo__promptfoo": [
+          "plugin:goal-misalignment",
+          "plugin:coding-agent:automation-poisoning"
+        ],
+        "regaan__basilisk": [
+          "toolabuse/chained"
+        ]
+      }
+    },
+    {
+      "technique": "LLMI-T016",
+      "name": "AI Gateway Credential Compromise",
+      "tool_count": 3,
+      "module_refs": 5,
+      "coverage_level": "weak",
+      "tools": {
+        "Tencent__AI-Infra-Guard": [
+          "infra-fingerprints (AI gateway / proxy components)",
+          "mcp-rule:mcp_missing_authentication",
+          "mcp-rule:mcp_credential_exfiltration"
+        ],
+        "praetorian-inc__augustus": [
+          "apikey"
+        ],
+        "NVIDIA__garak": [
+          "apikey"
+        ]
+      }
+    },
+    {
+      "technique": "LLMI-T017",
+      "name": "Prompt Injection Against AI Security Scanners",
+      "tool_count": 4,
+      "module_refs": 5,
+      "coverage_level": "moderate",
+      "tools": {
+        "NVIDIA__garak": [
+          "av_spam_scanning (signature-string handling, adjacent)"
+        ],
+        "praetorian-inc__augustus": [
+          "avspamscanning",
+          "guardrail"
+        ],
+        "ReversecLabs__spikee": [
+          "targets: az_prompt_shields_*, aws_bedrock_guardrail (guardrail-as-target testing)"
+        ],
+        "promptfoo__promptfoo": [
+          "plugin:coding-agent:verifier-sabotage"
+        ]
+      }
+    },
+    {
+      "technique": "LLMI-T018",
+      "name": "AI Coding-Assistant Workspace Abuse",
+      "tool_count": 3,
+      "module_refs": 9,
+      "coverage_level": "weak",
+      "tools": {
+        "promptfoo__promptfoo": [
+          "plugin:coding-agent:repo-prompt-injection",
+          "plugin:coding-agent:automation-poisoning",
+          "plugin:coding-agent:sandbox-write-escape",
+          "plugin:coding-agent:delayed-ci-exfil"
+        ],
+        "perplext__LLMrecon": [
+          "agentic/persistence/agent_config_rewrite",
+          "agentic/persistence/trustfall",
+          "agentic/persistence/symjack",
+          "agentic/skill_injection/skill_poisoning"
+        ],
+        "Tencent__AI-Infra-Guard": [
+          "agent-redteam:code-attack"
+        ]
+      }
+    },
+    {
+      "technique": "LLMI-T019",
+      "name": "Model Distillation Campaign",
+      "tool_count": 3,
+      "module_refs": 4,
+      "coverage_level": "weak",
+      "tools": {
+        "perplext__LLMrecon": [
+          "extraction/model_extractor",
+          "extraction/knowledge_extractor"
+        ],
+        "regaan__basilisk": [
+          "extraction/simulation"
+        ],
+        "promptfoo__promptfoo": [
+          "plugin:model-identification (fingerprinting precursor)"
+        ]
+      }
+    }
+  ],
+  "weak_coverage": [
+    {
+      "technique": "LLMI-T010",
+      "why": "Only infra fingerprinting (AI-Infra-Guard) and a generic LLMrecon supply_chain module; no tool verifies weight/serving-artifact integrity or digest drift. Behavioral probes cannot detect swapped artifacts.",
+      "suggest": "Pair TC-SC-009 with artifact hashing (modelscan-style) rather than prompt probes."
+    },
+    {
+      "technique": "LLMI-T016",
+      "why": "No tool models gateway credential concentration; only API-key leakage probes (garak/augustus apikey) and MCP missing-auth rules.",
+      "suggest": "Lab test using canary provider keys behind a mock gateway (extends TC-GW-020)."
+    },
+    {
+      "technique": "LLMI-T017",
+      "why": "No tool targets LLM-based code/malware scanners; closest are guardrail-as-target (spikee targets, augustus guardrail) and AV signature handling probes.",
+      "suggest": "Build a scanner-harness test where benign samples carry refusal-bait marker text."
+    },
+    {
+      "technique": "LLMI-T019",
+      "why": "Distillation is a campaign/volume phenomenon; tools only offer single-session extraction modules. No volumetric harvest simulation.",
+      "suggest": "Drive any extraction module at scale and test DET-AI-013 thresholds."
+    },
+    {
+      "technique": "LLMI-T006",
+      "why": "Training/fine-tune poisoning is out of scope for runtime red-team tools; only templates and RAG-level analogues exist.",
+      "suggest": "Use dataset-integrity checks and backdoor-trigger marker probes on fine-tuned lab models."
+    },
+    {
+      "technique": "LLMI-T005",
+      "why": "Four tools, mostly research-grade (LLMrecon/basilisk); mainstream tools (garak, PyRIT, deepteam) lack explicit extraction modules.",
+      "suggest": "Combine model-identification with query-budget telemetry."
+    },
+    {
+      "technique": "LLMI-T012",
+      "why": "Package-hallucination probes exist (garak, augustus) but none exercise agent auto-install against a registry with typo-similar names.",
+      "suggest": "Mock registry with LLMI_ marker packages."
+    },
+    {
+      "technique": "LLMI-T013",
+      "why": "Coverage is about the model generating malicious code, not about detecting a host process that queries an LLM at runtime; that is an EDR/egress problem.",
+      "suggest": "Keep under DET-AI-001/002 with lab process simulation."
+    },
+    {
+      "technique": "LLMI-T018",
+      "why": "Only promptfoo coding-agent plugins, LLMrecon agent persistence modules and AIG code-attack target it; garak/PyRIT/deepteam have nothing for repo-resident assistant config files or hooks.",
+      "suggest": "Lab repo with marker-only assistant config/hook files; validate TC-WS-017 and DET-AI-011."
+    }
+  ],
+  "uncovered_families": [
+    {
+      "family": "Excessive agency / goal misalignment as an outcome class",
+      "modules": [
+        "promptfoo plugin:excessive-agency",
+        "promptfoo plugin:goal-misalignment",
+        "deepteam vuln:excessive_agency",
+        "deepteam vuln:autonomous_agent_drift"
+      ],
+      "nearest_llmi": "LLMI-T008/T015 (partial)",
+      "proposed_technique": "Excessive Agency / Unbounded Autonomy"
+    },
+    {
+      "family": "Improper output handling (XSS/markdown-image exfil/ANSI escape via rendering)",
+      "modules": [
+        "garak ansiescape",
+        "augustus ansiescape",
+        "PyRIT converter/ansi_escape",
+        "LLMrecon template:owasp-llm/llm02-insecure-output/code-execution",
+        "promptfoo plugin:coding-agent:steganographic-exfil"
+      ],
+      "nearest_llmi": "none (TC-OH-013 exists without a technique)",
+      "proposed_technique": "Improper Output Handling / Render-Time Injection"
+    },
+    {
+      "family": "Resource exhaustion / reasoning DoS / unbounded consumption",
+      "modules": [
+        "promptfoo plugin:reasoning-dos",
+        "promptfoo plugin:divergent-repetition",
+        "basilisk dos/context_bomb",
+        "basilisk dos/loop_trigger",
+        "basilisk dos/token_exhaustion",
+        "LLMrecon reasoning/reasoning_loop_exploit",
+        "LLMrecon template:unbounded_consumption",
+        "LLMrecon agentic/multi_agent/recursive_spawn_abuse",
+        "llamator repetition_token",
+        "garak divergence"
+      ],
+      "nearest_llmi": "none (TC-COST-014 exists without a technique)",
+      "proposed_technique": "Unbounded Consumption / Denial of Wallet"
+    },
+    {
+      "family": "Hallucinated package / slopsquatting",
+      "modules": [
+        "garak packagehallucination",
+        "augustus packagehallucination"
+      ],
+      "nearest_llmi": "LLMI-T012 (related but distinct: model invents the name)",
+      "proposed_technique": "Hallucinated Dependency Squatting"
+    },
+    {
+      "family": "Multimodal injection (image/audio/video/PDF carrying instructions)",
+      "modules": [
+        "garak visual_jailbreak",
+        "garak audio",
+        "PyRIT converter/add_text_image_converter",
+        "PyRIT converter/qr_code_converter",
+        "PyRIT converter/audio_*",
+        "promptfoo strategy:image/audio/video",
+        "spikee plugin:text2image",
+        "spikee plugin:tts",
+        "augustus multimodal",
+        "augustus stegoattack",
+        "llamator vlm_m_attack",
+        "LLMrecon multimodal/*",
+        "LLMrecon audio/*",
+        "basilisk multimodal"
+      ],
+      "nearest_llmi": "LLMI-T001/T002 (modality not modelled)",
+      "proposed_technique": "Cross-Modal Prompt Injection"
+    },
+    {
+      "family": "Encoding / character obfuscation (ASCII smuggling, Unicode tags, homoglyph, zero-width, bidi)",
+      "modules": [
+        "garak encoding",
+        "garak smuggling",
+        "garak badchars",
+        "PyRIT converter/zero_width_converter",
+        "PyRIT converter/bidi_converter",
+        "PyRIT converter/unicode_confusable_converter",
+        "PyRIT token_smuggling",
+        "promptfoo plugin:ascii-smuggling",
+        "promptfoo strategy:homoglyph",
+        "FuzzyAI ascii_smuggling",
+        "spikee plugin:ascii_smuggler",
+        "LLMrecon template:character_smuggling",
+        "LLMrecon agentic/mcp/tag_concealment"
+      ],
+      "nearest_llmi": "LLMI-T001/T003 (technique-agnostic delivery)",
+      "proposed_technique": "Input Obfuscation / Invisible Instruction Smuggling"
+    },
+    {
+      "family": "Cross-session / cross-tenant leakage",
+      "modules": [
+        "promptfoo plugin:cross-session-leak",
+        "promptfoo plugin:pii:session",
+        "deepteam vuln:cross_context_retrieval"
+      ],
+      "nearest_llmi": "LLMI-T004 (partial)",
+      "proposed_technique": "Cross-Session Context Leakage"
+    },
+    {
+      "family": "BOLA/BFLA/RBAC in agents (authorization bypass via natural language)",
+      "modules": [
+        "promptfoo plugin:bola",
+        "promptfoo plugin:bfla",
+        "promptfoo plugin:rbac",
+        "deepteam vuln:bola",
+        "deepteam vuln:bfla",
+        "deepteam vuln:rbac",
+        "AI-Infra-Guard vuln:unauthorized_access"
+      ],
+      "nearest_llmi": "LLMI-T008 (partial)",
+      "proposed_technique": "Agent Authorization Bypass (BOLA/BFLA)"
+    },
+    {
+      "family": "SSRF / injection through agent tools (SQLi, shell, path traversal)",
+      "modules": [
+        "promptfoo plugin:ssrf",
+        "promptfoo plugin:sql-injection",
+        "promptfoo plugin:shell-injection",
+        "deepteam vuln:ssrf",
+        "basilisk toolabuse/ssrf",
+        "AI-Infra-Guard mcp-rule:mcp_ssrf",
+        "AI-Infra-Guard mcp-rule:mcp_path_traversal"
+      ],
+      "nearest_llmi": "LLMI-T008",
+      "proposed_technique": "LLM-Mediated Classic Injection (SSRF/SQLi/command)"
+    },
+    {
+      "family": "MCP tool poisoning / rug pull / tool metadata poisoning",
+      "modules": [
+        "deepteam vuln:tool_metadata_poisoning",
+        "LLMrecon agentic/mcp/tool_poisoning",
+        "AI-Infra-Guard mcp-rule:tool_poisoning",
+        "AI-Infra-Guard mcp-rule:mcp_tool_rug_pull",
+        "augustus mcptool",
+        "promptfoo plugin:tool-discovery"
+      ],
+      "nearest_llmi": "LLMI-T008/T011 (TC-MCP-010 exists)",
+      "proposed_technique": "Tool Description Poisoning / Rug Pull"
+    },
+    {
+      "family": "Inter-agent trust / multi-agent propagation (worm)",
+      "modules": [
+        "deepteam vuln:insecure_inter_agent_communication",
+        "augustus multiagent",
+        "augustus wormattack",
+        "LLMrecon agentic/multi_agent/toxic_agent_flow",
+        "LLMrecon agentic/deception/agent_collusion"
+      ],
+      "nearest_llmi": "LLMI-T015 (partial)",
+      "proposed_technique": "Inter-Agent Injection Propagation"
+    },
+    {
+      "family": "Hallucination / overreliance / unverifiable claims",
+      "modules": [
+        "promptfoo plugin:hallucination",
+        "promptfoo plugin:overreliance",
+        "promptfoo plugin:unverifiable-claims",
+        "deepteam vuln:hallucination",
+        "FuzzyAI hallucinations",
+        "garak misleading",
+        "garak snowball",
+        "llamator sycophancy",
+        "llamator logical_inconsistencies"
+      ],
+      "nearest_llmi": "none",
+      "proposed_technique": "Misinformation / Overreliance (quality/safety, likely out of LLMI scope)"
+    },
+    {
+      "family": "Guardrail / classifier evasion as a target",
+      "modules": [
+        "spikee targets:az_prompt_shields_*, aws_bedrock_guardrail",
+        "augustus guardrail",
+        "LLMrecon adaptive/defense_bypass_optimizer",
+        "LLMrecon adaptive/camel_bypass",
+        "spikee attack:anti_spotlighting"
+      ],
+      "nearest_llmi": "LLMI-T017 (scanners only)",
+      "proposed_technique": "Defense/Guardrail Evasion"
+    },
+    {
+      "family": "Sandbox / egress escape by coding agents",
+      "modules": [
+        "promptfoo plugin:coding-agent:sandbox-read-escape",
+        "promptfoo plugin:coding-agent:sandbox-write-escape",
+        "promptfoo plugin:coding-agent:network-egress-bypass",
+        "promptfoo plugin:coding-agent:procfs-credential-read",
+        "LLMrecon agentic/persistence/symjack"
+      ],
+      "nearest_llmi": "LLMI-T018 (partial)",
+      "proposed_technique": "Agent Sandbox Escape"
+    },
+    {
+      "family": "Bias / toxicity / harmful-content domain plugins",
+      "modules": [
+        "promptfoo bias:*, harmful:*, medical:*, financial:*, telecom:*",
+        "deepteam vuln:bias/toxicity/fairness",
+        "garak realtoxicityprompts/lmrc",
+        "moonshot textbugger/textfooler"
+      ],
+      "nearest_llmi": "none (responsible-AI, not security; deliberately out of scope)",
+      "proposed_technique": "n/a"
+    }
+  ]
+}

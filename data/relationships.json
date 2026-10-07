@@ -828,5 +828,1094 @@
     "evidence_sources": [
       "SRC-WIZ-TEAMPCP"
     ]
+  },
+  {
+    "id": "REL-076",
+    "type": "relationship",
+    "source": "TC-OBF-021",
+    "relationship": "validates",
+    "target": "LLMI-T001",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "REL-077",
+    "type": "relationship",
+    "source": "TC-MM-022",
+    "relationship": "validates",
+    "target": "LLMI-T025",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "REL-078",
+    "type": "relationship",
+    "source": "TC-MM-023",
+    "relationship": "validates",
+    "target": "LLMI-T025",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "REL-079",
+    "type": "relationship",
+    "source": "TC-OH-024",
+    "relationship": "validates",
+    "target": "LLMI-T020",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "REL-080",
+    "type": "relationship",
+    "source": "TC-OH-025",
+    "relationship": "validates",
+    "target": "LLMI-T020",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "REL-081",
+    "type": "relationship",
+    "source": "TC-DOS-026",
+    "relationship": "validates",
+    "target": "LLMI-T022",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "REL-082",
+    "type": "relationship",
+    "source": "TC-SC-027",
+    "relationship": "validates",
+    "target": "LLMI-T012",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "REL-083",
+    "type": "relationship",
+    "source": "TC-LEAK-028",
+    "relationship": "validates",
+    "target": "LLMI-T004",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "REL-084",
+    "type": "relationship",
+    "source": "TC-AUTHZ-029",
+    "relationship": "validates",
+    "target": "LLMI-T008",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "REL-085",
+    "type": "relationship",
+    "source": "TC-TOOL-030",
+    "relationship": "validates",
+    "target": "LLMI-T008",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "REL-086",
+    "type": "relationship",
+    "source": "TC-MCP-031",
+    "relationship": "validates",
+    "target": "LLMI-T021",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "REL-087",
+    "type": "relationship",
+    "source": "TC-MA-032",
+    "relationship": "validates",
+    "target": "LLMI-T026",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "REL-088",
+    "type": "relationship",
+    "source": "TC-LINK-033",
+    "relationship": "validates",
+    "target": "LLMI-T023",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "REL-089",
+    "type": "relationship",
+    "source": "TC-EXP-034",
+    "relationship": "validates",
+    "target": "LLMI-T024",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "REL-090",
+    "type": "relationship",
+    "source": "DET-AI-015",
+    "relationship": "detects",
+    "target": "LLMI-T021",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-AGUARA"
+    ]
+  },
+  {
+    "id": "REL-091",
+    "type": "relationship",
+    "source": "DET-AI-016",
+    "relationship": "detects",
+    "target": "LLMI-T021",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-AGUARA"
+    ]
+  },
+  {
+    "id": "REL-092",
+    "type": "relationship",
+    "source": "DET-AI-017",
+    "relationship": "detects",
+    "target": "LLMI-T017",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-AGUARA"
+    ]
+  },
+  {
+    "id": "REL-093",
+    "type": "relationship",
+    "source": "DET-AI-018",
+    "relationship": "detects",
+    "target": "LLMI-T018",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-AGUARA"
+    ]
+  },
+  {
+    "id": "REL-094",
+    "type": "relationship",
+    "source": "DET-AI-019",
+    "relationship": "detects",
+    "target": "LLMI-T018",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-AGUARA"
+    ]
+  },
+  {
+    "id": "REL-095",
+    "type": "relationship",
+    "source": "DET-AI-020",
+    "relationship": "detects",
+    "target": "LLMI-T011",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-CISCO-AI-DEFENSE-SCANNERS"
+    ]
+  },
+  {
+    "id": "REL-096",
+    "type": "relationship",
+    "source": "DET-AI-021",
+    "relationship": "detects",
+    "target": "LLMI-T011",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-CISCO-AI-DEFENSE-SCANNERS"
+    ]
+  },
+  {
+    "id": "REL-097",
+    "type": "relationship",
+    "source": "DET-AI-022",
+    "relationship": "detects",
+    "target": "LLMI-T010",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "REL-098",
+    "type": "relationship",
+    "source": "DET-AI-023",
+    "relationship": "detects",
+    "target": "LLMI-T010",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "REL-099",
+    "type": "relationship",
+    "source": "DET-AI-024",
+    "relationship": "detects",
+    "target": "LLMI-T008",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "REL-100",
+    "type": "relationship",
+    "source": "DET-AI-025",
+    "relationship": "detects",
+    "target": "LLMI-T011",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-AGUARA"
+    ]
+  },
+  {
+    "id": "REL-101",
+    "type": "relationship",
+    "source": "DET-AI-026",
+    "relationship": "detects",
+    "target": "LLMI-T005",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-ATR"
+    ]
+  },
+  {
+    "id": "REL-102",
+    "type": "relationship",
+    "source": "DET-AI-033",
+    "relationship": "detects",
+    "target": "LLMI-T018",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-ATR"
+    ]
+  },
+  {
+    "id": "REL-103",
+    "type": "relationship",
+    "source": "DET-AI-027",
+    "relationship": "detects",
+    "target": "LLMI-T018",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-ATR"
+    ]
+  },
+  {
+    "id": "REL-104",
+    "type": "relationship",
+    "source": "DET-AI-028",
+    "relationship": "detects",
+    "target": "LLMI-T018",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-ATR"
+    ]
+  },
+  {
+    "id": "REL-105",
+    "type": "relationship",
+    "source": "DET-AI-029",
+    "relationship": "detects",
+    "target": "LLMI-T011",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-ATR"
+    ]
+  },
+  {
+    "id": "REL-106",
+    "type": "relationship",
+    "source": "DET-AI-030",
+    "relationship": "detects",
+    "target": "LLMI-T012",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-ATR"
+    ]
+  },
+  {
+    "id": "REL-107",
+    "type": "relationship",
+    "source": "DET-AI-031",
+    "relationship": "detects",
+    "target": "LLMI-T009",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-ATR"
+    ]
+  },
+  {
+    "id": "REL-108",
+    "type": "relationship",
+    "source": "DET-AI-032",
+    "relationship": "detects",
+    "target": "LLMI-T015",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-ATR"
+    ]
+  },
+  {
+    "id": "REL-109",
+    "type": "relationship",
+    "source": "DET-AI-034",
+    "relationship": "detects",
+    "target": "LLMI-T020",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "REL-110",
+    "type": "relationship",
+    "source": "DET-AI-035",
+    "relationship": "detects",
+    "target": "LLMI-T023",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "REL-111",
+    "type": "relationship",
+    "source": "DET-AI-036",
+    "relationship": "detects",
+    "target": "LLMI-T024",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "REL-112",
+    "type": "relationship",
+    "source": "DET-AI-037",
+    "relationship": "detects",
+    "target": "LLMI-T026",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "REL-113",
+    "type": "relationship",
+    "source": "DET-AI-038",
+    "relationship": "detects",
+    "target": "LLMI-T025",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "REL-114",
+    "type": "relationship",
+    "source": "DET-AI-039",
+    "relationship": "detects",
+    "target": "LLMI-T022",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "REL-115",
+    "type": "relationship",
+    "source": "INCIDENT-ATLAS-CS0030",
+    "relationship": "demonstrates",
+    "target": "LLMI-T016",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "REL-116",
+    "type": "relationship",
+    "source": "INCIDENT-ATLAS-CS0031",
+    "relationship": "demonstrates",
+    "target": "LLMI-T010",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "REL-117",
+    "type": "relationship",
+    "source": "INCIDENT-ATLAS-CS0043",
+    "relationship": "demonstrates",
+    "target": "LLMI-T017",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "REL-118",
+    "type": "relationship",
+    "source": "INCIDENT-ATLAS-CS0044",
+    "relationship": "demonstrates",
+    "target": "LLMI-T013",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "REL-119",
+    "type": "relationship",
+    "source": "INCIDENT-ATLAS-CS0047",
+    "relationship": "demonstrates",
+    "target": "LLMI-T011",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "REL-120",
+    "type": "relationship",
+    "source": "INCIDENT-ATLAS-CS0047",
+    "relationship": "demonstrates",
+    "target": "LLMI-T008",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "REL-121",
+    "type": "relationship",
+    "source": "INCIDENT-ATLAS-CS0053",
+    "relationship": "demonstrates",
+    "target": "LLMI-T021",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "REL-122",
+    "type": "relationship",
+    "source": "INCIDENT-ATLAS-CS0053",
+    "relationship": "demonstrates",
+    "target": "LLMI-T011",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "REL-123",
+    "type": "relationship",
+    "source": "INCIDENT-ATLAS-CS0056",
+    "relationship": "demonstrates",
+    "target": "LLMI-T019",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "REL-124",
+    "type": "relationship",
+    "source": "INCIDENT-ATLAS-CS0057",
+    "relationship": "demonstrates",
+    "target": "LLMI-T016",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "REL-125",
+    "type": "relationship",
+    "source": "INCIDENT-ATLAS-CS0057",
+    "relationship": "demonstrates",
+    "target": "LLMI-T003",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "REL-126",
+    "type": "relationship",
+    "source": "INCIDENT-ATLAS-CS0068",
+    "relationship": "demonstrates",
+    "target": "LLMI-T008",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "REL-127",
+    "type": "relationship",
+    "source": "INCIDENT-ATLAS-CS0068",
+    "relationship": "demonstrates",
+    "target": "LLMI-T015",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "REL-128",
+    "type": "relationship",
+    "source": "INCIDENT-ATLAS-CS0070",
+    "relationship": "demonstrates",
+    "target": "LLMI-T015",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "REL-129",
+    "type": "relationship",
+    "source": "INCIDENT-ATLAS-CS0070",
+    "relationship": "demonstrates",
+    "target": "LLMI-T024",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "REL-130",
+    "type": "relationship",
+    "source": "INCIDENT-ATLAS-CS0071",
+    "relationship": "demonstrates",
+    "target": "LLMI-T015",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "REL-131",
+    "type": "relationship",
+    "source": "INCIDENT-ATLAS-CS0071",
+    "relationship": "demonstrates",
+    "target": "LLMI-T026",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "REL-132",
+    "type": "relationship",
+    "source": "INCIDENT-ATLAS-CS0072",
+    "relationship": "demonstrates",
+    "target": "LLMI-T023",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "REL-133",
+    "type": "relationship",
+    "source": "INCIDENT-ATLAS-CS0024",
+    "relationship": "demonstrates",
+    "target": "LLMI-T026",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "REL-134",
+    "type": "relationship",
+    "source": "INCIDENT-ATLAS-CS0024",
+    "relationship": "demonstrates",
+    "target": "LLMI-T007",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "REL-135",
+    "type": "relationship",
+    "source": "INCIDENT-ATLAS-CS0040",
+    "relationship": "demonstrates",
+    "target": "LLMI-T009",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "REL-136",
+    "type": "relationship",
+    "source": "INCIDENT-ATLAS-CS0041",
+    "relationship": "demonstrates",
+    "target": "LLMI-T018",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "REL-137",
+    "type": "relationship",
+    "source": "INCIDENT-ATLAS-CS0045",
+    "relationship": "demonstrates",
+    "target": "LLMI-T021",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "REL-138",
+    "type": "relationship",
+    "source": "INCIDENT-ATLAS-CS0045",
+    "relationship": "demonstrates",
+    "target": "LLMI-T008",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "REL-139",
+    "type": "relationship",
+    "source": "INCIDENT-ATLAS-CS0046",
+    "relationship": "demonstrates",
+    "target": "LLMI-T002",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "REL-140",
+    "type": "relationship",
+    "source": "INCIDENT-ATLAS-CS0046",
+    "relationship": "demonstrates",
+    "target": "LLMI-T008",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "REL-141",
+    "type": "relationship",
+    "source": "INCIDENT-ATLAS-CS0055",
+    "relationship": "demonstrates",
+    "target": "LLMI-T002",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "REL-142",
+    "type": "relationship",
+    "source": "INCIDENT-ATLAS-CS0055",
+    "relationship": "demonstrates",
+    "target": "LLMI-T008",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "REL-143",
+    "type": "relationship",
+    "source": "INCIDENT-ATLAS-CS0059",
+    "relationship": "demonstrates",
+    "target": "LLMI-T002",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "REL-144",
+    "type": "relationship",
+    "source": "INCIDENT-ATLAS-CS0059",
+    "relationship": "demonstrates",
+    "target": "LLMI-T020",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "REL-145",
+    "type": "relationship",
+    "source": "INCIDENT-ATLAS-CS0060",
+    "relationship": "demonstrates",
+    "target": "LLMI-T020",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "REL-146",
+    "type": "relationship",
+    "source": "INCIDENT-ATLAS-CS0063",
+    "relationship": "demonstrates",
+    "target": "LLMI-T002",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "REL-147",
+    "type": "relationship",
+    "source": "INCIDENT-ATLAS-CS0066",
+    "relationship": "demonstrates",
+    "target": "LLMI-T009",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "REL-148",
+    "type": "relationship",
+    "source": "INCIDENT-ATLAS-CS0066",
+    "relationship": "demonstrates",
+    "target": "LLMI-T004",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "REL-149",
+    "type": "relationship",
+    "source": "LLMI-T020",
+    "relationship": "mitigated-by",
+    "target": "CTRL-OUTPUT-SANITIZATION",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-OWASP-LLM-2026"
+    ]
+  },
+  {
+    "id": "REL-150",
+    "type": "relationship",
+    "source": "LLMI-T020",
+    "relationship": "mitigated-by",
+    "target": "CTRL-STRUCTURED-OUTPUT",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-TLDRSEC-PI-DEFENSES"
+    ]
+  },
+  {
+    "id": "REL-151",
+    "type": "relationship",
+    "source": "LLMI-T020",
+    "relationship": "mitigated-by",
+    "target": "CTRL-EGRESS-POLICY",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-GOOGLE-SAIF"
+    ]
+  },
+  {
+    "id": "REL-152",
+    "type": "relationship",
+    "source": "LLMI-T021",
+    "relationship": "mitigated-by",
+    "target": "CTRL-MCP-TOOL-PINNING",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MCP-SECURITY-2026"
+    ]
+  },
+  {
+    "id": "REL-153",
+    "type": "relationship",
+    "source": "LLMI-T021",
+    "relationship": "mitigated-by",
+    "target": "CTRL-MCP-CONSENT",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MCP-SECURITY-2026"
+    ]
+  },
+  {
+    "id": "REL-154",
+    "type": "relationship",
+    "source": "LLMI-T021",
+    "relationship": "mitigated-by",
+    "target": "CTRL-TOOL-ALLOWLIST",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-OWASP-AGENTIC-2026"
+    ]
+  },
+  {
+    "id": "REL-155",
+    "type": "relationship",
+    "source": "LLMI-T022",
+    "relationship": "mitigated-by",
+    "target": "CTRL-ACTION-BUDGET",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-OWASP-AGENTIC-2026"
+    ]
+  },
+  {
+    "id": "REL-156",
+    "type": "relationship",
+    "source": "LLMI-T023",
+    "relationship": "mitigated-by",
+    "target": "CTRL-PREFILL-LINK-POLICY",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "REL-157",
+    "type": "relationship",
+    "source": "LLMI-T023",
+    "relationship": "mitigated-by",
+    "target": "CTRL-MEMORY-PROVENANCE",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-OWASP-AGENTIC-2026"
+    ]
+  },
+  {
+    "id": "REL-158",
+    "type": "relationship",
+    "source": "LLMI-T024",
+    "relationship": "mitigated-by",
+    "target": "CTRL-AI-SERVICE-EXPOSURE",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "REL-159",
+    "type": "relationship",
+    "source": "LLMI-T024",
+    "relationship": "mitigated-by",
+    "target": "CTRL-AI-INVENTORY",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-CSA-AICM-11"
+    ]
+  },
+  {
+    "id": "REL-160",
+    "type": "relationship",
+    "source": "LLMI-T025",
+    "relationship": "mitigated-by",
+    "target": "CTRL-INPUT-TRANSFORM",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-ANAMORPHER"
+    ]
+  },
+  {
+    "id": "REL-161",
+    "type": "relationship",
+    "source": "LLMI-T025",
+    "relationship": "mitigated-by",
+    "target": "CTRL-IO-GUARDRAIL",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-TLDRSEC-PI-DEFENSES"
+    ]
+  },
+  {
+    "id": "REL-162",
+    "type": "relationship",
+    "source": "LLMI-T026",
+    "relationship": "mitigated-by",
+    "target": "CTRL-PRIVILEGE-SEPARATED-LLM",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-CAMEL"
+    ]
+  },
+  {
+    "id": "REL-163",
+    "type": "relationship",
+    "source": "LLMI-T026",
+    "relationship": "mitigated-by",
+    "target": "CTRL-TASK-ALIGNMENT-CHECK",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-TLDRSEC-PI-DEFENSES"
+    ]
+  },
+  {
+    "id": "REL-164",
+    "type": "relationship",
+    "source": "LLMI-T026",
+    "relationship": "mitigated-by",
+    "target": "CTRL-AGENT-TELEMETRY",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-OWASP-ACS"
+    ]
+  },
+  {
+    "id": "REL-165",
+    "type": "relationship",
+    "source": "LLMI-T002",
+    "relationship": "mitigated-by",
+    "target": "CTRL-DATAFLOW-TAINT",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-CAMEL"
+    ]
+  },
+  {
+    "id": "REL-166",
+    "type": "relationship",
+    "source": "LLMI-T002",
+    "relationship": "mitigated-by",
+    "target": "CTRL-PRIVILEGE-SEPARATED-LLM",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-CAMEL"
+    ]
+  },
+  {
+    "id": "REL-167",
+    "type": "relationship",
+    "source": "LLMI-T001",
+    "relationship": "mitigated-by",
+    "target": "CTRL-IO-GUARDRAIL",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-TLDRSEC-PI-DEFENSES"
+    ]
+  },
+  {
+    "id": "REL-168",
+    "type": "relationship",
+    "source": "LLMI-T004",
+    "relationship": "mitigated-by",
+    "target": "CTRL-CONTEXT-CANARY",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-TLDRSEC-PI-DEFENSES"
+    ]
+  },
+  {
+    "id": "REL-169",
+    "type": "relationship",
+    "source": "LLMI-T017",
+    "relationship": "mitigated-by",
+    "target": "CTRL-INPUT-TRANSFORM",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-TLDRSEC-PI-DEFENSES"
+    ]
+  },
+  {
+    "id": "REL-170",
+    "type": "relationship",
+    "source": "LLMI-T003",
+    "relationship": "mitigated-by",
+    "target": "CTRL-MODEL-ROBUSTNESS-EVAL",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-AGENTDOJO"
+    ]
+  },
+  {
+    "id": "REL-171",
+    "type": "relationship",
+    "source": "DET-AI-010",
+    "relationship": "detects",
+    "target": "LLMI-T004",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-OWASP-LLM-2026"
+    ]
+  },
+  {
+    "id": "REL-172",
+    "type": "relationship",
+    "source": "DET-AI-017",
+    "relationship": "detects",
+    "target": "LLMI-T001",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-AGUARA"
+    ]
+  },
+  {
+    "id": "REL-173",
+    "type": "relationship",
+    "source": "DET-AI-034",
+    "relationship": "detects",
+    "target": "LLMI-T002",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-MITRE-ATLAS-2026-09"
+    ]
+  },
+  {
+    "id": "REL-174",
+    "type": "relationship",
+    "source": "TC-MCP-031",
+    "relationship": "validates",
+    "target": "LLMI-T011",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-MCP-SECURITY-2026"
+    ]
   }
 ]

@@ -1,0 +1,353 @@
+{
+  "generated": "2026-10-07",
+  "provenance": "tldrsec/prompt-injection-defenses; google-research/camel-prompt-injection",
+  "note": "Derived from shallow clones read on 2026-10-07. Names and identifiers only; descriptions are paraphrased. Discovery and test-design material, not evidence of in-the-wild activity.",
+  "defence_patterns": [
+    {
+      "id": "DEF-BLAST-RADIUS",
+      "name": "Blast Radius Reduction",
+      "source": "tldrsec__prompt-injection-defenses/README.md#blast-radius-reduction",
+      "description": "Assume injection succeeds; restrict what a hijacked LLM can reach (least privilege, access control to backends, fence high-stakes operations, treat all LLM output as untrusted).",
+      "maps_to": [
+        "CTRL-TOOL-ALLOWLIST",
+        "CTRL-CONTEXTUAL-AUTHZ",
+        "CTRL-HUMAN-CHECKPOINT",
+        "CTRL-SECRET-ISOLATION",
+        "CTRL-OUTPUT-SANITIZATION"
+      ],
+      "llmi": [
+        "LLMI-T001",
+        "LLMI-T002",
+        "LLMI-T008"
+      ]
+    },
+    {
+      "id": "DEF-INPUT-PREPROCESS",
+      "name": "Input Pre-processing (Paraphrasing, Retokenization, perturbation e.g. SmoothLLM/JailGuard)",
+      "source": "tldrsec__prompt-injection-defenses/README.md#input-pre-processing-paraphrasing-retokenization",
+      "description": "Transform untrusted input before inference so optimised adversarial sequences lose effect; mutation-consistency used for detection.",
+      "maps_to": [],
+      "proposed": "CTRL-INPUT-TRANSFORM",
+      "llmi": [
+        "LLMI-T001",
+        "LLMI-T002",
+        "LLMI-T003"
+      ]
+    },
+    {
+      "id": "DEF-GUARDRAILS-OVERSEERS",
+      "name": "Guardrails & Overseers, Firewalls & Filters (input/output classifiers, perplexity, action guards, Task Shield)",
+      "source": "tldrsec__prompt-injection-defenses/README.md#guardrails--overseers-firewalls--filters",
+      "description": "Monitor inputs and outputs with classifier/LLM guards; gate high-risk actions with dynamic checks; verify each tool call serves the user task.",
+      "maps_to": [
+        "CTRL-CONTEXTUAL-AUTHZ",
+        "CTRL-OUTPUT-SANITIZATION"
+      ],
+      "proposed": "CTRL-IO-GUARDRAIL; CTRL-TASK-ALIGNMENT-CHECK",
+      "llmi": [
+        "LLMI-T001",
+        "LLMI-T002",
+        "LLMI-T003",
+        "LLMI-T004",
+        "LLMI-T008"
+      ]
+    },
+    {
+      "id": "DEF-CANARY",
+      "name": "Canary Tokens & Output Overseer",
+      "source": "tldrsec__prompt-injection-defenses/README.md#guardrails--overseers-firewalls--filters",
+      "description": "Embed per-session canary in privileged context; its appearance in output signals prompt leakage/hijack (Rebuff, Vigil).",
+      "maps_to": [
+        "DET-AI-010 (detection)"
+      ],
+      "proposed": "CTRL-CONTEXT-CANARY",
+      "llmi": [
+        "LLMI-T004",
+        "LLMI-T001"
+      ]
+    },
+    {
+      "id": "DEF-TAINT",
+      "name": "Taint Tracking",
+      "source": "tldrsec__prompt-injection-defenses/README.md#taint-tracking",
+      "description": "Track trust level of data ingested by the model and reduce capabilities as taint increases; flag tainted data reaching sensitive sinks.",
+      "maps_to": [
+        "CTRL-INSTRUCTION-DATA-SEPARATION",
+        "CTRL-CONTEXTUAL-AUTHZ",
+        "CTRL-RAG-PROVENANCE"
+      ],
+      "proposed": "CTRL-DATAFLOW-TAINT",
+      "llmi": [
+        "LLMI-T002",
+        "LLMI-T007",
+        "LLMI-T008",
+        "LLMI-T009"
+      ]
+    },
+    {
+      "id": "DEF-DUAL-LLM",
+      "name": "Secure Threads / Dual LLM (Privileged + Quarantined)",
+      "source": "tldrsec__prompt-injection-defenses/README.md#secure-threads--dual-llm",
+      "description": "Privileged LLM sees only trusted input and plans actions; quarantined LLM processes untrusted content with no tools; data passed by reference/structured values.",
+      "maps_to": [
+        "CTRL-INSTRUCTION-DATA-SEPARATION",
+        "CTRL-POLICY-OUTSIDE-MODEL"
+      ],
+      "proposed": "CTRL-PRIVILEGE-SEPARATED-LLM",
+      "llmi": [
+        "LLMI-T002",
+        "LLMI-T008"
+      ]
+    },
+    {
+      "id": "DEF-ENSEMBLE",
+      "name": "Ensemble Decisions / Mixture of Experts (incl. MELON masked re-execution)",
+      "source": "tldrsec__prompt-injection-defenses/README.md#ensemble-decisions--mixture-of-experts",
+      "description": "Cross-check decisions across independent models or re-execute with masked user prompt to detect actions driven by injected content.",
+      "maps_to": [],
+      "proposed": "CTRL-TASK-ALIGNMENT-CHECK",
+      "llmi": [
+        "LLMI-T002",
+        "LLMI-T008"
+      ]
+    },
+    {
+      "id": "DEF-PROMPT-ENGINEERING",
+      "name": "Prompt Engineering / Instructional Defense (spotlighting, delimiters/random enclosure, sandwich, instruction hierarchy, signed prompts, templated output, API/model-level role segmentation)",
+      "source": "tldrsec__prompt-injection-defenses/README.md#prompt-engineering--instructional-defense",
+      "description": "Mark provenance of untrusted data and structure prompts/roles so model prioritises privileged instructions; constrain outputs to templates. Weak alone (see critiques).",
+      "maps_to": [
+        "CTRL-INSTRUCTION-DATA-SEPARATION",
+        "CTRL-OUTPUT-SANITIZATION"
+      ],
+      "proposed": "CTRL-STRUCTURED-OUTPUT",
+      "llmi": [
+        "LLMI-T001",
+        "LLMI-T002"
+      ]
+    },
+    {
+      "id": "DEF-ROBUSTNESS-FINETUNE",
+      "name": "Robustness, Finetuning (task-specific finetune e.g. Jatmo, StruQ, control vectors)",
+      "source": "tldrsec__prompt-injection-defenses/README.md#robustness-finetuning-etc",
+      "description": "Train/finetune or steer models so they do not follow instructions embedded in data.",
+      "maps_to": [],
+      "proposed": "CTRL-MODEL-ROBUSTNESS-EVAL",
+      "llmi": [
+        "LLMI-T001",
+        "LLMI-T002",
+        "LLMI-T003"
+      ]
+    },
+    {
+      "id": "DEF-PREFLIGHT",
+      "name": "Preflight \"injection test\"",
+      "source": "tldrsec__prompt-injection-defenses/README.md#preflight-injection-test",
+      "description": "Concatenate untrusted input to a known test prompt; deviation from expected deterministic output signals injection.",
+      "maps_to": [],
+      "proposed": "CTRL-IO-GUARDRAIL",
+      "llmi": [
+        "LLMI-T001",
+        "LLMI-T002"
+      ]
+    },
+    {
+      "id": "DEF-SQL-PERMISSION-HARDENING",
+      "name": "Database permission hardening / query rewriting (Critiques & Papers section)",
+      "source": "tldrsec__prompt-injection-defenses/README.md#papers",
+      "description": "Rewrite LLM-generated SQL to operate only on data the user is authorised for; DB-level least privilege.",
+      "maps_to": [
+        "CTRL-CONTEXTUAL-AUTHZ",
+        "CTRL-OUTPUT-SANITIZATION"
+      ],
+      "llmi": [
+        "LLMI-T008"
+      ]
+    },
+    {
+      "id": "DEF-CAMEL-CONTROL-FLOW",
+      "name": "CaMeL: Control/data-flow separation via privileged LLM generating code for a restricted interpreter",
+      "source": "google-research__camel-prompt-injection/src/camel/pipeline_elements/privileged_llm.py; src/camel/interpreter/interpreter.py",
+      "description": "P-LLM sees only the user query and emits a program; untrusted tool data never alters control flow, only flows as values through a custom interpreter.",
+      "maps_to": [
+        "CTRL-INSTRUCTION-DATA-SEPARATION",
+        "CTRL-POLICY-OUTSIDE-MODEL"
+      ],
+      "proposed": "CTRL-PRIVILEGE-SEPARATED-LLM",
+      "llmi": [
+        "LLMI-T002",
+        "LLMI-T008",
+        "LLMI-T015"
+      ]
+    },
+    {
+      "id": "DEF-CAMEL-QUARANTINED-LLM",
+      "name": "CaMeL: Quarantined LLM with schema-constrained output and no tool access",
+      "source": "google-research__camel-prompt-injection/src/camel/quarantined_llm.py",
+      "description": "Untrusted unstructured data is parsed by a tool-less Q-LLM into a typed Pydantic schema, with an explicit not-enough-information signal instead of guessing.",
+      "maps_to": [
+        "CTRL-INSTRUCTION-DATA-SEPARATION"
+      ],
+      "proposed": "CTRL-PRIVILEGE-SEPARATED-LLM; CTRL-STRUCTURED-OUTPUT",
+      "llmi": [
+        "LLMI-T002"
+      ]
+    },
+    {
+      "id": "DEF-CAMEL-CAPABILITIES",
+      "name": "CaMeL: Capability metadata on values (sources + readers) propagated through dependencies",
+      "source": "google-research__camel-prompt-injection/src/camel/capabilities/{capabilities,sources,readers,utils}.py",
+      "description": "Every value carries provenance (User, CaMeL, TrustedToolSource, Tool with inner sources) and allowed readers (Public or set); dependencies propagate tags.",
+      "maps_to": [
+        "CTRL-RAG-PROVENANCE",
+        "CTRL-MEMORY-PROVENANCE"
+      ],
+      "proposed": "CTRL-DATAFLOW-TAINT",
+      "llmi": [
+        "LLMI-T002",
+        "LLMI-T004",
+        "LLMI-T008"
+      ]
+    },
+    {
+      "id": "DEF-CAMEL-POLICY-ENGINE",
+      "name": "CaMeL: Per-tool security policy engine, default-deny, side-effect-free tool exemption",
+      "source": "google-research__camel-prompt-injection/src/camel/security_policy.py; src/camel/pipeline_elements/security_policies/*.py",
+      "description": "Before a state-changing tool runs, policies (fnmatch on tool name) inspect argument capabilities; deny if non-public dependencies or no policy matches (e.g. recipient must be able to read data; deletion target must come from user).",
+      "maps_to": [
+        "CTRL-POLICY-OUTSIDE-MODEL",
+        "CTRL-CONTEXTUAL-AUTHZ",
+        "CTRL-TOOL-ALLOWLIST"
+      ],
+      "proposed": "CTRL-DATAFLOW-TAINT (exfiltration-to-reader check)",
+      "llmi": [
+        "LLMI-T002",
+        "LLMI-T004",
+        "LLMI-T008"
+      ]
+    }
+  ],
+  "proposed_controls": [
+    {
+      "id": "CTRL-IO-GUARDRAIL",
+      "name": "Input/Output Injection & Policy Classifier",
+      "category": "prompt-context",
+      "description": "Run a dedicated classifier/guard model (and heuristics such as perplexity) on untrusted inputs and on model outputs/tool calls; log verdicts; never rely on it as sole control (defence-in-depth, measure false-positive/over-defence).",
+      "sources": [
+        "tldrsec__prompt-injection-defenses/README.md#guardrails--overseers-firewalls--filters",
+        "tldrsec__prompt-injection-defenses/README.md#preflight-injection-test"
+      ],
+      "llmi": [
+        "LLMI-T001",
+        "LLMI-T002",
+        "LLMI-T003"
+      ]
+    },
+    {
+      "id": "CTRL-CONTEXT-CANARY",
+      "name": "Privileged-Context Canary Tokens",
+      "category": "observability",
+      "description": "Insert unique per-session canaries into system prompts/secret-bearing context and alert when they appear in output, tool arguments or egress (pairs with DET-AI-010).",
+      "sources": [
+        "tldrsec__prompt-injection-defenses/README.md#guardrails--overseers-firewalls--filters"
+      ],
+      "llmi": [
+        "LLMI-T004",
+        "LLMI-T001"
+      ]
+    },
+    {
+      "id": "CTRL-PRIVILEGE-SEPARATED-LLM",
+      "name": "Privileged / Quarantined LLM Separation",
+      "category": "agentic",
+      "description": "Planner model with tool access only sees trusted instructions; untrusted content is processed by a tool-less model returning schema-typed values that cannot alter control flow.",
+      "sources": [
+        "tldrsec__prompt-injection-defenses/README.md#secure-threads--dual-llm",
+        "google-research__camel-prompt-injection/src/camel/quarantined_llm.py",
+        "google-research__camel-prompt-injection/src/camel/pipeline_elements/privileged_llm.py"
+      ],
+      "llmi": [
+        "LLMI-T002",
+        "LLMI-T008",
+        "LLMI-T009"
+      ]
+    },
+    {
+      "id": "CTRL-DATAFLOW-TAINT",
+      "name": "Data-Flow Provenance and Taint Policy",
+      "category": "authorization",
+      "description": "Attach source/reader capability tags to all data, propagate through derivations, and deny side-effecting tool calls whose arguments depend on untrusted or non-shareable data unless an explicit policy allows it (default deny).",
+      "sources": [
+        "tldrsec__prompt-injection-defenses/README.md#taint-tracking",
+        "google-research__camel-prompt-injection/src/camel/security_policy.py",
+        "google-research__camel-prompt-injection/src/camel/capabilities/"
+      ],
+      "llmi": [
+        "LLMI-T002",
+        "LLMI-T004",
+        "LLMI-T007",
+        "LLMI-T008"
+      ]
+    },
+    {
+      "id": "CTRL-TASK-ALIGNMENT-CHECK",
+      "name": "Task-Alignment Verification of Agent Actions",
+      "category": "agentic",
+      "description": "Verify each planned tool call contributes to the user-stated goal (Task Shield) or remains stable when untrusted context is masked/re-executed (MELON) or cross-checked by an independent model.",
+      "sources": [
+        "tldrsec__prompt-injection-defenses/README.md#guardrails--overseers-firewalls--filters",
+        "tldrsec__prompt-injection-defenses/README.md#ensemble-decisions--mixture-of-experts"
+      ],
+      "llmi": [
+        "LLMI-T002",
+        "LLMI-T008",
+        "LLMI-T015"
+      ]
+    },
+    {
+      "id": "CTRL-INPUT-TRANSFORM",
+      "name": "Untrusted Input Transformation and Spotlighting",
+      "category": "prompt-context",
+      "description": "Mark/encode untrusted content (spotlighting, datamarking, random delimiters) and optionally paraphrase/retokenize/normalise (Unicode, invisible chars) before inference.",
+      "sources": [
+        "tldrsec__prompt-injection-defenses/README.md#input-pre-processing-paraphrasing-retokenization",
+        "tldrsec__prompt-injection-defenses/README.md#prompt-engineering--instructional-defense"
+      ],
+      "llmi": [
+        "LLMI-T001",
+        "LLMI-T002",
+        "LLMI-T017",
+        "LLMI-T018"
+      ]
+    },
+    {
+      "id": "CTRL-STRUCTURED-OUTPUT",
+      "name": "Typed / Templated Model Output",
+      "category": "application",
+      "description": "Constrain model output to schemas/enums/templates validated by deterministic code before use (complements CTRL-OUTPUT-SANITIZATION).",
+      "sources": [
+        "tldrsec__prompt-injection-defenses/README.md#prompt-engineering--instructional-defense",
+        "google-research__camel-prompt-injection/src/camel/quarantined_llm.py"
+      ],
+      "llmi": [
+        "LLMI-T002",
+        "LLMI-T008"
+      ]
+    },
+    {
+      "id": "CTRL-MODEL-ROBUSTNESS-EVAL",
+      "name": "Model Injection-Robustness Selection and Evaluation",
+      "category": "governance",
+      "description": "Select/finetune models with instruction-hierarchy or injection-resistant training and re-evaluate with adversarial suites (e.g., AgentDojo-style) on each model/version change.",
+      "sources": [
+        "tldrsec__prompt-injection-defenses/README.md#robustness-finetuning-etc",
+        "tldrsec__prompt-injection-defenses/README.md#prompt-engineering--instructional-defense"
+      ],
+      "llmi": [
+        "LLMI-T001",
+        "LLMI-T002",
+        "LLMI-T003"
+      ]
+    }
+  ]
+}

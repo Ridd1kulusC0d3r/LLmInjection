@@ -1,0 +1,1248 @@
+{
+  "generated": "2026-10-07",
+  "provenance": "Arcanum-Sec/arc_pi_taxonomy (CC licensed; item names only)",
+  "note": "Derived from shallow clones read on 2026-10-07. Names and identifiers only; descriptions are paraphrased. Discovery and test-design material, not evidence of in-the-wild activity.",
+  "arcanum": {
+    "source": "Arcanum-Sec/arc_pi_taxonomy docs/data/taxonomy.json (CHANGELOG latest 1.6.1, 2026-06-29)",
+    "code_scheme": "PIT-I-xx intents, PIT-T-xx techniques, PIT-E-xx evasions, PIT-N-xx inputs; delivery tag direct|indirect|both",
+    "dimensions": {
+      "intents": {
+        "count": 27,
+        "items": [
+          {
+            "code": "PIT-I-01",
+            "title": "API Enumeration",
+            "delivery": "direct",
+            "llmi": [
+              "LLMI-T014"
+            ]
+          },
+          {
+            "code": "PIT-I-02",
+            "title": "Attack External Systems",
+            "delivery": "direct",
+            "llmi": [
+              "LLMI-T008",
+              "LLMI-T015"
+            ]
+          },
+          {
+            "code": "PIT-I-03",
+            "title": "Attack External Users",
+            "delivery": "both",
+            "llmi": [
+              "LLMI-T002"
+            ]
+          },
+          {
+            "code": "PIT-I-04",
+            "title": "Attack Internal Systems",
+            "delivery": "direct",
+            "llmi": [
+              "LLMI-T008",
+              "LLMI-T015"
+            ]
+          },
+          {
+            "code": "PIT-I-05",
+            "title": "Attack Internal Users",
+            "delivery": "both",
+            "llmi": [
+              "LLMI-T002"
+            ]
+          },
+          {
+            "code": "PIT-I-06",
+            "title": "Unauthorized Professional Advice",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-I-07",
+            "title": "Business Integrity",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-I-08",
+            "title": "CBRNE Information",
+            "delivery": "direct",
+            "llmi": [
+              "LLMI-T003"
+            ]
+          },
+          {
+            "code": "PIT-I-09",
+            "title": "Data Poisoning",
+            "delivery": "indirect",
+            "llmi": [
+              "LLMI-T006",
+              "LLMI-T007",
+              "LLMI-T009"
+            ]
+          },
+          {
+            "code": "PIT-I-10",
+            "title": "Denial of Service",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-I-11",
+            "title": "Discuss Harm",
+            "delivery": "direct",
+            "llmi": [
+              "LLMI-T003"
+            ]
+          },
+          {
+            "code": "PIT-I-12",
+            "title": "Generate Image",
+            "delivery": "direct",
+            "llmi": [
+              "LLMI-T003"
+            ]
+          },
+          {
+            "code": "PIT-I-13",
+            "title": "Get Prompt Secret",
+            "delivery": "direct",
+            "llmi": [
+              "LLMI-T004"
+            ]
+          },
+          {
+            "code": "PIT-I-14",
+            "title": "Jailbreak",
+            "delivery": "direct",
+            "llmi": [
+              "LLMI-T003"
+            ]
+          },
+          {
+            "code": "PIT-I-15",
+            "title": "Multi-Chain Attacks",
+            "delivery": "both",
+            "llmi": [
+              "LLMI-T002",
+              "LLMI-T015"
+            ]
+          },
+          {
+            "code": "PIT-I-16",
+            "title": "System Prompt Leak",
+            "delivery": "direct",
+            "llmi": [
+              "LLMI-T004"
+            ]
+          },
+          {
+            "code": "PIT-I-17",
+            "title": "Test Bias",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-I-18",
+            "title": "Tool Enumeration",
+            "delivery": "direct",
+            "llmi": [
+              "LLMI-T008"
+            ]
+          },
+          {
+            "code": "PIT-I-19",
+            "title": "Sensitive Data Exfiltration",
+            "delivery": "both",
+            "llmi": [
+              "LLMI-T004"
+            ]
+          },
+          {
+            "code": "PIT-I-20",
+            "title": "Unauthorized Action Execution",
+            "delivery": "both",
+            "llmi": [
+              "LLMI-T008"
+            ]
+          },
+          {
+            "code": "PIT-I-21",
+            "title": "Generate Malicious Artifacts",
+            "delivery": "direct",
+            "llmi": [
+              "LLMI-T003",
+              "LLMI-T013"
+            ]
+          },
+          {
+            "code": "PIT-I-22",
+            "title": "Generate Disinformation",
+            "delivery": "direct",
+            "llmi": [
+              "LLMI-T003",
+              "LLMI-T014"
+            ]
+          },
+          {
+            "code": "PIT-I-23",
+            "title": "Model & Data Privacy Extraction",
+            "delivery": "direct",
+            "llmi": [
+              "LLMI-T004",
+              "LLMI-T005"
+            ]
+          },
+          {
+            "code": "PIT-I-24",
+            "title": "Output-Handling Exploitation",
+            "delivery": "both",
+            "llmi": []
+          },
+          {
+            "code": "PIT-I-25",
+            "title": "Harmful Content Generation",
+            "delivery": "direct",
+            "llmi": [
+              "LLMI-T003"
+            ]
+          },
+          {
+            "code": "PIT-I-26",
+            "title": "Denial of Wallet",
+            "delivery": "direct",
+            "llmi": [
+              "LLMI-T019"
+            ]
+          },
+          {
+            "code": "PIT-I-27",
+            "title": "Cross-Tenant Data Leakage",
+            "delivery": "both",
+            "llmi": [
+              "LLMI-T004"
+            ]
+          }
+        ]
+      },
+      "techniques": {
+        "count": 70,
+        "items": [
+          {
+            "code": "PIT-T-01",
+            "title": "Act as Interpreter",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-T-02",
+            "title": "Anti-Harm Coercion",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-T-03",
+            "title": "Binary Streams",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-T-04",
+            "title": "Cognitive Overload",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-T-05",
+            "title": "Chain of Thought Introspection",
+            "delivery": "direct",
+            "llmi": [
+              "LLMI-T004"
+            ]
+          },
+          {
+            "code": "PIT-T-06",
+            "title": "Contradiction",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-T-07",
+            "title": "End Sequences",
+            "delivery": "direct",
+            "llmi": [
+              "LLMI-T001"
+            ]
+          },
+          {
+            "code": "PIT-T-08",
+            "title": "Narrative Injection (aka Framing)",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-T-09",
+            "title": "Gradient-Based Attacks",
+            "delivery": "direct",
+            "llmi": [
+              "LLMI-T003"
+            ]
+          },
+          {
+            "code": "PIT-T-10",
+            "title": "Figurative Language",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-T-11",
+            "title": "Inversion",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-T-12",
+            "title": "Link Injection",
+            "delivery": "both",
+            "llmi": [
+              "LLMI-T002"
+            ]
+          },
+          {
+            "code": "PIT-T-13",
+            "title": "Memory Exploitation",
+            "delivery": "both",
+            "llmi": [
+              "LLMI-T009"
+            ]
+          },
+          {
+            "code": "PIT-T-14",
+            "title": "Meta Prompting",
+            "delivery": "direct",
+            "llmi": [
+              "LLMI-T001"
+            ]
+          },
+          {
+            "code": "PIT-T-15",
+            "title": "Anti-Refusal",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-T-16",
+            "title": "Chunking",
+            "delivery": "direct",
+            "llmi": [
+              "LLMI-T004"
+            ]
+          },
+          {
+            "code": "PIT-T-17",
+            "title": "Competition",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-T-18",
+            "title": "Priming",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-T-19",
+            "title": "Puzzling",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-T-20",
+            "title": "Reorientation",
+            "delivery": "direct",
+            "llmi": [
+              "LLMI-T001"
+            ]
+          },
+          {
+            "code": "PIT-T-21",
+            "title": "Reiteration",
+            "delivery": "direct",
+            "llmi": [
+              "LLMI-T001"
+            ]
+          },
+          {
+            "code": "PIT-T-22",
+            "title": "Rule Addition",
+            "delivery": "direct",
+            "llmi": [
+              "LLMI-T001"
+            ]
+          },
+          {
+            "code": "PIT-T-23",
+            "title": "Russian Doll",
+            "delivery": "both",
+            "llmi": [
+              "LLMI-T002",
+              "LLMI-T015"
+            ]
+          },
+          {
+            "code": "PIT-T-24",
+            "title": "Shortcuts",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-T-25",
+            "title": "Truncated Instructions",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-T-26",
+            "title": "Spatial Byte Arrays",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-T-27",
+            "title": "Urgency",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-T-28",
+            "title": "Variable Expansion",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-T-29",
+            "title": "Crescendo (Gradual Escalation)",
+            "delivery": "direct",
+            "llmi": [
+              "LLMI-T003"
+            ]
+          },
+          {
+            "code": "PIT-T-30",
+            "title": "Many-Shot Jailbreaking",
+            "delivery": "direct",
+            "llmi": [
+              "LLMI-T003"
+            ]
+          },
+          {
+            "code": "PIT-T-31",
+            "title": "History Fabrication (Fake Assistant Turn)",
+            "delivery": "direct",
+            "llmi": [
+              "LLMI-T001",
+              "LLMI-T009"
+            ]
+          },
+          {
+            "code": "PIT-T-32",
+            "title": "Echo Chamber (Context Poisoning)",
+            "delivery": "both",
+            "llmi": [
+              "LLMI-T009",
+              "LLMI-T003"
+            ]
+          },
+          {
+            "code": "PIT-T-33",
+            "title": "Multi-Turn Decomposition (Sub-Query Splitting)",
+            "delivery": "direct",
+            "llmi": [
+              "LLMI-T003"
+            ]
+          },
+          {
+            "code": "PIT-T-34",
+            "title": "Policy-File Framing (Policy Puppetry)",
+            "delivery": "direct",
+            "llmi": [
+              "LLMI-T003"
+            ]
+          },
+          {
+            "code": "PIT-T-35",
+            "title": "Evaluator-Role Abuse (Bad Likert Judge)",
+            "delivery": "direct",
+            "llmi": [
+              "LLMI-T003"
+            ]
+          },
+          {
+            "code": "PIT-T-36",
+            "title": "Distraction Sandwich (Deceptive Delight)",
+            "delivery": "direct",
+            "llmi": [
+              "LLMI-T003"
+            ]
+          },
+          {
+            "code": "PIT-T-37",
+            "title": "Tense Reformulation (Past / Future Tense)",
+            "delivery": "direct",
+            "llmi": [
+              "LLMI-T003"
+            ]
+          },
+          {
+            "code": "PIT-T-38",
+            "title": "Persuasion (Social-Engineering Levers)",
+            "delivery": "direct",
+            "llmi": [
+              "LLMI-T003"
+            ]
+          },
+          {
+            "code": "PIT-T-39",
+            "title": "Fuzzing-Based Jailbreak",
+            "delivery": "direct",
+            "llmi": [
+              "LLMI-T003"
+            ]
+          },
+          {
+            "code": "PIT-T-40",
+            "title": "Autonomous Strategy Discovery (AutoDAN-Turbo)",
+            "delivery": "direct",
+            "llmi": [
+              "LLMI-T003"
+            ]
+          },
+          {
+            "code": "PIT-T-41",
+            "title": "Best-of-N (Augmentation Sampling)",
+            "delivery": "direct",
+            "llmi": [
+              "LLMI-T003"
+            ]
+          },
+          {
+            "code": "PIT-T-42",
+            "title": "Tool-Definition Injection (MCP Tool Poisoning)",
+            "delivery": "indirect",
+            "llmi": [
+              "LLMI-T002",
+              "LLMI-T008",
+              "LLMI-T011"
+            ]
+          },
+          {
+            "code": "PIT-T-43",
+            "title": "Tool Rug Pull (TOCTOU Mutation)",
+            "delivery": "indirect",
+            "llmi": [
+              "LLMI-T008",
+              "LLMI-T011"
+            ]
+          },
+          {
+            "code": "PIT-T-44",
+            "title": "Conditional / Trigger-Gated Payload (Sleeper)",
+            "delivery": "both",
+            "llmi": [
+              "LLMI-T002",
+              "LLMI-T009"
+            ]
+          },
+          {
+            "code": "PIT-T-45",
+            "title": "Prompt Worm (Self-Replication)",
+            "delivery": "indirect",
+            "llmi": [
+              "LLMI-T002",
+              "LLMI-T009",
+              "LLMI-T007"
+            ]
+          },
+          {
+            "code": "PIT-T-46",
+            "title": "Agent Instruction-File Injection (Rules-File Backdoor)",
+            "delivery": "indirect",
+            "llmi": [
+              "LLMI-T018"
+            ]
+          },
+          {
+            "code": "PIT-T-47",
+            "title": "Confused Deputy (Agent Authority Confusion)",
+            "delivery": "direct",
+            "llmi": [
+              "LLMI-T008"
+            ]
+          },
+          {
+            "code": "PIT-T-48",
+            "title": "Special-Token Injection",
+            "delivery": "both",
+            "llmi": [
+              "LLMI-T001"
+            ]
+          },
+          {
+            "code": "PIT-T-49",
+            "title": "Output Priming (Prefix Injection)",
+            "delivery": "direct",
+            "llmi": [
+              "LLMI-T003"
+            ]
+          },
+          {
+            "code": "PIT-T-50",
+            "title": "Special-Case Exception",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-T-51",
+            "title": "Fake Completion",
+            "delivery": "both",
+            "llmi": [
+              "LLMI-T002"
+            ]
+          },
+          {
+            "code": "PIT-T-52",
+            "title": "Chain-of-Thought Spoofing",
+            "delivery": "direct",
+            "llmi": [
+              "LLMI-T003"
+            ]
+          },
+          {
+            "code": "PIT-T-53",
+            "title": "Tool-Call Spoofing",
+            "delivery": "direct",
+            "llmi": [
+              "LLMI-T008",
+              "LLMI-T001"
+            ]
+          },
+          {
+            "code": "PIT-T-54",
+            "title": "Glitch / Anomalous Tokens",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-T-55",
+            "title": "Context Overflow (Window Flooding)",
+            "delivery": "direct",
+            "llmi": [
+              "LLMI-T001"
+            ]
+          },
+          {
+            "code": "PIT-T-56",
+            "title": "Authority Impersonation",
+            "delivery": "direct",
+            "llmi": [
+              "LLMI-T001"
+            ]
+          },
+          {
+            "code": "PIT-T-57",
+            "title": "Induced Hallucination",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-T-58",
+            "title": "Secret Probing (Oracle Extraction)",
+            "delivery": "direct",
+            "llmi": [
+              "LLMI-T004"
+            ]
+          },
+          {
+            "code": "PIT-T-59",
+            "title": "Abliteration / Weight Ablation",
+            "delivery": "direct",
+            "llmi": [
+              "LLMI-T003",
+              "LLMI-T010"
+            ]
+          },
+          {
+            "code": "PIT-T-60",
+            "title": "Direct Request (Plain Prompting)",
+            "delivery": "both",
+            "llmi": [
+              "LLMI-T001"
+            ]
+          },
+          {
+            "code": "PIT-T-61",
+            "title": "Reasoning Dilution (CoT Hijacking)",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-T-62",
+            "title": "Thinking-Mode Manipulation (Reasoning-Budget Steering)",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-T-63",
+            "title": "Structured-Output Coercion (Constrained Decoding)",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-T-64",
+            "title": "Retrieval Ranking Manipulation (RAG Poisoning)",
+            "delivery": "indirect",
+            "llmi": [
+              "LLMI-T007"
+            ]
+          },
+          {
+            "code": "PIT-T-65",
+            "title": "Tool-Preference Manipulation (Tool Squatting)",
+            "delivery": "indirect",
+            "llmi": [
+              "LLMI-T008",
+              "LLMI-T011"
+            ]
+          },
+          {
+            "code": "PIT-T-66",
+            "title": "Self-Persuasion (Self-Generated Rationalization)",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-T-67",
+            "title": "Fake-Citation Grounding (DarkCite)",
+            "delivery": "both",
+            "llmi": []
+          },
+          {
+            "code": "PIT-T-68",
+            "title": "Masked-Word Reconstruction (SATA)",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-T-69",
+            "title": "Agentic Compliance Momentum (Foot-in-the-Door)",
+            "delivery": "both",
+            "llmi": [
+              "LLMI-T008",
+              "LLMI-T002"
+            ]
+          },
+          {
+            "code": "PIT-T-70",
+            "title": "Function-Call Parameter Smuggling",
+            "delivery": "both",
+            "llmi": [
+              "LLMI-T008"
+            ]
+          }
+        ]
+      },
+      "evasions": {
+        "count": 63,
+        "items": [
+          {
+            "code": "PIT-E-01",
+            "title": "A1Z26 Number Substitution",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-02",
+            "title": "Ancient Scripts",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-03",
+            "title": "ASCII",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-04",
+            "title": "Acrostics",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-05",
+            "title": "Alternative Language",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-06",
+            "title": "Baconian Cipher",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-07",
+            "title": "Base64",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-08",
+            "title": "Binary",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-09",
+            "title": "Bijection Learning",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-10",
+            "title": "Brainfuck / Esoteric Languages",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-11",
+            "title": "Braille",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-12",
+            "title": "Bubble / Enclosed Text",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-13",
+            "title": "Case Changing",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-14",
+            "title": "Cipher",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-15",
+            "title": "Code Switching / Randomizer",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-16",
+            "title": "Emoji",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-17",
+            "title": "Fictional & Constructed Languages",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-18",
+            "title": "Graph Nodes",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-19",
+            "title": "Fullwidth Characters",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-20",
+            "title": "Homoglyphs",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-21",
+            "title": "Hexadecimal",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-22",
+            "title": "HTML Entities",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-23",
+            "title": "Invisible Text",
+            "delivery": "both",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-24",
+            "title": "Japanese Scripts",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-25",
+            "title": "JSON",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-26",
+            "title": "Link Smuggling",
+            "delivery": "both",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-27",
+            "title": "Markdown",
+            "delivery": "both",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-28",
+            "title": "Metacharacter Confusion",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-29",
+            "title": "Mathematical Unicode",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-30",
+            "title": "Morse Code",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-31",
+            "title": "NATO Phonetic Alphabet",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-32",
+            "title": "Phonetic Substitution",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-33",
+            "title": "Rail Fence Cipher",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-34",
+            "title": "Regional Indicators",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-35",
+            "title": "Truncation & Misspelling",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-36",
+            "title": "Reverse",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-37",
+            "title": "Spaces / Whitespace",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-38",
+            "title": "Splats",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-39",
+            "title": "Semaphore",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-40",
+            "title": "Small Caps / Subscript / Superscript",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-41",
+            "title": "Synonyms / Word Substitution",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-42",
+            "title": "Steganography",
+            "delivery": "both",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-43",
+            "title": "Strikethrough / Underline / Overlay",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-44",
+            "title": "Tap Code",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-45",
+            "title": "Upside Down Text",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-46",
+            "title": "URL Encoding",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-47",
+            "title": "Vertical Text",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-48",
+            "title": "Waveforms / Frequencies",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-49",
+            "title": "Wingdings / Symbol Fonts",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-50",
+            "title": "XML",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-51",
+            "title": "Zalgo Text",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-52",
+            "title": "Adversarial Poetry",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-53",
+            "title": "Symbolic Math Encoding (MathPrompt)",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-54",
+            "title": "Bidirectional Text Override (Trojan Source)",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-55",
+            "title": "Alternative Base Encodings (Base32 / Base58 / Base85)",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-56",
+            "title": "Numeric Code-Point Encoding (Octal / Decimal)",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-57",
+            "title": "Layered Encoding (Encoding Chains)",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-58",
+            "title": "Compression Encoding (gzip / zlib)",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-59",
+            "title": "ANSI Escape Concealment (Terminal Codes)",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-60",
+            "title": "Query-Language Encoding (QueryAttack)",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-61",
+            "title": "Code-Structure Encoding (CodeAttack)",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-62",
+            "title": "Legacy Charset Confusion (GB18030 / UTF-7)",
+            "delivery": "direct",
+            "llmi": []
+          },
+          {
+            "code": "PIT-E-63",
+            "title": "Delimiter",
+            "delivery": "direct",
+            "llmi": []
+          }
+        ]
+      },
+      "inputs": {
+        "count": 12,
+        "items": [
+          {
+            "code": "PIT-N-01",
+            "title": "API Request",
+            "delivery": "direct",
+            "llmi": [
+              "LLMI-T001"
+            ]
+          },
+          {
+            "code": "PIT-N-02",
+            "title": "Chat Interface",
+            "delivery": "direct",
+            "llmi": [
+              "LLMI-T001"
+            ]
+          },
+          {
+            "code": "PIT-N-03",
+            "title": "Collaboration Platforms",
+            "delivery": "indirect",
+            "llmi": [
+              "LLMI-T002"
+            ]
+          },
+          {
+            "code": "PIT-N-04",
+            "title": "File Upload",
+            "delivery": "both",
+            "llmi": [
+              "LLMI-T002"
+            ]
+          },
+          {
+            "code": "PIT-N-05",
+            "title": "Form",
+            "delivery": "direct",
+            "llmi": [
+              "LLMI-T001"
+            ]
+          },
+          {
+            "code": "PIT-N-06",
+            "title": "Indirect Input",
+            "delivery": "indirect",
+            "llmi": [
+              "LLMI-T002"
+            ]
+          },
+          {
+            "code": "PIT-N-07",
+            "title": "Audio",
+            "delivery": "both",
+            "llmi": [
+              "LLMI-T001",
+              "LLMI-T002"
+            ]
+          },
+          {
+            "code": "PIT-N-08",
+            "title": "Image",
+            "delivery": "both",
+            "llmi": [
+              "LLMI-T001",
+              "LLMI-T002"
+            ]
+          },
+          {
+            "code": "PIT-N-09",
+            "title": "Productivity Applications",
+            "delivery": "indirect",
+            "llmi": [
+              "LLMI-T002"
+            ]
+          },
+          {
+            "code": "PIT-N-10",
+            "title": "Video",
+            "delivery": "both",
+            "llmi": [
+              "LLMI-T001",
+              "LLMI-T002"
+            ]
+          },
+          {
+            "code": "PIT-N-11",
+            "title": "Supply Chain / Pipeline",
+            "delivery": "indirect",
+            "llmi": [
+              "LLMI-T007",
+              "LLMI-T011",
+              "LLMI-T009"
+            ]
+          },
+          {
+            "code": "PIT-N-12",
+            "title": "Sensor / Cross-Modal",
+            "delivery": "indirect",
+            "llmi": [
+              "LLMI-T002"
+            ]
+          }
+        ]
+      }
+    },
+    "total_nodes": 172,
+    "evasions_mapping_note": "All 63 evasions (PIT-E-*) are obfuscation/encoding modifiers applied on top of a technique; they map generically to LLMI-T001/LLMI-T002/LLMI-T003 (filter/guardrail bypass) and are relevant to detection normalisation. Specific: PIT-E-23 Invisible Text, PIT-E-54 Bidirectional Text Override and PIT-E-28 Metacharacter Confusion -> also LLMI-T018 (hidden instructions in workspace/rules files) and LLMI-T017 (scanner evasion); PIT-E-26 Link Smuggling / PIT-E-27 Markdown -> LLMI-T004 (exfiltration channel) and LLMI-T002.",
+    "unmapped_intents_note": "PIT-I-06, I-07, I-10, I-17, I-24 have no clear LLMI technique (professional-advice liability, business integrity, DoS, bias testing, output-handling exploitation). PIT-I-24 relates to TC-OH-013; PIT-I-10/I-26 relate to TC-COST-014 (no LLMI DoS/denial-of-wallet technique exists)."
+  }
+}
