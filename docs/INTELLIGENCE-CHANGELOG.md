@@ -2,6 +2,27 @@
 
 This changelog records material changes to attribution, confidence, external mappings and structured intelligence. Ordinary prose edits do not belong here.
 
+## 2026-10-08 — Explorer languages and accessibility
+
+### Added
+
+- Explorer interface in English, Portuguese, Spanish, Simplified Chinese and Russian (`site/i18n/*.json`, runtime in `site/i18n.js`), a language selector in the masthead, `#lang=<code>` links, and a Languages tab listing what is and is not translated;
+- READMEs in Spanish, Simplified Chinese and Russian, the Latin America regional overview in Spanish, and `docs/TRANSLATIONS.md` with a glossary generated from the Explorer dictionaries;
+- tests for dictionary parity, placeholders, used-versus-defined keys, Chinese punctuation, WCAG contrast of the colour tokens, the translation manifest and the README language bars.
+
+### Fixed in the Explorer
+
+- keyboard access: tabs now follow the ARIA tab pattern with arrow keys, the 287 graph nodes are one tab stop with arrow-key movement, coverage rows and cards open with Enter, the record drawer takes and returns focus and traps Tab, and a skip link was added;
+- phones: Landscape, Coverage, Ecosystem and Timeline overflowed horizontally (up to 274 px); tables now scroll inside their container;
+- search ignores accents and case; CSV exports start with a byte-order mark so Excel reads accents and non-Latin text;
+- contrast: the small grey labels and the mid heat-map cells were below 4.5:1 in the light theme, and the small grey labels were below it in the dark theme;
+- the changes panel showed "vulnerabilitie" for vulnerability records;
+- the Ecosystem tab still said repository state was not independently verified, which stopped being true after the ecosystem sweep.
+
+### Confidence notes
+
+- Every translation is machine-assisted and awaiting native-speaker review. Record content (names, summaries, source titles) stays in English by design.
+
 ## 2026-10-07 — Merge with the ecosystem sweep
 
 The ecosystem sweep (107 repositories read, ATLAS 2026.09 crosswalk) and this branch were developed in parallel and both created techniques T020 to T023 and detections DET-AI-015 to DET-AI-020. Resolution:

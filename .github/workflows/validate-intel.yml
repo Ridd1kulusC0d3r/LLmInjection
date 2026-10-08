@@ -12,6 +12,10 @@ on:
       - "integrations/**"
       - "docs/**"
       - "assets/**"
+      - "site/**"
+      - "README*.md"
+      - "site/**"
+      - "README*.md"
       - "pyproject.toml"
       - "README.md"
       - ".github/workflows/validate-intel.yml"
@@ -52,6 +56,9 @@ jobs:
 
       - name: Compile Python
         run: python -m compileall -q scripts integrations
+
+      - name: Check Explorer JavaScript syntax
+        run: node --check site/app.js && node --check site/i18n.js
 
       - name: Unit tests
         run: python -m unittest discover -s tests -v

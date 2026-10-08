@@ -1,6 +1,6 @@
 /* Analyst-desk theme: paper, ink, one signal colour. Light by default, dark follows the OS or the toggle. */
 :root{
-  --paper:#f3f0e8; --paper-2:#ebe7dc; --ink:#17150f; --ink-2:#4a463c; --ink-3:#7b766a;
+  --paper:#f3f0e8; --paper-2:#ebe7dc; --ink:#17150f; --ink-2:#4a463c; --ink-3:#68635a;
   --rule:#cfc9ba; --rule-2:#e0dacb; --signal:#b43c0e; --signal-ink:#fff;
   --seq-0:#f5ddcf; --seq-1:#e9b394; --seq-2:#d4804f; --seq-3:#b43c0e; --seq-4:#7c2406;
   --serif:Georgia,"Iowan Old Style","Times New Roman",serif;
@@ -9,11 +9,11 @@
   color-scheme:light;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --paper:#131210; --paper-2:#1b1915; --ink:#ece8dd; --ink-2:#b9b4a6; --ink-3:#847f72;
+  --paper:#131210; --paper-2:#1b1915; --ink:#ece8dd; --ink-2:#b9b4a6; --ink-3:#908b7d;
   --rule:#37332b; --rule-2:#27241e; --signal:#f0885a; --signal-ink:#131210;
   --seq-0:#3a2a21; --seq-1:#6b3d25; --seq-2:#a85a30; --seq-3:#e07f4e; --seq-4:#f6b48f; color-scheme:dark}}
 :root[data-theme="dark"]{
-  --paper:#131210; --paper-2:#1b1915; --ink:#ece8dd; --ink-2:#b9b4a6; --ink-3:#847f72;
+  --paper:#131210; --paper-2:#1b1915; --ink:#ece8dd; --ink-2:#b9b4a6; --ink-3:#908b7d;
   --rule:#37332b; --rule-2:#27241e; --signal:#f0885a; --signal-ink:#131210;
   --seq-0:#3a2a21; --seq-1:#6b3d25; --seq-2:#a85a30; --seq-3:#e07f4e; --seq-4:#f6b48f; color-scheme:dark}
 
@@ -89,10 +89,11 @@ h3{font:600 15px/1.3 var(--sans);margin:0}
 .gap{font:600 10px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--signal);border:1px solid var(--signal);padding:1px 5px;margin-left:6px;white-space:nowrap}
 .heat{display:inline-block;min-width:34px;padding:3px 0;text-align:center;font:600 13px var(--mono);background:var(--seq-0);color:var(--ink)}
 .heat.h0{background:transparent;color:var(--ink-3);border:1px dashed var(--rule)}
-.heat.h1{background:var(--seq-1)}.heat.h2{background:var(--seq-2);color:#fff}.heat.h3{background:var(--seq-3);color:#fff}.heat.h4{background:var(--seq-4);color:#fff}
-:root[data-theme="dark"] .heat.h2,:root[data-theme="dark"] .heat.h3{color:#131210}
-:root[data-theme="dark"] .heat.h4{color:#131210}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .heat.h2,:root:not([data-theme="light"]) .heat.h3,:root:not([data-theme="light"]) .heat.h4{color:#131210}}
+.heat.h1{background:var(--seq-1)}.heat.h2{background:var(--seq-2);color:var(--ink)}.heat.h3{background:var(--seq-3);color:#fff}.heat.h4{background:var(--seq-4);color:#fff}
+/* dark: white on the mid step (4.8:1), dark ink on the two light steps */
+:root[data-theme="dark"] .heat.h2{color:#fff}
+:root[data-theme="dark"] .heat.h3,:root[data-theme="dark"] .heat.h4{color:#131210}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .heat.h2{color:#fff}:root:not([data-theme="light"]) .heat.h3,:root:not([data-theme="light"]) .heat.h4{color:#131210}}
 
 /* bars */
 .bars{display:grid;gap:8px;margin:6px 0 26px}
@@ -186,3 +187,37 @@ a.out{text-decoration-color:var(--rule)}
 .mat{font:600 10px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);white-space:nowrap}
 .mat.observed-in-the-wild{color:var(--signal)}
 @media print{.mast-bar button,.controls,.tabs,.export,.drawer{display:none!important}.view{display:block!important}body{background:#fff}}
+
+/* ---- accessibility and responsive fixes */
+.skip{position:absolute;left:-9999px;top:8px;background:var(--ink);color:var(--paper);padding:10px 14px;z-index:50;font:600 13px var(--mono);text-decoration:none}
+.skip:focus{left:8px}
+:focus-visible{outline:2px solid var(--signal);outline-offset:2px}
+[data-id]:not(a):focus-visible,.table-wrap:focus-visible,.view:focus-visible{outline-offset:-2px}
+.node:focus{outline:none}.node:focus-visible .mk,.node:focus-visible text{stroke:var(--signal);fill:var(--signal)}
+.view:focus{outline:none}
+.table-wrap{overflow-x:auto;max-width:100%}
+.table-wrap .tbl{min-width:640px}
+#coverageTable{min-width:720px}#ecoTable{min-width:760px}#metricTable{min-width:700px}
+.tl{grid-template-columns:minmax(72px,110px) minmax(0,1fr)}.tl .e,.tl .e *{overflow-wrap:anywhere}
+.row,.dom,.it,.gap-item,.chg,.mini{overflow-wrap:anywhere}
+.bar{grid-template-columns:minmax(120px,200px) 1fr 70px}.bars.sm .bar{grid-template-columns:minmax(120px,180px) 1fr 36px}
+.bar span{overflow-wrap:anywhere}
+.mast-tools{display:inline-flex;gap:8px;align-items:center}
+.mast-bar select{font:600 11px var(--mono);letter-spacing:.06em;color:var(--ink-2);background:var(--paper);border:1px solid var(--rule);padding:5px 8px;border-radius:0;cursor:pointer}
+.mast-bar select:hover{border-color:var(--ink);color:var(--ink)}
+.data-notice{margin:10px 0 0;padding:8px 12px;border-left:3px solid var(--signal);background:var(--paper-2);color:var(--ink-2);font-size:13px}
+.sect{font:600 11px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2);margin:26px 0 10px}
+.langpick{display:flex;flex-wrap:wrap;gap:8px}
+.lang-btn{font:600 14px var(--sans);color:var(--ink-2);background:none;border:1px solid var(--rule);padding:9px 16px;cursor:pointer;border-radius:0}
+.lang-btn:hover{border-color:var(--ink);color:var(--ink)}.lang-btn.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.scope{margin:0;padding-left:20px;max-width:78ch}.scope li{margin:8px 0;color:var(--ink-2)}
+/* CJK: no tracking, a CJK-capable serif and sans; Han glyph variants follow the lang attribute */
+:lang(zh){--serif:Georgia,"Songti SC","Noto Serif CJK SC","Source Han Serif SC","SimSun",serif;--sans:system-ui,"PingFang SC","Microsoft YaHei","Noto Sans CJK SC","Source Han Sans SC",sans-serif;--mono:ui-monospace,"SF Mono",Menlo,Consolas,"PingFang SC","Microsoft YaHei","Noto Sans Mono CJK SC",monospace}
+:lang(zh) *{letter-spacing:0!important}
+:lang(zh) h1{line-height:1.2;letter-spacing:0}
+:lang(ru) .tab,:lang(es) .tab,:lang(pt) .tab{letter-spacing:.06em}
+:lang(ru) h1{font-size:clamp(30px,4.4vw,52px)}
+.langpick .lang-btn[lang="zh-Hans"]{font-family:var(--sans)}
+@media(max-width:860px){.mast-bar{flex-wrap:wrap;row-gap:8px}.mast-tools{margin-left:auto}#asof{order:3;width:100%}.table-wrap .tbl{min-width:600px}}
+h1,h2{text-wrap:balance}
+:lang(zh) .dek,:lang(zh) em{font-style:normal}

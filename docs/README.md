@@ -10,6 +10,7 @@ Start with the [README](../README.md#explore-the-project) for the full expandabl
 | [Methodology](METHODOLOGY.md) | Understand how claims are collected, graded and promoted |
 | [Source grading](SOURCE-GRADING.md) | Read source grades (A to E) and analytic confidence |
 | [Roadmap](ROADMAP.md) | See what is done and what is next |
+| [Translations](TRANSLATIONS.md) | See what is translated, review a translation or add a language |
 | [Ecosystem map](ECOSYSTEM.md) | Find related projects, classified by evidence class |
 | [Ecosystem intelligence sweep](ECOSYSTEM-INTELLIGENCE.md) | See what 107 related repositories contain: ATLAS crosswalk, tool coverage, ATR, scanners, benchmarks |
 
@@ -19,7 +20,7 @@ Start with the [README](../README.md#explore-the-project) for the full expandabl
 |---|---|
 | [Threat landscape 2026](THREAT-LANDSCAPE-2026.md) | See cited metrics, domains and open leads |
 | [Actor tracker](ACTOR-TRACKER.md) | Follow tracked actors and their evidence |
-| [Panorama Brasil e América Latina](pt-BR/PANORAMA-BRASIL-LATAM.md) | Regional view in Portuguese, separating what reports claim from what they do not |
+| [Panorama de América Latina](es/PANORAMA-LATAM.md) · [Panorama Brasil e América Latina](pt-BR/PANORAMA-BRASIL-LATAM.md) | Regional view in Portuguese, separating what reports claim from what they do not |
 | [Actors using AI](ACTORS-USING-AI.md) | See how actors use AI, by role |
 | [AI threat model](AI-THREAT-MODEL.md) | Reason about attack surfaces and trust boundaries |
 | [AI supply chain](AI-SUPPLY-CHAIN.md) | Cover packages, models, gateways and CI |

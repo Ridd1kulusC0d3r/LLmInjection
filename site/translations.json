@@ -1,0 +1,10 @@
+{
+  "base": "https://github.com/Ridd1kulusC0d3r/LLmInjection/blob/main/",
+  "languages": [
+    {"code": "en", "readme": "README.md", "regional": null, "review": "original"},
+    {"code": "pt", "readme": "README.pt-BR.md", "regional": "docs/pt-BR/PANORAMA-BRASIL-LATAM.md", "review": "machine"},
+    {"code": "es", "readme": "README.es.md", "regional": "docs/es/PANORAMA-LATAM.md", "review": "machine"},
+    {"code": "zh", "readme": "README.zh-CN.md", "regional": null, "review": "machine"},
+    {"code": "ru", "readme": "README.ru.md", "regional": null, "review": "machine"}
+  ]
+}
