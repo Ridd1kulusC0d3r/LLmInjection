@@ -25,7 +25,7 @@ jobs:
           python scripts/check_ecosystem.py --write --report ecosystem-report.md
           cat ecosystem-report.md >> "$GITHUB_STEP_SUMMARY"
       - name: Upload report and refreshed dataset
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: ecosystem-verification
           path: |

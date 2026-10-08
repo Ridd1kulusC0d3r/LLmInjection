@@ -44,7 +44,7 @@ jobs:
           echo "intake_exit=$STATUS" >> "$GITHUB_OUTPUT"
 
       - name: Upload intake report
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: living-intelligence-intake
           path: |

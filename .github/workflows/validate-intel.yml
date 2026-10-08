@@ -91,7 +91,7 @@ jobs:
         run: python scripts/run_safe_lab.py --profile all --adapter plan > /dev/null
 
       - name: Upload generated intelligence exports
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: llminjection-intelligence-exports
           path: dist/
