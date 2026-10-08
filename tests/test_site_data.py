@@ -28,12 +28,12 @@ class SiteDataTests(unittest.TestCase):
     def test_readme_statistics_are_current(self):
         text = (ROOT / "README.md").read_text(encoding="utf-8")
         self.assertEqual(readme_stats.updated(text), text, "run python scripts/readme_stats.py")
-        for other in (ROOT / "README.pt-BR.md", ROOT / "docs" / "ECOSYSTEM.md"):
+        for other in readme_stats.FILES:
             body = other.read_text(encoding="utf-8")
             self.assertEqual(readme_stats.updated(body), body, f"run python scripts/readme_stats.py ({other.name})")
 
     def test_relative_markdown_links_resolve(self):
-        pages = [ROOT / "README.md", ROOT / "README.pt-BR.md", *sorted((ROOT / "docs").rglob("*.md")), *sorted((ROOT / "references").glob("*.md"))]
+        pages = [*sorted(ROOT.glob("README*.md")), *sorted((ROOT / "docs").rglob("*.md")), *sorted((ROOT / "references").glob("*.md"))]
         broken = []
         for page in pages:
             for target in re.findall(r"\]\(([^)\s]+)\)", page.read_text(encoding="utf-8")):

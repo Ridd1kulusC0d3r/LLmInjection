@@ -10,7 +10,9 @@
 
 Open threat intelligence for AI, LLM and agentic systems: actors, campaigns, attack techniques, safe test cases, detections and controls, linked to the evidence behind each claim.
 
-**English** · [Português](README.pt-BR.md)
+<!-- lang-bar -->
+**English** · [Português](README.pt-BR.md) · [Español](README.es.md) · [简体中文](README.zh-CN.md) · [Русский](README.ru.md)
+<!-- /lang-bar -->
 
 **[Explorer](https://ridd1kulusc0d3r.github.io/LLmInjection/)** · [Documentation](docs/README.md) · [Methodology](docs/METHODOLOGY.md) · [API](docs/PUBLISHING.md) · [Roadmap](docs/ROADMAP.md)
 

@@ -152,3 +152,14 @@ Evidence → Campaign → Technique → Test → Detection → Control → Frame
 - [ ] Verify the Navigator layer's ATLAS `domain` value against an ATLAS-aware Navigator build
 - [ ] Primary reports for the Brazil leads in the research queue (Zscaler, Serasa, Banco Central)
 - [ ] Evaluate SHADOW-AETHER-064 as its own record once the overlap with BREEZE COMET is resolved
+
+## v1.4 — Languages 🟡 2026-10-08
+
+- [x] Explorer interface in English, Portuguese, Spanish, Simplified Chinese and Russian
+- [x] READMEs in the four additional languages; regional overview in Spanish and Portuguese
+- [x] Keyboard, focus, contrast and phone-layout fixes found in an audit of the Explorer
+- [ ] Native-speaker review of the Portuguese, Spanish, Chinese and Russian translations
+- [ ] Regional overview in Chinese and Russian (not planned until there is regional evidence relevant to those readers)
+- [ ] Right-to-left layout, if an Arabic or Hebrew translation is contributed
+- [ ] Automate the Explorer preview image (it is a manual screenshot today and goes stale)
+

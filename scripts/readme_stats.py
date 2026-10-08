@@ -19,7 +19,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from common import ROOT, load_data  # noqa: E402
 
 README = ROOT / "README.md"
-FILES = [README, ROOT / "README.pt-BR.md", ROOT / "docs" / "ECOSYSTEM.md"]
+FILES = [README, *(ROOT / f"README.{name}.md" for name in ("pt-BR", "es", "zh-CN", "ru")), ROOT / "docs" / "ECOSYSTEM.md", ROOT / "docs" / "TRANSLATIONS.md"]
 
 GROUPS = [
     [("Actors", "actors"), ("Campaigns", "campaigns"), ("Incidents", "incidents"),
@@ -56,16 +56,41 @@ def stats() -> str:
     return "\n\n".join(out)
 
 
-PT_LABELS = {"actors": "Atores", "campaigns": "Campanhas", "incidents": "Incidentes", "vulnerabilities": "Vulnerabilidades", "techniques": "Técnicas",
-             "sources": "Fontes", "test-cases": "Casos de teste", "detections": "Detecções", "controls": "Controles", "frameworks": "Frameworks",
-             "models": "Famílias de modelos", "relationships": "Relações", "ecosystem": "Projetos do ecossistema"}
+STAT_LABELS = {
+    "pt": {"actors": "Atores", "campaigns": "Campanhas", "incidents": "Incidentes", "vulnerabilities": "Vulnerabilidades", "techniques": "Técnicas", "sources": "Fontes",
+           "test-cases": "Casos de teste", "detections": "Detecções", "controls": "Controles", "frameworks": "Frameworks", "models": "Famílias de modelos",
+           "relationships": "Relações", "ecosystem": "Projetos do ecossistema"},
+    "es": {"actors": "Actores", "campaigns": "Campañas", "incidents": "Incidentes", "vulnerabilities": "Vulnerabilidades", "techniques": "Técnicas", "sources": "Fuentes",
+           "test-cases": "Casos de prueba", "detections": "Detecciones", "controls": "Controles", "frameworks": "Marcos", "models": "Familias de modelos",
+           "relationships": "Relaciones", "ecosystem": "Proyectos del ecosistema"},
+    "zh": {"actors": "攻击者", "campaigns": "攻击活动", "incidents": "事件", "vulnerabilities": "漏洞", "techniques": "技术", "sources": "来源",
+           "test-cases": "测试用例", "detections": "检测", "controls": "控制措施", "frameworks": "框架", "models": "模型系列",
+           "relationships": "关联关系", "ecosystem": "生态系统项目"},
+    "ru": {"actors": "Субъекты", "campaigns": "Кампании", "incidents": "Инциденты", "vulnerabilities": "Уязвимости", "techniques": "Техники", "sources": "Источники",
+           "test-cases": "Тестовые случаи", "detections": "Обнаружения", "controls": "Меры защиты", "frameworks": "Фреймворки", "models": "Семейства моделей",
+           "relationships": "Связи", "ecosystem": "Проекты экосистемы"},
+}
 
 
-def stats_pt() -> str:
-    out = []
-    for group in GROUPS:
-        out.append(table([PT_LABELS[key] for _, key in group], [[f"**{len(load(key))}**" for _, key in group]], True))
-    return "\n\n".join(out)
+def stats_lang(lang: str):
+    labels = STAT_LABELS[lang]
+
+    def render() -> str:
+        return "\n\n".join(table([labels[key] for _, key in group], [[f"**{len(load(key))}**" for _, key in group]], True) for group in GROUPS)
+
+    return render
+
+
+def glossary() -> str:
+    """Core terms, read from the Explorer dictionaries so docs and interface cannot disagree."""
+    import json
+
+    dicts = {c: json.loads((ROOT / "site" / "i18n" / f"{c}.json").read_text(encoding="utf-8")) for c in ("en", "pt", "es", "zh", "ru")}
+    keys = ["type.actor", "type.campaign", "type.incident", "type.vulnerability", "type.technique", "type.test-case", "type.detection", "type.control",
+            "type.framework", "type.source", "th.evidence", "th.conf", "th.maturity", "tab.coverage", "tab.timeline", "tab.ecosystem", "tab.graph",
+            "conf.confirmed", "conf.high", "conf.medium", "conf.low", "conf.unverified",
+            "mat.observed-in-the-wild", "mat.disclosed-vulnerability", "mat.research-demonstrated", "mat.no-linked-evidence"]
+    return table(["English", "Português", "Español", "简体中文", "Русский"], [[cell(dicts[c][k]) for c in ("en", "pt", "es", "zh", "ru")] for k in keys])
 
 
 MATURITY_MEANING = {
@@ -196,7 +221,8 @@ def eco_section(name: str):
 
 
 BLOCKS = {
-    "stats": stats, "stats-pt": stats_pt, "maturity": maturity, "actors": actors, "campaigns": campaigns, "incidents": incidents,
+    "stats": stats, "maturity": maturity, "glossary": glossary,
+    **{f"stats-{lang}": stats_lang(lang) for lang in STAT_LABELS}, "actors": actors, "campaigns": campaigns, "incidents": incidents,
     "vulnerabilities": vulnerabilities, "techniques": techniques, "test-cases": test_cases,
     "detections": detections, "controls": controls, "frameworks": frameworks, "models": models,
     "source-grades": source_grades, "eco-classes": eco_classes, "eco-start": eco_start,

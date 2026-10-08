@@ -5,27 +5,32 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="Open threat intelligence for LLM, AI and agentic systems: actors, campaigns, techniques, detections and evidence.">
   <title>LLMInjection · AI Threat Landscape</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2317150f'/%3E%3Crect x='6' y='13' width='20' height='6' fill='%23b43c0e'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
   <header class="mast">
     <div class="wrap">
       <div class="mast-bar">
-        <span>LLMInjection &nbsp;/&nbsp; AI &amp; LLM threat intelligence</span>
+        <span data-i18n="mast.brand">LLMInjection / AI &amp; LLM threat intelligence</span>
         <span id="asof"></span>
-        <button id="theme" type="button" aria-label="Toggle colour theme">Theme</button>
+        <span class="mast-tools">
+          <select id="lang" data-i18n-attr="aria-label:mast.lang.aria" aria-label="Interface language"></select>
+          <button id="theme" type="button" data-i18n="mast.theme" data-i18n-attr="aria-label:mast.theme.aria" aria-label="Toggle colour theme">Theme</button>
+        </span>
       </div>
       <div class="mast-title">
-        <h1>Threat landscape for LLM and agentic systems</h1>
+        <h1 data-i18n="hero.title">Threat landscape for LLM and agentic systems</h1>
         <div>
-          <p class="dek">Who is using AI against whom, how the attacks work, and what detects or stops them. Every claim carries a source grade and a confidence level.</p>
+          <p class="dek" data-i18n="hero.dek">Who is using AI against whom, how the attacks work, and what detects or stops them. Every claim carries a source grade and a confidence level.</p>
           <div class="links">
-            <a href="https://github.com/Ridd1kulusC0d3r/LLmInjection">Repository</a>
-            <a href="api/v1/index.json">API v1</a>
-            <a href="llminjection-stix.json">STIX 2.1</a>
-            <a href="graph.graphml">GraphML</a>
-            <a href="intelligence-diff.md">Latest diff</a>
-            <a href="navigator/atlas-coverage.layer.json">Navigator layer</a>
+            <a href="https://github.com/Ridd1kulusC0d3r/LLmInjection" data-i18n="link.repo">Repository</a>
+            <a href="api/v1/index.json" data-i18n="link.api">API v1</a>
+            <a href="llminjection-stix.json" data-i18n="link.stix">STIX 2.1</a>
+            <a href="graph.graphml" data-i18n="link.graphml">GraphML</a>
+            <a href="intelligence-diff.md" data-i18n="link.diff">Latest diff</a>
+            <a href="navigator/atlas-coverage.layer.json" data-i18n="link.navigator">Navigator layer</a>
           </div>
         </div>
       </div>
@@ -35,127 +40,148 @@
 
   <div class="wrap">
     <div class="controls">
-      <input id="search" type="search" placeholder="Search actor, campaign, technique, CVE, control" aria-label="Search">
-      <select id="typeFilter" aria-label="Object type"><option value="">All types</option></select>
-      <select id="regionFilter" aria-label="Region"><option value="">Any region</option></select>
-      <select id="confidenceFilter" aria-label="Confidence">
-        <option value="">Any confidence</option>
-        <option>confirmed</option><option>high</option><option>medium</option><option>low</option><option>unverified</option>
-      </select>
+      <input id="search" type="search" data-i18n-attr="placeholder:search.placeholder;aria-label:search.aria" placeholder="Search actor, campaign, technique, CVE, control" aria-label="Search">
+      <select id="typeFilter" data-i18n-attr="aria-label:filter.type.aria" aria-label="Object type"></select>
+      <select id="regionFilter" data-i18n-attr="aria-label:filter.region.aria" aria-label="Region"></select>
+      <select id="confidenceFilter" data-i18n-attr="aria-label:filter.conf.aria" aria-label="Confidence"></select>
     </div>
+    <p id="dataNotice" class="data-notice" hidden data-i18n="data.notice"></p>
 
-    <nav class="tabs" role="tablist">
-      <button class="tab active" data-tab="overview">Overview</button>
-      <button class="tab" data-tab="landscape">Landscape</button>
-      <button class="tab" data-tab="whatsnew">What's new</button>
-      <button class="tab" data-tab="graph">Graph</button>
-      <button class="tab" data-tab="coverage">Coverage</button>
-      <button class="tab" data-tab="timeline">Timeline</button>
-      <button class="tab" data-tab="ecosystem">Ecosystem</button>
-      <button class="tab" data-tab="sources">Sources</button>
+    <nav class="tabs" role="tablist" data-i18n-attr="aria-label:tabs.aria" aria-label="Sections">
+      <button class="tab active" role="tab" id="tab-overview" aria-controls="overview" aria-selected="true" data-tab="overview" data-i18n="tab.overview">Overview</button>
+      <button class="tab" role="tab" id="tab-landscape" aria-controls="landscape" aria-selected="false" tabindex="-1" data-tab="landscape" data-i18n="tab.landscape">Landscape</button>
+      <button class="tab" role="tab" id="tab-whatsnew" aria-controls="whatsnew" aria-selected="false" tabindex="-1" data-tab="whatsnew" data-i18n="tab.whatsnew">What's new</button>
+      <button class="tab" role="tab" id="tab-graph" aria-controls="graph" aria-selected="false" tabindex="-1" data-tab="graph" data-i18n="tab.graph">Graph</button>
+      <button class="tab" role="tab" id="tab-coverage" aria-controls="coverage" aria-selected="false" tabindex="-1" data-tab="coverage" data-i18n="tab.coverage">Coverage</button>
+      <button class="tab" role="tab" id="tab-timeline" aria-controls="timeline" aria-selected="false" tabindex="-1" data-tab="timeline" data-i18n="tab.timeline">Timeline</button>
+      <button class="tab" role="tab" id="tab-ecosystem" aria-controls="ecosystem" aria-selected="false" tabindex="-1" data-tab="ecosystem" data-i18n="tab.ecosystem">Ecosystem</button>
+      <button class="tab" role="tab" id="tab-languages" aria-controls="languages" aria-selected="false" tabindex="-1" data-tab="languages" data-i18n="tab.languages">Languages</button>
+      <button class="tab" role="tab" id="tab-sources" aria-controls="sources" aria-selected="false" tabindex="-1" data-tab="sources" data-i18n="tab.sources">Sources</button>
     </nav>
 
-    <main>
-      <section id="overview" class="view active">
-        <div class="eyebrow">Dashboard</div>
-        <h2>The state of the evidence</h2>
-        <p class="sub">Computed from the graph and datasets on every build. Click anything with an underline to open its record.</p>
+    <main id="main">
+      <section id="overview" class="view active" role="tabpanel" aria-labelledby="tab-overview" tabindex="0">
+        <div class="eyebrow" data-i18n="dash.eyebrow">Dashboard</div>
+        <h2 data-i18n="dash.title">The state of the evidence</h2>
+        <p class="sub" data-i18n="dash.sub">Computed from the graph and datasets on every build. Click anything with an underline to open its record.</p>
         <div class="dash three">
-          <div class="dp"><h3>Defensive coverage</h3><div id="dashCoverage"></div></div>
-          <div class="dp"><h3>Priority gaps</h3><p class="note">Techniques with linked evidence but no test or detection.</p><div id="dashGaps"></div></div>
-          <div class="dp"><h3>Confidence across records</h3><div id="dashConf"></div></div>
+          <div class="dp"><h3 data-i18n="dash.coverage">Defensive coverage</h3><div id="dashCoverage"></div></div>
+          <div class="dp"><h3 data-i18n="dash.gaps">Priority gaps</h3><p class="note" data-i18n="dash.gaps.note">Techniques with linked evidence but no test or detection.</p><div id="dashGaps"></div></div>
+          <div class="dp"><h3 data-i18n="dash.conf">Confidence across records</h3><div id="dashConf"></div></div>
         </div>
         <div class="dash two">
-          <div class="dp"><h3>Headline numbers</h3><div id="dashHeadlines" class="heads"></div></div>
-          <div class="dp"><h3>What changed</h3><div id="dashChanges"></div></div>
+          <div class="dp"><h3 data-i18n="dash.heads">Headline numbers</h3><div id="dashHeadlines" class="heads"></div></div>
+          <div class="dp"><h3 data-i18n="dash.changes">What changed</h3><div id="dashChanges"></div></div>
         </div>
         <div class="dash two">
-          <div class="dp"><h3>Recent chronology</h3><div id="dashTimeline"></div></div>
-          <div class="dp"><h3>Technique maturity</h3><div id="dashMaturity"></div><h3 style="margin-top:22px">Evidence base</h3><div id="dashGrades"></div><h3 style="margin-top:22px">Ecosystem by evidence class</h3><div id="dashEco"></div></div>
+          <div class="dp"><h3 data-i18n="dash.timeline">Recent chronology</h3><div id="dashTimeline"></div></div>
+          <div class="dp"><h3 data-i18n="dash.maturity">Technique maturity</h3><div id="dashMaturity"></div><h3 style="margin-top:22px" data-i18n="dash.grades">Evidence base</h3><div id="dashGrades"></div><h3 style="margin-top:22px" data-i18n="dash.eco">Ecosystem by evidence class</h3><div id="dashEco"></div></div>
         </div>
         <div class="cols" style="margin-top:44px">
           <div>
-            <div class="eyebrow">Tracked actors</div>
-            <h2>Who is operating</h2>
-            <p class="sub">Vendor tracking labels are kept as published; aliases are not merged without evidence.</p>
+            <div class="eyebrow" data-i18n="actors.eyebrow">Tracked actors</div>
+            <h2 data-i18n="actors.title">Who is operating</h2>
+            <p class="sub" data-i18n="actors.sub">Vendor tracking labels are kept as published; aliases are not merged without evidence.</p>
             <div id="actors"></div>
           </div>
           <div>
-            <div class="eyebrow">Domains</div>
-            <h2>Where it is moving</h2>
-            <p class="sub">Direction of travel per domain, with the defensive focus that follows.</p>
+            <div class="eyebrow" data-i18n="dom.eyebrow">Domains</div>
+            <h2 data-i18n="dom.title">Where it is moving</h2>
+            <p class="sub" data-i18n="dom.sub">Direction of travel per domain, with the defensive focus that follows.</p>
             <div id="domains"></div>
           </div>
         </div>
       </section>
 
-      <section id="landscape" class="view">
-        <div class="eyebrow">Key metrics</div>
-        <h2>What the numbers say</h2>
-        <p class="sub">Each figure keeps its original population and time window. Do not compare across rows.</p>
+      <section id="landscape" class="view" role="tabpanel" aria-labelledby="tab-landscape" tabindex="0">
+        <div class="eyebrow" data-i18n="land.eyebrow">Key metrics</div>
+        <h2 data-i18n="land.title">What the numbers say</h2>
+        <p class="sub" data-i18n="land.sub">Each figure keeps its original population and time window. Do not compare across rows.</p>
         <div id="confLegend" class="legend"></div>
-        <div class="table-wrap"><table id="metricTable" class="tbl"></table></div>
+        <div class="table-wrap" tabindex="0"><table id="metricTable" class="tbl"></table></div>
         <div class="cols" style="margin-top:44px">
-          <div><h2>Sector signals</h2><p class="sub">Single-source figures from the cited reports.</p><div id="sectors"></div></div>
-          <div><h2>Open leads</h2><p class="sub">Claims held back until a primary source is attached.</p><div id="leads"></div></div>
+          <div><h2 data-i18n="land.sectors">Sector signals</h2><p class="sub" data-i18n="land.sectors.sub">Single-source figures from the cited reports.</p><div id="sectors"></div></div>
+          <div><h2 data-i18n="land.leads">Open leads</h2><p class="sub" data-i18n="land.leads.sub">Claims held back until a primary source is attached.</p><div id="leads"></div></div>
         </div>
       </section>
 
-      <section id="whatsnew" class="view">
-        <div class="eyebrow">Change log</div>
-        <h2>What's new</h2>
-        <p class="sub">Entity-level changes against the latest committed monthly snapshot.</p>
+      <section id="whatsnew" class="view" role="tabpanel" aria-labelledby="tab-whatsnew" tabindex="0">
+        <div class="eyebrow" data-i18n="new.eyebrow">Change log</div>
+        <h2 data-i18n="new.title">What's new</h2>
+        <p class="sub" data-i18n="new.sub">Entity-level changes against the latest committed monthly snapshot.</p>
         <div id="diffSummary" class="strip" style="grid-template-columns:repeat(3,1fr);margin-bottom:24px"></div>
-        <table id="diffTable" class="tbl"></table>
+        <div class="table-wrap" tabindex="0"><table id="diffTable" class="tbl"></table></div>
       </section>
 
-      <section id="graph" class="view">
+      <section id="graph" class="view" role="tabpanel" aria-labelledby="tab-graph" tabindex="0">
         <div class="gmeta">
-          <div><h2>Intelligence graph</h2><p class="sub" style="margin:0">One column per object type. Hover to trace a node; click to open its record.</p></div>
+          <div><h2 data-i18n="graph.title">Intelligence graph</h2><p class="sub" style="margin:0" data-i18n="graph.sub">One column per object type.</p></div>
           <span id="graphCount" class="mono" style="font-size:12px;color:var(--ink-3)"></span>
         </div>
         <div id="graphLegend" class="legend"></div>
-        <div class="gwrap"><svg id="graphSvg" role="img" aria-label="LLMInjection intelligence graph"></svg></div>
+        <p class="note" style="margin:0 0 10px" data-i18n="graph.kbd">Keyboard: arrow keys move between nodes, Enter opens a record.</p>
+        <div class="gwrap"><svg id="graphSvg" role="group" data-i18n-attr="aria-label:graph.aria" aria-label="LLMInjection intelligence graph"></svg></div>
       </section>
 
-      <section id="coverage" class="view">
-        <div class="eyebrow">Defensive coverage</div>
-        <div class="head-row"><h2>Technique coverage</h2><button class="export" type="button" data-export="coverage">Export CSV</button></div>
-        <p class="sub">Counted from graph relationships. A flagged gap means no test case or no detection is linked to that technique yet.</p>
-        <table id="coverageTable" class="tbl"></table>
+      <section id="coverage" class="view" role="tabpanel" aria-labelledby="tab-coverage" tabindex="0">
+        <div class="eyebrow" data-i18n="cov.eyebrow">Defensive coverage</div>
+        <div class="head-row"><h2 data-i18n="cov.title">Technique coverage</h2><button class="export" type="button" data-export="coverage" data-i18n="common.export">Export CSV</button></div>
+        <p class="sub" data-i18n="cov.sub">Counted from graph relationships.</p>
+        <div class="table-wrap" tabindex="0"><table id="coverageTable" class="tbl"></table></div>
       </section>
 
-      <section id="timeline" class="view">
-        <div class="eyebrow">Chronology</div>
-        <div class="head-row"><h2>Campaigns, incidents and vulnerabilities</h2><button class="export" type="button" data-export="timeline">Export CSV</button></div>
-        <p class="sub">Newest first, by the date of the primary report where known.</p>
+      <section id="timeline" class="view" role="tabpanel" aria-labelledby="tab-timeline" tabindex="0">
+        <div class="eyebrow" data-i18n="tl.eyebrow">Chronology</div>
+        <div class="head-row"><h2 data-i18n="tl.title">Campaigns, incidents and vulnerabilities</h2><button class="export" type="button" data-export="timeline" data-i18n="common.export">Export CSV</button></div>
+        <p class="sub" data-i18n="tl.sub">Newest first.</p>
         <div id="timelineList" class="tl"></div>
       </section>
 
-      <section id="ecosystem" class="view">
-        <div class="eyebrow">Related projects</div>
-        <div class="head-row"><h2>Ecosystem map</h2><button class="export" type="button" data-export="ecosystem">Export CSV</button></div>
-        <p class="sub">Discovery and test-design material, classified by what each project can support. None of these can support attribution or campaign claims. State as reported, not independently verified.</p>
-        <div class="controls" style="padding-top:0"><select id="ecoClass" aria-label="Evidence class"><option value="">All evidence classes</option></select><select id="ecoSection" aria-label="Section"><option value="">All sections</option></select></div>
-        <div id="ecoCount" class="note" style="margin:10px 0"></div>
-        <table id="ecoTable" class="tbl"></table>
+      <section id="ecosystem" class="view" role="tabpanel" aria-labelledby="tab-ecosystem" tabindex="0">
+        <div class="eyebrow" data-i18n="eco.eyebrow">Related projects</div>
+        <div class="head-row"><h2 data-i18n="eco.title">Ecosystem map</h2><button class="export" type="button" data-export="ecosystem" data-i18n="common.export">Export CSV</button></div>
+        <p class="sub" data-i18n="eco.sub">Discovery and test-design material.</p>
+        <div class="controls" style="padding-top:0"><select id="ecoClass" data-i18n-attr="aria-label:filter.eco.class.aria" aria-label="Evidence class"></select><select id="ecoSection" data-i18n-attr="aria-label:filter.eco.section.aria" aria-label="Section"></select></div>
+        <div id="ecoCount" class="note" style="margin:10px 0" role="status"></div>
+        <div class="table-wrap" tabindex="0"><table id="ecoTable" class="tbl"></table></div>
       </section>
 
-      <section id="sources" class="view">
-        <div class="eyebrow">Evidence</div>
-        <div class="head-row"><h2>Source registry</h2><button class="export" type="button" data-export="sources">Export CSV</button></div>
-        <p class="sub">A = primary or authoritative, B = strong secondary, C = reputable press, D = community, E = unsupported.</p>
+      <section id="languages" class="view" role="tabpanel" aria-labelledby="tab-languages" tabindex="0">
+        <div class="eyebrow" data-i18n="lang.eyebrow">Languages</div>
+        <h2 data-i18n="lang.title">Translations</h2>
+        <p class="sub" data-i18n="lang.sub">Choose the interface language.</p>
+        <h3 class="sect" data-i18n="lang.pick">Interface language</h3>
+        <div id="langPicker" class="langpick" role="group" data-i18n-attr="aria-label:lang.pick" aria-label="Interface language"></div>
+        <h3 class="sect" data-i18n="lang.table.title">Available material</h3>
+        <div class="table-wrap" tabindex="0"><table id="langTable" class="tbl"></table></div>
+        <h3 class="sect" data-i18n="lang.scope.title">What is and is not translated</h3>
+        <ul class="scope">
+          <li data-i18n="lang.scope.yes"></li>
+          <li data-i18n="lang.scope.no"></li>
+          <li data-i18n="lang.scope.search"></li>
+        </ul>
+        <p class="links" style="margin-top:22px">
+          <a class="out" href="https://github.com/Ridd1kulusC0d3r/LLmInjection/issues/new?template=correction.yml" rel="noopener" data-i18n="lang.report">Report a translation issue</a>
+          <a class="out" href="https://github.com/Ridd1kulusC0d3r/LLmInjection/blob/main/docs/TRANSLATIONS.md" rel="noopener" data-i18n="lang.glossary">Term glossary</a>
+        </p>
+      </section>
+
+      <section id="sources" class="view" role="tabpanel" aria-labelledby="tab-sources" tabindex="0">
+        <div class="eyebrow" data-i18n="src.eyebrow">Evidence</div>
+        <div class="head-row"><h2 data-i18n="src.title">Source registry</h2><button class="export" type="button" data-export="sources" data-i18n="common.export">Export CSV</button></div>
+        <p class="sub" data-i18n="src.sub">A = primary or authoritative.</p>
         <div id="sourceList" class="src"></div>
       </section>
     </main>
 
-    <footer><span>Evidence over hype. Generated from validated repository data.</span><span>Apache-2.0</span></footer>
+    <footer><span data-i18n="footer.tagline">Evidence over hype. Generated from validated repository data.</span><span>Apache-2.0</span></footer>
   </div>
 
-  <aside id="drawer" class="drawer" aria-hidden="true">
-    <button id="closeDrawer" class="close" aria-label="Close">&times;</button>
+  <aside id="drawer" class="drawer" role="dialog" aria-modal="false" aria-labelledby="drawerTitle" aria-hidden="true">
+    <button id="closeDrawer" class="close" type="button" data-i18n-attr="aria-label:common.close" aria-label="Close">&times;</button>
     <div id="drawerBody"></div>
   </aside>
+  <script src="i18n.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

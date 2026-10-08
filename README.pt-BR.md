@@ -2,7 +2,11 @@
   <img src="assets/llminjection-banner.svg" alt="LLMInjection: panorama de ameaças a LLMs e sistemas agentivos" width="100%">
 </p>
 
-**Português** · [English](README.md)
+<!-- lang-bar -->
+[English](README.md) · **Português** · [Español](README.es.md) · [简体中文](README.zh-CN.md) · [Русский](README.ru.md)
+<!-- /lang-bar -->
+
+> Tradução assistida por IA, ainda sem revisão de falante nativo. A versão em inglês é a referência. Para corrigir, veja [docs/TRANSLATIONS.md](docs/TRANSLATIONS.md).
 
 Inteligência de ameaças aberta para sistemas de IA, LLMs e agentes: atores, campanhas, técnicas de ataque, casos de teste seguros, detecções e controles, ligados à evidência que sustenta cada afirmação.
 
