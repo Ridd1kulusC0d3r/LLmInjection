@@ -58,7 +58,7 @@ jobs:
         run: python -m compileall -q scripts integrations
 
       - name: Check Explorer JavaScript syntax
-        run: node --check site/app.js && node --check site/i18n.js
+        run: node --check site/app.js && node --check site/i18n.js && node --check site/coverage.js
 
       - name: Unit tests
         run: python -m unittest discover -s tests -v

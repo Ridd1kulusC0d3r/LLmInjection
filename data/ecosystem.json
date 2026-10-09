@@ -2802,5 +2802,203 @@
       "last_commit": "2026-06-01",
       "license": "other"
     }
+  },
+  {
+    "id": "ECO-107",
+    "type": "ecosystem",
+    "name": "InjecAgent",
+    "owner": "uiuc-kang-lab",
+    "url": "https://github.com/uiuc-kang-lab/InjecAgent",
+    "section": "benchmark",
+    "evidence_class": "benchmark",
+    "priority": "standard",
+    "status": "listed",
+    "techniques": [
+      "LLMI-T002",
+      "LLMI-T008"
+    ],
+    "summary": "Benchmark of 1,054 test cases for indirect prompt injection against tool-integrated LLM agents (17 user tools, 62 attacker tools).",
+    "source_grade": "D",
+    "provenance": "research-sweep 2026-10-09: cloned with git --depth 1 and README read; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-09",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-09",
+      "reachable": true,
+      "last_commit": "2024-07-02",
+      "license": "MIT"
+    }
+  },
+  {
+    "id": "ECO-108",
+    "type": "ecosystem",
+    "name": "PurpleLlama",
+    "owner": "meta-llama",
+    "url": "https://github.com/meta-llama/PurpleLlama",
+    "section": "evaluation",
+    "evidence_class": "assessment-tool",
+    "priority": "standard",
+    "status": "listed",
+    "techniques": [
+      "LLMI-T001",
+      "LLMI-T002"
+    ],
+    "summary": "Meta umbrella project: CyberSecEval cybersecurity evals plus input/output safeguards (Llama Guard, Prompt Guard, LlamaFirewall, CodeShield).",
+    "source_grade": "D",
+    "provenance": "research-sweep 2026-10-09: cloned with git --depth 1 and README read; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-09",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-09",
+      "reachable": true,
+      "last_commit": "2026-09-29",
+      "license": "other"
+    }
+  },
+  {
+    "id": "ECO-109",
+    "type": "ecosystem",
+    "name": "inspect_evals",
+    "owner": "UKGovernmentBEIS",
+    "url": "https://github.com/UKGovernmentBEIS/inspect_evals",
+    "section": "evaluation",
+    "evidence_class": "assessment-tool",
+    "priority": "standard",
+    "status": "listed",
+    "techniques": [],
+    "summary": "Library of evaluations on Inspect AI; includes agent-security and cyber-capability suites such as agentdojo, agentharm, cybench and cve_bench.",
+    "source_grade": "D",
+    "provenance": "research-sweep 2026-10-09: cloned with git --depth 1 and README read; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-09",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-09",
+      "reachable": true,
+      "last_commit": "2026-10-09",
+      "license": "MIT"
+    }
+  },
+  {
+    "id": "ECO-110",
+    "type": "ecosystem",
+    "name": "sorry-bench",
+    "owner": "SORRY-Bench",
+    "url": "https://github.com/SORRY-Bench/sorry-bench",
+    "section": "benchmark",
+    "evidence_class": "benchmark",
+    "priority": "standard",
+    "status": "listed",
+    "techniques": [
+      "LLMI-T003"
+    ],
+    "summary": "Benchmark of LLM safety refusal behaviour, with 20 linguistic mutations of each request.",
+    "source_grade": "D",
+    "provenance": "research-sweep 2026-10-09: cloned with git --depth 1 and README read; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-09",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-09",
+      "reachable": true,
+      "last_commit": "2025-03-01",
+      "license": "MIT"
+    }
+  },
+  {
+    "id": "ECO-111",
+    "type": "ecosystem",
+    "name": "strong_reject",
+    "owner": "dsbowen",
+    "url": "https://github.com/dsbowen/strong_reject",
+    "section": "benchmark",
+    "evidence_class": "benchmark",
+    "priority": "standard",
+    "status": "listed",
+    "techniques": [
+      "LLMI-T003"
+    ],
+    "summary": "StrongREJECT: forbidden-prompt dataset and autograder for scoring jailbreak responses; successor of alexandrasouly/strongreject, which is deprecated.",
+    "source_grade": "D",
+    "provenance": "research-sweep 2026-10-09: cloned with git --depth 1 and README read; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-09",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-09",
+      "reachable": true,
+      "last_commit": "2025-07-07",
+      "license": "MIT"
+    }
+  },
+  {
+    "id": "ECO-112",
+    "type": "ecosystem",
+    "name": "cti-bench",
+    "owner": "xashru",
+    "url": "https://github.com/xashru/cti-bench",
+    "section": "benchmark",
+    "evidence_class": "benchmark",
+    "priority": "standard",
+    "status": "listed",
+    "techniques": [],
+    "summary": "CTIBench: evaluates LLMs on cyber threat intelligence tasks (CTI knowledge, CVE/CWE mapping, CVSS scoring, ATT&CK technique extraction, threat actor attribution).",
+    "source_grade": "D",
+    "provenance": "research-sweep 2026-10-09: cloned with git --depth 1 and README read; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-09",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-09",
+      "reachable": true,
+      "last_commit": "2026-05-07",
+      "license": "CC-BY-NC"
+    }
+  },
+  {
+    "id": "ECO-113",
+    "type": "ecosystem",
+    "name": "cybench",
+    "owner": "andyzorigin",
+    "url": "https://github.com/andyzorigin/cybench",
+    "section": "benchmark",
+    "evidence_class": "benchmark",
+    "priority": "standard",
+    "status": "listed",
+    "techniques": [
+      "LLMI-T015"
+    ],
+    "summary": "Cybench: 40 CTF tasks from four competitions for measuring LLM agent cybersecurity capability. A capability measure, not evidence of attacker use.",
+    "source_grade": "D",
+    "provenance": "research-sweep 2026-10-09: cloned with git --depth 1 and README read; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-09",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-09",
+      "reachable": true,
+      "last_commit": "2026-09-24",
+      "license": "Apache-2.0"
+    }
+  },
+  {
+    "id": "ECO-114",
+    "type": "ecosystem",
+    "name": "wildteaming",
+    "owner": "allenai",
+    "url": "https://github.com/allenai/wildteaming",
+    "section": "attack-research",
+    "evidence_class": "research-technique",
+    "priority": "standard",
+    "status": "listed",
+    "techniques": [
+      "LLMI-T003"
+    ],
+    "summary": "WildTeaming: mines in-the-wild user-chatbot interactions to discover jailbreak tactics; releases the WildJailbreak data.",
+    "source_grade": "D",
+    "provenance": "research-sweep 2026-10-09: cloned with git --depth 1 and README read; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-09",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-09",
+      "reachable": true,
+      "last_commit": "2024-08-10",
+      "license": "none-found"
+    }
   }
 ]

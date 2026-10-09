@@ -149,6 +149,36 @@
       "enabled": true,
       "max_items": 3,
       "relevance_mode": "all"
+    },
+    {
+      "id": "FEED-PURPLELLAMA-RELEASES",
+      "name": "PurpleLlama releases (CyberSecEval, Llama Guard, LlamaFirewall)",
+      "kind": "github-releases",
+      "url": "https://api.github.com/repos/meta-llama/PurpleLlama/releases?per_page=5",
+      "source_grade": "D",
+      "enabled": true,
+      "max_items": 1,
+      "relevance_mode": "all"
+    },
+    {
+      "id": "FEED-INSPECT-EVALS-RELEASES",
+      "name": "Inspect Evals releases (agent-security and cyber-capability suites)",
+      "kind": "github-releases",
+      "url": "https://api.github.com/repos/UKGovernmentBEIS/inspect_evals/releases?per_page=5",
+      "source_grade": "D",
+      "enabled": true,
+      "max_items": 1,
+      "relevance_mode": "all"
+    },
+    {
+      "id": "FEED-PROMPTFOO-RELEASES",
+      "name": "promptfoo releases (LLM red-team and eval tool)",
+      "kind": "github-releases",
+      "url": "https://api.github.com/repos/promptfoo/promptfoo/releases?per_page=5",
+      "source_grade": "D",
+      "enabled": true,
+      "max_items": 1,
+      "relevance_mode": "all"
     }
   ]
 }

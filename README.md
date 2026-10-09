@@ -31,14 +31,14 @@ Open threat intelligence for AI, LLM and agentic systems: actors, campaigns, att
 
 | Test cases | Detections | Controls | Frameworks | Model families | Relationships | Ecosystem repos |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| **40** | **45** | **32** | **19** | **12** | **215** | **106** |
+| **40** | **45** | **32** | **19** | **12** | **215** | **114** |
 <!-- gen:stats:end -->
 
 LLMInjection is **not a prompt dump**. Every meaningful claim carries a source grade, a confidence level, a last-verified date, framework context and a defensive angle.
 
-<img src="assets/coverage-matrix.svg" alt="Technique coverage matrix: tests, detections and controls per technique" width="100%">
+<a href="https://ridd1kulusc0d3r.github.io/LLmInjection/#tab=coverage"><img src="assets/coverage-matrix.svg" alt="Technique coverage matrix: evidence, tests, detections, controls, tools and benchmarks per technique" width="100%"></a>
 
-<sub>Rows flagged <b>priority gap</b> have linked evidence (a campaign, incident or vulnerability) but no test or detection. Regenerate all charts with `make charts`.</sub>
+<sub>The picture is static because GitHub renders README images without scripts. <b>Click it</b> for the live matrix in the Explorer: sortable, filterable, with the linked records behind every number. A dot in the detections column marks techniques with a real rule file; the other detections are specifications. Regenerate the charts with `make charts`.</sub>
 
 ## What is inside
 
@@ -51,7 +51,7 @@ LLMInjection is **not a prompt dump**. Every meaningful claim carries a source g
 | **Safe test lab** | Defensive test cases for prompt, RAG, agent, MCP and supply-chain risks | [Test cases](docs/TEST-CASES.md) · [Lab](docs/LAB.md) |
 | **Detection engineering** | Sigma, KQL, SPL, ES\|QL and YARA-L starter detections | [Detection engineering](docs/DETECTION-ENGINEERING.md) |
 | **Evidence** | Graded sources and explicit relationships behind every record | [Source grading](docs/SOURCE-GRADING.md) · [Methodology](docs/METHODOLOGY.md) |
-| **Ecosystem** | Related projects classified by what they can support | [Ecosystem map](docs/ECOSYSTEM.md) |
+| **Ecosystem** | Related projects classified by what they can support | [Ecosystem map](docs/ECOSYSTEM.md), [benchmarks](docs/BENCHMARKS.md) |
 
 Exports: `graph.json`, GraphML, STIX 2.1, a static `/api/v1/` JSON API, monthly snapshots with entity-level diffs, and an interactive [Explorer](https://ridd1kulusc0d3r.github.io/LLmInjection/).
 
@@ -93,7 +93,22 @@ Re-fangs `hxxp` and `[.]`, drops private IPs and noisy domains, and extracts CVE
 Each section opens in place: click the arrow. Tables inside are generated from the datasets, so they never drift.
 
 <details open>
-<summary><strong>Latest update, 2026-10-07: ecosystem sweep</strong> &nbsp;·&nbsp; <sub>107 repositories read, ATLAS 2026.09 crosswalk</sub></summary>
+<summary><strong>Latest update, 2026-10-09: depth in the coverage matrix</strong> &nbsp;·&nbsp; <sub>rule files, publishers, freshness, benchmarks, actors</sub></summary>
+
+<br>
+
+A count of linked records says little when most cells read "1". The coverage model (`scripts/coverage_model.py`) now derives what a count hides, from the datasets and the files in `detections/`:
+
+1. **Implementation level.** Each detection is a `rule-file` when a rule exists under `detections/`, otherwise a `specification`. Only 3 of 45 detections have rule files; the matrix marks them with a dot instead of letting a specification look finished.
+2. **Evidence quality.** Distinct publishers behind each technique, the best source grade, the newest evidence date and a stale flag. 14 of 28 techniques rest on a single publisher.
+3. **Benchmarks.** A new column counts benchmark projects mapped to each technique. Eight verified projects joined the ecosystem: InjecAgent, PurpleLlama (CyberSecEval), Inspect Evals, SORRY-Bench, StrongREJECT, CTIBench, Cybench and WildTeaming. A benchmark measures a model or a defence; it never proves that an actor used a technique.
+4. **Actors and techniques.** The Explorer's Coverage tab has a second view that links each actor to the techniques its campaigns use.
+5. **Priority.** An explicit, documented formula ranks techniques: maturity weight times the layers still missing (test, rule file, control, benchmark).
+
+</details>
+
+<details>
+<summary><strong>Update, 2026-10-07: ecosystem sweep</strong> &nbsp;·&nbsp; <sub>107 repositories read, ATLAS 2026.09 crosswalk</sub></summary>
 
 <br>
 
@@ -911,9 +926,9 @@ The [ecosystem map](docs/ECOSYSTEM.md) classifies related repositories by **what
 | `incident-data` | Incident databases | Incident references, citing the primary report | Actor attribution or cyber campaigns (scope is broader than cybersecurity) | 1 |
 | `detection-content` | Community detection rules | Detection ideas and telemetry requirements | Proof of in-the-wild behavior | 3 |
 | `curated-list` | Curated lists | Discovering sources and tools | Any claim on their own | 22 |
-| `assessment-tool` | Scanners and red-team tools | Test design and control evaluation | Effectiveness against current models | 26 |
-| `benchmark` | Benchmarks and environments | Reproducible tests and coverage measurement | Real-world prevalence | 8 |
-| `research-technique` | Attack research code | Techniques demonstrated in research | Use in the wild | 15 |
+| `assessment-tool` | Scanners and red-team tools | Test design and control evaluation | Effectiveness against current models | 28 |
+| `benchmark` | Benchmarks and environments | Reproducible tests and coverage measurement | Real-world prevalence | 13 |
+| `research-technique` | Attack research code | Techniques demonstrated in research | Use in the wild | 16 |
 | `defence-tool` | Defences and guardrails | Control design and comparison | Proven protection | 10 |
 | `lab-exercise` | Training labs | Analyst training and onboarding | Threat intelligence | 7 |
 | `prompt-corpus` | Prompt corpora and datasets | Test inspiration and measurement | Threat intelligence or attribution | 7 |

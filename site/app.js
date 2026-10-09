@@ -1,4 +1,4 @@
-const state={graph:null,landscape:null,diff:null,eco:[],translations:null,search:"",type:"",confidence:"",region:"",ecoClass:"",ecoSection:""};
+const state={graph:null,landscape:null,diff:null,eco:[],cov:null,translations:null,search:"",type:"",confidence:"",region:"",ecoClass:"",ecoSection:""};
 const TYPE_ORDER=["actor","campaign","incident","vulnerability","technique","test-case","detection","control","framework","model","source"];
 const CONF_ORDER=["confirmed","high","medium","low","unverified"];
 const MATURITY_ORDER=["observed-in-the-wild","disclosed-vulnerability","research-demonstrated","no-linked-evidence"];
@@ -24,14 +24,15 @@ function confShape(c,x=6,y=6,r=4.5){
 const conf=c=>c?`<span class="conf"><svg viewBox="0 0 12 12" aria-hidden="true" fill="currentColor">${confShape(c)}</svg>${esc(confLabel(c))}</span>`:"";
 
 async function load(){
-  const [g,l,d,e,tr]=await Promise.all([
+  const [g,l,d,e,tr,cv]=await Promise.all([
     fetch("graph.json").then(r=>r.json()),
     fetch("landscape.json").then(r=>r.json()),
     fetch("intelligence-diff.json").then(r=>r.ok?r.json():null).catch(()=>null),
     fetch("ecosystem.json").then(r=>r.ok?r.json():[]).catch(()=>[]),
-    fetch("translations.json").then(r=>r.ok?r.json():null).catch(()=>null)
+    fetch("translations.json").then(r=>r.ok?r.json():null).catch(()=>null),
+    fetch("coverage.json").then(r=>r.ok?r.json():null).catch(()=>null)
   ]);
-  Object.assign(state,{graph:g,landscape:l,diff:d,eco:e,translations:tr});
+  Object.assign(state,{graph:g,landscape:l,diff:d,eco:e,translations:tr,cov:cv});
   await setLang(detectLang(),{persist:false});
   initControls();buildFilters();renderAll();applyHash();
 }
@@ -56,6 +57,7 @@ function buildFilters(){
   fillSelect($("#ecoSection"),"filter.eco.section.all",[...new Set(state.eco.map(e=>e.section))].sort(byLabel(x=>tOr("ecosec."+x,x))),x=>tOr("ecosec."+x,x),state.ecoSection);
   const legend=CONF_ORDER.map(c=>`<span title="${esc(t("confnote."+c))}">${conf(c)}</span>`).join("")+`<span class="conf"><svg viewBox="0 0 12 12" aria-hidden="true" fill="currentColor">${confShape("")}</svg>${esc(t("conf.notrated"))}</span>`;
   $("#confLegend").innerHTML=$("#graphLegend").innerHTML=legend;
+  buildCoverageControls();
   $("#asof").textContent=t("mast.asof",{date:state.landscape.meta?.as_of||"n/a"});
   $("#dataNotice").hidden=I18N.lang==="en";
   const sel=$("#lang");sel.innerHTML=LANGS.map(l=>`<option value="${l.code}">${esc(l.name)}</option>`).join("");sel.value=I18N.lang;
@@ -114,6 +116,7 @@ function patchHash(patch){
 function applyHash(){
   const p=new URLSearchParams(location.hash.slice(1));
   const l=p.get("lang");if(l&&l!==I18N.lang&&LANGS.some(x=>x.code===l)){switchLang(l);return}
+  applyCoverageHash(p);
   if(p.get("tab"))showTab(p.get("tab"),false);
   if(p.get("node")){const tb=nodeTab(p.get("node"));if(tb&&!p.get("tab"))showTab(tb,false);openNode(p.get("node"),false)}
 }
@@ -129,7 +132,7 @@ function csvText(headers,rows){return"﻿"+[headers,...rows].map(r=>r.map(csvCel
 function exportCsv(kind){
   let headers,rows;
   const ids=new Set(visibleNodes().map(n=>n.id));
-  if(kind==="coverage"){headers=["id","technique","maturity","evidence","tests","detections","controls","tools"];rows=techStats().filter(r=>ids.has(r.n.id)).map(r=>[r.n.id,r.n.label,r.n.data.maturity,r.evidence,r.tests,r.detections,r.controls,r.tools])}
+  if(kind==="coverage"){[headers,rows]=state.cov?coverageCsv():[["id","technique","maturity","evidence","tests","detections","controls","tools"],techStats().filter(r=>ids.has(r.n.id)).map(r=>[r.n.id,r.n.label,r.n.data.maturity,r.evidence,r.tests,r.detections,r.controls,r.tools])]}
   else if(kind==="ecosystem"){headers=["id","repository","evidence_class","section","priority","status","techniques","grade","summary"];rows=ecoRows().map(e=>[e.id,`${e.owner}/${e.name}`,e.evidence_class,e.section,e.priority,e.status,e.techniques,e.source_grade,e.summary])}
   else if(kind==="sources"){headers=["id","name","publisher","grade","published","url"];rows=visibleNodes().filter(n=>n.type==="source").map(n=>[n.id,n.label,n.data.publisher,n.data.grade,n.data.published,n.data.url])}
   else{headers=["id","type","name","date","confidence","regions"];rows=timelineItems().map(({n,date})=>[n.id,n.type,n.label,date,n.data.confidence,n.data.regions])}
@@ -208,15 +211,6 @@ function techStats(){
     return{n,evidence:evidence.size,tests:c("validates"),detections:c("detects"),controls:c("mitigated-by"),tools:state.eco.filter(e=>(e.techniques||[]).includes(n.id)).length};
   });
 }
-const heat=n=>`<span class="heat h${Math.min(n,4)}">${n||"0"}</span>`;
-function renderCoverage(){
-  const q=new Set(visibleNodes().map(n=>n.id));
-  const rows=techStats().filter(r=>q.has(r.n.id));
-  $("#coverageTable").innerHTML=`<thead><tr><th>${esc(t("th.technique"))}</th><th>${esc(t("th.maturity"))}</th><th>${esc(t("th.evidence"))}</th><th>${esc(t("th.tests"))}</th><th>${esc(t("th.detections"))}</th><th>${esc(t("th.controls"))}</th><th>${esc(t("th.tools"))}</th></tr></thead><tbody>`+rows.map(r=>{
-    const gaps=[r.tests?"":t("gaps.notest"),r.detections?"":t("gaps.nodet")].filter(Boolean),pri=r.evidence>0&&gaps.length;
-    return`<tr data-id="${esc(r.n.id)}"><td><b>${esc(r.n.label)}</b>${gaps.length?`<span class="gap${pri?"":" mute"}">${pri?esc(t("gaps.priority"))+" · ":""}${esc(gaps.join(" · "))}</span>`:""}<br><span class="id">${esc(r.n.id)}</span></td><td><span class="mat ${esc(r.n.data.maturity)}">${esc(matLabel(r.n.data.maturity))}</span></td><td>${heat(r.evidence)}</td><td>${heat(r.tests)}</td><td>${heat(r.detections)}</td><td>${heat(r.controls)}</td><td>${heat(r.tools)}</td></tr>`;
-  }).join("")+"</tbody>";
-}
 const nodeDate=n=>String(n.data.reported||n.data.first_seen||n.data.date||n.data.published||"");
 function timelineItems(){return visibleNodes().filter(n=>["campaign","incident","vulnerability"].includes(n.type)).map(n=>({n,date:nodeDate(n)||t("common.undated")})).sort((a,b)=>b.date.localeCompare(a.date))}
 function renderTimeline(){
@@ -239,7 +233,7 @@ const meter=(label,n,total,cls="")=>`<div class="meter ${cls}"><span>${esc(label
 function renderDashboard(){
   const rows=techStats(),N=rows.length;
   const full=rows.filter(r=>r.tests&&r.detections&&r.controls).length;
-  $("#dashCoverage").innerHTML=meter(t("cov.test"),rows.filter(r=>r.tests).length,N)+meter(t("cov.det"),rows.filter(r=>r.detections).length,N)+meter(t("cov.ctl"),rows.filter(r=>r.controls).length,N)+meter(t("cov.full"),full,N,"hero")+meter(t("cov.tool"),rows.filter(r=>r.tools).length,N);
+  $("#dashCoverage").innerHTML=meter(t("cov.test"),rows.filter(r=>r.tests).length,N)+meter(t("cov.det"),rows.filter(r=>r.detections).length,N)+meter(t("cov.ctl"),rows.filter(r=>r.controls).length,N)+meter(t("cov.full"),full,N,"hero")+meter(t("cov.tool"),rows.filter(r=>r.tools).length,N)+(state.cov?meter(t("cov.rules"),state.cov.summary.detections_with_rule_file,state.cov.summary.detections_total)+meter(t("cov.bench"),state.cov.summary.with_benchmark,N):"");
   const gaps=rows.filter(r=>r.evidence&&(!r.tests||!r.detections)).sort((a,b)=>b.evidence-a.evidence);
   const noCtl=rows.filter(r=>!r.controls).sort((a,b)=>b.evidence-a.evidence);
   const gapRow=(r,txt)=>`<div class="gap-item" data-id="${esc(r.n.id)}"><span class="id">${esc(r.n.id.slice(-4))}</span><span><b>${esc(r.n.label)}</b><span class="tags note">${esc(txt)}</span></span></div>`;

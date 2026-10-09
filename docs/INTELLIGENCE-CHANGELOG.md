@@ -2,6 +2,24 @@
 
 This changelog records material changes to attribution, confidence, external mappings and structured intelligence. Ordinary prose edits do not belong here.
 
+## 2026-10-09 — Coverage depth and benchmark sources
+
+### Added
+
+- `scripts/coverage_model.py` derives, from the datasets and the files in `detections/`: per-detection implementation (rule file or specification), distinct publishers and best grade per technique, newest evidence date with a stale flag, mapped benchmarks, actors reached through campaigns, and a priority score with a documented formula;
+- Explorer Coverage tab: sortable columns, eight filters, row drill-down to the linked records, an actor-by-technique view, URL state (`sort`, `dir`, `show`, `view`) and a richer CSV;
+- coverage matrix SVG: a benchmark column, a marker for techniques that have a detection rule file, and a summary line stating that only 3 of 45 detections are rule files;
+- eight ecosystem entries (InjecAgent, PurpleLlama, Inspect Evals, SORRY-Bench, StrongREJECT, CTIBench, Cybench, WildTeaming), each cloned and read; three release feeds (PurpleLlama, Inspect Evals, promptfoo); [docs/BENCHMARKS.md](BENCHMARKS.md).
+
+### Changed
+
+- the matrix headline now reads "covered by design" instead of "fully covered", because a detection that is a specification counted the same as a working rule.
+
+### Confidence notes
+
+- The new ecosystem entries are grade D and map to techniques only where the project's README states the attack class. CTIBench measures AI for CTI tasks and Cybench measures agent capability; neither is evidence of attacker behaviour.
+- The reference date for freshness is the newest day-precision date in the evidence (a bare year such as "2026" is ignored for that purpose).
+
 ## 2026-10-08 — Explorer languages and accessibility
 
 ### Added

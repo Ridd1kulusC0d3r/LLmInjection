@@ -163,3 +163,15 @@ Evidence → Campaign → Technique → Test → Detection → Control → Frame
 - [ ] Right-to-left layout, if an Arabic or Hebrew translation is contributed
 - [ ] Automate the Explorer preview image (it is a manual screenshot today and goes stale)
 
+
+## v1.5 — Coverage depth 🟡 2026-10-09
+
+- [x] Derived coverage model (`scripts/coverage_model.py`): rule-file versus specification, distinct publishers, best grade, evidence freshness, benchmarks, actors, explicit priority formula
+- [x] Explorer Coverage tab: sortable, filterable, drill-down to the linked records, actor-by-technique view, state in the URL, CSV with the new columns
+- [x] Coverage matrix SVG with a benchmark column and a marker for rule files; the README image links to the live tab
+- [x] Eight verified benchmark and evaluation projects; three new release feeds ([BENCHMARKS.md](BENCHMARKS.md))
+- [ ] Rule files for the 42 detections that are still specifications (Sigma first)
+- [ ] Execute safe tests and record `lab-result` files, so a cell can say "tested" and not only "designed"
+- [ ] Link observed prompt-injection incidents to LLMI-T001 (it has no linked evidence today)
+- [ ] More than one publisher for the 14 techniques that rest on a single one
+- [ ] Per-technique history (how coverage changed between snapshots)
