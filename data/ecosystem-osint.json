@@ -1,0 +1,1610 @@
+{
+  "schema_version": "1.0",
+  "collected": "2026-10-09",
+  "method": "deps.dev v3/v3alpha project and package-version endpoints; OSV.dev v1 package query. Keyless. Observation only.",
+  "entries": {
+    "ECO-001": {
+      "stars": 190,
+      "forks": 49,
+      "open_issues": 21,
+      "slsa_verified": false,
+      "packages": [],
+      "checked": "2026-10-09"
+    },
+    "ECO-005": {
+      "stars": 42,
+      "forks": 8,
+      "open_issues": 1,
+      "slsa_verified": false,
+      "packages": [
+        {
+          "system": "GO",
+          "name": "github.com/PLOT4ai/plot4ai-library",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        },
+        {
+          "system": "GO",
+          "name": "github.com/plot4ai/plot4ai-library",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        },
+        {
+          "system": "NPM",
+          "name": "plot4ai-library",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-007": {
+      "stars": 271,
+      "forks": 49,
+      "open_issues": 279,
+      "slsa_verified": false,
+      "packages": [
+        {
+          "system": "GO",
+          "name": "github.com/responsible-ai-collaborative/aiid",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-008": {
+      "stars": 406,
+      "forks": 60,
+      "open_issues": 59,
+      "slsa_verified": true,
+      "packages": [
+        {
+          "system": "NPM",
+          "name": "@panguard-ai/atr",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        },
+        {
+          "system": "NPM",
+          "name": "agent-threat-rules",
+          "slsa_verified": true,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        },
+        {
+          "system": "PYPI",
+          "name": "pyatr",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-009": {
+      "stars": 1707,
+      "forks": 388,
+      "open_issues": 241,
+      "slsa_verified": false,
+      "packages": [
+        {
+          "system": "GO",
+          "name": "github.com/corca-ai/awesome-llm-security",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-010": {
+      "stars": 666,
+      "forks": 134,
+      "open_issues": 15,
+      "slsa_verified": false,
+      "packages": [
+        {
+          "system": "GO",
+          "name": "github.com/Joe-B-Security/awesome-prompt-injection",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        },
+        {
+          "system": "GO",
+          "name": "github.com/joe-b-security/awesome-prompt-injection",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-011": {
+      "stars": 737,
+      "forks": 64,
+      "open_issues": 12,
+      "slsa_verified": false,
+      "packages": [
+        {
+          "system": "GO",
+          "name": "github.com/tldrsec/prompt-injection-defenses",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-013": {
+      "stars": 1661,
+      "forks": 134,
+      "open_issues": 0,
+      "slsa_verified": false,
+      "packages": [
+        {
+          "system": "GO",
+          "name": "github.com/yueliu1999/Awesome-Jailbreak-on-LLMs",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        },
+        {
+          "system": "GO",
+          "name": "github.com/yueliu1999/awesome-jailbreak-on-llms",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-015": {
+      "stars": 2083,
+      "forks": 175,
+      "open_issues": 29,
+      "slsa_verified": false,
+      "packages": [
+        {
+          "system": "GO",
+          "name": "github.com/CryptoAILab/Awesome-LM-SSP",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        },
+        {
+          "system": "GO",
+          "name": "github.com/cryptoailab/awesome-lm-ssp",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-021": {
+      "stars": 108,
+      "forks": 7,
+      "open_issues": 3,
+      "slsa_verified": false,
+      "packages": [
+        {
+          "system": "GO",
+          "name": "github.com/ShenaoW/awesome-llm-supply-chain-security",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        },
+        {
+          "system": "GO",
+          "name": "github.com/shenaow/awesome-llm-supply-chain-security",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-023": {
+      "stars": 737,
+      "forks": 91,
+      "open_issues": 3,
+      "slsa_verified": false,
+      "packages": [
+        {
+          "system": "GO",
+          "name": "github.com/PromptLabs/Prompt-Hacking-Resources",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        },
+        {
+          "system": "GO",
+          "name": "github.com/promptlabs/prompt-hacking-resources",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-025": {
+      "stars": 9474,
+      "forks": 1344,
+      "open_issues": 488,
+      "slsa_verified": false,
+      "packages": [
+        {
+          "system": "GO",
+          "name": "github.com/NVIDIA/garak",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        },
+        {
+          "system": "GO",
+          "name": "github.com/nvidia/garak",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        },
+        {
+          "system": "PYPI",
+          "name": "garak",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        },
+        {
+          "system": "PYPI",
+          "name": "nvidia-eval-factory-garak",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-026": {
+      "stars": 4578,
+      "forks": 932,
+      "open_issues": 156,
+      "slsa_verified": false,
+      "packages": [
+        {
+          "system": "GO",
+          "name": "github.com/microsoft/PyRIT",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        },
+        {
+          "system": "GO",
+          "name": "github.com/microsoft/pyrit",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-027": {
+      "stars": 25838,
+      "forks": 2453,
+      "open_issues": 715,
+      "slsa_verified": true,
+      "packages": [
+        {
+          "system": "GO",
+          "name": "github.com/Promptfoo/promptfoo",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        },
+        {
+          "system": "GO",
+          "name": "github.com/promptfoo/promptfoo",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        },
+        {
+          "system": "NPM",
+          "name": "promptfoo",
+          "slsa_verified": true,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-028": {
+      "stars": 2986,
+      "forks": 490,
+      "open_issues": 74,
+      "slsa_verified": false,
+      "packages": [
+        {
+          "system": "GO",
+          "name": "github.com/confident-ai/deepteam",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        },
+        {
+          "system": "PYPI",
+          "name": "deepteam",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-029": {
+      "stars": 1586,
+      "forks": 220,
+      "open_issues": 7,
+      "slsa_verified": false,
+      "packages": [
+        {
+          "system": "GO",
+          "name": "github.com/cyberark/FuzzyAI",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        },
+        {
+          "system": "GO",
+          "name": "github.com/cyberark/fuzzyai",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-030": {
+      "stars": 2019,
+      "forks": 292,
+      "open_issues": 74,
+      "slsa_verified": false,
+      "packages": [
+        {
+          "system": "GO",
+          "name": "github.com/msoedov/agentic_security",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        },
+        {
+          "system": "PYPI",
+          "name": "agentic-security",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        },
+        {
+          "system": "PYPI",
+          "name": "mseep-agentic-security",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-032": {
+      "stars": 6764,
+      "forks": 635,
+      "open_issues": 36,
+      "slsa_verified": false,
+      "packages": [
+        {
+          "system": "GO",
+          "name": "github.com/Tencent/AI-Infra-Guard",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        },
+        {
+          "system": "PYPI",
+          "name": "aig-skill-scan",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-033": {
+      "stars": 223,
+      "forks": 22,
+      "open_issues": 11,
+      "slsa_verified": false,
+      "packages": [
+        {
+          "system": "PYPI",
+          "name": "llamator",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-034": {
+      "stars": 354,
+      "forks": 71,
+      "open_issues": 3,
+      "slsa_verified": true,
+      "packages": [
+        {
+          "system": "GO",
+          "name": "github.com/aiverify-foundation/moonshot",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        },
+        {
+          "system": "PYPI",
+          "name": "aiverify-moonshot",
+          "slsa_verified": true,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-036": {
+      "stars": 183,
+      "forks": 19,
+      "open_issues": 1,
+      "slsa_verified": false,
+      "packages": [
+        {
+          "system": "GO",
+          "name": "github.com/praetorian-inc/augustus",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-037": {
+      "stars": 893,
+      "forks": 235,
+      "open_issues": 72,
+      "slsa_verified": true,
+      "packages": [
+        {
+          "system": "GO",
+          "name": "github.com/ethz-spylab/agentdojo",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        },
+        {
+          "system": "PYPI",
+          "name": "agentdojo",
+          "slsa_verified": true,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-038": {
+      "stars": 160,
+      "forks": 22,
+      "open_issues": 4,
+      "slsa_verified": false,
+      "packages": [
+        {
+          "system": "GO",
+          "name": "github.com/microsoft/bipia",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-039": {
+      "stars": 504,
+      "forks": 81,
+      "open_issues": 2,
+      "slsa_verified": false,
+      "packages": [
+        {
+          "system": "GO",
+          "name": "github.com/liu00222/Open-Prompt-Injection",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        },
+        {
+          "system": "GO",
+          "name": "github.com/liu00222/open-prompt-injection",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-040": {
+      "stars": 687,
+      "forks": 85,
+      "open_issues": 13,
+      "slsa_verified": false,
+      "packages": [
+        {
+          "system": "GO",
+          "name": "github.com/JailbreakBench/JailbreakBench",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        },
+        {
+          "system": "GO",
+          "name": "github.com/JailbreakBench/jailbreakbench",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        },
+        {
+          "system": "GO",
+          "name": "github.com/jailbreakbench/jailbreakbench",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        },
+        {
+          "system": "PYPI",
+          "name": "jailbreakbench",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-041": {
+      "stars": 1059,
+      "forks": 168,
+      "open_issues": 43,
+      "slsa_verified": false,
+      "packages": [
+        {
+          "system": "GO",
+          "name": "github.com/centerforaisafety/HarmBench",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        },
+        {
+          "system": "GO",
+          "name": "github.com/centerforaisafety/harmbench",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-042": {
+      "stars": 309,
+      "forks": 41,
+      "open_issues": 3,
+      "slsa_verified": false,
+      "packages": [
+        {
+          "system": "GO",
+          "name": "github.com/agiresearch/ASB",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        },
+        {
+          "system": "GO",
+          "name": "github.com/agiresearch/asb",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-044": {
+      "stars": 3830,
+      "forks": 341,
+      "open_issues": 4,
+      "slsa_verified": false,
+      "packages": [
+        {
+          "system": "GO",
+          "name": "github.com/verazuo/jailbreak_llms",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-045": {
+      "stars": 526,
+      "forks": 57,
+      "open_issues": 6,
+      "slsa_verified": false,
+      "packages": [
+        {
+          "system": "GO",
+          "name": "github.com/agencyenterprise/PromptInject",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        },
+        {
+          "system": "GO",
+          "name": "github.com/agencyenterprise/promptinject",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        },
+        {
+          "system": "PYPI",
+          "name": "promptinject",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-046": {
+      "stars": 2148,
+      "forks": 161,
+      "open_issues": 1,
+      "slsa_verified": false,
+      "packages": [
+        {
+          "system": "GO",
+          "name": "github.com/greshake/llm-security",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-047": {
+      "stars": 4819,
+      "forks": 641,
+      "open_issues": 69,
+      "slsa_verified": false,
+      "packages": [
+        {
+          "system": "GO",
+          "name": "github.com/llm-attacks/llm-attacks",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-048": {
+      "stars": 794,
+      "forks": 122,
+      "open_issues": 13,
+      "slsa_verified": false,
+      "packages": [
+        {
+          "system": "GO",
+          "name": "github.com/patrickrchao/JailbreakingLLMs",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        },
+        {
+          "system": "GO",
+          "name": "github.com/patrickrchao/jailbreakingllms",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-051": {
+      "stars": 395,
+      "forks": 47,
+      "open_issues": 1,
+      "slsa_verified": false,
+      "packages": [
+        {
+          "system": "GO",
+          "name": "github.com/tml-epfl/llm-adaptive-attacks",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-052": {
+      "stars": 367,
+      "forks": 26,
+      "open_issues": 1,
+      "slsa_verified": false,
+      "packages": [
+        {
+          "system": "GO",
+          "name": "github.com/CHATS-lab/persuasive_jailbreaker",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        },
+        {
+          "system": "GO",
+          "name": "github.com/chats-lab/persuasive_jailbreaker",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-054": {
+      "stars": 179,
+      "forks": 19,
+      "open_issues": 0,
+      "slsa_verified": false,
+      "packages": [
+        {
+          "system": "GO",
+          "name": "github.com/tmlr-group/DeepInception",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        },
+        {
+          "system": "GO",
+          "name": "github.com/tmlr-group/deepinception",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-057": {
+      "stars": 400,
+      "forks": 58,
+      "open_issues": 4,
+      "slsa_verified": false,
+      "packages": [],
+      "checked": "2026-10-09"
+    },
+    "ECO-058": {
+      "stars": 1529,
+      "forks": 150,
+      "open_issues": 32,
+      "slsa_verified": false,
+      "packages": [
+        {
+          "system": "GO",
+          "name": "github.com/protectai/rebuff",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        },
+        {
+          "system": "NPM",
+          "name": "rebuff",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-059": {
+      "stars": 3213,
+      "forks": 462,
+      "open_issues": 38,
+      "slsa_verified": false,
+      "packages": [
+        {
+          "system": "GO",
+          "name": "github.com/protectai/llm-guard",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        },
+        {
+          "system": "PYPI",
+          "name": "llm-guard",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-060": {
+      "stars": 498,
+      "forks": 57,
+      "open_issues": 16,
+      "slsa_verified": false,
+      "packages": [
+        {
+          "system": "GO",
+          "name": "github.com/deadbits/vigil-llm",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-061": {
+      "stars": 7492,
+      "forks": 712,
+      "open_issues": 72,
+      "slsa_verified": true,
+      "packages": [
+        {
+          "system": "GO",
+          "name": "github.com/guardrails-ai/guardrails",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        },
+        {
+          "system": "PYPI",
+          "name": "guardrails-ai",
+          "slsa_verified": true,
+          "advisories": 9,
+          "advisory_ids": [
+            "GHSA-f8hx-f4xw-c646",
+            "GHSA-r6hf-g5x6-7pv9",
+            "GHSA-w392-75q8-vr67",
+            "GHSA-xmpw-2vmm-p4p6",
+            "MAL-2026-3607"
+          ],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-062": {
+      "stars": 139,
+      "forks": 15,
+      "open_issues": 3,
+      "slsa_verified": false,
+      "packages": [
+        {
+          "system": "GO",
+          "name": "github.com/allenai/wildguard",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        },
+        {
+          "system": "PYPI",
+          "name": "wildguard",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-063": {
+      "stars": 782,
+      "forks": 168,
+      "open_issues": 86,
+      "slsa_verified": false,
+      "packages": [
+        {
+          "system": "GO",
+          "name": "github.com/protectai/modelscan",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-064": {
+      "stars": 3109,
+      "forks": 285,
+      "open_issues": 20,
+      "slsa_verified": false,
+      "packages": [
+        {
+          "system": "GO",
+          "name": "github.com/Snyk/agent-scan",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        },
+        {
+          "system": "GO",
+          "name": "github.com/snyk/agent-scan",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-065": {
+      "stars": 1083,
+      "forks": 139,
+      "open_issues": 65,
+      "slsa_verified": true,
+      "packages": [
+        {
+          "system": "GO",
+          "name": "github.com/cisco-ai-defense/mcp-scanner",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        },
+        {
+          "system": "PYPI",
+          "name": "cisco-ai-mcp-scanner",
+          "slsa_verified": true,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-066": {
+      "stars": 2578,
+      "forks": 329,
+      "open_issues": 4,
+      "slsa_verified": true,
+      "packages": [
+        {
+          "system": "GO",
+          "name": "github.com/cisco-ai-defense/skill-scanner",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        },
+        {
+          "system": "PYPI",
+          "name": "cisco-ai-skill-scanner",
+          "slsa_verified": true,
+          "advisories": 2,
+          "advisory_ids": [
+            "GHSA-ppfx-73j5-fhxc",
+            "PYSEC-2026-2415"
+          ],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-067": {
+      "stars": 19603,
+      "forks": 1714,
+      "open_issues": 145,
+      "slsa_verified": false,
+      "packages": [
+        {
+          "system": "GO",
+          "name": "github.com/NVIDIA/SkillSpector",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        },
+        {
+          "system": "GO",
+          "name": "github.com/NVIDIA/skillspector",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        },
+        {
+          "system": "GO",
+          "name": "github.com/nvidia/skillspector",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-068": {
+      "stars": 1056,
+      "forks": 150,
+      "open_issues": 15,
+      "slsa_verified": true,
+      "packages": [
+        {
+          "system": "GO",
+          "name": "github.com/splx-ai/agentic-radar",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        },
+        {
+          "system": "PYPI",
+          "name": "agentic-radar",
+          "slsa_verified": true,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        },
+        {
+          "system": "PYPI",
+          "name": "mseep-agentic-radar",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-070": {
+      "stars": 92,
+      "forks": 15,
+      "open_issues": 5,
+      "slsa_verified": false,
+      "packages": [
+        {
+          "system": "GO",
+          "name": "github.com/garagon/aguara",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-071": {
+      "stars": 527,
+      "forks": 240,
+      "open_issues": 4,
+      "slsa_verified": false,
+      "packages": [
+        {
+          "system": "GO",
+          "name": "github.com/ReversecLabs/damn-vulnerable-llm-agent",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        },
+        {
+          "system": "GO",
+          "name": "github.com/reverseclabs/damn-vulnerable-llm-agent",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-074": {
+      "stars": 610,
+      "forks": 69,
+      "open_issues": 1,
+      "slsa_verified": false,
+      "packages": [
+        {
+          "system": "GO",
+          "name": "github.com/jthack/PIPE",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        },
+        {
+          "system": "GO",
+          "name": "github.com/jthack/pipe",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-077": {
+      "stars": 31,
+      "forks": 4,
+      "open_issues": 0,
+      "slsa_verified": true,
+      "packages": [
+        {
+          "system": "PYPI",
+          "name": "basilisk-ai",
+          "slsa_verified": true,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-078": {
+      "stars": 17,
+      "forks": 5,
+      "open_issues": 12,
+      "slsa_verified": false,
+      "packages": [
+        {
+          "system": "GO",
+          "name": "github.com/perplext/LLMrecon",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-090": {
+      "stars": 0,
+      "forks": 0,
+      "open_issues": 0,
+      "slsa_verified": false,
+      "packages": [
+        {
+          "system": "PYPI",
+          "name": "llm-injection-guard",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-092": {
+      "stars": 7245,
+      "forks": 862,
+      "open_issues": 261,
+      "slsa_verified": true,
+      "packages": [
+        {
+          "system": "GO",
+          "name": "github.com/NVIDIA-NeMo/Guardrails",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        },
+        {
+          "system": "GO",
+          "name": "github.com/nvidia-nemo/guardrails",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        },
+        {
+          "system": "PYPI",
+          "name": "nemoguardrails",
+          "slsa_verified": true,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-095": {
+      "stars": 206,
+      "forks": 31,
+      "open_issues": 2,
+      "slsa_verified": false,
+      "packages": [
+        {
+          "system": "GO",
+          "name": "github.com/invariantlabs-ai/mcp-injection-experiments",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-097": {
+      "stars": 742,
+      "forks": 265,
+      "open_issues": 230,
+      "slsa_verified": false,
+      "packages": [
+        {
+          "system": "GO",
+          "name": "github.com/Puliczek/awesome-mcp-security",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        },
+        {
+          "system": "GO",
+          "name": "github.com/puliczek/awesome-mcp-security",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-099": {
+      "stars": 1913,
+      "forks": 121,
+      "open_issues": 38,
+      "slsa_verified": false,
+      "packages": [
+        {
+          "system": "GO",
+          "name": "github.com/ydyjya/Awesome-LLM-Safety",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        },
+        {
+          "system": "GO",
+          "name": "github.com/ydyjya/awesome-llm-safety",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-100": {
+      "stars": 81532,
+      "forks": 17448,
+      "open_issues": 36,
+      "slsa_verified": false,
+      "packages": [
+        {
+          "system": "GO",
+          "name": "github.com/Swisskyrepo/PayloadsAllTheThings",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        },
+        {
+          "system": "GO",
+          "name": "github.com/swisskyrepo/PayloadsAllTheThings",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        },
+        {
+          "system": "GO",
+          "name": "github.com/swisskyrepo/Payloadsallthethings",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        },
+        {
+          "system": "GO",
+          "name": "github.com/swisskyrepo/payloadsallthethings",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-103": {
+      "stars": 1685,
+      "forks": 264,
+      "open_issues": 22,
+      "slsa_verified": true,
+      "packages": [
+        {
+          "system": "PYPI",
+          "name": "openosint",
+          "slsa_verified": true,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-106": {
+      "stars": 816,
+      "forks": 155,
+      "open_issues": 18,
+      "slsa_verified": false,
+      "packages": [
+        {
+          "system": "GO",
+          "name": "github.com/OWASP/www-project-ai-testing-guide",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        },
+        {
+          "system": "GO",
+          "name": "github.com/owasp/www-project-ai-testing-guide",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-108": {
+      "stars": 4423,
+      "forks": 778,
+      "open_issues": 90,
+      "slsa_verified": false,
+      "packages": [
+        {
+          "system": "GO",
+          "name": "github.com/meta-llama/PurpleLlama",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        },
+        {
+          "system": "GO",
+          "name": "github.com/meta-llama/purplellama",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        },
+        {
+          "system": "PYPI",
+          "name": "codeshield",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        },
+        {
+          "system": "PYPI",
+          "name": "llamafirewall",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-109": {
+      "stars": 687,
+      "forks": 452,
+      "open_issues": 309,
+      "slsa_verified": true,
+      "packages": [
+        {
+          "system": "GO",
+          "name": "github.com/UKGOvernmentBEIS/inspect_evals",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        },
+        {
+          "system": "GO",
+          "name": "github.com/UKGovernmentBEIS/inspect_evals",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        },
+        {
+          "system": "GO",
+          "name": "github.com/UKGovernmentBeis/inspect_evals",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        },
+        {
+          "system": "GO",
+          "name": "github.com/UKGovernmentbeis/inspect_evals",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-111": {
+      "stars": 159,
+      "forks": 26,
+      "open_issues": 12,
+      "slsa_verified": false,
+      "packages": [
+        {
+          "system": "GO",
+          "name": "github.com/dsbowen/strong_reject",
+          "slsa_verified": false,
+          "advisories": 0,
+          "advisory_ids": [],
+          "truncated": false
+        }
+      ],
+      "checked": "2026-10-09"
+    },
+    "ECO-112": {
+      "stars": 94,
+      "forks": 33,
+      "open_issues": 1,
+      "slsa_verified": false,
+      "packages": [],
+      "checked": "2026-10-09"
+    }
+  },
+  "not_found": [
+    "ECO-002",
+    "ECO-003",
+    "ECO-004",
+    "ECO-006",
+    "ECO-012",
+    "ECO-014",
+    "ECO-016",
+    "ECO-017",
+    "ECO-018",
+    "ECO-019",
+    "ECO-020",
+    "ECO-022",
+    "ECO-024",
+    "ECO-031",
+    "ECO-035",
+    "ECO-043",
+    "ECO-049",
+    "ECO-050",
+    "ECO-053",
+    "ECO-055",
+    "ECO-056",
+    "ECO-069",
+    "ECO-072",
+    "ECO-073",
+    "ECO-075",
+    "ECO-076",
+    "ECO-079",
+    "ECO-080",
+    "ECO-081",
+    "ECO-082",
+    "ECO-083",
+    "ECO-084",
+    "ECO-085",
+    "ECO-086",
+    "ECO-087",
+    "ECO-088",
+    "ECO-089",
+    "ECO-091",
+    "ECO-093",
+    "ECO-094",
+    "ECO-096",
+    "ECO-098",
+    "ECO-101",
+    "ECO-102",
+    "ECO-104",
+    "ECO-105",
+    "ECO-107",
+    "ECO-110",
+    "ECO-113",
+    "ECO-114"
+  ],
+  "errors": []
+}

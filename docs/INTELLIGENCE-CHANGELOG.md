@@ -11,6 +11,8 @@ This changelog records material changes to attribution, confidence, external map
 - coverage matrix SVG: a benchmark column, a marker for techniques that have a detection rule file, and a summary line stating that only 3 of 45 detections are rule files;
 - eight ecosystem entries (InjecAgent, PurpleLlama, Inspect Evals, SORRY-Bench, StrongREJECT, CTIBench, Cybench, WildTeaming), each cloned and read; three release feeds (PurpleLlama, Inspect Evals, promptfoo); [docs/BENCHMARKS.md](BENCHMARKS.md).
 
+- `scripts/osint_ecosystem.py` and `data/ecosystem-osint.json`: for 64 of the 114 ecosystem entries, stars, forks, open issues, the packages published from the repository, OSV advisories per package and whether a release carries verified SLSA provenance (deps.dev and OSV.dev, no token). 50 entries are unknown to deps.dev. Summary: [docs/ECOSYSTEM-SIGNALS.md](ECOSYSTEM-SIGNALS.md).
+
 ### Changed
 
 - the matrix headline now reads "covered by design" instead of "fully covered", because a detection that is a specification counted the same as a working rule.

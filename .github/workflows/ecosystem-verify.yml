@@ -24,6 +24,10 @@ jobs:
         run: |
           python scripts/check_ecosystem.py --write --report ecosystem-report.md
           cat ecosystem-report.md >> "$GITHUB_STEP_SUMMARY"
+      - name: Collect adoption and supply-chain signals (deps.dev, OSV; keyless)
+        run: |
+          python scripts/osint_ecosystem.py --report docs/ECOSYSTEM-SIGNALS.md
+          cat docs/ECOSYSTEM-SIGNALS.md >> "$GITHUB_STEP_SUMMARY"
       - name: Upload report and refreshed dataset
         uses: actions/upload-artifact@v6
         with:
@@ -31,3 +35,5 @@ jobs:
           path: |
             ecosystem-report.md
             data/ecosystem.json
+            data/ecosystem-osint.json
+            docs/ECOSYSTEM-SIGNALS.md

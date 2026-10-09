@@ -170,6 +170,9 @@ Evidence → Campaign → Technique → Test → Detection → Control → Frame
 - [x] Explorer Coverage tab: sortable, filterable, drill-down to the linked records, actor-by-technique view, state in the URL, CSV with the new columns
 - [x] Coverage matrix SVG with a benchmark column and a marker for rule files; the README image links to the live tab
 - [x] Eight verified benchmark and evaluation projects; three new release feeds ([BENCHMARKS.md](BENCHMARKS.md))
+- [x] Keyless OSINT signals for the ecosystem (`scripts/osint_ecosystem.py`): stars, published packages, OSV advisories and verified SLSA provenance, weekly in the verification workflow
+- [ ] Show the signals in the Explorer's Ecosystem tab
+- [ ] OpenSSF Scorecard scores (deps.dev returned none for the projects tried, and the Scorecard API returned 404)
 - [ ] Rule files for the 42 detections that are still specifications (Sigma first)
 - [ ] Execute safe tests and record `lab-result` files, so a cell can say "tested" and not only "designed"
 - [ ] Link observed prompt-injection incidents to LLMI-T001 (it has no linked evidence today)

@@ -104,6 +104,7 @@ A count of linked records says little when most cells read "1". The coverage mod
 3. **Benchmarks.** A new column counts benchmark projects mapped to each technique. Eight verified projects joined the ecosystem: InjecAgent, PurpleLlama (CyberSecEval), Inspect Evals, SORRY-Bench, StrongREJECT, CTIBench, Cybench and WildTeaming. A benchmark measures a model or a defence; it never proves that an actor used a technique.
 4. **Actors and techniques.** The Explorer's Coverage tab has a second view that links each actor to the techniques its campaigns use.
 5. **Priority.** An explicit, documented formula ranks techniques: maturity weight times the layers still missing (test, rule file, control, benchmark).
+6. **OSINT signals on the tools themselves.** `scripts/osint_ecosystem.py` asks deps.dev and OSV.dev, with no token, how widely each ecosystem project is used, which packages it publishes, whether those packages have security advisories and whether releases carry verified SLSA provenance ([summary](docs/ECOSYSTEM-SIGNALS.md)). A red-team tool is part of the AI supply chain too.
 
 </details>
 
