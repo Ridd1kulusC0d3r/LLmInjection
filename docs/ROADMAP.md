@@ -161,7 +161,8 @@ Evidence → Campaign → Technique → Test → Detection → Control → Frame
 - [ ] Native-speaker review of the Portuguese, Spanish, Chinese and Russian translations
 - [ ] Regional overview in Chinese and Russian (not planned until there is regional evidence relevant to those readers)
 - [ ] Right-to-left layout, if an Arabic or Hebrew translation is contributed
-- [ ] Automate the Explorer preview image (it is a manual screenshot today and goes stale)
+- [x] Explorer tour GIF recorded by a script (`scripts/record_tour.js`, `scripts/make_tour_gif.py`) instead of a hand-made screenshot
+- [ ] Run the tour recording in CI so the GIF cannot go stale
 
 
 ## v1.5 — Coverage depth 🟡 2026-10-09
