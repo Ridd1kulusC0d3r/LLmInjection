@@ -16,9 +16,9 @@ Open threat intelligence for AI, LLM and agentic systems: actors, campaigns, att
 
 **[Explorer](https://ridd1kulusc0d3r.github.io/LLmInjection/)** · [Documentation](docs/README.md) · [Methodology](docs/METHODOLOGY.md) · [API](docs/PUBLISHING.md) · [Roadmap](docs/ROADMAP.md)
 
-<a href="https://ridd1kulusc0d3r.github.io/LLmInjection/"><img src="assets/explorer-overview.png" alt="Explorer overview: coverage meters, priority gaps, confidence distribution, headline numbers and recent changes" width="100%"></a>
+<a href="https://ridd1kulusc0d3r.github.io/LLmInjection/"><img src="assets/explorer-tour.gif" alt="Explorer tour: overview dashboard, landscape, graph, the coverage matrix sorted by priority with a technique opened, actors by technique, ecosystem, and the Portuguese interface" width="100%"></a>
 
-<sub>The Explorer dashboard. Preview image is a snapshot; the live site is rebuilt from the datasets on every merge to main.</sub>
+<sub>A tour of the Explorer: dashboard, landscape, graph, the coverage matrix (sort, drill down, actors by technique), ecosystem and the language switch. Click it to open the live site, which is rebuilt from the datasets on every merge to main. Regenerate the GIF with `scripts/record_tour.js` and `scripts/make_tour_gif.py`.</sub>
 
 ### ▶ Video tour (73 s)
 
