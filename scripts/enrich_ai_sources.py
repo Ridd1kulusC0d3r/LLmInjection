@@ -12,7 +12,7 @@ import sys
 import urllib.error
 import urllib.parse
 import urllib.request
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -167,7 +167,7 @@ def merge(existing, incoming):
 
 
 def collect(sources, *, fixtures=None, limit=20, known_vulns=(), fetcher=fetch):
-    now = datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
+    now = datetime.now(UTC).replace(microsecond=0).isoformat().replace("+00:00", "Z")
     found, errors = [], []
     for source in sources:
         if not source.get("enabled"):
@@ -178,7 +178,8 @@ def collect(sources, *, fixtures=None, limit=20, known_vulns=(), fetcher=fetch):
             else:
                 data = fixtures[source["id"]] if fixtures is not None else fetcher(
                     checked_url(source["url"]))
-            offline = lambda url: (_ for _ in ()).throw(KeyError("not in offline fixtures"))
+            def offline(url):
+                raise KeyError("not in offline fixtures")
             reader = offline if fixtures is not None else fetcher
             for item in candidates_from(source, data, limit, known_vulns, fetcher=reader):
                 if item["url"].startswith("https://"):
@@ -211,7 +212,7 @@ def main(argv=None):
     queue = load(args.queue) if args.queue.exists() else {"meta": {}, "items": []}
     result, additions, changes = merge(queue, found)
     if (additions or changes) and not args.dry_run:
-        result["meta"]["last_run"] = datetime.now(timezone.utc).isoformat()
+        result["meta"]["last_run"] = datetime.now(UTC).isoformat()
         dump(args.queue, result)
     summary = {"candidate_count": len(found), "new_count": additions,
                "updated_count": changes, "failure_count": len(errors),
