@@ -14,7 +14,7 @@ Start with the [README](../README.md#explore-the-project) for the full expandabl
 | [Ecosystem map](ECOSYSTEM.md) | Find related projects, classified by evidence class |
 | [Ecosystem intelligence sweep](ECOSYSTEM-INTELLIGENCE.md) | See what 107 related repositories contain: ATLAS crosswalk, tool coverage, ATR, scanners, benchmarks |
 
-## Threat intelligence
+## Threat intelligence\n\n| [Cyber OT / ICS landscape](CYBER-OT-LANDSCAPE.md) | Review OT threat sources, AI/OT boundary scenarios, industrial datasets and passive metadata collection |\n
 
 | [AI source enrichment](AI-INTELLIGENCE-SOURCES.md) | Review additional incident, CVE, MCP and vendor sources |
 | [AI runtime intelligence](AI-RUNTIME-INTELLIGENCE.md) | Define privacy-preserving agent/tool event mapping |

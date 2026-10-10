@@ -1,0 +1,57 @@
+[
+  {
+    "id": "AIOT-DS-001",
+    "name": "HAI",
+    "category": "industrial-time-series",
+    "source_id": "OT-SRC-HAI",
+    "url": "https://github.com/icsdataset/hai",
+    "data_location": "external",
+    "redistribution": "verify-upstream-license-and-version",
+    "purpose": "Offline anomaly detection benchmark; no live plant access",
+    "not_incident_evidence": true
+  },
+  {
+    "id": "AIOT-DS-002",
+    "name": "IPAL Datasets",
+    "category": "industrial-traffic-adapters",
+    "source_id": "OT-SRC-IPAL-DATASETS",
+    "url": "https://github.com/ipal-ids/ipal_datasets",
+    "data_location": "adapters-only",
+    "redistribution": "original-datasets-must-be-obtained-separately",
+    "purpose": "Protocol-independent evaluation metadata",
+    "not_incident_evidence": true
+  },
+  {
+    "id": "AIOT-DS-003",
+    "name": "SWaT",
+    "category": "water-treatment-research",
+    "source_id": "OT-SRC-IPAL-DATASETS",
+    "url": "https://www.sutd.edu.sg/itrust/itrust-labs/datasets",
+    "data_location": "request-from-publisher",
+    "redistribution": "restricted-check-publisher",
+    "purpose": "Offline industrial anomaly research",
+    "not_incident_evidence": true
+  },
+  {
+    "id": "AIOT-DS-004",
+    "name": "WADI",
+    "category": "water-distribution-research",
+    "source_id": "OT-SRC-IPAL-DATASETS",
+    "url": "https://www.sutd.edu.sg/itrust/itrust-labs/datasets",
+    "data_location": "request-from-publisher",
+    "redistribution": "restricted-check-publisher",
+    "purpose": "Offline time-series detection research",
+    "not_incident_evidence": true
+  },
+  {
+    "id": "AIOT-DS-005",
+    "name": "TON_IoT",
+    "category": "iot-iiot-research",
+    "source_id": "OT-SRC-IPAL-DATASETS",
+    "url": "https://research.unsw.edu.au/projects/toniot-datasets",
+    "data_location": "external",
+    "redistribution": "verify-upstream-terms",
+    "purpose": "Experimental IoT/IIoT telemetry comparison",
+    "not_incident_evidence": true
+  }
+]

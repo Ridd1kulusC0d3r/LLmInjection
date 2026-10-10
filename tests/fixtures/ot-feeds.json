@@ -1,0 +1,26 @@
+{
+  "OT-SRC-CISA-CSAF": [
+    {
+      "type": "file",
+      "name": "icsa-26-example.json",
+      "path": "csaf_files/OT/white/2026/icsa-26-example.json",
+      "sha": "fixture-sha",
+      "html_url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-example.json"
+    },
+    {
+      "type": "dir",
+      "name": "archive",
+      "path": "csaf_files/OT/white/2026/archive",
+      "html_url": "https://github.com/cisagov/CSAF"
+    }
+  ],
+  "OT-SRC-ATTACK-ICS": [
+    {
+      "type": "file",
+      "name": "ics-attack-19.2.json",
+      "path": "ics-attack/ics-attack-19.2.json",
+      "sha": "fixture-stix-sha",
+      "html_url": "https://github.com/mitre-attack/attack-stix-data/blob/master/ics-attack/ics-attack-19.2.json"
+    }
+  ]
+}

@@ -77,6 +77,11 @@ jobs:
           python scripts/validate_enrichment.py
           python scripts/enrich_ai_sources.py --fixture tests/fixtures/ai-source-responses.json --dry-run --max-per-source 3 > /dev/null
 
+      - name: Validate Cyber OT research domain
+        run: |
+          python scripts/validate_ot.py
+          python scripts/ot_intake.py --fixture tests/fixtures/ot-feeds.json --dry-run
+
       - name: Audit graph for orphaned records
         run: python scripts/audit_graph.py --strict
 

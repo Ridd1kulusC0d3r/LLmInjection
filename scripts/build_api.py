@@ -27,6 +27,9 @@ FILES = [
     "ecosystem.json",
     "vulnerabilities.json",
     "threat-landscape-2026.json",
+    "ot-source-registry.json",
+    "ot-scenarios.json",
+    "ot-datasets.json",
     "dataset-manifest.json",
     "contributors.json",
 ]

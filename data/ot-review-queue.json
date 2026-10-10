@@ -1,0 +1,5 @@
+{
+  "schema_version": "1.0",
+  "policy": "unreviewed-metadata-only; no automatic incident, actor or CVE links",
+  "items": []
+}
