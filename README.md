@@ -8,13 +8,65 @@
   <img src="https://img.shields.io/badge/mode-defensive--first-4a463c?style=flat-square&labelColor=17150f" alt="Defensive first">
 </p>
 
-Open threat intelligence for AI, LLM and agentic systems: actors, campaigns, attack techniques, safe test cases, detections and controls, linked to the evidence behind each claim.
+**The AI threat landscape, with the evidence attached.** Who is using AI against whom, how AI systems themselves are attacked, and what detects or stops it. Every claim carries a source grade and a confidence level, and activity that was observed is kept apart from what research demonstrated and from what is only inferred.
 
 <!-- lang-bar -->
 **English** · [Português](README.pt-BR.md) · [Español](README.es.md) · [简体中文](README.zh-CN.md) · [Русский](README.ru.md)
 <!-- /lang-bar -->
 
 **[Explorer](https://ridd1kulusc0d3r.github.io/LLmInjection/)** · [Documentation](docs/README.md) · [Methodology](docs/METHODOLOGY.md) · [API](docs/PUBLISHING.md) · [Roadmap](docs/ROADMAP.md)
+
+## The landscape in 2026
+
+Read as deep as you need: the numbers first, then where the threat is moving, then how far the evidence goes.
+
+### In one minute
+
+<!-- gen:landscape-headlines:start -->
+
+| | What it measures | Window | Source |
+|---|---|---|---|
+| **94%** | AI expected to be the biggest force shaping cybersecurity in 2026 | WEF Global Cybersecurity Outlook 2026 | [World Economic Forum](https://www.weforum.org/publications/global-cybersecurity-outlook-2026/in-full/executive-summary-6efae97d74/), grade A |
+| **&lt; 6 h** | Time for an autonomous multi-agent framework to plan, build and run a mass credential harvest (upper bound) | GTIG AI Threat Tracker, 2026-09-08 | [Google Threat Intelligence Group](https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai), grade A |
+| **100M+** | Size of the largest observed distillation campaigns against Google models | Feb-Sep 2026 | [Google Threat Intelligence Group](https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai), grade A |
+| **≈ 4×** | Increase in major supply-chain and third-party incidents since 2020 | 2020-2025 | [IBM X-Force](https://www.ibm.com/think/x-force/threat-intelligence-index-2026-securing-identities-ai-detection-risk-management), grade A |
+
+<!-- gen:landscape-headlines:end -->
+
+AI is now on both sides of the line: attackers use it to move faster and, increasingly, to operate, while the AI systems, agents, gateways and supply chains organisations adopt have become targets of their own.
+
+### Where it is moving
+
+<!-- gen:landscape-domains:start -->
+
+| Direction | Where it is moving | What the evidence says |
+|---|---|---|
+| rising | **AI as active operator** | Public reporting now includes campaigns and malware where AI participates in live execution, task chaining or runtime decision-making rather than only preparation. |
+| rising | **AI as offensive force multiplier** | Threat actors use AI for reconnaissance, social engineering, code generation, debugging, translation and rapid iteration. |
+| rising | **Prompt injection and content-borne attacks** | Prompt Injection remains OWASP LLM01:2026, while Check Point observed a sharp rise in longer malicious payloads consistent with indirect/content-borne attack paths. |
+| rising | **Agentic autonomy, identity and tool abuse** | Excessive Agency moved to LLM03:2026 and OWASP maintains a separate Agentic Top 10 covering goal hijack, tool misuse, identity abuse, memory poisoning, inter-agent communication and rogue agents. |
+| rising | **AI and software supply chain** | Open-source packages, CI/CD, AI frameworks, model artifacts and gateways increasingly sit in the blast radius of supply-chain compromise. |
+| rising | **Enterprise AI data exposure and Shadow AI** | Everyday enterprise AI use creates measurable data-exposure risk even without an external attacker. |
+| rising | **Cloud and identity abuse around AI workloads** | Cloud-conscious eCrime increased while vendor reporting continues to emphasize stolen or misused credentials over direct infrastructure exploitation. |
+| rising | **Ransomware and data-extortion industrialization** | Ransomware reporting shows greater victim volume and a shift toward high-volume data theft and extortion, with AI contributing to speed and scale in the broader ecosystem. |
+| emerging | **Model integrity and safety-control fragility** | Research on open-weight models demonstrates that some refusal behaviors can depend on surprisingly concentrated internal mechanisms, reinforcing that model alignment alone is not a system security boundary. |
+| rising | **AI coding-assistant workspace and config abuse** | Malware now hides in assistant and IDE directories (.claude/, .vscode/, .cursor/), abuses agent hooks and configs, and prompt-injects LLM scanners. |
+| rising | **MCP transport and framework command injection** | Prompt-injectable tool parameters and unsanitized STDIO config reached code execution in Semantic Kernel, LiteLLM and other MCP-consuming products in 2026. |
+| rising | **AI-assisted tooling against Latin American targets** | Three 2026 primary reports describe operators speeding tool development or command execution with LLMs against Brazilian financial and Latin American government targets. |
+
+<!-- gen:landscape-domains:end -->
+
+Each row is a record in [`data/threat-landscape-2026.json`](data/threat-landscape-2026.json) with its signals, defensive focus and sources; the [Explorer's Landscape tab](https://ridd1kulusc0d3r.github.io/LLmInjection/#tab=landscape) shows them with the linked actors, campaigns and incidents.
+
+### How far the evidence goes
+
+<!-- gen:landscape-evidence:start -->
+
+Of the **28 techniques** tracked, **18** have activity observed in the wild, **0** are tied to a disclosed vulnerability, **8** are demonstrated in research and **2** have no linked evidence yet (a gap in this repository, not a claim that they are theoretical). On the defensive side, **5 of 45** detections exist as rule files; the rest are specifications.
+
+<!-- gen:landscape-evidence:end -->
+
+Attribution is the weakest link: AI use is usually **inferred from artifacts**, vendors track actors under their own labels, and those labels are kept as published, never merged without evidence. The [methodology](docs/METHODOLOGY.md) explains the source grades (A to E), the confidence levels and how each technique maps to MITRE ATLAS, OWASP, NIST and Google SAIF.
 
 <a href="https://ridd1kulusc0d3r.github.io/LLmInjection/"><img src="assets/explorer-tour.gif" alt="Explorer tour: overview dashboard, landscape, graph, the coverage matrix sorted by priority with a technique opened, actors by technique, ecosystem, and the Portuguese interface" width="100%"></a>
 
