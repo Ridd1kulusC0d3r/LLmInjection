@@ -20,6 +20,12 @@ Open threat intelligence for AI, LLM and agentic systems: actors, campaigns, att
 
 <sub>The Explorer dashboard. Preview image is a snapshot; the live site is rebuilt from the datasets on every merge to main.</sub>
 
+### ▶ Video tour (73 s)
+
+<a href="https://ridd1kulusc0d3r.github.io/LLmInjection/video.html"><img src="assets/promo-video-poster.jpg" alt="Video tour of the LLMInjection Explorer: intelligence graph and coverage matrix" width="100%"></a>
+
+<sub><b>Click to play</b> the tour of the <a href="https://ridd1kulusc0d3r.github.io/LLmInjection/#tab=graph">intelligence graph</a> and the <a href="https://ridd1kulusc0d3r.github.io/LLmInjection/#tab=coverage">coverage matrix</a>, recorded from the live site. English and Português. MP4 files: <a href="site/media/llminjection-promo-en.mp4">EN</a> · <a href="site/media/llminjection-promo-pt.mp4">PT-BR</a>. Re-render with <code>scripts/promo/render.py</code>.</sub>
+
 ---
 
 ## AI threat-source enrichment (2026-10-09)

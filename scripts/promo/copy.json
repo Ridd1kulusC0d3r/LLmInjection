@@ -1,0 +1,200 @@
+{
+ "en": {
+  "cards": {
+   "asof": "Open threat intelligence",
+   "questions": [
+    "Who is using <em>AI</em> against whom?",
+    "How do the attacks <em>actually</em> work?",
+    "What <em>detects</em> or stops them?"
+   ],
+   "wmKick": "Threat landscape for LLM & agentic systems",
+   "wmSub": "Every claim carries a source grade and a confidence level.",
+   "statsKick": "Linked to the evidence behind each claim",
+   "statsTitle": "One open dataset. Graded, cited, defensive-first.",
+   "stats": [
+    [
+     8,
+     "Actors"
+    ],
+    [
+     30,
+     "Incidents"
+    ],
+    [
+     28,
+     "Techniques"
+    ],
+    [
+     40,
+     "Safe test cases"
+    ],
+    [
+     45,
+     "Detections"
+    ],
+    [
+     215,
+     "Relationships"
+    ]
+   ],
+   "outKick": "Open source · Apache-2.0",
+   "outTitle": "Open. Graded.<br>Defensive-first.",
+   "outLinks": [
+    "ridd1kulusc0d3r.github.io/LLmInjection",
+    "github.com/Ridd1kulusC0d3r/LLmInjection"
+   ],
+   "outCta": [
+    "★ Star the repo",
+    "Contribute intel",
+    "STIX 2.1 · API · Navigator"
+   ]
+  },
+  "ch1": {
+   "no": "01 / 02",
+   "kick": "The intelligence graph",
+   "title": "Trace the whole<br>kill chain.",
+   "sub": "Actors, campaigns, incidents, techniques, tests, detections, controls and frameworks in one connected view."
+  },
+  "ch2": {
+   "no": "02 / 02",
+   "kick": "The coverage matrix",
+   "title": "See where defenses<br>exist, and where they don't.",
+   "sub": "Evidence, tests, detections, controls, tools and benchmarks counted per technique."
+  },
+  "graph": [
+   [
+    "Intelligence graph",
+    "One column per object type, every link backed by a source."
+   ],
+   [
+    "Focus a node",
+    "Its linked records light up in every column, campaign to control."
+   ],
+   [
+    "Open any record",
+    "Sources, grade, confidence, framework mapping and the defensive angle."
+   ]
+  ],
+  "cov": [
+   [
+    "Technique coverage",
+    "Counted from the graph, the ecosystem and the rule files."
+   ],
+   [
+    "Heat at a glance",
+    "Evidence, tests, detections, controls, tools and benchmarks per technique."
+   ],
+   [
+    "Drill down",
+    "Expand a technique to see the records behind every number."
+   ],
+   [
+    "Filter the gaps",
+    "No control, no benchmark, stale or single-publisher evidence."
+   ],
+   [
+    "Actors × techniques",
+    "Who is using which technique, side by side."
+   ]
+  ]
+ },
+ "pt": {
+  "cards": {
+   "asof": "Inteligência de ameaças aberta",
+   "questions": [
+    "Quem está usando <em>IA</em> contra quem?",
+    "Como os ataques funcionam <em>de verdade</em>?",
+    "O que <em>detecta</em> ou impede?"
+   ],
+   "wmKick": "Cenário de ameaças para LLMs e sistemas agênticos",
+   "wmSub": "Toda afirmação traz grau da fonte e nível de confiança.",
+   "statsKick": "Ligado à evidência por trás de cada afirmação",
+   "statsTitle": "Um dataset aberto. Graduado, citado, defensivo.",
+   "stats": [
+    [
+     8,
+     "Atores"
+    ],
+    [
+     30,
+     "Incidentes"
+    ],
+    [
+     28,
+     "Técnicas"
+    ],
+    [
+     40,
+     "Casos de teste seguros"
+    ],
+    [
+     45,
+     "Detecções"
+    ],
+    [
+     215,
+     "Relacionamentos"
+    ]
+   ],
+   "outKick": "Código aberto · Apache-2.0",
+   "outTitle": "Aberto. Graduado.<br>Defensivo primeiro.",
+   "outLinks": [
+    "ridd1kulusc0d3r.github.io/LLmInjection",
+    "github.com/Ridd1kulusC0d3r/LLmInjection"
+   ],
+   "outCta": [
+    "★ Dê uma estrela",
+    "Contribua com inteligência",
+    "STIX 2.1 · API · Navigator"
+   ]
+  },
+  "ch1": {
+   "no": "01 / 02",
+   "kick": "O grafo de inteligência",
+   "title": "Rastreie a cadeia<br>de ataque inteira.",
+   "sub": "Atores, campanhas, incidentes, técnicas, testes, detecções, controles e frameworks numa única visão conectada."
+  },
+  "ch2": {
+   "no": "02 / 02",
+   "kick": "A matriz de cobertura",
+   "title": "Veja onde existe defesa<br>e onde ainda falta.",
+   "sub": "Evidências, testes, detecções, controles, ferramentas e benchmarks contados por técnica."
+  },
+  "graph": [
+   [
+    "Grafo de inteligência",
+    "Uma coluna por tipo de objeto, cada ligação apoiada numa fonte."
+   ],
+   [
+    "Foque um nó",
+    "Os registros ligados a ele acendem em todas as colunas, da campanha ao controle."
+   ],
+   [
+    "Abra qualquer registro",
+    "Fontes, grau, confiança, mapeamento de frameworks e o ângulo defensivo."
+   ]
+  ],
+  "cov": [
+   [
+    "Cobertura por técnica",
+    "Contada a partir do grafo, do ecossistema e dos arquivos de regra."
+   ],
+   [
+    "Calor num relance",
+    "Evidências, testes, detecções, controles, ferramentas e benchmarks por técnica."
+   ],
+   [
+    "Aprofunde",
+    "Expanda uma técnica para ver os registros por trás de cada número."
+   ],
+   [
+    "Filtre as lacunas",
+    "Sem controle, sem benchmark, evidência antiga ou de um só publicador."
+   ],
+   [
+    "Atores × técnicas",
+    "Quem usa qual técnica, lado a lado."
+   ]
+  ]
+ }
+}
