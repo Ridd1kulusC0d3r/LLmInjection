@@ -22,6 +22,10 @@ Open threat intelligence for AI, LLM and agentic systems: actors, campaigns, att
 
 ---
 
+## AI threat-source enrichment (2026-10-09)
+
+New [source registry and ingestion guidance](docs/AI-INTELLIGENCE-SOURCES.md), [runtime and identity telemetry design](docs/AI-RUNTIME-INTELLIGENCE.md), 22 additional GitHub ecosystem entries, six-dimensional threat ontology and candidate-only source adapters. External material requires human review before promotion into CTI.
+
 ## At a glance
 
 <!-- gen:stats:start -->

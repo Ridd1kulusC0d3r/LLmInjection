@@ -16,6 +16,10 @@ Start with the [README](../README.md#explore-the-project) for the full expandabl
 
 ## Threat intelligence
 
+| [AI source enrichment](AI-INTELLIGENCE-SOURCES.md) | Review additional incident, CVE, MCP and vendor sources |
+| [AI runtime intelligence](AI-RUNTIME-INTELLIGENCE.md) | Define privacy-preserving agent/tool event mapping |
+
+
 | Document | Read it to |
 |---|---|
 | [Threat landscape 2026](THREAT-LANDSCAPE-2026.md) | See cited metrics, domains and open leads |
