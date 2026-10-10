@@ -183,7 +183,7 @@ Evidence → Campaign → Technique → Test → Detection → Control → Frame
 
 ## v1.4 — AI source intelligence expansion (2026-10-09)
 
-- [x] Curate new repositories, sources and six-domain ontology.
+- [x] Curate supplementary repositories in a separate source registry and six-domain ontology, preserving the validated core ecosystem.
 - [x] Add source-enrichment documentation and agent telemetry mapping.
 - [x] Candidate-only collector, offline tests and review workflow (live feed verification still pending).
 - [ ] Rights-aware AIID, VCDB, NVD, EPSS and vendor-report adapters.

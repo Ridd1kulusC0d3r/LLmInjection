@@ -4,7 +4,7 @@ Updated 2026-10-09. **These are complementary sources, not 32 newly validated in
 
 ## Added
 
-- 22 verified reachable public GitHub repositories in `data/ecosystem.json`.
+- 19 additional previously uncatalogued public repositories in `data/ai-source-registry.json`; the core `data/ecosystem.json` is preserved until repository commit and licence verification.
 - 32 source records in `data/ai-source-registry.json` with integration states, evidence classes and review requirements.
 - An ontology of six overlapping AI threat dimensions: target, enabler, operator, supply chain, runtime identity, autonomous failure.
 - A bounded, candidate-only enrichment pipeline (see `scripts/enrich_ai_sources.py`), separate from authoritative CTI data.
