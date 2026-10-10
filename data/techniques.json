@@ -216,7 +216,7 @@
       {
         "framework": "MITRE ATLAS",
         "id": "AML.T0020",
-        "name": "Poison Training Data",
+        "name": "Training Data Poisoning",
         "relation": "exact",
         "url": "https://atlas.mitre.org/techniques/AML.T0020"
       },
@@ -240,6 +240,13 @@
         "name": "Erode Dataset Integrity",
         "relation": "related",
         "url": "https://atlas.mitre.org/techniques/AML.T0059"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0018.000",
+        "name": "Poison AI Model",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0018.000"
       }
     ],
     "maturity": "research-demonstrated"
@@ -541,6 +548,13 @@
         "name": "Discover LLM Hallucinations",
         "relation": "related",
         "url": "https://atlas.mitre.org/techniques/AML.T0062"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0011.001",
+        "name": "Malicious Package",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0011.001"
       }
     ],
     "maturity": "observed-in-the-wild"
@@ -683,6 +697,13 @@
         "name": "AI Model Inference API Access",
         "relation": "related",
         "url": "https://atlas.mitre.org/techniques/AML.T0040"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0055",
+        "name": "Unsecured Credentials",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0055"
       }
     ],
     "maturity": "observed-in-the-wild"
@@ -878,6 +899,13 @@
         "name": "Publish Poisoned AI Artifacts: AI Agent Tools",
         "relation": "related",
         "url": "https://atlas.mitre.org/techniques/AML.T0115.002"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0110.000",
+        "name": "Definition and Instructions",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0110.000"
       }
     ],
     "maturity": "observed-in-the-wild"
@@ -980,6 +1008,13 @@
         "name": "Active Scanning",
         "relation": "related",
         "url": "https://atlas.mitre.org/techniques/AML.T0006"
+      },
+      {
+        "framework": "MITRE ATLAS",
+        "id": "AML.T0049",
+        "name": "Exploit Public-Facing Application",
+        "relation": "related",
+        "url": "https://atlas.mitre.org/techniques/AML.T0049"
       }
     ],
     "maturity": "observed-in-the-wild"
