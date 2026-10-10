@@ -1,0 +1,41 @@
+# GitHub Pages (Jekyll) fallback for the README and docs.
+# The interactive Explorer is built by .github/workflows/pages.yml and needs Settings > Pages > Source = "GitHub Actions".
+title: LLMInjection
+description: Open threat intelligence for AI, LLM and agentic systems. Every claim carries a source grade and a confidence level.
+lang: en
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+  parse_block_html: true   # kramdown skips Markdown inside <details> by default; the README is built from <details> sections
+plugins:
+  - jekyll-readme-index
+  - jekyll-optional-front-matter
+  - jekyll-relative-links
+  - jekyll-titles-from-headings
+  - jekyll-default-layout
+  - jekyll-seo-tag
+relative_links:
+  enabled: true
+  collections: false
+titles_from_headings:
+  enabled: true
+  strip_title: true
+  collections: false
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+exclude:
+  - tests
+  - scripts
+  - integrations
+  - dist
+  - Makefile
+  - pyproject.toml
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor

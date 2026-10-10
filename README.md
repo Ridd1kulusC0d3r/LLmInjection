@@ -33,6 +33,7 @@ New [source registry and ingestion guidance](docs/AI-INTELLIGENCE-SOURCES.md), [
 ## At a glance
 
 <!-- gen:stats:start -->
+
 | Actors | Campaigns | Incidents | Vulnerabilities | Techniques | Sources |
 |:---:|:---:|:---:|:---:|:---:|:---:|
 | **8** | **10** | **30** | **9** | **28** | **54** |
@@ -40,6 +41,7 @@ New [source registry and ingestion guidance](docs/AI-INTELLIGENCE-SOURCES.md), [
 | Test cases | Detections | Controls | Frameworks | Model families | Relationships | Ecosystem repos |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | **40** | **45** | **32** | **19** | **12** | **215** | **115** |
+
 <!-- gen:stats:end -->
 
 LLMInjection is **not a prompt dump**. Every meaningful claim carries a source grade, a confidence level, a last-verified date, framework context and a defensive angle.
@@ -101,9 +103,8 @@ Re-fangs `hxxp` and `[.]`, drops private IPs and noisy domains, and extracts CVE
 Each section opens in place: click the arrow. Tables inside are generated from the datasets, so they never drift.
 
 <details open>
-<summary><strong>Latest update, 2026-10-09: depth in the coverage matrix</strong> &nbsp;·&nbsp; <sub>rule files, publishers, freshness, benchmarks, actors</sub></summary>
+<summary markdown="span"><strong>Latest update, 2026-10-09: depth in the coverage matrix</strong> &nbsp;·&nbsp; <sub>rule files, publishers, freshness, benchmarks, actors</sub></summary>
 
-<br>
 
 A count of linked records says little when most cells read "1". The coverage model (`scripts/coverage_model.py`) now derives what a count hides, from the datasets and the files in `detections/`:
 
@@ -117,9 +118,8 @@ A count of linked records says little when most cells read "1". The coverage mod
 </details>
 
 <details>
-<summary><strong>Update, 2026-10-07: ecosystem sweep</strong> &nbsp;·&nbsp; <sub>107 repositories read, ATLAS 2026.09 crosswalk</sub></summary>
+<summary markdown="span"><strong>Update, 2026-10-07: ecosystem sweep</strong> &nbsp;·&nbsp; <sub>107 repositories read, ATLAS 2026.09 crosswalk</sub></summary>
 
-<br>
 
 Every related repository was cloned and read, not just listed ([sweep report](docs/ECOSYSTEM-INTELLIGENCE.md)).
 
@@ -131,9 +131,8 @@ Every related repository was cloned and read, not just listed ([sweep report](do
 </details>
 
 <details open>
-<summary><strong>Latest update, 2026-10-07: Latin America, coverage and maturity</strong> &nbsp;·&nbsp; <sub>regional lens, gaps closed, evidence levels</sub></summary>
+<summary markdown="span"><strong>Latest update, 2026-10-07: Latin America, coverage and maturity</strong> &nbsp;·&nbsp; <sub>regional lens, gaps closed, evidence levels</sub></summary>
 
-<br>
 
 - **Latin America.** Three 2026 primary reports (Google and Mandiant on BREEZE COMET, Trend Micro on SHADOW-AETHER-040, Unit 42 on CL-CRI-1131) describe AI-assisted tooling against Brazilian financial and Latin American government targets. AI use is largely inferred from artifacts and the models are not confirmed; initial access is unchanged. Regional view, in Portuguese: [Panorama Brasil e América Latina](docs/pt-BR/PANORAMA-BRASIL-LATAM.md). New technique `LLMI-T028`.
 - **Coverage gaps closed.** Every technique now has a safe test, a detection and a linked record; the graph audit keeps it that way. New tests `TC-JB-035` to `TC-TOOL-040`, detections `DET-AI-040` to `DET-AI-045`.
@@ -144,9 +143,8 @@ Every related repository was cloned and read, not just listed ([sweep report](do
 </details>
 
 <details>
-<summary><strong>Previous update, 2026-10-06</strong> &nbsp;·&nbsp; <sub>agent workspaces, MCP transport, autonomy at scale</sub></summary>
+<summary markdown="span"><strong>Previous update, 2026-10-06</strong> &nbsp;·&nbsp; <sub>agent workspaces, MCP transport, autonomy at scale</sub></summary>
 
-<br>
 
 Two attack surfaces moved from research to observed activity.
 
@@ -162,19 +160,20 @@ Full record: [Intelligence changelog](docs/INTELLIGENCE-CHANGELOG.md) · [Landsc
 </details>
 
 <details>
-<summary><strong>Technique maturity</strong> &nbsp;·&nbsp; <sub>how strong the evidence for each technique is, derived from the graph</sub></summary>
+<summary markdown="span"><strong>Technique maturity</strong> &nbsp;·&nbsp; <sub>how strong the evidence for each technique is, derived from the graph</sub></summary>
 
-<br>
 
 Maturity is **derived, not asserted**: `scripts/maturity.py` computes it from the relationship graph and the validator rejects a technique whose field disagrees. It mirrors the rule behind the ecosystem map: observed activity, disclosed vulnerabilities and research results are different kinds of evidence.
 
 <!-- gen:maturity:start -->
+
 | Maturity | Derived from | Techniques | IDs |
 |---|---|---|---|
 | `observed-in-the-wild` | Linked to a campaign, or to an incident whose status is observed | 18 | T003, T005, T008, T010, T011, T012, T013, T014, T015, T016, T017, T018, T019, T021, T023, T024, T026, T028 |
 | `disclosed-vulnerability` | Linked to a vulnerability record (CVE, GHSA or malicious package) | 0 |  |
 | `research-demonstrated` | Linked to a research or lab incident, or mapped by a research or benchmark project | 8 | T001, T002, T004, T006, T007, T009, T020, T025 |
 | `no-linked-evidence` | Nothing in this repository links to it yet. Not a claim that it is theoretical | 2 | T022, T027 |
+
 <!-- gen:maturity:end -->
 
 A low level means few records link to the technique so far, not that it is theoretical. For example, prompt injection is widely discussed but its maturity here is only as strong as the incidents and campaigns actually linked to it.
@@ -182,9 +181,8 @@ A low level means few records link to the technique so far, not that it is theor
 </details>
 
 <details>
-<summary><strong>Visual atlas</strong> &nbsp;·&nbsp; <sub>framework mapping and ecosystem charts</sub></summary>
+<summary markdown="span"><strong>Visual atlas</strong> &nbsp;·&nbsp; <sub>framework mapping and ecosystem charts</sub></summary>
 
-<br>
 
 ### Framework mapping
 
@@ -203,9 +201,8 @@ All charts are generated by [`scripts/build_charts.py`](scripts/build_charts.py)
 </details>
 
 <details>
-<summary><strong>Attack chains and defender playbook</strong> &nbsp;·&nbsp; <sub>two 2026 chains, mapped to tests, detections and controls</sub></summary>
+<summary markdown="span"><strong>Attack chains and defender playbook</strong> &nbsp;·&nbsp; <sub>two 2026 chains, mapped to tests, detections and controls</sub></summary>
 
-<br>
 
 ### Chain 1: agent workspace abuse (DUSTMAKER)
 
@@ -251,9 +248,8 @@ The one open gap in this table is a safe test for CI token theft (`DET-AI-012` h
 </details>
 
 <details>
-<summary><strong>Living intelligence</strong> &nbsp;·&nbsp; <sub>review-gated feeds, snapshots and diffs</sub></summary>
+<summary markdown="span"><strong>Living intelligence</strong> &nbsp;·&nbsp; <sub>review-gated feeds, snapshots and diffs</sub></summary>
 
-<br>
 
 LLMInjection now has a **review-gated living-intelligence pipeline** instead of depending on occasional manual bulk updates.
 
@@ -284,9 +280,8 @@ The daily collectors **cannot auto-create attribution, incidents, CVE relationsh
 </details>
 
 <details>
-<summary><strong>AI / LLM threat landscape 2026</strong> &nbsp;·&nbsp; <sub>cited metrics, domains and attack surfaces</sub></summary>
+<summary markdown="span"><strong>AI / LLM threat landscape 2026</strong> &nbsp;·&nbsp; <sub>cited metrics, domains and attack surfaces</sub></summary>
 
-<br>
 
 The repository now maintains a dedicated **evidence-driven threat landscape**, separate from the actor tracker. The landscape tracks macro-trends, telemetry, sectors, research concepts, attack surfaces and defensive priorities while preserving each source's original population and time window.
 
@@ -330,9 +325,8 @@ flowchart LR
 </details>
 
 <details>
-<summary><strong>Threat actors and campaigns</strong> &nbsp;·&nbsp; <sub>who is using AI, and how</sub></summary>
+<summary markdown="span"><strong>Threat actors and campaigns</strong> &nbsp;·&nbsp; <sub>who is using AI, and how</sub></summary>
 
-<br>
 
 Real-world reporting is intentionally placed on the front page because AI security becomes useful when research connects to **who is doing what, where the evidence comes from, and what defenders can observe**.
 
@@ -343,6 +337,7 @@ Real-world reporting is intentionally placed on the front page because AI securi
 ### Tracked actors
 
 <!-- gen:actors:start -->
+
 | Actor | Nexus | AI role | Activity | Confidence |
 |---|---|---|---|---|
 | **GTG-1002** | China | autonomous-operator, offensive-enabler | Anthropic assessed with high confidence that a Chinese state-sponsored group used Claude Code in a largely AI-orchestrated… | confirmed |
@@ -353,11 +348,13 @@ Real-world reporting is intentionally placed on the front page because AI securi
 | **Famous Chollima** | North Korea | ai-supply-chain-targeting, coding-agent-targeting | 2026 reporting summarized by CSA attributes PromptMink to Famous Chollima and describes npm packages deliberately optimized to… | high |
 | **TeamPCP** | Unattributed | ai-infrastructure-targeting, supply-chain | 2026 supply-chain activity resulted in malicious LiteLLM releases and demonstrated the concentration of credentials and trust in… | confirmed |
 | **BREEZE COMET** | Unattributed, financially motivated, Brazil-focused | offensive-enabler, tooling-development | Google and Mandiant describe a financially motivated actor manipulating payment systems and banking software in Brazil, and… | high |
+
 <!-- gen:actors:end -->
 
 ### Campaigns
 
 <!-- gen:campaigns:start -->
+
 | Campaign | First seen | Reported | Regions | Confidence | Summary |
 |---|---|---|---|---|---|
 | **GTG-1002 AI-orchestrated espionage** | 2025-09 | 2025-11-13 |  | confirmed | Campaign assessed by Anthropic as Chinese state-sponsored in which Claude Code performed the majority of tactical operations against… |
@@ -370,11 +367,13 @@ Real-world reporting is intentionally placed on the front page because AI securi
 | **BREEZE COMET payment-system fraud in Brazil** | 2024 | 2026-09-01 | BR | confirmed | Intrusions into Brazilian financial services, retail and e-commerce organizations that can move money through Pix, STR and Boleto, reported… |
 | **SHADOW-AETHER-040 agentic intrusions against Latin American governments** | 2025-12-27 | 2026-05-11 | MX, LATAM | high | Trend Micro reports Spanish-speaking operators intruding into six Mexican government entities between 2025-12-27 and 2026-01-04, with high… |
 | **CL-CRI-1131 LLM-assisted intrusions in Mexico and Ecuador** | 2026 | 2026-09-03 | MX, EC | medium | Unit 42 assesses that operators used LLMs to generate workaround scripts against a Mexican transportation organization, federal ministries… |
+
 <!-- gen:campaigns:end -->
 
 ### Incidents and research cases
 
 <!-- gen:incidents:start -->
+
 | Incident | Kind | Status | Confidence |
 |---|---|---|---|
 | **CLOSEDQUORUM autonomous AI C2 research case** | research-artifact | not-confirmed-in-the-wild | confirmed |
@@ -407,14 +406,14 @@ Real-world reporting is intentionally placed on the front page because AI securi
 | **Cross-Site Scripting via Prompt Manipulation in Lenovo AI Chatbot (AML.CS0060)** | atlas-exercise | research | confirmed |
 | **Prompt-Based Attacks Against Gemini via Calendar Invitations (AML.CS0063)** | atlas-exercise | research | confirmed |
 | **ZombieAgent: Data Exfiltration Attack on ChatGPT (AML.CS0066)** | atlas-exercise | research | confirmed |
+
 <!-- gen:incidents:end -->
 
 </details>
 
 <details>
-<summary><strong>Security test lab</strong> &nbsp;·&nbsp; <sub>safe, reproducible defensive test cases</sub></summary>
+<summary markdown="span"><strong>Security test lab</strong> &nbsp;·&nbsp; <sub>safe, reproducible defensive test cases</sub></summary>
 
-<br>
 
 The test catalog converts threat intelligence into **safe, reproducible defensive validation**. Tests use synthetic canaries, mock tools, local fixtures and simulated telemetry instead of production secrets or third-party targets.
 
@@ -440,6 +439,7 @@ The roadmap includes adapters for **Microsoft PyRIT, NVIDIA garak, JailbreakBenc
 ### Test case catalog
 
 <!-- gen:test-cases:start -->
+
 | ID | Test case | Category | What the secure system must prove |
 |---|---|---|---|
 | `TC-PI-001` | **Direct Prompt Injection Boundary** | prompt-injection | Verify that untrusted user text cannot override higher-priority application policy. |
@@ -482,14 +482,14 @@ The roadmap includes adapters for **Microsoft PyRIT, NVIDIA garak, JailbreakBenc
 | `TC-RLC-038` | **Model-Generated Command Execution Gate** | runtime-security | Verify that commands generated by a model at runtime are never executed without policy evaluation, and that high-impact… |
 | `TC-SOC-039` | **Agent Outbound Communication Gate** | agentic-security | Verify that an agent cannot send messages to new external recipients or impersonate a person without approval, and that… |
 | `TC-TOOL-040` | **Iterative Script Trial-and-Error Detection** | runtime-security | Verify that rapid iteration of near-identical scripts on one host is detected by behavior, independent of who or what… |
+
 <!-- gen:test-cases:end -->
 
 </details>
 
 <details>
-<summary><strong>Threat landscape model</strong> &nbsp;·&nbsp; <sub>attack surfaces and trust boundaries</sub></summary>
+<summary markdown="span"><strong>Threat landscape model</strong> &nbsp;·&nbsp; <sub>attack surfaces and trust boundaries</sub></summary>
 
-<br>
 
 LLMInjection separates four roles that are often carelessly mixed together under the phrase “AI cyber threat”.
 
@@ -530,6 +530,7 @@ Read the full model: [AI-THREAT-MODEL.md](docs/AI-THREAT-MODEL.md).
 ### Technique catalog
 
 <!-- gen:techniques:start -->
+
 | ID | Technique | Category | Maturity | Mapped to |
 |---|---|---|---|---|
 | `LLMI-T001` | **Direct Prompt Injection** | prompt-context | research-demonstrated | OWASP LLM, MITRE ATLAS, Google SAIF |
@@ -560,14 +561,14 @@ Read the full model: [AI-THREAT-MODEL.md](docs/AI-THREAT-MODEL.md).
 | `LLMI-T026` | **Inter-Agent Instruction Propagation** | agentic | observed-in-the-wild | MITRE ATLAS |
 | `LLMI-T027` | **Unsanctioned AI Runtime (Shadow AI)** | runtime-security | no-linked-evidence | MITRE ATT&CK, MITRE ATLAS |
 | `LLMI-T028` | **AI-Assisted Tooling Development** | offensive-enablement | observed-in-the-wild | MITRE ATLAS |
+
 <!-- gen:techniques:end -->
 
 </details>
 
 <details>
-<summary><strong>Intelligence graph and Explorer</strong> &nbsp;·&nbsp; <sub>relationships, STIX, static API and MCP</sub></summary>
+<summary markdown="span"><strong>Intelligence graph and Explorer</strong> &nbsp;·&nbsp; <sub>relationships, STIX, static API and MCP</sub></summary>
 
-<br>
 
 The CTI core is now relational rather than list-based:
 
@@ -610,6 +611,7 @@ An optional **MCP v2 read-only server** exposes search, object lookup, graph tra
 ### Vulnerability and malicious-package records
 
 <!-- gen:vulnerabilities:start -->
+
 | Record | Identifiers | Kind | Severity | Published |
 |---|---|---|---|---|
 | Malicious LiteLLM PyPI releases 1.82.7 and 1.82.8 | `GHSA-92x9-889m-jgmw`<br>`MAL-2026-2144` | malicious-package | malware | 2026-07-21 |
@@ -621,14 +623,14 @@ An optional **MCP v2 read-only server** exposes search, object lookup, graph tra
 | Semantic Kernel In-Memory Vector Store filter injection to RCE | `CVE-2026-26030` | remote-code-execution | unrated | 2026-05-07 |
 | Semantic Kernel SessionsPythonPlugin arbitrary file access | `CVE-2026-25592` | sandbox-escape | unrated | 2026-05-07 |
 | MCP STDIO configuration command injection across AI frameworks | `CVE-2026-30623`<br>`CVE-2026-30615` | command-injection | unrated | 2026-04-15 |
+
 <!-- gen:vulnerabilities:end -->
 
 </details>
 
 <details>
-<summary><strong>Framework stack</strong> &nbsp;·&nbsp; <sub>ATLAS, OWASP, NIST, SAIF, MAESTRO and more</sub></summary>
+<summary markdown="span"><strong>Framework stack</strong> &nbsp;·&nbsp; <sub>ATLAS, OWASP, NIST, SAIF, MAESTRO and more</sub></summary>
 
-<br>
 
 MITRE ATLAS is essential, but it does not cover the whole AI system. LLMInjection uses a multi-framework crosswalk rather than pretending every taxonomy is interchangeable.
 
@@ -648,6 +650,7 @@ MITRE ATLAS is essential, but it does not cover the whole AI system. LLMInjectio
 ### Tracked frameworks
 
 <!-- gen:frameworks:start -->
+
 | Framework | Category | Used for |
 |---|---|---|
 | [MITRE ATLAS](https://atlas.mitre.org/) | adversary-knowledge-base | AI-specific adversary behavior mapping |
@@ -669,14 +672,14 @@ MITRE ATLAS is essential, but it does not cover the whole AI system. LLMInjectio
 | [MCP Security Best Practices 2026-07-28](https://github.com/modelcontextprotocol/modelcontextprotocol/blob/main/docs/docs/2026-07-28/tutorials/security/security_best_practices.mdx) | protocol-security-guidance | MCP threat modeling and controls |
 | [CycloneDX AI/ML-BOM](https://www.cyclonedx.org/capabilities/mlbom/) | supply-chain-transparency | AI supply-chain inventory and provenance |
 | [OWASP GenAI Security Industry Framework Crosswalk](https://genai.owasp.org/resource-item/tools/) | framework-crosswalk | Cross-framework control mapping |
+
 <!-- gen:frameworks:end -->
 
 </details>
 
 <details>
-<summary><strong>Model and runtime intelligence</strong> &nbsp;·&nbsp; <sub>model families and deployment risk</sub></summary>
+<summary markdown="span"><strong>Model and runtime intelligence</strong> &nbsp;·&nbsp; <sub>model families and deployment risk</sub></summary>
 
-<br>
 
 A model name is not a security posture. Deployment architecture, tool authority, RAG, memory, identity, network access and provenance often matter more than the base model alone.
 
@@ -698,6 +701,7 @@ A model name is not a security posture. Deployment architecture, tool authority,
 ### Model families
 
 <!-- gen:models:start -->
+
 | Family | Provider | Deployment | Security focus |
 |---|---|---|---|
 | **GPT** | OpenAI | managed-api | api-identity, tool-use, agentic-workflows, application-controls |
@@ -712,14 +716,14 @@ A model name is not a security posture. Deployment architecture, tool authority,
 | **Grok** | xAI | managed-api | application-controls, tool-use, agentic-workflows |
 | **Kimi** | Moonshot AI | managed-api | long-context, agentic-applications, api-security |
 | **GLM** | Zhipu AI ecosystem | api, open-ecosystem | coding, agentic-applications, api-security |
+
 <!-- gen:models:end -->
 
 </details>
 
 <details>
-<summary><strong>Detection engineering</strong> &nbsp;·&nbsp; <sub>telemetry-backed detection hypotheses</sub></summary>
+<summary markdown="span"><strong>Detection engineering</strong> &nbsp;·&nbsp; <sub>telemetry-backed detection hypotheses</sub></summary>
 
-<br>
 
 LLMInjection focuses on behaviors and trust-boundary crossings rather than trying to detect the string “AI”.
 
@@ -752,6 +756,7 @@ telemetry + detection
 ### Detection hypotheses
 
 <!-- gen:detections:start -->
+
 | ID | Detection | Category | Severity | Status |
 |---|---|---|---|---|
 | `DET-AI-001` | **Unexpected LLM Provider Egress** | network | medium | specification |
@@ -799,11 +804,13 @@ telemetry + detection
 | `DET-AI-043` | **Agent Outbound Communication Anomaly** | agent-runtime | medium | specification |
 | `DET-AI-044` | **Model Output Reaching an Interpreter Unsanitized** | application | high | specification |
 | `DET-AI-045` | **Rapid Iterative Script Variants on One Host** | endpoint | medium | specification |
+
 <!-- gen:detections:end -->
 
 ### Defensive controls
 
 <!-- gen:controls:start -->
+
 | ID | Control | Category |
 |---|---|---|
 | `CTRL-POLICY-OUTSIDE-MODEL` | **External Policy Enforcement** | authorization |
@@ -838,14 +845,14 @@ telemetry + detection
 | `CTRL-AI-SERVICE-EXPOSURE` | **AI Service Exposure Management** | infrastructure |
 | `CTRL-PREFILL-LINK-POLICY` | **Pre-filled Prompt and Memory Write Policy** | memory |
 | `CTRL-EXEC-POLICY` | **Script and Unknown Binary Execution Policy** | endpoint |
+
 <!-- gen:controls:end -->
 
 </details>
 
 <details>
-<summary><strong>Intelligence architecture</strong> &nbsp;·&nbsp; <sub>evidence model, grades and confidence</sub></summary>
+<summary markdown="span"><strong>Intelligence architecture</strong> &nbsp;·&nbsp; <sub>evidence model, grades and confidence</sub></summary>
 
-<br>
 
 ```mermaid
 flowchart LR
@@ -894,6 +901,7 @@ Every intelligence item should answer:
 ### Source registry by grade
 
 <!-- gen:source-grades:start -->
+
 | Grade | Class | Sources |
 |---|---|---|
 | **A** | Primary or authoritative | 40 |
@@ -901,14 +909,14 @@ Every intelligence item should answer:
 | **C** | Reputable press | 2 |
 | **D** | Community | 5 |
 | **E** | Unsupported | 0 |
+
 <!-- gen:source-grades:end -->
 
 </details>
 
 <details>
-<summary><strong>Research and evaluation ecosystem</strong> &nbsp;·&nbsp; <sub>red-team tools, benchmarks, standards</sub></summary>
+<summary markdown="span"><strong>Research and evaluation ecosystem</strong> &nbsp;·&nbsp; <sub>red-team tools, benchmarks, standards</sub></summary>
 
-<br>
 
 LLMInjection indexes external projects for discovery and reproducible evaluation while keeping its CTI dataset evidence-driven.
 
@@ -929,6 +937,7 @@ See [REFERENCE-LIBRARY.md](references/REFERENCE-LIBRARY.md), [BENCHMARKS.md](doc
 The [ecosystem map](docs/ECOSYSTEM.md) classifies related repositories by **what each can honestly support**, so observed incidents, techniques demonstrated in research and lab examples never blur together. These entries inform taxonomy, tests, detections and controls. They never create an actor, campaign or incident record, and the validator rejects any entry that claims to support attribution.
 
 <!-- gen:eco-classes:start -->
+
 | Evidence class | What it is | Can support | Cannot support | Entries |
 |---|---|---|---|---|
 | `framework-data` | Taxonomies and knowledge bases | Technique definitions and framework mappings | Observed activity | 7 |
@@ -941,11 +950,13 @@ The [ecosystem map](docs/ECOSYSTEM.md) classifies related repositories by **what
 | `defence-tool` | Defences and guardrails | Control design and comparison | Proven protection | 10 |
 | `lab-exercise` | Training labs | Analyst training and onboarding | Threat intelligence | 7 |
 | `prompt-corpus` | Prompt corpora and datasets | Test inspiration and measurement | Threat intelligence or attribution | 7 |
+
 <!-- gen:eco-classes:end -->
 
 #### Start here
 
 <!-- gen:eco-start:start -->
+
 | Repository | Evidence class | Techniques | Last commit · License | Scope |
 |---|---|---|---|---|
 | [mitre-atlas/atlas-data](https://github.com/mitre-atlas/atlas-data) | `framework-data` | none | 2026-09-10 · Apache-2.0 | Data for tactics, techniques and case studies of threats against AI systems. · **start here** |
@@ -959,6 +970,7 @@ The [ecosystem map](docs/ECOSYSTEM.md) classifies related repositories by **what
 | [microsoft/PyRIT](https://github.com/microsoft/PyRIT) | `assessment-tool` | `LLMI-T001`, `LLMI-T002`, `LLMI-T003`, `LLMI-T004`, `LLMI-T008`, `LLMI-T013`, `LLMI-T014` | 2026-10-07 · MIT | Framework for identifying risks in generative AI systems. · **start here** |
 | [ethz-spylab/agentdojo](https://github.com/ethz-spylab/agentdojo) | `benchmark` | `LLMI-T001`, `LLMI-T002`, `LLMI-T004`, `LLMI-T008` | 2026-06-02 · MIT | Environment for evaluating attacks and defences of LLM agents. · **start here** |
 | [OWASP/www-project-ai-testing-guide](https://github.com/OWASP/www-project-ai-testing-guide) | `framework-data` | none | 2026-06-01 · other | OWASP AI Testing Guide: 32 test procedures across application, data, infrastructure and model layers. · **start here** |
+
 <!-- gen:eco-start:end -->
 
 All entries, by section: [docs/ECOSYSTEM.md](docs/ECOSYSTEM.md). Provenance: maintainer research, cross-checked by shallow clone on 2026-10-07 (reachability, last commit, licence). The GitHub archive flag is not visible to git and is added by `scripts/check_ecosystem.py`.
@@ -966,9 +978,8 @@ All entries, by section: [docs/ECOSYSTEM.md](docs/ECOSYSTEM.md). Provenance: mai
 </details>
 
 <details>
-<summary><strong>Roadmap</strong> &nbsp;·&nbsp; <sub>where the project is going</sub></summary>
+<summary markdown="span"><strong>Roadmap</strong> &nbsp;·&nbsp; <sub>where the project is going</sub></summary>
 
-<br>
 
 ```text
 v0.1  Intelligence foundation                    ✅

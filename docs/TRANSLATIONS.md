@@ -52,6 +52,7 @@ Right-to-left languages need additional layout work (the Explorer is laid out le
 Generated from the Explorer dictionaries, so documents and interface use the same terms.
 
 <!-- gen:glossary:start -->
+
 | English | Português | Español | 简体中文 | Русский |
 |---|---|---|---|---|
 | actor | ator | actor | 攻击者 | субъект |
@@ -80,4 +81,5 @@ Generated from the Explorer dictionaries, so documents and interface use the sam
 | disclosed vulnerability | vulnerabilidade divulgada | vulnerabilidad divulgada | 已披露漏洞 | раскрытая уязвимость |
 | research demonstrated | demonstrada em pesquisa | demostrada en investigación | 研究中已验证 | показано в исследованиях |
 | no linked evidence | sem evidência ligada | sin evidencia vinculada | 暂无关联证据 | нет связанных свидетельств |
+
 <!-- gen:glossary:end -->

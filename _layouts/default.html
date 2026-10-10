@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% seo %}
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="mast">
+    <div class="wrap mast-bar">
+      <a class="brand" href="{{ '/' | relative_url }}">LLMInjection{% unless page.url == '/' %} <span>/ AI &amp; LLM threat intelligence</span>{% endunless %}</a>
+      <nav aria-label="Primary">
+        <a href="{{ '/docs/' | relative_url }}">Docs</a>
+        <a href="{{ '/docs/METHODOLOGY.html' | relative_url }}">Methodology</a>
+        <a href="{{ '/docs/ECOSYSTEM.html' | relative_url }}">Ecosystem</a>
+        <a href="{{ '/docs/ROADMAP.html' | relative_url }}">Roadmap</a>
+        <a href="https://github.com/Ridd1kulusC0d3r/LLmInjection">Repository</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="wrap page">
+    {% unless page.url == '/' %}{% if page.title %}<h1 class="page-title">{{ page.title }}</h1>{% endif %}{% endunless %}
+    {{ content }}
+  </main>
+  <footer class="wrap foot">
+    <span>Evidence over hype. Generated from validated repository data.</span>
+    <span>Apache-2.0</span>
+  </footer>
+</body>
+</html>

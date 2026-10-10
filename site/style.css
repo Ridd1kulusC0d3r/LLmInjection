@@ -46,7 +46,7 @@ h1{font:700 clamp(34px,5vw,58px)/1.02 var(--serif);letter-spacing:-.02em;margin:
 .controls input,.controls select{font:14px var(--sans);color:var(--ink);background:transparent;border:0;border-bottom:1px solid var(--ink);padding:8px 2px;border-radius:0;outline:none}
 .controls input{flex:1;min-width:0}.controls input:focus,.controls select:focus{border-bottom-color:var(--signal)}
 .controls option{background:var(--paper);color:var(--ink)}
-.tabs{display:flex;gap:0;margin:26px 0 0;border-bottom:1px solid var(--ink);overflow-x:auto}
+.tabs{display:flex;gap:0;margin:26px 0 0;border-bottom:1px solid var(--ink);overflow-x:auto;position:sticky;top:0;z-index:20;background:var(--paper)}
 .tab{font:600 12px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);background:none;border:0;border-bottom:3px solid transparent;margin-bottom:-1px;padding:12px 18px 11px;cursor:pointer;white-space:nowrap}
 .tab:hover{color:var(--ink)}.tab.active{color:var(--ink);border-bottom-color:var(--signal)}
 
@@ -259,3 +259,7 @@ th[aria-sort="ascending"] .sortbtn,th[aria-sort="descending"] .sortbtn{color:var
 .formula{margin-top:18px;max-width:78ch;font-size:13px;color:var(--ink-2)}.formula summary{cursor:pointer;font:600 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
 @media(max-width:860px){.cov-controls{gap:14px}.ctl select{min-width:0;width:100%}.tbl.cov{min-width:820px}}
 @media print{.covdetail{display:none}}
+
+/* the section bar stays in view while a long tab scrolls; the record drawer sits above it */
+.drawer{z-index:40}
+@media print{.tabs{position:static}}

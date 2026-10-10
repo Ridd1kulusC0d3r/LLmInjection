@@ -17,6 +17,7 @@ Inteligência de ameaças aberta para sistemas de IA, LLMs e agentes: atores, ca
 ## Em números
 
 <!-- gen:stats-pt:start -->
+
 | Atores | Campanhas | Incidentes | Vulnerabilidades | Técnicas | Fontes |
 |:---:|:---:|:---:|:---:|:---:|:---:|
 | **8** | **10** | **30** | **9** | **28** | **54** |
@@ -24,6 +25,7 @@ Inteligência de ameaças aberta para sistemas de IA, LLMs e agentes: atores, ca
 | Casos de teste | Detecções | Controles | Frameworks | Famílias de modelos | Relações | Projetos do ecossistema |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | **40** | **45** | **32** | **19** | **12** | **215** | **115** |
+
 <!-- gen:stats-pt:end -->
 
 O LLMInjection **não é um repositório de prompts**. Cada afirmação relevante traz nota da fonte, nível de confiança, data de verificação, contexto de frameworks e um ângulo defensivo.

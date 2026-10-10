@@ -236,7 +236,8 @@ def updated(text: str) -> str:
         if start not in text or end not in text:
             continue
         a, b = text.index(start) + len(start), text.index(end)
-        text = text[:a] + "\n" + render() + "\n" + text[b:]
+        # blank lines around the block: kramdown (GitHub Pages) glues a table that directly follows an HTML comment to the comment
+        text = text[:a] + "\n\n" + render() + "\n\n" + text[b:]
     return text
 
 
