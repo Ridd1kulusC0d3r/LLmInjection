@@ -1,0 +1,819 @@
+{
+  "schema_version": "1.0",
+  "note": "Work list, not a mapping. ATLAS IDs cited by Agent Threat Rules, checked against the ATLAS data. Discovery and test-design material; ATR rules are hypotheses, never evidence of attribution or campaigns.",
+  "atr": {
+    "repo": "Agent-Threat-Rule/agent-threat-rules",
+    "license": "MIT",
+    "commit": "52031961555266303209acb43bda56b211245628",
+    "date": "2026-10-10",
+    "rules": 829
+  },
+  "atlas": {
+    "repo": "mitre-atlas/atlas-data",
+    "license": "Apache-2.0",
+    "version": "2026.09",
+    "commit": "3259f388d19cbcca11bacf12a0ef97f4198f711b",
+    "date": "2026-09-10",
+    "techniques": 208
+  },
+  "summary": {
+    "cited_ids": 45,
+    "ok": 35,
+    "renamed": 4,
+    "unknown-id": 2,
+    "case-study": 4,
+    "not_yet_mapped": 16
+  },
+  "llminjection_mappings_to_fix": [],
+  "ids": [
+    {
+      "atlas_id": "AML.T0051",
+      "atlas_name": "LLM Prompt Injection",
+      "atlas_maturity": "Realized",
+      "status": "ok",
+      "atr_rules": 419,
+      "atr_categories": {
+        "prompt-injection": 211,
+        "agent-manipulation": 99,
+        "context-exfiltration": 35,
+        "model-abuse": 27,
+        "excessive-autonomy": 22,
+        "tool-poisoning": 13,
+        "privilege-escalation": 6,
+        "skill-compromise": 4,
+        "data-poisoning": 2
+      },
+      "atr_labels": {
+        "LLM Prompt Injection": 404,
+        "(no label)": 15
+      },
+      "already_mapped_by": []
+    },
+    {
+      "atlas_id": "AML.T0054",
+      "atlas_name": "LLM Jailbreak",
+      "atlas_maturity": "Realized",
+      "status": "ok",
+      "atr_rules": 167,
+      "atr_categories": {
+        "agent-manipulation": 79,
+        "prompt-injection": 78,
+        "privilege-escalation": 4,
+        "model-abuse": 3,
+        "context-exfiltration": 2,
+        "skill-compromise": 1
+      },
+      "atr_labels": {
+        "LLM Jailbreak": 158,
+        "(no label)": 9
+      },
+      "already_mapped_by": [
+        "LLMI-T003"
+      ]
+    },
+    {
+      "atlas_id": "AML.T0057",
+      "atlas_name": "LLM Data Leakage",
+      "atlas_maturity": "Demonstrated",
+      "status": "ok",
+      "atr_rules": 103,
+      "atr_categories": {
+        "context-exfiltration": 62,
+        "model-abuse": 27,
+        "tool-poisoning": 6,
+        "excessive-autonomy": 3,
+        "privilege-escalation": 2,
+        "skill-compromise": 2,
+        "prompt-injection": 1
+      },
+      "atr_labels": {
+        "LLM Data Leakage": 103
+      },
+      "already_mapped_by": [
+        "LLMI-T004"
+      ]
+    },
+    {
+      "atlas_id": "AML.T0053",
+      "atlas_name": "AI Agent Tool Invocation",
+      "atlas_maturity": "Demonstrated",
+      "status": "renamed",
+      "atr_rules": 89,
+      "atr_categories": {
+        "tool-poisoning": 39,
+        "privilege-escalation": 28,
+        "excessive-autonomy": 13,
+        "skill-compromise": 4,
+        "context-exfiltration": 3,
+        "data-poisoning": 2
+      },
+      "atr_labels": {
+        "AI Agent Tool Invocation": 50,
+        "LLM Plugin Compromise": 38,
+        "(no label)": 1
+      },
+      "already_mapped_by": [
+        "LLMI-T008"
+      ]
+    },
+    {
+      "atlas_id": "AML.T0051.001",
+      "atlas_name": "Indirect",
+      "atlas_maturity": "Demonstrated",
+      "status": "ok",
+      "atr_rules": 83,
+      "atr_categories": {
+        "context-exfiltration": 25,
+        "tool-poisoning": 20,
+        "prompt-injection": 18,
+        "excessive-autonomy": 6,
+        "privilege-escalation": 5,
+        "data-poisoning": 4,
+        "skill-compromise": 3,
+        "agent-manipulation": 2
+      },
+      "atr_labels": {
+        "Indirect": 81,
+        "LLM Prompt Injection: Indirect": 2
+      },
+      "already_mapped_by": [
+        "LLMI-T002",
+        "LLMI-T017",
+        "LLMI-T025"
+      ]
+    },
+    {
+      "atlas_id": "AML.T0051.000",
+      "atlas_name": "Direct",
+      "atlas_maturity": "Realized",
+      "status": "ok",
+      "atr_rules": 68,
+      "atr_categories": {
+        "prompt-injection": 67,
+        "agent-manipulation": 1
+      },
+      "atr_labels": {
+        "Direct": 68
+      },
+      "already_mapped_by": [
+        "LLMI-T001"
+      ]
+    },
+    {
+      "atlas_id": "AML.T0010",
+      "atlas_name": "AI Supply Chain Compromise",
+      "atlas_maturity": "Realized",
+      "status": "ok",
+      "atr_rules": 49,
+      "atr_categories": {
+        "skill-compromise": 29,
+        "tool-poisoning": 10,
+        "agent-manipulation": 2,
+        "model-security": 2,
+        "privilege-escalation": 2,
+        "prompt-injection": 2,
+        "context-exfiltration": 1,
+        "data-poisoning": 1
+      },
+      "atr_labels": {
+        "AI Supply Chain Compromise": 48,
+        "(no label)": 1
+      },
+      "already_mapped_by": [
+        "LLMI-T011"
+      ]
+    },
+    {
+      "atlas_id": "AML.T0049",
+      "atlas_name": "Exploit Public-Facing Application",
+      "atlas_maturity": "Realized",
+      "status": "ok",
+      "atr_rules": 40,
+      "atr_categories": {
+        "tool-poisoning": 29,
+        "privilege-escalation": 7,
+        "context-exfiltration": 3,
+        "agent-manipulation": 1
+      },
+      "atr_labels": {
+        "Exploit Public-Facing Application": 40
+      },
+      "already_mapped_by": [
+        "LLMI-T024"
+      ]
+    },
+    {
+      "atlas_id": "AML.T0024",
+      "atlas_name": "Exfiltration via AI Inference API",
+      "atlas_maturity": "Realized",
+      "status": "renamed",
+      "atr_rules": 31,
+      "atr_categories": {
+        "context-exfiltration": 25,
+        "skill-compromise": 4,
+        "model-security": 1,
+        "privilege-escalation": 1
+      },
+      "atr_labels": {
+        "Exfiltration via AI Inference API": 29,
+        "Exfiltration via ML Inference API": 1,
+        "(no label)": 1
+      },
+      "already_mapped_by": []
+    },
+    {
+      "atlas_id": "AML.T0040",
+      "atlas_name": "AI Model Inference API Access",
+      "atlas_maturity": "Realized",
+      "status": "ok",
+      "atr_rules": 28,
+      "atr_categories": {
+        "tool-poisoning": 11,
+        "model-abuse": 5,
+        "agent-manipulation": 3,
+        "skill-compromise": 3,
+        "privilege-escalation": 2,
+        "prompt-injection": 2,
+        "context-exfiltration": 1,
+        "excessive-autonomy": 1
+      },
+      "atr_labels": {
+        "AI Model Inference API Access": 26,
+        "(no label)": 2
+      },
+      "already_mapped_by": [
+        "LLMI-T016"
+      ]
+    },
+    {
+      "atlas_id": "AML.T0043",
+      "atlas_name": "Craft Adversarial Data",
+      "atlas_maturity": "Realized",
+      "status": "ok",
+      "atr_rules": 24,
+      "atr_categories": {
+        "privilege-escalation": 11,
+        "agent-manipulation": 5,
+        "context-exfiltration": 5,
+        "prompt-injection": 3
+      },
+      "atr_labels": {
+        "Craft Adversarial Data": 24
+      },
+      "already_mapped_by": []
+    },
+    {
+      "atlas_id": "AML.T0050",
+      "atlas_name": "Command and Scripting Interpreter",
+      "atlas_maturity": "Realized",
+      "status": "ok",
+      "atr_rules": 24,
+      "atr_categories": {
+        "privilege-escalation": 16,
+        "excessive-autonomy": 3,
+        "agent-manipulation": 2,
+        "data-poisoning": 1,
+        "prompt-injection": 1,
+        "skill-compromise": 1
+      },
+      "atr_labels": {
+        "Command and Scripting Interpreter": 24
+      },
+      "already_mapped_by": []
+    },
+    {
+      "atlas_id": "AML.T0011",
+      "atlas_name": "User Execution",
+      "atlas_maturity": "Realized",
+      "status": "ok",
+      "atr_rules": 8,
+      "atr_categories": {
+        "skill-compromise": 5,
+        "privilege-escalation": 2,
+        "data-poisoning": 1
+      },
+      "atr_labels": {
+        "User Execution": 8
+      },
+      "already_mapped_by": []
+    },
+    {
+      "atlas_id": "AML.T0048",
+      "atlas_name": "External Harms",
+      "atlas_maturity": "Realized",
+      "status": "ok",
+      "atr_rules": 8,
+      "atr_categories": {
+        "skill-compromise": 4,
+        "agent-manipulation": 1,
+        "model-abuse": 1,
+        "privilege-escalation": 1,
+        "prompt-injection": 1
+      },
+      "atr_labels": {
+        "External Harms": 5,
+        "(no label)": 3
+      },
+      "already_mapped_by": []
+    },
+    {
+      "atlas_id": "AML.T0025",
+      "atlas_name": "Exfiltration via Cyber Means",
+      "atlas_maturity": "Realized",
+      "status": "ok",
+      "atr_rules": 6,
+      "atr_categories": {
+        "context-exfiltration": 5,
+        "prompt-injection": 1
+      },
+      "atr_labels": {
+        "Exfiltration via Cyber Means": 6
+      },
+      "already_mapped_by": []
+    },
+    {
+      "atlas_id": "AML.T0044",
+      "atlas_name": "Full AI Model Access",
+      "atlas_maturity": "Demonstrated",
+      "status": "ok",
+      "atr_rules": 5,
+      "atr_categories": {
+        "skill-compromise": 3,
+        "excessive-autonomy": 1,
+        "model-security": 1
+      },
+      "atr_labels": {
+        "Full AI Model Access": 5
+      },
+      "already_mapped_by": [
+        "LLMI-T005"
+      ]
+    },
+    {
+      "atlas_id": "AML.T0046",
+      "atlas_name": "Spamming AI System with Chaff Data",
+      "atlas_maturity": "Feasible",
+      "status": "ok",
+      "atr_rules": 5,
+      "atr_categories": {
+        "excessive-autonomy": 3,
+        "model-abuse": 2
+      },
+      "atr_labels": {
+        "Spamming AI System with Chaff Data": 5
+      },
+      "already_mapped_by": []
+    },
+    {
+      "atlas_id": "AML.T0056",
+      "atlas_name": "Extract LLM System Prompt",
+      "atlas_maturity": "Feasible",
+      "status": "ok",
+      "atr_rules": 5,
+      "atr_categories": {
+        "context-exfiltration": 2,
+        "tool-poisoning": 2,
+        "skill-compromise": 1
+      },
+      "atr_labels": {
+        "Extract LLM System Prompt": 4,
+        "(no label)": 1
+      },
+      "already_mapped_by": [
+        "LLMI-T004"
+      ]
+    },
+    {
+      "atlas_id": "AML.T0010.005",
+      "atlas_name": "AI Agent Tool",
+      "atlas_maturity": "Realized",
+      "status": "ok",
+      "atr_rules": 4,
+      "atr_categories": {
+        "skill-compromise": 3,
+        "tool-poisoning": 1
+      },
+      "atr_labels": {
+        "AI Supply Chain Compromise of AI Agent Tool": 3,
+        "(no label)": 1
+      },
+      "already_mapped_by": [
+        "LLMI-T021"
+      ]
+    },
+    {
+      "atlas_id": "AML.T0020",
+      "atlas_name": "Training Data Poisoning",
+      "atlas_maturity": "Realized",
+      "status": "renamed",
+      "atr_rules": 4,
+      "atr_categories": {
+        "data-poisoning": 2,
+        "model-security": 1,
+        "skill-compromise": 1
+      },
+      "atr_labels": {
+        "Poison Training Data": 4
+      },
+      "already_mapped_by": [
+        "LLMI-T006"
+      ]
+    },
+    {
+      "atlas_id": "AML.T0104",
+      "atlas_name": null,
+      "atlas_maturity": null,
+      "status": "unknown-id",
+      "atr_rules": 4,
+      "atr_categories": {
+        "tool-poisoning": 3,
+        "skill-compromise": 1
+      },
+      "atr_labels": {
+        "Publish Poisoned AI Agent Tool": 4
+      },
+      "already_mapped_by": [],
+      "last_seen": {
+        "release": "2026.06",
+        "name": "Publish Poisoned AI Agent Tool"
+      }
+    },
+    {
+      "atlas_id": "AML.T0110.000",
+      "atlas_name": "Definition and Instructions",
+      "atlas_maturity": "Demonstrated",
+      "status": "ok",
+      "atr_rules": 4,
+      "atr_categories": {
+        "tool-poisoning": 4
+      },
+      "atr_labels": {
+        "AI Agent Tool Poisoning: Definition and Instructions": 4
+      },
+      "already_mapped_by": [
+        "LLMI-T021"
+      ]
+    },
+    {
+      "atlas_id": "AML.T0018.000",
+      "atlas_name": "Poison AI Model",
+      "atlas_maturity": "Demonstrated",
+      "status": "ok",
+      "atr_rules": 3,
+      "atr_categories": {
+        "skill-compromise": 2,
+        "model-security": 1
+      },
+      "atr_labels": {
+        "Poison AI Model": 3
+      },
+      "already_mapped_by": [
+        "LLMI-T006"
+      ]
+    },
+    {
+      "atlas_id": "AML.T0055",
+      "atlas_name": "Unsecured Credentials",
+      "atlas_maturity": "Realized",
+      "status": "ok",
+      "atr_rules": 3,
+      "atr_categories": {
+        "context-exfiltration": 3
+      },
+      "atr_labels": {
+        "Unsecured Credentials": 3
+      },
+      "already_mapped_by": [
+        "LLMI-T016"
+      ]
+    },
+    {
+      "atlas_id": "AML.T0080",
+      "atlas_name": "AI Agent Context Poisoning",
+      "atlas_maturity": "Realized",
+      "status": "ok",
+      "atr_rules": 3,
+      "atr_categories": {
+        "context-exfiltration": 1,
+        "privilege-escalation": 1,
+        "skill-compromise": 1
+      },
+      "atr_labels": {
+        "AI Agent Context Poisoning": 3
+      },
+      "already_mapped_by": [
+        "LLMI-T009",
+        "LLMI-T018"
+      ]
+    },
+    {
+      "atlas_id": "AML.T0105",
+      "atlas_name": "Escape to Host",
+      "atlas_maturity": "Realized",
+      "status": "ok",
+      "atr_rules": 3,
+      "atr_categories": {
+        "privilege-escalation": 3
+      },
+      "atr_labels": {
+        "Escape to Host": 3
+      },
+      "already_mapped_by": []
+    },
+    {
+      "atlas_id": "AML.T0011.000",
+      "atlas_name": "Unsafe AI Artifacts",
+      "atlas_maturity": "Realized",
+      "status": "ok",
+      "atr_rules": 2,
+      "atr_categories": {
+        "model-security": 1,
+        "skill-compromise": 1
+      },
+      "atr_labels": {
+        "Unsafe AI Artifacts": 2
+      },
+      "already_mapped_by": [
+        "LLMI-T010"
+      ]
+    },
+    {
+      "atlas_id": "AML.T0034",
+      "atlas_name": "Cost Harvesting",
+      "atlas_maturity": "Feasible",
+      "status": "ok",
+      "atr_rules": 2,
+      "atr_categories": {
+        "excessive-autonomy": 2
+      },
+      "atr_labels": {
+        "Cost Harvesting": 2
+      },
+      "already_mapped_by": [
+        "LLMI-T022"
+      ]
+    },
+    {
+      "atlas_id": "AML.T0047",
+      "atlas_name": "AI-Enabled Product or Service",
+      "atlas_maturity": "Realized",
+      "status": "ok",
+      "atr_rules": 2,
+      "atr_categories": {
+        "privilege-escalation": 1,
+        "skill-compromise": 1
+      },
+      "atr_labels": {
+        "AI-Enabled Product or Service": 2
+      },
+      "already_mapped_by": []
+    },
+    {
+      "atlas_id": "AML.T0070",
+      "atlas_name": "RAG Poisoning",
+      "atlas_maturity": "Demonstrated",
+      "status": "ok",
+      "atr_rules": 2,
+      "atr_categories": {
+        "data-poisoning": 1,
+        "tool-poisoning": 1
+      },
+      "atr_labels": {
+        "RAG Poisoning": 2
+      },
+      "already_mapped_by": [
+        "LLMI-T007"
+      ]
+    },
+    {
+      "atlas_id": "AML.CS0024",
+      "atlas_name": "Morris II Worm: RAG-Based Attack",
+      "atlas_maturity": null,
+      "status": "case-study",
+      "atr_rules": 1,
+      "atr_categories": {
+        "prompt-injection": 1
+      },
+      "atr_labels": {
+        "Morris II Worm: RAG-Based Attack": 1
+      },
+      "already_mapped_by": []
+    },
+    {
+      "atlas_id": "AML.CS0036",
+      "atlas_name": "AIKatz: Attacking LLM Desktop Applications",
+      "atlas_maturity": null,
+      "status": "case-study",
+      "atr_rules": 1,
+      "atr_categories": {
+        "context-exfiltration": 1
+      },
+      "atr_labels": {
+        "AIKatz": 1
+      },
+      "already_mapped_by": []
+    },
+    {
+      "atlas_id": "AML.CS0038",
+      "atlas_name": "Planting Instructions for Delayed Automatic AI Agent Tool Invocation",
+      "atlas_maturity": null,
+      "status": "case-study",
+      "atr_rules": 1,
+      "atr_categories": {
+        "prompt-injection": 1
+      },
+      "atr_labels": {
+        "Planting Instructions for Delayed Automatic AI Agent Tool Invocation": 1
+      },
+      "already_mapped_by": []
+    },
+    {
+      "atlas_id": "AML.CS0041",
+      "atlas_name": "Rules File Backdoor: Supply Chain Attack on AI Coding Assistants",
+      "atlas_maturity": null,
+      "status": "case-study",
+      "atr_rules": 1,
+      "atr_categories": {
+        "prompt-injection": 1
+      },
+      "atr_labels": {
+        "Rules File Backdoor": 1
+      },
+      "already_mapped_by": []
+    },
+    {
+      "atlas_id": "AML.T0011.001",
+      "atlas_name": "Malicious Package",
+      "atlas_maturity": "Realized",
+      "status": "ok",
+      "atr_rules": 1,
+      "atr_categories": {
+        "excessive-autonomy": 1
+      },
+      "atr_labels": {
+        "Malicious Package": 1
+      },
+      "already_mapped_by": [
+        "LLMI-T012"
+      ]
+    },
+    {
+      "atlas_id": "AML.T0019",
+      "atlas_name": null,
+      "atlas_maturity": null,
+      "status": "unknown-id",
+      "atr_rules": 1,
+      "atr_categories": {
+        "tool-poisoning": 1
+      },
+      "atr_labels": {
+        "Publish Poisoned Datasets": 1
+      },
+      "already_mapped_by": [],
+      "last_seen": {
+        "release": "2026.06",
+        "name": "Publish Poisoned Datasets"
+      }
+    },
+    {
+      "atlas_id": "AML.T0029",
+      "atlas_name": "Denial of AI Service",
+      "atlas_maturity": "Demonstrated",
+      "status": "renamed",
+      "atr_rules": 1,
+      "atr_categories": {
+        "tool-poisoning": 1
+      },
+      "atr_labels": {
+        "Denial of ML Service": 1
+      },
+      "already_mapped_by": [
+        "LLMI-T022"
+      ]
+    },
+    {
+      "atlas_id": "AML.T0036",
+      "atlas_name": "Data from Information Repositories",
+      "atlas_maturity": "Realized",
+      "status": "ok",
+      "atr_rules": 1,
+      "atr_categories": {
+        "prompt-injection": 1
+      },
+      "atr_labels": {
+        "Data from Information Repositories": 1
+      },
+      "already_mapped_by": []
+    },
+    {
+      "atlas_id": "AML.T0052.000",
+      "atlas_name": "Spearphishing via Social Engineering LLM",
+      "atlas_maturity": "Demonstrated",
+      "status": "ok",
+      "atr_rules": 1,
+      "atr_categories": {
+        "agent-manipulation": 1
+      },
+      "atr_labels": {
+        "Spearphishing via Social Engineering LLM": 1
+      },
+      "already_mapped_by": [
+        "LLMI-T014"
+      ]
+    },
+    {
+      "atlas_id": "AML.T0060",
+      "atlas_name": "Publish Hallucinated Entities",
+      "atlas_maturity": "Demonstrated",
+      "status": "ok",
+      "atr_rules": 1,
+      "atr_categories": {
+        "skill-compromise": 1
+      },
+      "atr_labels": {
+        "Publish Hallucinated Entities": 1
+      },
+      "already_mapped_by": [
+        "LLMI-T012"
+      ]
+    },
+    {
+      "atlas_id": "AML.T0069",
+      "atlas_name": "Discover LLM System Information",
+      "atlas_maturity": "Demonstrated",
+      "status": "ok",
+      "atr_rules": 1,
+      "atr_categories": {
+        "context-exfiltration": 1
+      },
+      "atr_labels": {
+        "Discover LLM System Information": 1
+      },
+      "already_mapped_by": [
+        "LLMI-T004"
+      ]
+    },
+    {
+      "atlas_id": "AML.T0088",
+      "atlas_name": "Generate Deepfakes",
+      "atlas_maturity": "Realized",
+      "status": "ok",
+      "atr_rules": 1,
+      "atr_categories": {
+        "context-exfiltration": 1
+      },
+      "atr_labels": {
+        "Generate Deepfakes": 1
+      },
+      "already_mapped_by": []
+    },
+    {
+      "atlas_id": "AML.T0098",
+      "atlas_name": "AI Agent Tool Credential Harvesting",
+      "atlas_maturity": "Demonstrated",
+      "status": "ok",
+      "atr_rules": 1,
+      "atr_categories": {
+        "excessive-autonomy": 1
+      },
+      "atr_labels": {
+        "AI Agent Tool Credential Harvesting": 1
+      },
+      "already_mapped_by": [
+        "LLMI-T016"
+      ]
+    },
+    {
+      "atlas_id": "AML.T0102",
+      "atlas_name": "Generate Malicious Commands",
+      "atlas_maturity": "Realized",
+      "status": "ok",
+      "atr_rules": 1,
+      "atr_categories": {
+        "model-abuse": 1
+      },
+      "atr_labels": {
+        "Generate Malicious Commands": 1
+      },
+      "already_mapped_by": [
+        "LLMI-T013"
+      ]
+    },
+    {
+      "atlas_id": "AML.T0109",
+      "atlas_name": "AI Supply Chain Rug Pull",
+      "atlas_maturity": "Realized",
+      "status": "ok",
+      "atr_rules": 1,
+      "atr_categories": {
+        "skill-compromise": 1
+      },
+      "atr_labels": {
+        "AI Supply Chain Rug Pull": 1
+      },
+      "already_mapped_by": [
+        "LLMI-T021"
+      ]
+    }
+  ]
+}
