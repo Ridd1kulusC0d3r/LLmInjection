@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "as_of": "2026-10-09",
+  "type": "analytical-categories-not-incidents",
+  "dimensions": [
+    {
+      "id": "AI-TARGET",
+      "label": "AI as Target"
+    },
+    {
+      "id": "AI-ENABLER",
+      "label": "AI as Enabler"
+    },
+    {
+      "id": "AI-OPERATOR",
+      "label": "AI as Operator"
+    },
+    {
+      "id": "AI-SUPPLY-CHAIN",
+      "label": "AI Supply Chain"
+    },
+    {
+      "id": "AI-RUNTIME-IDENTITY",
+      "label": "AI Runtime and Identity"
+    },
+    {
+      "id": "AI-AUTONOMOUS-FAILURE",
+      "label": "Autonomous Failure and Misalignment"
+    }
+  ],
+  "evidence_types": [
+    "observed-incident",
+    "assessed-campaign",
+    "disclosed-vulnerability",
+    "confirmed-exploitation",
+    "research-evaluation",
+    "proof-of-concept",
+    "unverified-lead"
+  ],
+  "policy": "Dimensions overlap; source grade, confidence, status and provenance remain independent. Never presume an autonomous failure is malicious."
+}

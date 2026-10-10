@@ -180,3 +180,12 @@ Evidence → Campaign → Technique → Test → Detection → Control → Frame
 - [ ] Link observed prompt-injection incidents to LLMI-T001 (it has no linked evidence today)
 - [ ] More than one publisher for the 14 techniques that rest on a single one
 - [ ] Per-technique history (how coverage changed between snapshots)
+
+## v1.4 — AI source intelligence expansion (2026-10-09)
+
+- [x] Curate supplementary repositories in a separate source registry and six-domain ontology, preserving the validated core ecosystem.
+- [x] Add source-enrichment documentation and agent telemetry mapping.
+- [x] Candidate-only collector, offline tests and review workflow (live feed verification still pending).
+- [ ] Rights-aware AIID, VCDB, NVD, EPSS and vendor-report adapters.
+- [ ] Normalized OpenTelemetry event ingestion and sanitized fixtures.
+- [ ] Long-running cursor checkpoints, full source record crosswalks and Explorer data views.

@@ -1,0 +1,8 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "policy": "candidate-only; no automatic CTI promotion",
+    "last_run": null
+  },
+  "items": []
+}
