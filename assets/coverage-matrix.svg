@@ -6,7 +6,7 @@
 <text x="40" y="64" font-family="'Courier New',monospace" font-size="11" fill="#7b766a">Evidence, tests, detections, controls and tools per technique.</text>
 <text x="1364" y="44" text-anchor="end" font-family="'Courier New',monospace" font-size="22" font-weight="700" fill="#17150f">24<tspan font-size="12" fill="#7b766a"> / 28 covered by design</tspan></text>
 <text x="1364" y="64" text-anchor="end" font-family="'Courier New',monospace" font-size="11" fill="#4a463c">Every technique with linked evidence has a test and a detection</text>
-<text x="1364" y="82" text-anchor="end" font-family="'Courier New',monospace" font-size="11" font-weight="700" fill="#4a463c">Only 3 of 45 detections exist as rule files; the rest are specifications</text>
+<text x="1364" y="82" text-anchor="end" font-family="'Courier New',monospace" font-size="11" font-weight="700" fill="#4a463c">Only 5 of 45 detections exist as rule files; the rest are specifications</text>
 <text x="478.0" y="78" text-anchor="middle" font-family="'Courier New',monospace" font-size="9" font-weight="700" letter-spacing="2" fill="#7b766a">THREAT</text>
 <line x1="438" x2="518" y1="84" y2="84" stroke="#17150f" stroke-width="1.5"/>
 <text x="662.0" y="78" text-anchor="middle" font-family="'Courier New',monospace" font-size="9" font-weight="700" letter-spacing="2" fill="#7b766a">DEFENCE</text>
@@ -178,6 +178,7 @@
 <text x="570.0" y="390" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
 <rect x="645.0" y="375" width="34" height="20" fill="#7c2406"/>
 <text x="662.0" y="390" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">5</text>
+<circle cx="679.0" cy="378" r="3.5" fill="#17150f" stroke="#f3f0e8" stroke-width="1.5"/>
 <rect x="737.0" y="375" width="34" height="20" fill="#e9b394"/>
 <text x="754.0" y="390" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
 <rect x="829.0" y="375" width="34" height="20" fill="#7c2406"/>
@@ -239,6 +240,7 @@
 <text x="570.0" y="494" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
 <rect x="645.0" y="479" width="34" height="20" fill="#d4804f"/>
 <text x="662.0" y="494" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
+<circle cx="679.0" cy="482" r="3.5" fill="#17150f" stroke="#f3f0e8" stroke-width="1.5"/>
 <rect x="737.0" y="479" width="34" height="20" fill="#d4804f"/>
 <text x="754.0" y="494" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
 <rect x="829.0" y="479" width="34" height="20" fill="#7c2406"/>
@@ -457,6 +459,6 @@
 <text x="264" y="874" text-anchor="middle" font-family="'Courier New',monospace" font-size="10" font-weight="700" fill="#ffffff">4+</text>
 <text x="330" y="874" font-family="'Courier New',monospace" font-size="10" fill="#7b766a">Evidence: linked campaigns, incidents and vulnerabilities. Tools and bench: mapped ecosystem projects.</text>
 <circle cx="45" cy="893" r="3.5" fill="#17150f"/>
-<text x="56" y="897" font-family="'Courier New',monospace" font-size="10" fill="#4a463c">Dot: at least one detection has a rule file (3 of 28 techniques). Every other detection is a specification.</text>
+<text x="56" y="897" font-family="'Courier New',monospace" font-size="10" fill="#4a463c">Dot: at least one detection has a rule file (5 of 28 techniques). Every other detection is a specification.</text>
 <text x="40" y="918" font-family="'Courier New',monospace" font-size="10" fill="#7b766a">Counted from data/relationships.json, data/ecosystem.json and detections/. Live version with filters: Explorer, Coverage tab. Regenerate with make charts.</text>
 </svg>

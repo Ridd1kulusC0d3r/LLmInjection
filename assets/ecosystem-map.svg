@@ -3,7 +3,7 @@
 <rect width="1158" height="512" fill="#f3f0e8"/>
 <rect x=".5" y=".5" width="1157" height="511" fill="none" stroke="#17150f"/>
 <text x="40" y="44" font-family="Georgia,serif" font-size="22" font-weight="700" fill="#17150f">Ecosystem map</text>
-<text x="40" y="64" font-family="'Courier New',monospace" font-size="11" fill="#7b766a">114 related projects by evidence class and section. Class decides what a project can support.</text>
+<text x="40" y="64" font-family="'Courier New',monospace" font-size="11" fill="#7b766a">115 related projects by evidence class and section. Class decides what a project can support.</text>
 <text x="336.0" y="100" text-anchor="middle" font-family="'Courier New',monospace" font-size="11" font-weight="700" letter-spacing="1.5" fill="#4a463c">KNOWLEDGE</text>
 <text x="428.0" y="100" text-anchor="middle" font-family="'Courier New',monospace" font-size="11" font-weight="700" letter-spacing="1.5" fill="#4a463c">CATALOGS</text>
 <text x="520.0" y="100" text-anchor="middle" font-family="'Courier New',monospace" font-size="11" font-weight="700" letter-spacing="1.5" fill="#4a463c">EVALUATION</text>
@@ -65,14 +65,14 @@
 <text x="612.0" y="186" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
 <rect x="687.0" y="171" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <text x="704.0" y="186" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
-<rect x="779.0" y="171" width="34" height="20" fill="#d4804f"/>
-<text x="796.0" y="186" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
+<rect x="779.0" y="171" width="34" height="20" fill="#b43c0e"/>
+<text x="796.0" y="186" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">3</text>
 <rect x="871.0" y="171" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <text x="888.0" y="186" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
 <rect x="963.0" y="171" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <text x="980.0" y="186" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
-<rect x="1052.0" y="171" width="40" height="20" fill="#b43c0e"/>
-<text x="1072.0" y="186" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">3</text>
+<rect x="1052.0" y="171" width="40" height="20" fill="#7c2406"/>
+<text x="1072.0" y="186" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">4</text>
 <line x1="40" x2="1118" y1="196" y2="196" stroke="#e0dacb"/>
 <text x="40" y="214" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f">Curated lists</text>
 <rect x="319.0" y="199" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>

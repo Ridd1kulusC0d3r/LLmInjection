@@ -173,7 +173,9 @@ Evidence → Campaign → Technique → Test → Detection → Control → Frame
 - [x] Keyless OSINT signals for the ecosystem (`scripts/osint_ecosystem.py`): stars, published packages, OSV advisories and verified SLSA provenance, weekly in the verification workflow
 - [ ] Show the signals in the Explorer's Ecosystem tab
 - [ ] OpenSSF Scorecard scores (deps.dev returned none for the projects tried, and the Scorecard API returned 404)
-- [ ] Rule files for the 42 detections that are still specifications (Sigma first)
+- [x] First Sigma drafts through Feedly's `create-sigma-rule` method: DET-AI-032 and DET-AI-029 ([SIGMA-DRAFTS.md](SIGMA-DRAFTS.md))
+- [ ] Rule files for the 40 detections that are still specifications; most have no Sigma logsource (agent and model-pipeline telemetry)
+- [ ] A safe test for DET-AI-029, which has none
 - [ ] Execute safe tests and record `lab-result` files, so a cell can say "tested" and not only "designed"
 - [ ] Link observed prompt-injection incidents to LLMI-T001 (it has no linked evidence today)
 - [ ] More than one publisher for the 14 techniques that rest on a single one

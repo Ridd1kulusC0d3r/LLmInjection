@@ -179,6 +179,16 @@
       "enabled": true,
       "max_items": 1,
       "relevance_mode": "all"
+    },
+    {
+      "id": "FEED-FEEDLY-SKILLS-COMMITS",
+      "name": "Feedly CTI skills (ATT&CK mapping, Sigma drafting) commits",
+      "kind": "github-commits",
+      "url": "https://api.github.com/repos/feedly/skills/commits?per_page=10",
+      "source_grade": "D",
+      "enabled": true,
+      "max_items": 3,
+      "relevance_mode": "all"
     }
   ]
 }

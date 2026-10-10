@@ -31,7 +31,7 @@ Open threat intelligence for AI, LLM and agentic systems: actors, campaigns, att
 
 | Test cases | Detections | Controls | Frameworks | Model families | Relationships | Ecosystem repos |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| **40** | **45** | **32** | **19** | **12** | **215** | **114** |
+| **40** | **45** | **32** | **19** | **12** | **215** | **115** |
 <!-- gen:stats:end -->
 
 LLMInjection is **not a prompt dump**. Every meaningful claim carries a source grade, a confidence level, a last-verified date, framework context and a defensive angle.
@@ -99,7 +99,7 @@ Each section opens in place: click the arrow. Tables inside are generated from t
 
 A count of linked records says little when most cells read "1". The coverage model (`scripts/coverage_model.py`) now derives what a count hides, from the datasets and the files in `detections/`:
 
-1. **Implementation level.** Each detection is a `rule-file` when a rule exists under `detections/`, otherwise a `specification`. Only 3 of 45 detections have rule files; the matrix marks them with a dot instead of letting a specification look finished.
+1. **Implementation level.** Each detection is a `rule-file` when a rule exists under `detections/`, otherwise a `specification`. Only 5 of 45 detections have rule files; the matrix marks them with a dot instead of letting a specification look finished.
 2. **Evidence quality.** Distinct publishers behind each technique, the best source grade, the newest evidence date and a stale flag. 14 of 28 techniques rest on a single publisher.
 3. **Benchmarks.** A new column counts benchmark projects mapped to each technique. Eight verified projects joined the ecosystem: InjecAgent, PurpleLlama (CyberSecEval), Inspect Evals, SORRY-Bench, StrongREJECT, CTIBench, Cybench and WildTeaming. A benchmark measures a model or a defence; it never proves that an actor used a technique.
 4. **Actors and techniques.** The Explorer's Coverage tab has a second view that links each actor to the techniques its campaigns use.
@@ -925,7 +925,7 @@ The [ecosystem map](docs/ECOSYSTEM.md) classifies related repositories by **what
 |---|---|---|---|---|
 | `framework-data` | Taxonomies and knowledge bases | Technique definitions and framework mappings | Observed activity | 7 |
 | `incident-data` | Incident databases | Incident references, citing the primary report | Actor attribution or cyber campaigns (scope is broader than cybersecurity) | 1 |
-| `detection-content` | Community detection rules | Detection ideas and telemetry requirements | Proof of in-the-wild behavior | 3 |
+| `detection-content` | Community detection rules | Detection ideas and telemetry requirements | Proof of in-the-wild behavior | 4 |
 | `curated-list` | Curated lists | Discovering sources and tools | Any claim on their own | 22 |
 | `assessment-tool` | Scanners and red-team tools | Test design and control evaluation | Effectiveness against current models | 28 |
 | `benchmark` | Benchmarks and environments | Reproducible tests and coverage measurement | Real-world prevalence | 13 |

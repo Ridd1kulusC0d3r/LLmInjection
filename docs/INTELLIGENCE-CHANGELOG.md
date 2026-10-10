@@ -2,6 +2,17 @@
 
 This changelog records material changes to attribution, confidence, external mappings and structured intelligence. Ordinary prose edits do not belong here.
 
+## 2026-10-10 — Sigma drafts and the Feedly skills
+
+### Added
+
+- `feedly/skills` (MIT) in the ecosystem as ECO-115, grade D, with a commit feed; the `create-sigma-rule` method was followed by hand and documented in [SIGMA-DRAFTS.md](SIGMA-DRAFTS.md);
+- Sigma rules for DET-AI-032 (agent launched with approvals disabled) and DET-AI-029 (a hunting-tier correlation), the first rule files added since the specifications were written; DET-AI-036 was assessed and left as a specification.
+
+### Confidence notes
+
+- Both rules are experimental and untested against real telemetry. Flags in DET-AI-032 are limited to those documented in the Claude Code and Gemini CLI references; Codex flags were not confirmed and are not included.
+
 ## 2026-10-09 — Coverage depth and benchmark sources
 
 ### Added

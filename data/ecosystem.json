@@ -3000,5 +3000,28 @@
       "last_commit": "2024-08-10",
       "license": "none-found"
     }
+  },
+  {
+    "id": "ECO-115",
+    "type": "ecosystem",
+    "name": "skills",
+    "owner": "feedly",
+    "url": "https://github.com/feedly/skills",
+    "section": "defence",
+    "evidence_class": "detection-content",
+    "priority": "standard",
+    "status": "listed",
+    "techniques": [],
+    "summary": "Feedly's CTI skills and prompts for Claude (MIT): ATT&CK technique mapping with Navigator 4.5 layers, Sigma rule drafting validated with sigma-cli, intelligence-requirements and risk-reduction reporting. ATT&CK only; no ATLAS content found.",
+    "source_grade": "D",
+    "provenance": "research-sweep 2026-10-10: cloned with git --depth 1 and README read; the create-sigma-rule skill was followed by hand on three detections (docs/SIGMA-DRAFTS.md); last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-10",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-10",
+      "reachable": true,
+      "last_commit": "2026-10-07",
+      "license": "MIT"
+    }
   }
 ]

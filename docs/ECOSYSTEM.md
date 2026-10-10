@@ -21,7 +21,7 @@ A repository listed here can inform test cases, detections, controls and taxonom
 |---|---|---|---|---|
 | `framework-data` | Taxonomies and knowledge bases | Technique definitions and framework mappings | Observed activity | 7 |
 | `incident-data` | Incident databases | Incident references, citing the primary report | Actor attribution or cyber campaigns (scope is broader than cybersecurity) | 1 |
-| `detection-content` | Community detection rules | Detection ideas and telemetry requirements | Proof of in-the-wild behavior | 3 |
+| `detection-content` | Community detection rules | Detection ideas and telemetry requirements | Proof of in-the-wild behavior | 4 |
 | `curated-list` | Curated lists | Discovering sources and tools | Any claim on their own | 22 |
 | `assessment-tool` | Scanners and red-team tools | Test design and control evaluation | Effectiveness against current models | 28 |
 | `benchmark` | Benchmarks and environments | Reproducible tests and coverage measurement | Real-world prevalence | 13 |
@@ -190,6 +190,7 @@ Ten entries chosen as the highest-value inputs for taxonomy, evidence, tests and
 | [NVIDIA-NeMo/Guardrails](https://github.com/NVIDIA-NeMo/Guardrails) | `defence-tool` | `LLMI-T001`, `LLMI-T002`, `LLMI-T004` | 2026-10-07 · Apache-2.0 | Programmable guardrails toolkit for dialogue rails, PII masking, fact checking and injection blocking. |
 | [microsoft/BinaryShield](https://github.com/microsoft/BinaryShield) | `detection-content` | `LLMI-T001`, `LLMI-T003`, `LLMI-T019` | 2026-08-03 · MIT | Research on privacy-preserving sharing of LLM threat fingerprints across services. |
 | [OMGstacks/llm-threat-triage](https://github.com/OMGstacks/llm-threat-triage) | `detection-content` | `LLMI-T001`, `LLMI-T002`, `LLMI-T003`, `LLMI-T004`, `LLMI-T008` | 2026-08-17 · MIT | Python and SQL triage toolkit flagging injection, jailbreak and exfiltration mapped to OWASP LLM Top 10. |
+| [feedly/skills](https://github.com/feedly/skills) | `detection-content` | none | 2026-10-07 · MIT | Feedly's CTI skills and prompts for Claude (MIT): ATT&CK technique mapping with Navigator 4.5 layers, Sigma rule drafting validated with sigma-cli, intelligence-requirements and risk-reduction reporting. ATT&CK only; no ATLAS content found. |
 <!-- gen:eco-defence:end -->
 
 ### Agent, skill and MCP security
