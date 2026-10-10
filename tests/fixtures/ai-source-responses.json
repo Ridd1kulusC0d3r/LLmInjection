@@ -1,0 +1,49 @@
+{
+  "AISRC-AVID-REPORTS": [
+    {
+      "type": "file",
+      "name": "AVID-2026-R0001.json",
+      "path": "reports/2026/AVID-2026-R0001.json",
+      "html_url": "https://github.com/avidml/avid-db/blob/main/reports/2026/AVID-2026-R0001.json"
+    }
+  ],
+  "AISRC-VERIS-2026": {
+    "incidents": [
+      {
+        "id": "DR-001",
+        "title": "Synthetic parser fixture case"
+      }
+    ]
+  },
+  "AISRC-MCP-REGISTRY": {
+    "servers": [
+      {
+        "server": {
+          "name": "test/example",
+          "repository": {
+            "url": "https://github.com/example/test"
+          }
+        }
+      }
+    ]
+  },
+  "AISRC-OSV-LOCAL": {},
+  "AISRC-CVE-CHANGES": [
+    {
+      "sha": "123456789abcdef0123456789abcdef012345678",
+      "html_url": "https://github.com/CVEProject/cvelistV5/commit/123456789abcdef0123456789abcdef012345678",
+      "commit": {
+        "message": "Synthetic official repository change"
+      }
+    }
+  ],
+  "AISRC-INSPECT-CHANGES": [
+    {
+      "sha": "123456789abcdef0123456789abcdef012345678",
+      "html_url": "https://github.com/UKGovernmentBEIS/inspect_evals/commit/123456789abcdef0123456789abcdef012345678",
+      "commit": {
+        "message": "Synthetic evaluation update"
+      }
+    }
+  ]
+}

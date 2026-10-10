@@ -1,0 +1,68 @@
+name: AI source enrichment (review only)
+
+on:
+  schedule:
+    - cron: "31 9 * * 2"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Review branch
+        run: git checkout -B automation/ai-source-enrichment
+      - name: Bounded collection
+        id: intake
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          mkdir -p reports/intake dist
+          set +e
+          python scripts/enrich_ai_sources.py --live --max-per-source 20 \
+            --report reports/intake/ai-source-enrichment.md \
+            --summary-json dist/ai-source-enrichment.json
+          STATUS=$?
+          set -e
+          echo "status=$STATUS" >> "$GITHUB_OUTPUT"
+          echo "changed=$(python -c 'import json; d=json.load(open("dist/ai-source-enrichment.json")); print(d["new_count"]+d["updated_count"])')" >> "$GITHUB_OUTPUT"
+      - uses: actions/upload-artifact@v6
+        with:
+          name: ai-source-enrichment-audit
+          path: |
+            reports/intake/ai-source-enrichment.md
+            dist/ai-source-enrichment.json
+      - name: Commit review candidates
+        if: steps.intake.outputs.changed != '0'
+        shell: bash
+        run: |
+          git config user.name "llminjection-intel-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/enrichment-review-queue.json
+          git commit -m "chore: review new AI intelligence source candidates"
+          git push --force origin automation/ai-source-enrichment
+      - name: Create review PR
+        if: steps.intake.outputs.changed != '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          PR="$(gh pr list --base main --head automation/ai-source-enrichment --state open --json number --jq '.[0].number // empty')"
+          if [ -z "$PR" ]; then
+            gh pr create --base main --head automation/ai-source-enrichment \
+              --title "chore: review AI intelligence source discoveries" \
+              --body "Review only: sources are discovery leads, not official attribution or confirmed incident evidence."
+          fi
+      - name: Warn on upstream feed failure
+        if: steps.intake.outputs.status != '0'
+        run: echo "::warning::One or more feeds degraded; inspect the uploaded report."

@@ -185,7 +185,7 @@ Evidence → Campaign → Technique → Test → Detection → Control → Frame
 
 - [x] Curate new repositories, sources and six-domain ontology.
 - [x] Add source-enrichment documentation and agent telemetry mapping.
-- [ ] Live integration validation and candidate-only review workflow.
+- [x] Candidate-only collector, offline tests and review workflow (live feed verification still pending).
 - [ ] Rights-aware AIID, VCDB, NVD, EPSS and vendor-report adapters.
 - [ ] Normalized OpenTelemetry event ingestion and sanitized fixtures.
 - [ ] Long-running cursor checkpoints, full source record crosswalks and Explorer data views.
