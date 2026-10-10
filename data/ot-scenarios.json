@@ -1,0 +1,212 @@
+[
+  {
+    "id": "AIOT-SC-001",
+    "title": "Industrial historian data integrity",
+    "status": "hypothetical",
+    "ai_involvement": "design-hypothesis",
+    "sector": "manufacturing",
+    "ai_role": "analytics_assistant",
+    "ot_context": {
+      "system": "historian",
+      "authority": "read_only"
+    },
+    "risk": {
+      "category": "untrusted_industrial_data",
+      "consequence": "Potential decision-integrity or operational-assurance impact, not a demonstrated plant effect"
+    },
+    "telemetry": [
+      "historian_quality_indicators",
+      "data_lineage",
+      "sanitized_model_output_log"
+    ],
+    "controls": [
+      "independent_data_validation",
+      "read_only_boundary",
+      "human_review"
+    ],
+    "source_ids": [
+      "OT-SRC-ATTACK-ICS",
+      "OT-SRC-IPAL"
+    ],
+    "assumptions": [
+      "AI integration would exist at the documented boundary",
+      "No direct control-system actuation is assumed"
+    ],
+    "reviewed_at": "2026-10-09"
+  },
+  {
+    "id": "AIOT-SC-002",
+    "title": "Maintenance assistant knowledge integrity",
+    "status": "hypothetical",
+    "ai_involvement": "design-hypothesis",
+    "sector": "energy",
+    "ai_role": "retrieval_assistant",
+    "ot_context": {
+      "system": "maintenance_knowledge_base",
+      "authority": "advisory_only"
+    },
+    "risk": {
+      "category": "untrusted_retrieval_content",
+      "consequence": "Potential decision-integrity or operational-assurance impact, not a demonstrated plant effect"
+    },
+    "telemetry": [
+      "document_version",
+      "retrieval_provenance",
+      "review_decision"
+    ],
+    "controls": [
+      "document_integrity",
+      "citation_validation",
+      "engineer_approval"
+    ],
+    "source_ids": [
+      "OT-SRC-ATTACK-ICS",
+      "OT-SRC-CSET"
+    ],
+    "assumptions": [
+      "AI integration would exist at the documented boundary",
+      "No direct control-system actuation is assumed"
+    ],
+    "reviewed_at": "2026-10-09"
+  },
+  {
+    "id": "AIOT-SC-003",
+    "title": "Tool authorization near IT/OT boundary",
+    "status": "hypothetical",
+    "ai_involvement": "design-hypothesis",
+    "sector": "water",
+    "ai_role": "workflow_agent",
+    "ot_context": {
+      "system": "IT_OT_gateway",
+      "authority": "no_control_authority"
+    },
+    "risk": {
+      "category": "excessive_tool_permissions",
+      "consequence": "Potential decision-integrity or operational-assurance impact, not a demonstrated plant effect"
+    },
+    "telemetry": [
+      "tool_identity",
+      "authorization_result",
+      "sanitized_action_audit"
+    ],
+    "controls": [
+      "least_privilege",
+      "deny_by_default",
+      "human_approval"
+    ],
+    "source_ids": [
+      "OT-SRC-CISA-CSAF",
+      "OT-SRC-CSET"
+    ],
+    "assumptions": [
+      "AI integration would exist at the documented boundary",
+      "No direct control-system actuation is assumed"
+    ],
+    "reviewed_at": "2026-10-09"
+  },
+  {
+    "id": "AIOT-SC-004",
+    "title": "Industrial AI software supply chain",
+    "status": "hypothetical",
+    "ai_involvement": "design-hypothesis",
+    "sector": "manufacturing",
+    "ai_role": "industrial_ai_service",
+    "ot_context": {
+      "system": "analytics_server",
+      "authority": "offline_assessment"
+    },
+    "risk": {
+      "category": "dependency_integrity",
+      "consequence": "Potential decision-integrity or operational-assurance impact, not a demonstrated plant effect"
+    },
+    "telemetry": [
+      "software_inventory",
+      "signed_artifact_verification",
+      "advisory_version"
+    ],
+    "controls": [
+      "vendor_advisory_review",
+      "SBOM",
+      "signed_releases"
+    ],
+    "source_ids": [
+      "OT-SRC-CISA-CSAF",
+      "OT-SRC-VULNRICHMENT"
+    ],
+    "assumptions": [
+      "AI integration would exist at the documented boundary",
+      "No direct control-system actuation is assumed"
+    ],
+    "reviewed_at": "2026-10-09"
+  },
+  {
+    "id": "AIOT-SC-005",
+    "title": "Anomaly model reliability across process shifts",
+    "status": "hypothetical",
+    "ai_involvement": "design-hypothesis",
+    "sector": "energy",
+    "ai_role": "anomaly_detector",
+    "ot_context": {
+      "system": "monitoring_only",
+      "authority": "alert_only"
+    },
+    "risk": {
+      "category": "model_drift_false_assurance",
+      "consequence": "Potential decision-integrity or operational-assurance impact, not a demonstrated plant effect"
+    },
+    "telemetry": [
+      "drift_metric",
+      "false_positive_rate",
+      "human_escalation"
+    ],
+    "controls": [
+      "time_split_validation",
+      "baseline_comparison",
+      "change_control"
+    ],
+    "source_ids": [
+      "OT-SRC-HAI",
+      "OT-SRC-IPAL-DATASETS"
+    ],
+    "assumptions": [
+      "AI integration would exist at the documented boundary",
+      "No direct control-system actuation is assumed"
+    ],
+    "reviewed_at": "2026-10-09"
+  },
+  {
+    "id": "AIOT-SC-006",
+    "title": "AI-assisted engineering recommendation assurance",
+    "status": "hypothetical",
+    "ai_involvement": "design-hypothesis",
+    "sector": "transport",
+    "ai_role": "engineering_copilot",
+    "ot_context": {
+      "system": "engineering_workstation",
+      "authority": "recommendations_only"
+    },
+    "risk": {
+      "category": "unsafe_automated_change_proposals",
+      "consequence": "Potential decision-integrity or operational-assurance impact, not a demonstrated plant effect"
+    },
+    "telemetry": [
+      "version_control_diff",
+      "approval_record",
+      "proposed_change_summary"
+    ],
+    "controls": [
+      "human_sign_off",
+      "offline_review",
+      "separation_of_duties"
+    ],
+    "source_ids": [
+      "OT-SRC-MISP-ICS",
+      "OT-SRC-CSET"
+    ],
+    "assumptions": [
+      "AI integration would exist at the documented boundary",
+      "No direct control-system actuation is assumed"
+    ],
+    "reviewed_at": "2026-10-09"
+  }
+]

@@ -5,6 +5,7 @@ test:
 
 validate:
 	python3 scripts/validate_intel.py
+	python3 scripts/validate_ot.py
 
 build:
 	python3 scripts/build_graph.py && python3 scripts/build_api.py && $(MAKE) navigator coverage charts

@@ -26,6 +26,10 @@ Open threat intelligence for AI, LLM and agentic systems: actors, campaigns, att
 
 New [source registry and ingestion guidance](docs/AI-INTELLIGENCE-SOURCES.md), [runtime and identity telemetry design](docs/AI-RUNTIME-INTELLIGENCE.md), 19 newly catalogued GitHub references in the AI source registry, six-dimensional threat ontology and candidate-only source adapters. External material requires human review before promotion into CTI.
 
+## AI × Cyber OT / ICS Intelligence (2026-10-09)
+
+**New defensive Cyber OT domain:** [AI × Cyber OT landscape](docs/CYBER-OT-LANDSCAPE.md) with [14 curated industrial intelligence sources](data/ot-source-registry.json), [6 explicitly hypothetical safety-boundary scenarios](data/ot-scenarios.json), [5 research-dataset references](data/ot-datasets.json), a bounded [offline-testable passive metadata intake](scripts/ot_intake.py) and separate review queue. Includes MITRE ATT&CK for ICS, CISA CSAF OT, OTCAD, IPAL, HAI, CSET and MISP. **No incident, AI attribution, controller interaction or industrial scan is implied.**
+
 ## At a glance
 
 <!-- gen:stats:start -->
@@ -49,7 +53,7 @@ LLMInjection is **not a prompt dump**. Every meaningful claim carries a source g
 | Layer | What it holds | Start here |
 |---|---|---|
 | **Actors and campaigns** | State and criminal operators using AI, with vendor tracking labels kept as published | [`data/actors.json`](data/actors.json) · [Actor tracker](docs/ACTOR-TRACKER.md) |
-| **Threat landscape** | Cited metrics, domains and open research leads for 2026 | [Landscape 2026](docs/THREAT-LANDSCAPE-2026.md) |
+| **AI × Cyber OT / ICS** | Industrial intelligence sources, evidence boundaries, hypothetical scenarios and offline detection-dataset catalog | [AI × Cyber OT landscape](docs/CYBER-OT-LANDSCAPE.md) |\n| **Threat landscape** | Cited metrics, domains and open research leads for 2026 | [Landscape 2026](docs/THREAT-LANDSCAPE-2026.md) |
 | **Brazil and Latin America** | AI-assisted activity against regional targets, in Portuguese, separating what reports claim from what they do not | [Panorama](docs/pt-BR/PANORAMA-BRASIL-LATAM.md) |
 | **Techniques and frameworks** | LLMInjection techniques with a maturity level, mapped to ATLAS, OWASP, NIST, SAIF and MAESTRO | [Frameworks](docs/FRAMEWORKS.md) · [Threat model](docs/AI-THREAT-MODEL.md) |
 | **Safe test lab** | Defensive test cases for prompt, RAG, agent, MCP and supply-chain risks | [Test cases](docs/TEST-CASES.md) · [Lab](docs/LAB.md) |
