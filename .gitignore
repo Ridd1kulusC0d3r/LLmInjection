@@ -3,3 +3,7 @@ __pycache__/
 *.pyc
 .venv/
 .pytest_cache/
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata

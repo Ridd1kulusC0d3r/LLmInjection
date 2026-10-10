@@ -2,6 +2,23 @@
 
 This changelog records material changes to attribution, confidence, external mappings and structured intelligence. Ordinary prose edits do not belong here.
 
+## 2026-10-10 — Portal rendering and design
+
+### Fixed
+
+- **The public page rendered the README without its collapsible sections.** GitHub Pages was building the README with Jekyll's kramdown, which does not parse Markdown inside `<details>`: tables and lists in 19 sections showed as raw pipes, and a one-line `<summary>` swallowed its closing tag so every section nested inside the last. `_config.yml` now sets `parse_block_html`, each `<summary>` carries `markdown="span"`, and generated blocks are separated from their markers by a blank line (kramdown glued a table to the comment above it). Verified with a local build on the same Jekyll 3.10 stack: 1 table before, 23 after, no raw pipe rows, no nesting.
+- The page used Jekyll's default blue theme. It now has its own layout and stylesheet in the Explorer's paper and ink identity, with a dark variant, scrolling tables and a phone layout.
+
+### Added
+
+- `scripts/build_site.py` (`make site`) assembles the Explorer exactly as the Pages workflow publishes it; the workflow now calls it, so a local preview and the live site cannot drift;
+- a sticky section bar in the Explorer and a styled 404 page;
+- `tests/test_pages_render.py` guards the three kramdown pitfalls above.
+
+### Still needs a repository setting
+
+- The public URL serves the Jekyll build while Settings > Pages > Source is "Deploy from a branch". The Explorer is built by the Actions workflow and is overwritten by the Jekyll build on every push; set Source to "GitHub Actions" to publish the Explorer at the root.
+
 ## 2026-10-10 — Sigma drafts and the Feedly skills
 
 ### Added

@@ -17,6 +17,7 @@ A repository listed here can inform test cases, detections, controls and taxonom
 ## Evidence classes
 
 <!-- gen:eco-classes:start -->
+
 | Evidence class | What it is | Can support | Cannot support | Entries |
 |---|---|---|---|---|
 | `framework-data` | Taxonomies and knowledge bases | Technique definitions and framework mappings | Observed activity | 7 |
@@ -29,6 +30,7 @@ A repository listed here can inform test cases, detections, controls and taxonom
 | `defence-tool` | Defences and guardrails | Control design and comparison | Proven protection | 10 |
 | `lab-exercise` | Training labs | Analyst training and onboarding | Threat intelligence | 7 |
 | `prompt-corpus` | Prompt corpora and datasets | Test inspiration and measurement | Threat intelligence or attribution | 7 |
+
 <!-- gen:eco-classes:end -->
 
 ## Start here
@@ -36,6 +38,7 @@ A repository listed here can inform test cases, detections, controls and taxonom
 Ten entries chosen as the highest-value inputs for taxonomy, evidence, tests and controls.
 
 <!-- gen:eco-start:start -->
+
 | Repository | Evidence class | Techniques | Last commit · License | Scope |
 |---|---|---|---|---|
 | [mitre-atlas/atlas-data](https://github.com/mitre-atlas/atlas-data) | `framework-data` | none | 2026-09-10 · Apache-2.0 | Data for tactics, techniques and case studies of threats against AI systems. · **start here** |
@@ -49,6 +52,7 @@ Ten entries chosen as the highest-value inputs for taxonomy, evidence, tests and
 | [microsoft/PyRIT](https://github.com/microsoft/PyRIT) | `assessment-tool` | `LLMI-T001`, `LLMI-T002`, `LLMI-T003`, `LLMI-T004`, `LLMI-T008`, `LLMI-T013`, `LLMI-T014` | 2026-10-07 · MIT | Framework for identifying risks in generative AI systems. · **start here** |
 | [ethz-spylab/agentdojo](https://github.com/ethz-spylab/agentdojo) | `benchmark` | `LLMI-T001`, `LLMI-T002`, `LLMI-T004`, `LLMI-T008` | 2026-06-02 · MIT | Environment for evaluating attacks and defences of LLM agents. · **start here** |
 | [OWASP/www-project-ai-testing-guide](https://github.com/OWASP/www-project-ai-testing-guide) | `framework-data` | none | 2026-06-01 · other | OWASP AI Testing Guide: 32 test procedures across application, data, infrastructure and model layers. · **start here** |
+
 <!-- gen:eco-start:end -->
 
 ## All entries
@@ -56,6 +60,7 @@ Ten entries chosen as the highest-value inputs for taxonomy, evidence, tests and
 ### Knowledge bases, taxonomies and incident data
 
 <!-- gen:eco-knowledge:start -->
+
 | Repository | Evidence class | Techniques | Last commit · License | Scope |
 |---|---|---|---|---|
 | [mitre-atlas/atlas-data](https://github.com/mitre-atlas/atlas-data) | `framework-data` | none | 2026-09-10 · Apache-2.0 | Data for tactics, techniques and case studies of threats against AI systems. · **start here** |
@@ -67,11 +72,13 @@ Ten entries chosen as the highest-value inputs for taxonomy, evidence, tests and
 | [responsible-ai-collaborative/aiid](https://github.com/responsible-ai-collaborative/aiid) | `incident-data` | none | 2026-10-05 · Apache-2.0 | AI Incident Database: incidents and harms involving AI, broader than cybersecurity. · **start here** |
 | [Agent-Threat-Rule/agent-threat-rules](https://github.com/Agent-Threat-Rule/agent-threat-rules) | `detection-content` | `LLMI-T001`, `LLMI-T002`, `LLMI-T004`, `LLMI-T008`, `LLMI-T009`, `LLMI-T011`, `LLMI-T018`, `LLMI-T021` | 2026-10-07 · MIT | Detection rules for agent threats, including injection, tools and MCP. · **start here** |
 | [OWASP/www-project-ai-testing-guide](https://github.com/OWASP/www-project-ai-testing-guide) | `framework-data` | none | 2026-06-01 · other | OWASP AI Testing Guide: 32 test procedures across application, data, infrastructure and model layers. · **start here** |
+
 <!-- gen:eco-knowledge:end -->
 
 ### Catalogs and awesome lists
 
 <!-- gen:eco-catalog:start -->
+
 | Repository | Evidence class | Techniques | Last commit · License | Scope |
 |---|---|---|---|---|
 | [corca-ai/awesome-llm-security](https://github.com/corca-ai/awesome-llm-security) | `curated-list` | none | 2025-08-20 · none-found | Tools, papers and projects on LLM security. |
@@ -98,11 +105,13 @@ Ten entries chosen as the highest-value inputs for taxonomy, evidence, tests and
 | [ubikron/Awesome-AI-OSINT](https://github.com/ubikron/Awesome-AI-OSINT) | `curated-list` | none | 2026-05-05 · none-found | AI tools for OSINT: geolocation, reverse image, dork generation and AI-assisted search. |
 | [7WaySecurity/ai_osint](https://github.com/7WaySecurity/ai_osint) | `curated-list` | none | 2026-06-19 · MIT | Resources mixing OSINT and AI, including Sigma rules and threat-intel tooling. |
 | [OpenOSINT/OpenOSINT](https://github.com/OpenOSINT/OpenOSINT) | `assessment-tool` | none | 2026-10-06 · MIT | LLM agent and MCP server chaining OSINT collectors with an entity graph; analyst tooling, not threat data. |
+
 <!-- gen:eco-catalog:end -->
 
 ### Evaluation tools, scanners and red teaming
 
 <!-- gen:eco-evaluation:start -->
+
 | Repository | Evidence class | Techniques | Last commit · License | Scope |
 |---|---|---|---|---|
 | [NVIDIA/garak](https://github.com/NVIDIA/garak) | `assessment-tool` | `LLMI-T001`, `LLMI-T002`, `LLMI-T003`, `LLMI-T004`, `LLMI-T005`, `LLMI-T008`, `LLMI-T012`, `LLMI-T013`, `LLMI-T014`, `LLMI-T016`, `LLMI-T017` | 2026-10-07 · Apache-2.0 | LLM vulnerability scanner. · **start here** |
@@ -126,11 +135,13 @@ Ten entries chosen as the highest-value inputs for taxonomy, evidence, tests and
 | [jasoncobra3/LLM_Sentinel](https://github.com/jasoncobra3/LLM_Sentinel) | `assessment-tool` | `LLMI-T001`, `LLMI-T003` | 2026-03-05 · MIT | Single-turn red-team harness with a library of pre-written test prompts. |
 | [meta-llama/PurpleLlama](https://github.com/meta-llama/PurpleLlama) | `assessment-tool` | `LLMI-T001`, `LLMI-T002` | 2026-09-29 · other | Meta umbrella project: CyberSecEval cybersecurity evals plus input/output safeguards (Llama Guard, Prompt Guard, LlamaFirewall, CodeShield). |
 | [UKGovernmentBEIS/inspect_evals](https://github.com/UKGovernmentBEIS/inspect_evals) | `assessment-tool` | none | 2026-10-09 · MIT | Library of evaluations on Inspect AI; includes agent-security and cyber-capability suites such as agentdojo, agentharm, cybench and cve_bench. |
+
 <!-- gen:eco-evaluation:end -->
 
 ### Benchmarks, datasets and environments
 
 <!-- gen:eco-benchmark:start -->
+
 | Repository | Evidence class | Techniques | Last commit · License | Scope |
 |---|---|---|---|---|
 | [ethz-spylab/agentdojo](https://github.com/ethz-spylab/agentdojo) | `benchmark` | `LLMI-T001`, `LLMI-T002`, `LLMI-T004`, `LLMI-T008` | 2026-06-02 · MIT | Environment for evaluating attacks and defences of LLM agents. · **start here** |
@@ -147,11 +158,13 @@ Ten entries chosen as the highest-value inputs for taxonomy, evidence, tests and
 | [dsbowen/strong_reject](https://github.com/dsbowen/strong_reject) | `benchmark` | `LLMI-T003` | 2025-07-07 · MIT | StrongREJECT: forbidden-prompt dataset and autograder for scoring jailbreak responses; successor of alexandrasouly/strongreject, which is deprecated. |
 | [xashru/cti-bench](https://github.com/xashru/cti-bench) | `benchmark` | none | 2026-05-07 · CC-BY-NC | CTIBench: evaluates LLMs on cyber threat intelligence tasks (CTI knowledge, CVE/CWE mapping, CVSS scoring, ATT&CK technique extraction, threat actor attribution). |
 | [andyzorigin/cybench](https://github.com/andyzorigin/cybench) | `benchmark` | `LLMI-T015` | 2026-09-24 · Apache-2.0 | Cybench: 40 CTF tasks from four competitions for measuring LLM agent cybersecurity capability. A capability measure, not evidence of attacker use. |
+
 <!-- gen:eco-benchmark:end -->
 
 ### Attack technique research
 
 <!-- gen:eco-attack-research:start -->
+
 | Repository | Evidence class | Techniques | Last commit · License | Scope |
 |---|---|---|---|---|
 | [greshake/llm-security](https://github.com/greshake/llm-security) | `research-technique` | `LLMI-T002`, `LLMI-T026` | 2025-07-17 · MIT | Attacks on LLM-integrated applications, including indirect injection. |
@@ -171,11 +184,13 @@ Ten entries chosen as the highest-value inputs for taxonomy, evidence, tests and
 | [Insider77Circle/LLM-INJECTION-POC](https://github.com/Insider77Circle/LLM-INJECTION-POC) | `research-technique` | `LLMI-T002`, `LLMI-T025` | 2025-12-10 · none-found | Proof of concept for injection through uploaded files using hidden text and metadata poisoning. |
 | [Asstar-X/JailPrompter](https://github.com/Asstar-X/JailPrompter) | `research-technique` | `LLMI-T003` | 2026-01-21 · none-found | Research project on jailbreak structures with attack and defence examples. |
 | [allenai/wildteaming](https://github.com/allenai/wildteaming) | `research-technique` | `LLMI-T003` | 2024-08-10 · none-found | WildTeaming: mines in-the-wild user-chatbot interactions to discover jailbreak tactics; releases the WildJailbreak data. |
+
 <!-- gen:eco-attack-research:end -->
 
 ### Defences, detection and controls
 
 <!-- gen:eco-defence:start -->
+
 | Repository | Evidence class | Techniques | Last commit · License | Scope |
 |---|---|---|---|---|
 | [google-research/camel-prompt-injection](https://github.com/google-research/camel-prompt-injection) | `defence-tool` | `LLMI-T002`, `LLMI-T008` | 2025-06-20 · Apache-2.0 | Code for the research 'Defeating Prompt Injections by Design'. |
@@ -191,11 +206,13 @@ Ten entries chosen as the highest-value inputs for taxonomy, evidence, tests and
 | [microsoft/BinaryShield](https://github.com/microsoft/BinaryShield) | `detection-content` | `LLMI-T001`, `LLMI-T003`, `LLMI-T019` | 2026-08-03 · MIT | Research on privacy-preserving sharing of LLM threat fingerprints across services. |
 | [OMGstacks/llm-threat-triage](https://github.com/OMGstacks/llm-threat-triage) | `detection-content` | `LLMI-T001`, `LLMI-T002`, `LLMI-T003`, `LLMI-T004`, `LLMI-T008` | 2026-08-17 · MIT | Python and SQL triage toolkit flagging injection, jailbreak and exfiltration mapped to OWASP LLM Top 10. |
 | [feedly/skills](https://github.com/feedly/skills) | `detection-content` | none | 2026-10-07 · MIT | Feedly's CTI skills and prompts for Claude (MIT): ATT&CK technique mapping with Navigator 4.5 layers, Sigma rule drafting validated with sigma-cli, intelligence-requirements and risk-reduction reporting. ATT&CK only; no ATLAS content found. |
+
 <!-- gen:eco-defence:end -->
 
 ### Agent, skill and MCP security
 
 <!-- gen:eco-agent-security:start -->
+
 | Repository | Evidence class | Techniques | Last commit · License | Scope |
 |---|---|---|---|---|
 | [snyk/agent-scan](https://github.com/snyk/agent-scan) | `assessment-tool` | `LLMI-T004`, `LLMI-T008`, `LLMI-T011`, `LLMI-T017`, `LLMI-T018` | 2026-10-06 · Apache-2.0 | Scanner for agents, MCP servers and skills. |
@@ -206,11 +223,13 @@ Ten entries chosen as the highest-value inputs for taxonomy, evidence, tests and
 | [scadastrangelove/agent-audit](https://github.com/scadastrangelove/agent-audit) | `assessment-tool` | `LLMI-T004`, `LLMI-T008`, `LLMI-T011`, `LLMI-T015`, `LLMI-T017`, `LLMI-T018` | 2026-07-16 · MIT | Forensic audit of local agents, logs, configuration and instructions. |
 | [garagon/aguara](https://github.com/garagon/aguara) | `assessment-tool` | `LLMI-T004`, `LLMI-T008`, `LLMI-T011`, `LLMI-T012`, `LLMI-T016`, `LLMI-T017`, `LLMI-T018` | 2026-09-10 · Apache-2.0 | Security analysis of agents and their supply chain. |
 | [invariantlabs-ai/mcp-injection-experiments](https://github.com/invariantlabs-ai/mcp-injection-experiments) | `research-technique` | `LLMI-T004`, `LLMI-T008`, `LLMI-T011`, `LLMI-T021` | 2025-04-10 · none-found | Experiments on MCP tool poisoning, shadowing and exfiltration via malicious tool descriptions. |
+
 <!-- gen:eco-agent-security:end -->
 
 ### Labs, training and example collections
 
 <!-- gen:eco-lab:start -->
+
 | Repository | Evidence class | Techniques | Last commit · License | Scope |
 |---|---|---|---|---|
 | [ReversecLabs/damn-vulnerable-llm-agent](https://github.com/ReversecLabs/damn-vulnerable-llm-agent) | `lab-exercise` | `LLMI-T002`, `LLMI-T008` | 2025-06-25 · Apache-2.0 | Deliberately vulnerable agent for training. |
@@ -222,6 +241,7 @@ Ten entries chosen as the highest-value inputs for taxonomy, evidence, tests and
 | [shreyansbhatt/rag-prompt-injection-echoleak](https://github.com/shreyansbhatt/rag-prompt-injection-echoleak) | `lab-exercise` | `LLMI-T002`, `LLMI-T007`, `LLMI-T020` | 2026-06-07 · MIT | Lab reproducing an EchoLeak-style injection and exfiltration against a defended RAG application. |
 | [microsoft/AI-Red-Teaming-Playground-Labs](https://github.com/microsoft/AI-Red-Teaming-Playground-Labs) | `lab-exercise` | `LLMI-T001`, `LLMI-T002`, `LLMI-T003` | 2025-10-07 · MIT | Hands-on AI red-teaming challenges used in Microsoft training, including injection scenarios. |
 | [Wisdomajoku/ai-redteam-journey](https://github.com/Wisdomajoku/ai-redteam-journey) | `lab-exercise` | `LLMI-T001` | 2026-09-15 · none-found | Learning log for AI red teaming with Burp Suite based LLM testing notes. |
+
 <!-- gen:eco-lab:end -->
 
 ## How to add an entry

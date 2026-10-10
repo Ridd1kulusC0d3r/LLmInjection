@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Not found | LLMInjection</title>
+<style>
+:root{--paper:#f3f0e8;--ink:#17150f;--ink-2:#4a463c;--rule:#cfc9ba;--signal:#b43c0e;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--paper:#131210;--ink:#ece8dd;--ink-2:#b9b4a6;--rule:#37332b;--signal:#f0885a;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:grid;place-items:center;background:var(--paper);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif}
+main{width:min(560px,100% - 40px);border-top:1px solid var(--ink);padding-top:22px}
+.k{font:600 11px/1 ui-monospace,Menlo,Consolas,monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--signal)}
+h1{font:700 clamp(32px,8vw,48px)/1.05 Georgia,"Times New Roman",serif;letter-spacing:-.02em;margin:14px 0 12px}
+p{color:var(--ink-2);margin:0 0 22px}
+a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--signal);text-underline-offset:3px}
+a:hover{color:var(--signal)}
+</style>
+</head>
+<body>
+<main>
+  <div class="k">404 / record not found</div>
+  <h1>That page is not in the dataset.</h1>
+  <p>The link may be old, or the record was renamed. The Explorer lists every actor, campaign, technique and detection, each with its evidence.</p>
+  <p><a id="home" href="./">Open the Explorer</a> &nbsp;·&nbsp; <a href="https://github.com/Ridd1kulusC0d3r/LLmInjection">Repository</a></p>
+</main>
+<script>
+// project pages live under /<repo>/, so the first path segment is the site root
+var seg = location.pathname.split("/")[1];
+if (seg && location.hostname.endsWith("github.io")) document.getElementById("home").href = "/" + seg + "/";
+</script>
+</body>
+</html>

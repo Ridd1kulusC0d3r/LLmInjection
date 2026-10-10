@@ -13,6 +13,7 @@ on:
       - "scripts/coverage_model.py"
       - "detections/**"
       - "scripts/build_snapshot.py"
+      - "scripts/build_site.py"
       - "scripts/diff_intelligence.py"
       - ".github/workflows/pages.yml"
   workflow_dispatch:
@@ -38,40 +39,9 @@ jobs:
           python-version: "3.12"
       - name: Validate intelligence
         run: python scripts/validate_intel.py
-      - name: Build graph exports
-        run: python scripts/build_graph.py
+      - name: Build the Explorer (graph, diff, API, Navigator layers, coverage model) into _site
+        run: python scripts/build_site.py --out _site
 
-      - name: Build current intelligence diff
-        shell: bash
-        run: |
-          BASELINE="$(find data/snapshots -maxdepth 1 -type f -name '*.json' | sort | tail -n 1)"
-          python scripts/build_snapshot.py --output dist/current-snapshot.json
-          python scripts/diff_intelligence.py             --baseline "$BASELINE"             --current dist/current-snapshot.json             --output dist/intelligence-diff.json             --markdown dist/intelligence-diff.md
-
-      - name: Build static API
-        run: python scripts/build_api.py
-
-      - name: Build coverage model
-        run: python scripts/coverage_model.py
-
-      - name: Build Navigator layers
-        run: python scripts/build_navigator.py
-
-      - name: Assemble static site
-        run: |
-          mkdir -p _site
-          cp -R site/. _site/
-          cp dist/graph.json _site/graph.json
-          cp dist/graph.graphml _site/graph.graphml
-          cp dist/llminjection-stix.json _site/llminjection-stix.json
-          cp data/threat-landscape-2026.json _site/landscape.json
-          cp data/ecosystem.json _site/ecosystem.json
-          cp dist/coverage.json _site/coverage.json
-          cp dist/current-snapshot.json _site/current-snapshot.json
-          cp dist/intelligence-diff.json _site/intelligence-diff.json
-          cp dist/intelligence-diff.md _site/intelligence-diff.md
-          cp -R dist/api _site/api
-          cp -R dist/navigator _site/navigator
       - name: Configure Pages
         uses: actions/configure-pages@v6
       - name: Upload Pages artifact

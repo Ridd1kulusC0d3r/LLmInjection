@@ -1,4 +1,4 @@
-.PHONY: test validate build charts readme lint audit check navigator coverage osint
+.PHONY: test validate build charts readme lint audit check navigator coverage site osint
 
 test:
 	python3 -m unittest discover -s tests -v
@@ -9,6 +9,9 @@ validate:
 
 build:
 	python3 scripts/build_graph.py && python3 scripts/build_api.py && $(MAKE) navigator coverage charts
+
+site:
+	python3 scripts/build_site.py --out _site
 
 coverage:
 	python3 scripts/coverage_model.py
