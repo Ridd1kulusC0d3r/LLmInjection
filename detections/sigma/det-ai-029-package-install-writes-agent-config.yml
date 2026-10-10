@@ -1,0 +1,92 @@
+title: Package Installer Command Line
+id: 2d6e281d-7f91-4908-b1d5-5d0bea637892
+name: llmi_det_ai_029_package_install
+status: experimental
+description: |
+    Building block for the correlation rule that follows: a package-manager install or add
+    command. On its own it matches routine developer activity and is not meant to alert.
+references:
+    - https://github.com/Ridd1kulusC0d3r/LLmInjection/blob/main/data/detections.json
+author: LLMInjection
+date: 2026-10-10
+tags:
+    - llminjection.det-ai-029
+logsource:
+    category: process_creation
+    definition: 'Full command line must be collected.'
+detection:
+    selection_npm_family:
+        CommandLine|contains:
+            - 'npm install'
+            - 'npm i '
+            - 'pnpm add'
+            - 'pnpm install'
+            - 'yarn add'
+    selection_pip_family:
+        CommandLine|contains:
+            - 'pip install'
+            - 'pip3 install'
+    condition: 1 of selection_*
+falsepositives:
+    - 'Every developer or CI package installation; the rule is only a building block for the correlation.'
+level: informational
+---
+title: AI Assistant Config File Written
+id: 422c73a6-fe41-4747-b06b-232dfd3939e4
+name: llmi_det_ai_029_agent_config_write
+status: experimental
+description: |
+    Building block for the correlation rule that follows: creation or modification of a coding
+    assistant configuration path, using the same path set as the repository's file-event rule
+    for assistant and IDE configuration written by non-editor processes.
+references:
+    - https://github.com/Ridd1kulusC0d3r/LLmInjection/blob/main/detections/sigma/det-ai-011-assistant-config-write.yml
+author: LLMInjection
+date: 2026-10-10
+tags:
+    - llminjection.det-ai-029
+logsource:
+    category: file_event
+detection:
+    selection_path:
+        TargetFilename|contains:
+            - '/.claude/'
+            - '\\.claude\\'
+            - '/.cursor/'
+            - '\\.cursor\\'
+            - '/.vscode/'
+            - '\\.vscode\\'
+    condition: selection_path
+falsepositives:
+    - 'Editors, assistants and developers writing their own configuration; the rule is only a building block for the correlation.'
+level: informational
+---
+title: Potential AI Assistant Config Write Following Package Installation
+id: 61996696-62c9-4e3f-b5e5-13ebff33f134
+status: experimental
+description: |
+    Detects a coding-assistant configuration write on the same host within ten minutes of a
+    package-manager install command. A dependency that plants hooks or instructions for
+    coding agents (see the repository's AI supply-chain incidents) looks like this. The
+    correlation is per host, not per process, because the writer is usually a child of the
+    install process and carries a different process identifier.
+references:
+    - https://github.com/Ridd1kulusC0d3r/LLmInjection/blob/main/data/detections.json
+author: LLMInjection
+date: 2026-10-10
+tags:
+    - llminjection.det-ai-029
+    - llminjection.llmi-t011
+    - detection.threat-hunting
+correlation:
+    type: temporal
+    rules:
+        - llmi_det_ai_029_package_install
+        - llmi_det_ai_029_agent_config_write
+    group-by:
+        - Computer
+    timespan: 10m
+falsepositives:
+    - 'Installing an assistant extension or CLI that legitimately writes its own configuration directory; allowlist known package names once inventoried.'
+    - 'Dotfile or workspace bootstrap scripts run right after an install.'
+level: low

@@ -127,7 +127,14 @@
         <div class="eyebrow" data-i18n="cov.eyebrow">Defensive coverage</div>
         <div class="head-row"><h2 data-i18n="cov.title">Technique coverage</h2><button class="export" type="button" data-export="coverage" data-i18n="common.export">Export CSV</button></div>
         <p class="sub" data-i18n="cov.sub">Counted from graph relationships.</p>
-        <div class="table-wrap" tabindex="0"><table id="coverageTable" class="tbl"></table></div>
+        <div class="controls cov-controls">
+          <label class="ctl"><span data-i18n="cov.view.label">View</span>
+            <select id="covView"><option value="matrix" data-i18n="cov.view.matrix">Technique matrix</option><option value="actors" data-i18n="cov.view.actors">Actors and techniques</option></select></label>
+          <label class="ctl" id="covShowWrap"><span data-i18n="cov.show.label">Show</span><select id="covShow"></select></label>
+        </div>
+        <p class="note" id="covNote" aria-live="polite"></p>
+        <div class="table-wrap" tabindex="0"><table id="coverageTable" class="tbl cov"></table></div>
+        <details class="formula" id="covFormula"><summary data-i18n="cov.formula.title">How priority is scored</summary><p data-i18n="cov.formula">Priority = maturity weight x unimplemented layers.</p></details>
       </section>
 
       <section id="timeline" class="view" role="tabpanel" aria-labelledby="tab-timeline" tabindex="0">
@@ -182,6 +189,7 @@
     <div id="drawerBody"></div>
   </aside>
   <script src="i18n.js"></script>
+  <script src="coverage.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

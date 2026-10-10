@@ -16,6 +16,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
+import coverage_model  # noqa: E402
 from common import ROOT, load_data  # noqa: E402
 from readme_stats import EVIDENCE_CLASSES, SECTIONS  # noqa: E402
 
@@ -72,47 +73,40 @@ def group_header(out: list[str], x1: float, x2: float, y: float, label: str) -> 
 
 
 def technique_stats() -> list[dict]:
-    techniques, rels, eco = load_data("techniques"), load_data("relationships"), load_data("ecosystem")
-    rows = []
-    for t in techniques:
-        tid = t["id"]
-        linked = [r for r in rels if tid in (r["source"], r["target"])]
-
-        others = [r["target"] if r["source"] == tid else r["source"] for r in linked]
-        evidence = {o for o in others if o.startswith(EVIDENCE_PREFIXES)}
-        rows.append({
-            "id": tid, "name": t["name"], "mappings": t["mappings"], "maturity": t.get("maturity", ""),
-            "evidence": len(evidence),
-            "tests": sum(1 for r in linked if r["relationship"] == "validates"),
-            "detections": sum(1 for r in linked if r["relationship"] == "detects"),
-            "controls": sum(1 for r in linked if r["relationship"] == "mitigated-by"),
-            "tools": sum(1 for e in eco if tid in e.get("techniques", [])),
-        })
-    return rows
+    """Counts per technique, taken from the derived coverage model so the SVG and the Explorer agree."""
+    mappings = {t["id"]: t["mappings"] for t in load_data("techniques")}
+    return [{
+        "id": t["id"], "name": t["name"], "mappings": mappings[t["id"]], "maturity": t["maturity"],
+        "evidence": len(t["evidence"]), "tests": len(t["tests"]), "detections": len(t["detections"]),
+        "rules": sum(1 for d in t["detections"] if d["implementation"] == "rule-file"),
+        "controls": len(t["controls"]), "tools": len(t["tools"]), "benchmarks": len(t["benchmarks"]),
+    } for t in coverage_model.build()["techniques"]]
 
 
 def coverage_matrix() -> str:
     rows = technique_stats()
-    cols = [("evidence", "EVIDENCE"), ("tests", "TESTS"), ("detections", "DETECTIONS"), ("controls", "CONTROLS"), ("tools", "TOOLS")]
+    cols = [("evidence", "EVIDENCE"), ("tests", "TESTS"), ("detections", "DETECTIONS"), ("controls", "CONTROLS"), ("tools", "TOOLS"), ("benchmarks", "BENCH")]
     row_h, top, left, name_w, col_w, flag_w = 26, 112, 40, 392, 92, 420
     width = left + name_w + col_w * len(cols) + flag_w
-    height = top + row_h * len(rows) + 92
+    height = top + row_h * len(rows) + 108
     full = sum(1 for r in rows if r["tests"] and r["detections"] and r["controls"])
     observed_gap = sum(1 for r in rows if r["evidence"] and not (r["tests"] and r["detections"]))
     out = frame(width, height, "Technique coverage", "Evidence, tests, detections, controls and tools per technique.",
                 "Technique coverage matrix: evidence, tests, detections, controls and tools per technique")
     # summary block, top right
     sx = width - left
-    out.append(f'<text x="{sx}" y="44" text-anchor="end" font-family="{MONO}" font-size="22" font-weight="700" fill="{INK}">{full}<tspan font-size="12" fill="{INK3}"> / {len(rows)} fully covered</tspan></text>')
+    out.append(f'<text x="{sx}" y="44" text-anchor="end" font-family="{MONO}" font-size="22" font-weight="700" fill="{INK}">{full}<tspan font-size="12" fill="{INK3}"> / {len(rows)} covered by design</tspan></text>')
     if observed_gap:
         out.append(f'<text x="{sx}" y="64" text-anchor="end" font-family="{MONO}" font-size="11" font-weight="700" fill="{SIGNAL}">{observed_gap} techniques with linked evidence lack a test or detection</text>')
     else:
         out.append(f'<text x="{sx}" y="64" text-anchor="end" font-family="{MONO}" font-size="11" fill="{INK2}">Every technique with linked evidence has a test and a detection</text>')
+    summary = coverage_model.build()["summary"]
+    out.append(f'<text x="{sx}" y="82" text-anchor="end" font-family="{MONO}" font-size="11" font-weight="700" fill="{INK2}">Only {summary["detections_with_rule_file"]} of {summary["detections_total"]} detections exist as rule files; the rest are specifications</text>')
     x0 = left + name_w
     group_header(out, x0, x0 + col_w, top - 28, "THREAT")
     group_header(out, x0 + col_w, x0 + 4 * col_w, top - 28, "DEFENCE")
-    group_header(out, x0 + 4 * col_w, x0 + 5 * col_w, top - 28, "ECOSYSTEM")
-    col_header(out, x0 + 5 * col_w + 18 + 70, top - 12, "MATURITY")
+    group_header(out, x0 + 4 * col_w, x0 + 6 * col_w, top - 28, "ECOSYSTEM")
+    col_header(out, x0 + 6 * col_w + 18 + 70, top - 12, "MATURITY")
     for i, (_, label) in enumerate(cols):
         col_header(out, x0 + i * col_w + col_w / 2, top - 12, label)
     out.append(f'<line x1="{left}" x2="{width - left}" y1="{top - 6}" y2="{top - 6}" stroke="{INK}"/>')
@@ -125,6 +119,8 @@ def coverage_matrix() -> str:
         )
         for i, (key, _) in enumerate(cols):
             heat(out, x0 + i * col_w + col_w / 2, y, row[key])
+            if key == "detections" and row["rules"]:  # a rule file exists, not just a specification
+                out.append(f'<circle cx="{x0 + i * col_w + col_w / 2 + 17}" cy="{y + 6}" r="3.5" fill="{INK}" stroke="{PAPER}" stroke-width="1.5"/>')
         gaps = [g for g, ok in (("no test", row["tests"]), ("no detection", row["detections"])) if not ok]
         label = MATURITY_LABEL.get(row["maturity"], row["maturity"].upper())
         if gaps and row["evidence"] > 0:
@@ -133,8 +129,11 @@ def coverage_matrix() -> str:
         out.append(f'<text x="{flag_x}" y="{y + 17}" font-family="{MONO}" font-size="10" font-weight="700" letter-spacing="1" fill="{SIGNAL if observed else INK3}">{escape(label)}</text>')
         out.append(f'<line x1="{left}" x2="{width - left}" y1="{y + row_h}" y2="{y + row_h}" stroke="{RULE2}"/>')
     ly = top + row_h * len(rows) + 22
-    legend(out, left, ly, "Evidence: linked campaigns, incidents and vulnerabilities. Tools: mapped ecosystem projects.")
-    out.append(f'<text x="{left}" y="{ly + 40}" font-family="{MONO}" font-size="10" fill="{INK3}">Counted from data/relationships.json and data/ecosystem.json. Regenerate with make charts.</text>')
+    legend(out, left, ly, "Evidence: linked campaigns, incidents and vulnerabilities. Tools and bench: mapped ecosystem projects.")
+    rules = sum(r["rules"] > 0 for r in rows)
+    out.append(f'<circle cx="{left + 5}" cy="{ly + 31}" r="3.5" fill="{INK}"/>')
+    out.append(f'<text x="{left + 16}" y="{ly + 35}" font-family="{MONO}" font-size="10" fill="{INK2}">Dot: at least one detection has a rule file ({rules} of {len(rows)} techniques). Every other detection is a specification.</text>')
+    out.append(f'<text x="{left}" y="{ly + 56}" font-family="{MONO}" font-size="10" fill="{INK3}">Counted from data/relationships.json, data/ecosystem.json and detections/. Live version with filters: Explorer, Coverage tab. Regenerate with make charts.</text>')
     out.append("</svg>")
     return "\n".join(out) + "\n"
 

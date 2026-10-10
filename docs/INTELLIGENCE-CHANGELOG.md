@@ -2,6 +2,37 @@
 
 This changelog records material changes to attribution, confidence, external mappings and structured intelligence. Ordinary prose edits do not belong here.
 
+## 2026-10-10 — Sigma drafts and the Feedly skills
+
+### Added
+
+- `feedly/skills` (MIT) in the ecosystem as ECO-115, grade D, with a commit feed; the `create-sigma-rule` method was followed by hand and documented in [SIGMA-DRAFTS.md](SIGMA-DRAFTS.md);
+- Sigma rules for DET-AI-032 (agent launched with approvals disabled) and DET-AI-029 (a hunting-tier correlation), the first rule files added since the specifications were written; DET-AI-036 was assessed and left as a specification.
+
+### Confidence notes
+
+- Both rules are experimental and untested against real telemetry. Flags in DET-AI-032 are limited to those documented in the Claude Code and Gemini CLI references; Codex flags were not confirmed and are not included.
+
+## 2026-10-09 — Coverage depth and benchmark sources
+
+### Added
+
+- `scripts/coverage_model.py` derives, from the datasets and the files in `detections/`: per-detection implementation (rule file or specification), distinct publishers and best grade per technique, newest evidence date with a stale flag, mapped benchmarks, actors reached through campaigns, and a priority score with a documented formula;
+- Explorer Coverage tab: sortable columns, eight filters, row drill-down to the linked records, an actor-by-technique view, URL state (`sort`, `dir`, `show`, `view`) and a richer CSV;
+- coverage matrix SVG: a benchmark column, a marker for techniques that have a detection rule file, and a summary line stating that only 3 of 45 detections are rule files;
+- eight ecosystem entries (InjecAgent, PurpleLlama, Inspect Evals, SORRY-Bench, StrongREJECT, CTIBench, Cybench, WildTeaming), each cloned and read; three release feeds (PurpleLlama, Inspect Evals, promptfoo); [docs/BENCHMARKS.md](BENCHMARKS.md).
+
+- `scripts/osint_ecosystem.py` and `data/ecosystem-osint.json`: for 64 of the 114 ecosystem entries, stars, forks, open issues, the packages published from the repository, OSV advisories per package and whether a release carries verified SLSA provenance (deps.dev and OSV.dev, no token). 50 entries are unknown to deps.dev. Summary: [docs/ECOSYSTEM-SIGNALS.md](ECOSYSTEM-SIGNALS.md).
+
+### Changed
+
+- the matrix headline now reads "covered by design" instead of "fully covered", because a detection that is a specification counted the same as a working rule.
+
+### Confidence notes
+
+- The new ecosystem entries are grade D and map to techniques only where the project's README states the attack class. CTIBench measures AI for CTI tasks and Cybench measures agent capability; neither is evidence of attacker behaviour.
+- The reference date for freshness is the newest day-precision date in the evidence (a bare year such as "2026" is ignored for that purpose).
+
 ## 2026-10-08 — Explorer languages and accessibility
 
 ### Added

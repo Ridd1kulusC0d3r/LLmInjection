@@ -59,7 +59,9 @@ class DictionaryTests(unittest.TestCase):
         used = set(re.findall(r'data-i18n="([\w.-]+)"', html))
         for attr in re.findall(r'data-i18n-attr="([^"]+)"', html):
             used |= {pair.split(":")[1].strip() for pair in attr.split(";") if ":" in pair}
+        js += (SITE / "coverage.js").read_text(encoding="utf-8")
         used |= set(re.findall(r'\bt\("([\w.-]+)"', js))
+        used |= {f"cov.show.{v}" for v in ("all", "observed", "spec", "noctl", "nobench", "single", "stale", "noev")}  # built from COV_SHOW
         used |= set(re.findall(r'\bt\("([\w.-]+)"', (SITE / "i18n.js").read_text(encoding="utf-8")))
         static = {k for k in used if not k.endswith(".")}  # "stat." + name style keys are checked below
         self.assertEqual(sorted(k for k in static if k not in self.d["en"]), [], "keys used but not defined")

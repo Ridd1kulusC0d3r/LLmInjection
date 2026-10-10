@@ -21,11 +21,11 @@ A repository listed here can inform test cases, detections, controls and taxonom
 |---|---|---|---|---|
 | `framework-data` | Taxonomies and knowledge bases | Technique definitions and framework mappings | Observed activity | 7 |
 | `incident-data` | Incident databases | Incident references, citing the primary report | Actor attribution or cyber campaigns (scope is broader than cybersecurity) | 1 |
-| `detection-content` | Community detection rules | Detection ideas and telemetry requirements | Proof of in-the-wild behavior | 3 |
+| `detection-content` | Community detection rules | Detection ideas and telemetry requirements | Proof of in-the-wild behavior | 4 |
 | `curated-list` | Curated lists | Discovering sources and tools | Any claim on their own | 22 |
-| `assessment-tool` | Scanners and red-team tools | Test design and control evaluation | Effectiveness against current models | 26 |
-| `benchmark` | Benchmarks and environments | Reproducible tests and coverage measurement | Real-world prevalence | 8 |
-| `research-technique` | Attack research code | Techniques demonstrated in research | Use in the wild | 15 |
+| `assessment-tool` | Scanners and red-team tools | Test design and control evaluation | Effectiveness against current models | 28 |
+| `benchmark` | Benchmarks and environments | Reproducible tests and coverage measurement | Real-world prevalence | 13 |
+| `research-technique` | Attack research code | Techniques demonstrated in research | Use in the wild | 16 |
 | `defence-tool` | Defences and guardrails | Control design and comparison | Proven protection | 10 |
 | `lab-exercise` | Training labs | Analyst training and onboarding | Threat intelligence | 7 |
 | `prompt-corpus` | Prompt corpora and datasets | Test inspiration and measurement | Threat intelligence or attribution | 7 |
@@ -124,6 +124,8 @@ Ten entries chosen as the highest-value inputs for taxonomy, evidence, tests and
 | [byt3n33dl3/thc-BloodMiami](https://github.com/byt3n33dl3/thc-BloodMiami) | `assessment-tool` | `LLMI-T001`, `LLMI-T020` | 2025-11-14 · LGPL | Pentest tool for AI chat interfaces covering prompt injection and classic web injection through the chat channel. |
 | [mikeperry-tor/HostileShop](https://github.com/mikeperry-tor/HostileShop) | `assessment-tool` | `LLMI-T002`, `LLMI-T008` | 2025-12-25 · MIT | Adversarial shopping-agent environment that generates injections and evaluates prompt filters against agents. |
 | [jasoncobra3/LLM_Sentinel](https://github.com/jasoncobra3/LLM_Sentinel) | `assessment-tool` | `LLMI-T001`, `LLMI-T003` | 2026-03-05 · MIT | Single-turn red-team harness with a library of pre-written test prompts. |
+| [meta-llama/PurpleLlama](https://github.com/meta-llama/PurpleLlama) | `assessment-tool` | `LLMI-T001`, `LLMI-T002` | 2026-09-29 · other | Meta umbrella project: CyberSecEval cybersecurity evals plus input/output safeguards (Llama Guard, Prompt Guard, LlamaFirewall, CodeShield). |
+| [UKGovernmentBEIS/inspect_evals](https://github.com/UKGovernmentBEIS/inspect_evals) | `assessment-tool` | none | 2026-10-09 · MIT | Library of evaluations on Inspect AI; includes agent-security and cyber-capability suites such as agentdojo, agentharm, cybench and cve_bench. |
 <!-- gen:eco-evaluation:end -->
 
 ### Benchmarks, datasets and environments
@@ -140,6 +142,11 @@ Ten entries chosen as the highest-value inputs for taxonomy, evidence, tests and
 | [CheckPointSW/pint-benchmark](https://github.com/CheckPointSW/pint-benchmark) | `benchmark` | `LLMI-T001`, `LLMI-T002`, `LLMI-T003` | 2026-04-02 · MIT | Benchmark for prompt injection detection systems. |
 | [verazuo/jailbreak_llms](https://github.com/verazuo/jailbreak_llms) | `prompt-corpus` | `LLMI-T003` | 2024-12-24 · MIT | Dataset and research on prompts and jailbreaks collected from public sources. |
 | [agencyenterprise/PromptInject](https://github.com/agencyenterprise/PromptInject) | `benchmark` | `LLMI-T001`, `LLMI-T004` | 2022-11-18 · MIT | Modular evaluation of LLM robustness to adversarial prompts. |
+| [uiuc-kang-lab/InjecAgent](https://github.com/uiuc-kang-lab/InjecAgent) | `benchmark` | `LLMI-T002`, `LLMI-T008` | 2024-07-02 · MIT | Benchmark of 1,054 test cases for indirect prompt injection against tool-integrated LLM agents (17 user tools, 62 attacker tools). |
+| [SORRY-Bench/sorry-bench](https://github.com/SORRY-Bench/sorry-bench) | `benchmark` | `LLMI-T003` | 2025-03-01 · MIT | Benchmark of LLM safety refusal behaviour, with 20 linguistic mutations of each request. |
+| [dsbowen/strong_reject](https://github.com/dsbowen/strong_reject) | `benchmark` | `LLMI-T003` | 2025-07-07 · MIT | StrongREJECT: forbidden-prompt dataset and autograder for scoring jailbreak responses; successor of alexandrasouly/strongreject, which is deprecated. |
+| [xashru/cti-bench](https://github.com/xashru/cti-bench) | `benchmark` | none | 2026-05-07 · CC-BY-NC | CTIBench: evaluates LLMs on cyber threat intelligence tasks (CTI knowledge, CVE/CWE mapping, CVSS scoring, ATT&CK technique extraction, threat actor attribution). |
+| [andyzorigin/cybench](https://github.com/andyzorigin/cybench) | `benchmark` | `LLMI-T015` | 2026-09-24 · Apache-2.0 | Cybench: 40 CTF tasks from four competitions for measuring LLM agent cybersecurity capability. A capability measure, not evidence of attacker use. |
 <!-- gen:eco-benchmark:end -->
 
 ### Attack technique research
@@ -163,6 +170,7 @@ Ten entries chosen as the highest-value inputs for taxonomy, evidence, tests and
 | [2alf/prmptinj](https://github.com/2alf/prmptinj) | `prompt-corpus` | `LLMI-T001` | 2026-01-09 · none-found | Prompt-injection payloads used in public injection challenges. |
 | [Insider77Circle/LLM-INJECTION-POC](https://github.com/Insider77Circle/LLM-INJECTION-POC) | `research-technique` | `LLMI-T002`, `LLMI-T025` | 2025-12-10 · none-found | Proof of concept for injection through uploaded files using hidden text and metadata poisoning. |
 | [Asstar-X/JailPrompter](https://github.com/Asstar-X/JailPrompter) | `research-technique` | `LLMI-T003` | 2026-01-21 · none-found | Research project on jailbreak structures with attack and defence examples. |
+| [allenai/wildteaming](https://github.com/allenai/wildteaming) | `research-technique` | `LLMI-T003` | 2024-08-10 · none-found | WildTeaming: mines in-the-wild user-chatbot interactions to discover jailbreak tactics; releases the WildJailbreak data. |
 <!-- gen:eco-attack-research:end -->
 
 ### Defences, detection and controls
@@ -182,6 +190,7 @@ Ten entries chosen as the highest-value inputs for taxonomy, evidence, tests and
 | [NVIDIA-NeMo/Guardrails](https://github.com/NVIDIA-NeMo/Guardrails) | `defence-tool` | `LLMI-T001`, `LLMI-T002`, `LLMI-T004` | 2026-10-07 · Apache-2.0 | Programmable guardrails toolkit for dialogue rails, PII masking, fact checking and injection blocking. |
 | [microsoft/BinaryShield](https://github.com/microsoft/BinaryShield) | `detection-content` | `LLMI-T001`, `LLMI-T003`, `LLMI-T019` | 2026-08-03 · MIT | Research on privacy-preserving sharing of LLM threat fingerprints across services. |
 | [OMGstacks/llm-threat-triage](https://github.com/OMGstacks/llm-threat-triage) | `detection-content` | `LLMI-T001`, `LLMI-T002`, `LLMI-T003`, `LLMI-T004`, `LLMI-T008` | 2026-08-17 · MIT | Python and SQL triage toolkit flagging injection, jailbreak and exfiltration mapped to OWASP LLM Top 10. |
+| [feedly/skills](https://github.com/feedly/skills) | `detection-content` | none | 2026-10-07 · MIT | Feedly's CTI skills and prompts for Claude (MIT): ATT&CK technique mapping with Navigator 4.5 layers, Sigma rule drafting validated with sigma-cli, intelligence-requirements and risk-reduction reporting. ATT&CK only; no ATLAS content found. |
 <!-- gen:eco-defence:end -->
 
 ### Agent, skill and MCP security

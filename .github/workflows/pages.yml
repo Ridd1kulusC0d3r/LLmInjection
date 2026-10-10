@@ -10,6 +10,8 @@ on:
       - "scripts/build_graph.py"
       - "scripts/build_api.py"
       - "scripts/build_navigator.py"
+      - "scripts/coverage_model.py"
+      - "detections/**"
       - "scripts/build_snapshot.py"
       - "scripts/diff_intelligence.py"
       - ".github/workflows/pages.yml"
@@ -49,6 +51,9 @@ jobs:
       - name: Build static API
         run: python scripts/build_api.py
 
+      - name: Build coverage model
+        run: python scripts/coverage_model.py
+
       - name: Build Navigator layers
         run: python scripts/build_navigator.py
 
@@ -61,6 +66,7 @@ jobs:
           cp dist/llminjection-stix.json _site/llminjection-stix.json
           cp data/threat-landscape-2026.json _site/landscape.json
           cp data/ecosystem.json _site/ecosystem.json
+          cp dist/coverage.json _site/coverage.json
           cp dist/current-snapshot.json _site/current-snapshot.json
           cp dist/intelligence-diff.json _site/intelligence-diff.json
           cp dist/intelligence-diff.md _site/intelligence-diff.md

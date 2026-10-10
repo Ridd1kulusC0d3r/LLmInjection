@@ -1,0 +1,39 @@
+title: Potential AI Coding Agent Launched With Permission Prompts Disabled
+id: 8b836117-834e-4ebe-b413-dc88ab8aca69
+status: experimental
+description: |
+    Detects a coding-agent CLI started with its approval prompts turned off: the Claude Code
+    flags documented as skipping permission prompts and the Gemini CLI auto-approve (yolo) mode.
+    Such a session executes tool calls without a human decision, which is the precondition
+    for autonomous attack orchestration. The same flags are used legitimately in sandboxes and
+    containers, so the rule is meaningful only against an inventory of hosts where unattended
+    agent runs are sanctioned.
+references:
+    - https://code.claude.com/docs/en/cli-reference
+    - https://github.com/google-gemini/gemini-cli/blob/main/docs/cli/cli-reference.md
+    - https://github.com/Ridd1kulusC0d3r/LLmInjection/blob/main/data/detections.json
+author: LLMInjection
+date: 2026-10-10
+tags:
+    - llminjection.det-ai-032
+    - llminjection.llmi-t015
+logsource:
+    category: process_creation
+    definition: 'Full command line must be collected (Sysmon event 1, EDR process telemetry, auditd EXECVE or equivalent).'
+detection:
+    selection:
+        CommandLine|contains:
+            # Claude Code, CLI reference: --dangerously-skip-permissions, "Equivalent to --permission-mode bypassPermissions"
+            - '--dangerously-skip-permissions'
+            - '--permission-mode bypassPermissions'
+            - '--permission-mode=bypassPermissions'
+            # Gemini CLI, CLI reference: --approval-mode with the value yolo; --yolo is its deprecated form
+            - '--approval-mode yolo'
+            - '--approval-mode=yolo'
+            - '--yolo'
+    condition: selection
+falsepositives:
+    - 'Developers running an agent inside a disposable container or VM with approvals off on purpose; allowlist by host group once unattended runs are inventoried.'
+    - 'CI jobs that run an agent unattended by design; allowlist by runner identity.'
+    - 'Shell history, documentation or scripts that print these flags without launching an agent (for example grep, echo or an editor opening a file).'
+level: medium
