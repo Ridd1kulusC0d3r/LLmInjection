@@ -2,6 +2,18 @@
 
 This changelog records material changes to attribution, confidence, external mappings and structured intelligence. Ordinary prose edits do not belong here.
 
+## 2026-10-11 — CVEs cited by Agent Threat Rules, as research-queue candidates
+
+### Added
+
+- `scripts/atr_cve_candidates.py`: reads a clone of Agent Threat Rules (ATR, MIT), lists the CVEs its rules cite that LLMInjection does not hold (160 rules cite 168 CVEs, 164 are new to us), adds CISA KEV and FIRST EPSS from the public APIs (no key) and ranks them with a documented score;
+- the top 25 are in `data/research-queue.json` as `candidate` items from a new disabled feed `FEED-ATR-RULE-COMMITS`. Nothing was added to `data/vulnerabilities.json`.
+
+### Confidence notes
+
+- An ATR citation is a lead, not evidence. It says a rule author read an advisory, not that the vulnerability was exploited or that the product is an AI system.
+- The ranking favours exploited CVEs, so general web vulnerabilities (a Rails file disclosure, an Adminer SSRF) sit at the top of the list because they are in CISA KEV. Each candidate asks the reviewer to promote it only when the product is an AI framework, agent, MCP server or model tool.
+
 ## 2026-10-10 — Portal rendering and design
 
 ### Fixed

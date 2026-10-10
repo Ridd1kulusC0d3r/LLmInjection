@@ -1045,6 +1045,590 @@
         "decision": null,
         "notes": "Clone, read README and license, classify before promotion into ecosystem.json."
       }
+    },
+    {
+      "id": "RQ-ATR-CVE-2019-5418",
+      "status": "candidate",
+      "source_feed_id": "FEED-ATR-RULE-COMMITS",
+      "source_grade": "D",
+      "kind": "vulnerability-candidate",
+      "title": "CVE-2019-5418 (cited by Agent Threat Rules)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-5418",
+      "published": null,
+      "observed_at": "2026-10-10T13:04:09Z",
+      "relevance_score": 99,
+      "matched_terms": [
+        "tool-poisoning"
+      ],
+      "summary": "Cited by 1 Agent Threat Rule(s) in tool-poisoning; first rule title: 'SSRF via Agent Tool Calls'. In CISA KEV. EPSS 0.985. An ATR citation is a lead, not evidence of exploitation or of an AI system.",
+      "identifiers": [
+        "CVE-2019-5418"
+      ],
+      "review": {
+        "decision": null,
+        "notes": "Read the NVD or vendor advisory. Add a vulnerability record only if the product is an AI framework, agent, MCP server or model tool, and link it to a technique from evidence in the advisory."
+      }
+    },
+    {
+      "id": "RQ-ATR-CVE-2021-21311",
+      "status": "candidate",
+      "source_feed_id": "FEED-ATR-RULE-COMMITS",
+      "source_grade": "D",
+      "kind": "vulnerability-candidate",
+      "title": "CVE-2021-21311 (cited by Agent Threat Rules)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-21311",
+      "published": null,
+      "observed_at": "2026-10-10T13:04:09Z",
+      "relevance_score": 99,
+      "matched_terms": [
+        "tool-poisoning"
+      ],
+      "summary": "Cited by 1 Agent Threat Rule(s) in tool-poisoning; first rule title: 'SSRF via Agent Tool Calls'. In CISA KEV. EPSS 0.985. An ATR citation is a lead, not evidence of exploitation or of an AI system.",
+      "identifiers": [
+        "CVE-2021-21311"
+      ],
+      "review": {
+        "decision": null,
+        "notes": "Read the NVD or vendor advisory. Add a vulnerability record only if the product is an AI framework, agent, MCP server or model tool, and link it to a technique from evidence in the advisory."
+      }
+    },
+    {
+      "id": "RQ-ATR-CVE-2026-42271",
+      "status": "candidate",
+      "source_feed_id": "FEED-ATR-RULE-COMMITS",
+      "source_grade": "D",
+      "kind": "vulnerability-candidate",
+      "title": "CVE-2026-42271 (cited by Agent Threat Rules)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42271",
+      "published": null,
+      "observed_at": "2026-10-10T13:04:09Z",
+      "relevance_score": 97,
+      "matched_terms": [
+        "tool-poisoning"
+      ],
+      "summary": "Cited by 1 Agent Threat Rule(s) in tool-poisoning; first rule title: 'MCP stdio server config command injection via unvalidated test endpoints'. In CISA KEV. EPSS 0.926. An ATR citation is a lead, not evidence of exploitation or of an AI system.",
+      "identifiers": [
+        "CVE-2026-42271",
+        "GHSA-v4p8-mg3p-g94g"
+      ],
+      "review": {
+        "decision": null,
+        "notes": "Read the NVD or vendor advisory. Add a vulnerability record only if the product is an AI framework, agent, MCP server or model tool, and link it to a technique from evidence in the advisory."
+      }
+    },
+    {
+      "id": "RQ-ATR-CVE-2025-6514",
+      "status": "candidate",
+      "source_feed_id": "FEED-ATR-RULE-COMMITS",
+      "source_grade": "D",
+      "kind": "vulnerability-candidate",
+      "title": "CVE-2025-6514 (cited by Agent Threat Rules)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-6514",
+      "published": null,
+      "observed_at": "2026-10-10T13:04:09Z",
+      "relevance_score": 71,
+      "matched_terms": [
+        "tool-poisoning"
+      ],
+      "summary": "Cited by 2 Agent Threat Rule(s) in tool-poisoning; first rule title: 'Malicious Content in MCP Tool Response'. Not in CISA KEV. EPSS 0.777. An ATR citation is a lead, not evidence of exploitation or of an AI system.",
+      "identifiers": [
+        "CVE-2025-6514"
+      ],
+      "review": {
+        "decision": null,
+        "notes": "Read the NVD or vendor advisory. Add a vulnerability record only if the product is an AI framework, agent, MCP server or model tool, and link it to a technique from evidence in the advisory."
+      }
+    },
+    {
+      "id": "RQ-ATR-CVE-2025-59528",
+      "status": "candidate",
+      "source_feed_id": "FEED-ATR-RULE-COMMITS",
+      "source_grade": "D",
+      "kind": "vulnerability-candidate",
+      "title": "CVE-2025-59528 (cited by Agent Threat Rules)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-59528",
+      "published": null,
+      "observed_at": "2026-10-10T13:04:09Z",
+      "relevance_score": 64,
+      "matched_terms": [
+        "tool-poisoning"
+      ],
+      "summary": "Cited by 1 Agent Threat Rule(s) in tool-poisoning; first rule title: 'Flowise System Message Override via Template Interpolation (CVE-2025-59528)'. Not in CISA KEV. EPSS 0.862. An ATR citation is a lead, not evidence of exploitation or of an AI system.",
+      "identifiers": [
+        "CVE-2025-59528"
+      ],
+      "review": {
+        "decision": null,
+        "notes": "Read the NVD or vendor advisory. Add a vulnerability record only if the product is an AI framework, agent, MCP server or model tool, and link it to a technique from evidence in the advisory."
+      }
+    },
+    {
+      "id": "RQ-ATR-CVE-2026-42208",
+      "status": "candidate",
+      "source_feed_id": "FEED-ATR-RULE-COMMITS",
+      "source_grade": "D",
+      "kind": "vulnerability-candidate",
+      "title": "CVE-2026-42208 (cited by Agent Threat Rules)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42208",
+      "published": null,
+      "observed_at": "2026-10-10T13:04:09Z",
+      "relevance_score": 62,
+      "matched_terms": [
+        "privilege-escalation"
+      ],
+      "summary": "Cited by 1 Agent Threat Rule(s) in privilege-escalation; first rule title: 'LiteLLM Proxy Authorization-Header SQL Injection — CISA KEV (CVE-2026-42208)'. In CISA KEV. EPSS 0.058. An ATR citation is a lead, not evidence of exploitation or of an AI system.",
+      "identifiers": [
+        "CVE-2026-42208"
+      ],
+      "review": {
+        "decision": null,
+        "notes": "Read the NVD or vendor advisory. Add a vulnerability record only if the product is an AI framework, agent, MCP server or model tool, and link it to a technique from evidence in the advisory."
+      }
+    },
+    {
+      "id": "RQ-ATR-CVE-2025-59536",
+      "status": "candidate",
+      "source_feed_id": "FEED-ATR-RULE-COMMITS",
+      "source_grade": "D",
+      "kind": "vulnerability-candidate",
+      "title": "CVE-2025-59536 (cited by Agent Threat Rules)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-59536",
+      "published": null,
+      "observed_at": "2026-10-10T13:04:09Z",
+      "relevance_score": 60,
+      "matched_terms": [
+        "skill-compromise",
+        "tool-poisoning"
+      ],
+      "summary": "Cited by 4 Agent Threat Rule(s) in skill-compromise, tool-poisoning; first rule title: 'Hidden Capability in MCP Skill'. Not in CISA KEV. EPSS 0.272. An ATR citation is a lead, not evidence of exploitation or of an AI system.",
+      "identifiers": [
+        "CVE-2025-59536"
+      ],
+      "review": {
+        "decision": null,
+        "notes": "Read the NVD or vendor advisory. Add a vulnerability record only if the product is an AI framework, agent, MCP server or model tool, and link it to a technique from evidence in the advisory."
+      }
+    },
+    {
+      "id": "RQ-ATR-CVE-2025-8943",
+      "status": "candidate",
+      "source_feed_id": "FEED-ATR-RULE-COMMITS",
+      "source_grade": "D",
+      "kind": "vulnerability-candidate",
+      "title": "CVE-2025-8943 (cited by Agent Threat Rules)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-8943",
+      "published": null,
+      "observed_at": "2026-10-10T13:04:09Z",
+      "relevance_score": 59,
+      "matched_terms": [
+        "tool-poisoning"
+      ],
+      "summary": "Cited by 1 Agent Threat Rule(s) in tool-poisoning; first rule title: 'Flowise Custom MCP node-load-method OS Command RCE (CVE-2025-8943)'. Not in CISA KEV. EPSS 0.748. An ATR citation is a lead, not evidence of exploitation or of an AI system.",
+      "identifiers": [
+        "CVE-2025-8943"
+      ],
+      "review": {
+        "decision": null,
+        "notes": "Read the NVD or vendor advisory. Add a vulnerability record only if the product is an AI framework, agent, MCP server or model tool, and link it to a technique from evidence in the advisory."
+      }
+    },
+    {
+      "id": "RQ-ATR-CVE-2023-1177",
+      "status": "candidate",
+      "source_feed_id": "FEED-ATR-RULE-COMMITS",
+      "source_grade": "D",
+      "kind": "vulnerability-candidate",
+      "title": "CVE-2023-1177 (cited by Agent Threat Rules)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-1177",
+      "published": null,
+      "observed_at": "2026-10-10T13:04:09Z",
+      "relevance_score": 57,
+      "matched_terms": [
+        "context-exfiltration"
+      ],
+      "summary": "Cited by 1 Agent Threat Rule(s) in context-exfiltration; first rule title: 'MCP/API Tool Argument LFI via Mixed-Encoding Path Separator or file:// URI Scheme Escape'. Not in CISA KEV. EPSS 0.697. An ATR citation is a lead, not evidence of exploitation or of an AI system.",
+      "identifiers": [
+        "CVE-2023-1177"
+      ],
+      "review": {
+        "decision": null,
+        "notes": "Read the NVD or vendor advisory. Add a vulnerability record only if the product is an AI framework, agent, MCP server or model tool, and link it to a technique from evidence in the advisory."
+      }
+    },
+    {
+      "id": "RQ-ATR-CVE-2025-32711",
+      "status": "candidate",
+      "source_feed_id": "FEED-ATR-RULE-COMMITS",
+      "source_grade": "D",
+      "kind": "vulnerability-candidate",
+      "title": "CVE-2025-32711 (cited by Agent Threat Rules)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-32711",
+      "published": null,
+      "observed_at": "2026-10-10T13:04:09Z",
+      "relevance_score": 53,
+      "matched_terms": [
+        "context-exfiltration",
+        "prompt-injection",
+        "tool-poisoning"
+      ],
+      "summary": "Cited by 5 Agent Threat Rule(s) in context-exfiltration, prompt-injection, tool-poisoning; first rule title: 'System Prompt and Internal Instruction Leakage'. Not in CISA KEV. EPSS 0.080. An ATR citation is a lead, not evidence of exploitation or of an AI system.",
+      "identifiers": [
+        "CVE-2025-32711"
+      ],
+      "review": {
+        "decision": null,
+        "notes": "Read the NVD or vendor advisory. Add a vulnerability record only if the product is an AI framework, agent, MCP server or model tool, and link it to a technique from evidence in the advisory."
+      }
+    },
+    {
+      "id": "RQ-ATR-CVE-2025-53773",
+      "status": "candidate",
+      "source_feed_id": "FEED-ATR-RULE-COMMITS",
+      "source_grade": "D",
+      "kind": "vulnerability-candidate",
+      "title": "CVE-2025-53773 (cited by Agent Threat Rules)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-53773",
+      "published": null,
+      "observed_at": "2026-10-10T13:04:09Z",
+      "relevance_score": 51,
+      "matched_terms": [
+        "prompt-injection",
+        "skill-compromise"
+      ],
+      "summary": "Cited by 3 Agent Threat Rule(s) in prompt-injection, skill-compromise; first rule title: 'Direct Prompt Injection via User Input'. Not in CISA KEV. EPSS 0.032. An ATR citation is a lead, not evidence of exploitation or of an AI system.",
+      "identifiers": [
+        "CVE-2025-53773"
+      ],
+      "review": {
+        "decision": null,
+        "notes": "Read the NVD or vendor advisory. Add a vulnerability record only if the product is an AI framework, agent, MCP server or model tool, and link it to a technique from evidence in the advisory."
+      }
+    },
+    {
+      "id": "RQ-ATR-CVE-2026-21852",
+      "status": "candidate",
+      "source_feed_id": "FEED-ATR-RULE-COMMITS",
+      "source_grade": "D",
+      "kind": "vulnerability-candidate",
+      "title": "CVE-2026-21852 (cited by Agent Threat Rules)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21852",
+      "published": null,
+      "observed_at": "2026-10-10T13:04:09Z",
+      "relevance_score": 51,
+      "matched_terms": [
+        "context-exfiltration",
+        "tool-poisoning"
+      ],
+      "summary": "Cited by 2 Agent Threat Rule(s) in context-exfiltration, tool-poisoning; first rule title: 'Claude Code ANTHROPIC_BASE_URL Credential Exfiltration (CVE-2026-21852)'. Not in CISA KEV. EPSS 0.279. An ATR citation is a lead, not evidence of exploitation or of an AI system.",
+      "identifiers": [
+        "CVE-2026-21852"
+      ],
+      "review": {
+        "decision": null,
+        "notes": "Read the NVD or vendor advisory. Add a vulnerability record only if the product is an AI framework, agent, MCP server or model tool, and link it to a technique from evidence in the advisory."
+      }
+    },
+    {
+      "id": "RQ-ATR-CVE-2024-5184",
+      "status": "candidate",
+      "source_feed_id": "FEED-ATR-RULE-COMMITS",
+      "source_grade": "D",
+      "kind": "vulnerability-candidate",
+      "title": "CVE-2024-5184 (cited by Agent Threat Rules)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-5184",
+      "published": null,
+      "observed_at": "2026-10-10T13:04:09Z",
+      "relevance_score": 50,
+      "matched_terms": [
+        "prompt-injection"
+      ],
+      "summary": "Cited by 5 Agent Threat Rule(s) in prompt-injection; first rule title: 'Direct Prompt Injection via User Input'. Not in CISA KEV. EPSS 0.005. An ATR citation is a lead, not evidence of exploitation or of an AI system.",
+      "identifiers": [
+        "CVE-2024-5184"
+      ],
+      "review": {
+        "decision": null,
+        "notes": "Read the NVD or vendor advisory. Add a vulnerability record only if the product is an AI framework, agent, MCP server or model tool, and link it to a technique from evidence in the advisory."
+      }
+    },
+    {
+      "id": "RQ-ATR-CVE-2024-8181",
+      "status": "candidate",
+      "source_feed_id": "FEED-ATR-RULE-COMMITS",
+      "source_grade": "D",
+      "kind": "vulnerability-candidate",
+      "title": "CVE-2024-8181 (cited by Agent Threat Rules)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-8181",
+      "published": null,
+      "observed_at": "2026-10-10T13:04:09Z",
+      "relevance_score": 48,
+      "matched_terms": [
+        "privilege-escalation"
+      ],
+      "summary": "Cited by 1 Agent Threat Rule(s) in privilege-escalation; first rule title: 'Authentication Bypass via Bare Query-String Path-Confusion Suffix'. Not in CISA KEV. EPSS 0.451. An ATR citation is a lead, not evidence of exploitation or of an AI system.",
+      "identifiers": [
+        "CVE-2024-8181"
+      ],
+      "review": {
+        "decision": null,
+        "notes": "Read the NVD or vendor advisory. Add a vulnerability record only if the product is an AI framework, agent, MCP server or model tool, and link it to a technique from evidence in the advisory."
+      }
+    },
+    {
+      "id": "RQ-ATR-CVE-2025-49596",
+      "status": "candidate",
+      "source_feed_id": "FEED-ATR-RULE-COMMITS",
+      "source_grade": "D",
+      "kind": "vulnerability-candidate",
+      "title": "CVE-2025-49596 (cited by Agent Threat Rules)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-49596",
+      "published": null,
+      "observed_at": "2026-10-10T13:04:09Z",
+      "relevance_score": 47,
+      "matched_terms": [
+        "tool-poisoning"
+      ],
+      "summary": "Cited by 1 Agent Threat Rule(s) in tool-poisoning; first rule title: 'MCP Inspector Unauthenticated Proxy stdio Command Execution (CVE-2025-49596)'. Not in CISA KEV. EPSS 0.445. An ATR citation is a lead, not evidence of exploitation or of an AI system.",
+      "identifiers": [
+        "CVE-2025-49596"
+      ],
+      "review": {
+        "decision": null,
+        "notes": "Read the NVD or vendor advisory. Add a vulnerability record only if the product is an AI framework, agent, MCP server or model tool, and link it to a technique from evidence in the advisory."
+      }
+    },
+    {
+      "id": "RQ-ATR-CVE-2023-6021",
+      "status": "candidate",
+      "source_feed_id": "FEED-ATR-RULE-COMMITS",
+      "source_grade": "D",
+      "kind": "vulnerability-candidate",
+      "title": "CVE-2023-6021 (cited by Agent Threat Rules)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-6021",
+      "published": null,
+      "observed_at": "2026-10-10T13:04:09Z",
+      "relevance_score": 44,
+      "matched_terms": [
+        "context-exfiltration"
+      ],
+      "summary": "Cited by 1 Agent Threat Rule(s) in context-exfiltration; first rule title: 'MCP/API Tool Argument LFI via Mixed-Encoding Path Separator or file:// URI Scheme Escape'. Not in CISA KEV. EPSS 0.371. An ATR citation is a lead, not evidence of exploitation or of an AI system.",
+      "identifiers": [
+        "CVE-2023-6021"
+      ],
+      "review": {
+        "decision": null,
+        "notes": "Read the NVD or vendor advisory. Add a vulnerability record only if the product is an AI framework, agent, MCP server or model tool, and link it to a technique from evidence in the advisory."
+      }
+    },
+    {
+      "id": "RQ-ATR-CVE-2025-68143",
+      "status": "candidate",
+      "source_feed_id": "FEED-ATR-RULE-COMMITS",
+      "source_grade": "D",
+      "kind": "vulnerability-candidate",
+      "title": "CVE-2025-68143 (cited by Agent Threat Rules)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-68143",
+      "published": null,
+      "observed_at": "2026-10-10T13:04:09Z",
+      "relevance_score": 43,
+      "matched_terms": [
+        "skill-compromise",
+        "tool-poisoning"
+      ],
+      "summary": "Cited by 2 Agent Threat Rule(s) in skill-compromise, tool-poisoning; first rule title: 'Parameter Injection via Tool Arguments'. Not in CISA KEV. EPSS 0.081. An ATR citation is a lead, not evidence of exploitation or of an AI system.",
+      "identifiers": [
+        "CVE-2025-68143"
+      ],
+      "review": {
+        "decision": null,
+        "notes": "Read the NVD or vendor advisory. Add a vulnerability record only if the product is an AI framework, agent, MCP server or model tool, and link it to a technique from evidence in the advisory."
+      }
+    },
+    {
+      "id": "RQ-ATR-CVE-2025-68144",
+      "status": "candidate",
+      "source_feed_id": "FEED-ATR-RULE-COMMITS",
+      "source_grade": "D",
+      "kind": "vulnerability-candidate",
+      "title": "CVE-2025-68144 (cited by Agent Threat Rules)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-68144",
+      "published": null,
+      "observed_at": "2026-10-10T13:04:09Z",
+      "relevance_score": 42,
+      "matched_terms": [
+        "skill-compromise",
+        "tool-poisoning"
+      ],
+      "summary": "Cited by 2 Agent Threat Rule(s) in skill-compromise, tool-poisoning; first rule title: 'Parameter Injection via Tool Arguments'. Not in CISA KEV. EPSS 0.072. An ATR citation is a lead, not evidence of exploitation or of an AI system.",
+      "identifiers": [
+        "CVE-2025-68144"
+      ],
+      "review": {
+        "decision": null,
+        "notes": "Read the NVD or vendor advisory. Add a vulnerability record only if the product is an AI framework, agent, MCP server or model tool, and link it to a technique from evidence in the advisory."
+      }
+    },
+    {
+      "id": "RQ-ATR-CVE-2008-2742",
+      "status": "candidate",
+      "source_feed_id": "FEED-ATR-RULE-COMMITS",
+      "source_grade": "D",
+      "kind": "vulnerability-candidate",
+      "title": "CVE-2008-2742 (cited by Agent Threat Rules)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2008-2742",
+      "published": null,
+      "observed_at": "2026-10-10T13:04:09Z",
+      "relevance_score": 41,
+      "matched_terms": [
+        "privilege-escalation"
+      ],
+      "summary": "Cited by 2 Agent Threat Rule(s) in privilege-escalation; first rule title: 'Web Shell Written Into a Web-Served Directory'. Not in CISA KEV. EPSS 0.047. An ATR citation is a lead, not evidence of exploitation or of an AI system.",
+      "identifiers": [
+        "CVE-2008-2742"
+      ],
+      "review": {
+        "decision": null,
+        "notes": "Read the NVD or vendor advisory. Add a vulnerability record only if the product is an AI framework, agent, MCP server or model tool, and link it to a technique from evidence in the advisory."
+      }
+    },
+    {
+      "id": "RQ-ATR-CVE-2025-54136",
+      "status": "candidate",
+      "source_feed_id": "FEED-ATR-RULE-COMMITS",
+      "source_grade": "D",
+      "kind": "vulnerability-candidate",
+      "title": "CVE-2025-54136 (cited by Agent Threat Rules)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-54136",
+      "published": null,
+      "observed_at": "2026-10-10T13:04:09Z",
+      "relevance_score": 41,
+      "matched_terms": [
+        "tool-poisoning"
+      ],
+      "summary": "Cited by 1 Agent Threat Rule(s) in tool-poisoning; first rule title: 'Cursor MCP JSON Zero-Click Configuration RCE (CVE-2025-54136)'. Not in CISA KEV. EPSS 0.283. An ATR citation is a lead, not evidence of exploitation or of an AI system.",
+      "identifiers": [
+        "CVE-2025-54136"
+      ],
+      "review": {
+        "decision": null,
+        "notes": "Read the NVD or vendor advisory. Add a vulnerability record only if the product is an AI framework, agent, MCP server or model tool, and link it to a technique from evidence in the advisory."
+      }
+    },
+    {
+      "id": "RQ-ATR-CVE-2026-33032",
+      "status": "candidate",
+      "source_feed_id": "FEED-ATR-RULE-COMMITS",
+      "source_grade": "D",
+      "kind": "vulnerability-candidate",
+      "title": "CVE-2026-33032 (cited by Agent Threat Rules)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33032",
+      "published": null,
+      "observed_at": "2026-10-10T13:04:09Z",
+      "relevance_score": 41,
+      "matched_terms": [
+        "tool-poisoning"
+      ],
+      "summary": "Cited by 2 Agent Threat Rule(s) in tool-poisoning; first rule title: 'MCPwn Runaway Tool Invocation via Retry Directive (CVE-2026-33032)'. Not in CISA KEV. EPSS 0.025. An ATR citation is a lead, not evidence of exploitation or of an AI system.",
+      "identifiers": [
+        "CVE-2026-33032"
+      ],
+      "review": {
+        "decision": null,
+        "notes": "Read the NVD or vendor advisory. Add a vulnerability record only if the product is an AI framework, agent, MCP server or model tool, and link it to a technique from evidence in the advisory."
+      }
+    },
+    {
+      "id": "RQ-ATR-CVE-2024-3402",
+      "status": "candidate",
+      "source_feed_id": "FEED-ATR-RULE-COMMITS",
+      "source_grade": "D",
+      "kind": "vulnerability-candidate",
+      "title": "CVE-2024-3402 (cited by Agent Threat Rules)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-3402",
+      "published": null,
+      "observed_at": "2026-10-10T13:04:09Z",
+      "relevance_score": 40,
+      "matched_terms": [
+        "prompt-injection"
+      ],
+      "summary": "Cited by 2 Agent Threat Rule(s) in prompt-injection; first rule title: 'Direct Prompt Injection via User Input'. Not in CISA KEV. EPSS 0.005. An ATR citation is a lead, not evidence of exploitation or of an AI system.",
+      "identifiers": [
+        "CVE-2024-3402"
+      ],
+      "review": {
+        "decision": null,
+        "notes": "Read the NVD or vendor advisory. Add a vulnerability record only if the product is an AI framework, agent, MCP server or model tool, and link it to a technique from evidence in the advisory."
+      }
+    },
+    {
+      "id": "RQ-ATR-CVE-2025-66689",
+      "status": "candidate",
+      "source_feed_id": "FEED-ATR-RULE-COMMITS",
+      "source_grade": "D",
+      "kind": "vulnerability-candidate",
+      "title": "CVE-2025-66689 (cited by Agent Threat Rules)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-66689",
+      "published": null,
+      "observed_at": "2026-10-10T13:04:09Z",
+      "relevance_score": 40,
+      "matched_terms": [
+        "context-exfiltration",
+        "privilege-escalation"
+      ],
+      "summary": "Cited by 2 Agent Threat Rule(s) in context-exfiltration, privilege-escalation; first rule title: 'Zen MCP Server path-traversal blacklist bypass via non-canonical paths (CVE-2025-66689)'. Not in CISA KEV. EPSS 0.006. An ATR citation is a lead, not evidence of exploitation or of an AI system.",
+      "identifiers": [
+        "CVE-2025-66689"
+      ],
+      "review": {
+        "decision": null,
+        "notes": "Read the NVD or vendor advisory. Add a vulnerability record only if the product is an AI framework, agent, MCP server or model tool, and link it to a technique from evidence in the advisory."
+      }
+    },
+    {
+      "id": "RQ-ATR-CVE-2026-2285",
+      "status": "candidate",
+      "source_feed_id": "FEED-ATR-RULE-COMMITS",
+      "source_grade": "D",
+      "kind": "vulnerability-candidate",
+      "title": "CVE-2026-2285 (cited by Agent Threat Rules)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2285",
+      "published": null,
+      "observed_at": "2026-10-10T13:04:09Z",
+      "relevance_score": 40,
+      "matched_terms": [
+        "privilege-escalation"
+      ],
+      "summary": "Cited by 2 Agent Threat Rule(s) in privilege-escalation; first rule title: 'CrewAI CodeInterpreterTool Sandbox Escape and Prompt-to-Shell RCE (CVE-2026-2275 / VU#221883)'. Not in CISA KEV. EPSS 0.006. An ATR citation is a lead, not evidence of exploitation or of an AI system.",
+      "identifiers": [
+        "CVE-2026-2285"
+      ],
+      "review": {
+        "decision": null,
+        "notes": "Read the NVD or vendor advisory. Add a vulnerability record only if the product is an AI framework, agent, MCP server or model tool, and link it to a technique from evidence in the advisory."
+      }
+    },
+    {
+      "id": "RQ-ATR-CVE-2026-2286",
+      "status": "candidate",
+      "source_feed_id": "FEED-ATR-RULE-COMMITS",
+      "source_grade": "D",
+      "kind": "vulnerability-candidate",
+      "title": "CVE-2026-2286 (cited by Agent Threat Rules)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2286",
+      "published": null,
+      "observed_at": "2026-10-10T13:04:09Z",
+      "relevance_score": 40,
+      "matched_terms": [
+        "privilege-escalation"
+      ],
+      "summary": "Cited by 2 Agent Threat Rule(s) in privilege-escalation; first rule title: 'CrewAI CodeInterpreterTool Sandbox Escape and Prompt-to-Shell RCE (CVE-2026-2275 / VU#221883)'. Not in CISA KEV. EPSS 0.005. An ATR citation is a lead, not evidence of exploitation or of an AI system.",
+      "identifiers": [
+        "CVE-2026-2286"
+      ],
+      "review": {
+        "decision": null,
+        "notes": "Read the NVD or vendor advisory. Add a vulnerability record only if the product is an AI framework, agent, MCP server or model tool, and link it to a technique from evidence in the advisory."
+      }
     }
   ]
 }
