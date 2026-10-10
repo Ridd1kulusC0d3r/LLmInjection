@@ -1,0 +1,36 @@
+{
+  "en": {
+    "voice": "af_heart", "lang": "en-us", "speed": 1.0,
+    "lines": [
+      [0.3, "Who is using A.I. against whom? How do the attacks actually work? And what detects, or stops them?"],
+      [6.1, "This is L L M Injection."],
+      [8.4, "One open dataset of actors, incidents, techniques, tests and detections. Every claim graded, and cited."],
+      [14.4, "The intelligence graph puts every object type in its own column."],
+      [19.4, "Focus a campaign, and every record linked to it lights up, from technique to control."],
+      [27.8, "Hover a technique to trace it. Then click, to open the full record: sources, grade, confidence, framework mapping, and the defensive angle."],
+      [37.6, "The coverage matrix shows where defenses exist, and where they don't."],
+      [42.6, "For every technique: evidence, tests, detections, controls, tools and benchmarks."],
+      [50.3, "Expand any row to see the records behind every number."],
+      [57.4, "Then filter for the gaps. Techniques with no control, or no benchmark."],
+      [63.2, "Or switch to actors and techniques, to see who uses what."],
+      [68.9, "Open. Graded. Defensive first. Star L L M Injection on GitHub."]
+    ]
+  },
+  "pt": {
+    "voice": "pf_dora", "lang": "pt-br", "speed": 1.08,
+    "lines": [
+      [0.3, "Quem está usando inteligência artificial contra quem? Como os ataques funcionam de verdade? E o que detecta, ou impede?"],
+      [6.1, "Este é o éle éle ême Injection."],
+      [8.4, "Um dataset aberto de atores, incidentes, técnicas, testes e detecções. Cada afirmação graduada, e citada."],
+      [14.4, "O grafo de inteligência coloca cada tipo de objeto na sua própria coluna."],
+      [19.4, "Foque uma campanha, e todos os registros ligados a ela acendem, da técnica ao controle."],
+      [27.8, "Passe o mouse numa técnica para rastreá-la. Depois clique, e abra o registro completo: fontes, grau, confiança, frameworks, e o ângulo defensivo."],
+      [37.6, "A matriz de cobertura mostra onde existe defesa, e onde ainda falta."],
+      [42.6, "Para cada técnica: evidências, testes, detecções, controles, ferramentas e benchmarks."],
+      [50.3, "Expanda qualquer linha para ver os registros por trás de cada número."],
+      [57.4, "Depois filtre as lacunas. Técnicas sem controle, ou sem benchmark."],
+      [63.2, "Ou mude para atores e técnicas, e veja quem usa o quê."],
+      [68.9, "Aberto. Graduado. Defensivo primeiro. Dê uma estrela no repositório."]
+    ]
+  }
+}
