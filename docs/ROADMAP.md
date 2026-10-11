@@ -147,6 +147,7 @@ Evidence → Campaign → Technique → Test → Detection → Control → Frame
 - [x] Brazil and Latin America lens in Portuguese, linked to actor and campaign records
 - [x] Source `published` and record `reported` dates, with validator checks
 - [x] Explorer: deep links, CSV export, region filter, maturity and dashboard
+- [x] ATLAS IDs cited by Agent Threat Rules checked against ATLAS 2026.09 (`scripts/atr_atlas_check.py`); our own mappings re-checked
 - [ ] External ATLAS and OWASP IDs for LLMI-T027 and LLMI-T028 (the ATLAS technique pages were unreachable from the authoring environment)
 - [x] CVEs cited by Agent Threat Rules queued as candidates (`scripts/atr_cve_candidates.py`)
 - [ ] Triage the 25 ATR CVE candidates: promote the AI-framework ones into `data/vulnerabilities.json` with a primary advisory
@@ -183,6 +184,7 @@ Evidence → Campaign → Technique → Test → Detection → Control → Frame
 - [ ] Link observed prompt-injection incidents to LLMI-T001 (it has no linked evidence today)
 - [ ] More than one publisher for the 14 techniques that rest on a single one
 - [ ] Per-technique history (how coverage changed between snapshots)
+- [ ] Avaliar um "recibo por ação do agente" (ação, alcance e reversão declarados, efeito observado) na telemetria de agentes; ver [vocabulário de contenção](pt-BR/VOCABULARIO-CONTENCAO-AGENTES.md)
 
 ## v1.4 — AI source intelligence expansion (2026-10-09)
 

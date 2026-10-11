@@ -14,6 +14,22 @@ This changelog records material changes to attribution, confidence, external map
 - An ATR citation is a lead, not evidence. It says a rule author read an advisory, not that the vulnerability was exploited or that the product is an AI system.
 - The ranking favours exploited CVEs, so general web vulnerabilities (a Rails file disclosure, an Adminer SSRF) sit at the top of the list because they are in CISA KEV. Each candidate asks the reviewer to promote it only when the product is an AI framework, agent, MCP server or model tool.
 
+## 2026-10-11 — ATLAS IDs checked against Agent Threat Rules
+
+### Added
+
+- `scripts/atr_atlas_check.py` and `references/crosswalks/atr-atlas.json`: the 45 MITRE ATLAS IDs cited by the 829 Agent Threat Rules (ATR, MIT, commit `5203196`) checked against ATLAS 2026.09. Result: 35 ok, 4 labelled with a name that has since changed (`AML.T0053` "LLM Plugin Compromise", `AML.T0024`, `AML.T0020`, `AML.T0029`), 2 IDs no longer in ATLAS (`AML.T0019` and `AML.T0104`, last present in release 2026.06) and 4 case-study IDs. The report also lists LLMInjection's own ATLAS mappings that no longer match the data;
+- five `related` ATLAS mappings read off the ATLAS descriptions: `AML.T0110.000` to LLMI-T021, `AML.T0018.000` to LLMI-T006, `AML.T0011.001` to LLMI-T012, `AML.T0049` to LLMI-T024 and `AML.T0055` to LLMI-T016.
+
+### Fixed
+
+- LLMI-T006 named `AML.T0020` "Poison Training Data", the label ATLAS replaced with "Training Data Poisoning". It was the only one of our 75 ATLAS mappings that did not match the release.
+
+### Confidence notes
+
+- ATR is a source of hypotheses. That an ATR rule cites an ATLAS ID is not evidence that the technique was observed, and the new mappings are `related`, not `exact`.
+- The status of ATR's IDs is a comparison of names and IDs, not a review of whether each rule fits its technique.
+
 ## 2026-10-10 — Portal rendering and design
 
 ### Fixed

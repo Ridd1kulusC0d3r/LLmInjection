@@ -220,8 +220,67 @@ def eco_section(name: str):
     return lambda: table(ECO_HEAD, eco_rows([e for e in load("ecosystem") if e["section"] == name]))
 
 
+
+LANDSCAPE_HEADLINES = ["METRIC-WEF-AI-DRIVER", "METRIC-GTIG-6H-HARVEST", "METRIC-GTIG-DISTILL", "METRIC-IBM-SUPPLYCHAIN"]
+
+
+def first_sentence(text: str, limit: int = 240) -> str:
+    sentence = re.split(r"(?<=[.!?])\s", re.sub(r"\s+", " ", text).strip(), maxsplit=1)[0]
+    return sentence if len(sentence) <= limit else sentence[: limit - 1].rstrip() + "…"
+
+
+def headline_value(metric: dict) -> str:
+    """The number as the source states it: a bound keeps its sign, so "less than 6 hours" never reads as "6 hours"."""
+    value, unit = metric["value"], metric["unit"]
+    text = f"{value / 1_000_000:g}M" if value >= 1_000_000 else f"{value:g}"
+    if "percent" in unit:
+        text += "%"
+    elif "times" in unit:
+        text += "×"
+    elif "hour" in unit:
+        text += " h"
+    prefix = "&lt; " if "less than" in unit else ("≈ " if "nearly" in unit else "")
+    return f"{prefix}{text}{'+' if 'exceed' in unit else ''}"
+
+
+def landscape_headlines() -> str:
+    """Four headline numbers from the landscape dataset, each with its time window, publisher and source grade."""
+    metrics = {m["id"]: m for m in load("threat-landscape-2026")["key_metrics"]}
+    out = ["| | What it measures | Window | Source |", "|---|---|---|---|"]
+    for m in (metrics[i] for i in LANDSCAPE_HEADLINES if i in metrics):
+        source = m["source"]
+        out.append(f"| **{headline_value(m)}** | {cell(m['name'])} | {cell(m['timeframe'])} | [{cell(source['publisher'])}]({source['url']}), grade {source['grade']} |")
+    return "\n".join(out)
+
+
+def landscape_domains() -> str:
+    """One row per landscape domain: direction, name and the first sentence of what the evidence says."""
+    data = load("threat-landscape-2026")
+    out = ["| Direction | Where it is moving | What the evidence says |", "|---|---|---|"]
+    for d in data["domains"]:
+        out.append(f"| {d['trend']} | **{cell(d['name'])}** | {cell(first_sentence(d['summary']))} |")
+    return "\n".join(out)
+
+
+def landscape_evidence() -> str:
+    """One paragraph on how much of the landscape is observed, demonstrated or only specified, from the datasets."""
+    import coverage_model  # imported here: it reads the rule files, which only this block needs
+
+    techniques = load("techniques")
+    by = {level: sum(1 for t in techniques if t.get("maturity") == level) for level in MATURITY_LEVELS}
+    summary = coverage_model.build()["summary"]
+    return (
+        f"Of the **{len(techniques)} techniques** tracked, **{by['observed-in-the-wild']}** have activity observed in the wild, "
+        f"**{by['disclosed-vulnerability']}** are tied to a disclosed vulnerability, **{by['research-demonstrated']}** are demonstrated in research "
+        f"and **{by['no-linked-evidence']}** have no linked evidence yet (a gap in this repository, not a claim that they are theoretical). "
+        f"On the defensive side, **{summary['detections_with_rule_file']} of {summary['detections_total']}** detections exist as rule files; the rest are specifications."
+    )
+
+
+MATURITY_LEVELS = ["observed-in-the-wild", "disclosed-vulnerability", "research-demonstrated", "no-linked-evidence"]
+
 BLOCKS = {
-    "stats": stats, "maturity": maturity, "glossary": glossary,
+    "stats": stats, "landscape-headlines": landscape_headlines, "landscape-domains": landscape_domains, "landscape-evidence": landscape_evidence, "maturity": maturity, "glossary": glossary,
     **{f"stats-{lang}": stats_lang(lang) for lang in STAT_LABELS}, "actors": actors, "campaigns": campaigns, "incidents": incidents,
     "vulnerabilities": vulnerabilities, "techniques": techniques, "test-cases": test_cases,
     "detections": detections, "controls": controls, "frameworks": frameworks, "models": models,
