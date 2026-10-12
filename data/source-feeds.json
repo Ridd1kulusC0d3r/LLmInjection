@@ -189,6 +189,16 @@
       "enabled": true,
       "max_items": 3,
       "relevance_mode": "all"
+    },
+    {
+      "id": "FEED-ATR-RULE-COMMITS",
+      "name": "Agent Threat Rules: CVEs cited by rules (read from a clone by scripts/atr_cve_candidates.py)",
+      "kind": "github-commits",
+      "url": "https://api.github.com/repos/Agent-Threat-Rule/agent-threat-rules/commits?per_page=10",
+      "source_grade": "D",
+      "enabled": false,
+      "max_items": 1,
+      "relevance_mode": "all"
     }
   ]
 }

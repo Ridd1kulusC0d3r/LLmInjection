@@ -149,6 +149,8 @@ Evidence → Campaign → Technique → Test → Detection → Control → Frame
 - [x] Explorer: deep links, CSV export, region filter, maturity and dashboard
 - [x] ATLAS IDs cited by Agent Threat Rules checked against ATLAS 2026.09 (`scripts/atr_atlas_check.py`); our own mappings re-checked
 - [ ] External ATLAS and OWASP IDs for LLMI-T027 and LLMI-T028 (the ATLAS technique pages were unreachable from the authoring environment)
+- [x] CVEs cited by Agent Threat Rules queued as candidates (`scripts/atr_cve_candidates.py`)
+- [ ] Triage the 25 ATR CVE candidates: promote the AI-framework ones into `data/vulnerabilities.json` with a primary advisory
 - [ ] Link observed prompt-injection incidents to LLMI-T001 and LLMI-T002 so their maturity reflects the evidence
 - [ ] Verify the Navigator layer's ATLAS `domain` value against an ATLAS-aware Navigator build
 - [ ] Primary reports for the Brazil leads in the research queue (Zscaler, Serasa, Banco Central)
