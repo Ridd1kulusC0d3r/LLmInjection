@@ -2,6 +2,20 @@
 
 This changelog records material changes to attribution, confidence, external mappings and structured intelligence. Ordinary prose edits do not belong here.
 
+## 2026-10-12 — Third-party AI-security skills mapped; defender playbooks
+
+### Added
+
+- `scripts/skills_catalog_check.py` and `references/crosswalks/anthropic-cybersecurity-skills.json`: the 14 `ai-security` skills of `mukul975/anthropic-cybersecurity-skills` (Apache-2.0, commit `54a7988`, 818 skills) mapped by analyst judgement to our techniques, link only; ECO-116 for the project;
+- `docs/KNOWLEDGE-STRATEGY.md` with the decision on what is and is not mapped;
+- `scripts/build_playbooks.py` and `docs/playbooks/`: one generated page per technique plus an index;
+- `examples/agent_tool_gate.py` with `tests/test_agent_tool_gate.py`: the first executable version of six safe test cases (`LLMI-T008`).
+
+### Confidence notes
+
+- The offensive and dual-use skills (70 by name) are not mapped. The ATLAS tags on the 79 non-AI skills are not meaningful (66 reach our technique IDs only by accident), so no link is derived from tags.
+- A skill is a procedure, not evidence. It never supports a record, an attribution or a maturity level.
+
 ## 2026-10-11 — CVEs cited by Agent Threat Rules, as research-queue candidates
 
 ### Added

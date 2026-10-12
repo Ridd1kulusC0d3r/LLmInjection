@@ -3023,5 +3023,42 @@
       "last_commit": "2026-10-07",
       "license": "MIT"
     }
+  },
+  {
+    "id": "ECO-116",
+    "type": "ecosystem",
+    "name": "anthropic-cybersecurity-skills",
+    "owner": "mukul975",
+    "url": "https://github.com/mukul975/anthropic-cybersecurity-skills",
+    "section": "catalog",
+    "evidence_class": "curated-list",
+    "priority": "standard",
+    "status": "listed",
+    "techniques": [
+      "LLMI-T001",
+      "LLMI-T002",
+      "LLMI-T003",
+      "LLMI-T004",
+      "LLMI-T005",
+      "LLMI-T006",
+      "LLMI-T007",
+      "LLMI-T008",
+      "LLMI-T011",
+      "LLMI-T017",
+      "LLMI-T019",
+      "LLMI-T021",
+      "LLMI-T025"
+    ],
+    "summary": "Independent community catalogue of 818 agent skills (procedures an AI agent can follow) across 34 security domains, not affiliated with Anthropic. Only its 14 ai-security skills are mapped here, by name and link, in references/crosswalks/anthropic-cybersecurity-skills.json; offensive and general skills are not.",
+    "source_grade": "D",
+    "provenance": "research-sweep 2026-10-12: cloned with git --depth 1; README, SCOPE, index.json and frontmatter of the ai-security skills read; ATLAS IDs checked against ATLAS 2026.09; last commit and license read from the repository; archive flag not visible to git",
+    "added": "2026-10-12",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-10-12",
+      "reachable": true,
+      "last_commit": "2026-08-31",
+      "license": "Apache-2.0"
+    }
   }
 ]

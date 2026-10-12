@@ -10,6 +10,7 @@ Blocks sit between <!-- gen:NAME:start --> and <!-- gen:NAME:end --> markers.
 from __future__ import annotations
 
 import argparse
+import json
 import re
 import sys
 from pathlib import Path
@@ -19,7 +20,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from common import ROOT, load_data  # noqa: E402
 
 README = ROOT / "README.md"
-FILES = [README, *(ROOT / f"README.{name}.md" for name in ("pt-BR", "es", "zh-CN", "ru")), ROOT / "docs" / "ECOSYSTEM.md", ROOT / "docs" / "TRANSLATIONS.md"]
+FILES = [README, *(ROOT / f"README.{name}.md" for name in ("pt-BR", "es", "zh-CN", "ru")), ROOT / "docs" / "ECOSYSTEM.md", ROOT / "docs" / "TRANSLATIONS.md", ROOT / "docs" / "KNOWLEDGE-STRATEGY.md"]
 
 GROUPS = [
     [("Actors", "actors"), ("Campaigns", "campaigns"), ("Incidents", "incidents"),
@@ -277,10 +278,23 @@ def landscape_evidence() -> str:
     )
 
 
+def skills_crosswalk() -> str:
+    """The AI-security skills of the third-party catalogue and the LLMInjection techniques each one is mapped to (links only)."""
+    data = json.loads((ROOT / "references" / "crosswalks" / "anthropic-cybersecurity-skills.json").read_text(encoding="utf-8"))
+    out = ["| Skill (third party, link only) | Role | Our techniques | What it is for |", "|---|---|---|---|"]
+    for s in sorted(data["skills"], key=lambda s: (s["llminjection_techniques"][:1], s["name"])):
+        techs = ", ".join(f"[{t}](playbooks/{t}.md)" for t in s["llminjection_techniques"])
+        out.append(f"| [`{s['name']}`]({s['url']}) | {s['role']} | {techs} | {cell(s['note'])} |")
+    src = data["source"]
+    out.append("")
+    out.append(f"Catalogue snapshot: `{src['repo']}` at commit `{src['commit'][:10]}` ({src['date']}), {src['skills_total']} skills, {src['license']}.")
+    return "\n".join(out)
+
+
 MATURITY_LEVELS = ["observed-in-the-wild", "disclosed-vulnerability", "research-demonstrated", "no-linked-evidence"]
 
 BLOCKS = {
-    "stats": stats, "landscape-headlines": landscape_headlines, "landscape-domains": landscape_domains, "landscape-evidence": landscape_evidence, "maturity": maturity, "glossary": glossary,
+    "stats": stats, "landscape-headlines": landscape_headlines, "landscape-domains": landscape_domains, "landscape-evidence": landscape_evidence, "skills-crosswalk": skills_crosswalk, "maturity": maturity, "glossary": glossary,
     **{f"stats-{lang}": stats_lang(lang) for lang in STAT_LABELS}, "actors": actors, "campaigns": campaigns, "incidents": incidents,
     "vulnerabilities": vulnerabilities, "techniques": techniques, "test-cases": test_cases,
     "detections": detections, "controls": controls, "frameworks": frameworks, "models": models,

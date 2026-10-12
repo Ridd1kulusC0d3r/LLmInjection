@@ -1,0 +1,318 @@
+{
+  "schema_version": "1.0",
+  "note": "Pointers only. LLMInjection links to these procedures and maps them to its own techniques by analyst judgement; it does not copy their content. An independent community project, not affiliated with Anthropic. Not evidence of any threat.",
+  "source": {
+    "repo": "mukul975/anthropic-cybersecurity-skills",
+    "license": "Apache-2.0",
+    "commit": "54a798831d2266a3ca61ce68a7acb80b81160d57",
+    "date": "2026-08-31",
+    "skills_total": 818
+  },
+  "tiers": {
+    "ai-security": {
+      "count": 14,
+      "policy": "mapped by name to LLMInjection techniques, link only"
+    },
+    "other-skills-with-atlas-tags": {
+      "count": 79,
+      "policy": "not mapped: the ATLAS tags are not meaningful outside AI"
+    },
+    "of-which-point-at-llminjection-techniques": 66,
+    "offensive-or-dual-use-by-name": {
+      "count": 70,
+      "policy": "not mapped; revisit only through ATT&CK IDs and an explicit analyst decision"
+    }
+  },
+  "audit": {
+    "curated_skills_missing_from_catalogue": [],
+    "ai_security_skills_not_curated": [],
+    "examples_of_non_ai_skills_with_atlas_tags": [
+      {
+        "name": "analyzing-cloud-storage-access-patterns",
+        "subdomain": "cloud-security",
+        "atlas": [
+          "AML.T0024",
+          "AML.T0056"
+        ]
+      },
+      {
+        "name": "analyzing-dns-logs-for-exfiltration",
+        "subdomain": "soc-operations",
+        "atlas": [
+          "AML.T0024",
+          "AML.T0056",
+          "AML.T0086"
+        ]
+      },
+      {
+        "name": "analyzing-ios-app-security-with-objection",
+        "subdomain": "mobile-security",
+        "atlas": [
+          "AML.T0054"
+        ]
+      },
+      {
+        "name": "analyzing-macro-malware-in-office-documents",
+        "subdomain": "malware-analysis",
+        "atlas": [
+          "AML.T0067",
+          "AML.T0068"
+        ]
+      },
+      {
+        "name": "analyzing-sbom-for-supply-chain-vulnerabilities",
+        "subdomain": "supply-chain-security",
+        "atlas": [
+          "AML.T0010"
+        ]
+      },
+      {
+        "name": "analyzing-security-logs-with-splunk",
+        "subdomain": "incident-response",
+        "atlas": [
+          "AML.T0066",
+          "AML.T0070",
+          "AML.T0082"
+        ]
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "assessing-vector-and-embedding-weaknesses",
+      "url": "https://github.com/mukul975/anthropic-cybersecurity-skills/tree/main/skills/assessing-vector-and-embedding-weaknesses",
+      "role": "assess",
+      "note": "vector-store isolation, embedding inversion and poisoning",
+      "llminjection_techniques": [
+        "LLMI-T007",
+        "LLMI-T004"
+      ],
+      "version": "1.0",
+      "license": "Apache-2.0",
+      "atlas_declared": [
+        "AML.T0024"
+      ],
+      "atlas_unknown": []
+    },
+    {
+      "name": "auditing-mcp-servers-for-tool-poisoning",
+      "url": "https://github.com/mukul975/anthropic-cybersecurity-skills/tree/main/skills/auditing-mcp-servers-for-tool-poisoning",
+      "role": "audit",
+      "note": "tool poisoning, shadowing and rug pulls with an MCP scanner",
+      "llminjection_techniques": [
+        "LLMI-T021",
+        "LLMI-T011"
+      ],
+      "version": "1.0",
+      "license": "Apache-2.0",
+      "atlas_declared": [
+        "AML.T0010"
+      ],
+      "atlas_unknown": []
+    },
+    {
+      "name": "continuous-llm-red-teaming-with-promptfoo",
+      "url": "https://github.com/mukul975/anthropic-cybersecurity-skills/tree/main/skills/continuous-llm-red-teaming-with-promptfoo",
+      "role": "test",
+      "note": "red-team regression gate in CI",
+      "llminjection_techniques": [
+        "LLMI-T001",
+        "LLMI-T002",
+        "LLMI-T003"
+      ],
+      "version": "1.0",
+      "license": "Apache-2.0",
+      "atlas_declared": [
+        "AML.T0051"
+      ],
+      "atlas_unknown": []
+    },
+    {
+      "name": "defending-llms-with-guardrails",
+      "url": "https://github.com/mukul975/anthropic-cybersecurity-skills/tree/main/skills/defending-llms-with-guardrails",
+      "role": "defend",
+      "note": "runtime classifiers and rails in front of the model",
+      "llminjection_techniques": [
+        "LLMI-T001",
+        "LLMI-T003"
+      ],
+      "version": "1.0",
+      "license": "Apache-2.0",
+      "atlas_declared": [
+        "AML.T0054"
+      ],
+      "atlas_unknown": []
+    },
+    {
+      "name": "detecting-ai-model-prompt-injection-attacks",
+      "url": "https://github.com/mukul975/anthropic-cybersecurity-skills/tree/main/skills/detecting-ai-model-prompt-injection-attacks",
+      "role": "detect",
+      "note": "signature, heuristic and classifier detection of injection",
+      "llminjection_techniques": [
+        "LLMI-T001",
+        "LLMI-T002"
+      ],
+      "version": "1.0.0",
+      "license": "Apache-2.0",
+      "atlas_declared": [
+        "AML.T0051",
+        "AML.T0054",
+        "AML.T0056",
+        "AML.T0067",
+        "AML.T0068"
+      ],
+      "atlas_unknown": []
+    },
+    {
+      "name": "detecting-data-and-model-poisoning",
+      "url": "https://github.com/mukul975/anthropic-cybersecurity-skills/tree/main/skills/detecting-data-and-model-poisoning",
+      "role": "detect",
+      "note": "poisoned training data and backdoored models",
+      "llminjection_techniques": [
+        "LLMI-T006"
+      ],
+      "version": "1.0",
+      "license": "Apache-2.0",
+      "atlas_declared": [
+        "AML.T0018",
+        "AML.T0020"
+      ],
+      "atlas_unknown": []
+    },
+    {
+      "name": "detecting-indirect-prompt-injection",
+      "url": "https://github.com/mukul975/anthropic-cybersecurity-skills/tree/main/skills/detecting-indirect-prompt-injection",
+      "role": "detect",
+      "note": "hidden and obfuscated content in documents, pages and images",
+      "llminjection_techniques": [
+        "LLMI-T002",
+        "LLMI-T017",
+        "LLMI-T025"
+      ],
+      "version": "1.0",
+      "license": "Apache-2.0",
+      "atlas_declared": [
+        "AML.T0051.001"
+      ],
+      "atlas_unknown": []
+    },
+    {
+      "name": "detecting-model-extraction-attacks",
+      "url": "https://github.com/mukul975/anthropic-cybersecurity-skills/tree/main/skills/detecting-model-extraction-attacks",
+      "role": "detect",
+      "note": "per-principal query monitoring on inference APIs",
+      "llminjection_techniques": [
+        "LLMI-T005",
+        "LLMI-T019"
+      ],
+      "version": "1.0",
+      "license": "Apache-2.0",
+      "atlas_declared": [
+        "AML.T0024"
+      ],
+      "atlas_unknown": []
+    },
+    {
+      "name": "implementing-llm-guardrails-for-security",
+      "url": "https://github.com/mukul975/anthropic-cybersecurity-skills/tree/main/skills/implementing-llm-guardrails-for-security",
+      "role": "defend",
+      "note": "input and output validation, PII and schema checks",
+      "llminjection_techniques": [
+        "LLMI-T001",
+        "LLMI-T003",
+        "LLMI-T004"
+      ],
+      "version": "1.0.0",
+      "license": "Apache-2.0",
+      "atlas_declared": [
+        "AML.T0051",
+        "AML.T0054",
+        "AML.T0056",
+        "AML.T0057",
+        "AML.T0062"
+      ],
+      "atlas_unknown": []
+    },
+    {
+      "name": "orchestrating-llm-attacks-with-pyrit",
+      "url": "https://github.com/mukul975/anthropic-cybersecurity-skills/tree/main/skills/orchestrating-llm-attacks-with-pyrit",
+      "role": "test",
+      "note": "multi-turn adversarial testing in an authorised lab",
+      "llminjection_techniques": [
+        "LLMI-T001",
+        "LLMI-T003"
+      ],
+      "version": "1.0",
+      "license": "Apache-2.0",
+      "atlas_declared": [
+        "AML.T0051",
+        "AML.T0054"
+      ],
+      "atlas_unknown": []
+    },
+    {
+      "name": "red-teaming-llms-with-garak",
+      "url": "https://github.com/mukul975/anthropic-cybersecurity-skills/tree/main/skills/red-teaming-llms-with-garak",
+      "role": "test",
+      "note": "probe suites and hit-rate triage",
+      "llminjection_techniques": [
+        "LLMI-T001",
+        "LLMI-T003",
+        "LLMI-T004"
+      ],
+      "version": "1.0",
+      "license": "Apache-2.0",
+      "atlas_declared": [
+        "AML.T0051",
+        "AML.T0054"
+      ],
+      "atlas_unknown": []
+    },
+    {
+      "name": "securing-agentic-ai-tool-invocation",
+      "url": "https://github.com/mukul975/anthropic-cybersecurity-skills/tree/main/skills/securing-agentic-ai-tool-invocation",
+      "role": "defend",
+      "note": "allowlist, identity binding, approval and audit at the tool boundary",
+      "llminjection_techniques": [
+        "LLMI-T008"
+      ],
+      "version": "1.0",
+      "license": "Apache-2.0",
+      "atlas_declared": [
+        "AML.T0053"
+      ],
+      "atlas_unknown": []
+    },
+    {
+      "name": "testing-for-system-prompt-leakage",
+      "url": "https://github.com/mukul975/anthropic-cybersecurity-skills/tree/main/skills/testing-for-system-prompt-leakage",
+      "role": "test",
+      "note": "system-prompt and embedded-secret leakage",
+      "llminjection_techniques": [
+        "LLMI-T004"
+      ],
+      "version": "1.0",
+      "license": "Apache-2.0",
+      "atlas_declared": [
+        "AML.T0057"
+      ],
+      "atlas_unknown": []
+    },
+    {
+      "name": "testing-prompt-injection-in-rag-pipelines",
+      "url": "https://github.com/mukul975/anthropic-cybersecurity-skills/tree/main/skills/testing-prompt-injection-in-rag-pipelines",
+      "role": "test",
+      "note": "poisoned retrieved documents and embedding manipulation",
+      "llminjection_techniques": [
+        "LLMI-T002",
+        "LLMI-T007"
+      ],
+      "version": "1.0",
+      "license": "Apache-2.0",
+      "atlas_declared": [
+        "AML.T0051"
+      ],
+      "atlas_unknown": []
+    }
+  ]
+}

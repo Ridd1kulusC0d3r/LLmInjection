@@ -26,7 +26,7 @@ readme:
 	python3 scripts/readme_stats.py
 
 lint:
-	ruff check scripts tests integrations
+	ruff check scripts tests integrations examples
 
 audit:
 	python3 scripts/audit_graph.py --strict

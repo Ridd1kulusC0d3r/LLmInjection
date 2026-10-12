@@ -98,7 +98,7 @@ New [source registry and ingestion guidance](docs/AI-INTELLIGENCE-SOURCES.md), [
 
 | Test cases | Detections | Controls | Frameworks | Model families | Relationships | Ecosystem repos |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| **40** | **45** | **32** | **19** | **12** | **215** | **115** |
+| **40** | **45** | **32** | **19** | **12** | **215** | **116** |
 
 <!-- gen:stats:end -->
 
@@ -113,12 +113,14 @@ LLMInjection is **not a prompt dump**. Every meaningful claim carries a source g
 | Layer | What it holds | Start here |
 |---|---|---|
 | **Actors and campaigns** | State and criminal operators using AI, with vendor tracking labels kept as published | [`data/actors.json`](data/actors.json) · [Actor tracker](docs/ACTOR-TRACKER.md) |
-| **AI × Cyber OT / ICS** | Industrial intelligence sources, evidence boundaries, hypothetical scenarios and offline detection-dataset catalog | [AI × Cyber OT landscape](docs/CYBER-OT-LANDSCAPE.md) |\n| **Threat landscape** | Cited metrics, domains and open research leads for 2026 | [Landscape 2026](docs/THREAT-LANDSCAPE-2026.md) |
+| **AI × Cyber OT / ICS** | Industrial intelligence sources, evidence boundaries, hypothetical scenarios and offline detection-dataset catalog | [AI × Cyber OT landscape](docs/CYBER-OT-LANDSCAPE.md) |
+| **Threat landscape** | Cited metrics, domains and open research leads for 2026 | [Landscape 2026](docs/THREAT-LANDSCAPE-2026.md) |
 | **Brazil and Latin America** | AI-assisted activity against regional targets, in Portuguese, separating what reports claim from what they do not | [Panorama](docs/pt-BR/PANORAMA-BRASIL-LATAM.md) |
 | **Techniques and frameworks** | LLMInjection techniques with a maturity level, mapped to ATLAS, OWASP, NIST, SAIF and MAESTRO | [Frameworks](docs/FRAMEWORKS.md) · [Threat model](docs/AI-THREAT-MODEL.md) |
 | **Safe test lab** | Defensive test cases for prompt, RAG, agent, MCP and supply-chain risks | [Test cases](docs/TEST-CASES.md) · [Lab](docs/LAB.md) |
 | **Detection engineering** | Sigma, KQL, SPL, ES\|QL and YARA-L starter detections | [Detection engineering](docs/DETECTION-ENGINEERING.md) |
 | **Evidence** | Graded sources and explicit relationships behind every record | [Source grading](docs/SOURCE-GRADING.md) · [Methodology](docs/METHODOLOGY.md) |
+| **Defender playbooks** | One generated page per technique: understand, test, detect, prevent, close the loop, and the limits of what we hold | [Playbooks](docs/playbooks/README.md) · [Knowledge strategy](docs/KNOWLEDGE-STRATEGY.md) |
 | **Ecosystem** | Related projects classified by what they can support | [Ecosystem map](docs/ECOSYSTEM.md), [benchmarks](docs/BENCHMARKS.md) |
 
 Exports: `graph.json`, GraphML, STIX 2.1, a static `/api/v1/` JSON API, monthly snapshots with entity-level diffs, and an interactive [Explorer](https://ridd1kulusc0d3r.github.io/LLmInjection/).
@@ -1001,7 +1003,7 @@ The [ecosystem map](docs/ECOSYSTEM.md) classifies related repositories by **what
 | `framework-data` | Taxonomies and knowledge bases | Technique definitions and framework mappings | Observed activity | 7 |
 | `incident-data` | Incident databases | Incident references, citing the primary report | Actor attribution or cyber campaigns (scope is broader than cybersecurity) | 1 |
 | `detection-content` | Community detection rules | Detection ideas and telemetry requirements | Proof of in-the-wild behavior | 4 |
-| `curated-list` | Curated lists | Discovering sources and tools | Any claim on their own | 22 |
+| `curated-list` | Curated lists | Discovering sources and tools | Any claim on their own | 23 |
 | `assessment-tool` | Scanners and red-team tools | Test design and control evaluation | Effectiveness against current models | 28 |
 | `benchmark` | Benchmarks and environments | Reproducible tests and coverage measurement | Real-world prevalence | 13 |
 | `research-technique` | Attack research code | Techniques demonstrated in research | Use in the wild | 16 |
