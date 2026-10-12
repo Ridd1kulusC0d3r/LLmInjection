@@ -180,7 +180,8 @@ Evidence → Campaign → Technique → Test → Detection → Control → Frame
 - [x] First Sigma drafts through Feedly's `create-sigma-rule` method: DET-AI-032 and DET-AI-029 ([SIGMA-DRAFTS.md](SIGMA-DRAFTS.md))
 - [ ] Rule files for the 40 detections that are still specifications; most have no Sigma logsource (agent and model-pipeline telemetry)
 - [ ] A safe test for DET-AI-029, which has none
-- [ ] Execute safe tests and record `lab-result` files, so a cell can say "tested" and not only "designed"
+- [x] First executed safe tests: 6 LLMI-T008 cases against the example gate with a negative control ([LAB-RESULTS.md](LAB-RESULTS.md))
+- [ ] Execute the other 34 safe tests and record `lab-result` files, so a cell can say "tested" and not only "designed"
 - [ ] Link observed prompt-injection incidents to LLMI-T001 (it has no linked evidence today)
 - [ ] More than one publisher for the 14 techniques that rest on a single one
 - [ ] Per-technique history (how coverage changed between snapshots)

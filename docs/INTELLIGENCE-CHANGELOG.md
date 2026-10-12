@@ -11,6 +11,8 @@ This changelog records material changes to attribution, confidence, external map
 - `scripts/build_playbooks.py` and `docs/playbooks/`: one generated page per technique plus an index;
 - `examples/agent_tool_gate.py` with `tests/test_agent_tool_gate.py`: the first executable version of six safe test cases (`LLMI-T008`).
 
+- `examples/run_gate_lab.py`, `lab-results/llmi-t008-gate.json` and `docs/LAB-RESULTS.md`: the first executed safe tests (6 of 40, with a negative control); playbook pages show recorded results.
+
 ### Confidence notes
 
 - The offensive and dual-use skills (70 by name) are not mapped. The ATLAS tags on the 79 non-AI skills are not meaningful (66 reach our technique IDs only by accident), so no link is derived from tags.

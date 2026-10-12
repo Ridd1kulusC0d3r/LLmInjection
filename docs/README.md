@@ -12,6 +12,7 @@ Start with the [README](../README.md#explore-the-project) for the full expandabl
 | [Roadmap](ROADMAP.md) | See what is done and what is next |
 | [Translations](TRANSLATIONS.md) | See what is translated, review a translation or add a language |
 | [Defender playbooks](playbooks/README.md) | Work one technique at a time: understand, test, detect, prevent, and see the limits |
+| [Lab results](LAB-RESULTS.md) | See which safe test cases were actually executed, against what, and what that proves |
 | [Knowledge strategy](KNOWLEDGE-STRATEGY.md) | See what we hold, what we link and why offensive third-party skills are not mapped |
 | [Ecosystem map](ECOSYSTEM.md) | Find related projects, classified by evidence class |
 | [Ecosystem intelligence sweep](ECOSYSTEM-INTELLIGENCE.md) | See what 107 related repositories contain: ATLAS crosswalk, tool coverage, ATR, scanners, benchmarks |

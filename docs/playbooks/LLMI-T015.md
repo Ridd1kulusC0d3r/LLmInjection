@@ -56,6 +56,8 @@ python scripts/run_safe_lab.py --profile agent   # lists the cases for this surf
 
 The runner has plan and mock adapters only: it does not call your system. To run a case, build its stimulus in your own harness (section 7 points at tools that do) and record the outcome in the shape of [`schemas/lab-result.schema.json`](../../schemas/lab-result.schema.json).
 
+**Recorded results:** none. These cases are designed, not tested.
+
 ## 3. Detect it
 
 ### DET-AI-003 · Agent Privilege Boundary Crossing
