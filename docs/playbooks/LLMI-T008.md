@@ -96,6 +96,25 @@ python scripts/run_safe_lab.py --profile mcp   # lists the cases for this surfac
 
 The runner has plan and mock adapters only: it does not call your system. To run a case, build its stimulus in your own harness (section 7 points at tools that do) and record the outcome in the shape of [`schemas/lab-result.schema.json`](../../schemas/lab-result.schema.json).
 
+**Recorded results** (see [LAB-RESULTS](../LAB-RESULTS.md)):
+
+| Case | System under test | Result | Recorded |
+|---|---|---|---|
+| TC-MCP-010 | examples/agent_tool_gate.py | pass | 2026-10-12 |
+| TC-MCP-010 | naive-gate (negative control) | fail | 2026-10-12 |
+| TC-AG-005 | examples/agent_tool_gate.py | pass | 2026-10-12 |
+| TC-AG-005 | naive-gate (negative control) | fail | 2026-10-12 |
+| TC-PARAM-019 | examples/agent_tool_gate.py | pass | 2026-10-12 |
+| TC-PARAM-019 | naive-gate (negative control) | fail | 2026-10-12 |
+| TC-AUTHZ-029 | examples/agent_tool_gate.py | pass | 2026-10-12 |
+| TC-AUTHZ-029 | naive-gate (negative control) | fail | 2026-10-12 |
+| TC-TOOL-030 | examples/agent_tool_gate.py | pass | 2026-10-12 |
+| TC-TOOL-030 | naive-gate (negative control) | fail | 2026-10-12 |
+| TC-AG-006 | examples/agent_tool_gate.py | pass | 2026-10-12 |
+| TC-AG-006 | naive-gate (negative control) | fail | 2026-10-12 |
+
+6 of 6 cases for this technique have a recorded result. The rest are designed, not tested.
+
 **Worked example.** [`examples/agent_tool_gate.py`](../../examples/agent_tool_gate.py) is a small tool-invocation gate and [`tests/test_agent_tool_gate.py`](../../tests/test_agent_tool_gate.py) turns `TC-MCP-010`, `TC-AG-005`, `TC-PARAM-019`, `TC-AUTHZ-029`, `TC-TOOL-030`, `TC-AG-006` into assertions you can run with `python -m unittest`.
 
 ## 3. Detect it
