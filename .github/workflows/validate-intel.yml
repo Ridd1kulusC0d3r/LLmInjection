@@ -52,7 +52,7 @@ jobs:
       - name: Lint
         run: |
           pip install --quiet ruff==0.15.20
-          ruff check scripts tests integrations
+          ruff check scripts tests integrations examples
 
       - name: Compile Python
         run: python -m compileall -q scripts integrations

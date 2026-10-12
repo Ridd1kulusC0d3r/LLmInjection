@@ -24,7 +24,7 @@ Inteligencia de amenazas abierta para sistemas de IA, LLM y agentes: actores, ca
 
 | Casos de prueba | Detecciones | Controles | Marcos | Familias de modelos | Relaciones | Proyectos del ecosistema |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| **40** | **45** | **32** | **19** | **12** | **215** | **115** |
+| **40** | **45** | **32** | **19** | **12** | **215** | **116** |
 
 <!-- gen:stats-es:end -->
 

@@ -184,6 +184,9 @@ Evidence → Campaign → Technique → Test → Detection → Control → Frame
 - [ ] Link observed prompt-injection incidents to LLMI-T001 (it has no linked evidence today)
 - [ ] More than one publisher for the 14 techniques that rest on a single one
 - [ ] Per-technique history (how coverage changed between snapshots)
+- [x] Knowledge strategy ([KNOWLEDGE-STRATEGY.md](KNOWLEDGE-STRATEGY.md)): 14 third-party AI-security skills mapped by link, offensive skills deliberately not mapped, generated defender playbooks for all techniques, first executable example (`examples/agent_tool_gate.py`)
+- [ ] More worked examples under `examples/`, starting with the top of the playbook index
+- [ ] Hand-written practitioner notes under `docs/playbooks/notes/`
 - [ ] Avaliar um "recibo por ação do agente" (ação, alcance e reversão declarados, efeito observado) na telemetria de agentes; ver [vocabulário de contenção](pt-BR/VOCABULARIO-CONTENCAO-AGENTES.md)
 
 ## v1.4 — AI source intelligence expansion (2026-10-09)

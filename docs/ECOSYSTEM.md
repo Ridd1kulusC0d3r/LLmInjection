@@ -23,7 +23,7 @@ A repository listed here can inform test cases, detections, controls and taxonom
 | `framework-data` | Taxonomies and knowledge bases | Technique definitions and framework mappings | Observed activity | 7 |
 | `incident-data` | Incident databases | Incident references, citing the primary report | Actor attribution or cyber campaigns (scope is broader than cybersecurity) | 1 |
 | `detection-content` | Community detection rules | Detection ideas and telemetry requirements | Proof of in-the-wild behavior | 4 |
-| `curated-list` | Curated lists | Discovering sources and tools | Any claim on their own | 22 |
+| `curated-list` | Curated lists | Discovering sources and tools | Any claim on their own | 23 |
 | `assessment-tool` | Scanners and red-team tools | Test design and control evaluation | Effectiveness against current models | 28 |
 | `benchmark` | Benchmarks and environments | Reproducible tests and coverage measurement | Real-world prevalence | 13 |
 | `research-technique` | Attack research code | Techniques demonstrated in research | Use in the wild | 16 |
@@ -105,6 +105,7 @@ Ten entries chosen as the highest-value inputs for taxonomy, evidence, tests and
 | [ubikron/Awesome-AI-OSINT](https://github.com/ubikron/Awesome-AI-OSINT) | `curated-list` | none | 2026-05-05 · none-found | AI tools for OSINT: geolocation, reverse image, dork generation and AI-assisted search. |
 | [7WaySecurity/ai_osint](https://github.com/7WaySecurity/ai_osint) | `curated-list` | none | 2026-06-19 · MIT | Resources mixing OSINT and AI, including Sigma rules and threat-intel tooling. |
 | [OpenOSINT/OpenOSINT](https://github.com/OpenOSINT/OpenOSINT) | `assessment-tool` | none | 2026-10-06 · MIT | LLM agent and MCP server chaining OSINT collectors with an entity graph; analyst tooling, not threat data. |
+| [mukul975/anthropic-cybersecurity-skills](https://github.com/mukul975/anthropic-cybersecurity-skills) | `curated-list` | `LLMI-T001`, `LLMI-T002`, `LLMI-T003`, `LLMI-T004`, `LLMI-T005`, `LLMI-T006`, `LLMI-T007`, `LLMI-T008`, `LLMI-T011`, `LLMI-T017`, `LLMI-T019`, `LLMI-T021`, `LLMI-T025` | 2026-08-31 · Apache-2.0 | Independent community catalogue of 818 agent skills (procedures an AI agent can follow) across 34 security domains, not affiliated with Anthropic. Only its 14 ai-security skills are mapped here, by name and link, in references/crosswalks/anthropic-cybersecurity-skills.json; offensive and general skills are not. |
 
 <!-- gen:eco-catalog:end -->
 
