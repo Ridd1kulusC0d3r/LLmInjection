@@ -36,7 +36,7 @@ jobs:
           set -e
           echo "status=$STATUS" >> "$GITHUB_OUTPUT"
           echo "changed=$(python -c 'import json; d=json.load(open("dist/ai-source-enrichment.json")); print(d["new_count"]+d["updated_count"])')" >> "$GITHUB_OUTPUT"
-      - uses: actions/upload-artifact@v6
+      - uses: actions/upload-artifact@v7
         with:
           name: ai-source-enrichment-audit
           path: |
