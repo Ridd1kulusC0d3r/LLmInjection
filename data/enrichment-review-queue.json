@@ -2,7 +2,1481 @@
   "meta": {
     "schema_version": "1.0",
     "policy": "candidate-only; no automatic CTI promotion",
-    "last_run": null
+    "last_run": "2026-10-27T15:28:07.832910+00:00"
   },
-  "items": []
+  "items": [
+    {
+      "id": "RQ-AI-052285397E5C74CD",
+      "status": "candidate",
+      "source_feed_id": "AISRC-OSV-LOCAL",
+      "source_grade": "A",
+      "kind": "vulnerability-enrichment",
+      "external_id": "CVE-2026-59821",
+      "title": "LiteLLM: Custom Code Guardrails production endpoints bypass code safety checks",
+      "url": "https://osv.dev/vulnerability/CVE-2026-59821",
+      "summary": "Enrichment for already tracked identifier: CVE-2026-59821",
+      "identifiers": [
+        "CVE-2026-59821",
+        "CVE-2026-59821"
+      ],
+      "evidence_sha256": "b7e5ce67f4c85d646cb9c1997fb1bd63840d7367e580cf76f081d690dca93cae",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-05480D927AB71CDD",
+      "status": "candidate",
+      "source_feed_id": "AISRC-CVE-CHANGES",
+      "source_grade": "A",
+      "kind": "repository-change",
+      "external_id": "2a136644bb13b020cdd91c5eb02c813d4b2b14af",
+      "title": "5 changes (2 new | 3 updated):",
+      "url": "https://github.com/CVEProject/cvelistV5/commit/2a136644bb13b020cdd91c5eb02c813d4b2b14af",
+      "summary": "Upstream commit only; not evidence of an AI incident.",
+      "identifiers": [],
+      "evidence_sha256": "773da440e6afa67dfbb7b60c9031a9eeebc55cf3781789c176fea5f560eac3d7",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-0832C8C570804171",
+      "status": "candidate",
+      "source_feed_id": "AISRC-MCP-REGISTRY",
+      "source_grade": "A",
+      "kind": "mcp-inventory",
+      "external_id": "ad.getle/leads",
+      "title": "ad.getle/leads",
+      "url": "https://github.com/Adgrowofficial/getlead-mcp",
+      "summary": "Registry listing, not a security approval.",
+      "identifiers": [],
+      "evidence_sha256": "99e786f8c371b4014e12d18f29bba9a8d9a725300eddd10d22dfaad41c824965",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-0904D30EA7503665",
+      "status": "candidate",
+      "source_feed_id": "AISRC-CVE-CHANGES",
+      "source_grade": "A",
+      "kind": "repository-change",
+      "external_id": "b12aa77752ad980081ca527e3a8fae81c0146cb6",
+      "title": "2 changes (1 new | 1 updated):",
+      "url": "https://github.com/CVEProject/cvelistV5/commit/b12aa77752ad980081ca527e3a8fae81c0146cb6",
+      "summary": "Upstream commit only; not evidence of an AI incident.",
+      "identifiers": [],
+      "evidence_sha256": "d65fefaf28334551a320d1579205f573f8f7fcc60eec89ae92b8d2d3c17a9887",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-0C9CFABDAC49F219",
+      "status": "candidate",
+      "source_feed_id": "AISRC-AVID-REPORTS",
+      "source_grade": "A",
+      "kind": "report-discovery",
+      "external_id": "reports/2026/AVID-2026-R0989.json",
+      "title": "AVID-2026-R0989.json",
+      "url": "https://github.com/avidml/avid-db/blob/main/reports/2026/AVID-2026-R0989.json",
+      "summary": "AVID research record; content and real-world status unverified.",
+      "identifiers": [],
+      "evidence_sha256": "1e5c02d98468423ee0754c6dea1774c147b5da2d0d25d2eb7feee32259e866f8",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-0D89B82B3D229B54",
+      "status": "candidate",
+      "source_feed_id": "AISRC-AVID-REPORTS",
+      "source_grade": "A",
+      "kind": "report-discovery",
+      "external_id": "reports/2026/AVID-2026-R1001.json",
+      "title": "AVID-2026-R1001.json",
+      "url": "https://github.com/avidml/avid-db/blob/main/reports/2026/AVID-2026-R1001.json",
+      "summary": "AVID research record; content and real-world status unverified.",
+      "identifiers": [],
+      "evidence_sha256": "f0deac444f1fd972be75d2c2d804c12159fa757edc7c02f141145731c0f0865a",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-0F151E0B6E3A0B81",
+      "status": "candidate",
+      "source_feed_id": "AISRC-OSV-LOCAL",
+      "source_grade": "A",
+      "kind": "vulnerability-enrichment",
+      "external_id": "CVE-2026-25592",
+      "title": "Semantic Kernel has an Arbitrary File Write via AI Agent Function Calling in .NET SDK",
+      "url": "https://osv.dev/vulnerability/CVE-2026-25592",
+      "summary": "Enrichment for already tracked identifier: CVE-2026-25592",
+      "identifiers": [
+        "CVE-2026-25592",
+        "CVE-2026-25592"
+      ],
+      "evidence_sha256": "9f6cae2979924ffd41f9ca6df9dce06ad8083f62bb378366543c324674d9d334",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-14FCEC748BC4BF04",
+      "status": "candidate",
+      "source_feed_id": "AISRC-AVID-REPORTS",
+      "source_grade": "A",
+      "kind": "report-discovery",
+      "external_id": "reports/2026/AVID-2026-R0992.json",
+      "title": "AVID-2026-R0992.json",
+      "url": "https://github.com/avidml/avid-db/blob/main/reports/2026/AVID-2026-R0992.json",
+      "summary": "AVID research record; content and real-world status unverified.",
+      "identifiers": [],
+      "evidence_sha256": "8803a5ce087ccf1f14c37f41d8cc5588858247d4ef1d807a4122b8cf17e46cc3",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-18CB4C258F076820",
+      "status": "candidate",
+      "source_feed_id": "AISRC-CVE-CHANGES",
+      "source_grade": "A",
+      "kind": "repository-change",
+      "external_id": "704ad55fbc0499a864563d6920952719ca94efba",
+      "title": "6 changes (2 new | 4 updated):",
+      "url": "https://github.com/CVEProject/cvelistV5/commit/704ad55fbc0499a864563d6920952719ca94efba",
+      "summary": "Upstream commit only; not evidence of an AI incident.",
+      "identifiers": [],
+      "evidence_sha256": "9055223dee4f9a879096006bfd6e75f9269709eee081b9b14da4a22b759a6711",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-19C52DB0A805846D",
+      "status": "candidate",
+      "source_feed_id": "AISRC-AVID-REPORTS",
+      "source_grade": "A",
+      "kind": "report-discovery",
+      "external_id": "reports/2026/AVID-2026-R1000.json",
+      "title": "AVID-2026-R1000.json",
+      "url": "https://github.com/avidml/avid-db/blob/main/reports/2026/AVID-2026-R1000.json",
+      "summary": "AVID research record; content and real-world status unverified.",
+      "identifiers": [],
+      "evidence_sha256": "e3164eb4a353be6f3079ba3e44b63fd74433b0e54b02c75918377828d242816e",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-2E7ACEE24030B358",
+      "status": "candidate",
+      "source_feed_id": "AISRC-AVID-REPORTS",
+      "source_grade": "A",
+      "kind": "report-discovery",
+      "external_id": "reports/2026/AVID-2026-R0996.json",
+      "title": "AVID-2026-R0996.json",
+      "url": "https://github.com/avidml/avid-db/blob/main/reports/2026/AVID-2026-R0996.json",
+      "summary": "AVID research record; content and real-world status unverified.",
+      "identifiers": [],
+      "evidence_sha256": "e418e8809bab6a796d0be39889e0022a13087f9058df781f1f96cbe31438d995",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-33D521EE37CB1159",
+      "status": "candidate",
+      "source_feed_id": "AISRC-VERIS-2026",
+      "source_grade": "D",
+      "kind": "secondary-incident-discovery",
+      "external_id": "DR-2026-011",
+      "title": "JADEPUFFER - first documented agentic ransomware (Langflow CVE-2025-3248 entry; destroyed a production database)",
+      "url": "https://github.com/DavidFarago/ai_security_incidents_2026/blob/main/incidents/all_2026_ai_software_security_incidents.json",
+      "summary": "Secondary VERIS compilation; validate original report, dates and rights.",
+      "identifiers": [],
+      "evidence_sha256": "72989a745f3921fef40b2fedd96f559b2f4a2dd1391be2bda3ed5dd179902256",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-3B146CFE3DAAC8B2",
+      "status": "candidate",
+      "source_feed_id": "AISRC-VERIS-2026",
+      "source_grade": "D",
+      "kind": "secondary-incident-discovery",
+      "external_id": "DR-2026-008",
+      "title": "Langflow RCEs actively exploited (CVE-2026-33017, CVE-2026-9198; CISA KEV) with AI-driven exploitation",
+      "url": "https://github.com/DavidFarago/ai_security_incidents_2026/blob/main/incidents/all_2026_ai_software_security_incidents.json",
+      "summary": "Secondary VERIS compilation; validate original report, dates and rights.",
+      "identifiers": [],
+      "evidence_sha256": "736065f26350b05baf7c24465cf914050a8db5d36f1f5909439fd4dc822cd635",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-3BF432CF02912EB6",
+      "status": "candidate",
+      "source_feed_id": "AISRC-OSV-LOCAL",
+      "source_grade": "A",
+      "kind": "vulnerability-enrichment",
+      "external_id": "CVE-2026-33634",
+      "title": "Trivy ecosystem supply chain briefly compromised",
+      "url": "https://osv.dev/vulnerability/CVE-2026-33634",
+      "summary": "Enrichment for already tracked identifier: CVE-2026-33634",
+      "identifiers": [
+        "CVE-2026-33634",
+        "CVE-2026-33634"
+      ],
+      "evidence_sha256": "85ee1253d7653292be285761c9c75c2dd26b9e3c24187b082aa35e3f1d2cc3cc",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-4A7D9A226ADF03FF",
+      "status": "candidate",
+      "source_feed_id": "AISRC-AVID-REPORTS",
+      "source_grade": "A",
+      "kind": "report-discovery",
+      "external_id": "reports/2026/AVID-2026-R0991.json",
+      "title": "AVID-2026-R0991.json",
+      "url": "https://github.com/avidml/avid-db/blob/main/reports/2026/AVID-2026-R0991.json",
+      "summary": "AVID research record; content and real-world status unverified.",
+      "identifiers": [],
+      "evidence_sha256": "e3944db96f31e0756ef2484094200bf7f644920d8767b57c03e2d40b15465943",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-50F459D24A1C9370",
+      "status": "candidate",
+      "source_feed_id": "AISRC-AVID-REPORTS",
+      "source_grade": "A",
+      "kind": "report-discovery",
+      "external_id": "reports/2026/AVID-2026-R0995.json",
+      "title": "AVID-2026-R0995.json",
+      "url": "https://github.com/avidml/avid-db/blob/main/reports/2026/AVID-2026-R0995.json",
+      "summary": "AVID research record; content and real-world status unverified.",
+      "identifiers": [],
+      "evidence_sha256": "5c35e6d3862404bc828758c3eaca6948e991bfe479818a4dc23f80d9c4be6d82",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-51C8B84C0ADF0F99",
+      "status": "candidate",
+      "source_feed_id": "AISRC-OSV-LOCAL",
+      "source_grade": "A",
+      "kind": "vulnerability-enrichment",
+      "external_id": "GHSA-72m8-9m7m-h278",
+      "title": "LiteLLM: Custom Code Guardrails production endpoints bypass code safety checks",
+      "url": "https://osv.dev/vulnerability/GHSA-72m8-9m7m-h278",
+      "summary": "Enrichment for already tracked identifier: GHSA-72m8-9m7m-h278",
+      "identifiers": [
+        "GHSA-72m8-9m7m-h278",
+        "GHSA-72m8-9m7m-h278"
+      ],
+      "evidence_sha256": "e74fe64f47f1be8dadfa35143eb9a16e5a5d50330a77dab23c86d0916e38d984",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-531E676A9507A7D7",
+      "status": "candidate",
+      "source_feed_id": "AISRC-INSPECT-CHANGES",
+      "source_grade": "D",
+      "kind": "repository-change",
+      "external_id": "e3d70e6b1e2adf0f5840ccaf4717692a522f9c7a",
+      "title": "test(cybench): compare relative POSIX paths in git check-ignore test (#2758)",
+      "url": "https://github.com/UKGovernmentBEIS/inspect_evals/commit/e3d70e6b1e2adf0f5840ccaf4717692a522f9c7a",
+      "summary": "Upstream commit only; not evidence of an AI incident.",
+      "identifiers": [],
+      "evidence_sha256": "98122dcab43f6475ef7eb042c18223701685284b0dd10fd61d94463799157a85",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-537AABE798272AF6",
+      "status": "candidate",
+      "source_feed_id": "AISRC-INSPECT-CHANGES",
+      "source_grade": "D",
+      "kind": "repository-change",
+      "external_id": "0fc6c517d469f4466ec9ed59f7f7e4425d89ef35",
+      "title": "fix(tests): read and write repo files as UTF-8 so tests pass on Windows (#2763)",
+      "url": "https://github.com/UKGovernmentBEIS/inspect_evals/commit/0fc6c517d469f4466ec9ed59f7f7e4425d89ef35",
+      "summary": "Upstream commit only; not evidence of an AI incident.",
+      "identifiers": [],
+      "evidence_sha256": "8b7b301391861fc34edbdc6a3965ef574b58f95134bb637f6eec0afbc713031a",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-56855E59A65A149C",
+      "status": "candidate",
+      "source_feed_id": "AISRC-CVE-CHANGES",
+      "source_grade": "A",
+      "kind": "repository-change",
+      "external_id": "17d4bb96d0535298a6900fc5f440ec824c1f0291",
+      "title": "18 changes (1 new | 17 updated):",
+      "url": "https://github.com/CVEProject/cvelistV5/commit/17d4bb96d0535298a6900fc5f440ec824c1f0291",
+      "summary": "Upstream commit only; not evidence of an AI incident.",
+      "identifiers": [],
+      "evidence_sha256": "9c2a6dad29c30325431eebf1030c84bd812b2986187c6f59a4fe8c99da820865",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-592DC04ED8231FB6",
+      "status": "candidate",
+      "source_feed_id": "AISRC-VERIS-2026",
+      "source_grade": "D",
+      "kind": "secondary-incident-discovery",
+      "external_id": "DR-2026-002",
+      "title": "Mexican government mega-breach via jailbroken Claude Code",
+      "url": "https://github.com/DavidFarago/ai_security_incidents_2026/blob/main/incidents/all_2026_ai_software_security_incidents.json",
+      "summary": "Secondary VERIS compilation; validate original report, dates and rights.",
+      "identifiers": [],
+      "evidence_sha256": "6c158eb734a3c1044698eda8777ad73baf33c35a84daf47bed1de3f68331f47e",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-5A9E1BFF6BDF22D6",
+      "status": "candidate",
+      "source_feed_id": "AISRC-INSPECT-CHANGES",
+      "source_grade": "D",
+      "kind": "repository-change",
+      "external_id": "f194f7306e511f250c074cdadcefd3e1953b1017",
+      "title": "fix(run_evals): smoke-test cybergym on a single small task (#2762)",
+      "url": "https://github.com/UKGovernmentBEIS/inspect_evals/commit/f194f7306e511f250c074cdadcefd3e1953b1017",
+      "summary": "Upstream commit only; not evidence of an AI incident.",
+      "identifiers": [],
+      "evidence_sha256": "9f9f0f91c88a4557ec23514803697e9515f374fb0ef9df817eedb342fdc29807",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-62FA442BB4E8B822",
+      "status": "candidate",
+      "source_feed_id": "AISRC-AVID-REPORTS",
+      "source_grade": "A",
+      "kind": "report-discovery",
+      "external_id": "reports/2026/AVID-2026-R0999.json",
+      "title": "AVID-2026-R0999.json",
+      "url": "https://github.com/avidml/avid-db/blob/main/reports/2026/AVID-2026-R0999.json",
+      "summary": "AVID research record; content and real-world status unverified.",
+      "identifiers": [],
+      "evidence_sha256": "e4266d984a7e9cb34eb7c987e0bb0b1d4427b1140640ca5322c2bdadaed9ac96",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-64EA1E5A0A0B98B0",
+      "status": "candidate",
+      "source_feed_id": "AISRC-AVID-REPORTS",
+      "source_grade": "A",
+      "kind": "report-discovery",
+      "external_id": "reports/2026/AVID-2026-R0990.json",
+      "title": "AVID-2026-R0990.json",
+      "url": "https://github.com/avidml/avid-db/blob/main/reports/2026/AVID-2026-R0990.json",
+      "summary": "AVID research record; content and real-world status unverified.",
+      "identifiers": [],
+      "evidence_sha256": "a7b8ad4949052201c3607866ded2e7f104797b5fdf780956440151e4d7e62d84",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-66B0136C08A80590",
+      "status": "candidate",
+      "source_feed_id": "AISRC-MCP-REGISTRY",
+      "source_grade": "A",
+      "kind": "mcp-inventory",
+      "external_id": "academy.ase/periodic-system",
+      "title": "academy.ase/periodic-system",
+      "url": "https://registry.modelcontextprotocol.io/",
+      "summary": "Registry listing, not a security approval.",
+      "identifiers": [],
+      "evidence_sha256": "c70d7a8ac8adee80cd569d0c6cf5d24c1d50336ef7d60eb6e0629f2dcf8d8f25",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-67539D5E1E56F483",
+      "status": "candidate",
+      "source_feed_id": "AISRC-MCP-REGISTRY",
+      "source_grade": "A",
+      "kind": "mcp-inventory",
+      "external_id": "ae.beachclubs/mcp",
+      "title": "ae.beachclubs/mcp",
+      "url": "https://registry.modelcontextprotocol.io/",
+      "summary": "Registry listing, not a security approval.",
+      "identifiers": [],
+      "evidence_sha256": "e8f902f557c30b8786355b0c5a0421fd49fd5b37e5e7394493e271437fef550b",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-6845219C5C58ADDF",
+      "status": "candidate",
+      "source_feed_id": "AISRC-MCP-REGISTRY",
+      "source_grade": "A",
+      "kind": "mcp-inventory",
+      "external_id": "academy.apexai/apex-ai-academy",
+      "title": "academy.apexai/apex-ai-academy",
+      "url": "https://github.com/ApexAI-Academy/sample-agents",
+      "summary": "Registry listing, not a security approval.",
+      "identifiers": [],
+      "evidence_sha256": "5b3b5d654ff7f9080fc173fe9c9eb18c9d4fae27b70403807f3eacd73db2d5d2",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-68A49185ABCDEBAF",
+      "status": "candidate",
+      "source_feed_id": "AISRC-INSPECT-CHANGES",
+      "source_grade": "D",
+      "kind": "repository-change",
+      "external_id": "f4b021366bf1e4daf42261b4bd3484ed3acb3569",
+      "title": "fix(agentdojo): read suite YAML as UTF-8 regardless of locale (#2475)",
+      "url": "https://github.com/UKGovernmentBEIS/inspect_evals/commit/f4b021366bf1e4daf42261b4bd3484ed3acb3569",
+      "summary": "Upstream commit only; not evidence of an AI incident.",
+      "identifiers": [],
+      "evidence_sha256": "4212c52f2632101670844297003ae66e184483ebb821405514e89886da1030ab",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-6D41A959F380EB30",
+      "status": "candidate",
+      "source_feed_id": "AISRC-INSPECT-CHANGES",
+      "source_grade": "D",
+      "kind": "repository-change",
+      "external_id": "7c94269ba6456c11bbaa5cc9b76179fead675e3b",
+      "title": "fix(run_evals): run evals without a shell and kill the process tree on timeout (#2760)",
+      "url": "https://github.com/UKGovernmentBEIS/inspect_evals/commit/7c94269ba6456c11bbaa5cc9b76179fead675e3b",
+      "summary": "Upstream commit only; not evidence of an AI incident.",
+      "identifiers": [],
+      "evidence_sha256": "2d6ceb5fb64b2fbadb2fef1ae0619437b121650e5196a90513e5e1c6e728448c",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-6FA6D9FAEBB27905",
+      "status": "candidate",
+      "source_feed_id": "AISRC-VERIS-2026",
+      "source_grade": "D",
+      "kind": "secondary-incident-discovery",
+      "external_id": "DR-2026-010",
+      "title": "Trivy double compromise - 'hackerbot-claw' autonomous Claude-powered attack bot + TeamPCP re-poisoning",
+      "url": "https://github.com/DavidFarago/ai_security_incidents_2026/blob/main/incidents/all_2026_ai_software_security_incidents.json",
+      "summary": "Secondary VERIS compilation; validate original report, dates and rights.",
+      "identifiers": [],
+      "evidence_sha256": "dd6e043aa3aeb0b3788ef011752d7ee47d9efe2eae9067186c4ee93ee36285c4",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-70633520DCE68363",
+      "status": "candidate",
+      "source_feed_id": "AISRC-AVID-REPORTS",
+      "source_grade": "A",
+      "kind": "report-discovery",
+      "external_id": "reports/2026/AVID-2026-R0984.json",
+      "title": "AVID-2026-R0984.json",
+      "url": "https://github.com/avidml/avid-db/blob/main/reports/2026/AVID-2026-R0984.json",
+      "summary": "AVID research record; content and real-world status unverified.",
+      "identifiers": [],
+      "evidence_sha256": "404df83b29567d6564c89f41f4e6c92da3ae9c42c99264c41667737318d8c135",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-725486C9EE22E047",
+      "status": "candidate",
+      "source_feed_id": "AISRC-AVID-REPORTS",
+      "source_grade": "A",
+      "kind": "report-discovery",
+      "external_id": "reports/2026/AVID-2026-R0987.json",
+      "title": "AVID-2026-R0987.json",
+      "url": "https://github.com/avidml/avid-db/blob/main/reports/2026/AVID-2026-R0987.json",
+      "summary": "AVID research record; content and real-world status unverified.",
+      "identifiers": [],
+      "evidence_sha256": "0feb6bd65220e008eaf608769a8dc27a3631c86e983004c46dba996732d19125",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-73E162816FF7A508",
+      "status": "candidate",
+      "source_feed_id": "AISRC-VERIS-2026",
+      "source_grade": "D",
+      "kind": "secondary-incident-discovery",
+      "external_id": "DR-2026-020",
+      "title": "Sysdig May 10 — AI-agent-driven intrusion from marimo CVE-2026-39987 to full PostgreSQL dump in under an hour",
+      "url": "https://github.com/DavidFarago/ai_security_incidents_2026/blob/main/incidents/all_2026_ai_software_security_incidents.json",
+      "summary": "Secondary VERIS compilation; validate original report, dates and rights.",
+      "identifiers": [],
+      "evidence_sha256": "4c0ec02ed6a8fd8bf3fe8275e22c992d5600e83a1aec24902a4569d733e5aa99",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-752019E1B33387BE",
+      "status": "candidate",
+      "source_feed_id": "AISRC-VERIS-2026",
+      "source_grade": "D",
+      "kind": "secondary-incident-discovery",
+      "external_id": "DB-2026-017",
+      "title": "Attackers abused Meta's AI-powered support (HTS) tool to hijack 20,225 Instagram accounts",
+      "url": "https://github.com/DavidFarago/ai_security_incidents_2026/blob/main/incidents/all_2026_ai_software_security_incidents.json",
+      "summary": "Secondary VERIS compilation; validate original report, dates and rights.",
+      "identifiers": [],
+      "evidence_sha256": "7f0aec5146ab7cc07622d162108b9a91198ac30a94671cfed8a535632ef4a547",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-77918B1EF87DB197",
+      "status": "candidate",
+      "source_feed_id": "AISRC-CVE-CHANGES",
+      "source_grade": "A",
+      "kind": "repository-change",
+      "external_id": "b5c0ed89d1d330aa41e140af592a92794ebb7b6a",
+      "title": "31 changes (3 new | 28 updated):",
+      "url": "https://github.com/CVEProject/cvelistV5/commit/b5c0ed89d1d330aa41e140af592a92794ebb7b6a",
+      "summary": "Upstream commit only; not evidence of an AI incident.",
+      "identifiers": [],
+      "evidence_sha256": "0fb6fda2733af3f758ed34298985785eb6cad38765d89701fff546238afe1e82",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-7A6F78E99E87FAC0",
+      "status": "candidate",
+      "source_feed_id": "AISRC-VERIS-2026",
+      "source_grade": "D",
+      "kind": "secondary-incident-discovery",
+      "external_id": "DB-2026-019",
+      "title": "Claude Opus 4.7 breached a real company it mistook for its fictional target during an Anthropic cyber evaluation",
+      "url": "https://github.com/DavidFarago/ai_security_incidents_2026/blob/main/incidents/all_2026_ai_software_security_incidents.json",
+      "summary": "Secondary VERIS compilation; validate original report, dates and rights.",
+      "identifiers": [],
+      "evidence_sha256": "2c8bd8e50eefd89bf834cb41a13613e745f8649329653a90dffda8a97da18906",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-8541653B5B5954B0",
+      "status": "candidate",
+      "source_feed_id": "AISRC-INSPECT-CHANGES",
+      "source_grade": "D",
+      "kind": "repository-change",
+      "external_id": "f426e72047f0b465527fc31113f2d75ae3feb197",
+      "title": "BrowseComp: replace deprecated web_browser with web_search (#2721)",
+      "url": "https://github.com/UKGovernmentBEIS/inspect_evals/commit/f426e72047f0b465527fc31113f2d75ae3feb197",
+      "summary": "Upstream commit only; not evidence of an AI incident.",
+      "identifiers": [],
+      "evidence_sha256": "24b2905d819b377a781b1235acfbf9844ab731f3192e1becd5121ed5394ebf67",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-8B799FBB6393EA94",
+      "status": "candidate",
+      "source_feed_id": "AISRC-VERIS-2026",
+      "source_grade": "D",
+      "kind": "secondary-incident-discovery",
+      "external_id": "DB-2026-001",
+      "title": "LiteLLM AI-gateway PyPI supply-chain compromise (TeamPCP) — terabytes of credentials from 2,500+ orgs",
+      "url": "https://github.com/DavidFarago/ai_security_incidents_2026/blob/main/incidents/all_2026_ai_software_security_incidents.json",
+      "summary": "Secondary VERIS compilation; validate original report, dates and rights.",
+      "identifiers": [],
+      "evidence_sha256": "85013c0a282734010c45d6ac55226d78dd35647f37566c13da7ebac8b2a510c4",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-8EAEC74780A953A2",
+      "status": "candidate",
+      "source_feed_id": "AISRC-VERIS-2026",
+      "source_grade": "D",
+      "kind": "secondary-incident-discovery",
+      "external_id": "DB-2026-004",
+      "title": "Novo Nordisk breach — clinical-trial data AND internal AI model assets stolen (FulcrumSec)",
+      "url": "https://github.com/DavidFarago/ai_security_incidents_2026/blob/main/incidents/all_2026_ai_software_security_incidents.json",
+      "summary": "Secondary VERIS compilation; validate original report, dates and rights.",
+      "identifiers": [],
+      "evidence_sha256": "084c81cfeb3799ce908f3acaa9fcb81d3c7d9f263d9129d6f45c1154f85c9bf6",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-9430CA284AA9699C",
+      "status": "candidate",
+      "source_feed_id": "AISRC-VERIS-2026",
+      "source_grade": "D",
+      "kind": "secondary-incident-discovery",
+      "external_id": "DB-2026-014",
+      "title": "Cursor agent (Claude Opus 4.6) deleted PocketOS production DB + all backups via over-scoped Railway token",
+      "url": "https://github.com/DavidFarago/ai_security_incidents_2026/blob/main/incidents/all_2026_ai_software_security_incidents.json",
+      "summary": "Secondary VERIS compilation; validate original report, dates and rights.",
+      "identifiers": [],
+      "evidence_sha256": "46181d73389b7ba0ea505a64ccd037d8a5ade007fd7e353152e45fea0cf42ef4",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-94C88082E56CC2DB",
+      "status": "candidate",
+      "source_feed_id": "AISRC-VERIS-2026",
+      "source_grade": "D",
+      "kind": "secondary-incident-discovery",
+      "external_id": "DB-2026-006",
+      "title": "OpenAI evaluation agents escaped their sandbox via Artifactory 0-days and breached Hugging Face",
+      "url": "https://github.com/DavidFarago/ai_security_incidents_2026/blob/main/incidents/all_2026_ai_software_security_incidents.json",
+      "summary": "Secondary VERIS compilation; validate original report, dates and rights.",
+      "identifiers": [],
+      "evidence_sha256": "85c4522e0e415461d4f502732a8a174e79ee49cfca24ed11005ab2543f718dd2",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-9774493CF86465AF",
+      "status": "candidate",
+      "source_feed_id": "AISRC-AVID-REPORTS",
+      "source_grade": "A",
+      "kind": "report-discovery",
+      "external_id": "reports/2026/AVID-2026-R0986.json",
+      "title": "AVID-2026-R0986.json",
+      "url": "https://github.com/avidml/avid-db/blob/main/reports/2026/AVID-2026-R0986.json",
+      "summary": "AVID research record; content and real-world status unverified.",
+      "identifiers": [],
+      "evidence_sha256": "737002e7e672ed31c00b2b6c5fdb265256c8f56d08b0c1bf187e5122d113b8da",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-97F2B842E06EE377",
+      "status": "candidate",
+      "source_feed_id": "AISRC-AVID-REPORTS",
+      "source_grade": "A",
+      "kind": "report-discovery",
+      "external_id": "reports/2026/AVID-2026-R1002.json",
+      "title": "AVID-2026-R1002.json",
+      "url": "https://github.com/avidml/avid-db/blob/main/reports/2026/AVID-2026-R1002.json",
+      "summary": "AVID research record; content and real-world status unverified.",
+      "identifiers": [],
+      "evidence_sha256": "c0fc6e0352181c6a063b2c3cd6453c3ea30b0f4f2d9c725d8374c3818fd17070",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-99BA16289EC55ABC",
+      "status": "candidate",
+      "source_feed_id": "AISRC-INSPECT-CHANGES",
+      "source_grade": "D",
+      "kind": "repository-change",
+      "external_id": "4db866741259123cb0c644a65e2df5b1725215dd",
+      "title": "test(register): build lint_submission fixture root from the cwd anchor (#2759)",
+      "url": "https://github.com/UKGovernmentBEIS/inspect_evals/commit/4db866741259123cb0c644a65e2df5b1725215dd",
+      "summary": "Upstream commit only; not evidence of an AI incident.",
+      "identifiers": [],
+      "evidence_sha256": "3005626641040d8e9c90cf8ac6b7c88b1939c5edff2f7ccb6b6c2721fc891f9e",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-9D406B01D5915CBF",
+      "status": "candidate",
+      "source_feed_id": "AISRC-CVE-CHANGES",
+      "source_grade": "A",
+      "kind": "repository-change",
+      "external_id": "3a3a44b03fdf912f188521fe4e55b11874235c47",
+      "title": "198 changes (168 new | 30 updated):",
+      "url": "https://github.com/CVEProject/cvelistV5/commit/3a3a44b03fdf912f188521fe4e55b11874235c47",
+      "summary": "Upstream commit only; not evidence of an AI incident.",
+      "identifiers": [],
+      "evidence_sha256": "47e00939e055c5b50df6aa04c69a294c14ec817efc8f8ae4b9df47a460b69144",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-A678B4022466D33B",
+      "status": "candidate",
+      "source_feed_id": "AISRC-AVID-REPORTS",
+      "source_grade": "A",
+      "kind": "report-discovery",
+      "external_id": "reports/2026/AVID-2026-R0983.json",
+      "title": "AVID-2026-R0983.json",
+      "url": "https://github.com/avidml/avid-db/blob/main/reports/2026/AVID-2026-R0983.json",
+      "summary": "AVID research record; content and real-world status unverified.",
+      "identifiers": [],
+      "evidence_sha256": "4f2632259ed99686201af07c44eb495118331a113d6d7a3308eb8f3a81c86ac4",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-A7C80D07954916C4",
+      "status": "candidate",
+      "source_feed_id": "AISRC-AVID-REPORTS",
+      "source_grade": "A",
+      "kind": "report-discovery",
+      "external_id": "reports/2026/AVID-2026-R0988.json",
+      "title": "AVID-2026-R0988.json",
+      "url": "https://github.com/avidml/avid-db/blob/main/reports/2026/AVID-2026-R0988.json",
+      "summary": "AVID research record; content and real-world status unverified.",
+      "identifiers": [],
+      "evidence_sha256": "c256e47c5876cb893faaff6db6498e9e8d7257ff5c145657ba500dc754871bbc",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-A957273823BC2888",
+      "status": "candidate",
+      "source_feed_id": "AISRC-OSV-LOCAL",
+      "source_grade": "A",
+      "kind": "vulnerability-enrichment",
+      "external_id": "GHSA-7488-6r32-c95q",
+      "title": "LiteLLM: MCP Authentication Bypass via OAuth2 Passthrough Fallback",
+      "url": "https://osv.dev/vulnerability/GHSA-7488-6r32-c95q",
+      "summary": "Enrichment for already tracked identifier: GHSA-7488-6r32-c95q",
+      "identifiers": [
+        "GHSA-7488-6r32-c95q",
+        "GHSA-7488-6r32-c95q"
+      ],
+      "evidence_sha256": "37a81c426da63e5c04febe24ab303680cb08c952aa4fd3d0ac72283e821a06b2",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-AAAE9FA21D2E0206",
+      "status": "candidate",
+      "source_feed_id": "AISRC-VERIS-2026",
+      "source_grade": "D",
+      "kind": "secondary-incident-discovery",
+      "external_id": "DR-2026-007",
+      "title": "Hermes + OpenClaw multi-agent campaign against Taiwanese government systems",
+      "url": "https://github.com/DavidFarago/ai_security_incidents_2026/blob/main/incidents/all_2026_ai_software_security_incidents.json",
+      "summary": "Secondary VERIS compilation; validate original report, dates and rights.",
+      "identifiers": [],
+      "evidence_sha256": "521114cafd7d96883c90bd0f14a89e4dbdded0b497d0fe8453d83bb1cf78a104",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-AC722D8AD65072FC",
+      "status": "candidate",
+      "source_feed_id": "AISRC-OSV-LOCAL",
+      "source_grade": "A",
+      "kind": "vulnerability-enrichment",
+      "external_id": "GHSA-4jcj-7x88-m979",
+      "title": "LiteLLM: MCP Proxy Has Improper Authentication",
+      "url": "https://osv.dev/vulnerability/GHSA-4jcj-7x88-m979",
+      "summary": "Enrichment for already tracked identifier: GHSA-4jcj-7x88-m979",
+      "identifiers": [
+        "GHSA-4jcj-7x88-m979",
+        "GHSA-4jcj-7x88-m979"
+      ],
+      "evidence_sha256": "615f8c7d6828bb83c30231540c3b9c43d7b93aa8c3478f35888508acd8a7ffd2",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-ADF7E20172B96E01",
+      "status": "candidate",
+      "source_feed_id": "AISRC-VERIS-2026",
+      "source_grade": "D",
+      "kind": "secondary-incident-discovery",
+      "external_id": "DB-2026-016",
+      "title": "Chat & Ask AI (Codeway) Firebase misconfiguration exposed ~300M messages / 25M users",
+      "url": "https://github.com/DavidFarago/ai_security_incidents_2026/blob/main/incidents/all_2026_ai_software_security_incidents.json",
+      "summary": "Secondary VERIS compilation; validate original report, dates and rights.",
+      "identifiers": [],
+      "evidence_sha256": "9d028e64149e6f1fceb78c423f0ec9d1a46dd57922e1a42cda51d8d80351bdf9",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-AF0DDA846A3ECC80",
+      "status": "candidate",
+      "source_feed_id": "AISRC-VERIS-2026",
+      "source_grade": "D",
+      "kind": "secondary-incident-discovery",
+      "external_id": "DB-2026-013",
+      "title": "Malicious ClawHub 'skills' weaponise OpenClaw agents (ClawHavoc) — AMOS stealer / credential theft",
+      "url": "https://github.com/DavidFarago/ai_security_incidents_2026/blob/main/incidents/all_2026_ai_software_security_incidents.json",
+      "summary": "Secondary VERIS compilation; validate original report, dates and rights.",
+      "identifiers": [],
+      "evidence_sha256": "d0bf5ea31c022be8ff1844762e0428b285febf714e8fc2e0bce30b0a344bd48d",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-B4ED33C239440A79",
+      "status": "candidate",
+      "source_feed_id": "AISRC-AVID-REPORTS",
+      "source_grade": "A",
+      "kind": "report-discovery",
+      "external_id": "reports/2026/AVID-2026-R0993.json",
+      "title": "AVID-2026-R0993.json",
+      "url": "https://github.com/avidml/avid-db/blob/main/reports/2026/AVID-2026-R0993.json",
+      "summary": "AVID research record; content and real-world status unverified.",
+      "identifiers": [],
+      "evidence_sha256": "f66d8da0bd3081ca538f40619967d69511a54146f09181158c8988097e3a2157",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-BA92928037280A55",
+      "status": "candidate",
+      "source_feed_id": "AISRC-CVE-CHANGES",
+      "source_grade": "A",
+      "kind": "repository-change",
+      "external_id": "8587184b7e218ac3c7762c9bfe5d664205226489",
+      "title": "48 changes (27 new | 21 updated):",
+      "url": "https://github.com/CVEProject/cvelistV5/commit/8587184b7e218ac3c7762c9bfe5d664205226489",
+      "summary": "Upstream commit only; not evidence of an AI incident.",
+      "identifiers": [],
+      "evidence_sha256": "2f88532a7d0cf3f975757e7c3b27b8cffc371a1362ef5facb378a1d6f78fb636",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-BC89AA21E4C982CD",
+      "status": "candidate",
+      "source_feed_id": "AISRC-OSV-LOCAL",
+      "source_grade": "A",
+      "kind": "vulnerability-enrichment",
+      "external_id": "GHSA-mcj4-mphf-j9ff",
+      "title": "Trivy has a path traversal via a crafted vulnerability database or other downloaded artifacts",
+      "url": "https://osv.dev/vulnerability/GHSA-mcj4-mphf-j9ff",
+      "summary": "Enrichment for already tracked identifier: GHSA-mcj4-mphf-j9ff",
+      "identifiers": [
+        "GHSA-mcj4-mphf-j9ff",
+        "GHSA-mcj4-mphf-j9ff"
+      ],
+      "evidence_sha256": "241bebce763c67050954ab3c2bce1dadc9fee25ac57c03dea0b01e3dcab5e598",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-BE615DB675B5D149",
+      "status": "candidate",
+      "source_feed_id": "AISRC-VERIS-2026",
+      "source_grade": "D",
+      "kind": "secondary-incident-discovery",
+      "external_id": "DB-2026-005",
+      "title": "'Miasma' worm targeted AI coding agents via poisoned Microsoft/Azure repos (73 repos disabled)",
+      "url": "https://github.com/DavidFarago/ai_security_incidents_2026/blob/main/incidents/all_2026_ai_software_security_incidents.json",
+      "summary": "Secondary VERIS compilation; validate original report, dates and rights.",
+      "identifiers": [],
+      "evidence_sha256": "482b5cbf645e5a945d1b408a81410dff20047c318920de68894deadb342086d1",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-C0BDA54115F56CCB",
+      "status": "candidate",
+      "source_feed_id": "AISRC-VERIS-2026",
+      "source_grade": "D",
+      "kind": "secondary-incident-discovery",
+      "external_id": "DR-2026-012",
+      "title": "CHAINDROP (keyv/cacheable) npm worm - 452 packages; persistence hooks planted in .claude/settings.json and .vscode/tasks.json (CVE-2026-45321)",
+      "url": "https://github.com/DavidFarago/ai_security_incidents_2026/blob/main/incidents/all_2026_ai_software_security_incidents.json",
+      "summary": "Secondary VERIS compilation; validate original report, dates and rights.",
+      "identifiers": [],
+      "evidence_sha256": "528a44a180fa37502ba972dcd503c15fcb337b8f89ec3fe6a881a4e8d9249ebd",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-C34DB75208CF4642",
+      "status": "candidate",
+      "source_feed_id": "AISRC-INSPECT-CHANGES",
+      "source_grade": "D",
+      "kind": "repository-change",
+      "external_id": "cc193dc367363affb3d4b3b1a0fb1dbb459cb830",
+      "title": "Migrate TheAgentCompany browser to sandboxed Playwright MCP (#2737)",
+      "url": "https://github.com/UKGovernmentBEIS/inspect_evals/commit/cc193dc367363affb3d4b3b1a0fb1dbb459cb830",
+      "summary": "Upstream commit only; not evidence of an AI incident.",
+      "identifiers": [],
+      "evidence_sha256": "54c2b95ad6d607c7e36f48be21001575cd13853b2b5f20401af34db785a9c329",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-C5EDC1444CAC4663",
+      "status": "candidate",
+      "source_feed_id": "AISRC-VERIS-2026",
+      "source_grade": "D",
+      "kind": "secondary-incident-discovery",
+      "external_id": "DB-2026-015",
+      "title": "CBSE OnMark exam platform exposed 9.3M student rows; vendor processed student data via Google Gemini",
+      "url": "https://github.com/DavidFarago/ai_security_incidents_2026/blob/main/incidents/all_2026_ai_software_security_incidents.json",
+      "summary": "Secondary VERIS compilation; validate original report, dates and rights.",
+      "identifiers": [],
+      "evidence_sha256": "90312b906141d25f20378eb9cad18558200f1c20bddbd36ac750591c1b834934",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-CB1FE21EBCDD4C65",
+      "status": "candidate",
+      "source_feed_id": "AISRC-AVID-REPORTS",
+      "source_grade": "A",
+      "kind": "report-discovery",
+      "external_id": "reports/2026/AVID-2026-R0994.json",
+      "title": "AVID-2026-R0994.json",
+      "url": "https://github.com/avidml/avid-db/blob/main/reports/2026/AVID-2026-R0994.json",
+      "summary": "AVID research record; content and real-world status unverified.",
+      "identifiers": [],
+      "evidence_sha256": "c8083cb2d9551c45277f8741065106d3cd8628623067a3933e380ef7d2ddf4cc",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-D394FBA39ED5A6BD",
+      "status": "candidate",
+      "source_feed_id": "AISRC-OSV-LOCAL",
+      "source_grade": "A",
+      "kind": "vulnerability-enrichment",
+      "external_id": "CVE-2026-12773",
+      "title": "BerriAI litellm MCP Proxy user_api_key_auth_mcp.py UserAPIKeyAuth improper authentication",
+      "url": "https://osv.dev/vulnerability/CVE-2026-12773",
+      "summary": "Enrichment for already tracked identifier: CVE-2026-12773",
+      "identifiers": [
+        "CVE-2026-12773",
+        "CVE-2026-12773"
+      ],
+      "evidence_sha256": "4a44863e7647d697197b511a6410c3ccf70ff3776c8d1e384ea18e5c3c2d4e81",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-D39B4DEC3250935C",
+      "status": "candidate",
+      "source_feed_id": "AISRC-CVE-CHANGES",
+      "source_grade": "A",
+      "kind": "repository-change",
+      "external_id": "6c9b5f316b4d80f50f38c4ad01f701b8114156ee",
+      "title": "2 changes (1 new | 1 updated):",
+      "url": "https://github.com/CVEProject/cvelistV5/commit/6c9b5f316b4d80f50f38c4ad01f701b8114156ee",
+      "summary": "Upstream commit only; not evidence of an AI incident.",
+      "identifiers": [],
+      "evidence_sha256": "53b47901265d7b83560031a4b5f1e09b341020ef8b54cd46362ee83240f8b0bd",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-D404224D0D956211",
+      "status": "candidate",
+      "source_feed_id": "AISRC-CVE-CHANGES",
+      "source_grade": "A",
+      "kind": "repository-change",
+      "external_id": "26f329d794d81815df20240533e04717e27dffd7",
+      "title": "14 changes (5 new | 9 updated):",
+      "url": "https://github.com/CVEProject/cvelistV5/commit/26f329d794d81815df20240533e04717e27dffd7",
+      "summary": "Upstream commit only; not evidence of an AI incident.",
+      "identifiers": [],
+      "evidence_sha256": "f91368d7cba771a245d58b90f23e763ddbcb5b7db66525f6cfbf3a622adfbb3a",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-D555A768709DA65F",
+      "status": "candidate",
+      "source_feed_id": "AISRC-MCP-REGISTRY",
+      "source_grade": "A",
+      "kind": "mcp-inventory",
+      "external_id": "ac.inference.sh/mcp",
+      "title": "ac.inference.sh/mcp",
+      "url": "https://registry.modelcontextprotocol.io/",
+      "summary": "Registry listing, not a security approval.",
+      "identifiers": [],
+      "evidence_sha256": "4956b302f1f5a1a4af2bf950dca8d6711720cc9599d1508dcc616bd502320e65",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-DB1FD5B5EBECB1E9",
+      "status": "candidate",
+      "source_feed_id": "AISRC-CVE-CHANGES",
+      "source_grade": "A",
+      "kind": "repository-change",
+      "external_id": "c1a4d392457ca4051ca0d96319336cae50cff150",
+      "title": "11 changes (10 new | 1 updated):",
+      "url": "https://github.com/CVEProject/cvelistV5/commit/c1a4d392457ca4051ca0d96319336cae50cff150",
+      "summary": "Upstream commit only; not evidence of an AI incident.",
+      "identifiers": [],
+      "evidence_sha256": "7650276affd6f1c45e41e3e4404c482811e826ab672f2027e3b186f877c2c29c",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-DCFFF2BCA9151D0A",
+      "status": "candidate",
+      "source_feed_id": "AISRC-OSV-LOCAL",
+      "source_grade": "A",
+      "kind": "vulnerability-enrichment",
+      "external_id": "GHSA-69fq-xp46-6x23",
+      "title": "Trivy ecosystem supply chain was briefly compromised",
+      "url": "https://osv.dev/vulnerability/GHSA-69fq-xp46-6x23",
+      "summary": "Enrichment for already tracked identifier: GHSA-69fq-xp46-6x23",
+      "identifiers": [
+        "GHSA-69fq-xp46-6x23",
+        "GHSA-69fq-xp46-6x23"
+      ],
+      "evidence_sha256": "47865ac8240f0dd781308712c0d223b4fb19f45d66cc21a21b57228a8931c938",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-E012B760F0CA2DF6",
+      "status": "candidate",
+      "source_feed_id": "AISRC-AVID-REPORTS",
+      "source_grade": "A",
+      "kind": "report-discovery",
+      "external_id": "reports/2026/AVID-2026-R0997.json",
+      "title": "AVID-2026-R0997.json",
+      "url": "https://github.com/avidml/avid-db/blob/main/reports/2026/AVID-2026-R0997.json",
+      "summary": "AVID research record; content and real-world status unverified.",
+      "identifiers": [],
+      "evidence_sha256": "fab0dfb6d35b0db924ff972af4bf70e52c5a26f122877c1a8d47f29514b1735e",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-E4162F94D8F8A551",
+      "status": "candidate",
+      "source_feed_id": "AISRC-MCP-REGISTRY",
+      "source_grade": "A",
+      "kind": "mcp-inventory",
+      "external_id": "ae.brainy/grocery-prices",
+      "title": "ae.brainy/grocery-prices",
+      "url": "https://registry.modelcontextprotocol.io/",
+      "summary": "Registry listing, not a security approval.",
+      "identifiers": [],
+      "evidence_sha256": "64a3ed3efdac6adf4d8a2b34586f6bd6ca2be410efb369765b3ec9056812d130",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-E418F4D87E1F9E04",
+      "status": "candidate",
+      "source_feed_id": "AISRC-MCP-REGISTRY",
+      "source_grade": "A",
+      "kind": "mcp-inventory",
+      "external_id": "ad.inside/inside-ads",
+      "title": "ad.inside/inside-ads",
+      "url": "https://registry.modelcontextprotocol.io/",
+      "summary": "Registry listing, not a security approval.",
+      "identifiers": [],
+      "evidence_sha256": "ff6acccda67de54a5f224596a0a46c926c7ae1f3c5a20c4ebfa791060589a80b",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-E969C6B18A57EC63",
+      "status": "candidate",
+      "source_feed_id": "AISRC-MCP-REGISTRY",
+      "source_grade": "A",
+      "kind": "mcp-inventory",
+      "external_id": "ac.snag/snag",
+      "title": "ac.snag/snag",
+      "url": "https://registry.modelcontextprotocol.io/",
+      "summary": "Registry listing, not a security approval.",
+      "identifiers": [],
+      "evidence_sha256": "7b8849ffc10bfa3dcd1a708ee9b39885c0f8692ed770401026a0e80145bd0a2d",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-EB46BFA6F9935E27",
+      "status": "candidate",
+      "source_feed_id": "AISRC-INSPECT-CHANGES",
+      "source_grade": "D",
+      "kind": "repository-change",
+      "external_id": "cb2e67912618bb0080b12b9679ea1f63e0f2d5d3",
+      "title": "fix(smoke): drop stale cyse4_threat_intelligence CI skip (#2757)",
+      "url": "https://github.com/UKGovernmentBEIS/inspect_evals/commit/cb2e67912618bb0080b12b9679ea1f63e0f2d5d3",
+      "summary": "Upstream commit only; not evidence of an AI incident.",
+      "identifiers": [],
+      "evidence_sha256": "ea7b32796802337361fcde7e59403344ba4191770d4c4af286b8febe411a87b3",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-EB66BFC1400053B7",
+      "status": "candidate",
+      "source_feed_id": "AISRC-OSV-LOCAL",
+      "source_grade": "A",
+      "kind": "vulnerability-enrichment",
+      "external_id": "CVE-2026-26030",
+      "title": "Microsoft Semantic Kernel InMemoryVectorStore filter functionality vulnerable to remote code execution",
+      "url": "https://osv.dev/vulnerability/CVE-2026-26030",
+      "summary": "Enrichment for already tracked identifier: CVE-2026-26030",
+      "identifiers": [
+        "CVE-2026-26030",
+        "CVE-2026-26030"
+      ],
+      "evidence_sha256": "1a1abe5c7f755d7771751ef723eba7cbd24e5729ac2cfc26c9fa432fe652c2ab",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-EEB2BCF79BCDA58B",
+      "status": "candidate",
+      "source_feed_id": "AISRC-MCP-REGISTRY",
+      "source_grade": "A",
+      "kind": "mcp-inventory",
+      "external_id": "ac.tandem/docs-mcp",
+      "title": "ac.tandem/docs-mcp",
+      "url": "https://github.com/frumu-ai/tandem",
+      "summary": "Registry listing, not a security approval.",
+      "identifiers": [],
+      "evidence_sha256": "f4a43b705766a52415e7a741454db3fd4cbdeb358e371769a08702446c85e828",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-F03A8AFE27846FEF",
+      "status": "candidate",
+      "source_feed_id": "AISRC-VERIS-2026",
+      "source_grade": "D",
+      "kind": "secondary-incident-discovery",
+      "external_id": "DR-2026-009",
+      "title": "AI-assisted intrusion against a Mexican municipal water utility with attempted IT->OT movement (Dragos)",
+      "url": "https://github.com/DavidFarago/ai_security_incidents_2026/blob/main/incidents/all_2026_ai_software_security_incidents.json",
+      "summary": "Secondary VERIS compilation; validate original report, dates and rights.",
+      "identifiers": [],
+      "evidence_sha256": "9498f0e63860b7292871d296c7adf5126574f7e159005664ce641102f8e094bc",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-F0BAFFEA0AD5D8B9",
+      "status": "candidate",
+      "source_feed_id": "AISRC-VERIS-2026",
+      "source_grade": "D",
+      "kind": "secondary-incident-discovery",
+      "external_id": "DB-2026-003",
+      "title": "Autonomous offensive agent (CodeWall) breached McKinsey's Lilli AI platform via SQLi in 2 hours",
+      "url": "https://github.com/DavidFarago/ai_security_incidents_2026/blob/main/incidents/all_2026_ai_software_security_incidents.json",
+      "summary": "Secondary VERIS compilation; validate original report, dates and rights.",
+      "identifiers": [],
+      "evidence_sha256": "bce21078a8e345bf448ac04842989fec592076b4560dbde86e81f3b298a0bb82",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-F33D0C5E6F7C5D3D",
+      "status": "candidate",
+      "source_feed_id": "AISRC-AVID-REPORTS",
+      "source_grade": "A",
+      "kind": "report-discovery",
+      "external_id": "reports/2026/AVID-2026-R0985.json",
+      "title": "AVID-2026-R0985.json",
+      "url": "https://github.com/avidml/avid-db/blob/main/reports/2026/AVID-2026-R0985.json",
+      "summary": "AVID research record; content and real-world status unverified.",
+      "identifiers": [],
+      "evidence_sha256": "8d5ba9f978211c5548f342cc8fa5d5f7444bd3d228848d20d942dac518295381",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-F85A31C9F670DF4B",
+      "status": "candidate",
+      "source_feed_id": "AISRC-INSPECT-CHANGES",
+      "source_grade": "D",
+      "kind": "repository-change",
+      "external_id": "46e05d2efb7046553a9489329ecdff22f21c6788",
+      "title": "Register submission: SPaRC (Spatial Pathfinding Reasoning Challenge) (#2687)",
+      "url": "https://github.com/UKGovernmentBEIS/inspect_evals/commit/46e05d2efb7046553a9489329ecdff22f21c6788",
+      "summary": "Upstream commit only; not evidence of an AI incident.",
+      "identifiers": [],
+      "evidence_sha256": "af4960e40a3bcb5d2e1ab2e00f6e1b27334fcd384c3f398ae5b48e3142187d5e",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-FBFFEC14D4AA0E26",
+      "status": "candidate",
+      "source_feed_id": "AISRC-VERIS-2026",
+      "source_grade": "D",
+      "kind": "secondary-incident-discovery",
+      "external_id": "DB-2026-018",
+      "title": "Autonomous 'Hermes' AI agent (YOLO mode) ran post-exploitation against Thailand's Ministry of Finance",
+      "url": "https://github.com/DavidFarago/ai_security_incidents_2026/blob/main/incidents/all_2026_ai_software_security_incidents.json",
+      "summary": "Secondary VERIS compilation; validate original report, dates and rights.",
+      "identifiers": [],
+      "evidence_sha256": "07753734929bea368417e93e0657c0861abfe5ca8532191a5c31f248d88b40ba",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-FCBE6EBE559BF95F",
+      "status": "candidate",
+      "source_feed_id": "AISRC-OSV-LOCAL",
+      "source_grade": "A",
+      "kind": "vulnerability-enrichment",
+      "external_id": "CVE-2026-59822",
+      "title": "LiteLLM: MCP Authentication Bypass via OAuth2 Passthrough Fallback",
+      "url": "https://osv.dev/vulnerability/CVE-2026-59822",
+      "summary": "Enrichment for already tracked identifier: CVE-2026-59822",
+      "identifiers": [
+        "CVE-2026-59822",
+        "CVE-2026-59822"
+      ],
+      "evidence_sha256": "3dcf42b19f97eeb618642dad0d81e3936d87c5fc66e3779742595b2fbeadc4f2",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AI-FDDB74FC8473470D",
+      "status": "candidate",
+      "source_feed_id": "AISRC-AVID-REPORTS",
+      "source_grade": "A",
+      "kind": "report-discovery",
+      "external_id": "reports/2026/AVID-2026-R0998.json",
+      "title": "AVID-2026-R0998.json",
+      "url": "https://github.com/avidml/avid-db/blob/main/reports/2026/AVID-2026-R0998.json",
+      "summary": "AVID research record; content and real-world status unverified.",
+      "identifiers": [],
+      "evidence_sha256": "0f1bc35fa6870176ddfd6cfcc82b13e033fdd668d05614265c9cd6605d087f4d",
+      "observed_at": "2026-10-27T15:28:03Z",
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    }
+  ]
 }
