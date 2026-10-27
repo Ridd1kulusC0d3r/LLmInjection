@@ -80,7 +80,7 @@ Attribution is the weakest link: AI use is usually **inferred from artifacts**, 
 
 ---
 
-## AI threat-source enrichment (2026-10-09)
+## AI threat-source enrichment (2026-10-09) 
 
 New [source registry and ingestion guidance](docs/AI-INTELLIGENCE-SOURCES.md), [runtime and identity telemetry design](docs/AI-RUNTIME-INTELLIGENCE.md), 19 newly catalogued GitHub references in the AI source registry, six-dimensional threat ontology and candidate-only source adapters. External material requires human review before promotion into CTI.
 
