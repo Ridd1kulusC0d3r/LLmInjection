@@ -1,7 +1,7 @@
 {
   "meta": {
     "schema_version": "1.0",
-    "last_run": "2026-10-07T22:00:00Z",
+    "last_run": "2026-10-31T16:08:28Z",
     "policy": "candidate-only; no automatic promotion into official intelligence datasets",
     "statuses": [
       "candidate",
@@ -76,6 +76,2063 @@
       "review": {
         "decision": null,
         "notes": "Clone, read README and license, classify before promotion into ecosystem.json."
+      }
+    },
+    {
+      "id": "RQ-1FE4A604C6DAC5B9",
+      "status": "candidate",
+      "source_feed_id": "FEED-AGENTDOJO-RELEASES",
+      "source_grade": "D",
+      "kind": "project-release",
+      "title": "v0.1.33",
+      "url": "https://github.com/ethz-spylab/agentdojo/releases/tag/v0.1.33",
+      "published": "2025-05-14T16:49:56Z",
+      "observed_at": "2026-10-31T16:08:27Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "### Features - Add support for new Google SDK (#84) by @dedeswim ### Breaking Changes - The use of `GoogleLLM` without passing a client as argument is now deprecated (but still supported) ### Bug Fixes None",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-3D88A703871EA455",
+      "status": "candidate",
+      "source_feed_id": "FEED-AGENTDOJO-RELEASES",
+      "source_grade": "D",
+      "kind": "project-release",
+      "title": "v0.1.34",
+      "url": "https://github.com/ethz-spylab/agentdojo/releases/tag/v0.1.34",
+      "published": "2025-06-02T13:49:02Z",
+      "observed_at": "2026-10-31T16:08:27Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "## v0.1.34 ### Features - Add support for `max_tokens` parameter for `GoogleLLM` by @dedeswim (#90) ### Breaking Changes None ### Bug Fixes None",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-B213808E6F122C50",
+      "status": "candidate",
+      "source_feed_id": "FEED-MCP-RELEASES",
+      "source_grade": "A",
+      "kind": "project-release",
+      "title": "2025-06-18",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/releases/tag/2025-06-18",
+      "published": "2025-06-18T20:09:59Z",
+      "observed_at": "2026-10-31T16:08:25Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "This release marks the initial 2025-06-18 revision of the Model Context Protocol. For a detailed overview of changes, see [2025-06-18 changelog](https://modelcontextprotocol.io/specification/2025-06-18/changelog). _To users and implementors:_ note that SDKs will adopt this version at their own pace, and the prior version of the spec may remain in use for an undetermined amount of time. The spec describes how clients and servers perform version negotiation with one another, permitting backwards and forwards compatibility.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-B15E1240F588FA69",
+      "status": "candidate",
+      "source_feed_id": "FEED-AGENTDOJO-RELEASES",
+      "source_grade": "D",
+      "kind": "project-release",
+      "title": "v0.1.35",
+      "url": "https://github.com/ethz-spylab/agentdojo/releases/tag/v0.1.35",
+      "published": "2025-10-27T18:09:56Z",
+      "observed_at": "2026-10-31T16:08:27Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "### Features None ### Bug Fixes - Add warning in case of empty Google response by @dedeswim in https://github.com/ethz-spylab/agentdojo/pull/91 - Add compatibility for VLLM's OpenAI API w/ built in tool parser by @thavens in https://github.com/ethz-spylab/agentdojo/pull/85 - Support for Meta-SecAlign-70B model by @cg563 in https://github.com/ethz-spylab/agentdojo/pull/97 - Adding result for Llama 3.3 and Meta SecAlign 70B by @cg563 in https://github.com/ethz-spylab/agentdojo/pull/96 - [bug]: fix RecursionError when using `spotlighting_with_delimiting` defense by @llCurious in https://github.com/ethz-spylab/agentdojo/pull/118 - Refactor/unused_code by @jasiecky in https://github.com/ethz-spylab/agentdojo/pull/113 - Fix detector loop extracting content from wrong message by @Copilot in https://github.com/ethz-spylab/agentdojo/pull/125 - Fix issue with longer docs being ignored by @dedeswim in https://github.com/ethz-spylab/agentdojo/pull/129 - V1.2.2 tasks by @dedeswim in https://github.com/ethz-spylab/agentdojo/pull/130 ### Breaking Changes - None ### New Contributors - @cg563 made their first contribution in https://github.com/ethz-spylab/agentdojo/pull/97 - @llCurious made their f",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-5E19B79BA8366E0A",
+      "status": "candidate",
+      "source_feed_id": "FEED-MCP-RELEASES",
+      "source_grade": "A",
+      "kind": "project-release",
+      "title": "2025-11-25-RC",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/releases/tag/2025-11-25-RC",
+      "published": "2025-11-15T06:06:55Z",
+      "observed_at": "2026-10-31T16:08:25Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "This release marks the **release candidate (RC)** `2025-11-25` revision of the Model Context Protocol. The specification is available in [draft form](https://modelcontextprotocol.io/specification/draft). For a detailed overview of changes, see [2025-11-25 draft changelog](https://modelcontextprotocol.io/specification/draft/changelog). >[!NOTE] >**To users and implementers:** this specification is not final. Changes may be introduced between the RC and the final release. SDKs will adopt this version at their own pace, and the prior version of the spec may remain in use for an undetermined amount of time. > >Refer to the [Version Negotiation documentation](https://modelcontextprotocol.io/specification/draft/basic/lifecycle#version-negotiation) to learn about the process for clients and servers to determine the version of the protocol being used.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-BEBB5808236035C5",
+      "status": "candidate",
+      "source_feed_id": "FEED-MCP-RELEASES",
+      "source_grade": "A",
+      "kind": "project-release",
+      "title": "2025-11-25",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/releases/tag/2025-11-25",
+      "published": "2025-11-25T21:17:42Z",
+      "observed_at": "2026-10-31T16:08:25Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "This release marks the **stable release** of the `2025-11-25` revision of the Model Context Protocol. The specification is available on the [official Model Context Protocol website](https://modelcontextprotocol.io/specification/2025-11-25). For a detailed overview of changes, see [2025-11-25 changelog](https://modelcontextprotocol.io/specification/2025-11-25/changelog).",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-A33D209A88446AD0",
+      "status": "candidate",
+      "source_feed_id": "FEED-MCP-RELEASES",
+      "source_grade": "A",
+      "kind": "project-release",
+      "title": "2026-07-28 RC",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/releases/tag/2026-07-28-RC",
+      "published": "2026-05-29T12:51:22Z",
+      "observed_at": "2026-10-31T16:08:25Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "This release marks the **release candidate (RC)** `2026-07-28` revision of the Model Context Protocol. The specification is available in [draft form](https://modelcontextprotocol.io/specification/draft). For a detailed overview of changes, see [2026-07-28 draft changelog](https://modelcontextprotocol.io/specification/draft/changelog). >[!NOTE] >**To users and implementers:** this specification is not final. Changes may be introduced between the RC and the final release. SDKs will adopt this version at their own pace, and the prior version of the spec may remain in use for an undetermined amount of time. > >Refer to the [Version Negotiation documentation](https://modelcontextprotocol.io/specification/draft/basic/lifecycle#version-negotiation) to learn about the process for clients and servers to determine the version of the protocol being used.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-E29BBD025098C556",
+      "status": "candidate",
+      "source_feed_id": "FEED-OWASP-LLM-COMMITS",
+      "source_grade": "A",
+      "kind": "canonical-repository-change",
+      "title": "LLM04:2026 Supply Chain: RC1 review fixes (#104)",
+      "url": "https://github.com/GenAI-Security-Project/GenAI-LLM-Top10/commit/f028ce158b67c8630df310faf111a72316b4130b",
+      "published": "2026-07-16T17:57:35Z",
+      "observed_at": "2026-10-31T16:08:24Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "LLM04:2026 Supply Chain: RC1 review fixes (#104) * LLM04: apply RC1 technical and editorial review (Wilson) + premortem fixes * LLM04: style-guide conformance and AI-writing-tell cleanup * docs(llm04): vendor the supply-chain threat model diagram The LLM04 Description linked the supply-chain threat model image from John Sotiropoulos' personal ThreatModels repository [1]. A rename or removal there would silently break the entry, and the RC1 deliverable should be self-contained for the PDF build. I copied the diagram into 2026/final/report/images/, next to the other report figures Appendix B already uses, and pointed the entry link at the in-repo copy. The source repository is MIT-licensed and the diagram is authored by John, one of the project leads. [1]: https://github.com/jsotiro/ThreatModels/blob/main/LLM%20Threats-LLM%20Supply%20Chain.png Signed-off-by: Stefano Amorelli <stefano@amorelli.tech> --------- Signed-off-by: Stefano Amorelli <stefano@amorelli.tech> Co-authored-by: Stefano Amorelli <stefano@amorelli.tech>",
+      "identifiers": [
+        "LLM04:2026"
+      ],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-5A5A6B9D65DA5C9D",
+      "status": "candidate",
+      "source_feed_id": "FEED-OWASP-LLM-COMMITS",
+      "source_grade": "A",
+      "kind": "canonical-repository-change",
+      "title": "references: sync citations with RC1 entry-review PRs (#101-#110) (#111)",
+      "url": "https://github.com/GenAI-Security-Project/GenAI-LLM-Top10/commit/9e6515227f2f8f79fd29ec6d028eede309ed436c",
+      "published": "2026-07-16T17:58:18Z",
+      "observed_at": "2026-10-31T16:08:24Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "references: sync citations with RC1 entry-review PRs (#101-#110) (#111)",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-7F23986C9D2CEEC7",
+      "status": "candidate",
+      "source_feed_id": "FEED-OWASP-LLM-COMMITS",
+      "source_grade": "A",
+      "kind": "canonical-repository-change",
+      "title": "LLM09: AI-tell conformance sweep (em dashes, semicolons) on merged entry (#122)",
+      "url": "https://github.com/GenAI-Security-Project/GenAI-LLM-Top10/commit/9821f122a8e3ed1e32a82125eb16741fabf4bd9b",
+      "published": "2026-07-16T18:22:42Z",
+      "observed_at": "2026-10-31T16:08:24Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "LLM09: AI-tell conformance sweep (em dashes, semicolons) on merged entry (#122)",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-DB426418E21A8854",
+      "status": "candidate",
+      "source_feed_id": "FEED-OWASP-LLM-COMMITS",
+      "source_grade": "A",
+      "kind": "canonical-repository-change",
+      "title": "LLM02: convert pseudo-numbered examples and tier bullets to ordered lists (#114)",
+      "url": "https://github.com/GenAI-Security-Project/GenAI-LLM-Top10/commit/38d2b9c278a6bc59acbd951dcc1375f4bc8f8f40",
+      "published": "2026-07-16T18:30:36Z",
+      "observed_at": "2026-10-31T16:08:24Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "LLM02: convert pseudo-numbered examples and tier bullets to ordered lists (#114) Follow-up to #102. LLM02 was the only entry using bold pseudo-numbered paragraphs for Common Examples of Risk and unnumbered tier bullets for mitigations. Convert examples to a markdown ordered list, promote the DSGAI tier labels to H4 headings, and number the mitigations continuously (1-19) across tiers so items are referenceable. Text unchanged. Co-authored-by: Claude Fable 5 <noreply@anthropic.com>",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-A3F9EBEA4B44B152",
+      "status": "candidate",
+      "source_feed_id": "FEED-OWASP-LLM-COMMITS",
+      "source_grade": "A",
+      "kind": "canonical-repository-change",
+      "title": "LLM01: dedup/compression pass (#116) + RC1 review retains (#123)",
+      "url": "https://github.com/GenAI-Security-Project/GenAI-LLM-Top10/commit/2e802ff2a698351cfa56d6b300dc0b70c72f5852",
+      "published": "2026-07-17T01:28:53Z",
+      "observed_at": "2026-10-31T16:08:24Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "LLM01: dedup/compression pass (#116) + RC1 review retains (#123) Incorporates @virtualsteve-star's deduplication and compression pass (#116) in full, plus the five retains raised in review so it can merge without a further round-trip: - Description: keep \"direct user input\" and the explicit \"image, audio, or video content\" (not \"user text\" / \"media\"); keep the documents -> content change. - Untrusted surfaces: \"emails from unknown senders\" (not \"unknown-sender email\"). - Semi-trusted surfaces: retain \"changelogs\" alongside READMEs (a distinct in-the-wild vector; readers treat changelogs and READMEs differently). - Mitigation preamble: retain the full \"lethal trifecta\" (Willison, 2025) sentence here, where it frames the problem, distinct from its use as a control in mitigation #8. - Mitigation #8: keep the \"(see Scenario #8)\" pointer; drop the compacted trifecta restatement, which now lives in the preamble. Everything else from #116 is carried through unchanged. Supersedes #116. Co-authored-by: Steve Wilson <62770473+virtualsteve-star@users.noreply.github.com> Co-authored-by: Claude Opus 4.8 <noreply@anthropic.com>",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-7CA1E12C462A9411",
+      "status": "candidate",
+      "source_feed_id": "FEED-OWASP-LLM-COMMITS",
+      "source_grade": "A",
+      "kind": "canonical-repository-change",
+      "title": "LLM10:2026 Improper Output Handling: RC1 review fixes (#110)",
+      "url": "https://github.com/GenAI-Security-Project/GenAI-LLM-Top10/commit/7e144e05142b2105faa1603178a1163a2a34df24",
+      "published": "2026-07-17T01:28:56Z",
+      "observed_at": "2026-10-31T16:08:24Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "LLM10:2026 Improper Output Handling: RC1 review fixes (#110) * LLM10: apply RC1 technical and editorial review (Wilson) + premortem fixes * LLM10: style-guide conformance and AI-writing-tell cleanup * LLM10: cross-reference LLM01 for input-side sanitization",
+      "identifiers": [
+        "LLM10:2026"
+      ],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-265A054C6F67C167",
+      "status": "candidate",
+      "source_feed_id": "FEED-PYRIT-RELEASES",
+      "source_grade": "D",
+      "kind": "project-release",
+      "title": "v1.0.0",
+      "url": "https://github.com/microsoft/PyRIT/releases/tag/v1.0.0",
+      "published": "2026-07-24T02:23:18Z",
+      "observed_at": "2026-10-31T16:08:27Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "## What's changed? Welcome to PyRIT `v1.0.0`! This major release establishes the v1 architecture for composing scenarios, attack techniques, executors, registries, identifiers, and memory. It includes intentional breaking changes, so review the changes below carefully before upgrading. ### ⚠️ Breaking changes - **Scenarios now compose registered techniques** — scenario strategies were renamed to techniques, the Scenario registry became the construction path, and legacy scenario scaffolding was removed ([#2115](https://github.com/microsoft/PyRIT/pull/2115), [#2123](https://github.com/microsoft/PyRIT/pull/2123), [#2153](https://github.com/microsoft/PyRIT/pull/2153)). - **Component construction moved to registries** — the BuildableRegistry foundation now powers attack techniques, targets, scorers, converters, scenarios, and initializers ([#1963](https://github.com/microsoft/PyRIT/pull/1963), [#2057](https://github.com/microsoft/PyRIT/pull/2057), [#2087](https://github.com/microsoft/PyRIT/pull/2087), [#2101](https://github.com/microsoft/PyRIT/pull/2101), [#2122](https://github.com/microsoft/PyRIT/pull/2122)). - **Converters and attack framing were reorganized** — `PromptConverter` is n",
+      "identifiers": [
+        "CVE-2026-53550",
+        "GHSA-H67P-54HQ-RP68"
+      ],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-5D4D6BB909508F91",
+      "status": "candidate",
+      "source_feed_id": "FEED-MCP-RELEASES",
+      "source_grade": "A",
+      "kind": "project-release",
+      "title": "2026-07-28",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/releases/tag/2026-07-28",
+      "published": "2026-07-28T16:47:49Z",
+      "observed_at": "2026-10-31T16:08:25Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "This release marks the **stable release** of the `2026-07-28` revision of the Model Context Protocol. The specification is available on the [official Model Context Protocol website](https://modelcontextprotocol.io/specification/2026-07-28). For a detailed overview of changes, see [2026-07-28 changelog](https://modelcontextprotocol.io/specification/2026-07-28/changelog).",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-E6F40983DE0F4BA8",
+      "status": "candidate",
+      "source_feed_id": "FEED-PYRIT-RELEASES",
+      "source_grade": "D",
+      "kind": "project-release",
+      "title": "v1.0.1",
+      "url": "https://github.com/microsoft/PyRIT/releases/tag/v1.0.1",
+      "published": "2026-07-30T05:11:54Z",
+      "observed_at": "2026-10-31T16:08:27Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "## What's changed? PyRIT `v1.0.1` is a patch release with a single targeted bug fix. It contains no new features and no intentional breaking changes; upgrading from `v1.0.0` should be a drop-in replacement for nearly all users. **Reason for the patch:** OpenAI Responses and Chat Completions can return *structured refusals* — a valid model response that carries a refusal explanation instead of ordinary text content. PyRIT treated these as parser/runtime failures. In practice that meant a refusal from the target could leave attack objectives incomplete and surface a misleading scenario-level `ValueError`, rather than being recorded and scored as the refusal it actually was. ### You should upgrade if you - Use `OpenAIResponseTarget` or `OpenAIChatTarget` against models that emit structured refusals (this is common with recent OpenAI and Azure OpenAI models). - Run scenarios that can legitimately be refused by the target — refusals no longer abort the atomic attack, and genuine partial execution now raises the dedicated `ScenarioPartialFailureException` with structured counts, the incomplete objectives, and the original cause. - Rely on true/false scorers — a syntactically valid but ou",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-F11B1D65B0A1A965",
+      "status": "candidate",
+      "source_feed_id": "FEED-GARAK-RELEASES",
+      "source_grade": "D",
+      "kind": "project-release",
+      "title": "v0.16.0",
+      "url": "https://github.com/NVIDIA/garak/releases/tag/v0.16.0",
+      "published": "2026-08-04T19:03:13Z",
+      "observed_at": "2026-10-31T16:08:26Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "## What's Changed ### New features * Feature: technique and intent annotation and initial IntentProbe iteration by `garak-maintainers` in https://github.com/NVIDIA/garak/pull/1984 \"Power is in tearing attacks to pieces and putting them together again in shapes of your own choosing.\" This initial feature represents the first step in enabling users to provided their own context and requirements for target expectations and enable identification of attack vectors that show the edges of the underlying systems safeguards and runtime posture from new perspectives. This feature includes the initial groundwork for bringing user context into account during evaluation of a target. In its first iteration, it provides a new facet of information while keeping the existing probes primarily unchanged. The _trait_ and _intent_ concepts are explored, with _policy_ introduced only as a reference definition. Further iteration and community feedback will guide how these new concepts are consumed, and influence how the broader Context Aware Scanning feature evolves. * arch: support & data for trait/intent, and for policy datatype by @leondz in https://github.com/NVIDIA/garak/pull/1421 * cas feature: int",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-C84588E573E062C9",
+      "status": "candidate",
+      "source_feed_id": "FEED-OWASP-LLM-COMMITS",
+      "source_grade": "A",
+      "kind": "canonical-repository-change",
+      "title": "Merge main into the published 2026 release candidate",
+      "url": "https://github.com/GenAI-Security-Project/GenAI-LLM-Top10/commit/fdc5e3c1c172f89baa6a6f8882dbaea7f785f3c2",
+      "published": "2026-08-05T17:23:12Z",
+      "observed_at": "2026-10-31T16:08:24Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "Merge main into the published 2026 release candidate",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-D9C6EC54558B0C7A",
+      "status": "candidate",
+      "source_feed_id": "FEED-OWASP-LLM-COMMITS",
+      "source_grade": "A",
+      "kind": "canonical-repository-change",
+      "title": "Merge pull request #130 from virtualsteve-exa/codex/merge-rc1-to-main",
+      "url": "https://github.com/GenAI-Security-Project/GenAI-LLM-Top10/commit/82a6a5824670cf7117b90297d8105eb68754fa13",
+      "published": "2026-08-05T17:42:31Z",
+      "observed_at": "2026-10-31T16:08:24Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "Merge pull request #130 from virtualsteve-exa/codex/merge-rc1-to-main Merge the published 2026 release candidate into main",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-E4199770145C2F26",
+      "status": "candidate",
+      "source_feed_id": "FEED-OWASP-LLM-COMMITS",
+      "source_grade": "A",
+      "kind": "canonical-repository-change",
+      "title": "Publish 2026 release status and contribution guidance (#128)",
+      "url": "https://github.com/GenAI-Security-Project/GenAI-LLM-Top10/commit/7bbe0f06f468cdcc61fa73e1752183c6cfd23987",
+      "published": "2026-08-05T17:47:16Z",
+      "observed_at": "2026-10-31T16:08:24Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "Publish 2026 release status and contribution guidance (#128) * Publish 2026 release status and contribution guidance Updates the repository to reflect the August 4, 2026 publication and replaces completed-cycle issue templates with post-release errata and feedback forms. * Apply review fixes: correct appendix links, add references, restore charter link Point the 2026 release overview at the published Appendix A framework mappings, Appendix B threat-modeling appendix, machine-readable mappings, and consolidated references now that release-candidate-1 is merged to main. Restore the project charter link in the repository layout. Co-Authored-By: Claude Fable 5 <noreply@anthropic.com> --------- Co-authored-by: Steve Wilson <62770473+virtualsteve-star@users.noreply.github.com> Co-authored-by: Claude Fable 5 <noreply@anthropic.com>",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-2B492E00FCDED7BA",
+      "status": "candidate",
+      "source_feed_id": "FEED-OWASP-LLM-COMMITS",
+      "source_grade": "A",
+      "kind": "canonical-repository-change",
+      "title": "Add CITATION.cff and the 2026 Zenodo DOI (#124)",
+      "url": "https://github.com/GenAI-Security-Project/GenAI-LLM-Top10/commit/9253e38ade58e959b531c0c5c9a4842272c9cd0e",
+      "published": "2026-08-26T21:57:01Z",
+      "observed_at": "2026-10-31T16:08:24Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "Add CITATION.cff and the 2026 Zenodo DOI (#124) * Add CITATION.cff and automated Zenodo deposit for the 2026 edition Papers already cite the Top 10 (NVIDIA's garak paper cites the first version), but with no DOI there is no identifier for Crossref, OpenAIRE or Google Scholar to resolve against, so finding that use means manual searching. This adds citation metadata and a workflow that deposits each edition to Zenodo, which mints the DOI. CITATION.cff carries the authors of the 2026 entries. GitHub renders it as \"Cite this repository\", and the release workflow builds the Zenodo record from it, so the author list is maintained in one place rather than two. .github/zenodo.config.json holds the file list for each deposit. `{edition}` comes from the release tag, so the 2027 edition needs no config change. Each key under `deposits` is a separate Zenodo record, so any future publication from this repo can take its own concept DOI instead of becoming a version of the Top 10. .github/scripts/zenodo_release.py builds the bundle and deposits it through the Zenodo REST API, with `--check` to validate the config and CITATION.cff, `--dry-run` to print the file list, and `--sandbox` to target san",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-DA0A86B93E0AC210",
+      "status": "candidate",
+      "source_feed_id": "FEED-PYRIT-RELEASES",
+      "source_grade": "D",
+      "kind": "project-release",
+      "title": "v1.1.0",
+      "url": "https://github.com/microsoft/PyRIT/releases/tag/v1.1.0",
+      "published": "2026-09-04T22:19:28Z",
+      "observed_at": "2026-10-31T16:08:27Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "## What's changed? PyRIT `v1.1.0` improves scoring, expands scanner capabilities, and adds major CoPyRIT features. Python support remains `>=3.10, <3.15`. ### ⚠️ Breaking changes - Scores can now be undetermined. Check `score.is_undetermined` before reading `score_value` or calling `get_value()` ([#2491](https://github.com/microsoft/PyRIT/pull/2491)). - Partial blocked responses are now scored by default. Set `should_score_blocked_content=False` to retain the previous behavior. - Authenticated CoPyRIT deployments now use Microsoft Graph and require an allowed group configuration ([#2281](https://github.com/microsoft/PyRIT/pull/2281)). - The new fixed-egress CoPyRIT deployment requires a parallel Azure Container Apps environment. Azure SQL deployments also require the new migrations ([#2438](https://github.com/microsoft/PyRIT/pull/2438)). ### 🧩 Framework, identity, and memory - Added explicit score status and scorable identity, with the related memory migrations. - Added WebSocket targets, round-robin adversarial targets, target reset hooks, and stop-reason metadata. - Improved CLI scenario results, remote authentication, Key Vault integration, partial-response handling, and attack-",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-FF0E07AA492AFC5B",
+      "status": "candidate",
+      "source_feed_id": "FEED-GARAK-RELEASES",
+      "source_grade": "D",
+      "kind": "project-release",
+      "title": "v0.17.0",
+      "url": "https://github.com/NVIDIA/garak/releases/tag/v0.17.0",
+      "published": "2026-09-09T18:56:03Z",
+      "observed_at": "2026-10-31T16:08:26Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "## What's Changed ### New features * EU AI Act Mapping by @erickgalinkin in https://github.com/NVIDIA/garak/pull/2094 This new mapping provides reference tags to surface and group probes results that relate to various categories of risk called out in the EU AI Act. ### Improved plugins * Forward generation parameters to Ollama via options dict by @Panchal-Sahil in https://github.com/NVIDIA/garak/pull/1993 * Add ollama auth and custom client kwargs by @TheRisenPhoenix in https://github.com/NVIDIA/garak/pull/2025 * fix(detectors): guard MarkdownExfilContent against missing terms note by @anxkhn in https://github.com/NVIDIA/garak/pull/1935 * fix(detectors): default a detector's name to its class name string by @EastZeus in https://github.com/NVIDIA/garak/pull/2054 * fix(detectors): avoid ZeroDivisionError in MarkdownExfilContent by @EastZeus in https://github.com/NVIDIA/garak/pull/2055 * fix(probes): guard badchars ASCII selection against max_ascii_variants=1 by @manunicholasjacob in https://github.com/NVIDIA/garak/pull/2012 * detectors: ground AgentBreaker judge in the victim's tool contract by @koralchapnik in https://github.com/NVIDIA/garak/pull/1970 * fix(detectors): _extract_json",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-73897A40D3FF9245",
+      "status": "candidate",
+      "source_feed_id": "FEED-FEEDLY-SKILLS-COMMITS",
+      "source_grade": "D",
+      "kind": "canonical-repository-change",
+      "title": "Merge pull request #1 from SkxOverKill/fix/csv-and-id-integrity",
+      "url": "https://github.com/feedly/skills/commit/4238eaea10f035563e776d38a49192983e56b7ec",
+      "published": "2026-10-07T13:22:03Z",
+      "observed_at": "2026-10-31T16:08:28Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "Merge pull request #1 from SkxOverKill/fix/csv-and-id-integrity fix: preserve CSV and requirement ID integrity",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-5D195EDA18DACA38",
+      "status": "candidate",
+      "source_feed_id": "FEED-GARAK-RELEASES",
+      "source_grade": "D",
+      "kind": "project-release",
+      "title": "v0.17.1",
+      "url": "https://github.com/NVIDIA/garak/releases/tag/v0.17.1",
+      "published": "2026-10-16T20:14:17Z",
+      "observed_at": "2026-10-31T16:08:26Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "## What's Changed ### New features * feat(evaluators): add hit@k attack success rate metric by @stefanoamorelli in https://github.com/NVIDIA/garak/pull/2090 This new metric is currently exposed as terminal output and available per probe/detector pair in the final digest entry of the report.jsonl * Add Python 3.14 support by @NK-Works in https://github.com/NVIDIA/garak/pull/2297 ### Improved plugins * fix(detectors): match mitigation.Prefixes at the start of the response by @chiruu12 in https://github.com/NVIDIA/garak/pull/2067 * fix(detectors): stop FileDetector scoring an unexamined file as a pass by @CTWalk in https://github.com/NVIDIA/garak/pull/2080 * fix(detectors): stop RefusalOnlyAdversarial over-counting skipped multi-turn attempts by @Yigtwxx in https://github.com/NVIDIA/garak/pull/2111 * fix(detectors): scope safe-token suppression to its own match by @feiiiiii5 in https://github.com/NVIDIA/garak/pull/2182 * fix(detectors): Scope ApiKey safe-token suppression to the matching credential by @MRX-72 in https://github.com/NVIDIA/garak/pull/2270 * fix(detectors): Do not treat octal 27 as a raw ANSI escape by @SashaMIT in https://github.com/NVIDIA/garak/pull/2255 * fix(probes):",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-DE1ABA5D585D8CD2",
+      "status": "candidate",
+      "source_feed_id": "FEED-FEEDLY-SKILLS-COMMITS",
+      "source_grade": "D",
+      "kind": "canonical-repository-change",
+      "title": "map-attack-techniques: check Navigator layer format and draft updates",
+      "url": "https://github.com/feedly/skills/commit/151c9130ced123870ef9c3b7aa29016102eaca2d",
+      "published": "2026-10-21T09:41:40Z",
+      "observed_at": "2026-10-31T16:08:28Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "map-attack-techniques: check Navigator layer format and draft updates - version and build-layer now report the newest published Navigator layer format next to the 4.5 the skill writes. This is a new “Layer format currency” check: it is PASS or NOT CHECKED, never FAIL. - New read-only layer-format-diff command. It compares the spec tables of two formats, quotes the Navigator changelog, says whether each change affects the skill, and lists every line in the skill that names the current format. - New Step 9: when a newer format is published, the skill compares the formats, drafts and tests an update, and sends it for review. - Tested on the published specs 4.0 to 4.5.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-58004C76091B35C8",
+      "status": "candidate",
+      "source_feed_id": "FEED-FEEDLY-SKILLS-COMMITS",
+      "source_grade": "D",
+      "kind": "canonical-repository-change",
+      "title": "Merge pull request #8 from feedly/Jdot2398-patch-1",
+      "url": "https://github.com/feedly/skills/commit/d34eb0aa106d3ceb0838fc40994a686f8502e212",
+      "published": "2026-10-21T09:52:16Z",
+      "observed_at": "2026-10-31T16:08:28Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "Merge pull request #8 from feedly/Jdot2398-patch-1 map-attack-techniques: check Navigator layer format and draft updates",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-FC1A75BA4949857D",
+      "status": "candidate",
+      "source_feed_id": "FEED-PROMPTFOO-RELEASES",
+      "source_grade": "D",
+      "kind": "project-release",
+      "title": "0.125.1",
+      "url": "https://github.com/promptfoo/promptfoo/releases/tag/0.125.1",
+      "published": "2026-10-25T01:53:11Z",
+      "observed_at": "2026-10-31T16:08:28Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "## [0.125.1](https://github.com/promptfoo/promptfoo/compare/0.125.0...0.125.1) (2026-10-25) ### Bug Fixes * restore the authentic Discord invite ([#11967](https://github.com/promptfoo/promptfoo/issues/11967)) ([98000c4](https://github.com/promptfoo/promptfoo/commit/98000c43c371c6b68f655150cb5485d1c748bf15))",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-0CBADE37CBDD38BE",
+      "status": "candidate",
+      "source_feed_id": "FEED-MITRE-ATLAS-RELEASES",
+      "source_grade": "A",
+      "kind": "atlas-technique",
+      "title": "[Indicator Removal](/techniques/AML.T0138)",
+      "url": "https://github.com/mitre-atlas/atlas-data/releases/tag/v2026.10",
+      "published": "2026-10-28T22:55:06Z",
+      "observed_at": "2026-10-31T16:08:24Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "MITRE ATLAS release v2026.10 added: [Indicator Removal](/techniques/AML.T0138).",
+      "identifiers": [
+        "AML.T0010",
+        "AML.T0017.003",
+        "AML.T0024",
+        "AML.T0024.000",
+        "AML.T0024.001",
+        "AML.T0056",
+        "AML.T0057",
+        "AML.T0085.002",
+        "AML.T0085.003",
+        "AML.T0135",
+        "AML.T0136",
+        "AML.T0137",
+        "AML.T0137.000",
+        "AML.T0137.001",
+        "AML.T0137.002",
+        "AML.T0137.003",
+        "AML.T0138",
+        "AML.T0139",
+        "AML.T0140",
+        "AML.T0141",
+        "AML.T0142",
+        "AML.T0143",
+        "AML.T0144",
+        "AML.T0145"
+      ],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-16A7467C35B8D89B",
+      "status": "candidate",
+      "source_feed_id": "FEED-MITRE-ATLAS-RELEASES",
+      "source_grade": "A",
+      "kind": "atlas-mitigation",
+      "title": "[Privacy-Preserving AI Training and Inference](/mitigations/AML.M0041)",
+      "url": "https://github.com/mitre-atlas/atlas-data/releases/tag/v2026.10",
+      "published": "2026-10-28T22:55:06Z",
+      "observed_at": "2026-10-31T16:08:24Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "MITRE ATLAS release v2026.10 added: [Privacy-Preserving AI Training and Inference](/mitigations/AML.M0041).",
+      "identifiers": [
+        "AML.T0010",
+        "AML.T0017.003",
+        "AML.T0024",
+        "AML.T0024.000",
+        "AML.T0024.001",
+        "AML.T0056",
+        "AML.T0057",
+        "AML.T0085.002",
+        "AML.T0085.003",
+        "AML.T0135",
+        "AML.T0136",
+        "AML.T0137",
+        "AML.T0137.000",
+        "AML.T0137.001",
+        "AML.T0137.002",
+        "AML.T0137.003",
+        "AML.T0138",
+        "AML.T0139",
+        "AML.T0140",
+        "AML.T0141",
+        "AML.T0142",
+        "AML.T0143",
+        "AML.T0144",
+        "AML.T0145"
+      ],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-19C9288D59833113",
+      "status": "candidate",
+      "source_feed_id": "FEED-MITRE-ATLAS-RELEASES",
+      "source_grade": "A",
+      "kind": "atlas-case-study",
+      "title": "[AISI Evaluation Agents Conduct Unsanctioned Real-World Cyber Activity](/studies/AML.CS0074)",
+      "url": "https://github.com/mitre-atlas/atlas-data/releases/tag/v2026.10",
+      "published": "2026-10-28T22:55:06Z",
+      "observed_at": "2026-10-31T16:08:24Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "MITRE ATLAS release v2026.10 added: [AISI Evaluation Agents Conduct Unsanctioned Real-World Cyber Activity](/studies/AML.CS0074).",
+      "identifiers": [
+        "AML.T0010",
+        "AML.T0017.003",
+        "AML.T0024",
+        "AML.T0024.000",
+        "AML.T0024.001",
+        "AML.T0056",
+        "AML.T0057",
+        "AML.T0085.002",
+        "AML.T0085.003",
+        "AML.T0135",
+        "AML.T0136",
+        "AML.T0137",
+        "AML.T0137.000",
+        "AML.T0137.001",
+        "AML.T0137.002",
+        "AML.T0137.003",
+        "AML.T0138",
+        "AML.T0139",
+        "AML.T0140",
+        "AML.T0141",
+        "AML.T0142",
+        "AML.T0143",
+        "AML.T0144",
+        "AML.T0145"
+      ],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-2808BD5150C346F9",
+      "status": "candidate",
+      "source_feed_id": "FEED-MITRE-ATLAS-RELEASES",
+      "source_grade": "A",
+      "kind": "atlas-technique",
+      "title": "[Training Data Information from AI Models: Infer Properties](/techniques/AML.T0137.001)",
+      "url": "https://github.com/mitre-atlas/atlas-data/releases/tag/v2026.10",
+      "published": "2026-10-28T22:55:06Z",
+      "observed_at": "2026-10-31T16:08:24Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "MITRE ATLAS release v2026.10 added: [Training Data Information from AI Models: Infer Properties](/techniques/AML.T0137.001).",
+      "identifiers": [
+        "AML.T0010",
+        "AML.T0017.003",
+        "AML.T0024",
+        "AML.T0024.000",
+        "AML.T0024.001",
+        "AML.T0056",
+        "AML.T0057",
+        "AML.T0085.002",
+        "AML.T0085.003",
+        "AML.T0135",
+        "AML.T0136",
+        "AML.T0137",
+        "AML.T0137.000",
+        "AML.T0137.001",
+        "AML.T0137.002",
+        "AML.T0137.003",
+        "AML.T0138",
+        "AML.T0139",
+        "AML.T0140",
+        "AML.T0141",
+        "AML.T0142",
+        "AML.T0143",
+        "AML.T0144",
+        "AML.T0145"
+      ],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-2B312AB7F706D681",
+      "status": "candidate",
+      "source_feed_id": "FEED-MITRE-ATLAS-RELEASES",
+      "source_grade": "A",
+      "kind": "atlas-technique",
+      "title": "[Training Data Information from AI Models](/techniques/AML.T0137)",
+      "url": "https://github.com/mitre-atlas/atlas-data/releases/tag/v2026.10",
+      "published": "2026-10-28T22:55:06Z",
+      "observed_at": "2026-10-31T16:08:24Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "MITRE ATLAS release v2026.10 added: [Training Data Information from AI Models](/techniques/AML.T0137).",
+      "identifiers": [
+        "AML.T0010",
+        "AML.T0017.003",
+        "AML.T0024",
+        "AML.T0024.000",
+        "AML.T0024.001",
+        "AML.T0056",
+        "AML.T0057",
+        "AML.T0085.002",
+        "AML.T0085.003",
+        "AML.T0135",
+        "AML.T0136",
+        "AML.T0137",
+        "AML.T0137.000",
+        "AML.T0137.001",
+        "AML.T0137.002",
+        "AML.T0137.003",
+        "AML.T0138",
+        "AML.T0139",
+        "AML.T0140",
+        "AML.T0141",
+        "AML.T0142",
+        "AML.T0143",
+        "AML.T0144",
+        "AML.T0145"
+      ],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-34D6B67F83197C1C",
+      "status": "candidate",
+      "source_feed_id": "FEED-MITRE-ATLAS-RELEASES",
+      "source_grade": "A",
+      "kind": "atlas-technique",
+      "title": "moved from \"Exfiltration via AI Inference API: Invert AI Model\" (AML.T0024.001)",
+      "url": "https://github.com/mitre-atlas/atlas-data/releases/tag/v2026.10",
+      "published": "2026-10-28T22:55:06Z",
+      "observed_at": "2026-10-31T16:08:24Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "MITRE ATLAS release v2026.10 added: moved from \"Exfiltration via AI Inference API: Invert AI Model\" (AML.T0024.001).",
+      "identifiers": [
+        "AML.T0010",
+        "AML.T0017.003",
+        "AML.T0024",
+        "AML.T0024.000",
+        "AML.T0024.001",
+        "AML.T0056",
+        "AML.T0057",
+        "AML.T0085.002",
+        "AML.T0085.003",
+        "AML.T0135",
+        "AML.T0136",
+        "AML.T0137",
+        "AML.T0137.000",
+        "AML.T0137.001",
+        "AML.T0137.002",
+        "AML.T0137.003",
+        "AML.T0138",
+        "AML.T0139",
+        "AML.T0140",
+        "AML.T0141",
+        "AML.T0142",
+        "AML.T0143",
+        "AML.T0144",
+        "AML.T0145"
+      ],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-3712EE1D07AB5340",
+      "status": "candidate",
+      "source_feed_id": "FEED-MITRE-ATLAS-RELEASES",
+      "source_grade": "A",
+      "kind": "atlas-technique",
+      "title": "[Training Data Information from AI Models: Extract Memorized Data](/techniques/AML.T0137.003)",
+      "url": "https://github.com/mitre-atlas/atlas-data/releases/tag/v2026.10",
+      "published": "2026-10-28T22:55:06Z",
+      "observed_at": "2026-10-31T16:08:24Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "MITRE ATLAS release v2026.10 added: [Training Data Information from AI Models: Extract Memorized Data](/techniques/AML.T0137.003).",
+      "identifiers": [
+        "AML.T0010",
+        "AML.T0017.003",
+        "AML.T0024",
+        "AML.T0024.000",
+        "AML.T0024.001",
+        "AML.T0056",
+        "AML.T0057",
+        "AML.T0085.002",
+        "AML.T0085.003",
+        "AML.T0135",
+        "AML.T0136",
+        "AML.T0137",
+        "AML.T0137.000",
+        "AML.T0137.001",
+        "AML.T0137.002",
+        "AML.T0137.003",
+        "AML.T0138",
+        "AML.T0139",
+        "AML.T0140",
+        "AML.T0141",
+        "AML.T0142",
+        "AML.T0143",
+        "AML.T0144",
+        "AML.T0145"
+      ],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-37FD2468AAD40122",
+      "status": "candidate",
+      "source_feed_id": "FEED-MITRE-ATLAS-RELEASES",
+      "source_grade": "A",
+      "kind": "atlas-technique",
+      "title": "[LLM Prompt Propagation](/techniques/AML.T0143)",
+      "url": "https://github.com/mitre-atlas/atlas-data/releases/tag/v2026.10",
+      "published": "2026-10-28T22:55:06Z",
+      "observed_at": "2026-10-31T16:08:24Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "MITRE ATLAS release v2026.10 added: [LLM Prompt Propagation](/techniques/AML.T0143).",
+      "identifiers": [
+        "AML.T0010",
+        "AML.T0017.003",
+        "AML.T0024",
+        "AML.T0024.000",
+        "AML.T0024.001",
+        "AML.T0056",
+        "AML.T0057",
+        "AML.T0085.002",
+        "AML.T0085.003",
+        "AML.T0135",
+        "AML.T0136",
+        "AML.T0137",
+        "AML.T0137.000",
+        "AML.T0137.001",
+        "AML.T0137.002",
+        "AML.T0137.003",
+        "AML.T0138",
+        "AML.T0139",
+        "AML.T0140",
+        "AML.T0141",
+        "AML.T0142",
+        "AML.T0143",
+        "AML.T0144",
+        "AML.T0145"
+      ],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-3AB233E8CA5E8C67",
+      "status": "candidate",
+      "source_feed_id": "FEED-MITRE-ATLAS-RELEASES",
+      "source_grade": "A",
+      "kind": "atlas-technique",
+      "title": "[Centralized AI Service Request Routing](/techniques/AML.T0140)",
+      "url": "https://github.com/mitre-atlas/atlas-data/releases/tag/v2026.10",
+      "published": "2026-10-28T22:55:06Z",
+      "observed_at": "2026-10-31T16:08:24Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "MITRE ATLAS release v2026.10 added: [Centralized AI Service Request Routing](/techniques/AML.T0140).",
+      "identifiers": [
+        "AML.T0010",
+        "AML.T0017.003",
+        "AML.T0024",
+        "AML.T0024.000",
+        "AML.T0024.001",
+        "AML.T0056",
+        "AML.T0057",
+        "AML.T0085.002",
+        "AML.T0085.003",
+        "AML.T0135",
+        "AML.T0136",
+        "AML.T0137",
+        "AML.T0137.000",
+        "AML.T0137.001",
+        "AML.T0137.002",
+        "AML.T0137.003",
+        "AML.T0138",
+        "AML.T0139",
+        "AML.T0140",
+        "AML.T0141",
+        "AML.T0142",
+        "AML.T0143",
+        "AML.T0144",
+        "AML.T0145"
+      ],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-550A4BCCCD784D04",
+      "status": "candidate",
+      "source_feed_id": "FEED-MITRE-ATLAS-RELEASES",
+      "source_grade": "A",
+      "kind": "atlas-technique",
+      "title": "[Compromise Accounts](/techniques/AML.T0139)",
+      "url": "https://github.com/mitre-atlas/atlas-data/releases/tag/v2026.10",
+      "published": "2026-10-28T22:55:06Z",
+      "observed_at": "2026-10-31T16:08:24Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "MITRE ATLAS release v2026.10 added: [Compromise Accounts](/techniques/AML.T0139).",
+      "identifiers": [
+        "AML.T0010",
+        "AML.T0017.003",
+        "AML.T0024",
+        "AML.T0024.000",
+        "AML.T0024.001",
+        "AML.T0056",
+        "AML.T0057",
+        "AML.T0085.002",
+        "AML.T0085.003",
+        "AML.T0135",
+        "AML.T0136",
+        "AML.T0137",
+        "AML.T0137.000",
+        "AML.T0137.001",
+        "AML.T0137.002",
+        "AML.T0137.003",
+        "AML.T0138",
+        "AML.T0139",
+        "AML.T0140",
+        "AML.T0141",
+        "AML.T0142",
+        "AML.T0143",
+        "AML.T0144",
+        "AML.T0145"
+      ],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-5B98288B5D86C53E",
+      "status": "candidate",
+      "source_feed_id": "FEED-MITRE-ATLAS-RELEASES",
+      "source_grade": "A",
+      "kind": "atlas-technique",
+      "title": "[Exfiltration via AI User Interface](/techniques/AML.T0136)",
+      "url": "https://github.com/mitre-atlas/atlas-data/releases/tag/v2026.10",
+      "published": "2026-10-28T22:55:06Z",
+      "observed_at": "2026-10-31T16:08:24Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "MITRE ATLAS release v2026.10 added: [Exfiltration via AI User Interface](/techniques/AML.T0136).",
+      "identifiers": [
+        "AML.T0010",
+        "AML.T0017.003",
+        "AML.T0024",
+        "AML.T0024.000",
+        "AML.T0024.001",
+        "AML.T0056",
+        "AML.T0057",
+        "AML.T0085.002",
+        "AML.T0085.003",
+        "AML.T0135",
+        "AML.T0136",
+        "AML.T0137",
+        "AML.T0137.000",
+        "AML.T0137.001",
+        "AML.T0137.002",
+        "AML.T0137.003",
+        "AML.T0138",
+        "AML.T0139",
+        "AML.T0140",
+        "AML.T0141",
+        "AML.T0142",
+        "AML.T0143",
+        "AML.T0144",
+        "AML.T0145"
+      ],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-62E201ADEDB059C6",
+      "status": "candidate",
+      "source_feed_id": "FEED-MITRE-ATLAS-RELEASES",
+      "source_grade": "A",
+      "kind": "atlas-technique",
+      "title": "[Outputs from AI Models](/techniques/AML.T0135)",
+      "url": "https://github.com/mitre-atlas/atlas-data/releases/tag/v2026.10",
+      "published": "2026-10-28T22:55:06Z",
+      "observed_at": "2026-10-31T16:08:24Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "MITRE ATLAS release v2026.10 added: [Outputs from AI Models](/techniques/AML.T0135).",
+      "identifiers": [
+        "AML.T0010",
+        "AML.T0017.003",
+        "AML.T0024",
+        "AML.T0024.000",
+        "AML.T0024.001",
+        "AML.T0056",
+        "AML.T0057",
+        "AML.T0085.002",
+        "AML.T0085.003",
+        "AML.T0135",
+        "AML.T0136",
+        "AML.T0137",
+        "AML.T0137.000",
+        "AML.T0137.001",
+        "AML.T0137.002",
+        "AML.T0137.003",
+        "AML.T0138",
+        "AML.T0139",
+        "AML.T0140",
+        "AML.T0141",
+        "AML.T0142",
+        "AML.T0143",
+        "AML.T0144",
+        "AML.T0145"
+      ],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-6DEDF37B34BA40B9",
+      "status": "candidate",
+      "source_feed_id": "FEED-MITRE-ATLAS-RELEASES",
+      "source_grade": "A",
+      "kind": "atlas-mitigation",
+      "title": "[Adaptive AI Response Degradation](/mitigations/AML.M0040)",
+      "url": "https://github.com/mitre-atlas/atlas-data/releases/tag/v2026.10",
+      "published": "2026-10-28T22:55:06Z",
+      "observed_at": "2026-10-31T16:08:24Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "MITRE ATLAS release v2026.10 added: [Adaptive AI Response Degradation](/mitigations/AML.M0040).",
+      "identifiers": [
+        "AML.T0010",
+        "AML.T0017.003",
+        "AML.T0024",
+        "AML.T0024.000",
+        "AML.T0024.001",
+        "AML.T0056",
+        "AML.T0057",
+        "AML.T0085.002",
+        "AML.T0085.003",
+        "AML.T0135",
+        "AML.T0136",
+        "AML.T0137",
+        "AML.T0137.000",
+        "AML.T0137.001",
+        "AML.T0137.002",
+        "AML.T0137.003",
+        "AML.T0138",
+        "AML.T0139",
+        "AML.T0140",
+        "AML.T0141",
+        "AML.T0142",
+        "AML.T0143",
+        "AML.T0144",
+        "AML.T0145"
+      ],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-7703C15FC3C028DD",
+      "status": "candidate",
+      "source_feed_id": "FEED-MITRE-ATLAS-RELEASES",
+      "source_grade": "A",
+      "kind": "atlas-mitigation",
+      "title": "[AI Agent External Resource Lifecycle Management](/mitigations/AML.M0043)",
+      "url": "https://github.com/mitre-atlas/atlas-data/releases/tag/v2026.10",
+      "published": "2026-10-28T22:55:06Z",
+      "observed_at": "2026-10-31T16:08:24Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "MITRE ATLAS release v2026.10 added: [AI Agent External Resource Lifecycle Management](/mitigations/AML.M0043).",
+      "identifiers": [
+        "AML.T0010",
+        "AML.T0017.003",
+        "AML.T0024",
+        "AML.T0024.000",
+        "AML.T0024.001",
+        "AML.T0056",
+        "AML.T0057",
+        "AML.T0085.002",
+        "AML.T0085.003",
+        "AML.T0135",
+        "AML.T0136",
+        "AML.T0137",
+        "AML.T0137.000",
+        "AML.T0137.001",
+        "AML.T0137.002",
+        "AML.T0137.003",
+        "AML.T0138",
+        "AML.T0139",
+        "AML.T0140",
+        "AML.T0141",
+        "AML.T0142",
+        "AML.T0143",
+        "AML.T0144",
+        "AML.T0145"
+      ],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-78F2B949BDB04931",
+      "status": "candidate",
+      "source_feed_id": "FEED-MITRE-ATLAS-RELEASES",
+      "source_grade": "A",
+      "kind": "atlas-case-study",
+      "title": "[Model Distillation Campaigns Targeting Google AI Services](/studies/AML.CS0075)",
+      "url": "https://github.com/mitre-atlas/atlas-data/releases/tag/v2026.10",
+      "published": "2026-10-28T22:55:06Z",
+      "observed_at": "2026-10-31T16:08:24Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "MITRE ATLAS release v2026.10 added: [Model Distillation Campaigns Targeting Google AI Services](/studies/AML.CS0075).",
+      "identifiers": [
+        "AML.T0010",
+        "AML.T0017.003",
+        "AML.T0024",
+        "AML.T0024.000",
+        "AML.T0024.001",
+        "AML.T0056",
+        "AML.T0057",
+        "AML.T0085.002",
+        "AML.T0085.003",
+        "AML.T0135",
+        "AML.T0136",
+        "AML.T0137",
+        "AML.T0137.000",
+        "AML.T0137.001",
+        "AML.T0137.002",
+        "AML.T0137.003",
+        "AML.T0138",
+        "AML.T0139",
+        "AML.T0140",
+        "AML.T0141",
+        "AML.T0142",
+        "AML.T0143",
+        "AML.T0144",
+        "AML.T0145"
+      ],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-80E375C8A1CB9A64",
+      "status": "candidate",
+      "source_feed_id": "FEED-MITRE-ATLAS-RELEASES",
+      "source_grade": "A",
+      "kind": "atlas-technique",
+      "title": "[AI Service Request Metadata Sanitization](/techniques/AML.T0141)",
+      "url": "https://github.com/mitre-atlas/atlas-data/releases/tag/v2026.10",
+      "published": "2026-10-28T22:55:06Z",
+      "observed_at": "2026-10-31T16:08:24Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "MITRE ATLAS release v2026.10 added: [AI Service Request Metadata Sanitization](/techniques/AML.T0141).",
+      "identifiers": [
+        "AML.T0010",
+        "AML.T0017.003",
+        "AML.T0024",
+        "AML.T0024.000",
+        "AML.T0024.001",
+        "AML.T0056",
+        "AML.T0057",
+        "AML.T0085.002",
+        "AML.T0085.003",
+        "AML.T0135",
+        "AML.T0136",
+        "AML.T0137",
+        "AML.T0137.000",
+        "AML.T0137.001",
+        "AML.T0137.002",
+        "AML.T0137.003",
+        "AML.T0138",
+        "AML.T0139",
+        "AML.T0140",
+        "AML.T0141",
+        "AML.T0142",
+        "AML.T0143",
+        "AML.T0144",
+        "AML.T0145"
+      ],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-9A02189C5AF674DA",
+      "status": "candidate",
+      "source_feed_id": "FEED-MITRE-ATLAS-RELEASES",
+      "source_grade": "A",
+      "kind": "atlas-technique",
+      "title": "[Recover AI Model Internals](/techniques/AML.T0144)",
+      "url": "https://github.com/mitre-atlas/atlas-data/releases/tag/v2026.10",
+      "published": "2026-10-28T22:55:06Z",
+      "observed_at": "2026-10-31T16:08:24Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "MITRE ATLAS release v2026.10 added: [Recover AI Model Internals](/techniques/AML.T0144).",
+      "identifiers": [
+        "AML.T0010",
+        "AML.T0017.003",
+        "AML.T0024",
+        "AML.T0024.000",
+        "AML.T0024.001",
+        "AML.T0056",
+        "AML.T0057",
+        "AML.T0085.002",
+        "AML.T0085.003",
+        "AML.T0135",
+        "AML.T0136",
+        "AML.T0137",
+        "AML.T0137.000",
+        "AML.T0137.001",
+        "AML.T0137.002",
+        "AML.T0137.003",
+        "AML.T0138",
+        "AML.T0139",
+        "AML.T0140",
+        "AML.T0141",
+        "AML.T0142",
+        "AML.T0143",
+        "AML.T0144",
+        "AML.T0145"
+      ],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-9A33BC059B12844F",
+      "status": "candidate",
+      "source_feed_id": "FEED-MITRE-ATLAS-RELEASES",
+      "source_grade": "A",
+      "kind": "atlas-technique",
+      "title": "[Data from AI Services: System Instructions](/techniques/AML.T0085.003)",
+      "url": "https://github.com/mitre-atlas/atlas-data/releases/tag/v2026.10",
+      "published": "2026-10-28T22:55:06Z",
+      "observed_at": "2026-10-31T16:08:24Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "MITRE ATLAS release v2026.10 added: [Data from AI Services: System Instructions](/techniques/AML.T0085.003).",
+      "identifiers": [
+        "AML.T0010",
+        "AML.T0017.003",
+        "AML.T0024",
+        "AML.T0024.000",
+        "AML.T0024.001",
+        "AML.T0056",
+        "AML.T0057",
+        "AML.T0085.002",
+        "AML.T0085.003",
+        "AML.T0135",
+        "AML.T0136",
+        "AML.T0137",
+        "AML.T0137.000",
+        "AML.T0137.001",
+        "AML.T0137.002",
+        "AML.T0137.003",
+        "AML.T0138",
+        "AML.T0139",
+        "AML.T0140",
+        "AML.T0141",
+        "AML.T0142",
+        "AML.T0143",
+        "AML.T0144",
+        "AML.T0145"
+      ],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-9B1531E1FBE9D500",
+      "status": "candidate",
+      "source_feed_id": "FEED-MITRE-ATLAS-RELEASES",
+      "source_grade": "A",
+      "kind": "atlas-technique",
+      "title": "[Data from AI Services: Conversation Context and Memory](/techniques/AML.T0085.002)",
+      "url": "https://github.com/mitre-atlas/atlas-data/releases/tag/v2026.10",
+      "published": "2026-10-28T22:55:06Z",
+      "observed_at": "2026-10-31T16:08:24Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "MITRE ATLAS release v2026.10 added: [Data from AI Services: Conversation Context and Memory](/techniques/AML.T0085.002).",
+      "identifiers": [
+        "AML.T0010",
+        "AML.T0017.003",
+        "AML.T0024",
+        "AML.T0024.000",
+        "AML.T0024.001",
+        "AML.T0056",
+        "AML.T0057",
+        "AML.T0085.002",
+        "AML.T0085.003",
+        "AML.T0135",
+        "AML.T0136",
+        "AML.T0137",
+        "AML.T0137.000",
+        "AML.T0137.001",
+        "AML.T0137.002",
+        "AML.T0137.003",
+        "AML.T0138",
+        "AML.T0139",
+        "AML.T0140",
+        "AML.T0141",
+        "AML.T0142",
+        "AML.T0143",
+        "AML.T0144",
+        "AML.T0145"
+      ],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-9D3CC3E7E08EB0DA",
+      "status": "candidate",
+      "source_feed_id": "FEED-MITRE-ATLAS-RELEASES",
+      "source_grade": "A",
+      "kind": "atlas-case-study",
+      "title": "[Autonomous Claude Agents Compromise Three Real Organizations During Cyber Evaluations](/studies/AML.CS0073)",
+      "url": "https://github.com/mitre-atlas/atlas-data/releases/tag/v2026.10",
+      "published": "2026-10-28T22:55:06Z",
+      "observed_at": "2026-10-31T16:08:24Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "MITRE ATLAS release v2026.10 added: [Autonomous Claude Agents Compromise Three Real Organizations During Cyber Evaluations](/studies/AML.CS0073).",
+      "identifiers": [
+        "AML.T0010",
+        "AML.T0017.003",
+        "AML.T0024",
+        "AML.T0024.000",
+        "AML.T0024.001",
+        "AML.T0056",
+        "AML.T0057",
+        "AML.T0085.002",
+        "AML.T0085.003",
+        "AML.T0135",
+        "AML.T0136",
+        "AML.T0137",
+        "AML.T0137.000",
+        "AML.T0137.001",
+        "AML.T0137.002",
+        "AML.T0137.003",
+        "AML.T0138",
+        "AML.T0139",
+        "AML.T0140",
+        "AML.T0141",
+        "AML.T0142",
+        "AML.T0143",
+        "AML.T0144",
+        "AML.T0145"
+      ],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-A3AA56DF66EA9B3A",
+      "status": "candidate",
+      "source_feed_id": "FEED-MITRE-ATLAS-RELEASES",
+      "source_grade": "A",
+      "kind": "atlas-technique",
+      "title": "[Poison AI Agent Learning Environment](/techniques/AML.T0145)",
+      "url": "https://github.com/mitre-atlas/atlas-data/releases/tag/v2026.10",
+      "published": "2026-10-28T22:55:06Z",
+      "observed_at": "2026-10-31T16:08:24Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "MITRE ATLAS release v2026.10 added: [Poison AI Agent Learning Environment](/techniques/AML.T0145).",
+      "identifiers": [
+        "AML.T0010",
+        "AML.T0017.003",
+        "AML.T0024",
+        "AML.T0024.000",
+        "AML.T0024.001",
+        "AML.T0056",
+        "AML.T0057",
+        "AML.T0085.002",
+        "AML.T0085.003",
+        "AML.T0135",
+        "AML.T0136",
+        "AML.T0137",
+        "AML.T0137.000",
+        "AML.T0137.001",
+        "AML.T0137.002",
+        "AML.T0137.003",
+        "AML.T0138",
+        "AML.T0139",
+        "AML.T0140",
+        "AML.T0141",
+        "AML.T0142",
+        "AML.T0143",
+        "AML.T0144",
+        "AML.T0145"
+      ],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-A89D3DAEDC4C8904",
+      "status": "candidate",
+      "source_feed_id": "FEED-MITRE-ATLAS-RELEASES",
+      "source_grade": "A",
+      "kind": "atlas-technique",
+      "title": "[Training Data Information from AI Models: Infer Membership](/techniques/AML.T0137.000)",
+      "url": "https://github.com/mitre-atlas/atlas-data/releases/tag/v2026.10",
+      "published": "2026-10-28T22:55:06Z",
+      "observed_at": "2026-10-31T16:08:24Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "MITRE ATLAS release v2026.10 added: [Training Data Information from AI Models: Infer Membership](/techniques/AML.T0137.000).",
+      "identifiers": [
+        "AML.T0010",
+        "AML.T0017.003",
+        "AML.T0024",
+        "AML.T0024.000",
+        "AML.T0024.001",
+        "AML.T0056",
+        "AML.T0057",
+        "AML.T0085.002",
+        "AML.T0085.003",
+        "AML.T0135",
+        "AML.T0136",
+        "AML.T0137",
+        "AML.T0137.000",
+        "AML.T0137.001",
+        "AML.T0137.002",
+        "AML.T0137.003",
+        "AML.T0138",
+        "AML.T0139",
+        "AML.T0140",
+        "AML.T0141",
+        "AML.T0142",
+        "AML.T0143",
+        "AML.T0144",
+        "AML.T0145"
+      ],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-AD19ECD73AD8AB1D",
+      "status": "candidate",
+      "source_feed_id": "FEED-MITRE-ATLAS-RELEASES",
+      "source_grade": "A",
+      "kind": "framework-release",
+      "title": "v2026.10",
+      "url": "https://github.com/mitre-atlas/atlas-data/releases/tag/v2026.10",
+      "published": "2026-10-28T22:55:06Z",
+      "observed_at": "2026-10-31T16:08:24Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "##### Content v2026.10 This version of ATLAS data contains 1 matrix, 16 tactics, 129 techniques, 92 sub-techniques, 44 mitigations, 77 case studies, 44 entities, and 37 software records. ###### Techniques - Added new techniques - [Develop Capabilities: Malware](/techniques/AML.T0017.003) - [Outputs from AI Models](/techniques/AML.T0135) - Collection behavior separated out from [Exfiltration via AI Inference API](/techniques/AML.T0024) - [Exfiltration via AI User Interface](/techniques/AML.T0136) - [Training Data Information from AI Models](/techniques/AML.T0137) - [Training Data Information from AI Models: Infer Membership](/techniques/AML.T0137.000) - moved from \"Exfiltration via AI Inference API: Infer Training Data Membership\" (AML.T0024.000) - [Training Data Information from AI Models: Infer Properties](/techniques/AML.T0137.001) - [Training Data Information from AI Models: Invert AI Model](/techniques/AML.T0137.002) - moved from \"Exfiltration via AI Inference API: Invert AI Model\" (AML.T0024.001) - [Training Data Information from AI Models: Extract Memorized Data](/techniques/AML.T0137.003) - [Indicator Removal](/techniques/AML.T0138) - [Compromise Accounts](/techniques/AML.T0",
+      "identifiers": [
+        "AML.T0005",
+        "AML.T0005.000",
+        "AML.T0005.001",
+        "AML.T0005.002",
+        "AML.T0008.005",
+        "AML.T0010",
+        "AML.T0010.000",
+        "AML.T0010.001",
+        "AML.T0010.002",
+        "AML.T0010.003",
+        "AML.T0017.003",
+        "AML.T0021",
+        "AML.T0024",
+        "AML.T0024.000",
+        "AML.T0024.001",
+        "AML.T0048.004",
+        "AML.T0052.000",
+        "AML.T0053",
+        "AML.T0056",
+        "AML.T0057",
+        "AML.T0061",
+        "AML.T0063",
+        "AML.T0065",
+        "AML.T0073",
+        "AML.T0085",
+        "AML.T0085.000",
+        "AML.T0085.001",
+        "AML.T0085.002",
+        "AML.T0085.003",
+        "AML.T0131",
+        "AML.T0135",
+        "AML.T0136",
+        "AML.T0137",
+        "AML.T0137.000",
+        "AML.T0137.001",
+        "AML.T0137.002",
+        "AML.T0137.003",
+        "AML.T0138",
+        "AML.T0139",
+        "AML.T0140",
+        "AML.T0141",
+        "AML.T0142",
+        "AML.T0143",
+        "AML.T0144",
+        "AML.T0145"
+      ],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-B224338F0ED984F9",
+      "status": "candidate",
+      "source_feed_id": "FEED-MITRE-ATLAS-RELEASES",
+      "source_grade": "A",
+      "kind": "atlas-technique",
+      "title": "[Develop Capabilities: Malware](/techniques/AML.T0017.003)",
+      "url": "https://github.com/mitre-atlas/atlas-data/releases/tag/v2026.10",
+      "published": "2026-10-28T22:55:06Z",
+      "observed_at": "2026-10-31T16:08:24Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "MITRE ATLAS release v2026.10 added: [Develop Capabilities: Malware](/techniques/AML.T0017.003).",
+      "identifiers": [
+        "AML.T0010",
+        "AML.T0017.003",
+        "AML.T0024",
+        "AML.T0024.000",
+        "AML.T0024.001",
+        "AML.T0056",
+        "AML.T0057",
+        "AML.T0085.002",
+        "AML.T0085.003",
+        "AML.T0135",
+        "AML.T0136",
+        "AML.T0137",
+        "AML.T0137.000",
+        "AML.T0137.001",
+        "AML.T0137.002",
+        "AML.T0137.003",
+        "AML.T0138",
+        "AML.T0139",
+        "AML.T0140",
+        "AML.T0141",
+        "AML.T0142",
+        "AML.T0143",
+        "AML.T0144",
+        "AML.T0145"
+      ],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-BBDDDEBCD112AA2D",
+      "status": "candidate",
+      "source_feed_id": "FEED-MITRE-ATLAS-RELEASES",
+      "source_grade": "A",
+      "kind": "atlas-mitigation",
+      "title": "[Threat Intelligence Program](/mitigations/AML.M0042)",
+      "url": "https://github.com/mitre-atlas/atlas-data/releases/tag/v2026.10",
+      "published": "2026-10-28T22:55:06Z",
+      "observed_at": "2026-10-31T16:08:24Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "MITRE ATLAS release v2026.10 added: [Threat Intelligence Program](/mitigations/AML.M0042).",
+      "identifiers": [
+        "AML.T0010",
+        "AML.T0017.003",
+        "AML.T0024",
+        "AML.T0024.000",
+        "AML.T0024.001",
+        "AML.T0056",
+        "AML.T0057",
+        "AML.T0085.002",
+        "AML.T0085.003",
+        "AML.T0135",
+        "AML.T0136",
+        "AML.T0137",
+        "AML.T0137.000",
+        "AML.T0137.001",
+        "AML.T0137.002",
+        "AML.T0137.003",
+        "AML.T0138",
+        "AML.T0139",
+        "AML.T0140",
+        "AML.T0141",
+        "AML.T0142",
+        "AML.T0143",
+        "AML.T0144",
+        "AML.T0145"
+      ],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-BE127057CF36E778",
+      "status": "candidate",
+      "source_feed_id": "FEED-MITRE-ATLAS-RELEASES",
+      "source_grade": "A",
+      "kind": "atlas-technique",
+      "title": "moved from \"Exfiltration via AI Inference API: Infer Training Data Membership\" (AML.T0024.000)",
+      "url": "https://github.com/mitre-atlas/atlas-data/releases/tag/v2026.10",
+      "published": "2026-10-28T22:55:06Z",
+      "observed_at": "2026-10-31T16:08:24Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "MITRE ATLAS release v2026.10 added: moved from \"Exfiltration via AI Inference API: Infer Training Data Membership\" (AML.T0024.000).",
+      "identifiers": [
+        "AML.T0010",
+        "AML.T0017.003",
+        "AML.T0024",
+        "AML.T0024.000",
+        "AML.T0024.001",
+        "AML.T0056",
+        "AML.T0057",
+        "AML.T0085.002",
+        "AML.T0085.003",
+        "AML.T0135",
+        "AML.T0136",
+        "AML.T0137",
+        "AML.T0137.000",
+        "AML.T0137.001",
+        "AML.T0137.002",
+        "AML.T0137.003",
+        "AML.T0138",
+        "AML.T0139",
+        "AML.T0140",
+        "AML.T0141",
+        "AML.T0142",
+        "AML.T0143",
+        "AML.T0144",
+        "AML.T0145"
+      ],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-D7A84C8AF0318BA1",
+      "status": "candidate",
+      "source_feed_id": "FEED-MITRE-ATLAS-RELEASES",
+      "source_grade": "A",
+      "kind": "atlas-technique",
+      "title": "[Training Data Information from AI Models: Invert AI Model](/techniques/AML.T0137.002)",
+      "url": "https://github.com/mitre-atlas/atlas-data/releases/tag/v2026.10",
+      "published": "2026-10-28T22:55:06Z",
+      "observed_at": "2026-10-31T16:08:24Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "MITRE ATLAS release v2026.10 added: [Training Data Information from AI Models: Invert AI Model](/techniques/AML.T0137.002).",
+      "identifiers": [
+        "AML.T0010",
+        "AML.T0017.003",
+        "AML.T0024",
+        "AML.T0024.000",
+        "AML.T0024.001",
+        "AML.T0056",
+        "AML.T0057",
+        "AML.T0085.002",
+        "AML.T0085.003",
+        "AML.T0135",
+        "AML.T0136",
+        "AML.T0137",
+        "AML.T0137.000",
+        "AML.T0137.001",
+        "AML.T0137.002",
+        "AML.T0137.003",
+        "AML.T0138",
+        "AML.T0139",
+        "AML.T0140",
+        "AML.T0141",
+        "AML.T0142",
+        "AML.T0143",
+        "AML.T0144",
+        "AML.T0145"
+      ],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-DC133A4DE56DC529",
+      "status": "candidate",
+      "source_feed_id": "FEED-MITRE-ATLAS-RELEASES",
+      "source_grade": "A",
+      "kind": "atlas-case-study",
+      "title": "[China-Based Artificial Intelligence Companies Conducting Industrial-Scale Distillation Campaigns Against U.S. AI Companies](/studies/AML.CS0076)",
+      "url": "https://github.com/mitre-atlas/atlas-data/releases/tag/v2026.10",
+      "published": "2026-10-28T22:55:06Z",
+      "observed_at": "2026-10-31T16:08:24Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "MITRE ATLAS release v2026.10 added: [China-Based Artificial Intelligence Companies Conducting Industrial-Scale Distillation Campaigns Against U.S. AI Companies](/studies/AML.CS0076).",
+      "identifiers": [
+        "AML.T0010",
+        "AML.T0017.003",
+        "AML.T0024",
+        "AML.T0024.000",
+        "AML.T0024.001",
+        "AML.T0056",
+        "AML.T0057",
+        "AML.T0085.002",
+        "AML.T0085.003",
+        "AML.T0135",
+        "AML.T0136",
+        "AML.T0137",
+        "AML.T0137.000",
+        "AML.T0137.001",
+        "AML.T0137.002",
+        "AML.T0137.003",
+        "AML.T0138",
+        "AML.T0139",
+        "AML.T0140",
+        "AML.T0141",
+        "AML.T0142",
+        "AML.T0143",
+        "AML.T0144",
+        "AML.T0145"
+      ],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-DD6417178B1E54D7",
+      "status": "candidate",
+      "source_feed_id": "FEED-MITRE-ATLAS-RELEASES",
+      "source_grade": "A",
+      "kind": "atlas-technique",
+      "title": "moved from \"Extract LLM System Prompt\" (AML.T0056)",
+      "url": "https://github.com/mitre-atlas/atlas-data/releases/tag/v2026.10",
+      "published": "2026-10-28T22:55:06Z",
+      "observed_at": "2026-10-31T16:08:24Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "MITRE ATLAS release v2026.10 added: moved from \"Extract LLM System Prompt\" (AML.T0056).",
+      "identifiers": [
+        "AML.T0010",
+        "AML.T0017.003",
+        "AML.T0024",
+        "AML.T0024.000",
+        "AML.T0024.001",
+        "AML.T0056",
+        "AML.T0057",
+        "AML.T0085.002",
+        "AML.T0085.003",
+        "AML.T0135",
+        "AML.T0136",
+        "AML.T0137",
+        "AML.T0137.000",
+        "AML.T0137.001",
+        "AML.T0137.002",
+        "AML.T0137.003",
+        "AML.T0138",
+        "AML.T0139",
+        "AML.T0140",
+        "AML.T0141",
+        "AML.T0142",
+        "AML.T0143",
+        "AML.T0144",
+        "AML.T0145"
+      ],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-E94AA6E8F1953ECF",
+      "status": "candidate",
+      "source_feed_id": "FEED-MITRE-ATLAS-RELEASES",
+      "source_grade": "A",
+      "kind": "atlas-technique",
+      "title": "moved from \"LLM Data Leakage\" (AML.T0057)",
+      "url": "https://github.com/mitre-atlas/atlas-data/releases/tag/v2026.10",
+      "published": "2026-10-28T22:55:06Z",
+      "observed_at": "2026-10-31T16:08:24Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "MITRE ATLAS release v2026.10 added: moved from \"LLM Data Leakage\" (AML.T0057).",
+      "identifiers": [
+        "AML.T0010",
+        "AML.T0017.003",
+        "AML.T0024",
+        "AML.T0024.000",
+        "AML.T0024.001",
+        "AML.T0056",
+        "AML.T0057",
+        "AML.T0085.002",
+        "AML.T0085.003",
+        "AML.T0135",
+        "AML.T0136",
+        "AML.T0137",
+        "AML.T0137.000",
+        "AML.T0137.001",
+        "AML.T0137.002",
+        "AML.T0137.003",
+        "AML.T0138",
+        "AML.T0139",
+        "AML.T0140",
+        "AML.T0141",
+        "AML.T0142",
+        "AML.T0143",
+        "AML.T0144",
+        "AML.T0145"
+      ],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-EA12A1A2F73A3F70",
+      "status": "candidate",
+      "source_feed_id": "FEED-MITRE-ATLAS-RELEASES",
+      "source_grade": "A",
+      "kind": "atlas-technique",
+      "title": "Collection behavior separated out from [Exfiltration via AI Inference API](/techniques/AML.T0024)",
+      "url": "https://github.com/mitre-atlas/atlas-data/releases/tag/v2026.10",
+      "published": "2026-10-28T22:55:06Z",
+      "observed_at": "2026-10-31T16:08:24Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "MITRE ATLAS release v2026.10 added: Collection behavior separated out from [Exfiltration via AI Inference API](/techniques/AML.T0024).",
+      "identifiers": [
+        "AML.T0010",
+        "AML.T0017.003",
+        "AML.T0024",
+        "AML.T0024.000",
+        "AML.T0024.001",
+        "AML.T0056",
+        "AML.T0057",
+        "AML.T0085.002",
+        "AML.T0085.003",
+        "AML.T0135",
+        "AML.T0136",
+        "AML.T0137",
+        "AML.T0137.000",
+        "AML.T0137.001",
+        "AML.T0137.002",
+        "AML.T0137.003",
+        "AML.T0138",
+        "AML.T0139",
+        "AML.T0140",
+        "AML.T0141",
+        "AML.T0142",
+        "AML.T0143",
+        "AML.T0144",
+        "AML.T0145"
+      ],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-F7A81CD7C338B207",
+      "status": "candidate",
+      "source_feed_id": "FEED-MITRE-ATLAS-RELEASES",
+      "source_grade": "A",
+      "kind": "atlas-technique",
+      "title": "[Event Triggered Execution](/techniques/AML.T0142)",
+      "url": "https://github.com/mitre-atlas/atlas-data/releases/tag/v2026.10",
+      "published": "2026-10-28T22:55:06Z",
+      "observed_at": "2026-10-31T16:08:24Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "MITRE ATLAS release v2026.10 added: [Event Triggered Execution](/techniques/AML.T0142).",
+      "identifiers": [
+        "AML.T0010",
+        "AML.T0017.003",
+        "AML.T0024",
+        "AML.T0024.000",
+        "AML.T0024.001",
+        "AML.T0056",
+        "AML.T0057",
+        "AML.T0085.002",
+        "AML.T0085.003",
+        "AML.T0135",
+        "AML.T0136",
+        "AML.T0137",
+        "AML.T0137.000",
+        "AML.T0137.001",
+        "AML.T0137.002",
+        "AML.T0137.003",
+        "AML.T0138",
+        "AML.T0139",
+        "AML.T0140",
+        "AML.T0141",
+        "AML.T0142",
+        "AML.T0143",
+        "AML.T0144",
+        "AML.T0145"
+      ],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-4752217EB57AA319",
+      "status": "candidate",
+      "source_feed_id": "FEED-INSPECT-EVALS-RELEASES",
+      "source_grade": "D",
+      "kind": "project-release",
+      "title": "v0.27.0",
+      "url": "https://github.com/UKGovernmentBEIS/inspect_evals/releases/tag/v0.27.0",
+      "published": "2026-10-30T04:06:58Z",
+      "observed_at": "2026-10-31T16:08:27Z",
+      "relevance_score": 100,
+      "matched_terms": [],
+      "summary": "### Existing Evals - AgentDojo (v3-A): Read the bundled suite YAML as UTF-8 instead of the locale encoding, so results no longer depend on the host locale (travel user tasks 9 and 11 were scored incorrectly and the workspace suites failed to load under non-UTF-8 code pages). - BrowseComp: A Simple Yet Challenging Benchmark for Browsing Agents (v5-C): Replace the optional browsing agent's browser tools with configurable web search and remove the default Docker requirement. Browsing results are not comparable with earlier task versions. - GDM Dangerous Capabilities: Self-reasoning (v5-C): Run model-written max-tokens submissions as lower-privilege children of a verifier supervisor in an isolated sandbox. Max-tokens accuracy can decrease for submissions that previously passed by controlling verifier termination or Python equality behavior; list-returning implementations retain their expected scores. - The Agent Company (v5-B): Remove the host port mappings from the ownCloud and Collabora service containers, and attach ownCloud only to the internal sandbox network. Docker previously published ownCloud on every host interface, so other machines that could reach the host, and agents in o",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-ATR-CVE-2019-5418",
+      "status": "candidate",
+      "source_feed_id": "FEED-ATR-RULE-COMMITS",
+      "source_grade": "D",
+      "kind": "vulnerability-candidate",
+      "title": "CVE-2019-5418 (cited by Agent Threat Rules)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-5418",
+      "published": null,
+      "observed_at": "2026-10-10T13:04:09Z",
+      "relevance_score": 99,
+      "matched_terms": [
+        "tool-poisoning"
+      ],
+      "summary": "Cited by 1 Agent Threat Rule(s) in tool-poisoning; first rule title: 'SSRF via Agent Tool Calls'. In CISA KEV. EPSS 0.985. An ATR citation is a lead, not evidence of exploitation or of an AI system.",
+      "identifiers": [
+        "CVE-2019-5418"
+      ],
+      "review": {
+        "decision": null,
+        "notes": "Read the NVD or vendor advisory. Add a vulnerability record only if the product is an AI framework, agent, MCP server or model tool, and link it to a technique from evidence in the advisory."
+      }
+    },
+    {
+      "id": "RQ-ATR-CVE-2021-21311",
+      "status": "candidate",
+      "source_feed_id": "FEED-ATR-RULE-COMMITS",
+      "source_grade": "D",
+      "kind": "vulnerability-candidate",
+      "title": "CVE-2021-21311 (cited by Agent Threat Rules)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-21311",
+      "published": null,
+      "observed_at": "2026-10-10T13:04:09Z",
+      "relevance_score": 99,
+      "matched_terms": [
+        "tool-poisoning"
+      ],
+      "summary": "Cited by 1 Agent Threat Rule(s) in tool-poisoning; first rule title: 'SSRF via Agent Tool Calls'. In CISA KEV. EPSS 0.985. An ATR citation is a lead, not evidence of exploitation or of an AI system.",
+      "identifiers": [
+        "CVE-2021-21311"
+      ],
+      "review": {
+        "decision": null,
+        "notes": "Read the NVD or vendor advisory. Add a vulnerability record only if the product is an AI framework, agent, MCP server or model tool, and link it to a technique from evidence in the advisory."
+      }
+    },
+    {
+      "id": "RQ-ATR-CVE-2026-42271",
+      "status": "candidate",
+      "source_feed_id": "FEED-ATR-RULE-COMMITS",
+      "source_grade": "D",
+      "kind": "vulnerability-candidate",
+      "title": "CVE-2026-42271 (cited by Agent Threat Rules)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42271",
+      "published": null,
+      "observed_at": "2026-10-10T13:04:09Z",
+      "relevance_score": 97,
+      "matched_terms": [
+        "tool-poisoning"
+      ],
+      "summary": "Cited by 1 Agent Threat Rule(s) in tool-poisoning; first rule title: 'MCP stdio server config command injection via unvalidated test endpoints'. In CISA KEV. EPSS 0.926. An ATR citation is a lead, not evidence of exploitation or of an AI system.",
+      "identifiers": [
+        "CVE-2026-42271",
+        "GHSA-v4p8-mg3p-g94g"
+      ],
+      "review": {
+        "decision": null,
+        "notes": "Read the NVD or vendor advisory. Add a vulnerability record only if the product is an AI framework, agent, MCP server or model tool, and link it to a technique from evidence in the advisory."
       }
     },
     {
@@ -208,6 +2265,29 @@
       "review": {
         "decision": null,
         "notes": "Clone, read README and license, classify before promotion into ecosystem.json."
+      }
+    },
+    {
+      "id": "RQ-ATR-CVE-2025-6514",
+      "status": "candidate",
+      "source_feed_id": "FEED-ATR-RULE-COMMITS",
+      "source_grade": "D",
+      "kind": "vulnerability-candidate",
+      "title": "CVE-2025-6514 (cited by Agent Threat Rules)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-6514",
+      "published": null,
+      "observed_at": "2026-10-10T13:04:09Z",
+      "relevance_score": 71,
+      "matched_terms": [
+        "tool-poisoning"
+      ],
+      "summary": "Cited by 2 Agent Threat Rule(s) in tool-poisoning; first rule title: 'Malicious Content in MCP Tool Response'. Not in CISA KEV. EPSS 0.777. An ATR citation is a lead, not evidence of exploitation or of an AI system.",
+      "identifiers": [
+        "CVE-2025-6514"
+      ],
+      "review": {
+        "decision": null,
+        "notes": "Read the NVD or vendor advisory. Add a vulnerability record only if the product is an AI framework, agent, MCP server or model tool, and link it to a technique from evidence in the advisory."
       }
     },
     {
@@ -1047,96 +3127,52 @@
       }
     },
     {
-      "id": "RQ-ATR-CVE-2019-5418",
+      "id": "RQ-FF8AE215DA213B18",
       "status": "candidate",
-      "source_feed_id": "FEED-ATR-RULE-COMMITS",
-      "source_grade": "D",
-      "kind": "vulnerability-candidate",
-      "title": "CVE-2019-5418 (cited by Agent Threat Rules)",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-5418",
-      "published": null,
-      "observed_at": "2026-10-10T13:04:09Z",
-      "relevance_score": 99,
+      "source_feed_id": "FEED-CISA-KEV",
+      "source_grade": "A",
+      "kind": "known-exploited-vulnerability",
+      "title": "BerriAI LiteLLM Improper Authentication Vulnerability",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+      "published": "2026-09-02",
+      "observed_at": "2026-10-31T16:08:26Z",
+      "relevance_score": 69,
       "matched_terms": [
-        "tool-poisoning"
+        "litellm",
+        "mcp"
       ],
-      "summary": "Cited by 1 Agent Threat Rule(s) in tool-poisoning; first rule title: 'SSRF via Agent Tool Calls'. In CISA KEV. EPSS 0.985. An ATR citation is a lead, not evidence of exploitation or of an AI system.",
+      "summary": "BerriAI LiteLLM contains an improper authentication vulnerability in the MCP Streamable HTTP endpoint that could allow an unauthenticated attacker to establish an authenticated MCP session using an arbitrary Bearer token.",
       "identifiers": [
-        "CVE-2019-5418"
+        "CVE-2026-59822"
       ],
       "review": {
         "decision": null,
-        "notes": "Read the NVD or vendor advisory. Add a vulnerability record only if the product is an AI framework, agent, MCP server or model tool, and link it to a technique from evidence in the advisory."
+        "notes": null
       }
     },
     {
-      "id": "RQ-ATR-CVE-2021-21311",
+      "id": "RQ-C996C2E357CC3A3A",
       "status": "candidate",
-      "source_feed_id": "FEED-ATR-RULE-COMMITS",
-      "source_grade": "D",
-      "kind": "vulnerability-candidate",
-      "title": "CVE-2021-21311 (cited by Agent Threat Rules)",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-21311",
-      "published": null,
-      "observed_at": "2026-10-10T13:04:09Z",
-      "relevance_score": 99,
+      "source_feed_id": "FEED-GITHUB-MALWARE",
+      "source_grade": "A",
+      "kind": "malware-advisory",
+      "title": "Malicious code in @testsecuiitytestme/cache-helper (npm)",
+      "url": "https://github.com/advisories/GHSA-4g45-28rv-vq9q",
+      "published": "2026-10-28T09:31:56Z",
+      "observed_at": "2026-10-31T16:08:26Z",
+      "relevance_score": 69,
       "matched_terms": [
-        "tool-poisoning"
+        "ai",
+        "mcp"
       ],
-      "summary": "Cited by 1 Agent Threat Rule(s) in tool-poisoning; first rule title: 'SSRF via Agent Tool Calls'. In CISA KEV. EPSS 0.985. An ATR citation is a lead, not evidence of exploitation or of an AI system.",
+      "summary": "@testsecuiitytestme/cache-helper is the only package of the npm account testsecuiitytestme. It was created on 2026-10-27 at 12:08 UTC with npm's staged-publish placeholder 0.0.0-stage, followed by 1.0.1 (12:28 UTC), 1.0.2 (15:33 UTC) and 1.0.3 (16:24 UTC); a 1.0.0 was removed before 14:21 UTC. It describes itself as \"Cache helper utilities\" and has no README, repository or source code. 1.0.3 was the latest version and still live at the time of this report. Each version runs a native addon at install time. 1.0.1 has postinstall: node -e \"try{require(process.platform==='win32'?'./addon_win.node':'./addon.node')}catch(e){}\". 1.0.2 and 1.0.3 depend on node-gyp-build and run it as postinstall, which loads the prebuilt addon shipped in prebuilds/linux-x64/node.napi.node or prebuilds/win32-x64/node.napi.node. 1.0.3 adds a binding.gyp with an empty sources list and an install script node-gyp rebuild, so the package looks like an ordinary native module; there is no C source in any version. The addon (Linux ELF and Windows PE) is a loader. It checks for CI and sandbox environments (GITHUB_ACTIONS, GITLAB_CI, TRAVIS, CIRCLECI, JENKINS_URL, BUILDKITE, CODEBUILD_BUILD_ID and others, plus SANDBO",
       "identifiers": [
-        "CVE-2021-21311"
+        "GHSA-4G45-28RV-VQ9Q",
+        "MAL-2026-18358"
       ],
       "review": {
         "decision": null,
-        "notes": "Read the NVD or vendor advisory. Add a vulnerability record only if the product is an AI framework, agent, MCP server or model tool, and link it to a technique from evidence in the advisory."
-      }
-    },
-    {
-      "id": "RQ-ATR-CVE-2026-42271",
-      "status": "candidate",
-      "source_feed_id": "FEED-ATR-RULE-COMMITS",
-      "source_grade": "D",
-      "kind": "vulnerability-candidate",
-      "title": "CVE-2026-42271 (cited by Agent Threat Rules)",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42271",
-      "published": null,
-      "observed_at": "2026-10-10T13:04:09Z",
-      "relevance_score": 97,
-      "matched_terms": [
-        "tool-poisoning"
-      ],
-      "summary": "Cited by 1 Agent Threat Rule(s) in tool-poisoning; first rule title: 'MCP stdio server config command injection via unvalidated test endpoints'. In CISA KEV. EPSS 0.926. An ATR citation is a lead, not evidence of exploitation or of an AI system.",
-      "identifiers": [
-        "CVE-2026-42271",
-        "GHSA-v4p8-mg3p-g94g"
-      ],
-      "review": {
-        "decision": null,
-        "notes": "Read the NVD or vendor advisory. Add a vulnerability record only if the product is an AI framework, agent, MCP server or model tool, and link it to a technique from evidence in the advisory."
-      }
-    },
-    {
-      "id": "RQ-ATR-CVE-2025-6514",
-      "status": "candidate",
-      "source_feed_id": "FEED-ATR-RULE-COMMITS",
-      "source_grade": "D",
-      "kind": "vulnerability-candidate",
-      "title": "CVE-2025-6514 (cited by Agent Threat Rules)",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-6514",
-      "published": null,
-      "observed_at": "2026-10-10T13:04:09Z",
-      "relevance_score": 71,
-      "matched_terms": [
-        "tool-poisoning"
-      ],
-      "summary": "Cited by 2 Agent Threat Rule(s) in tool-poisoning; first rule title: 'Malicious Content in MCP Tool Response'. Not in CISA KEV. EPSS 0.777. An ATR citation is a lead, not evidence of exploitation or of an AI system.",
-      "identifiers": [
-        "CVE-2025-6514"
-      ],
-      "review": {
-        "decision": null,
-        "notes": "Read the NVD or vendor advisory. Add a vulnerability record only if the product is an AI framework, agent, MCP server or model tool, and link it to a technique from evidence in the advisory."
+        "notes": null
       }
     },
     {
@@ -1253,6 +3289,424 @@
       "review": {
         "decision": null,
         "notes": "Read the NVD or vendor advisory. Add a vulnerability record only if the product is an AI framework, agent, MCP server or model tool, and link it to a technique from evidence in the advisory."
+      }
+    },
+    {
+      "id": "RQ-CE5D9318594D6723",
+      "status": "candidate",
+      "source_feed_id": "FEED-CISA-KEV",
+      "source_grade": "A",
+      "kind": "known-exploited-vulnerability",
+      "title": "SAP NetWeaver Unrestricted File Upload Vulnerability",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+      "published": "2025-04-29",
+      "observed_at": "2026-10-31T16:08:26Z",
+      "relevance_score": 57,
+      "matched_terms": [
+        "agent"
+      ],
+      "summary": "SAP NetWeaver Visual Composer Metadata Uploader contains an unrestricted file upload vulnerability that allows an unauthenticated agent to upload potentially malicious executable binaries.",
+      "identifiers": [
+        "CVE-2025-31324"
+      ],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-C57ECCD7C11ECE2A",
+      "status": "candidate",
+      "source_feed_id": "FEED-CISA-KEV",
+      "source_grade": "A",
+      "kind": "known-exploited-vulnerability",
+      "title": "Adobe Commerce and Magento Improper Input Validation Vulnerability",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+      "published": "2025-10-24",
+      "observed_at": "2026-10-31T16:08:26Z",
+      "relevance_score": 57,
+      "matched_terms": [
+        "agent"
+      ],
+      "summary": "Adobe Commerce and Magento Open Source contain an improper input validation vulnerability that could allow an attacker to take over customer accounts through the Commerce REST API.",
+      "identifiers": [
+        "CVE-2025-54236"
+      ],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-A2264330A30481D4",
+      "status": "candidate",
+      "source_feed_id": "FEED-CISA-KEV",
+      "source_grade": "A",
+      "kind": "known-exploited-vulnerability",
+      "title": "BerriAI LiteLLM SQL Injection Vulnerability",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+      "published": "2026-05-08",
+      "observed_at": "2026-10-31T16:08:26Z",
+      "relevance_score": 57,
+      "matched_terms": [
+        "litellm"
+      ],
+      "summary": "BerriAI LiteLLM contains a SQL injection vulnerability that allows an attacker to read data from the proxy's database and potentially modify it, leading to unauthorized access to the proxy and the credentials it manages.",
+      "identifiers": [
+        "CVE-2026-42208"
+      ],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-4DB18EADE1B99672",
+      "status": "candidate",
+      "source_feed_id": "FEED-CISA-KEV",
+      "source_grade": "A",
+      "kind": "known-exploited-vulnerability",
+      "title": "Trend Micro Apex One (On-Premise) Directory Traversal Vulnerability",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+      "published": "2026-05-21",
+      "observed_at": "2026-10-31T16:08:26Z",
+      "relevance_score": 57,
+      "matched_terms": [
+        "agent"
+      ],
+      "summary": "Trend Micro Apex One (on-premise) contains a directory traversal vulnerability that could allow a pre-authenticated local attacker to modify a key table on the server to inject malicious code to deploy to agents on affected installations.",
+      "identifiers": [
+        "CVE-2026-34926"
+      ],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-5C035F805D87E309",
+      "status": "candidate",
+      "source_feed_id": "FEED-CISA-KEV",
+      "source_grade": "A",
+      "kind": "known-exploited-vulnerability",
+      "title": "Linux Kernel Improper Authentication Vulnerability",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+      "published": "2026-06-02",
+      "observed_at": "2026-10-31T16:08:26Z",
+      "relevance_score": 57,
+      "matched_terms": [
+        "agent"
+      ],
+      "summary": "Linux Kernel contains an improper authentication vulnerability which could allow for privilege escalation via the cgroups v1 release_agent feature.",
+      "identifiers": [
+        "CVE-2022-0492"
+      ],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-C9E9BE71DB680271",
+      "status": "candidate",
+      "source_feed_id": "FEED-CISA-KEV",
+      "source_grade": "A",
+      "kind": "known-exploited-vulnerability",
+      "title": "BerriAI LiteLLM Command Injection Vulnerability",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+      "published": "2026-06-08",
+      "observed_at": "2026-10-31T16:08:26Z",
+      "relevance_score": 57,
+      "matched_terms": [
+        "litellm"
+      ],
+      "summary": "BerriAI LiteLLM contains a command injection vulnerability that could allow any authenticated user, including holders of low-privilege internal-user keys, to run arbitrary commands on the host.",
+      "identifiers": [
+        "CVE-2026-42271"
+      ],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-1F9039C9014C794E",
+      "status": "candidate",
+      "source_feed_id": "FEED-CISA-KEV",
+      "source_grade": "A",
+      "kind": "known-exploited-vulnerability",
+      "title": "JetBrains TeamCity Deserialization of Untrusted Data Vulnerability",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+      "published": "2026-08-05",
+      "observed_at": "2026-10-31T16:08:26Z",
+      "relevance_score": 57,
+      "matched_terms": [
+        "agent"
+      ],
+      "summary": "JetBrains TeamCity contains a deserialization of untrusted data vulnerability that could allow unauthenticated remote code execution via the agent polling protocol.",
+      "identifiers": [
+        "CVE-2026-63077"
+      ],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-B79E5D181334A63D",
+      "status": "candidate",
+      "source_feed_id": "FEED-CISA-KEV",
+      "source_grade": "A",
+      "kind": "known-exploited-vulnerability",
+      "title": "Ray-Project Ray Code Injection Vulnerability",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+      "published": "2026-08-17",
+      "observed_at": "2026-10-31T16:08:26Z",
+      "relevance_score": 57,
+      "matched_terms": [
+        "ray"
+      ],
+      "summary": "Ray-Project Ray contains a code injection vulnerability that could allow remote code execution. Developers using Ray as a development tool may be exposed to this vulnerability exploitable through Firefox and Safari.",
+      "identifiers": [
+        "CVE-2025-62593"
+      ],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-0126F338B4454547",
+      "status": "candidate",
+      "source_feed_id": "FEED-CISA-KEV",
+      "source_grade": "A",
+      "kind": "known-exploited-vulnerability",
+      "title": "Adobe Commerce and Magento Improper Neutralization of Special Elements Used in a Template Engine Vulnerability",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+      "published": "2026-09-08",
+      "observed_at": "2026-10-31T16:08:26Z",
+      "relevance_score": 57,
+      "matched_terms": [
+        "agent"
+      ],
+      "summary": "Adobe Commerce and Magento Open Source contain an improper neutralization of special elements used in a template engine vulnerability that could allow an attacker to execute arbitrary code.",
+      "identifiers": [
+        "CVE-2026-75650"
+      ],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-9B27FBFFA5B82CC7",
+      "status": "candidate",
+      "source_feed_id": "FEED-CISA-KEV",
+      "source_grade": "A",
+      "kind": "known-exploited-vulnerability",
+      "title": "Adobe Commerce and Magento Incorrect Authorization Vulnerability",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+      "published": "2026-09-24",
+      "observed_at": "2026-10-31T16:08:26Z",
+      "relevance_score": 57,
+      "matched_terms": [
+        "agent"
+      ],
+      "summary": "Adobe Commerce and Magento contains an incorrect authorization vulnerability that could allow an attacker to leverage this vulnerability to gain elevated access to sensitive resources without any user interaction.",
+      "identifiers": [
+        "CVE-2026-71362"
+      ],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-9568D99F230EF3FE",
+      "status": "candidate",
+      "source_feed_id": "FEED-CISA-KEV",
+      "source_grade": "A",
+      "kind": "known-exploited-vulnerability",
+      "title": "Adobe Commerce and Magento Unrestricted Upload of File with Dangerous Type Vulnerability",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+      "published": "2026-10-27",
+      "observed_at": "2026-10-31T16:08:26Z",
+      "relevance_score": 57,
+      "matched_terms": [
+        "agent"
+      ],
+      "summary": "Adobe Commerce and Magento contain an unrestricted upload of file with dangerous type vulnerability that could result in arbitrary code execution in the context of the current user, potentially gaining elevated access or control over the victim's account or session.",
+      "identifiers": [
+        "CVE-2026-48356"
+      ],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-658F93C456E6AFD9",
+      "status": "candidate",
+      "source_feed_id": "FEED-GITHUB-MALWARE",
+      "source_grade": "A",
+      "kind": "malware-advisory",
+      "title": "Malware in @atlisp/mcp",
+      "url": "https://github.com/advisories/GHSA-65cr-mcfq-59hh",
+      "published": "2026-10-28T10:55:01Z",
+      "observed_at": "2026-10-31T16:08:26Z",
+      "relevance_score": 57,
+      "matched_terms": [
+        "mcp"
+      ],
+      "summary": "Any computer that has this package installed or running should be considered fully compromised. All secrets and keys stored on that computer should be rotated immediately from a different computer. The package should be removed, but as full control of the computer may have been given to an outside entity, there is no guarantee that removing the package will remove all malicious software resulting from installing it.",
+      "identifiers": [
+        "GHSA-65CR-MCFQ-59HH"
+      ],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-D2046016506D7ACB",
+      "status": "candidate",
+      "source_feed_id": "FEED-GITHUB-MALWARE",
+      "source_grade": "A",
+      "kind": "malware-advisory",
+      "title": "Malware in @zaip-ai/cli",
+      "url": "https://github.com/advisories/GHSA-ffq4-h5jm-8pqr",
+      "published": "2026-10-28T20:37:17Z",
+      "observed_at": "2026-10-31T16:08:26Z",
+      "relevance_score": 57,
+      "matched_terms": [
+        "ai"
+      ],
+      "summary": "Any computer that has this package installed or running should be considered fully compromised. All secrets and keys stored on that computer should be rotated immediately from a different computer. The package should be removed, but as full control of the computer may have been given to an outside entity, there is no guarantee that removing the package will remove all malicious software resulting from installing it.",
+      "identifiers": [
+        "GHSA-FFQ4-H5JM-8PQR"
+      ],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-D9D9998CB2D84258",
+      "status": "candidate",
+      "source_feed_id": "FEED-GITHUB-MALWARE",
+      "source_grade": "A",
+      "kind": "malware-advisory",
+      "title": "Malware in local-commander-agent",
+      "url": "https://github.com/advisories/GHSA-7j62-5j84-72fv",
+      "published": "2026-10-31T07:57:13Z",
+      "observed_at": "2026-10-31T16:08:26Z",
+      "relevance_score": 57,
+      "matched_terms": [
+        "agent"
+      ],
+      "summary": "Any computer that has this package installed or running should be considered fully compromised. All secrets and keys stored on that computer should be rotated immediately from a different computer. The package should be removed, but as full control of the computer may have been given to an outside entity, there is no guarantee that removing the package will remove all malicious software resulting from installing it.",
+      "identifiers": [
+        "GHSA-7J62-5J84-72FV"
+      ],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-0D6AA9574EC1435B",
+      "status": "candidate",
+      "source_feed_id": "FEED-GITHUB-MALWARE",
+      "source_grade": "A",
+      "kind": "malware-advisory",
+      "title": "Malicious code in skills-analyzer (PyPI)",
+      "url": "https://github.com/advisories/GHSA-r92r-m9r8-78vj",
+      "published": "2026-10-31T15:30:24Z",
+      "observed_at": "2026-10-31T16:08:26Z",
+      "relevance_score": 57,
+      "matched_terms": [
+        "ai"
+      ],
+      "summary": "## Source: kam193 (415c95c384a9901bda7b98bdcf86142c041e21de2759e7048769a49bf54d9bea) In this campaign, specific versions of involved affected packages hide malicious actions. The malicious code is hidden in specific versions of a dependency (is-it-ai), intentionally pinned by specific versions of dependent packages. All package versions were uploaded with malicious intention; the ones without malicious references are clearly intendent only to hide a cover for the rest. When triggered, the malicious action fingerprints the environment and contacts the remote server. If it responds with an URL, it will be downloaded and executed. The malicious code is in 0.1.1, other releases are just to cover it. --- Category: MALICIOUS - The campaign has clearly malicious intent, like infostealers. Campaign: 2026-10-is-it-ai Reasons (based on the campaign): - Downloads and executes a remote executable. - The malicious code is intentionally included in a dependency of the package - targetted-attack - action-hidden-in-lib-usage --- Credit: [OpenSSF](https://github.com/ossf/malicious-packages) ([source](https://github.com/ossf/malicious-packages/blob/c89f77f3af8e15ab4533f04ad3687145bcff53fa/osv/malici",
+      "identifiers": [
+        "GHSA-R92R-M9R8-78VJ",
+        "MAL-2026-18427"
+      ],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-1722595B76D94482",
+      "status": "candidate",
+      "source_feed_id": "FEED-GITHUB-MALWARE",
+      "source_grade": "A",
+      "kind": "malware-advisory",
+      "title": "Malicious code in multi-convert (PyPI)",
+      "url": "https://github.com/advisories/GHSA-vh26-86vj-f72g",
+      "published": "2026-10-31T15:30:24Z",
+      "observed_at": "2026-10-31T16:08:26Z",
+      "relevance_score": 57,
+      "matched_terms": [
+        "ai"
+      ],
+      "summary": "## Source: kam193 (63d1834ac673303487e7c46affaf2be63ac0b142aaab8e79027144aad9cbd9de) In this campaign, specific versions of involved affected packages hide malicious actions. The malicious code is hidden in specific versions of a dependency (is-it-ai), intentionally pinned by specific versions of dependent packages. All package versions were uploaded with malicious intention; the ones without malicious references are clearly intendent only to hide a cover for the rest. When triggered, the malicious action fingerprints the environment and contacts the remote server. If it responds with an URL, it will be downloaded and executed. The malicious code trigger is in 0.1.4, other releases are just to cover it. --- Category: MALICIOUS - The campaign has clearly malicious intent, like infostealers. Campaign: 2026-10-is-it-ai Reasons (based on the campaign): - Downloads and executes a remote executable. - The malicious code is intentionally included in a dependency of the package - targetted-attack - action-hidden-in-lib-usage --- Credit: [OpenSSF](https://github.com/ossf/malicious-packages) ([source](https://github.com/ossf/malicious-packages/blob/c89f77f3af8e15ab4533f04ad3687145bcff53fa/os",
+      "identifiers": [
+        "GHSA-VH26-86VJ-F72G",
+        "MAL-2026-18429"
+      ],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-570E9E7D578F5251",
+      "status": "candidate",
+      "source_feed_id": "FEED-GITHUB-MALWARE",
+      "source_grade": "A",
+      "kind": "malware-advisory",
+      "title": "Malicious code in md-to-slides (PyPI)",
+      "url": "https://github.com/advisories/GHSA-7p4v-mm6f-8g5c",
+      "published": "2026-10-31T15:30:24Z",
+      "observed_at": "2026-10-31T16:08:26Z",
+      "relevance_score": 57,
+      "matched_terms": [
+        "ai"
+      ],
+      "summary": "## Source: kam193 (b11c84f48dc5185cf83056d55f0b2fa64fa415afae3f258baa5887c1ce44bc7c) In this campaign, specific versions of involved affected packages hide malicious actions. The malicious code is hidden in specific versions of a dependency (is-it-ai), intentionally pinned by specific versions of dependent packages. All package versions were uploaded with malicious intention; the ones without malicious references are clearly intendent only to hide a cover for the rest. When triggered, the malicious action fingerprints the environment and contacts the remote server. If it responds with an URL, it will be downloaded and executed. The malicious code trigger is in 0.1.1, other releases are just to cover it. --- Category: MALICIOUS - The campaign has clearly malicious intent, like infostealers. Campaign: 2026-10-is-it-ai Reasons (based on the campaign): - Downloads and executes a remote executable. - The malicious code is intentionally included in a dependency of the package - targetted-attack - action-hidden-in-lib-usage --- Credit: [OpenSSF](https://github.com/ossf/malicious-packages) ([source](https://github.com/ossf/malicious-packages/blob/c89f77f3af8e15ab4533f04ad3687145bcff53fa/os",
+      "identifiers": [
+        "GHSA-7P4V-MM6F-8G5C",
+        "MAL-2026-18428"
+      ],
+      "review": {
+        "decision": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "RQ-D65056AEFFF31898",
+      "status": "candidate",
+      "source_feed_id": "FEED-GITHUB-MALWARE",
+      "source_grade": "A",
+      "kind": "malware-advisory",
+      "title": "Malicious code in is-it-ai (PyPI)",
+      "url": "https://github.com/advisories/GHSA-76h8-w3px-47hx",
+      "published": "2026-10-31T15:30:24Z",
+      "observed_at": "2026-10-31T16:08:26Z",
+      "relevance_score": 57,
+      "matched_terms": [
+        "ai"
+      ],
+      "summary": "## Source: kam193 (6a8580750a7d490d65866e9407c451efa8dbad9a90c35a54b87416c57eef1fea) In this campaign, specific versions of involved affected packages hide malicious actions. The malicious code is hidden in specific versions of a dependency (is-it-ai), intentionally pinned by specific versions of dependent packages. All package versions were uploaded with malicious intention; the ones without malicious references are clearly intendent only to hide a cover for the rest. When triggered, the malicious action fingerprints the environment and contacts the remote server. If it responds with an URL, it will be downloaded and executed. --- Category: MALICIOUS - The campaign has clearly malicious intent, like infostealers. Campaign: 2026-10-is-it-ai Reasons (based on the campaign): - Downloads and executes a remote executable. - The malicious code is intentionally included in a dependency of the package - targetted-attack - action-hidden-in-lib-usage --- Credit: [OpenSSF](https://github.com/ossf/malicious-packages) ([source](https://github.com/ossf/malicious-packages/blob/65fed4f164b763e69aa4d7b3e868d81aec619655/osv/malicious/pypi/is-it-ai/MAL-2026-18426.json))",
+      "identifiers": [
+        "GHSA-76H8-W3PX-47HX",
+        "MAL-2026-18426"
+      ],
+      "review": {
+        "decision": null,
+        "notes": null
       }
     },
     {
