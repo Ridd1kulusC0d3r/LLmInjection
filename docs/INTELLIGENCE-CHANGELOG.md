@@ -2,6 +2,16 @@
 
 This changelog records material changes to attribution, confidence, external mappings and structured intelligence. Ordinary prose edits do not belong here.
 
+## 2026-10-31 — Automated attribution research, as a research method only
+
+### Added
+
+- `docs/METHODOLOGY.md` section 5.1: APT-MMF and TAA-EPLMR linked as research methods (grade D), with the rule that a model's attribution is an analyst hypothesis and never changes a record.
+
+### Confidence notes
+
+- Both papers were confirmed to exist; their reported results were not reproduced. A TRAIL attribution paper and a cryptocurrency-extortion study named in a secondary survey could not be found and are not cited.
+
 ## 2026-10-12 — Third-party AI-security skills mapped; defender playbooks
 
 ### Added

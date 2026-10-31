@@ -98,6 +98,22 @@ Attribution records should preserve:
 
 Disputed or uncertain attribution remains explicit.
 
+### 5.1 Automated attribution research
+
+Academic work trains models to attribute activity to a threat actor from CTI reports, indicators or knowledge graphs. Two examples checked against their sources:
+
+- [APT-MMF](https://arxiv.org/abs/2402.12743) (arXiv 2402.12743, 2024): models CTI reports and their IOCs as a heterogeneous attributed graph and fuses attribute, text and topology features to attribute APT reports.
+- [TAA-EPLMR](https://research.buaa.edu.cn/en/publications/taa-eplmr-threat-actor-attribution-via-evidence-path-enhanced-lar-2/) (Beihang University, IEEE BigData 2025): combines a CTI knowledge graph with an LLM that proposes an actor and returns an explanation and a confidence score.
+
+How LLMInjection treats this class of work:
+
+- It is a **research method**, source grade D. It is linked, never copied, and it never creates an actor, campaign or incident record.
+- A model's output is an **analyst hypothesis**. It cannot raise the confidence of an attribution record, and it cannot merge two vendor labels.
+- A reported accuracy is a result **on the dataset the authors used**. It says nothing about how the method performs on our records, and we have not reproduced any of it.
+- The unit of analysis matters: some methods classify reports, others events or indicators. Compare results only when the unit is the same.
+
+Work on cryptocurrency transaction tracing (for example money-laundering detection on Bitcoin graphs) is outside the scope of this repository, which tracks AI-related threats.
+
 ## 6. Threat-landscape methodology
 
 Landscape metrics retain the original:

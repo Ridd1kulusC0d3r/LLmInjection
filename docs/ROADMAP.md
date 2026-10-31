@@ -197,3 +197,4 @@ Evidence → Campaign → Technique → Test → Detection → Control → Frame
 - [ ] Rights-aware AIID, VCDB, NVD, EPSS and vendor-report adapters.
 - [ ] Normalized OpenTelemetry event ingestion and sanitized fixtures.
 - [ ] Long-running cursor checkpoints, full source record crosswalks and Explorer data views.
+- [ ] Verify the TRAIL attribution reference and the cryptocurrency-extortion study cited in a secondary survey; both are unverified and not cited (see [METHODOLOGY 5.1](METHODOLOGY.md))
