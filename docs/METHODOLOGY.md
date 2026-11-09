@@ -4,6 +4,17 @@ LLMInjection is an evidence-driven AI / LLM cyber threat-intelligence knowledge 
 
 ## 1. Intelligence principles
 
+### Scope: both halves of AI threat intelligence
+
+LLMInjection covers two kinds of activity and keeps them apart in the data:
+
+| Half | What it covers | Where it lives |
+|---|---|---|
+| **Attacks against AI** | Prompt injection, poisoning, agent and tool misuse, model and AI supply-chain compromise | `techniques.json`, test cases, detections, controls, playbooks |
+| **Adversary use of AI** | Threat actors using AI to research, write code, run operations or scale fraud | `actors.json` (`ai_role`), `campaigns.json`, [Actors using AI](ACTORS-USING-AI.md) |
+
+The same evidence rules apply to both. A report that an actor used a chatbot is evidence of that use, not of an attack against the chatbot, and the reverse.
+
 ### Evidence before promotion
 
 A claim moves into the structured intelligence layer only when its source and evidentiary status are explicit.
@@ -29,6 +40,15 @@ Source grade and analytic confidence are separate. A primary source can still co
 | medium | Plausible and partially supported, with material gaps |
 | low | Weak, indirect or conflicting support |
 | unverified | Retained as a research lead, not promoted as fact |
+
+### Indicators of compromise
+
+Indicators enter only from the report that states them, and only for the actor that report attributes them to.
+
+- A field is filled only when the source states it. A blank stays blank: it is not zero, "unknown" or a default.
+- First-seen, last-seen, role and handling are never inferred to make a row look complete.
+- Indicators are stored defanged and refanged only by tooling (`scripts/osint_ioc.py`).
+- Indicators republished by a third party without a licence are not copied; they are taken from the original report.
 
 ## 2. Object model
 

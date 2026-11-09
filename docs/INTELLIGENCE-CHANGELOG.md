@@ -2,6 +2,20 @@
 
 This changelog records material changes to attribution, confidence, external mappings and structured intelligence. Ordinary prose edits do not belong here.
 
+## 2026-11-09 — Adversary use of AI: candidate pipeline from a community tracker
+
+### Added
+
+- Scope stated in `docs/METHODOLOGY.md`: attacks against AI and adversary use of AI, under the same evidence rules; a rule for indicators of compromise (never infer a field, never copy unlicensed indicators).
+- `scripts/ai_actor_tracker_check.py` and `references/crosswalks/ai-actor-tracker.json`: `cybershujin/Threat-Actors-use-of-Artifical-Intelligence` (ECO-117, no licence declared) compared with the datasets. 6 of its 141 actors are already held; 110 reported since 2025 and 97 report URLs are in `data/research-queue.json` as `actor-candidate` and `source-candidate` from the disabled feed `FEED-AI-ACTOR-TRACKER`.
+- `docs/ACTORS-USING-AI.md`: the candidate pipeline and a promotion checklist.
+
+### Confidence notes
+
+- Nothing was added to `actors.json`, `campaigns.json` or `sources.json`. A candidate is a lead from a one-person curation (grade D).
+- Two of the tracker's matches go through an alias (APT43 to our Kimsuky record, UNC6780 to TeamPCP); the crosswalk records the label that matched so it can be reviewed.
+- Two ATT&CK IDs the tracker uses (T1562.001, T1656) are retired in Enterprise ATT&CK 20.1.
+
 ## 2026-10-12 — Third-party AI-security skills mapped; defender playbooks
 
 ### Added

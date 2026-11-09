@@ -197,3 +197,7 @@ Evidence → Campaign → Technique → Test → Detection → Control → Frame
 - [ ] Rights-aware AIID, VCDB, NVD, EPSS and vendor-report adapters.
 - [ ] Normalized OpenTelemetry event ingestion and sanitized fixtures.
 - [ ] Long-running cursor checkpoints, full source record crosswalks and Explorer data views.
+- [x] Scope covers adversary use of AI as well as attacks against AI; candidate pipeline from a community tracker ([ACTORS-USING-AI.md](ACTORS-USING-AI.md))
+- [ ] Review the 110 `actor-candidate` items, starting with the highest score, and promote from primary reports
+- [ ] Grade and add the 74 vendor and government reports in the `source-candidate` items
+- [ ] Extend ATT&CK mappings for adversary-use campaigns, using the tracker's IDs as a work list only

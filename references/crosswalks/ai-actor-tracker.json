@@ -1,0 +1,4519 @@
+{
+  "schema_version": "1.0",
+  "note": "Work list, not intelligence. A community tracker of threat-actor use of AI (no licence declared): names, report URLs, dates and ATT&CK IDs only; no description or IOC is copied. Every candidate needs its primary report read before promotion.",
+  "source": {
+    "repo": "cybershujin/Threat-Actors-use-of-Artifical-Intelligence",
+    "license": "none declared",
+    "commit": "6aba8f0a0c205423cd8533f6008e3c22ac571934",
+    "date": "2026-11-09",
+    "entries": 158
+  },
+  "attack_release": "Enterprise ATT&CK 20.1",
+  "summary": {
+    "entries_main": 141,
+    "entries_deepfake": 17,
+    "already_held": 6,
+    "new_main_2025_or_later": 110,
+    "report_urls": 102,
+    "report_urls_not_held": 97,
+    "report_urls_not_held_primary": 74,
+    "attack_ids": 78,
+    "attack_ids_unknown": 0,
+    "attack_ids_retired": 2
+  },
+  "attack_ids": [
+    {
+      "id": "T1566",
+      "entries": 31,
+      "attack_name": "Phishing",
+      "status": "ok"
+    },
+    {
+      "id": "T1587.001",
+      "entries": 26,
+      "attack_name": "Malware",
+      "status": "ok"
+    },
+    {
+      "id": "T1588.006",
+      "entries": 23,
+      "attack_name": "Vulnerabilities",
+      "status": "ok"
+    },
+    {
+      "id": "T1587",
+      "entries": 23,
+      "attack_name": "Develop Capabilities",
+      "status": "ok"
+    },
+    {
+      "id": "T1059",
+      "entries": 17,
+      "attack_name": "Command and Scripting Interpreter",
+      "status": "ok"
+    },
+    {
+      "id": "T1657",
+      "entries": 17,
+      "attack_name": "Financial Theft",
+      "status": "ok"
+    },
+    {
+      "id": "T1119",
+      "entries": 14,
+      "attack_name": "Automated Collection",
+      "status": "ok"
+    },
+    {
+      "id": "T1595",
+      "entries": 12,
+      "attack_name": "Active Scanning",
+      "status": "ok"
+    },
+    {
+      "id": "T1190",
+      "entries": 12,
+      "attack_name": "Exploit Public-Facing Application",
+      "status": "ok"
+    },
+    {
+      "id": "T1588",
+      "entries": 11,
+      "attack_name": "Obtain Capabilities",
+      "status": "ok"
+    },
+    {
+      "id": "T1027",
+      "entries": 11,
+      "attack_name": "Obfuscated Files or Information",
+      "status": "ok"
+    },
+    {
+      "id": "T1585",
+      "entries": 10,
+      "attack_name": "Establish Accounts",
+      "status": "ok"
+    },
+    {
+      "id": "T1562.001",
+      "entries": 9,
+      "attack_name": "Disable or Modify Tools",
+      "status": "retired"
+    },
+    {
+      "id": "T1567",
+      "entries": 8,
+      "attack_name": "Exfiltration Over Web Service",
+      "status": "ok"
+    },
+    {
+      "id": "T1592",
+      "entries": 7,
+      "attack_name": "Gather Victim Host Information",
+      "status": "ok"
+    },
+    {
+      "id": "T1587.004",
+      "entries": 7,
+      "attack_name": "Exploits",
+      "status": "ok"
+    },
+    {
+      "id": "T1505.003",
+      "entries": 7,
+      "attack_name": "Web Shell",
+      "status": "ok"
+    },
+    {
+      "id": "T1593",
+      "entries": 6,
+      "attack_name": "Search Open Websites/Domains",
+      "status": "ok"
+    },
+    {
+      "id": "T1591",
+      "entries": 6,
+      "attack_name": "Gather Victim Org Information",
+      "status": "ok"
+    },
+    {
+      "id": "T1656",
+      "entries": 6,
+      "attack_name": "Impersonation",
+      "status": "retired"
+    },
+    {
+      "id": "T1583",
+      "entries": 5,
+      "attack_name": "Acquire Infrastructure",
+      "status": "ok"
+    },
+    {
+      "id": "T1059.001",
+      "entries": 5,
+      "attack_name": "PowerShell",
+      "status": "ok"
+    },
+    {
+      "id": "T1589",
+      "entries": 5,
+      "attack_name": "Gather Victim Identity Information",
+      "status": "ok"
+    },
+    {
+      "id": "T1566.001",
+      "entries": 5,
+      "attack_name": "Spearphishing Attachment",
+      "status": "ok"
+    },
+    {
+      "id": "T1552",
+      "entries": 5,
+      "attack_name": "Unsecured Credentials",
+      "status": "ok"
+    },
+    {
+      "id": "T1195.001",
+      "entries": 4,
+      "attack_name": "Compromise Software Dependencies and Development Tools",
+      "status": "ok"
+    },
+    {
+      "id": "T1071",
+      "entries": 4,
+      "attack_name": "Application Layer Protocol",
+      "status": "ok"
+    },
+    {
+      "id": "T1195",
+      "entries": 4,
+      "attack_name": "Supply Chain Compromise",
+      "status": "ok"
+    },
+    {
+      "id": "T1583.001",
+      "entries": 4,
+      "attack_name": "Domains",
+      "status": "ok"
+    },
+    {
+      "id": "T1114",
+      "entries": 3,
+      "attack_name": "Email Collection",
+      "status": "ok"
+    },
+    {
+      "id": "T1213",
+      "entries": 3,
+      "attack_name": "Data from Information Repositories",
+      "status": "ok"
+    },
+    {
+      "id": "T1590",
+      "entries": 3,
+      "attack_name": "Gather Victim Network Information",
+      "status": "ok"
+    },
+    {
+      "id": "T1588.007",
+      "entries": 3,
+      "attack_name": "Artificial Intelligence",
+      "status": "ok"
+    },
+    {
+      "id": "T1608",
+      "entries": 3,
+      "attack_name": "Stage Capabilities",
+      "status": "ok"
+    },
+    {
+      "id": "T1102",
+      "entries": 3,
+      "attack_name": "Web Service",
+      "status": "ok"
+    },
+    {
+      "id": "T1583.003",
+      "entries": 3,
+      "attack_name": "Virtual Private Server",
+      "status": "ok"
+    },
+    {
+      "id": "T1090",
+      "entries": 3,
+      "attack_name": "Proxy",
+      "status": "ok"
+    },
+    {
+      "id": "T1528",
+      "entries": 3,
+      "attack_name": "Steal Application Access Token",
+      "status": "ok"
+    },
+    {
+      "id": "T1110.003",
+      "entries": 3,
+      "attack_name": "Password Spraying",
+      "status": "ok"
+    },
+    {
+      "id": "T1595.002",
+      "entries": 3,
+      "attack_name": "Vulnerability Scanning",
+      "status": "ok"
+    },
+    {
+      "id": "T1490",
+      "entries": 2,
+      "attack_name": "Inhibit System Recovery",
+      "status": "ok"
+    },
+    {
+      "id": "T1566.003",
+      "entries": 2,
+      "attack_name": "Spearphishing via Service",
+      "status": "ok"
+    },
+    {
+      "id": "T1078.004",
+      "entries": 2,
+      "attack_name": "Cloud Accounts",
+      "status": "ok"
+    },
+    {
+      "id": "T1485",
+      "entries": 2,
+      "attack_name": "Data Destruction",
+      "status": "ok"
+    },
+    {
+      "id": "T1486",
+      "entries": 2,
+      "attack_name": "Data Encrypted for Impact",
+      "status": "ok"
+    },
+    {
+      "id": "T1584",
+      "entries": 2,
+      "attack_name": "Compromise Infrastructure",
+      "status": "ok"
+    },
+    {
+      "id": "T1204.002",
+      "entries": 2,
+      "attack_name": "Malicious File",
+      "status": "ok"
+    },
+    {
+      "id": "T1110",
+      "entries": 2,
+      "attack_name": "Brute Force",
+      "status": "ok"
+    },
+    {
+      "id": "T1564",
+      "entries": 1,
+      "attack_name": "Hide Artifacts",
+      "status": "ok"
+    },
+    {
+      "id": "T1565",
+      "entries": 1,
+      "attack_name": "Data Manipulation",
+      "status": "ok"
+    },
+    {
+      "id": "T1021",
+      "entries": 1,
+      "attack_name": "Remote Services",
+      "status": "ok"
+    },
+    {
+      "id": "T1555",
+      "entries": 1,
+      "attack_name": "Credentials from Password Stores",
+      "status": "ok"
+    },
+    {
+      "id": "T1059.005",
+      "entries": 1,
+      "attack_name": "Visual Basic",
+      "status": "ok"
+    },
+    {
+      "id": "T1547.001",
+      "entries": 1,
+      "attack_name": "Registry Run Keys / Startup Folder",
+      "status": "ok"
+    },
+    {
+      "id": "T1069",
+      "entries": 1,
+      "attack_name": "Permission Groups Discovery",
+      "status": "ok"
+    },
+    {
+      "id": "T1087",
+      "entries": 1,
+      "attack_name": "Account Discovery",
+      "status": "ok"
+    },
+    {
+      "id": "T1539",
+      "entries": 1,
+      "attack_name": "Steal Web Session Cookie",
+      "status": "ok"
+    },
+    {
+      "id": "T1550.004",
+      "entries": 1,
+      "attack_name": "Web Session Cookie",
+      "status": "ok"
+    },
+    {
+      "id": "T1557",
+      "entries": 1,
+      "attack_name": "Adversary-in-the-Middle",
+      "status": "ok"
+    },
+    {
+      "id": "T1566.002",
+      "entries": 1,
+      "attack_name": "Spearphishing Link",
+      "status": "ok"
+    },
+    {
+      "id": "T1526",
+      "entries": 1,
+      "attack_name": "Cloud Service Discovery",
+      "status": "ok"
+    },
+    {
+      "id": "T1136",
+      "entries": 1,
+      "attack_name": "Create Account",
+      "status": "ok"
+    },
+    {
+      "id": "T1114.002",
+      "entries": 1,
+      "attack_name": "Remote Email Collection",
+      "status": "ok"
+    },
+    {
+      "id": "T1203",
+      "entries": 1,
+      "attack_name": "Exploitation for Client Execution",
+      "status": "ok"
+    },
+    {
+      "id": "T1583.008",
+      "entries": 1,
+      "attack_name": "Malvertising",
+      "status": "ok"
+    },
+    {
+      "id": "T1055.012",
+      "entries": 1,
+      "attack_name": "Process Hollowing",
+      "status": "ok"
+    },
+    {
+      "id": "T1620",
+      "entries": 1,
+      "attack_name": "Reflective Code Loading",
+      "status": "ok"
+    },
+    {
+      "id": "T1003",
+      "entries": 1,
+      "attack_name": "OS Credential Dumping",
+      "status": "ok"
+    },
+    {
+      "id": "T1210",
+      "entries": 1,
+      "attack_name": "Exploitation of Remote Services",
+      "status": "ok"
+    },
+    {
+      "id": "T1005",
+      "entries": 1,
+      "attack_name": "Data from Local System",
+      "status": "ok"
+    },
+    {
+      "id": "T1053.003",
+      "entries": 1,
+      "attack_name": "Cron",
+      "status": "ok"
+    },
+    {
+      "id": "T1098.003",
+      "entries": 1,
+      "attack_name": "Additional Cloud Roles",
+      "status": "ok"
+    },
+    {
+      "id": "T1199",
+      "entries": 1,
+      "attack_name": "Trusted Relationship",
+      "status": "ok"
+    },
+    {
+      "id": "T1567.002",
+      "entries": 1,
+      "attack_name": "Exfiltration to Cloud Storage",
+      "status": "ok"
+    },
+    {
+      "id": "T1078",
+      "entries": 1,
+      "attack_name": "Valid Accounts",
+      "status": "ok"
+    },
+    {
+      "id": "T1572",
+      "entries": 1,
+      "attack_name": "Protocol Tunneling",
+      "status": "ok"
+    },
+    {
+      "id": "T1003.006",
+      "entries": 1,
+      "attack_name": "DCSync",
+      "status": "ok"
+    },
+    {
+      "id": "T1558.003",
+      "entries": 1,
+      "attack_name": "Kerberoasting",
+      "status": "ok"
+    }
+  ],
+  "actors": [
+    {
+      "name": "APT45",
+      "akas": "DPRK state-sponsored (GTIG/Mandiant)",
+      "table": "main",
+      "reported": "May 2026",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1587.004",
+        "T1588.006"
+      ],
+      "references": [
+        {
+          "source": "Google Threat Intelligence Group",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/ai-vulnerability-exploitation-initial-access"
+        },
+        {
+          "source": "Microsoft",
+          "url": "https://www.microsoft.com/en-us/security/blog/2026/10/29/tracking-ai-adoption-in-north-korean-threat-actor-tradecraft/"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 90,
+      "has_primary_reference": true
+    },
+    {
+      "name": "Coral Sleet",
+      "akas": "Storm-1877 (DPRK)",
+      "table": "main",
+      "reported": "Mar 2026",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1566",
+        "T1587.001"
+      ],
+      "references": [
+        {
+          "source": "Microsoft",
+          "url": "https://www.microsoft.com/en-us/security/blog/2026/03/06/ai-as-tradecraft-how-threat-actors-operationalize-ai/"
+        },
+        {
+          "source": "Microsoft",
+          "url": "https://www.microsoft.com/en-us/security/blog/2026/10/29/tracking-ai-adoption-in-north-korean-threat-actor-tradecraft/"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 90,
+      "has_primary_reference": true
+    },
+    {
+      "name": "Earth Krahang",
+      "akas": "Unknown",
+      "table": "main",
+      "reported": "Jul 2026",
+      "activity": "Jan 2026 – Jun 2026",
+      "attack_ids": [
+        "T1587",
+        "T1588",
+        "T1588.006",
+        "T1595"
+      ],
+      "references": [
+        {
+          "source": "Trend Micro",
+          "url": "https://www.trendmicro.com/vinfo/us/security/news/cybercrime-and-digital-threats/2026-h1-apt-report-how-apts-are-weaponizing-trust-in-the-age-of-ai"
+        },
+        {
+          "source": "Trend Micro",
+          "url": "https://documents.trendmicro.com/assets/pdf/2026_H1_APT_Report.pdf"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 90,
+      "has_primary_reference": true
+    },
+    {
+      "name": "Earth Naga",
+      "akas": "Associated with Flax Typhoon (per Trend Micro)",
+      "table": "main",
+      "reported": "Jul 2026",
+      "activity": "Jan 2026 – Jun 2026",
+      "attack_ids": [
+        "T1055.012",
+        "T1059.001",
+        "T1587.001",
+        "T1620"
+      ],
+      "references": [
+        {
+          "source": "Trend Micro",
+          "url": "https://www.trendmicro.com/vinfo/us/security/news/cybercrime-and-digital-threats/2026-h1-apt-report-how-apts-are-weaponizing-trust-in-the-age-of-ai"
+        },
+        {
+          "source": "Trend Micro",
+          "url": "https://documents.trendmicro.com/assets/pdf/2026_H1_APT_Report.pdf"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 90,
+      "has_primary_reference": true
+    },
+    {
+      "name": "JADEPUFFER",
+      "akas": "\"Agentic Threat Actor (ATA)\" (Sysdig); Storm-3168 (Microsoft)",
+      "table": "main",
+      "reported": "Jul 2026",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1078.004",
+        "T1190",
+        "T1485",
+        "T1486",
+        "T1490",
+        "T1526",
+        "T1552",
+        "T1657"
+      ],
+      "references": [
+        {
+          "source": "Sysdig",
+          "url": "https://www.sysdig.com/blog/jadepuffer-agentic-ransomware-for-automated-database-extortion"
+        },
+        {
+          "source": "Microsoft",
+          "url": "https://www.microsoft.com/en-us/security/blog/2026/09/25/storm-3168-agentic-driven-cloud-attacks-using-compromised-service-principals/"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 90,
+      "has_primary_reference": true
+    },
+    {
+      "name": "LAUNDRY BEAR",
+      "akas": "Void Blizzard (Microsoft); CL-STA-1114 (Unit 42); TA488 (Proofpoint)",
+      "table": "main",
+      "reported": "Jul 2026",
+      "activity": "Jul 2025 – Jul 2026",
+      "attack_ids": [
+        "T1114.002",
+        "T1203",
+        "T1566",
+        "T1587.001",
+        "T1588.007"
+      ],
+      "references": [
+        {
+          "source": "cisa.gov",
+          "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-204a"
+        },
+        {
+          "source": "Symantec",
+          "url": "https://www.helpnetsecurity.com/2026/07/24/laundry-bear-zimbra-vulnerability-cve-2025-66376/"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 90,
+      "has_primary_reference": true
+    },
+    {
+      "name": "Sapphire Sleet",
+      "akas": "DPRK (crypto-theft / fake-recruiter cluster)",
+      "table": "main",
+      "reported": "Mar 2026",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1566.003",
+        "T1585"
+      ],
+      "references": [
+        {
+          "source": "Microsoft",
+          "url": "https://www.microsoft.com/en-us/security/blog/2026/03/06/ai-as-tradecraft-how-threat-actors-operationalize-ai/"
+        },
+        {
+          "source": "Microsoft",
+          "url": "https://www.microsoft.com/en-us/security/blog/2026/10/29/tracking-ai-adoption-in-north-korean-threat-actor-tradecraft/"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 90,
+      "has_primary_reference": true
+    },
+    {
+      "name": "ShinyHunters",
+      "akas": "GTG-50014 (Anthropic); UNC6240 (GTIG); operator aliases MeowSHA / frkoo / blazespider",
+      "table": "main",
+      "reported": "Sep 2026",
+      "activity": "Feb 2026 – Jun 2026",
+      "attack_ids": [
+        "T1195",
+        "T1562.001",
+        "T1585",
+        "T1587",
+        "T1657"
+      ],
+      "references": [
+        {
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/threat-intelligence-report-september-2026"
+        },
+        {
+          "source": "Google Threat Intelligence Group",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 90,
+      "has_primary_reference": true
+    },
+    {
+      "name": "Temp.HEX",
+      "akas": "PRC (Mustang Panda / TA416 reporting overlap); BASIN CASTLE (GTIG’s Sep 2026 designation, formerly BASIN)",
+      "table": "main",
+      "reported": "Feb 2026 (updated Sep 2026)",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1027",
+        "T1059.001",
+        "T1566.001",
+        "T1589",
+        "T1591"
+      ],
+      "references": [
+        {
+          "source": "Google Threat Intelligence Group",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/distillation-experimentation-integration-ai-adversarial-use"
+        },
+        {
+          "source": "Google Threat Intelligence Group",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 90,
+      "has_primary_reference": true
+    },
+    {
+      "name": "UnSub (ARTEX agentic pentest, South Korean finance) — CrowdStrike",
+      "akas": "Unknown (CrowdStrike: not attributed to a named adversary; moderate-confidence Chinese-speaking, financially motivated individual); TAG-217 (Recorded Future designation for the same campaign, matched via RF's link to CrowdStrike's post)",
+      "table": "main",
+      "reported": "Oct 2026",
+      "activity": "Sep 2026 – Oct 2026",
+      "attack_ids": [
+        "T1090",
+        "T1567",
+        "T1583.003",
+        "T1588.007"
+      ],
+      "references": [
+        {
+          "source": "CrowdStrike",
+          "url": "https://www.crowdstrike.com/en-us/blog/unknown-threat-actor-uses-artex-to-target-south-korean-finance/"
+        },
+        {
+          "source": "Recorded Future",
+          "url": "https://www.recordedfuture.com/blog/tag-217-artex-south-korean-banks"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 90,
+      "has_primary_reference": true
+    },
+    {
+      "name": "UnSub (FortiGate campaign) — Amazon Threat Intelligence",
+      "akas": "UnSub (no designation assigned)",
+      "table": "main",
+      "reported": "Feb 2026",
+      "activity": "Jan 2026 – Feb 2026",
+      "attack_ids": [
+        "T1110",
+        "T1587",
+        "T1588.006",
+        "T1595"
+      ],
+      "references": [
+        {
+          "source": "Amazon",
+          "url": "https://aws.amazon.com/blogs/security/ai-augmented-threat-actor-accesses-fortigate-devices-at-scale/"
+        },
+        {
+          "source": "cyberandramen.net",
+          "url": "https://cyberandramen.net/2026/02/21/llms-in-the-kill-chain-inside-a-custom-mcp-targeting-fortigate-devices-across-continents/"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 90,
+      "has_primary_reference": true
+    },
+    {
+      "name": "UnSub (Mexican government campaign) — Gambit Security",
+      "akas": "UnSub (no designation assigned by the reporting vendor)",
+      "table": "main",
+      "reported": "Apr 2026",
+      "activity": "Nov 2025 – Feb 2026",
+      "attack_ids": [
+        "T1059",
+        "T1213",
+        "T1567",
+        "T1588.006",
+        "T1592"
+      ],
+      "references": [
+        {
+          "source": "gambit.security",
+          "url": "https://gambit.security/blog-posts/a-single-operator-two-ai-platforms-nine-government-agencies-the-full-technical-report"
+        },
+        {
+          "source": "cdn.prod.website-files.com",
+          "url": "https://cdn.prod.website-files.com/69944dd945f20ca4a27a7c47/69d8bb5aea59e31efb3b8a7f_Tech_Report_ai_breach_mex_gov.pdf"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 90,
+      "has_primary_reference": true
+    },
+    {
+      "name": "UnSub (PaperCut NG/MF agentic exploitation campaign) — GreyNoise/Blackpoint",
+      "akas": "UnSub; GreyNoise's own hedge: \"likely Russian-speaking malicious cyber actor (MCA)\" — *analyst note: this attribution is explicitly hedged (\"likely\") with no supporting linguistic evidence cited in either primary report; Blackpoint's independent report gives no nation/language attribution at all.*",
+      "table": "main",
+      "reported": "Sep 2026",
+      "activity": "31 Aug 2026 – 9 Sep 2026 (GreyNoise had tracked the C2 IP's broader activity since early Jul 2026)",
+      "attack_ids": [
+        "T1190",
+        "T1552",
+        "T1588.006"
+      ],
+      "references": [
+        {
+          "source": "greynoise.io",
+          "url": "https://www.greynoise.io/blog/ai-orchestrated-campaign-against-papercut-ng-mf"
+        },
+        {
+          "source": "blackpointcyber.com",
+          "url": "https://blackpointcyber.com/blog/death-by-a-thousand-papercuts-ai-driven-exploitation-at-scale/"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 90,
+      "has_primary_reference": true
+    },
+    {
+      "name": "UnSub (possibly Earth Lamia) — Trend Micro",
+      "akas": "UnSub",
+      "table": "main",
+      "reported": "Jul 2026",
+      "activity": "Jan 2026 – Jun 2026",
+      "attack_ids": [
+        "T1003",
+        "T1110.003",
+        "T1210",
+        "T1595"
+      ],
+      "references": [
+        {
+          "source": "Trend Micro",
+          "url": "https://www.trendmicro.com/vinfo/us/security/news/cybercrime-and-digital-threats/2026-h1-apt-report-how-apts-are-weaponizing-trust-in-the-age-of-ai"
+        },
+        {
+          "source": "Trend Micro",
+          "url": "https://documents.trendmicro.com/assets/pdf/2026_H1_APT_Report.pdf"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 90,
+      "has_primary_reference": true
+    },
+    {
+      "name": "UnSub (suspected China-nexus) — Hunt.io",
+      "akas": "UnSub",
+      "table": "main",
+      "reported": "Jul 2026",
+      "activity": "May 2026 – Jun 2026",
+      "attack_ids": [
+        "T1190",
+        "T1566",
+        "T1567",
+        "T1587.004"
+      ],
+      "references": [
+        {
+          "source": "Hunt.io",
+          "url": "https://hunt.io/blog/chinese-operators-claude-deepseek-government-intrusion"
+        },
+        {
+          "source": "securityaffairs.com",
+          "url": "https://securityaffairs.com/195474/ai/claude-code-and-deepseek-powered-chinese-cyber-espionage-campaign.html"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 90,
+      "has_primary_reference": true
+    },
+    {
+      "name": "DPRK IT-worker operation",
+      "akas": "",
+      "table": "deepfake",
+      "reported": "Aug 2025 – Mar 2026; Sep 2026 (WaterPlum joint advisory)",
+      "activity": "Aug 2025 – Jul 2026",
+      "attack_ids": [],
+      "references": [
+        {
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/news/detecting-countering-misuse-aug-2025"
+        },
+        {
+          "source": "Microsoft",
+          "url": "https://www.microsoft.com/en-us/security/blog/2026/03/06/ai-as-tradecraft-how-threat-actors-operationalize-ai/"
+        },
+        {
+          "source": "CrowdStrike",
+          "url": "https://www.crowdstrike.com/en-us/blog/crowdstrike-2025-threat-hunting-report-ai-weapon-target/"
+        },
+        {
+          "source": "Palo Alto Networks Unit 42",
+          "url": "https://unit42.paloaltonetworks.com/north-korean-synthetic-identity-creation/"
+        },
+        {
+          "source": "Amazon",
+          "url": "https://aws.amazon.com/blogs/security/"
+        },
+        {
+          "source": "securityweek.com",
+          "url": "https://www.securityweek.com/japan-dismantles-first-north-korean-laptop-farm-as-us-and-allies-detail-wider-scheme/"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 85,
+      "has_primary_reference": true
+    },
+    {
+      "name": "UNC1069",
+      "akas": "MASAN, CryptoCore (DPRK; BlueNoroff/Lazarus-adjacent); MIDNIGHT NEPTUNE (GTIG’s Sep 2026 designation)",
+      "table": "main",
+      "reported": "Nov 2025 (updated Sep 2026)",
+      "activity": "2025",
+      "attack_ids": [
+        "T1059",
+        "T1566",
+        "T1587",
+        "T1593",
+        "T1656"
+      ],
+      "references": [
+        {
+          "source": "Google Threat Intelligence Group",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/threat-actor-usage-of-ai-tools"
+        },
+        {
+          "source": "Google Threat Intelligence Group",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai"
+        },
+        {
+          "source": "Google Threat Intelligence Group",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/unc1069-targets-cryptocurrency-ai-social-engineering"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 85,
+      "has_primary_reference": true
+    },
+    {
+      "name": "APT27",
+      "akas": "Emissary Panda, Iron Tiger, LuckyMouse, Budworm, Bronze Union (PRC)",
+      "table": "main",
+      "reported": "May 2026",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1583",
+        "T1587.001"
+      ],
+      "references": [
+        {
+          "source": "Google Threat Intelligence Group",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/ai-vulnerability-exploitation-initial-access"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "APT31",
+      "akas": "Zirconium, Judgment Panda, Violet Typhoon (PRC)",
+      "table": "main",
+      "reported": "Feb 2026",
+      "activity": "Oct 2025 – Dec 2025 (report-wide observation window)",
+      "attack_ids": [
+        "T1587.004",
+        "T1595"
+      ],
+      "references": [
+        {
+          "source": "Google Threat Intelligence Group",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/distillation-experimentation-integration-ai-adversarial-use"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "Armored Likho",
+      "akas": "Eagle Werewolf (Kaspersky)",
+      "table": "main",
+      "reported": "Jul 2026",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1027",
+        "T1566.001",
+        "T1587.001"
+      ],
+      "references": [
+        {
+          "source": "Kaspersky",
+          "url": "https://securelist.com/armored-likho-apt-with-busysnake-stealer/120292/"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "BUGSTER",
+      "akas": "Handle only (financially motivated, English-speaking per Unit 42); no prior reporting",
+      "table": "main",
+      "reported": "Oct 2026",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1059",
+        "T1110",
+        "T1190",
+        "T1595.002"
+      ],
+      "references": [
+        {
+          "source": "Palo Alto Networks Unit 42",
+          "url": "https://unit42.paloaltonetworks.com/ai-assisted-cybercrime-analysis/"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "CL-CRI-1131",
+      "akas": "Unit 42 cluster designation; cross-referenced by CloudSEK as \"Operation Escaneo\"",
+      "table": "main",
+      "reported": "Sep 2026",
+      "activity": "Apr 2026 (compromise); broader campaign Feb–Jun 2026",
+      "attack_ids": [
+        "T1059",
+        "T1566"
+      ],
+      "references": [
+        {
+          "source": "Palo Alto Networks Unit 42",
+          "url": "https://unit42.paloaltonetworks.com/ai-tool-use-targeting-latam-orgs/"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "CL-CRI-1163",
+      "akas": "Unit 42 cluster designation",
+      "table": "main",
+      "reported": "Sep 2026",
+      "activity": "Initial access Feb 2026",
+      "attack_ids": [
+        "T1059",
+        "T1566"
+      ],
+      "references": [
+        {
+          "source": "Palo Alto Networks Unit 42",
+          "url": "https://unit42.paloaltonetworks.com/ai-tool-use-targeting-latam-orgs/"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "CRAFTY FALCON",
+      "akas": "Designation by CERT-In / CSIRT-Fin; no other vendor aliases found",
+      "table": "main",
+      "reported": "Nov 2026",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1190",
+        "T1505.003",
+        "T1657"
+      ],
+      "references": [
+        {
+          "source": "cert-in.org.in",
+          "url": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES02&VLCODE=CIAD-2026-0058"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "CyberXero",
+      "akas": "Underground-forum alias (Dread, HackForums, Exploit.in); Russian-speaking initial access broker (SOCRadar)",
+      "table": "main",
+      "reported": "Oct 2026",
+      "activity": "Jul 2026 – Oct 2026",
+      "attack_ids": [
+        "T1110.003",
+        "T1190",
+        "T1505.003",
+        "T1595.002"
+      ],
+      "references": [
+        {
+          "source": "socradar.io",
+          "url": "https://socradar.io/blog/cyberxero-ai-iab-ukra"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "DragonForce",
+      "akas": "Unknown",
+      "table": "main",
+      "reported": "Jul 2026",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1213",
+        "T1657"
+      ],
+      "references": [
+        {
+          "source": "sophos.com",
+          "url": "https://www.sophos.com/en-us/content/sophos-ai-security-2026-report"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "EvilTokens",
+      "akas": "UnSub (no named group / Storm-#### designation given in this post)",
+      "table": "main",
+      "reported": "Sep 2026",
+      "activity": "Feb 2026 – Sep 2026 (launched Feb 2026; disruption action Sep 2026)",
+      "attack_ids": [
+        "T1114",
+        "T1566",
+        "T1585",
+        "T1657"
+      ],
+      "references": [
+        {
+          "source": "Microsoft",
+          "url": "https://blogs.microsoft.com/on-the-issues/2026/09/22/disrupting-eviltokens-the-ai-chatbot-built-for-cybercrime/"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "GoldBull / CoinLure — Group-IB",
+      "akas": "",
+      "table": "deepfake",
+      "reported": "Aug 2026",
+      "activity": "Aug 2026",
+      "attack_ids": [
+        "T1656"
+      ],
+      "references": [
+        {
+          "source": "group-ib.com",
+          "url": "https://www.group-ib.com/blog/one-adversary-fraud-network/"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "GTG-10007",
+      "akas": "Chinese exploit-foundry cluster (Anthropic designation); two Hunan-based operators, one a former Sangfor intern",
+      "table": "main",
+      "reported": "Sep 2026",
+      "activity": "Dec 2025 – Aug 2026",
+      "attack_ids": [
+        "T1587",
+        "T1588.006",
+        "T1592"
+      ],
+      "references": [
+        {
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/threat-intelligence-report-september-2026"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "GTG-14021",
+      "akas": "PRC-aligned public security and state security organs",
+      "table": "main",
+      "reported": "Sep 2026",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1119",
+        "T1591"
+      ],
+      "references": [
+        {
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/threat-intelligence-report-september-2026"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "GTG-14022",
+      "akas": "Contractor for PRC-government clients",
+      "table": "main",
+      "reported": "Sep 2026",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1119",
+        "T1587"
+      ],
+      "references": [
+        {
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/threat-intelligence-report-september-2026"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "GTG-15001",
+      "akas": "Deceptive dating-app network (Anthropic designation); PRC-based API reseller/proxy infrastructure",
+      "table": "main",
+      "reported": "Sep 2026",
+      "activity": "Apr 2026",
+      "attack_ids": [
+        "T1585",
+        "T1656",
+        "T1657"
+      ],
+      "references": [
+        {
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/threat-intelligence-report-september-2026"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "GTG-17001",
+      "akas": "UnSub (Anthropic designation); China-based operation",
+      "table": "main",
+      "reported": "Sep 2026",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1587"
+      ],
+      "references": [
+        {
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/threat-intelligence-report-september-2026"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "GTG-17002",
+      "akas": "UnSub (Anthropic designation); China-based operation",
+      "table": "main",
+      "reported": "Sep 2026",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1587.001"
+      ],
+      "references": [
+        {
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/threat-intelligence-report-september-2026"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "GTG-20006",
+      "akas": "Russian espionage group; Anthropic states \"consistent with public reporting linking the actor to Midnight Blizzard\"",
+      "table": "main",
+      "reported": "Sep 2026",
+      "activity": "Dec 2025 – Aug 2026",
+      "attack_ids": [
+        "T1071",
+        "T1562.001",
+        "T1566"
+      ],
+      "references": [
+        {
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/threat-intelligence-report-september-2026"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "GTG-27005",
+      "akas": "\"DronDoc\" / \"Serafim\" (actors' own operation names); assessed as a small freelance team, possibly linked to a Russian university/federal research center",
+      "table": "main",
+      "reported": "Sep 2026",
+      "activity": "Accounts created late 2025 – early 2026; operation active mid-May 2026 – Aug 2026 (report cutoff)",
+      "attack_ids": [
+        "T1587"
+      ],
+      "references": [
+        {
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/threat-intelligence-report-september-2026"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "GTG-30004",
+      "akas": "Iran-nexus; unnamed",
+      "table": "main",
+      "reported": "Sep 2026",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1027",
+        "T1589"
+      ],
+      "references": [
+        {
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/threat-intelligence-report-september-2026"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "GTG-30005",
+      "akas": "Iran-nexus; unnamed",
+      "table": "main",
+      "reported": "Sep 2026",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1590",
+        "T1592"
+      ],
+      "references": [
+        {
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/threat-intelligence-report-september-2026"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "GTG-30006",
+      "akas": "Iran-linked (Anthropic designation); domestic-surveillance toolmaker",
+      "table": "main",
+      "reported": "Sep 2026",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1528",
+        "T1566",
+        "T1587.001"
+      ],
+      "references": [
+        {
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/threat-intelligence-report-september-2026"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "GTG-34007",
+      "akas": "Two linked Iranian paramilitary/domestic-security units",
+      "table": "main",
+      "reported": "Sep 2026",
+      "activity": "Unknown (falls within the report's general \"Jan–Jul 2026\" surveillance-section framing, not case-specific)",
+      "attack_ids": [
+        "T1119",
+        "T1195.001",
+        "T1589"
+      ],
+      "references": [
+        {
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/threat-intelligence-report-september-2026"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "GTG-50020",
+      "akas": "Russian-speaking actor; unnamed",
+      "table": "main",
+      "reported": "Sep 2026",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1585",
+        "T1587",
+        "T1657"
+      ],
+      "references": [
+        {
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/threat-intelligence-report-september-2026"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "GTG-50021",
+      "akas": "Fraudulent AI reseller, alias \"kl1zy\" (Russian/Ukrainian)",
+      "table": "main",
+      "reported": "Sep 2026",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1005",
+        "T1587"
+      ],
+      "references": [
+        {
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/threat-intelligence-report-september-2026"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "GTG-50027",
+      "akas": "Likely a Bamako-based independent consultant contracted to Mali's state intelligence service (Agence Nationale de la Sécurité d'État, ANSE)",
+      "table": "main",
+      "reported": "Sep 2026",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1114",
+        "T1119",
+        "T1587"
+      ],
+      "references": [
+        {
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/threat-intelligence-report-september-2026"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "GTG-50029",
+      "akas": "\"fafsearch\" operator; single French-speaking actor",
+      "table": "main",
+      "reported": "Sep 2026",
+      "activity": "Feb 2026 – Jul 2026",
+      "attack_ids": [
+        "T1119",
+        "T1505.003",
+        "T1587",
+        "T1588.006"
+      ],
+      "references": [
+        {
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/threat-intelligence-report-september-2026"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "GTG-87001",
+      "akas": "UnSub (Anthropic designation); northern-Yemen-based weapons engineering cell — *analyst note: secondary press (The Register, Politico) labeled this \"Houthi\"; Anthropic's own report never uses that word — the Houthi attribution is unconfirmed by the primary source and not repeated as fact here.*",
+      "table": "main",
+      "reported": "Sep 2026",
+      "activity": "Unknown (report gives no calendar window for this cell; describes one undated live field test)",
+      "attack_ids": [
+        "T1587"
+      ],
+      "references": [
+        {
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/threat-intelligence-report-september-2026"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "Jade Sleet",
+      "akas": "DPRK (Microsoft)",
+      "table": "main",
+      "reported": "Oct 2026",
+      "activity": "Jun 2026 – Jun 2026",
+      "attack_ids": [
+        "T1566",
+        "T1585",
+        "T1593"
+      ],
+      "references": [
+        {
+          "source": "Microsoft",
+          "url": "https://www.microsoft.com/en-us/security/blog/2026/10/29/tracking-ai-adoption-in-north-korean-threat-actor-tradecraft/"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "knaithe",
+      "akas": "KnYuan",
+      "table": "main",
+      "reported": "Jul 2026",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1190",
+        "T1588.006",
+        "T1595"
+      ],
+      "references": [
+        {
+          "source": "Palo Alto Networks Unit 42",
+          "url": "https://unit42.paloaltonetworks.com/autonomous-ai-cyber-attack-campaign/"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "Multiple UnSub (DPRK) — GTIG",
+      "akas": "Unnamed DPRK clusters",
+      "table": "main",
+      "reported": "Sep 2026",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1566",
+        "T1585",
+        "T1591"
+      ],
+      "references": [
+        {
+          "source": "Google Threat Intelligence Group",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "Multiple UnSub — CrowdStrike",
+      "akas": "UnSub (eCrime)",
+      "table": "main",
+      "reported": "Feb 2026",
+      "activity": "2025",
+      "attack_ids": [
+        "T1059",
+        "T1555",
+        "T1657"
+      ],
+      "references": [
+        {
+          "source": "CrowdStrike",
+          "url": "https://www.crowdstrike.com/en-us/blog/crowdstrike-2026-global-threat-report-findings/"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "Multiple UnSub — FBI/IC3",
+      "akas": "",
+      "table": "deepfake",
+      "reported": "Jul 2026",
+      "activity": "Jul 2026",
+      "attack_ids": [
+        "T1583.001",
+        "T1656"
+      ],
+      "references": [
+        {
+          "source": "FBI IC3",
+          "url": "https://www.ic3.gov/PSA/2025/PSA251219"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "Pearl Sleet",
+      "akas": "DPRK (Microsoft)",
+      "table": "main",
+      "reported": "Oct 2026",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1587.001"
+      ],
+      "references": [
+        {
+          "source": "Microsoft",
+          "url": "https://www.microsoft.com/en-us/security/blog/2026/10/29/tracking-ai-adoption-in-north-korean-threat-actor-tradecraft/"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "PROMPTSPY",
+      "akas": "UnSub (GTIG; ESET-identified Android backdoor)",
+      "table": "main",
+      "reported": "May 2026",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1059",
+        "T1119"
+      ],
+      "references": [
+        {
+          "source": "Google Threat Intelligence Group",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/ai-vulnerability-exploitation-initial-access"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "RAVINE CASTLE",
+      "akas": "COULEE, APT24 (PRC-nexus, GTIG's new designation)",
+      "table": "main",
+      "reported": "Sep 2026",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1119",
+        "T1587",
+        "T1588.006"
+      ],
+      "references": [
+        {
+          "source": "Google Threat Intelligence Group",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "SANDWORM RELIC",
+      "akas": "FROZENBARENTS, SANDWORM, APT44 (Russian, GTIG's new designation; targets Ukraine)",
+      "table": "main",
+      "reported": "Sep 2026",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1059",
+        "T1562.001",
+        "T1566"
+      ],
+      "references": [
+        {
+          "source": "Google Threat Intelligence Group",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "SilkParasite",
+      "akas": "Unknown (Bitdefender declines firm attribution; notes tooling/infrastructure overlap with FamousSparrow/SneakyChef, medium-confidence China-nexus)",
+      "table": "main",
+      "reported": "Aug 2026",
+      "activity": "Oct 2025 – Aug 2026",
+      "attack_ids": [
+        "T1566.001",
+        "T1587.001"
+      ],
+      "references": [
+        {
+          "source": "bitdefender.com",
+          "url": "https://www.bitdefender.com/en-us/blog/businessinsights/silkparasite-tracking-china-nexus-apt-across-central-asia"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "STAC6994",
+      "akas": "Unknown (Sophos-designated cluster)",
+      "table": "main",
+      "reported": "Jul 2026",
+      "activity": "May 2026",
+      "attack_ids": [
+        "T1027",
+        "T1562.001",
+        "T1587",
+        "T1587.001",
+        "T1588.006"
+      ],
+      "references": [
+        {
+          "source": "sophos.com",
+          "url": "https://www.sophos.com/en-us/content/sophos-ai-security-2026-report"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "Storm-0940",
+      "akas": "China-state aligned (Microsoft); UNC7228 (GTIG's identifier for the same activity)",
+      "table": "main",
+      "reported": "Oct 2026",
+      "activity": "Sep 2026 – Oct 2026",
+      "attack_ids": [
+        "T1078.004",
+        "T1098.003",
+        "T1195",
+        "T1199",
+        "T1528",
+        "T1595"
+      ],
+      "references": [
+        {
+          "source": "Microsoft",
+          "url": "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "Storm-1747",
+      "akas": "Tycoon2FA operators (Microsoft)",
+      "table": "main",
+      "reported": "Apr 2026",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1539",
+        "T1550.004",
+        "T1557",
+        "T1566.002"
+      ],
+      "references": [
+        {
+          "source": "Microsoft",
+          "url": "https://www.microsoft.com/en-us/security/blog/2026/04/02/threat-actor-abuse-of-ai-accelerates-from-tool-to-cyberattack-surface/"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "Storm-2945 (CaptiveCrunch)",
+      "akas": "Midnight Blizzard / APT29 / Cozy Bear / NOBELIUM / The Dukes (sub-cluster)",
+      "table": "main",
+      "reported": "Jul 2026",
+      "activity": "Feb 2026 – Jul 2026",
+      "attack_ids": [
+        "T1528",
+        "T1566",
+        "T1587.001"
+      ],
+      "references": [
+        {
+          "source": "Microsoft",
+          "url": "https://www.microsoft.com/en-us/security/blog/2026/07/31/captivecrunch-midnight-blizzard-targets-travelers-worldwide-for-malware-delivery-and-credential-theft/"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "The Gentlemen",
+      "akas": "Unknown",
+      "table": "main",
+      "reported": "Jul 2026",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1587",
+        "T1588"
+      ],
+      "references": [
+        {
+          "source": "sophos.com",
+          "url": "https://www.sophos.com/en-us/content/sophos-ai-security-2026-report"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "UNC2814",
+      "akas": "GTIG vulnerability-research cluster",
+      "table": "main",
+      "reported": "May 2026",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1587.004",
+        "T1588.006"
+      ],
+      "references": [
+        {
+          "source": "Google Threat Intelligence Group",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/ai-vulnerability-exploitation-initial-access"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "UNC5356",
+      "akas": "Financially motivated (GTIG); COINBAIT phishing kit",
+      "table": "main",
+      "reported": "Feb 2026",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1566",
+        "T1583.001",
+        "T1608"
+      ],
+      "references": [
+        {
+          "source": "Google Threat Intelligence Group",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/distillation-experimentation-integration-ai-adversarial-use"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "UNC5673",
+      "akas": "PRC-nexus; notable overlaps with TEMP.Hex (GTIG)",
+      "table": "main",
+      "reported": "May 2026",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1090",
+        "T1583.003",
+        "T1585"
+      ],
+      "references": [
+        {
+          "source": "Google Threat Intelligence Group",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/ai-vulnerability-exploitation-initial-access"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "UNC5792",
+      "akas": "Russia-based (GTIG)",
+      "table": "main",
+      "reported": "Sep 2026",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1119",
+        "T1593"
+      ],
+      "references": [
+        {
+          "source": "Google Threat Intelligence Group",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "UNC6201",
+      "akas": "PRC-nexus (GTIG)",
+      "table": "main",
+      "reported": "May 2026",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1583.003",
+        "T1585"
+      ],
+      "references": [
+        {
+          "source": "Google Threat Intelligence Group",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/ai-vulnerability-exploitation-initial-access"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "UNC6418",
+      "akas": "UnSub (GTIG; targets Ukraine/defense)",
+      "table": "main",
+      "reported": "Feb 2026",
+      "activity": "Q4 2025 (Oct-Dec 2025)",
+      "attack_ids": [
+        "T1566",
+        "T1589"
+      ],
+      "references": [
+        {
+          "source": "Google Threat Intelligence Group",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/distillation-experimentation-integration-ai-adversarial-use"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "UNC6508",
+      "akas": "PRC-nexus (GTIG); originally disclosed in GTIG's June 2026 AI Threat Tracker edition, reiterated/extended here",
+      "table": "main",
+      "reported": "Sep 2026",
+      "activity": "Unknown (multi-year campaign per GTIG)",
+      "attack_ids": [
+        "T1584",
+        "T1588.006"
+      ],
+      "references": [
+        {
+          "source": "Google Threat Intelligence Group",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "UNC795",
+      "akas": "PRC (GTIG designator)",
+      "table": "main",
+      "reported": "Feb 2026",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1059",
+        "T1587.001"
+      ],
+      "references": [
+        {
+          "source": "Google Threat Intelligence Group",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/distillation-experimentation-integration-ai-adversarial-use"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "UnSub (\"Recon\" agentic infostealer framework) — GTIG",
+      "akas": "Unnamed",
+      "table": "main",
+      "reported": "Sep 2026",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1119"
+      ],
+      "references": [
+        {
+          "source": "Google Threat Intelligence Group",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "UnSub (10-hour autonomous agentic ransomware attack) — Unit 42",
+      "akas": "Unnamed; Unit 42 discloses no victim identity, sector, or cluster ID",
+      "table": "main",
+      "reported": "Sep 2026",
+      "activity": "Unknown (single 10-hour incident, no calendar dates given)",
+      "attack_ids": [
+        "T1119",
+        "T1657"
+      ],
+      "references": [
+        {
+          "source": "Palo Alto Networks Unit 42",
+          "url": "https://unit42.paloaltonetworks.com/ai-assisted-cyber-attack-inside-a-unit-42-investigation/"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "UnSub (AI-assisted exploitation pipeline: CC Switch/Phalanx/Shai-Hulud) — GTIG",
+      "akas": "PRC-nexus; unnamed",
+      "table": "main",
+      "reported": "Sep 2026",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1588.006"
+      ],
+      "references": [
+        {
+          "source": "Google Threat Intelligence Group",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "UnSub (AI-developed zero-day) — GTIG",
+      "akas": "UnSub (cybercrime)",
+      "table": "main",
+      "reported": "May 2026",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1587.004",
+        "T1588.006"
+      ],
+      "references": [
+        {
+          "source": "Google Threat Intelligence Group",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/ai-vulnerability-exploitation-initial-access"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "UnSub (ARTEX extortion and suspected PRC-nexus clusters) — GTIG",
+      "akas": "Financially motivated extortion groups and suspected PRC-nexus clusters; no GTIG UNC designation given",
+      "table": "main",
+      "reported": "Oct 2026",
+      "activity": "Aug 2026 – Oct 2026",
+      "attack_ids": [
+        "T1003.006",
+        "T1190",
+        "T1505.003",
+        "T1558.003",
+        "T1657"
+      ],
+      "references": [
+        {
+          "source": "Google Threat Intelligence Group",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/artex-and-friends-enter-agentic-offensive-frameworks"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "UnSub (ARTEX multi-model operator, 19-market targeting) — Zscaler ThreatLabz",
+      "akas": "\"Chinese-speaking operator\" (Zscaler); possible overlap with the CrowdStrike/TAG-217 ARTEX row — unconfirmed",
+      "table": "main",
+      "reported": "Oct 2026",
+      "activity": "Aug 2026 – Oct 2026",
+      "attack_ids": [
+        "T1090",
+        "T1567.002",
+        "T1595"
+      ],
+      "references": [
+        {
+          "source": "zscaler.com",
+          "url": "https://www.zscaler.com/blogs/security-research/inside-global-ai-assisted-hacking-campaign"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "UnSub (attempted agentic pentest framework) — GTIG",
+      "akas": "PRC-nexus; unnamed",
+      "table": "main",
+      "reported": "Sep 2026",
+      "activity": "Unknown (disrupted pre-operational)",
+      "attack_ids": [
+        "T1595"
+      ],
+      "references": [
+        {
+          "source": "Google Threat Intelligence Group",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "UnSub (Aurora/Aur0ra ransomware affiliate, Cursor AI abuse) — Gambit Security",
+      "akas": "Aurora / Aur0ra RaaS affiliate (Russian-speaking); also independently tracked by CloudSEK",
+      "table": "main",
+      "reported": "Aug 2026",
+      "activity": "Apr 8 – May 21, 2026 (broader affiliate campaign Apr–Jul 2026 per CloudSEK)",
+      "attack_ids": [
+        "T1562.001"
+      ],
+      "references": [
+        {
+          "source": "gambit.security",
+          "url": "https://gambit.security/blog-posts/aurora-ransomware-targets-esxi-abuses-cursor-agent-for-exploitation"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "UnSub (autonomous AI agent framework) — Hugging Face",
+      "akas": "UnSub",
+      "table": "main",
+      "reported": "Jul 2026",
+      "activity": "Jul 2026",
+      "attack_ids": [
+        "T1102",
+        "T1190",
+        "T1552"
+      ],
+      "references": [
+        {
+          "source": "huggingface.co",
+          "url": "https://huggingface.co/blog/security-incident-july-2026"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "UnSub (autonomous credential-theft framework) — GTIG",
+      "akas": "Financially motivated; unnamed",
+      "table": "main",
+      "reported": "Sep 2026",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1119"
+      ],
+      "references": [
+        {
+          "source": "Google Threat Intelligence Group",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "UnSub (Cambodia scam operation) — OpenAI",
+      "akas": "UnSub",
+      "table": "main",
+      "reported": "Aug 2026",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1566",
+        "T1585",
+        "T1656",
+        "T1657"
+      ],
+      "references": [
+        {
+          "source": "OpenAI",
+          "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-criminal-scam-operation/"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "UnSub (Chinese-speaking Claude Code operator vs. governments and private sector) — CrowdStrike",
+      "akas": "Unnamed (CrowdStrike: operator-language descriptor only; no designation assigned)",
+      "table": "main",
+      "reported": "Oct 2026",
+      "activity": "May 2026 – Aug 2026",
+      "attack_ids": [],
+      "references": [
+        {
+          "source": "CrowdStrike",
+          "url": "https://www.crowdstrike.com/en-us/blog/crowdstrike-uncovers-new-agentic-ai-campaigns/"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "UnSub (Chinese-speaking retail-skimmer operator, Strix/Cairn/Hermes) — Gambit Security",
+      "akas": "UnSub (no designation; \"Chinese-speaking, financially motivated\" per Gambit)",
+      "table": "main",
+      "reported": "Sep 2026",
+      "activity": "Jul 2026 – Sep 2026",
+      "attack_ids": [
+        "T1053.003",
+        "T1059",
+        "T1190",
+        "T1485",
+        "T1588.006"
+      ],
+      "references": [
+        {
+          "source": "gambit.security",
+          "url": "https://gambit.security/blog-posts/autonomous-ai-agents-online-retailers-25-a-company"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "UnSub (DAIQ Wealth sha zhu pan) — Sophos CTU",
+      "akas": "UnSub",
+      "table": "main",
+      "reported": "Jul 2026",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1566",
+        "T1583",
+        "T1657"
+      ],
+      "references": [
+        {
+          "source": "sophos.com",
+          "url": "https://www.sophos.com/en-us/content/sophos-ai-security-2026-report"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "UnSub (FakeAgent) — Huntress",
+      "akas": "UnSub",
+      "table": "main",
+      "reported": "Jul 2026",
+      "activity": "Jul 2026",
+      "attack_ids": [
+        "T1102",
+        "T1204.002",
+        "T1583.001",
+        "T1583.008",
+        "T1608"
+      ],
+      "references": [
+        {
+          "source": "Huntress",
+          "url": "https://www.huntress.com/blog/fakeagent-claude-desktop-malvertising-ends-in-dotnet-rat"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "UnSub (financially motivated) — Sygnia",
+      "akas": "UnSub",
+      "table": "main",
+      "reported": "Jun 2026",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1136",
+        "T1552",
+        "T1567"
+      ],
+      "references": [
+        {
+          "source": "Sygnia",
+          "url": "https://www.sygnia.co/threat-reports/inside-an-ai-assisted-cloud-attack/"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "UnSub (INC / The Gentlemen affiliates, \"Phantom\" framework) — SOCRadar",
+      "akas": "INC = GOLD IONIC (MITRE G1032); tooling: Phantom, Ghost C2",
+      "table": "main",
+      "reported": "Oct 2026",
+      "activity": "Jul 2026 – Oct 2026",
+      "attack_ids": [
+        "T1190",
+        "T1486",
+        "T1562.001",
+        "T1657"
+      ],
+      "references": [
+        {
+          "source": "socradar.io",
+          "url": "https://socradar.io/blog/inc-gentlemen-ransomware-ai-infrastructure/"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "UnSub (Indonesian-speaking Claude Code operator) — CrowdStrike",
+      "akas": "Unnamed (CrowdStrike: operator-language descriptor only; no designation assigned)",
+      "table": "main",
+      "reported": "Oct 2026",
+      "activity": "May 2026 – Aug 2026",
+      "attack_ids": [],
+      "references": [
+        {
+          "source": "CrowdStrike",
+          "url": "https://www.crowdstrike.com/en-us/blog/crowdstrike-uncovers-new-agentic-ai-campaigns/"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "UnSub (Iranian-nexus developer) — Unit 42",
+      "akas": "TuxBot v3; Keksec-ecosystem-adjacent IoT botnet",
+      "table": "main",
+      "reported": "Jul 2026",
+      "activity": "Jan 2025 – Apr 2026",
+      "attack_ids": [
+        "T1584",
+        "T1587.001",
+        "T1587.004"
+      ],
+      "references": [
+        {
+          "source": "Palo Alto Networks Unit 42",
+          "url": "https://unit42.paloaltonetworks.com/tuxbot-v3-evolution-iot-botnet/"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "UnSub (PentAGI-based orchestration, Asian telecom/integrators) — GTIG",
+      "akas": "Unattributed",
+      "table": "main",
+      "reported": "Oct 2026",
+      "activity": "Aug 2026 – Oct 2026",
+      "attack_ids": [
+        "T1590",
+        "T1595.002"
+      ],
+      "references": [
+        {
+          "source": "Google Threat Intelligence Group",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/artex-and-friends-enter-agentic-offensive-frameworks"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "UnSub (Russia-nexus) — GTIG",
+      "akas": "UnSub; malware CANFAIL, LONGSTREAM",
+      "table": "main",
+      "reported": "May 2026",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1027",
+        "T1587.001"
+      ],
+      "references": [
+        {
+          "source": "Google Threat Intelligence Group",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/ai-vulnerability-exploitation-initial-access"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "UnSub (Russian-speaking Claude Code group, /pentest-setup workflow) — CrowdStrike",
+      "akas": "Unnamed (CrowdStrike: operator-language descriptor only; no designation assigned)",
+      "table": "main",
+      "reported": "Oct 2026",
+      "activity": "May 2026 – Aug 2026",
+      "attack_ids": [],
+      "references": [
+        {
+          "source": "CrowdStrike",
+          "url": "https://www.crowdstrike.com/en-us/blog/crowdstrike-uncovers-new-agentic-ai-campaigns/"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "UnSub (Siemens S7 PLC targeting) — CISA",
+      "akas": "UnSub",
+      "table": "main",
+      "reported": "Aug 2026",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1587.001",
+        "T1588.007",
+        "T1595"
+      ],
+      "references": [
+        {
+          "source": "cisa.gov",
+          "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-231a"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "UnSub (Spanish/English-speaking Claude Code operator vs. Argentine healthcare) — CrowdStrike",
+      "akas": "Unnamed (CrowdStrike: operator-language descriptor only; no designation assigned)",
+      "table": "main",
+      "reported": "Oct 2026",
+      "activity": "May 2026 – Aug 2026",
+      "attack_ids": [],
+      "references": [
+        {
+          "source": "CrowdStrike",
+          "url": "https://www.crowdstrike.com/en-us/blog/crowdstrike-uncovers-new-agentic-ai-campaigns/"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "UnSub (suspected PRC-nexus, agentic frameworks) — GTIG",
+      "akas": "UnSub",
+      "table": "main",
+      "reported": "May 2026",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1595"
+      ],
+      "references": [
+        {
+          "source": "Google Threat Intelligence Group",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/ai-vulnerability-exploitation-initial-access"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "VAPOR PANDA",
+      "akas": "China-nexus (CrowdStrike); not equated with Microsoft's Storm-0940",
+      "table": "main",
+      "reported": "Oct 2026",
+      "activity": "Oct 2026 – Oct 2026",
+      "attack_ids": [
+        "T1078",
+        "T1110.003",
+        "T1190",
+        "T1505.003",
+        "T1572"
+      ],
+      "references": [
+        {
+          "source": "CrowdStrike",
+          "url": "https://www.crowdstrike.com/en-us/blog/vapor-panda-uses-artex-to-scale-global-campaign/"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "APT43",
+      "akas": "",
+      "table": "deepfake",
+      "reported": "Aug 2023",
+      "activity": "Unknown",
+      "attack_ids": [],
+      "references": [
+        {
+          "source": "Microsoft",
+          "url": "https://www.microsoft.com/en-us/security/blog/2024/02/14/staying-ahead-of-threat-actors-in-the-age-of-ai/"
+        },
+        {
+          "source": "Mandiant",
+          "url": "https://www.mandiant.com/resources/blog/threat-actors-generative-ai-limited"
+        },
+        {
+          "source": "Microsoft",
+          "url": "https://www.microsoft.com/en-us/security/blog/2026/03/06/ai-as-tradecraft-how-threat-actors-operationalize-ai/"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 70,
+      "has_primary_reference": true
+    },
+    {
+      "name": "Multiple Unsub - NCSC UK",
+      "akas": "N/A",
+      "table": "main",
+      "reported": "Jan 2024",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1566",
+        "T1587",
+        "T1593"
+      ],
+      "references": [
+        {
+          "source": "NCSC UK",
+          "url": "https://www.ncsc.gov.uk/report/impact-of-ai-on-cyber-threat"
+        },
+        {
+          "source": "github.com",
+          "url": "https://github.com/cybershujin/Threat-Actors-Use-of-Artifical-Intelligence/tree/main/Multiple UnSub SlashNext"
+        },
+        {
+          "source": "github.com",
+          "url": "https://github.com/cybershujin/Threat-Actors-Use-of-Artifical-Intelligence/tree/main/Multiple"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 70,
+      "has_primary_reference": true
+    },
+    {
+      "name": "APT41",
+      "akas": "Wicked Panda, BARIUM, Winnti, Double Dragon (PRC)",
+      "table": "main",
+      "reported": "Nov 2025",
+      "activity": "Aug 2025",
+      "attack_ids": [
+        "T1027",
+        "T1071",
+        "T1587.001"
+      ],
+      "references": [
+        {
+          "source": "Google Threat Intelligence Group",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/threat-actor-usage-of-ai-tools"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 65,
+      "has_primary_reference": true
+    },
+    {
+      "name": "FunkSec",
+      "akas": "unknown",
+      "table": "main",
+      "reported": "Jan 2025",
+      "activity": "Dec 2024 – Jan 2025",
+      "attack_ids": [
+        "T1588"
+      ],
+      "references": [
+        {
+          "source": "Check Point",
+          "url": "https://research.checkpoint.com/2025/funksec-alleged-top-ransomware-group-powered-by-ai/"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 65,
+      "has_primary_reference": true
+    },
+    {
+      "name": "Global Group",
+      "akas": "RaaS (SentinelLABS)",
+      "table": "main",
+      "reported": "Dec 2025",
+      "activity": "Mid 2025",
+      "attack_ids": [
+        "T1591",
+        "T1657"
+      ],
+      "references": [
+        {
+          "source": "SentinelOne",
+          "url": "https://www.sentinelone.com/labs/llms-ransomware-an-operational-accelerator-not-a-revolution/"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 65,
+      "has_primary_reference": true
+    },
+    {
+      "name": "GTG-2002",
+      "akas": "\"vibe hacking\" data-extortion actor (Anthropic)",
+      "table": "main",
+      "reported": "Aug 2025",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1567",
+        "T1587.001",
+        "T1657"
+      ],
+      "references": [
+        {
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/news/detecting-countering-misuse-aug-2025"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 65,
+      "has_primary_reference": true
+    },
+    {
+      "name": "GTG-5004",
+      "akas": "UnSub RaaS developer (Anthropic)",
+      "table": "main",
+      "reported": "Aug 2025",
+      "activity": "Jan 2025 – Aug 2025",
+      "attack_ids": [
+        "T1027",
+        "T1490",
+        "T1562.001",
+        "T1587.001"
+      ],
+      "references": [
+        {
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/news/detecting-countering-misuse-aug-2025"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 65,
+      "has_primary_reference": true
+    },
+    {
+      "name": "Multiple UnSub — FBI/IC3",
+      "akas": "",
+      "table": "deepfake",
+      "reported": "Dec 2025",
+      "activity": "2023 – Dec 2025",
+      "attack_ids": [],
+      "references": [
+        {
+          "source": "FBI IC3",
+          "url": "https://www.ic3.gov/PSA/2025/PSA251219"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 65,
+      "has_primary_reference": true
+    },
+    {
+      "name": "Multiple UnSub — OpenAI (Oct 2025)",
+      "akas": "RU-, KR-, CN-language clusters",
+      "table": "main",
+      "reported": "Oct 2025",
+      "activity": "2025",
+      "attack_ids": [
+        "T1059",
+        "T1071",
+        "T1566",
+        "T1587.001"
+      ],
+      "references": [
+        {
+          "source": "OpenAI",
+          "url": "https://openai.com/global-affairs/disrupting-malicious-uses-of-ai-october-2025/"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 65,
+      "has_primary_reference": true
+    },
+    {
+      "name": "Multiple UnSub — Proofpoint",
+      "akas": "UnSub (multiple operators)",
+      "table": "main",
+      "reported": "Aug 2025",
+      "activity": "Feb 2025 – Jul 2025",
+      "attack_ids": [
+        "T1566",
+        "T1583.001",
+        "T1608",
+        "T1657"
+      ],
+      "references": [
+        {
+          "source": "Proofpoint",
+          "url": "https://www.proofpoint.com/us/blog/threat-insight/cybercriminals-abuse-ai-website-creation-app-phishing"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 65,
+      "has_primary_reference": true
+    },
+    {
+      "name": "PROMPTFLUX",
+      "akas": "UnSub (GTIG; likely financially motivated)",
+      "table": "main",
+      "reported": "Nov 2025",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1027",
+        "T1059.005",
+        "T1547.001"
+      ],
+      "references": [
+        {
+          "source": "Google Threat Intelligence Group",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/threat-actor-usage-of-ai-tools"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 65,
+      "has_primary_reference": true
+    },
+    {
+      "name": "QUIETVAULT",
+      "akas": "UnSub (GTIG); JS credential stealer",
+      "table": "main",
+      "reported": "Nov 2025",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1119",
+        "T1552",
+        "T1567"
+      ],
+      "references": [
+        {
+          "source": "Google Threat Intelligence Group",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/threat-actor-usage-of-ai-tools"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 65,
+      "has_primary_reference": true
+    },
+    {
+      "name": "RevengeHotels",
+      "akas": "TA558 (Kaspersky)",
+      "table": "main",
+      "reported": "Sep 2025",
+      "activity": "Summer 2025 (Jun-Aug 2025)",
+      "attack_ids": [
+        "T1059",
+        "T1566.001",
+        "T1587.001"
+      ],
+      "references": [
+        {
+          "source": "Kaspersky",
+          "url": "https://securelist.com/revengehotels-attacks-with-ai-and-venomrat-across-latin-america/117493/"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 65,
+      "has_primary_reference": true
+    },
+    {
+      "name": "TEMP.Zagros",
+      "akas": "MUDDYCOAST, MuddyWater, Mango Sandstorm, Static Kitten, Seedworm (Iran)",
+      "table": "main",
+      "reported": "Nov 2025",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1505.003",
+        "T1587.001"
+      ],
+      "references": [
+        {
+          "source": "Google Threat Intelligence Group",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/threat-actor-usage-of-ai-tools"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 65,
+      "has_primary_reference": true
+    },
+    {
+      "name": "UNC1069 (MASAN)",
+      "akas": "",
+      "table": "deepfake",
+      "reported": "Nov 2025",
+      "activity": "Unknown",
+      "attack_ids": [],
+      "references": [
+        {
+          "source": "Google Threat Intelligence Group",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/threat-actor-usage-of-ai-tools"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 65,
+      "has_primary_reference": true
+    },
+    {
+      "name": "UNC4899",
+      "akas": "PUKCHONG (DPRK; supply-chain compromise, TraderTraitor/Lazarus cluster)",
+      "table": "main",
+      "reported": "Nov 2025",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1195",
+        "T1587.001",
+        "T1588.006"
+      ],
+      "references": [
+        {
+          "source": "Google Threat Intelligence Group",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/threat-actor-usage-of-ai-tools"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 65,
+      "has_primary_reference": true
+    },
+    {
+      "name": "UnSub (China-nexus, cloud intrusion) — GTIG",
+      "akas": "UnSub",
+      "table": "main",
+      "reported": "Nov 2025",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1021",
+        "T1071",
+        "T1567",
+        "T1590"
+      ],
+      "references": [
+        {
+          "source": "Google Threat Intelligence Group",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/threat-actor-usage-of-ai-tools"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 65,
+      "has_primary_reference": true
+    },
+    {
+      "name": "UnSub (China-nexus, CTF-pretext) — GTIG",
+      "akas": "UnSub",
+      "table": "main",
+      "reported": "Nov 2025",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1505.003",
+        "T1566"
+      ],
+      "references": [
+        {
+          "source": "Google Threat Intelligence Group",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/threat-actor-usage-of-ai-tools"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 65,
+      "has_primary_reference": true
+    },
+    {
+      "name": "UnSub carding operator — Anthropic",
+      "akas": "UnSub",
+      "table": "main",
+      "reported": "Aug 2025",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1102",
+        "T1587"
+      ],
+      "references": [
+        {
+          "source": "Anthropic",
+          "url": "https://www-cdn.anthropic.com/b2a76c6f6992465c09a6f2fce282f6c0cea8c200.pdf"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 65,
+      "has_primary_reference": true
+    },
+    {
+      "name": "UnSub — Anthropic",
+      "akas": "",
+      "table": "deepfake",
+      "reported": "Aug 2025",
+      "activity": "2025",
+      "attack_ids": [],
+      "references": [
+        {
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/news/detecting-countering-misuse-aug-2025"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 65,
+      "has_primary_reference": true
+    },
+    {
+      "name": "Aquatic Panda",
+      "akas": "Charcoal Typhoon, ControlX, RedHotel, Bronze University, Red Scully, Chromium",
+      "table": "main",
+      "reported": "Feb 2024",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1587",
+        "T1588.006"
+      ],
+      "references": [
+        {
+          "source": "Microsoft",
+          "url": "https://www.microsoft.com/en-us/security/blog/2024/02/14/staying-ahead-of-threat-actors-in-the-age-of-ai/"
+        },
+        {
+          "source": "github.com",
+          "url": "https://github.com/cybershujin/Threat-Actors-use-of-Artifical-Intelligence/tree/main/Aquatic%20Panda"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 60,
+      "has_primary_reference": true
+    },
+    {
+      "name": "bandcampro",
+      "akas": "UnSub (Russian-speaking; Trend Micro designation)",
+      "table": "main",
+      "reported": "Jul 2026",
+      "activity": "Mar 2026 – Apr 2026",
+      "attack_ids": [
+        "T1119",
+        "T1583",
+        "T1587.001"
+      ],
+      "references": [
+        {
+          "source": "The Register",
+          "url": "https://www.theregister.com/research/2026/07/14/the-bots-are-alive-jailbroken-gemini-spun-up-new-c2-server-for-russian-fraudster-in-just-6-minutes/5270131"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 60,
+      "has_primary_reference": false
+    },
+    {
+      "name": "GREYVIBE",
+      "akas": "Russia-nexus (WithSecure); possible, low-likelihood association with UAC-0098 / TrickBot; campaigns PhantomMail, PhantomClick, PrincessClub, DroneLink, Nebo",
+      "table": "main",
+      "reported": "May 2026",
+      "activity": "Aug 2025 – Apr 2026",
+      "attack_ids": [
+        "T1027",
+        "T1204.002",
+        "T1566",
+        "T1587.001"
+      ],
+      "references": [
+        {
+          "source": "ithsecure.com",
+          "url": "https://www.withsecure.com/en/resources-hub/w-labs/greyvibe/"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 60,
+      "has_primary_reference": false
+    },
+    {
+      "name": "Taiwan voice-cloning romance-scam ring (57 indicted, unnamed group)",
+      "akas": "",
+      "table": "deepfake",
+      "reported": "Sep 2026",
+      "activity": "Since 2022",
+      "attack_ids": [],
+      "references": [
+        {
+          "source": "focustaiwan.tw",
+          "url": "https://focustaiwan.tw/society/202609020019"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 60,
+      "has_primary_reference": false
+    },
+    {
+      "name": "Unnamed fraud group (Milan prosecutors investigating; at least one foreign suspect registered)",
+      "akas": "",
+      "table": "deepfake",
+      "reported": "Sep 2026",
+      "activity": "Feb 2026",
+      "attack_ids": [
+        "T1656"
+      ],
+      "references": [
+        {
+          "source": "ilpost.it",
+          "url": "https://www.ilpost.it/2026/09/25/fideuram-truffa-whatsapp-ai/"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 60,
+      "has_primary_reference": false
+    },
+    {
+      "name": "Unnamed fraud ring",
+      "akas": "",
+      "table": "deepfake",
+      "reported": "Sep 2026",
+      "activity": "Unknown (reported Sep 2026)",
+      "attack_ids": [],
+      "references": [
+        {
+          "source": "psni.police.uk",
+          "url": "https://www.psni.police.uk/latest-news/warning-against-fraud-after-victim-loses-ps250000-ards-and-north-down-online-criminals"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 60,
+      "has_primary_reference": false
+    },
+    {
+      "name": "Unnamed Greek organized-crime ring (6 suspects in case file; 2 named arrests)",
+      "akas": "",
+      "table": "deepfake",
+      "reported": "Sep 2026",
+      "activity": "Jul 2026 – Sep 2026",
+      "attack_ids": [],
+      "references": [
+        {
+          "source": "euronews.com",
+          "url": "https://www.euronews.com/my-europe/2026/09/18/greece-police-bust-gang-using-ai-to-clone-relatives-voices-for-cash"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 60,
+      "has_primary_reference": false
+    },
+    {
+      "name": "UnSub (multi-agent AI framework vs. Taiwan government) — Dream Security",
+      "akas": "\"Chinese-language operator\" per linguistic analysis only (Simplified/Traditional Chinese code-switching); no confirmed nation-state or named APT/UNC attribution",
+      "table": "main",
+      "reported": "Aug 2026",
+      "activity": "Jul 1–4, 2026",
+      "attack_ids": [
+        "T1587",
+        "T1588.006"
+      ],
+      "references": [
+        {
+          "source": "dreamgroup.com",
+          "url": "https://dreamgroup.com/blog/inside-a-multi-agent-ai-framework-used-to-compromise-government-entities-in-asia"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 60,
+      "has_primary_reference": false
+    },
+    {
+      "name": "UnSub — Huntress (AI-generated AD recon)",
+      "akas": "UnSub",
+      "table": "main",
+      "reported": "Jul 2026",
+      "activity": "Jun 2026",
+      "attack_ids": [
+        "T1059.001",
+        "T1069",
+        "T1087"
+      ],
+      "references": [
+        {
+          "source": "The Hacker News",
+          "url": "https://thehackernews.com/2026/07/attacker-uses-suspected-ai-generated.html"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 60,
+      "has_primary_reference": false
+    },
+    {
+      "name": "Unsub1 - Kaspersky",
+      "akas": "N/A",
+      "table": "main",
+      "reported": "Mar 2024",
+      "activity": "2023",
+      "attack_ids": [
+        "T1583"
+      ],
+      "references": [
+        {
+          "source": "Microsoft",
+          "url": "https://www.microsoft.com/en-us/security/blog/2021/07/29/bazacall-phony-call-centers-lead-to-exfiltration-and-ransomware/"
+        },
+        {
+          "source": "Kaspersky",
+          "url": "https://securelist.com/spam-phishing-report-2023/112015/"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 60,
+      "has_primary_reference": true
+    },
+    {
+      "name": "CyberAv3ngers",
+      "akas": "IRGC-affiliated per public reporting cited by OpenAI; publicly linked to PLC compromise at the Municipal Water Authority of Aliquippa, PA (Nov 2023) and a water-service disruption in County Mayo, Ireland (Dec 2023)",
+      "table": "main",
+      "reported": "Oct 2024",
+      "activity": "Unknown (ChatGPT interactions undated in the report; the group's own prior physical intrusions were Nov–Dec 2023, a distinct window from the ChatGPT-use activity)",
+      "attack_ids": [
+        "T1027",
+        "T1588.006",
+        "T1592"
+      ],
+      "references": [
+        {
+          "source": "OpenAI",
+          "url": "https://cdn.openai.com/threat-intelligence-reports/influence-and-cyber-operations-an-update_October-2024.pdf"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 50,
+      "has_primary_reference": true
+    },
+    {
+      "name": "DragonBridge",
+      "akas": "",
+      "table": "deepfake",
+      "reported": "Aug 2023",
+      "activity": "Mar 2023",
+      "attack_ids": [],
+      "references": [
+        {
+          "source": "Mandiant",
+          "url": "https://www.mandiant.com/resources/blog/threat-actors-generative-ai-limited"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 50,
+      "has_primary_reference": true
+    },
+    {
+      "name": "DragonBridge",
+      "akas": "",
+      "table": "deepfake",
+      "reported": "Aug 2023",
+      "activity": "May 2023",
+      "attack_ids": [],
+      "references": [
+        {
+          "source": "Mandiant",
+          "url": "https://www.mandiant.com/resources/blog/threat-actors-generative-ai-limited"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 50,
+      "has_primary_reference": true
+    },
+    {
+      "name": "GXC Team group leader: googleXcoder",
+      "akas": "",
+      "table": "main",
+      "reported": "Jan 2024",
+      "activity": "Nov 2023 – Dec 2023",
+      "attack_ids": [
+        "T1114",
+        "T1565",
+        "T1566",
+        "T1588",
+        "T1592",
+        "T1657"
+      ],
+      "references": [
+        {
+          "source": "Resecurity",
+          "url": "https://www.resecurity.com/blog/article/cybercriminals-implemented-artificial-intelligence-ai-for-invoice-fraud"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 50,
+      "has_primary_reference": true
+    },
+    {
+      "name": "Imperial Kitten",
+      "akas": "Crimson Sandstorm, Yellowliderc, Tortoiseshell",
+      "table": "main",
+      "reported": "Feb 2024",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1562.001",
+        "T1566",
+        "T1588"
+      ],
+      "references": [
+        {
+          "source": "Microsoft",
+          "url": "https://www.microsoft.com/en-us/security/blog/2024/02/14/staying-ahead-of-threat-actors-in-the-age-of-ai/"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 50,
+      "has_primary_reference": true
+    },
+    {
+      "name": "Multiple Unsub - SlashNext",
+      "akas": "N/A",
+      "table": "main",
+      "reported": "Oct 2023",
+      "activity": "Oct 2022 – Sep 2023",
+      "attack_ids": [
+        "T1566"
+      ],
+      "references": [
+        {
+          "source": "CNBC",
+          "url": "https://www.cnbc.com/2023/11/28/ai-like-chatgpt-is-creating-huge-increase-in-malicious-phishing-email.html"
+        },
+        {
+          "source": "github.com",
+          "url": "https://github.com/cybershujin/Threat-Actors-Use-of-Artifical-Intelligence/tree/main/Multiple UnSub SlashNext"
+        },
+        {
+          "source": "github.com",
+          "url": "https://github.com/cybershujin/Threat-Actors-Use-of-Artifical-Intelligence/tree/main/Multiple"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 50,
+      "has_primary_reference": false
+    },
+    {
+      "name": "Multiple Unsub - Symantic",
+      "akas": "Unknown",
+      "table": "main",
+      "reported": "Jul 2024",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1059",
+        "T1566",
+        "T1588"
+      ],
+      "references": [
+        {
+          "source": "Symantec",
+          "url": "https://symantec-enterprise-blogs.security.com/threat-intelligence/malware-ai-llm"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 50,
+      "has_primary_reference": true
+    },
+    {
+      "name": "Multiple Unsub - Trend Micro",
+      "akas": "unknown akas",
+      "table": "main",
+      "reported": "May 2024",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1059",
+        "T1566",
+        "T1588"
+      ],
+      "references": [
+        {
+          "source": "Trend Micro",
+          "url": "https://www.trendmicro.com/vinfo/gb/security/news/cybercrime-and-digital-threats/back-to-the-hype-an-update-on-how-cybercriminals-are-using-genai"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 50,
+      "has_primary_reference": true
+    },
+    {
+      "name": "Multiple UnSubs",
+      "akas": "",
+      "table": "deepfake",
+      "reported": "Jun 2022",
+      "activity": "Jun 2022",
+      "attack_ids": [],
+      "references": [
+        {
+          "source": "FBI IC3",
+          "url": "https://www.ic3.gov/Media/Y2022/PSA220628"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 50,
+      "has_primary_reference": true
+    },
+    {
+      "name": "Multiple UnSubs",
+      "akas": "",
+      "table": "deepfake",
+      "reported": "Aug 2023",
+      "activity": "Sep 2022 – Jul 2023",
+      "attack_ids": [],
+      "references": [
+        {
+          "source": "FBI IC3",
+          "url": "https://www.ic3.gov/Media/Y2022/PSA220628"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 50,
+      "has_primary_reference": true
+    },
+    {
+      "name": "Salt Typhoon",
+      "akas": "GhostEmperor, FamousSparrow, Earth Estries, UNC2286",
+      "table": "main",
+      "reported": "Nov 2024",
+      "activity": "Unknown",
+      "attack_ids": [],
+      "references": [
+        {
+          "source": "sj.com",
+          "url": "https://www.wsj.com/politics/national-security/t-mobile-hacked-in-massive-chinese-breach-of-telecom-networks-4b2d7f92"
+        },
+        {
+          "source": "archive.today",
+          "url": "http://archive.today/Uidlf"
+        },
+        {
+          "source": "Infosecurity Magazine",
+          "url": "https://www.infosecurity-magazine.com/news/tmobile-breached-chinese/"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 50,
+      "has_primary_reference": false
+    },
+    {
+      "name": "Sodium",
+      "akas": "Salmon Typhoon, Samurai Panda, Maverick Panda, APT4",
+      "table": "main",
+      "reported": "Feb 2024",
+      "activity": "2023",
+      "attack_ids": [
+        "T1564",
+        "T1587.001",
+        "T1593"
+      ],
+      "references": [
+        {
+          "source": "Microsoft",
+          "url": "https://www.microsoft.com/en-us/security/blog/2024/02/14/staying-ahead-of-threat-actors-in-the-age-of-ai/"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 50,
+      "has_primary_reference": true
+    },
+    {
+      "name": "STORM-0817",
+      "akas": "Iran-based actor",
+      "table": "main",
+      "reported": "Oct 2024",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1119",
+        "T1587.001"
+      ],
+      "references": [
+        {
+          "source": "OpenAI",
+          "url": "https://cdn.openai.com/threat-intelligence-reports/influence-and-cyber-operations-an-update_October-2024.pdf"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 50,
+      "has_primary_reference": true
+    },
+    {
+      "name": "SweetSpecter",
+      "akas": "Suspected China-based actor",
+      "table": "main",
+      "reported": "Oct 2024",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1566.001",
+        "T1588.006",
+        "T1595"
+      ],
+      "references": [
+        {
+          "source": "OpenAI",
+          "url": "https://cdn.openai.com/threat-intelligence-reports/influence-and-cyber-operations-an-update_October-2024.pdf"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 50,
+      "has_primary_reference": true
+    },
+    {
+      "name": "TA547",
+      "akas": "Scully Spider",
+      "table": "main",
+      "reported": "Apr 2024",
+      "activity": "Mar 2024",
+      "attack_ids": [
+        "T1059"
+      ],
+      "references": [
+        {
+          "source": "Proofpoint",
+          "url": "https://www.proofpoint.com/us/blog/threat-insight/security-brief-ta547-targets-german-organizations-rhadamanthys-stealer"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 50,
+      "has_primary_reference": true
+    },
+    {
+      "name": "unknown",
+      "akas": "",
+      "table": "deepfake",
+      "reported": "Aug 2023",
+      "activity": "Mar 2022",
+      "attack_ids": [],
+      "references": [
+        {
+          "source": "Mandiant",
+          "url": "https://www.mandiant.com/resources/blog/threat-actors-generative-ai-limited"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 50,
+      "has_primary_reference": true
+    },
+    {
+      "name": "Unsub2 - Kaspersky",
+      "akas": "N/A",
+      "table": "main",
+      "reported": "Mar 2024",
+      "activity": "Jan 2023 – Dec 2023",
+      "attack_ids": [
+        "T1566",
+        "T1583"
+      ],
+      "references": [
+        {
+          "source": "Kaspersky",
+          "url": "https://securelist.com/spam-phishing-report-2023/112015/"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 50,
+      "has_primary_reference": true
+    },
+    {
+      "name": "UnSubs - Mandiant",
+      "akas": "N/A but described as \"actors aligned with nation-states including Russia, the People's Republic of China (PRC), Iran, Ethiopia, Indonesia, Cuba, Argentina, Mexico, Ecuador, and El Salvador, along with non-state actors such as individuals on the 4chan forum.\"",
+      "table": "main",
+      "reported": "Aug 2023",
+      "activity": "2019 – Aug 2023",
+      "attack_ids": [
+        "T1587"
+      ],
+      "references": [
+        {
+          "source": "Mandiant",
+          "url": "https://www.mandiant.com/resources/blog/threat-actors-generative-ai-limited"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 50,
+      "has_primary_reference": true
+    },
+    {
+      "name": "baller423/goober2",
+      "akas": "potentially star23/baller13 or just ties between them",
+      "table": "main",
+      "reported": "Feb 2024",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1059.001",
+        "T1195.001"
+      ],
+      "references": [
+        {
+          "source": "JFrog",
+          "url": "https://jfrog.com/blog/data-scientists-targeted-by-malicious-hugging-face-ml-models-with-silent-backdoor/"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 30,
+      "has_primary_reference": false
+    },
+    {
+      "name": "Bitter APT",
+      "akas": "APT-C-08, Aramanberry",
+      "table": "main",
+      "reported": "Unknown",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1566"
+      ],
+      "references": [
+        {
+          "source": "WeChat (Chinese vendor)",
+          "url": "https://mp.weixin.qq.com/s/wR7IgBmEuqqGQ9SCAV39Uw"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 30,
+      "has_primary_reference": false
+    },
+    {
+      "name": "Indrik Spider",
+      "akas": "Evil Corp",
+      "table": "main",
+      "reported": "Feb 2024",
+      "activity": "Feb 2023",
+      "attack_ids": [
+        "T1593"
+      ],
+      "references": [
+        {
+          "source": "asantecloud.com",
+          "url": "https://asantecloud.com/wp-content/uploads/2024/02/GlobalThreatReport2024_Asante.pdf"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 30,
+      "has_primary_reference": false
+    },
+    {
+      "name": "Multiple Unsub - JFrog",
+      "akas": "N/A",
+      "table": "main",
+      "reported": "Feb 2024",
+      "activity": "By Feb 2024",
+      "attack_ids": [
+        "T1059",
+        "T1195.001"
+      ],
+      "references": [
+        {
+          "source": "JFrog",
+          "url": "https://jfrog.com/blog/data-scientists-targeted-by-malicious-hugging-face-ml-models-with-silent-backdoor/"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 30,
+      "has_primary_reference": false
+    },
+    {
+      "name": "Multiple UnSub - South China Post",
+      "akas": "",
+      "table": "main",
+      "reported": "Dec 2023",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1587"
+      ],
+      "references": [
+        {
+          "source": "South China Morning Post",
+          "url": "https://www.scmp.com/tech/tech-trends/article/3246612/chatgpt-aided-ransomware-china-results-four-arrests-ai-raises-cybersecurity-concerns"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 30,
+      "has_primary_reference": false
+    },
+    {
+      "name": "Scattered Spider",
+      "akas": "UNC3944, Storm-0875",
+      "table": "main",
+      "reported": "Feb 2024",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1588"
+      ],
+      "references": [
+        {
+          "source": "asantecloud.com",
+          "url": "https://asantecloud.com/wp-content/uploads/2024/02/GlobalThreatReport2024_Asante.pdf"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 30,
+      "has_primary_reference": false
+    },
+    {
+      "name": "star23/baller13",
+      "akas": "potentially baller423/goober2 or just ties between them",
+      "table": "main",
+      "reported": "Feb 2024",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1059.001",
+        "T1195.001"
+      ],
+      "references": [
+        {
+          "source": "JFrog",
+          "url": "https://jfrog.com/blog/data-scientists-targeted-by-malicious-hugging-face-ml-models-with-silent-backdoor/"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 30,
+      "has_primary_reference": false
+    },
+    {
+      "name": "Unsub",
+      "akas": "",
+      "table": "deepfake",
+      "reported": "Aug 2023",
+      "activity": "Unknown",
+      "attack_ids": [],
+      "references": [
+        {
+          "source": "hongkongfp.com",
+          "url": "https://hongkongfp.com/2023/08/25/in-first-hong-kong-police-arrest-6-over-finance-scams-involving-deepfake-technology/"
+        }
+      ],
+      "llminjection_actor": null,
+      "score": 30,
+      "has_primary_reference": false
+    },
+    {
+      "name": "CanadianKingpin12",
+      "akas": "",
+      "table": "main",
+      "reported": "Unknown",
+      "activity": "Unknown",
+      "attack_ids": [],
+      "references": [],
+      "llminjection_actor": null,
+      "score": 20,
+      "has_primary_reference": false
+    },
+    {
+      "name": "Multiple Unsub North Korea - US National Security Advisor",
+      "akas": "N/A",
+      "table": "main",
+      "reported": "Oct 2023",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1588",
+        "T1588.006"
+      ],
+      "references": [],
+      "llminjection_actor": null,
+      "score": 20,
+      "has_primary_reference": false
+    },
+    {
+      "name": "Fancy Bear",
+      "akas": "Forest Blizzard, APT28, Strontium",
+      "table": "main",
+      "reported": "Nov 2025",
+      "activity": "By Feb 2024 – Jun 2025",
+      "attack_ids": [
+        "T1059",
+        "T1588",
+        "T1592"
+      ],
+      "references": [
+        {
+          "source": "Microsoft",
+          "url": "https://www.microsoft.com/en-us/security/blog/2024/02/14/staying-ahead-of-threat-actors-in-the-age-of-ai/"
+        },
+        {
+          "source": "Google Threat Intelligence Group",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/threat-actor-usage-of-ai-tools"
+        },
+        {
+          "source": "github.com",
+          "url": "https://github.com/cybershujin/Threat-Actors-Use-of-Artifical-Intelligence/blob/main/APT28.MD"
+        }
+      ],
+      "llminjection_actor": "ACTOR-APT28",
+      "matched_label": "APT28",
+      "score": 85,
+      "has_primary_reference": true
+    },
+    {
+      "name": "UNC2970",
+      "akas": "DPRK; \"Operation Dream Job\" recruiter-impersonation cluster (Lazarus-adjacent)",
+      "table": "main",
+      "reported": "Feb 2026",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1566.003",
+        "T1589",
+        "T1591"
+      ],
+      "references": [
+        {
+          "source": "Google Threat Intelligence Group",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/distillation-experimentation-integration-ai-adversarial-use"
+        }
+      ],
+      "llminjection_actor": "ACTOR-UNC2970",
+      "matched_label": "UNC2970",
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "UNC6780",
+      "akas": "\"TeamPCP\" (GTIG)",
+      "table": "main",
+      "reported": "Sep 2026",
+      "activity": "Since Mar 2026",
+      "attack_ids": [
+        "T1027",
+        "T1195",
+        "T1562.001"
+      ],
+      "references": [
+        {
+          "source": "Google Threat Intelligence Group",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai"
+        }
+      ],
+      "llminjection_actor": "ACTOR-TEAMPCP",
+      "matched_label": "\"TeamPCP\"",
+      "score": 80,
+      "has_primary_reference": true
+    },
+    {
+      "name": "APT42",
+      "akas": "Charming Kitten, Mint Sandstorm, TA453, Yellow Garuda (Iran, IRGC); CALANQUE ION (GTIG’s Sep 2026 designation)",
+      "table": "main",
+      "reported": "Nov 2025 (updated Sep 2026)",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1213",
+        "T1566",
+        "T1587.004",
+        "T1591"
+      ],
+      "references": [
+        {
+          "source": "Google Threat Intelligence Group",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/threat-actor-usage-of-ai-tools"
+        },
+        {
+          "source": "Google Threat Intelligence Group",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai"
+        }
+      ],
+      "llminjection_actor": "ACTOR-APT42",
+      "matched_label": "APT42",
+      "score": 75,
+      "has_primary_reference": true
+    },
+    {
+      "name": "APT43",
+      "akas": "Lazarus, Emerald Sleet, Velvet Chollima, Kimsuky, TA406, Thallium",
+      "table": "main",
+      "reported": "Feb 2024",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1566",
+        "T1588",
+        "T1588.006",
+        "T1592"
+      ],
+      "references": [
+        {
+          "source": "Microsoft",
+          "url": "https://www.microsoft.com/en-us/security/blog/2024/02/14/staying-ahead-of-threat-actors-in-the-age-of-ai/"
+        },
+        {
+          "source": "Mandiant",
+          "url": "https://www.mandiant.com/resources/blog/threat-actors-generative-ai-limited"
+        },
+        {
+          "source": "Microsoft",
+          "url": "https://www.microsoft.com/en-us/security/blog/2026/03/06/ai-as-tradecraft-how-threat-actors-operationalize-ai/"
+        }
+      ],
+      "llminjection_actor": "ACTOR-KIMSUKY",
+      "matched_label": "Kimsuky",
+      "score": 70,
+      "has_primary_reference": true
+    },
+    {
+      "name": "GTG-1002",
+      "akas": "Chinese state-sponsored (Anthropic designation); MITRE ATT&CK Campaign C0062",
+      "table": "main",
+      "reported": "Nov 2025",
+      "activity": "Sep 2025",
+      "attack_ids": [
+        "T1567",
+        "T1587",
+        "T1588.006",
+        "T1595"
+      ],
+      "references": [
+        {
+          "source": "Anthropic",
+          "url": "https://www.anthropic.com/news/disrupting-AI-espionage"
+        }
+      ],
+      "llminjection_actor": "ACTOR-GTG-1002",
+      "matched_label": "GTG-1002",
+      "score": 65,
+      "has_primary_reference": true
+    }
+  ],
+  "sources_not_held": [
+    {
+      "url": "https://aws.amazon.com/blogs/security/",
+      "publisher": "Amazon",
+      "title": "Amazon",
+      "published": "2025-08-01",
+      "primary": true
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/security/ai-augmented-threat-actor-accesses-fortigate-devices-at-scale/",
+      "publisher": "Amazon",
+      "title": "Amazon — AI-augmented threat actor accesses FortiGate devices at scale",
+      "published": "2026-02-01",
+      "primary": true
+    },
+    {
+      "url": "https://www-cdn.anthropic.com/b2a76c6f6992465c09a6f2fce282f6c0cea8c200.pdf",
+      "publisher": "Anthropic",
+      "title": "Anthropic – Threat Intelligence Report: August 2025 (PDF)",
+      "published": "2025-08-01",
+      "primary": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/detecting-countering-misuse-aug-2025",
+      "publisher": "Anthropic",
+      "title": "Anthropic – Detecting and countering misuse of AI: August 2025",
+      "published": "2025-08-01",
+      "primary": true
+    },
+    {
+      "url": "https://www.anthropic.com/threat-intelligence-report-september-2026",
+      "publisher": "Anthropic",
+      "title": "Anthropic – Detecting and countering misuse of AI: September 2026",
+      "published": "2026-09-01",
+      "primary": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/AI-enabled-cyber-threats-mitre-attack",
+      "publisher": "anthropic.com",
+      "title": "",
+      "primary": true
+    },
+    {
+      "url": "https://www.bitdefender.com/en-us/blog/businessinsights/silkparasite-tracking-china-nexus-apt-across-central-asia",
+      "publisher": "bitdefender.com",
+      "title": "Bitdefender — SilkParasite: Tracking a China-Nexus APT Across Central Asia",
+      "published": "2026-08-01",
+      "primary": true
+    },
+    {
+      "url": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES02&VLCODE=CIAD-2026-0058",
+      "publisher": "cert-in.org.in",
+      "title": "CERT-In – CIAD-2026-0058: Escalation of AI-Driven Attacks on BFSI Entities by Threat Actor \"CRAFTY FALCON\"",
+      "published": "2026-11-01",
+      "primary": true
+    },
+    {
+      "url": "https://research.checkpoint.com/2025/funksec-alleged-top-ransomware-group-powered-by-ai/",
+      "publisher": "Check Point",
+      "title": "CheckPoint Research",
+      "published": "2025-01-01",
+      "primary": true
+    },
+    {
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-204a",
+      "publisher": "cisa.gov",
+      "title": "CISA AA26-204A — Russian State-Supported Cyber Actors Conduct Phishing Campaign Targeting Users of Zimbra Collaboration Suite",
+      "published": "2026-07-01",
+      "primary": true
+    },
+    {
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-231a",
+      "publisher": "cisa.gov",
+      "title": "CISA — AA26-231A: Defending Against an Active Threat to Siemens S7 Series PLCs",
+      "published": "2026-08-01",
+      "primary": true
+    },
+    {
+      "url": "https://www.crowdstrike.com/en-us/blog/crowdstrike-2025-threat-hunting-report-ai-weapon-target/",
+      "publisher": "CrowdStrike",
+      "title": "CrowdStrike",
+      "published": "2025-08-01",
+      "primary": true
+    },
+    {
+      "url": "https://www.crowdstrike.com/en-us/blog/crowdstrike-2026-global-threat-report-findings/",
+      "publisher": "CrowdStrike",
+      "title": "CrowdStrike – 2026 Global Threat Report",
+      "published": "2026-02-01",
+      "primary": true
+    },
+    {
+      "url": "https://www.crowdstrike.com/en-us/blog/crowdstrike-uncovers-new-agentic-ai-campaigns/",
+      "publisher": "CrowdStrike",
+      "title": "CrowdStrike – CrowdStrike Uncovers New Agentic AI Campaigns",
+      "published": "2026-10-01",
+      "primary": true
+    },
+    {
+      "url": "https://www.crowdstrike.com/en-us/blog/unknown-threat-actor-uses-artex-to-target-south-korean-finance/",
+      "publisher": "CrowdStrike",
+      "title": "CrowdStrike – Unknown Threat Actor Uses AI-Driven ARTEX to Target South Korean Finance",
+      "published": "2026-10-01",
+      "primary": true
+    },
+    {
+      "url": "https://www.crowdstrike.com/en-us/blog/vapor-panda-uses-artex-to-scale-global-campaign/",
+      "publisher": "CrowdStrike",
+      "title": "CrowdStrike – VAPOR PANDA Uses AI-Driven ARTEX to Scale a Global Espionage Campaign",
+      "published": "2026-10-01",
+      "primary": true
+    },
+    {
+      "url": "https://www.ic3.gov/Media/Y2022/PSA220628",
+      "publisher": "FBI IC3",
+      "title": "Report (FBI IC3)",
+      "published": "2022-06-01",
+      "primary": true
+    },
+    {
+      "url": "https://www.ic3.gov/PSA/2025/PSA251219",
+      "publisher": "FBI IC3",
+      "title": "FBI/IC3 PSA251219",
+      "published": "2025-12-01",
+      "primary": true
+    },
+    {
+      "url": "https://www.ic3.gov/PSA/2026/PSA260720",
+      "publisher": "FBI IC3",
+      "title": "FBI IC3 — FBI Warns of Scammers Impersonating the IC3 (I-072026-PSA)",
+      "published": "2026-07-01",
+      "primary": true
+    },
+    {
+      "url": "https://gambit.security/blog-posts/a-single-operator-two-ai-platforms-nine-government-agencies-the-full-technical-report",
+      "publisher": "gambit.security",
+      "title": "Gambit Security — A Single Operator, Two AI Platforms, Nine Government Agencies",
+      "published": "2026-04-01",
+      "primary": true
+    },
+    {
+      "url": "https://gambit.security/blog-posts/aurora-ransomware-targets-esxi-abuses-cursor-agent-for-exploitation",
+      "publisher": "gambit.security",
+      "title": "Gambit Security – Aurora ransomware targets ESXi, abuses Cursor Agent for exploitation",
+      "published": "2026-08-01",
+      "primary": true
+    },
+    {
+      "url": "https://gambit.security/blog-posts/autonomous-ai-agents-online-retailers-25-a-company",
+      "publisher": "gambit.security",
+      "title": "Gambit Security – AI Agents Are Hacking Online Retailers for $25 a Company",
+      "published": "2026-09-01",
+      "primary": true
+    },
+    {
+      "url": "https://cloud.google.com/blog/topics/threat-intelligence/ai-vulnerability-exploitation-initial-access",
+      "publisher": "Google Threat Intelligence Group",
+      "title": "GTIG – AI Threat Tracker: Adversaries Leverage AI for Vulnerability Exploitation",
+      "published": "2026-05-01",
+      "primary": true
+    },
+    {
+      "url": "https://cloud.google.com/blog/topics/threat-intelligence/artex-and-friends-enter-agentic-offensive-frameworks",
+      "publisher": "Google Threat Intelligence Group",
+      "title": "Google Cloud / GTIG – ARTEX and Friends: Enter Agentic Offensive Frameworks",
+      "published": "2026-10-01",
+      "primary": true
+    },
+    {
+      "url": "https://cloud.google.com/blog/topics/threat-intelligence/unc1069-targets-cryptocurrency-ai-social-engineering",
+      "publisher": "Google Threat Intelligence Group",
+      "title": "GTIG – UNC1069",
+      "published": "2025-11-01",
+      "primary": true
+    },
+    {
+      "url": "https://www.greynoise.io/blog/ai-orchestrated-campaign-against-papercut-ng-mf",
+      "publisher": "greynoise.io",
+      "title": "GreyNoise – Agents Gone Wild: An AI-Orchestrated Global Campaign Against PaperCut NG/MF",
+      "published": "2026-09-01",
+      "primary": true
+    },
+    {
+      "url": "https://www.group-ib.com/blog/one-adversary-fraud-network/",
+      "publisher": "group-ib.com",
+      "title": "Group-IB – One Adversary: Fraud Is a Network, Not a Payment",
+      "published": "2026-08-01",
+      "primary": true
+    },
+    {
+      "url": "https://huggingface.co/blog/security-incident-july-2026",
+      "publisher": "huggingface.co",
+      "title": "Hugging Face — Security incident, July 2026",
+      "published": "2026-07-01",
+      "primary": true
+    },
+    {
+      "url": "https://hunt.io/blog/chinese-operators-claude-deepseek-government-intrusion",
+      "publisher": "Hunt.io",
+      "title": "Hunt.io – Chinese Operators, Claude, DeepSeek Government Intrusion",
+      "published": "2026-07-01",
+      "primary": true
+    },
+    {
+      "url": "https://www.huntress.com/blog/fakeagent-claude-desktop-malvertising-ends-in-dotnet-rat",
+      "publisher": "Huntress",
+      "title": "Huntress — Inside FakeAgent: How a Claude Desktop Malvertising Campaign Hit 29 Organizations with SectopRAT",
+      "published": "2026-07-01",
+      "primary": true
+    },
+    {
+      "url": "https://www.ic3.gov/Media/Y2023/PSA230605",
+      "publisher": "ic3.gov",
+      "title": "",
+      "primary": true
+    },
+    {
+      "url": "https://securelist.com/armored-likho-apt-with-busysnake-stealer/120292/",
+      "publisher": "Kaspersky",
+      "title": "Kaspersky/Securelist – Armored Likho's BusySnake Stealer",
+      "published": "2026-07-01",
+      "primary": true
+    },
+    {
+      "url": "https://securelist.com/revengehotels-attacks-with-ai-and-venomrat-across-latin-america/117493/",
+      "publisher": "Kaspersky",
+      "title": "Kaspersky/Securelist – RevengeHotels with AI and VenomRAT",
+      "published": "2025-09-01",
+      "primary": true
+    },
+    {
+      "url": "https://securelist.com/spam-phishing-report-2023/112015/",
+      "publisher": "Kaspersky",
+      "title": "Source",
+      "published": "2024-03-01",
+      "primary": true
+    },
+    {
+      "url": "https://www.mandiant.com/resources/blog/threat-actors-generative-ai-limited",
+      "publisher": "Mandiant",
+      "title": "Mandiant - Threat Actors are Interested in Generative AI, but Use Remains Limited",
+      "published": "2023-08-01",
+      "primary": true
+    },
+    {
+      "url": "https://blogs.microsoft.com/on-the-issues/2026/09/22/disrupting-eviltokens-the-ai-chatbot-built-for-cybercrime/",
+      "publisher": "Microsoft",
+      "title": "Microsoft – Disrupting EvilTokens: The AI Chatbot Built for Cybercrime",
+      "published": "2026-09-01",
+      "primary": true
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/security/blog/2021/07/29/bazacall-phony-call-centers-lead-to-exfiltration-and-ransomware/",
+      "publisher": "Microsoft",
+      "title": "Bazacall",
+      "published": "2024-03-01",
+      "primary": true
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/security/blog/2024/02/14/staying-ahead-of-threat-actors-in-the-age-of-ai/",
+      "publisher": "Microsoft",
+      "title": "Microsoft",
+      "published": "2024-02-01",
+      "primary": true
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/03/06/ai-as-tradecraft-how-threat-actors-operationalize-ai/",
+      "publisher": "Microsoft",
+      "title": "Microsoft – AI as tradecraft: How threat actors operationalize AI",
+      "published": "2024-02-01",
+      "primary": true
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/04/02/threat-actor-abuse-of-ai-accelerates-from-tool-to-cyberattack-surface/",
+      "publisher": "Microsoft",
+      "title": "Microsoft – Threat actor abuse of AI accelerates from tool to cyberattack surface",
+      "published": "2026-04-01",
+      "primary": true
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/07/31/captivecrunch-midnight-blizzard-targets-travelers-worldwide-for-malware-delivery-and-credential-theft/",
+      "publisher": "Microsoft",
+      "title": "Microsoft – CaptiveCrunch: Midnight Blizzard targets travelers worldwide",
+      "published": "2026-07-01",
+      "primary": true
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/09/25/storm-3168-agentic-driven-cloud-attacks-using-compromised-service-principals/",
+      "publisher": "Microsoft",
+      "title": "Microsoft – Storm-3168",
+      "published": "2026-07-01",
+      "primary": true
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/",
+      "publisher": "Microsoft",
+      "title": "Microsoft – AI-driven, large-scale nation-state campaign using ARTEX enables supply chain compromise",
+      "published": "2026-10-01",
+      "primary": true
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/10/29/tracking-ai-adoption-in-north-korean-threat-actor-tradecraft/",
+      "publisher": "Microsoft",
+      "title": "Microsoft – Tracking AI adoption in North Korean threat actor tradecraft",
+      "published": "2026-03-01",
+      "primary": true
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/security/business/security-insider/wp-content/uploads/2024/02/cyber-signals-issue-6.pdf",
+      "publisher": "microsoft.com",
+      "title": "",
+      "primary": true
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/security/security-insider/threat-landscape/microsoft-digital-defense-report-2025",
+      "publisher": "microsoft.com",
+      "title": "",
+      "primary": true
+    },
+    {
+      "url": "https://www.ncsc.gov.uk/report/impact-of-ai-on-cyber-threat",
+      "publisher": "NCSC UK",
+      "title": "Source",
+      "published": "2024-01-01",
+      "primary": true
+    },
+    {
+      "url": "https://www.ncsc.gov.uk/report/impact-of-ai-on-cyber-threat#section_5",
+      "publisher": "ncsc.gov.uk",
+      "title": "",
+      "primary": true
+    },
+    {
+      "url": "https://cdn.openai.com/threat-intelligence-reports/influence-and-cyber-operations-an-update_October-2024.pdf",
+      "publisher": "OpenAI",
+      "title": "OpenAI – Influence and cyber operations: an update",
+      "published": "2024-10-01",
+      "primary": true
+    },
+    {
+      "url": "https://openai.com/global-affairs/disrupting-malicious-uses-of-ai-october-2025/",
+      "publisher": "OpenAI",
+      "title": "OpenAI – Disrupting malicious uses of AI: October 2025",
+      "published": "2025-10-01",
+      "primary": true
+    },
+    {
+      "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-criminal-scam-operation/",
+      "publisher": "OpenAI",
+      "title": "OpenAI — Disrupting a Criminal Scam Operation",
+      "published": "2026-08-01",
+      "primary": true
+    },
+    {
+      "url": "https://openai.com/blog/disrupting-malicious-uses-of-ai-by-state-affiliated-threat-actors",
+      "publisher": "openai.com",
+      "title": "",
+      "primary": true
+    },
+    {
+      "url": "https://openai.com/index/disrupting-malicious-ai-uses/",
+      "publisher": "openai.com",
+      "title": "",
+      "primary": true
+    },
+    {
+      "url": "https://unit42.paloaltonetworks.com/ai-assisted-cyber-attack-inside-a-unit-42-investigation/",
+      "publisher": "Palo Alto Networks Unit 42",
+      "title": "Unit 42 – An AI-Assisted Cyber Attack: Inside a Unit 42 Investigation",
+      "published": "2026-09-01",
+      "primary": true
+    },
+    {
+      "url": "https://unit42.paloaltonetworks.com/ai-assisted-cybercrime-analysis/",
+      "publisher": "Palo Alto Networks Unit 42",
+      "title": "Unit 42 – Next Exploit Opportunities: How a Threat Actor Used AI to Help Plan and Execute Multiple Types of Cybercrime Activities",
+      "published": "2026-10-01",
+      "primary": true
+    },
+    {
+      "url": "https://unit42.paloaltonetworks.com/autonomous-ai-cyber-attack-campaign/",
+      "publisher": "Palo Alto Networks Unit 42",
+      "title": "Unit 42 – Autonomous AI Cyber Attack Campaign",
+      "published": "2026-07-01",
+      "primary": true
+    },
+    {
+      "url": "https://unit42.paloaltonetworks.com/north-korean-synthetic-identity-creation/",
+      "publisher": "Palo Alto Networks Unit 42",
+      "title": "Unit 42",
+      "published": "2025-08-01",
+      "primary": true
+    },
+    {
+      "url": "https://unit42.paloaltonetworks.com/tuxbot-v3-evolution-iot-botnet/",
+      "publisher": "Palo Alto Networks Unit 42",
+      "title": "Unit 42 – TuxBot v3: Inside an IoT Botnet Framework With LLM-Assisted Code",
+      "published": "2026-07-01",
+      "primary": true
+    },
+    {
+      "url": "https://www.proofpoint.com/us/blog/threat-insight/cybercriminals-abuse-ai-website-creation-app-phishing",
+      "publisher": "Proofpoint",
+      "title": "Proofpoint – Cybercriminals Abuse AI Website Creation App For Phishing",
+      "published": "2025-08-01",
+      "primary": true
+    },
+    {
+      "url": "https://www.proofpoint.com/us/blog/threat-insight/security-brief-ta547-targets-german-organizations-rhadamanthys-stealer",
+      "publisher": "Proofpoint",
+      "title": "Source",
+      "published": "2024-04-01",
+      "primary": true
+    },
+    {
+      "url": "https://www.recordedfuture.com/blog/tag-217-artex-south-korean-banks",
+      "publisher": "Recorded Future",
+      "title": "Recorded Future",
+      "published": "2026-10-01",
+      "primary": true
+    },
+    {
+      "url": "https://www.resecurity.com/blog/article/cybercriminals-implemented-artificial-intelligence-ai-for-invoice-fraud",
+      "publisher": "Resecurity",
+      "title": "Resecurity",
+      "published": "2024-01-01",
+      "primary": true
+    },
+    {
+      "url": "https://www.sentinelone.com/labs/llms-ransomware-an-operational-accelerator-not-a-revolution/",
+      "publisher": "SentinelOne",
+      "title": "SentinelLABS – LLMs & Ransomware: An Operational Accelerator",
+      "published": "2025-12-01",
+      "primary": true
+    },
+    {
+      "url": "https://slashnext.com/blog/wormgpt-the-generative-ai-tool-cybercriminals-are-using-to-launch-business-email-compromise-attacks/",
+      "publisher": "slashnext.com",
+      "title": "",
+      "primary": true
+    },
+    {
+      "url": "https://socradar.io/blog/cyberxero-ai-iab-ukra",
+      "publisher": "socradar.io",
+      "title": "SOCRadar – CyberXero: An AI-Augmented Initial Access Broker Targeting Ukrainian Critical Infrastructure",
+      "published": "2026-10-01",
+      "primary": true
+    },
+    {
+      "url": "https://socradar.io/blog/inc-gentlemen-ransomware-ai-infrastructure/",
+      "publisher": "socradar.io",
+      "title": "SOCRadar – INC and The Gentlemen Ransomware: Exposed AI Infrastructure",
+      "published": "2026-10-01",
+      "primary": true
+    },
+    {
+      "url": "https://www.sophos.com/en-us/content/sophos-ai-security-2026-report",
+      "publisher": "sophos.com",
+      "title": "Sophos X-Ops — AI Security 2026",
+      "published": "2026-07-01",
+      "primary": true
+    },
+    {
+      "url": "https://www.sygnia.co/threat-reports/inside-an-ai-assisted-cloud-attack/",
+      "publisher": "Sygnia",
+      "title": "Sygnia – Inside an AI-Assisted Cloud Attack",
+      "published": "2026-06-01",
+      "primary": true
+    },
+    {
+      "url": "https://symantec-enterprise-blogs.security.com/threat-intelligence/malware-ai-llm",
+      "publisher": "Symantec",
+      "title": "Symantec",
+      "published": "2024-07-01",
+      "primary": true
+    },
+    {
+      "url": "https://www.sysdig.com/blog/jadepuffer-agentic-ransomware-for-automated-database-extortion",
+      "publisher": "Sysdig",
+      "title": "Sysdig – JADEPUFFER: Agentic ransomware for automated database extortion",
+      "published": "2026-07-01",
+      "primary": true
+    },
+    {
+      "url": "https://documents.trendmicro.com/assets/pdf/2026_H1_APT_Report.pdf",
+      "publisher": "Trend Micro",
+      "title": "Full report PDF",
+      "published": "2026-07-01",
+      "primary": true
+    },
+    {
+      "url": "https://www.trendmicro.com/vinfo/gb/security/news/cybercrime-and-digital-threats/back-to-the-hype-an-update-on-how-cybercriminals-are-using-genai",
+      "publisher": "Trend Micro",
+      "title": "Trend Micro",
+      "published": "2024-05-01",
+      "primary": true
+    },
+    {
+      "url": "https://www.trendmicro.com/vinfo/us/security/news/cybercrime-and-digital-threats/2026-h1-apt-report-how-apts-are-weaponizing-trust-in-the-age-of-ai",
+      "publisher": "Trend Micro",
+      "title": "Trend Micro — 2026 H1 APT Report",
+      "published": "2026-07-01",
+      "primary": true
+    },
+    {
+      "url": "https://www.zscaler.com/blogs/security-research/inside-global-ai-assisted-hacking-campaign",
+      "publisher": "zscaler.com",
+      "title": "Zscaler ThreatLabz – Inside a Global AI-Assisted Hacking Campaign",
+      "published": "2026-10-01",
+      "primary": true
+    },
+    {
+      "url": "https://asantecloud.com/wp-content/uploads/2024/02/GlobalThreatReport2024_Asante.pdf",
+      "publisher": "asantecloud.com",
+      "title": "Source",
+      "published": "2024-02-01",
+      "primary": false
+    },
+    {
+      "url": "https://blackpointcyber.com/blog/death-by-a-thousand-papercuts-ai-driven-exploitation-at-scale/",
+      "publisher": "blackpointcyber.com",
+      "title": "Blackpoint Cyber – Death by a Thousand PaperCuts",
+      "published": "2026-09-01",
+      "primary": false
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/69944dd945f20ca4a27a7c47/69d8bb5aea59e31efb3b8a7f_Tech_Report_ai_breach_mex_gov.pdf",
+      "publisher": "cdn.prod.website-files.com",
+      "title": "Technical report PDF",
+      "published": "2026-04-01",
+      "primary": false
+    },
+    {
+      "url": "https://www.cnbc.com/2023/11/28/ai-like-chatgpt-is-creating-huge-increase-in-malicious-phishing-email.html",
+      "publisher": "CNBC",
+      "title": "Source",
+      "published": "2023-10-01",
+      "primary": false
+    },
+    {
+      "url": "https://cyberandramen.net/2026/02/21/llms-in-the-kill-chain-inside-a-custom-mcp-targeting-fortigate-devices-across-continents/",
+      "publisher": "cyberandramen.net",
+      "title": "Cyber and Ramen — LLMs in the Kill Chain",
+      "published": "2026-02-01",
+      "primary": false
+    },
+    {
+      "url": "https://dreamgroup.com/blog/inside-a-multi-agent-ai-framework-used-to-compromise-government-entities-in-asia",
+      "publisher": "dreamgroup.com",
+      "title": "Dream Security – Inside a Multi-Agent AI Framework Used to Compromise Government Entities in Asia",
+      "published": "2026-08-01",
+      "primary": false
+    },
+    {
+      "url": "https://www.euronews.com/my-europe/2026/09/18/greece-police-bust-gang-using-ai-to-clone-relatives-voices-for-cash",
+      "publisher": "euronews.com",
+      "title": "Euronews – Greece police bust gang using AI to clone relatives' voices for cash",
+      "published": "2026-09-01",
+      "primary": false
+    },
+    {
+      "url": "https://focustaiwan.tw/society/202609020019",
+      "publisher": "focustaiwan.tw",
+      "title": "Focus Taiwan – 57 indicted over NT$900 million voice-cloning romance scam",
+      "published": "2026-09-01",
+      "primary": false
+    },
+    {
+      "url": "https://hongkongfp.com/2023/08/25/in-first-hong-kong-police-arrest-6-over-finance-scams-involving-deepfake-technology/",
+      "publisher": "hongkongfp.com",
+      "title": "Hong Kong Free Press",
+      "published": "2023-08-01",
+      "primary": false
+    },
+    {
+      "url": "https://www.ilpost.it/2026/09/25/fideuram-truffa-whatsapp-ai/",
+      "publisher": "ilpost.it",
+      "title": "Il Post – Fideuram scam",
+      "published": "2026-09-01",
+      "primary": false
+    },
+    {
+      "url": "https://www.infosecurity-magazine.com/news/tmobile-breached-chinese/",
+      "publisher": "Infosecurity Magazine",
+      "title": "InfoSecurity Magazine",
+      "published": "2024-11-01",
+      "primary": false
+    },
+    {
+      "url": "https://www.withsecure.com/en/resources-hub/w-labs/greyvibe/",
+      "publisher": "ithsecure.com",
+      "title": "WithSecure Labs – GREYVIBE",
+      "published": "2026-05-01",
+      "primary": false
+    },
+    {
+      "url": "https://jfrog.com/blog/data-scientists-targeted-by-malicious-hugging-face-ml-models-with-silent-backdoor/",
+      "publisher": "JFrog",
+      "title": "Source",
+      "published": "2024-02-01",
+      "primary": false
+    },
+    {
+      "url": "https://www.psni.police.uk/latest-news/warning-against-fraud-after-victim-loses-ps250000-ards-and-north-down-online-criminals",
+      "publisher": "psni.police.uk",
+      "title": "PSNI – Warning against fraud after victim loses £250,000 in Ards and North Down",
+      "published": "2026-09-01",
+      "primary": false
+    },
+    {
+      "url": "https://securityaffairs.com/195474/ai/claude-code-and-deepseek-powered-chinese-cyber-espionage-campaign.html",
+      "publisher": "securityaffairs.com",
+      "title": "SecurityAffairs coverage",
+      "published": "2026-07-01",
+      "primary": false
+    },
+    {
+      "url": "https://www.securityweek.com/japan-dismantles-first-north-korean-laptop-farm-as-us-and-allies-detail-wider-scheme/",
+      "publisher": "securityweek.com",
+      "title": "SecurityWeek – Japan Dismantles First North Korean Laptop Farm",
+      "published": "2025-08-01",
+      "primary": false
+    },
+    {
+      "url": "https://www.wsj.com/politics/national-security/t-mobile-hacked-in-massive-chinese-breach-of-telecom-networks-4b2d7f92",
+      "publisher": "sj.com",
+      "title": "T-Mobile Hacked in Massive Chinese Breach of Telecom Networks - Wall Street Journal",
+      "published": "2024-11-01",
+      "primary": false
+    },
+    {
+      "url": "https://www.scmp.com/tech/tech-trends/article/3246612/chatgpt-aided-ransomware-china-results-four-arrests-ai-raises-cybersecurity-concerns",
+      "publisher": "South China Morning Post",
+      "title": "South China Post",
+      "published": "2023-12-01",
+      "primary": false
+    },
+    {
+      "url": "https://www.helpnetsecurity.com/2026/07/24/laundry-bear-zimbra-vulnerability-cve-2025-66376/",
+      "publisher": "Symantec",
+      "title": "CVE-2025-66376",
+      "published": "2026-07-01",
+      "primary": false
+    },
+    {
+      "url": "https://thehackernews.com/2026/07/attacker-uses-suspected-ai-generated.html",
+      "publisher": "The Hacker News",
+      "title": "The Hacker News (reporting Huntress) – Attacker Uses Suspected AI-Generated PowerShell to Map AD",
+      "published": "2026-07-01",
+      "primary": false
+    },
+    {
+      "url": "https://www.theregister.com/research/2026/07/14/the-bots-are-alive-jailbroken-gemini-spun-up-new-c2-server-for-russian-fraudster-in-just-6-minutes/5270131",
+      "publisher": "The Register",
+      "title": "The Register – 'The bots are alive!' Jailbroken Gemini spun up new C2 server for Russian fraudster in just 6 minutes",
+      "published": "2026-07-01",
+      "primary": false
+    },
+    {
+      "url": "https://www.tripwire.com/state-of-security/cybersecurity-age-ai-exploring-ai-generated-cyber-attacks",
+      "publisher": "tripwire.com",
+      "title": "",
+      "primary": false
+    },
+    {
+      "url": "https://mp.weixin.qq.com/s/wR7IgBmEuqqGQ9SCAV39Uw",
+      "publisher": "WeChat (Chinese vendor)",
+      "title": "Source",
+      "published": "2024-01-01",
+      "primary": false
+    }
+  ]
+}
