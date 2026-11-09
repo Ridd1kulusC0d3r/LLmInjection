@@ -112,7 +112,7 @@ LLMInjection is **not a prompt dump**. Every meaningful claim carries a source g
 
 | Layer | What it holds | Start here |
 |---|---|---|
-| **Actors and campaigns** | State and criminal operators using AI, with vendor tracking labels kept as published, and a queue of 110 candidates awaiting primary-source review | [`data/actors.json`](data/actors.json) · [Actor tracker](docs/ACTOR-TRACKER.md) |
+| **Actors and campaigns** | State and criminal operators using AI, with vendor tracking labels kept as published, and a queue of candidates awaiting primary-source review | [`data/actors.json`](data/actors.json) · [Actor tracker](docs/ACTOR-TRACKER.md) |
 | **AI × Cyber OT / ICS** | Industrial intelligence sources, evidence boundaries, hypothetical scenarios and offline detection-dataset catalog | [AI × Cyber OT landscape](docs/CYBER-OT-LANDSCAPE.md) |
 | **Threat landscape** | Cited metrics, domains and open research leads for 2026 | [Landscape 2026](docs/THREAT-LANDSCAPE-2026.md) |
 | **Brazil and Latin America** | AI-assisted activity against regional targets, in Portuguese, separating what reports claim from what they do not | [Panorama](docs/pt-BR/PANORAMA-BRASIL-LATAM.md) |

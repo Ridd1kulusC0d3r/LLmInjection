@@ -60,6 +60,11 @@ class AiActorTrackerTests(unittest.TestCase):
         self.assertEqual(item["url"], "https://unit42.paloaltonetworks.com/new-cluster")
         self.assertNotIn("x", item["summary"].split())  # the tracker's description is never copied
 
+    def test_queued_urls_do_not_count_as_held(self):
+        held = t.our_urls()
+        queued = {t.norm_url(i["url"]) for i in load_data("research-queue")["items"] if i["kind"] == "source-candidate" and i["status"] == "candidate"}
+        self.assertFalse(queued & held)
+
     def test_committed_crosswalk_and_queue_are_consistent(self):
         data = json.loads(t.OUT.read_text(encoding="utf-8"))
         self.assertEqual(data["source"]["license"], "none declared")

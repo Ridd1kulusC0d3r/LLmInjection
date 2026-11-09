@@ -143,9 +143,11 @@ def match_actor(entry: dict[str, Any], ours: dict[str, str]) -> tuple[str, str] 
 
 
 def our_urls() -> set[str]:
-    """Every URL that appears anywhere in the datasets."""
+    """Every URL that appears in the datasets; queues hold leads, not holdings, so they are skipped."""
     found = set()
     for path in DATA.glob("*.json"):
+        if "queue" in path.name:
+            continue
         found |= {norm_url(u) for u in URL.findall(path.read_text(encoding="utf-8"))}
     return found
 
