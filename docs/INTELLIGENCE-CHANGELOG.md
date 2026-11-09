@@ -2,6 +2,20 @@
 
 This changelog records material changes to attribution, confidence, external mappings and structured intelligence. Ordinary prose edits do not belong here.
 
+## 2026-11-09 — First promotions from the adversary-use pipeline
+
+### Added
+
+- Actors: JADEPUFFER (Microsoft's Storm-3168 recorded as an alias because Microsoft links the two), Coral Sleet, Jasper Sleet, Onyx Sleet and APT27, each with a campaign and the techniques its report describes.
+- Incidents: PROMPTSPY (Android backdoor driving the UI through gemini-2.5-flash-lite), a criminal actor's AI-developed 2FA-bypass zero-day, and FakeAgent (a malicious Claude Artifact used as a fake Claude Desktop download page).
+- Five grade-A sources: Sysdig, Microsoft (2), Google Threat Intelligence Group and Huntress. The matching research-queue items are marked `accepted`.
+
+### Confidence notes
+
+- Every record states only what its report says. Microsoft does not confirm that an AI agent ran Storm-3168's activity; that rests on Sysdig's reporting of JADEPUFFER.
+- APT45, Sapphire Sleet, Pearl Sleet, Diamond Sleet and Emerald Sleet stay in the queue: the reports read so far either do not state a nexus in that section or describe AI use as possible.
+- FakeAgent is linked to no technique: abusing an AI product's user-content hosting as a lure does not fit an existing one.
+
 ## 2026-11-09 — Adversary use of AI: candidate pipeline from a community tracker
 
 ### Added

@@ -12,11 +12,11 @@
   "summary": {
     "entries_main": 141,
     "entries_deepfake": 17,
-    "already_held": 6,
-    "new_main_2025_or_later": 110,
+    "already_held": 9,
+    "new_main_2025_or_later": 107,
     "report_urls": 102,
-    "report_urls_not_held": 97,
-    "report_urls_not_held_primary": 74,
+    "report_urls_not_held": 92,
+    "report_urls_not_held_primary": 69,
     "attack_ids": 78,
     "attack_ids_unknown": 0,
     "attack_ids_retired": 2
@@ -517,30 +517,6 @@
       "has_primary_reference": true
     },
     {
-      "name": "Coral Sleet",
-      "akas": "Storm-1877 (DPRK)",
-      "table": "main",
-      "reported": "Mar 2026",
-      "activity": "Unknown",
-      "attack_ids": [
-        "T1566",
-        "T1587.001"
-      ],
-      "references": [
-        {
-          "source": "Microsoft",
-          "url": "https://www.microsoft.com/en-us/security/blog/2026/03/06/ai-as-tradecraft-how-threat-actors-operationalize-ai/"
-        },
-        {
-          "source": "Microsoft",
-          "url": "https://www.microsoft.com/en-us/security/blog/2026/10/29/tracking-ai-adoption-in-north-korean-threat-actor-tradecraft/"
-        }
-      ],
-      "llminjection_actor": null,
-      "score": 90,
-      "has_primary_reference": true
-    },
-    {
       "name": "Earth Krahang",
       "akas": "Unknown",
       "table": "main",
@@ -586,36 +562,6 @@
         {
           "source": "Trend Micro",
           "url": "https://documents.trendmicro.com/assets/pdf/2026_H1_APT_Report.pdf"
-        }
-      ],
-      "llminjection_actor": null,
-      "score": 90,
-      "has_primary_reference": true
-    },
-    {
-      "name": "JADEPUFFER",
-      "akas": "\"Agentic Threat Actor (ATA)\" (Sysdig); Storm-3168 (Microsoft)",
-      "table": "main",
-      "reported": "Jul 2026",
-      "activity": "Unknown",
-      "attack_ids": [
-        "T1078.004",
-        "T1190",
-        "T1485",
-        "T1486",
-        "T1490",
-        "T1526",
-        "T1552",
-        "T1657"
-      ],
-      "references": [
-        {
-          "source": "Sysdig",
-          "url": "https://www.sysdig.com/blog/jadepuffer-agentic-ransomware-for-automated-database-extortion"
-        },
-        {
-          "source": "Microsoft",
-          "url": "https://www.microsoft.com/en-us/security/blog/2026/09/25/storm-3168-agentic-driven-cloud-attacks-using-compromised-service-principals/"
         }
       ],
       "llminjection_actor": null,
@@ -949,26 +895,6 @@
       ],
       "llminjection_actor": null,
       "score": 85,
-      "has_primary_reference": true
-    },
-    {
-      "name": "APT27",
-      "akas": "Emissary Panda, Iron Tiger, LuckyMouse, Budworm, Bronze Union (PRC)",
-      "table": "main",
-      "reported": "May 2026",
-      "activity": "Unknown",
-      "attack_ids": [
-        "T1583",
-        "T1587.001"
-      ],
-      "references": [
-        {
-          "source": "Google Threat Intelligence Group",
-          "url": "https://cloud.google.com/blog/topics/threat-intelligence/ai-vulnerability-exploitation-initial-access"
-        }
-      ],
-      "llminjection_actor": null,
-      "score": 80,
       "has_primary_reference": true
     },
     {
@@ -3689,6 +3615,62 @@
       "has_primary_reference": false
     },
     {
+      "name": "Coral Sleet",
+      "akas": "Storm-1877 (DPRK)",
+      "table": "main",
+      "reported": "Mar 2026",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1566",
+        "T1587.001"
+      ],
+      "references": [
+        {
+          "source": "Microsoft",
+          "url": "https://www.microsoft.com/en-us/security/blog/2026/03/06/ai-as-tradecraft-how-threat-actors-operationalize-ai/"
+        },
+        {
+          "source": "Microsoft",
+          "url": "https://www.microsoft.com/en-us/security/blog/2026/10/29/tracking-ai-adoption-in-north-korean-threat-actor-tradecraft/"
+        }
+      ],
+      "llminjection_actor": "ACTOR-CORAL-SLEET",
+      "matched_label": "Coral Sleet",
+      "score": 90,
+      "has_primary_reference": true
+    },
+    {
+      "name": "JADEPUFFER",
+      "akas": "\"Agentic Threat Actor (ATA)\" (Sysdig); Storm-3168 (Microsoft)",
+      "table": "main",
+      "reported": "Jul 2026",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1078.004",
+        "T1190",
+        "T1485",
+        "T1486",
+        "T1490",
+        "T1526",
+        "T1552",
+        "T1657"
+      ],
+      "references": [
+        {
+          "source": "Sysdig",
+          "url": "https://www.sysdig.com/blog/jadepuffer-agentic-ransomware-for-automated-database-extortion"
+        },
+        {
+          "source": "Microsoft",
+          "url": "https://www.microsoft.com/en-us/security/blog/2026/09/25/storm-3168-agentic-driven-cloud-attacks-using-compromised-service-principals/"
+        }
+      ],
+      "llminjection_actor": "ACTOR-JADEPUFFER",
+      "matched_label": "JADEPUFFER",
+      "score": 90,
+      "has_primary_reference": true
+    },
+    {
       "name": "Fancy Bear",
       "akas": "Forest Blizzard, APT28, Strontium",
       "table": "main",
@@ -3716,6 +3698,27 @@
       "llminjection_actor": "ACTOR-APT28",
       "matched_label": "APT28",
       "score": 85,
+      "has_primary_reference": true
+    },
+    {
+      "name": "APT27",
+      "akas": "Emissary Panda, Iron Tiger, LuckyMouse, Budworm, Bronze Union (PRC)",
+      "table": "main",
+      "reported": "May 2026",
+      "activity": "Unknown",
+      "attack_ids": [
+        "T1583",
+        "T1587.001"
+      ],
+      "references": [
+        {
+          "source": "Google Threat Intelligence Group",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/ai-vulnerability-exploitation-initial-access"
+        }
+      ],
+      "llminjection_actor": "ACTOR-APT27",
+      "matched_label": "APT27",
+      "score": 80,
       "has_primary_reference": true
     },
     {
@@ -3999,13 +4002,6 @@
       "primary": true
     },
     {
-      "url": "https://cloud.google.com/blog/topics/threat-intelligence/ai-vulnerability-exploitation-initial-access",
-      "publisher": "Google Threat Intelligence Group",
-      "title": "GTIG – AI Threat Tracker: Adversaries Leverage AI for Vulnerability Exploitation",
-      "published": "2026-05-01",
-      "primary": true
-    },
-    {
       "url": "https://cloud.google.com/blog/topics/threat-intelligence/artex-and-friends-enter-agentic-offensive-frameworks",
       "publisher": "Google Threat Intelligence Group",
       "title": "Google Cloud / GTIG – ARTEX and Friends: Enter Agentic Offensive Frameworks",
@@ -4044,13 +4040,6 @@
       "url": "https://hunt.io/blog/chinese-operators-claude-deepseek-government-intrusion",
       "publisher": "Hunt.io",
       "title": "Hunt.io – Chinese Operators, Claude, DeepSeek Government Intrusion",
-      "published": "2026-07-01",
-      "primary": true
-    },
-    {
-      "url": "https://www.huntress.com/blog/fakeagent-claude-desktop-malvertising-ends-in-dotnet-rat",
-      "publisher": "Huntress",
-      "title": "Huntress — Inside FakeAgent: How a Claude Desktop Malvertising Campaign Hit 29 Organizations with SectopRAT",
       "published": "2026-07-01",
       "primary": true
     },
@@ -4131,24 +4120,10 @@
       "primary": true
     },
     {
-      "url": "https://www.microsoft.com/en-us/security/blog/2026/09/25/storm-3168-agentic-driven-cloud-attacks-using-compromised-service-principals/",
-      "publisher": "Microsoft",
-      "title": "Microsoft – Storm-3168",
-      "published": "2026-07-01",
-      "primary": true
-    },
-    {
       "url": "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/",
       "publisher": "Microsoft",
       "title": "Microsoft – AI-driven, large-scale nation-state campaign using ARTEX enables supply chain compromise",
       "published": "2026-10-01",
-      "primary": true
-    },
-    {
-      "url": "https://www.microsoft.com/en-us/security/blog/2026/10/29/tracking-ai-adoption-in-north-korean-threat-actor-tradecraft/",
-      "publisher": "Microsoft",
-      "title": "Microsoft – Tracking AI adoption in North Korean threat actor tradecraft",
-      "published": "2026-03-01",
       "primary": true
     },
     {
@@ -4318,13 +4293,6 @@
       "publisher": "Symantec",
       "title": "Symantec",
       "published": "2024-07-01",
-      "primary": true
-    },
-    {
-      "url": "https://www.sysdig.com/blog/jadepuffer-agentic-ransomware-for-automated-database-extortion",
-      "publisher": "Sysdig",
-      "title": "Sysdig – JADEPUFFER: Agentic ransomware for automated database extortion",
-      "published": "2026-07-01",
       "primary": true
     },
     {

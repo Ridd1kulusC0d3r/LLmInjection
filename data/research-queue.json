@@ -1656,7 +1656,7 @@
     },
     {
       "id": "RQ-AIT-ACTOR-CORAL-SLEET",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -1674,8 +1674,8 @@
         "Coral Sleet"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted to ACTOR-CORAL-SLEET",
+        "notes": "Primary report read on 2026-11-09; only what it states was recorded."
       }
     },
     {
@@ -1728,7 +1728,7 @@
     },
     {
       "id": "RQ-AIT-ACTOR-JADEPUFFER",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -1746,8 +1746,8 @@
         "JADEPUFFER"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted to ACTOR-JADEPUFFER",
+        "notes": "Primary report read on 2026-11-09; only what it states was recorded."
       }
     },
     {
@@ -2016,7 +2016,7 @@
     },
     {
       "id": "RQ-AIT-ACTOR-APT27",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -2034,8 +2034,8 @@
         "APT27"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted to ACTOR-APT27",
+        "notes": "Primary report read on 2026-11-09; only what it states was recorded."
       }
     },
     {
@@ -2784,7 +2784,7 @@
     },
     {
       "id": "RQ-AIT-ACTOR-PROMPTSPY",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -2802,8 +2802,8 @@
         "PROMPTSPY"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted to INCIDENT-PROMPTSPY",
+        "notes": "Primary report read on 2026-11-09; only what it states was recorded."
       }
     },
     {
@@ -3264,7 +3264,7 @@
     },
     {
       "id": "RQ-AIT-ACTOR-UNSUB-AI-DEVELOPED-ZERO-DAY-GTIG",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -3282,8 +3282,8 @@
         "UnSub (AI-developed zero-day) — GTIG"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted to INCIDENT-GTIG-AI-ZERO-DAY",
+        "notes": "Primary report read on 2026-11-09; only what it states was recorded."
       }
     },
     {
@@ -3528,7 +3528,7 @@
     },
     {
       "id": "RQ-AIT-ACTOR-UNSUB-FAKEAGENT-HUNTRESS",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -3546,8 +3546,8 @@
         "UnSub (FakeAgent) — Huntress"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted to INCIDENT-FAKEAGENT",
+        "notes": "Primary report read on 2026-11-09; only what it states was recorded."
       }
     },
     {
@@ -4756,7 +4756,7 @@
     },
     {
       "id": "RQ-AIT-SRC-CB3E3FE616",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -4772,8 +4772,8 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (Google Threat Intelligence Group). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added as SRC-GTIG-AI-TRACKER-2026-05",
+        "notes": "Read and graded A on 2026-11-09."
       }
     },
     {
@@ -4910,7 +4910,7 @@
     },
     {
       "id": "RQ-AIT-SRC-D93AB90930",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -4926,8 +4926,8 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (Huntress). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added as SRC-HUNTRESS-FAKEAGENT",
+        "notes": "Read and graded A on 2026-11-09."
       }
     },
     {
@@ -5174,7 +5174,7 @@
     },
     {
       "id": "RQ-AIT-SRC-E32B5013FC",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -5190,8 +5190,8 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (Microsoft). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added as SRC-MSFT-STORM-3168",
+        "notes": "Read and graded A on 2026-11-09."
       }
     },
     {
@@ -5218,7 +5218,7 @@
     },
     {
       "id": "RQ-AIT-SRC-DAF335D2DD",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -5234,8 +5234,8 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (Microsoft). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added as SRC-MSFT-DPRK-AI-2026-10",
+        "notes": "Read and graded A on 2026-11-09."
       }
     },
     {
@@ -5790,7 +5790,7 @@
     },
     {
       "id": "RQ-AIT-SRC-C01DC54CF1",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -5806,8 +5806,8 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (Sysdig). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added as SRC-SYSDIG-JADEPUFFER",
+        "notes": "Read and graded A on 2026-11-09."
       }
     },
     {

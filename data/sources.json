@@ -557,5 +557,60 @@
     "url": "https://thehackernews.com/2026/09/breeze-comet-executes-hundreds-of.html",
     "published": "2026-09-01",
     "last_verified": "2026-10-07"
+  },
+  {
+    "id": "SRC-SYSDIG-JADEPUFFER",
+    "type": "source",
+    "name": "JADEPUFFER: Agentic ransomware for automated database extortion",
+    "publisher": "Sysdig Threat Research Team",
+    "grade": "A",
+    "role": "threat-report",
+    "url": "https://www.sysdig.com/blog/jadepuffer-agentic-ransomware-for-automated-database-extortion",
+    "published": "2026-07-01",
+    "last_verified": "2026-11-09"
+  },
+  {
+    "id": "SRC-MSFT-STORM-3168",
+    "type": "source",
+    "name": "Storm-3168: Agentic-driven cloud attacks using compromised service principals",
+    "publisher": "Microsoft Threat Intelligence",
+    "grade": "A",
+    "role": "threat-report",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/09/25/storm-3168-agentic-driven-cloud-attacks-using-compromised-service-principals/",
+    "published": "2026-09-25",
+    "last_verified": "2026-11-09"
+  },
+  {
+    "id": "SRC-GTIG-AI-TRACKER-2026-05",
+    "type": "source",
+    "name": "GTIG AI Threat Tracker: Adversaries Leverage AI for Vulnerability Exploitation, Augmented Operations, and Initial Access",
+    "publisher": "Google Threat Intelligence Group",
+    "grade": "A",
+    "role": "threat-report",
+    "url": "https://cloud.google.com/blog/topics/threat-intelligence/ai-vulnerability-exploitation-initial-access",
+    "published": "2026-05-11",
+    "last_verified": "2026-11-09"
+  },
+  {
+    "id": "SRC-HUNTRESS-FAKEAGENT",
+    "type": "source",
+    "name": "Inside FakeAgent: How a Claude Desktop Malvertising Campaign Hit 29 Organizations with SectopRAT",
+    "publisher": "Huntress",
+    "grade": "A",
+    "role": "threat-report",
+    "url": "https://www.huntress.com/blog/fakeagent-claude-desktop-malvertising-ends-in-dotnet-rat",
+    "published": "2026-07-22",
+    "last_verified": "2026-11-09"
+  },
+  {
+    "id": "SRC-MSFT-DPRK-AI-2026-10",
+    "type": "source",
+    "name": "Tracking AI adoption in North Korean threat actor tradecraft",
+    "publisher": "Microsoft Threat Intelligence",
+    "grade": "A",
+    "role": "threat-report",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/10/29/tracking-ai-adoption-in-north-korean-threat-actor-tradecraft/",
+    "published": "2026-10-29",
+    "last_verified": "2026-11-09"
   }
 ]

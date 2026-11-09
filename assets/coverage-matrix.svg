@@ -203,8 +203,8 @@
 <text x="1002" y="415" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#b43c0e">OBSERVED IN THE WILD</text>
 <line x1="40" x2="1364" y1="424" y2="424" stroke="#e0dacb"/>
 <text x="40" y="441" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T013  </tspan>Runtime LLM Command Generation</text>
-<rect x="461.0" y="427" width="34" height="20" fill="#d4804f"/>
-<text x="478.0" y="442" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
+<rect x="461.0" y="427" width="34" height="20" fill="#b43c0e"/>
+<text x="478.0" y="442" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">3</text>
 <rect x="553.0" y="427" width="34" height="20" fill="#e9b394"/>
 <text x="570.0" y="442" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
 <rect x="645.0" y="427" width="34" height="20" fill="#e9b394"/>
@@ -219,8 +219,8 @@
 <text x="1002" y="441" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#b43c0e">OBSERVED IN THE WILD</text>
 <line x1="40" x2="1364" y1="450" y2="450" stroke="#e0dacb"/>
 <text x="40" y="467" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T014  </tspan>AI-Assisted Reconnaissance and Social Engineering</text>
-<rect x="461.0" y="453" width="34" height="20" fill="#d4804f"/>
-<text x="478.0" y="468" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
+<rect x="461.0" y="453" width="34" height="20" fill="#7c2406"/>
+<text x="478.0" y="468" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">4</text>
 <rect x="553.0" y="453" width="34" height="20" fill="#e9b394"/>
 <text x="570.0" y="468" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
 <rect x="645.0" y="453" width="34" height="20" fill="#e9b394"/>
@@ -235,7 +235,7 @@
 <line x1="40" x2="1364" y1="476" y2="476" stroke="#e0dacb"/>
 <text x="40" y="493" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T015  </tspan>Agentic Attack Orchestration</text>
 <rect x="461.0" y="479" width="34" height="20" fill="#7c2406"/>
-<text x="478.0" y="494" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">7</text>
+<text x="478.0" y="494" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">9</text>
 <rect x="553.0" y="479" width="34" height="20" fill="#e9b394"/>
 <text x="570.0" y="494" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
 <rect x="645.0" y="479" width="34" height="20" fill="#d4804f"/>
@@ -371,8 +371,8 @@
 <text x="1002" y="701" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#b43c0e">OBSERVED IN THE WILD</text>
 <line x1="40" x2="1364" y1="710" y2="710" stroke="#e0dacb"/>
 <text x="40" y="727" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T024  </tspan>Exposed or Misconfigured AI Services</text>
-<rect x="461.0" y="713" width="34" height="20" fill="#e9b394"/>
-<text x="478.0" y="728" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
+<rect x="461.0" y="713" width="34" height="20" fill="#d4804f"/>
+<text x="478.0" y="728" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
 <rect x="553.0" y="713" width="34" height="20" fill="#e9b394"/>
 <text x="570.0" y="728" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
 <rect x="645.0" y="713" width="34" height="20" fill="#e9b394"/>
@@ -433,7 +433,7 @@
 <line x1="40" x2="1364" y1="814" y2="814" stroke="#e0dacb"/>
 <text x="40" y="831" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T028  </tspan>AI-Assisted Tooling Development</text>
 <rect x="461.0" y="817" width="34" height="20" fill="#7c2406"/>
-<text x="478.0" y="832" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">4</text>
+<text x="478.0" y="832" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">7</text>
 <rect x="553.0" y="817" width="34" height="20" fill="#e9b394"/>
 <text x="570.0" y="832" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
 <rect x="645.0" y="817" width="34" height="20" fill="#e9b394"/>

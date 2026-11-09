@@ -13,7 +13,7 @@
 
 | Layer | Status |
 |---|---|
-| Evidence | 2 record(s), 1 publisher(s), best grade A, newest 2026 |
+| Evidence | 4 record(s), 2 publisher(s), best grade A, newest 2026 |
 | Safe tests | 1 |
 | Detections | 0 rule file(s), 1 specification(s) |
 | Controls | 1 |
@@ -28,9 +28,11 @@ LLMs accelerate OSINT synthesis, target profiling, translation or social-enginee
 What the repository links to it:
 
 - 2026 · [APT42 Gemini-enabled reconnaissance](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-APT42-GEMINI) (campaign, confirmed)
+- 2026 · [Jasper Sleet AI-built remote-worker personas](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-JASPER-SLEET-AI-PERSONAS) (campaign, high)
+- 2026-09 · [Onyx Sleet AI-generated lures against South Korea](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-ONYX-SLEET-AI-LURES) (campaign, high)
 - 2026 · [UNC2970 Gemini-enabled target profiling](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-UNC2970-GEMINI) (campaign, confirmed)
 
-Actors whose campaigns use it: APT42, UNC2970. Vendor labels are kept as published and never merged without evidence.
+Actors whose campaigns use it: APT42, Jasper Sleet, Onyx Sleet, UNC2970. Vendor labels are kept as published and never merged without evidence.
 
 ## 2. Test it safely
 
@@ -74,7 +76,6 @@ The runner has plan and mock adapters only: it does not call your system. To run
 
 ## 6. Limits of this page
 
-- All the evidence comes from one publisher (Google Threat Intelligence Group). Treat it as one voice until a second source confirms it.
 - 1 of 1 detection(s) are specifications, not rules. They say what to look for, not how to query it. Nothing here has been run against real telemetry.
 - No benchmark maps to it, so there is no public yardstick for how well a defence performs.
 - The tests use benign markers and synthetic data. A pass in a lab is not a security rating for a production system.

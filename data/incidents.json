@@ -395,5 +395,47 @@
     "source_ids": [
       "SRC-MITRE-ATLAS-2026-09"
     ]
+  },
+  {
+    "id": "INCIDENT-PROMPTSPY",
+    "type": "incident",
+    "name": "PROMPTSPY Android backdoor with a Gemini UI agent",
+    "kind": "malware",
+    "status": "observed",
+    "confidence": "confirmed",
+    "date": "2026",
+    "summary": "Google Threat Intelligence Group describes PROMPTSPY, an Android backdoor first identified by ESET, whose GeminiAutomationAgent sends the serialized UI hierarchy to gemini-2.5-flash-lite and executes the returned actions and coordinates as gestures. No nexus is attributed.",
+    "source_ids": [
+      "SRC-GTIG-AI-TRACKER-2026-05"
+    ],
+    "reported": "2026-05-11"
+  },
+  {
+    "id": "INCIDENT-GTIG-AI-ZERO-DAY",
+    "type": "incident",
+    "name": "Criminal actor uses an AI model to develop a 2FA-bypass zero-day",
+    "kind": "intrusion",
+    "status": "observed",
+    "confidence": "high",
+    "date": "2026",
+    "summary": "Google Threat Intelligence Group has high confidence that a criminal actor planning mass exploitation used an AI model, assessed not to be Gemini, to discover and weaponize a 2FA bypass in a popular open-source web administration tool; GTIG cites a hallucinated CVSS score and educational docstrings and says its proactive discovery may have prevented use.",
+    "source_ids": [
+      "SRC-GTIG-AI-TRACKER-2026-05"
+    ],
+    "reported": "2026-05-11"
+  },
+  {
+    "id": "INCIDENT-FAKEAGENT",
+    "type": "incident",
+    "name": "FakeAgent: malicious Claude Artifact as a Claude Desktop download page",
+    "kind": "malware",
+    "status": "observed",
+    "confidence": "confirmed",
+    "date": "2026-07",
+    "summary": "Huntress reports a sponsored Bing result leading to a malicious public Claude Artifact posing as a Claude Desktop download page (about 7,100 views), which redirected to a sideloading chain that delivered SectopRAT to at least 29 organizations on 21 and 22 July 2026. The artifact was removed after it was reported. No actor group is named.",
+    "source_ids": [
+      "SRC-HUNTRESS-FAKEAGENT"
+    ],
+    "reported": "2026-07-22"
   }
 ]

@@ -13,7 +13,7 @@
 
 | Layer | Status |
 |---|---|
-| Evidence | 7 record(s), 5 publisher(s), best grade A, newest 2026 |
+| Evidence | 9 record(s), 7 publisher(s), best grade A, newest 2026 |
 | Safe tests | 1 |
 | Detections | 1 rule file(s), 1 specification(s) |
 | Controls | 2 |
@@ -28,6 +28,8 @@ AI agents autonomously chain multiple cyber tasks with limited human interventio
 What the repository links to it:
 
 - 2026 · [GTG-1002 AI-orchestrated espionage](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-GTG1002-AI-ESPIONAGE) (campaign, confirmed)
+- 2026 · [JADEPUFFER agentic database extortion](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-JADEPUFFER-AGENTIC-EXTORTION) (campaign, high)
+- 2026-09 · [Onyx Sleet AI-generated lures against South Korea](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-ONYX-SLEET-AI-LURES) (campaign, high)
 - 2026 · [SHADOW-AETHER-040 agentic intrusions against Latin American governments](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-SHADOW-AETHER-040) (campaign, high)
 - 2026-07-08 · [Autonomous OpenAI Evaluation Agents Compromise Hugging Face Infrastructure (AML.CS0068)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-ATLAS-CS0068) (atlas-incident, high)
 - 2026-05-07 · [Threat Actor Uses a DeepSeek-Powered Hermes Agent in Langflow and n8n Exploitation Attempts (AML.CS0070)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-ATLAS-CS0070) (atlas-incident, high)
@@ -35,7 +37,7 @@ What the repository links to it:
 - 2026 · [CLOSEDQUORUM autonomous AI C2 research case](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-CLOSEDQUORUM) (research-artifact, confirmed)
 - 2026 · [Multi-agent mass credential harvesting in under six hours](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-GTIG-AUTONOMOUS-HARVEST) (intrusion, confirmed)
 
-Actors whose campaigns use it: GTG-1002. Vendor labels are kept as published and never merged without evidence.
+Actors whose campaigns use it: GTG-1002, JADEPUFFER, Onyx Sleet. Vendor labels are kept as published and never merged without evidence.
 
 ## 2. Test it safely
 

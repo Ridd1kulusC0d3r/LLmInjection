@@ -91,17 +91,15 @@ LLMInjection tracks both halves of the problem: attacks **against** AI systems a
 
 <!-- gen:actor-tracker-gap:start -->
 
-The tracker lists **141** actors or clusters that use AI in cyber operations (plus 17 deepfake-fraud entries). LLMInjection holds **6** of them. **110** reported in 2025 or later are in the research queue as `actor-candidate`, and **97** report URLs we do not cite (74 from vendors or governments) as `source-candidate`. Its 78 ATT&CK IDs were checked against Enterprise ATT&CK 20.1: 2 are retired there, 0 unknown.
+The tracker lists **141** actors or clusters that use AI in cyber operations (plus 17 deepfake-fraud entries). LLMInjection holds **9** of them. **107** reported in 2025 or later are in the research queue as `actor-candidate`, and **92** report URLs we do not cite (69 from vendors or governments) as `source-candidate`. Its 78 ATT&CK IDs were checked against Enterprise ATT&CK 20.1: 2 are retired there, 0 unknown.
 
 Top candidates by score (recency, number of references, vendor or government reporting). None is verified yet.
 
 | Candidate | Reported | References | Vendor or government |
 |---|---|---|---|
 | APT45 | May 2026 | 2 | yes |
-| Coral Sleet | Mar 2026 | 2 | yes |
 | Earth Krahang | Jul 2026 | 2 | yes |
 | Earth Naga | Jul 2026 | 2 | yes |
-| JADEPUFFER | Jul 2026 | 2 | yes |
 | LAUNDRY BEAR | Jul 2026 | 2 | yes |
 | Sapphire Sleet | Mar 2026 | 2 | yes |
 | ShinyHunters | Sep 2026 | 2 | yes |
@@ -112,6 +110,8 @@ Top candidates by score (recency, number of references, vendor or government rep
 | UnSub (PaperCut NG/MF agentic exploitation campaign) — GreyNoise/Blackpoint | Sep 2026 | 2 | yes |
 | UnSub (possibly Earth Lamia) — Trend Micro | Jul 2026 | 2 | yes |
 | UnSub (suspected China-nexus) — Hunt.io | Jul 2026 | 2 | yes |
+| UNC1069 | Nov 2025 (updated Sep 2026) | 3 | yes |
+| APT31 | Feb 2026 | 1 | yes |
 
 Snapshot of `cybershujin/Threat-Actors-use-of-Artifical-Intelligence` at `6aba8f0a0c` (2026-11-09); licence: none declared. Regenerate with `scripts/ai_actor_tracker_check.py`.
 
