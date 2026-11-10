@@ -5,13 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Not found | LLMInjection</title>
 <style>
-:root{--paper:#f3f0e8;--ink:#17150f;--ink-2:#4a463c;--rule:#cfc9ba;--signal:#b43c0e;color-scheme:light}
-@media (prefers-color-scheme:dark){:root{--paper:#131210;--ink:#ece8dd;--ink-2:#b9b4a6;--rule:#37332b;--signal:#f0885a;color-scheme:dark}}
+:root{--paper:#f6f5f1;--card:#ffffff;--ink:#15140f;--ink-2:#45423a;--rule:#d6d2c6;--signal:#b43c0e;--signal-soft:#f7e6dc;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--paper:#100f0d;--card:#1c1b17;--ink:#eeebe2;--ink-2:#bdb8aa;--rule:#36332b;--signal:#f0885a;--signal-soft:#3a2418;color-scheme:dark}}
 *{box-sizing:border-box}
-body{margin:0;min-height:100vh;display:grid;place-items:center;background:var(--paper);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif}
-main{width:min(560px,100% - 40px);border-top:1px solid var(--ink);padding-top:22px}
-.k{font:600 11px/1 ui-monospace,Menlo,Consolas,monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--signal)}
-h1{font:700 clamp(32px,8vw,48px)/1.05 Georgia,"Times New Roman",serif;letter-spacing:-.02em;margin:14px 0 12px}
+body{margin:0;min-height:100vh;display:grid;place-items:center;background:var(--paper);color:var(--ink);font:16px/1.6 "Inter",system-ui,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif}
+main{width:min(560px,100% - 40px);background:var(--card);border:1px solid var(--rule);border-radius:16px;padding:28px 30px;box-shadow:0 14px 40px -18px rgba(0,0,0,.25)}
+.k{display:inline-block;font:700 10.5px/1 ui-monospace,Menlo,Consolas,monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--signal);background:var(--signal-soft);border-radius:999px;padding:5px 10px}
+h1{font:800 clamp(30px,8vw,44px)/1.05 "Inter",system-ui,sans-serif;letter-spacing:-.03em;margin:14px 0 12px}
 p{color:var(--ink-2);margin:0 0 22px}
 a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--signal);text-underline-offset:3px}
 a:hover{color:var(--signal)}

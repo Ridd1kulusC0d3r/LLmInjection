@@ -13,17 +13,17 @@
   <link rel="stylesheet" href="style.css">
   <style>
     .vwrap{max-width:1184px;margin:0 auto;padding:28px 16px 64px}
-    .vtabs{display:flex;gap:0;border-bottom:1px solid var(--ink);margin:22px 0 18px}
-    .vtabs button{background:none;border:0;border-bottom:3px solid transparent;padding:10px 18px;font:600 12px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);cursor:pointer}
-    .vtabs button[aria-selected=true]{color:var(--ink);border-bottom-color:var(--signal)}
-    video{display:block;width:100%;height:auto;background:var(--paper-2);border:1px solid var(--ink)}
+    .vtabs{display:inline-flex;gap:4px;padding:6px;margin:22px 0 18px;background:var(--card);border:1px solid var(--rule-2);border-radius:var(--pill);box-shadow:var(--shadow-1)}
+    .vtabs button{background:none;border:0;border-radius:var(--pill);padding:9px 16px;font:600 12px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);cursor:pointer}
+    .vtabs button[aria-selected=true]{color:var(--signal-ink);background:var(--signal)}
+    video{display:block;width:100%;height:auto;background:var(--paper-2);border:1px solid var(--rule);border-radius:var(--radius);box-shadow:var(--shadow-2)}
     .vmeta{display:flex;flex-wrap:wrap;gap:18px;margin-top:14px;font:13px var(--mono)}
     .vmeta a{color:var(--ink)}
-    .vchap{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0;border-top:1px solid var(--ink);margin-top:34px}
-    .vchap a{display:block;padding:16px 18px;border-bottom:1px solid var(--rule);color:var(--ink);text-decoration:none}
+    .vchap{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin-top:34px}
+    .vchap a{display:block;padding:16px 18px;background:var(--card);border:1px solid var(--rule-2);border-radius:var(--radius-sm);color:var(--ink);text-decoration:none}
     .vchap a:hover{background:var(--paper-2)}
     .vchap b{display:block;font:600 11px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--signal);margin-bottom:4px}
-    h1.vt{font:700 clamp(34px,6vw,56px)/1.05 var(--serif);letter-spacing:-.02em;margin:8px 0 10px}
+    h1.vt{font:800 clamp(34px,6vw,56px)/1.05 var(--display);letter-spacing:-.035em;margin:8px 0 10px}
   </style>
 </head>
 <body>
