@@ -2,6 +2,26 @@
 
 This changelog records material changes to attribution, confidence, external mappings and structured intelligence. Ordinary prose edits do not belong here.
 
+## 2026-11-10 — Adversary use of AI: tracker candidates read and promoted
+
+### Added
+
+- 60 actors, 76 campaigns, 32 incidents and 73 sources, from primary reports read for the research-queue candidates of `FEED-AI-ACTOR-TRACKER` (Anthropic, Google Threat Intelligence Group, Microsoft, OpenAI, CrowdStrike, Unit 42, Sophos, Trend Micro, Kaspersky, Bitdefender, Recorded Future, Huntress, Hunt.io, Gambit, CISA, FBI IC3, CERT-In and others). The datasets now hold 73 actors, 91 campaigns, 65 incidents and 132 sources.
+- `scripts/merge_promotions.py`: folds promotion files into the datasets, mapping held source URLs to existing IDs, refusing duplicate actors, dropping links to unknown techniques or unresolvable sources and marking the queue.
+- Aliases from the same GTIG report: CALANQUE ION for APT42 and UNC6780 for TeamPCP. CL-CRI-1131 now conducts the existing CAMPAIGN-CL-CRI-1131.
+- Dates may carry month or year precision when that is all the source gives (`docs/METHODOLOGY.md`).
+
+### Changed
+
+- Technique maturity derived from the new links: LLMI-T001 and LLMI-T004 (GTG-50020's injection into an AI vendor's evaluation sandbox), LLMI-T022 (stolen and churned LLM accounts) and LLMI-T027 (UNC6508's suspected local open-weight LLMs) are now observed in the wild.
+
+### Confidence notes
+
+- Every record states only what its report says. Aliases were taken only when the same report gives them; tracker-only names (for example BASIN CASTLE for Temp.HEX, the ShinyHunters label for GTG-50014) were not used.
+- Unnamed activity ("UnSub") became an incident or a campaign without an actor. Anthropic's GTG clusters were kept as actors because Anthropic tracks them under those designations.
+- Not promoted, with the reason recorded on the queue item (34 actor and 22 source candidates): AI use only "possible", no AI content, press without a primary report, or pages that could not be read (HTTP 403/404/429). CRAFTY FALCON was held back because the CERT-In advisory does not tie the AI tools it lists to that actor by name.
+- Duplicates found across reports were merged: the Thai Claude Code intrusion, the Mexican government breach, the Hunt.io case, the PaperCut exploitation and the TAG-217 South Korea activity each appear once.
+
 ## 2026-11-09 — First promotions from the adversary-use pipeline
 
 ### Added

@@ -31,6 +31,10 @@ Source grades:
 
 Source grade and analytic confidence are separate. A primary source can still contain an assessment rather than a directly observed fact.
 
+### Dates
+
+A date carries the precision its source gives: `YYYY-MM-DD`, `YYYY-MM` or `YYYY`. A report that says "July 2026" is recorded as `2026-07`, never padded to a day. A campaign's or incident's `reported` date equals the earliest publication date among its sources.
+
 ### Analytic confidence
 
 | Value | Meaning |

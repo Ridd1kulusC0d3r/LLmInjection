@@ -47,7 +47,7 @@
         "url": "https://atlas.mitre.org/techniques/AML.T0065"
       }
     ],
-    "maturity": "research-demonstrated"
+    "maturity": "observed-in-the-wild"
   },
   {
     "id": "LLMI-T002",
@@ -169,7 +169,7 @@
         "url": "https://atlas.mitre.org/techniques/AML.T0085"
       }
     ],
-    "maturity": "research-demonstrated"
+    "maturity": "observed-in-the-wild"
   },
   {
     "id": "LLMI-T005",
@@ -942,7 +942,7 @@
         "url": "https://atlas.mitre.org/techniques/AML.T0029"
       }
     ],
-    "maturity": "no-linked-evidence"
+    "maturity": "observed-in-the-wild"
   },
   {
     "id": "LLMI-T023",
@@ -1084,7 +1084,7 @@
       "MITRE ATLAS"
     ],
     "external_mappings": [],
-    "maturity": "no-linked-evidence"
+    "maturity": "observed-in-the-wild"
   },
   {
     "id": "LLMI-T028",

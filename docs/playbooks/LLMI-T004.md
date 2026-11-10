@@ -5,15 +5,15 @@
 | | |
 |---|---|
 | Category | confidentiality |
-| Maturity | **demonstrated in research** |
-| Priority | 1 of 16 (maturity weight times the layers still missing) |
+| Maturity | **observed in the wild** |
+| Priority | 2 of 16 (maturity weight times the layers still missing) |
 | Frameworks | [LLM02:2026](https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/) OWASP LLM Top 10 2026 (exact), [AML.T0057](https://atlas.mitre.org/techniques/AML.T0057) ATLAS (exact), [AML.T0056](https://atlas.mitre.org/techniques/AML.T0056) ATLAS (related), [AML.T0069](https://atlas.mitre.org/techniques/AML.T0069) ATLAS (related), [AML.T0085](https://atlas.mitre.org/techniques/AML.T0085) ATLAS (related) |
 
 ## Where it stands
 
 | Layer | Status |
 |---|---|
-| Evidence | 1 record(s), 1 publisher(s), best grade A, newest 2025-09-25 |
+| Evidence | 2 record(s), 2 publisher(s), best grade A, newest 2026-06 |
 | Safe tests | 2 |
 | Detections | 0 rule file(s), 1 specification(s) |
 | Controls | 1 |
@@ -27,7 +27,10 @@ Model or application reveals sensitive information beyond authorization.
 
 What the repository links to it:
 
+- 2026-06 · [GTG-50020 AI vendor sandbox injection and AI-company targeting](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-GTG-50020) (campaign, confirmed)
 - 2025-09-25 · [ZombieAgent: Data Exfiltration Attack on ChatGPT (AML.CS0066)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-ATLAS-CS0066) (atlas-exercise, confirmed)
+
+Actors whose campaigns use it: GTG-50020. Vendor labels are kept as published and never merged without evidence.
 
 ## 2. Test it safely
 
@@ -79,8 +82,6 @@ The runner has plan and mock adapters only: it does not call your system. To run
 
 ## 6. Limits of this page
 
-- The evidence is demonstrated in research. Do not read it as activity seen against real organisations.
-- All the evidence comes from one publisher (MITRE). Treat it as one voice until a second source confirms it.
 - 1 of 1 detection(s) are specifications, not rules. They say what to look for, not how to query it. Nothing here has been run against real telemetry.
 - The tests use benign markers and synthetic data. A pass in a lab is not a security rating for a production system.
 - Ecosystem tools and benchmarks help you test and measure. They never support a claim that an actor used the technique.

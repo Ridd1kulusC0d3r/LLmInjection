@@ -2522,5 +2522,2464 @@
     "evidence_sources": [
       "SRC-GTIG-AI-TRACKER-2026-05"
     ]
+  },
+  {
+    "id": "REL-230",
+    "type": "relationship",
+    "source": "ACTOR-GTG-20006",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-GTG-20006",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-TI-REPORT-2026-09"
+    ]
+  },
+  {
+    "id": "REL-231",
+    "type": "relationship",
+    "source": "CAMPAIGN-GTG-20006",
+    "relationship": "uses",
+    "target": "LLMI-T015",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-TI-REPORT-2026-09"
+    ]
+  },
+  {
+    "id": "REL-232",
+    "type": "relationship",
+    "source": "CAMPAIGN-GTG-20006",
+    "relationship": "uses",
+    "target": "LLMI-T028",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-TI-REPORT-2026-09"
+    ]
+  },
+  {
+    "id": "REL-233",
+    "type": "relationship",
+    "source": "ACTOR-GTG-50014",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-GTG-50014",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-TI-REPORT-2026-09"
+    ]
+  },
+  {
+    "id": "REL-234",
+    "type": "relationship",
+    "source": "CAMPAIGN-GTG-50014",
+    "relationship": "uses",
+    "target": "LLMI-T015",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-TI-REPORT-2026-09"
+    ]
+  },
+  {
+    "id": "REL-235",
+    "type": "relationship",
+    "source": "CAMPAIGN-GTG-50014",
+    "relationship": "uses",
+    "target": "LLMI-T028",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-TI-REPORT-2026-09"
+    ]
+  },
+  {
+    "id": "REL-236",
+    "type": "relationship",
+    "source": "CAMPAIGN-GTG-50014",
+    "relationship": "uses",
+    "target": "LLMI-T022",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-TI-REPORT-2026-09"
+    ]
+  },
+  {
+    "id": "REL-237",
+    "type": "relationship",
+    "source": "ACTOR-GTG-10007",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-GTG-10007",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-TI-REPORT-2026-09"
+    ]
+  },
+  {
+    "id": "REL-238",
+    "type": "relationship",
+    "source": "CAMPAIGN-GTG-10007",
+    "relationship": "uses",
+    "target": "LLMI-T015",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-TI-REPORT-2026-09"
+    ]
+  },
+  {
+    "id": "REL-239",
+    "type": "relationship",
+    "source": "CAMPAIGN-GTG-10007",
+    "relationship": "uses",
+    "target": "LLMI-T028",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-TI-REPORT-2026-09"
+    ]
+  },
+  {
+    "id": "REL-240",
+    "type": "relationship",
+    "source": "CAMPAIGN-GTG-10007",
+    "relationship": "uses",
+    "target": "LLMI-T014",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-TI-REPORT-2026-09"
+    ]
+  },
+  {
+    "id": "REL-241",
+    "type": "relationship",
+    "source": "ACTOR-GTG-50020",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-GTG-50020",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-TI-REPORT-2026-09"
+    ]
+  },
+  {
+    "id": "REL-242",
+    "type": "relationship",
+    "source": "CAMPAIGN-GTG-50020",
+    "relationship": "uses",
+    "target": "LLMI-T001",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-TI-REPORT-2026-09"
+    ]
+  },
+  {
+    "id": "REL-243",
+    "type": "relationship",
+    "source": "CAMPAIGN-GTG-50020",
+    "relationship": "uses",
+    "target": "LLMI-T004",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-TI-REPORT-2026-09"
+    ]
+  },
+  {
+    "id": "REL-244",
+    "type": "relationship",
+    "source": "CAMPAIGN-GTG-50020",
+    "relationship": "uses",
+    "target": "LLMI-T011",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-TI-REPORT-2026-09"
+    ]
+  },
+  {
+    "id": "REL-245",
+    "type": "relationship",
+    "source": "CAMPAIGN-GTG-50020",
+    "relationship": "uses",
+    "target": "LLMI-T015",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-TI-REPORT-2026-09"
+    ]
+  },
+  {
+    "id": "REL-246",
+    "type": "relationship",
+    "source": "CAMPAIGN-GTG-50020",
+    "relationship": "uses",
+    "target": "LLMI-T022",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-TI-REPORT-2026-09"
+    ]
+  },
+  {
+    "id": "REL-247",
+    "type": "relationship",
+    "source": "ACTOR-GTG-50021",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-GTG-50021",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-TI-REPORT-2026-09"
+    ]
+  },
+  {
+    "id": "REL-248",
+    "type": "relationship",
+    "source": "ACTOR-GTG-50029",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-GTG-50029",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-TI-REPORT-2026-09"
+    ]
+  },
+  {
+    "id": "REL-249",
+    "type": "relationship",
+    "source": "CAMPAIGN-GTG-50029",
+    "relationship": "uses",
+    "target": "LLMI-T028",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-TI-REPORT-2026-09"
+    ]
+  },
+  {
+    "id": "REL-250",
+    "type": "relationship",
+    "source": "CAMPAIGN-GTG-50029",
+    "relationship": "uses",
+    "target": "LLMI-T015",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-TI-REPORT-2026-09"
+    ]
+  },
+  {
+    "id": "REL-251",
+    "type": "relationship",
+    "source": "CAMPAIGN-GTG-50029",
+    "relationship": "uses",
+    "target": "LLMI-T022",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-TI-REPORT-2026-09"
+    ]
+  },
+  {
+    "id": "REL-252",
+    "type": "relationship",
+    "source": "CAMPAIGN-GTG-50029",
+    "relationship": "uses",
+    "target": "LLMI-T014",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-TI-REPORT-2026-09"
+    ]
+  },
+  {
+    "id": "REL-253",
+    "type": "relationship",
+    "source": "ACTOR-GTG-14021",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-GTG-14021",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-TI-REPORT-2026-09"
+    ]
+  },
+  {
+    "id": "REL-254",
+    "type": "relationship",
+    "source": "CAMPAIGN-GTG-14021",
+    "relationship": "uses",
+    "target": "LLMI-T028",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-TI-REPORT-2026-09"
+    ]
+  },
+  {
+    "id": "REL-255",
+    "type": "relationship",
+    "source": "CAMPAIGN-GTG-14021",
+    "relationship": "uses",
+    "target": "LLMI-T014",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-TI-REPORT-2026-09"
+    ]
+  },
+  {
+    "id": "REL-256",
+    "type": "relationship",
+    "source": "ACTOR-GTG-14022",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-GTG-14022",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-TI-REPORT-2026-09"
+    ]
+  },
+  {
+    "id": "REL-257",
+    "type": "relationship",
+    "source": "CAMPAIGN-GTG-14022",
+    "relationship": "uses",
+    "target": "LLMI-T014",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-TI-REPORT-2026-09"
+    ]
+  },
+  {
+    "id": "REL-258",
+    "type": "relationship",
+    "source": "CAMPAIGN-GTG-14022",
+    "relationship": "uses",
+    "target": "LLMI-T028",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-TI-REPORT-2026-09"
+    ]
+  },
+  {
+    "id": "REL-259",
+    "type": "relationship",
+    "source": "ACTOR-GTG-15001",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-GTG-15001",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-TI-REPORT-2026-09"
+    ]
+  },
+  {
+    "id": "REL-260",
+    "type": "relationship",
+    "source": "CAMPAIGN-GTG-15001",
+    "relationship": "uses",
+    "target": "LLMI-T013",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-TI-REPORT-2026-09"
+    ]
+  },
+  {
+    "id": "REL-261",
+    "type": "relationship",
+    "source": "CAMPAIGN-GTG-15001",
+    "relationship": "uses",
+    "target": "LLMI-T014",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-TI-REPORT-2026-09"
+    ]
+  },
+  {
+    "id": "REL-262",
+    "type": "relationship",
+    "source": "CAMPAIGN-GTG-15001",
+    "relationship": "uses",
+    "target": "LLMI-T028",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-TI-REPORT-2026-09"
+    ]
+  },
+  {
+    "id": "REL-263",
+    "type": "relationship",
+    "source": "ACTOR-GTG-17002",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-GTG-17002",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-TI-REPORT-2026-09"
+    ]
+  },
+  {
+    "id": "REL-264",
+    "type": "relationship",
+    "source": "ACTOR-GTG-27005",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-GTG-27005",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-TI-REPORT-2026-09"
+    ]
+  },
+  {
+    "id": "REL-265",
+    "type": "relationship",
+    "source": "ACTOR-GTG-30004",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-GTG-30004",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-TI-REPORT-2026-09"
+    ]
+  },
+  {
+    "id": "REL-266",
+    "type": "relationship",
+    "source": "CAMPAIGN-GTG-30004",
+    "relationship": "uses",
+    "target": "LLMI-T014",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-TI-REPORT-2026-09"
+    ]
+  },
+  {
+    "id": "REL-267",
+    "type": "relationship",
+    "source": "CAMPAIGN-GTG-30004",
+    "relationship": "uses",
+    "target": "LLMI-T028",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-TI-REPORT-2026-09"
+    ]
+  },
+  {
+    "id": "REL-268",
+    "type": "relationship",
+    "source": "ACTOR-GTG-30005",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-GTG-30005",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-TI-REPORT-2026-09"
+    ]
+  },
+  {
+    "id": "REL-269",
+    "type": "relationship",
+    "source": "CAMPAIGN-GTG-30005",
+    "relationship": "uses",
+    "target": "LLMI-T014",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-TI-REPORT-2026-09"
+    ]
+  },
+  {
+    "id": "REL-270",
+    "type": "relationship",
+    "source": "CAMPAIGN-GTG-30005",
+    "relationship": "uses",
+    "target": "LLMI-T028",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-TI-REPORT-2026-09"
+    ]
+  },
+  {
+    "id": "REL-271",
+    "type": "relationship",
+    "source": "ACTOR-GTG-30006",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-GTG-30006",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-TI-REPORT-2026-09"
+    ]
+  },
+  {
+    "id": "REL-272",
+    "type": "relationship",
+    "source": "CAMPAIGN-GTG-30006",
+    "relationship": "uses",
+    "target": "LLMI-T028",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-TI-REPORT-2026-09"
+    ]
+  },
+  {
+    "id": "REL-273",
+    "type": "relationship",
+    "source": "ACTOR-GTG-34007",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-GTG-34007",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-TI-REPORT-2026-09"
+    ]
+  },
+  {
+    "id": "REL-274",
+    "type": "relationship",
+    "source": "CAMPAIGN-GTG-34007",
+    "relationship": "uses",
+    "target": "LLMI-T028",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-TI-REPORT-2026-09"
+    ]
+  },
+  {
+    "id": "REL-275",
+    "type": "relationship",
+    "source": "CAMPAIGN-GTG-34007",
+    "relationship": "uses",
+    "target": "LLMI-T014",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-TI-REPORT-2026-09"
+    ]
+  },
+  {
+    "id": "REL-276",
+    "type": "relationship",
+    "source": "ACTOR-GTG-50027",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-GTG-50027",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-TI-REPORT-2026-09"
+    ]
+  },
+  {
+    "id": "REL-277",
+    "type": "relationship",
+    "source": "CAMPAIGN-GTG-50027",
+    "relationship": "uses",
+    "target": "LLMI-T028",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-TI-REPORT-2026-09"
+    ]
+  },
+  {
+    "id": "REL-278",
+    "type": "relationship",
+    "source": "ACTOR-GTG-87001",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-GTG-87001",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-TI-REPORT-2026-09"
+    ]
+  },
+  {
+    "id": "REL-279",
+    "type": "relationship",
+    "source": "ACTOR-RAVINE-CASTLE",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-RAVINE-CASTLE-GEMINI-MISUSE-2026",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-PROMPTING-TO-AUTONOMY"
+    ]
+  },
+  {
+    "id": "REL-280",
+    "type": "relationship",
+    "source": "CAMPAIGN-RAVINE-CASTLE-GEMINI-MISUSE-2026",
+    "relationship": "uses",
+    "target": "LLMI-T014",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-PROMPTING-TO-AUTONOMY"
+    ]
+  },
+  {
+    "id": "REL-281",
+    "type": "relationship",
+    "source": "ACTOR-SANDWORM-RELIC",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-SANDWORM-RELIC-UKRAINE-GEMINI-2026",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-PROMPTING-TO-AUTONOMY"
+    ]
+  },
+  {
+    "id": "REL-282",
+    "type": "relationship",
+    "source": "CAMPAIGN-SANDWORM-RELIC-UKRAINE-GEMINI-2026",
+    "relationship": "uses",
+    "target": "LLMI-T028",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-PROMPTING-TO-AUTONOMY"
+    ]
+  },
+  {
+    "id": "REL-283",
+    "type": "relationship",
+    "source": "CAMPAIGN-SANDWORM-RELIC-UKRAINE-GEMINI-2026",
+    "relationship": "uses",
+    "target": "LLMI-T014",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-PROMPTING-TO-AUTONOMY"
+    ]
+  },
+  {
+    "id": "REL-284",
+    "type": "relationship",
+    "source": "ACTOR-UNC5792",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-UNC5792-AI-TELEGRAM-MONITORING",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-PROMPTING-TO-AUTONOMY"
+    ]
+  },
+  {
+    "id": "REL-285",
+    "type": "relationship",
+    "source": "CAMPAIGN-UNC5792-AI-TELEGRAM-MONITORING",
+    "relationship": "uses",
+    "target": "LLMI-T014",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-GTIG-PROMPTING-TO-AUTONOMY"
+    ]
+  },
+  {
+    "id": "REL-286",
+    "type": "relationship",
+    "source": "ACTOR-UNC6508",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-UNC6508-AI-RESEARCH-TARGETING",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-PROMPTING-TO-AUTONOMY"
+    ]
+  },
+  {
+    "id": "REL-287",
+    "type": "relationship",
+    "source": "CAMPAIGN-UNC6508-AI-RESEARCH-TARGETING",
+    "relationship": "uses",
+    "target": "LLMI-T027",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-GTIG-PROMPTING-TO-AUTONOMY"
+    ]
+  },
+  {
+    "id": "REL-288",
+    "type": "relationship",
+    "source": "CAMPAIGN-DPRK-CLUSTERS-GEMINI-MISUSE-2026",
+    "relationship": "uses",
+    "target": "LLMI-T014",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-PROMPTING-TO-AUTONOMY"
+    ]
+  },
+  {
+    "id": "REL-289",
+    "type": "relationship",
+    "source": "CAMPAIGN-PRC-CC-SWITCH-EXPLOITATION-PIPELINE",
+    "relationship": "uses",
+    "target": "LLMI-T028",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-PROMPTING-TO-AUTONOMY"
+    ]
+  },
+  {
+    "id": "REL-290",
+    "type": "relationship",
+    "source": "CAMPAIGN-PRC-CC-SWITCH-EXPLOITATION-PIPELINE",
+    "relationship": "uses",
+    "target": "LLMI-T014",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-PROMPTING-TO-AUTONOMY"
+    ]
+  },
+  {
+    "id": "REL-291",
+    "type": "relationship",
+    "source": "CAMPAIGN-PRC-CC-SWITCH-EXPLOITATION-PIPELINE",
+    "relationship": "uses",
+    "target": "LLMI-T015",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-GTIG-PROMPTING-TO-AUTONOMY"
+    ]
+  },
+  {
+    "id": "REL-292",
+    "type": "relationship",
+    "source": "CAMPAIGN-PRC-AGENTIC-PENTEST-FRAMEWORK-DESIGN",
+    "relationship": "uses",
+    "target": "LLMI-T028",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-PROMPTING-TO-AUTONOMY"
+    ]
+  },
+  {
+    "id": "REL-293",
+    "type": "relationship",
+    "source": "INCIDENT-GTIG-AGENTIC-CREDENTIAL-HARVESTING",
+    "relationship": "demonstrates",
+    "target": "LLMI-T015",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-PROMPTING-TO-AUTONOMY"
+    ]
+  },
+  {
+    "id": "REL-294",
+    "type": "relationship",
+    "source": "INCIDENT-GTIG-AGENTIC-CREDENTIAL-HARVESTING",
+    "relationship": "demonstrates",
+    "target": "LLMI-T028",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-PROMPTING-TO-AUTONOMY"
+    ]
+  },
+  {
+    "id": "REL-295",
+    "type": "relationship",
+    "source": "INCIDENT-GTIG-RECON-AGENTIC-FRAMEWORK",
+    "relationship": "demonstrates",
+    "target": "LLMI-T015",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-PROMPTING-TO-AUTONOMY"
+    ]
+  },
+  {
+    "id": "REL-296",
+    "type": "relationship",
+    "source": "INCIDENT-UNIT42-AI-ASSISTED-INTRUSION",
+    "relationship": "demonstrates",
+    "target": "LLMI-T015",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-UNIT42-AI-ASSISTED-INTRUSION"
+    ]
+  },
+  {
+    "id": "REL-297",
+    "type": "relationship",
+    "source": "INCIDENT-UNIT42-AI-ASSISTED-INTRUSION",
+    "relationship": "demonstrates",
+    "target": "LLMI-T028",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-UNIT42-AI-ASSISTED-INTRUSION"
+    ]
+  },
+  {
+    "id": "REL-298",
+    "type": "relationship",
+    "source": "INCIDENT-TUXBOT-V3-LLM-DEVELOPMENT",
+    "relationship": "demonstrates",
+    "target": "LLMI-T028",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-UNIT42-TUXBOT-V3"
+    ]
+  },
+  {
+    "id": "REL-299",
+    "type": "relationship",
+    "source": "INCIDENT-ANTHROPIC-AI-CARDING-STORE",
+    "relationship": "demonstrates",
+    "target": "LLMI-T028",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-TI-REPORT-2025-08"
+    ]
+  },
+  {
+    "id": "REL-300",
+    "type": "relationship",
+    "source": "INCIDENT-HUNTIO-CLAUDE-DEEPSEEK-INTRUSIONS",
+    "relationship": "demonstrates",
+    "target": "LLMI-T015",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-HUNTIO-CLAUDE-DEEPSEEK-INTRUSION"
+    ]
+  },
+  {
+    "id": "REL-301",
+    "type": "relationship",
+    "source": "INCIDENT-HUNTIO-CLAUDE-DEEPSEEK-INTRUSIONS",
+    "relationship": "demonstrates",
+    "target": "LLMI-T028",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-HUNTIO-CLAUDE-DEEPSEEK-INTRUSION"
+    ]
+  },
+  {
+    "id": "REL-302",
+    "type": "relationship",
+    "source": "INCIDENT-HUNTIO-CLAUDE-DEEPSEEK-INTRUSIONS",
+    "relationship": "demonstrates",
+    "target": "LLMI-T014",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-HUNTIO-CLAUDE-DEEPSEEK-INTRUSION"
+    ]
+  },
+  {
+    "id": "REL-303",
+    "type": "relationship",
+    "source": "ACTOR-UNC1069",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-UNC1069-GEMINI-CRYPTO-THEFT",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-AI-THREATS"
+    ]
+  },
+  {
+    "id": "REL-304",
+    "type": "relationship",
+    "source": "CAMPAIGN-UNC1069-GEMINI-CRYPTO-THEFT",
+    "relationship": "uses",
+    "target": "LLMI-T014",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-AI-THREATS"
+    ]
+  },
+  {
+    "id": "REL-305",
+    "type": "relationship",
+    "source": "CAMPAIGN-UNC1069-GEMINI-CRYPTO-THEFT",
+    "relationship": "uses",
+    "target": "LLMI-T028",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-AI-THREATS"
+    ]
+  },
+  {
+    "id": "REL-306",
+    "type": "relationship",
+    "source": "ACTOR-APT41",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-APT41-OSSTUN-TOOLING",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-AI-THREATS"
+    ]
+  },
+  {
+    "id": "REL-307",
+    "type": "relationship",
+    "source": "CAMPAIGN-APT41-OSSTUN-TOOLING",
+    "relationship": "uses",
+    "target": "LLMI-T028",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-AI-THREATS"
+    ]
+  },
+  {
+    "id": "REL-308",
+    "type": "relationship",
+    "source": "ACTOR-TEMP-ZAGROS",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-TEMP-ZAGROS-GEMINI-MALWARE-DEV",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-AI-THREATS"
+    ]
+  },
+  {
+    "id": "REL-309",
+    "type": "relationship",
+    "source": "CAMPAIGN-TEMP-ZAGROS-GEMINI-MALWARE-DEV",
+    "relationship": "uses",
+    "target": "LLMI-T028",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-AI-THREATS"
+    ]
+  },
+  {
+    "id": "REL-310",
+    "type": "relationship",
+    "source": "CAMPAIGN-TEMP-ZAGROS-GEMINI-MALWARE-DEV",
+    "relationship": "uses",
+    "target": "LLMI-T003",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-AI-THREATS"
+    ]
+  },
+  {
+    "id": "REL-311",
+    "type": "relationship",
+    "source": "ACTOR-UNC4899",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-UNC4899-GEMINI-EXPLOIT-RESEARCH",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-AI-THREATS"
+    ]
+  },
+  {
+    "id": "REL-312",
+    "type": "relationship",
+    "source": "CAMPAIGN-UNC4899-GEMINI-EXPLOIT-RESEARCH",
+    "relationship": "uses",
+    "target": "LLMI-T028",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-AI-THREATS"
+    ]
+  },
+  {
+    "id": "REL-313",
+    "type": "relationship",
+    "source": "CAMPAIGN-GTIG-CHINA-NEXUS-GEMINI-INTRUSION-LIFECYCLE",
+    "relationship": "uses",
+    "target": "LLMI-T014",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-AI-THREATS"
+    ]
+  },
+  {
+    "id": "REL-314",
+    "type": "relationship",
+    "source": "CAMPAIGN-GTIG-CHINA-NEXUS-GEMINI-INTRUSION-LIFECYCLE",
+    "relationship": "uses",
+    "target": "LLMI-T028",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-AI-THREATS"
+    ]
+  },
+  {
+    "id": "REL-315",
+    "type": "relationship",
+    "source": "CAMPAIGN-GTIG-CHINA-NEXUS-CTF-PRETEXT",
+    "relationship": "uses",
+    "target": "LLMI-T003",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-AI-THREATS"
+    ]
+  },
+  {
+    "id": "REL-316",
+    "type": "relationship",
+    "source": "CAMPAIGN-GTIG-CHINA-NEXUS-CTF-PRETEXT",
+    "relationship": "uses",
+    "target": "LLMI-T014",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-AI-THREATS"
+    ]
+  },
+  {
+    "id": "REL-317",
+    "type": "relationship",
+    "source": "CAMPAIGN-GTIG-CHINA-NEXUS-CTF-PRETEXT",
+    "relationship": "uses",
+    "target": "LLMI-T028",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-AI-THREATS"
+    ]
+  },
+  {
+    "id": "REL-318",
+    "type": "relationship",
+    "source": "ACTOR-FUNKSEC",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-FUNKSEC-AI-ASSISTED-RAAS",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-CHECKPOINT-FUNKSEC"
+    ]
+  },
+  {
+    "id": "REL-319",
+    "type": "relationship",
+    "source": "CAMPAIGN-FUNKSEC-AI-ASSISTED-RAAS",
+    "relationship": "uses",
+    "target": "LLMI-T028",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-CHECKPOINT-FUNKSEC"
+    ]
+  },
+  {
+    "id": "REL-320",
+    "type": "relationship",
+    "source": "INCIDENT-PROMPTFLUX",
+    "relationship": "demonstrates",
+    "target": "LLMI-T013",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-AI-THREATS"
+    ]
+  },
+  {
+    "id": "REL-321",
+    "type": "relationship",
+    "source": "INCIDENT-QUIETVAULT",
+    "relationship": "demonstrates",
+    "target": "LLMI-T013",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-GTIG-AI-THREATS"
+    ]
+  },
+  {
+    "id": "REL-322",
+    "type": "relationship",
+    "source": "INCIDENT-HUGGINGFACE-AGENTIC-INTRUSION-2026-07",
+    "relationship": "demonstrates",
+    "target": "LLMI-T015",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-HUGGINGFACE-INCIDENT-2026-07"
+    ]
+  },
+  {
+    "id": "REL-323",
+    "type": "relationship",
+    "source": "INCIDENT-HUGGINGFACE-AGENTIC-INTRUSION-2026-07",
+    "relationship": "demonstrates",
+    "target": "LLMI-T011",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-HUGGINGFACE-INCIDENT-2026-07"
+    ]
+  },
+  {
+    "id": "REL-324",
+    "type": "relationship",
+    "source": "INCIDENT-DREAM-MULTI-AGENT-ASIA-GOV",
+    "relationship": "demonstrates",
+    "target": "LLMI-T015",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-DREAM-MULTI-AGENT-ASIA-GOV"
+    ]
+  },
+  {
+    "id": "REL-325",
+    "type": "relationship",
+    "source": "INCIDENT-DREAM-MULTI-AGENT-ASIA-GOV",
+    "relationship": "demonstrates",
+    "target": "LLMI-T003",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-DREAM-MULTI-AGENT-ASIA-GOV"
+    ]
+  },
+  {
+    "id": "REL-326",
+    "type": "relationship",
+    "source": "INCIDENT-ARXON-FORTIGATE-MCP",
+    "relationship": "demonstrates",
+    "target": "LLMI-T015",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-CYBERANDRAMEN-FORTIGATE-MCP"
+    ]
+  },
+  {
+    "id": "REL-327",
+    "type": "relationship",
+    "source": "INCIDENT-ARXON-FORTIGATE-MCP",
+    "relationship": "demonstrates",
+    "target": "LLMI-T014",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-CYBERANDRAMEN-FORTIGATE-MCP"
+    ]
+  },
+  {
+    "id": "REL-328",
+    "type": "relationship",
+    "source": "INCIDENT-IC3-DEEPFAKE-REMOTE-JOB-APPLICANTS",
+    "relationship": "demonstrates",
+    "target": "LLMI-T014",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-FBI-IC3-PSA220628"
+    ]
+  },
+  {
+    "id": "REL-329",
+    "type": "relationship",
+    "source": "ACTOR-APT45",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-APT45-CVE-POC-PROMPTING",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-AI-TRACKER-2026-05"
+    ]
+  },
+  {
+    "id": "REL-330",
+    "type": "relationship",
+    "source": "CAMPAIGN-APT45-CVE-POC-PROMPTING",
+    "relationship": "uses",
+    "target": "LLMI-T028",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-AI-TRACKER-2026-05"
+    ]
+  },
+  {
+    "id": "REL-331",
+    "type": "relationship",
+    "source": "ACTOR-UNC2814",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-UNC2814-PERSONA-VULN-RESEARCH",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-AI-TRACKER-2026-05"
+    ]
+  },
+  {
+    "id": "REL-332",
+    "type": "relationship",
+    "source": "CAMPAIGN-UNC2814-PERSONA-VULN-RESEARCH",
+    "relationship": "uses",
+    "target": "LLMI-T003",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-AI-TRACKER-2026-05"
+    ]
+  },
+  {
+    "id": "REL-333",
+    "type": "relationship",
+    "source": "CAMPAIGN-UNC2814-PERSONA-VULN-RESEARCH",
+    "relationship": "uses",
+    "target": "LLMI-T028",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-GTIG-AI-TRACKER-2026-05"
+    ]
+  },
+  {
+    "id": "REL-334",
+    "type": "relationship",
+    "source": "ACTOR-UNC5673",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-UNC5673-LLM-ACCOUNT-POOLING",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-AI-TRACKER-2026-05"
+    ]
+  },
+  {
+    "id": "REL-335",
+    "type": "relationship",
+    "source": "ACTOR-UNC6201",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-UNC6201-PREMIUM-LLM-ACCOUNT-CHURN",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-GTIG-AI-TRACKER-2026-05"
+    ]
+  },
+  {
+    "id": "REL-336",
+    "type": "relationship",
+    "source": "CAMPAIGN-UNC6201-PREMIUM-LLM-ACCOUNT-CHURN",
+    "relationship": "uses",
+    "target": "LLMI-T022",
+    "confidence": "low",
+    "evidence_sources": [
+      "SRC-GTIG-AI-TRACKER-2026-05"
+    ]
+  },
+  {
+    "id": "REL-337",
+    "type": "relationship",
+    "source": "ACTOR-BANDCAMPRO",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-BANDCAMPRO-GEMINI-CLI-C2",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-TRENDMICRO-PATRIOT-BAIT-C2",
+      "SRC-THEREGISTER-BANDCAMPRO-GEMINI"
+    ]
+  },
+  {
+    "id": "REL-338",
+    "type": "relationship",
+    "source": "CAMPAIGN-BANDCAMPRO-GEMINI-CLI-C2",
+    "relationship": "uses",
+    "target": "LLMI-T003",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-TRENDMICRO-PATRIOT-BAIT-C2",
+      "SRC-THEREGISTER-BANDCAMPRO-GEMINI"
+    ]
+  },
+  {
+    "id": "REL-339",
+    "type": "relationship",
+    "source": "CAMPAIGN-BANDCAMPRO-GEMINI-CLI-C2",
+    "relationship": "uses",
+    "target": "LLMI-T015",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-TRENDMICRO-PATRIOT-BAIT-C2",
+      "SRC-THEREGISTER-BANDCAMPRO-GEMINI"
+    ]
+  },
+  {
+    "id": "REL-340",
+    "type": "relationship",
+    "source": "CAMPAIGN-BANDCAMPRO-GEMINI-CLI-C2",
+    "relationship": "uses",
+    "target": "LLMI-T028",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-TRENDMICRO-PATRIOT-BAIT-C2",
+      "SRC-THEREGISTER-BANDCAMPRO-GEMINI"
+    ]
+  },
+  {
+    "id": "REL-341",
+    "type": "relationship",
+    "source": "CAMPAIGN-ARTEX-MULTI-MODEL-OPERATOR",
+    "relationship": "uses",
+    "target": "LLMI-T015",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-ZSCALER-ARTEX-GLOBAL",
+      "SRC-RECORDEDFUTURE-TAG-217-ARTEX"
+    ]
+  },
+  {
+    "id": "REL-342",
+    "type": "relationship",
+    "source": "CAMPAIGN-ARTEX-MULTI-MODEL-OPERATOR",
+    "relationship": "uses",
+    "target": "LLMI-T028",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-ZSCALER-ARTEX-GLOBAL",
+      "SRC-RECORDEDFUTURE-TAG-217-ARTEX"
+    ]
+  },
+  {
+    "id": "REL-343",
+    "type": "relationship",
+    "source": "INCIDENT-CANFAIL-LONGSTREAM-LLM-DECOY-CODE",
+    "relationship": "demonstrates",
+    "target": "LLMI-T028",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-GTIG-AI-TRACKER-2026-05"
+    ]
+  },
+  {
+    "id": "REL-344",
+    "type": "relationship",
+    "source": "INCIDENT-HEXSTRIKE-STRIX-EAST-ASIA",
+    "relationship": "demonstrates",
+    "target": "LLMI-T015",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-AI-TRACKER-2026-05"
+    ]
+  },
+  {
+    "id": "REL-345",
+    "type": "relationship",
+    "source": "INCIDENT-PAPERCUT-AI-AGENT-EXPLOITATION",
+    "relationship": "demonstrates",
+    "target": "LLMI-T015",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-GREYNOISE-PAPERCUT-AGENTS",
+      "SRC-BLACKPOINT-PAPERCUTS"
+    ]
+  },
+  {
+    "id": "REL-346",
+    "type": "relationship",
+    "source": "INCIDENT-PAPERCUT-AI-AGENT-EXPLOITATION",
+    "relationship": "demonstrates",
+    "target": "LLMI-T028",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GREYNOISE-PAPERCUT-AGENTS",
+      "SRC-BLACKPOINT-PAPERCUTS"
+    ]
+  },
+  {
+    "id": "REL-347",
+    "type": "relationship",
+    "source": "INCIDENT-EVILTOKENS-AI-BEC-SERVICE",
+    "relationship": "demonstrates",
+    "target": "LLMI-T014",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-MSFT-DCU-EVILTOKENS"
+    ]
+  },
+  {
+    "id": "REL-348",
+    "type": "relationship",
+    "source": "INCIDENT-EVILTOKENS-AI-BEC-SERVICE",
+    "relationship": "demonstrates",
+    "target": "LLMI-T028",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-MSFT-DCU-EVILTOKENS"
+    ]
+  },
+  {
+    "id": "REL-349",
+    "type": "relationship",
+    "source": "INCIDENT-SIEMENS-S7-AI-EXPLOIT-SCRIPTS",
+    "relationship": "demonstrates",
+    "target": "LLMI-T028",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-CISA-AA26-231A"
+    ]
+  },
+  {
+    "id": "REL-350",
+    "type": "relationship",
+    "source": "INCIDENT-TAG-217-SOUTH-KOREA-FINANCE",
+    "relationship": "demonstrates",
+    "target": "LLMI-T015",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-RECORDEDFUTURE-TAG-217-ARTEX"
+    ]
+  },
+  {
+    "id": "REL-351",
+    "type": "relationship",
+    "source": "INCIDENT-HF-MALICIOUS-PICKLE-MODELS",
+    "relationship": "demonstrates",
+    "target": "LLMI-T011",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-JFROG-HF-MALICIOUS-MODELS"
+    ]
+  },
+  {
+    "id": "REL-352",
+    "type": "relationship",
+    "source": "ACTOR-TEMP-HEX",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-TEMP-HEX-GEMINI-TARGET-RESEARCH",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-INTEGRATION"
+    ]
+  },
+  {
+    "id": "REL-353",
+    "type": "relationship",
+    "source": "CAMPAIGN-TEMP-HEX-GEMINI-TARGET-RESEARCH",
+    "relationship": "uses",
+    "target": "LLMI-T014",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-INTEGRATION"
+    ]
+  },
+  {
+    "id": "REL-354",
+    "type": "relationship",
+    "source": "ACTOR-APT31",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-APT31-GEMINI-VULN-ANALYSIS",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-INTEGRATION"
+    ]
+  },
+  {
+    "id": "REL-355",
+    "type": "relationship",
+    "source": "CAMPAIGN-APT31-GEMINI-VULN-ANALYSIS",
+    "relationship": "uses",
+    "target": "LLMI-T014",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-INTEGRATION"
+    ]
+  },
+  {
+    "id": "REL-356",
+    "type": "relationship",
+    "source": "ACTOR-UNC5356",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-UNC5356-COINBAIT",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-GTIG-INTEGRATION"
+    ]
+  },
+  {
+    "id": "REL-357",
+    "type": "relationship",
+    "source": "CAMPAIGN-UNC5356-COINBAIT",
+    "relationship": "uses",
+    "target": "LLMI-T028",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-GTIG-INTEGRATION"
+    ]
+  },
+  {
+    "id": "REL-358",
+    "type": "relationship",
+    "source": "ACTOR-UNC6418",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-UNC6418-GEMINI-UKRAINE-RECON",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-INTEGRATION"
+    ]
+  },
+  {
+    "id": "REL-359",
+    "type": "relationship",
+    "source": "CAMPAIGN-UNC6418-GEMINI-UKRAINE-RECON",
+    "relationship": "uses",
+    "target": "LLMI-T014",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-INTEGRATION"
+    ]
+  },
+  {
+    "id": "REL-360",
+    "type": "relationship",
+    "source": "ACTOR-UNC795",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-UNC795-GEMINI-INTRUSION-TOOLING",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-INTEGRATION"
+    ]
+  },
+  {
+    "id": "REL-361",
+    "type": "relationship",
+    "source": "CAMPAIGN-UNC795-GEMINI-INTRUSION-TOOLING",
+    "relationship": "uses",
+    "target": "LLMI-T028",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-INTEGRATION"
+    ]
+  },
+  {
+    "id": "REL-362",
+    "type": "relationship",
+    "source": "ACTOR-ARMORED-LIKHO",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-ARMORED-LIKHO-BUSYSNAKE",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-KASPERSKY-ARMORED-LIKHO-BUSYSNAKE"
+    ]
+  },
+  {
+    "id": "REL-363",
+    "type": "relationship",
+    "source": "CAMPAIGN-ARMORED-LIKHO-BUSYSNAKE",
+    "relationship": "uses",
+    "target": "LLMI-T028",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-KASPERSKY-ARMORED-LIKHO-BUSYSNAKE"
+    ]
+  },
+  {
+    "id": "REL-364",
+    "type": "relationship",
+    "source": "ACTOR-SILKPARASITE",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-SILKPARASITE-CENTRAL-ASIA",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-BITDEFENDER-SILKPARASITE"
+    ]
+  },
+  {
+    "id": "REL-365",
+    "type": "relationship",
+    "source": "CAMPAIGN-SILKPARASITE-CENTRAL-ASIA",
+    "relationship": "uses",
+    "target": "LLMI-T028",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-BITDEFENDER-SILKPARASITE"
+    ]
+  },
+  {
+    "id": "REL-366",
+    "type": "relationship",
+    "source": "CAMPAIGN-SILKPARASITE-CENTRAL-ASIA",
+    "relationship": "uses",
+    "target": "LLMI-T014",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-BITDEFENDER-SILKPARASITE"
+    ]
+  },
+  {
+    "id": "REL-367",
+    "type": "relationship",
+    "source": "INCIDENT-HUNTRESS-VIBE-CODED-AD-ENUMERATION",
+    "relationship": "demonstrates",
+    "target": "LLMI-T028",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-HUNTRESS-AI-AD-ENUMERATION",
+      "SRC-THN-AI-GENERATED-AD-SCRIPT"
+    ]
+  },
+  {
+    "id": "REL-368",
+    "type": "relationship",
+    "source": "INCIDENT-WATERPLUM-AI-FACE-SWAP-INTERVIEWS",
+    "relationship": "demonstrates",
+    "target": "LLMI-T014",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-NPA-FBI-WATERPLUM-ADVISORY-2026-09",
+      "SRC-SECURITYWEEK-JAPAN-LAPTOP-FARM"
+    ]
+  },
+  {
+    "id": "REL-369",
+    "type": "relationship",
+    "source": "ACTOR-STAC6994",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-STAC6994-AGENTIC-EDR-EVASION-LAB",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-SOPHOS-AI-SECURITY-2026"
+    ]
+  },
+  {
+    "id": "REL-370",
+    "type": "relationship",
+    "source": "CAMPAIGN-STAC6994-AGENTIC-EDR-EVASION-LAB",
+    "relationship": "uses",
+    "target": "LLMI-T028",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-SOPHOS-AI-SECURITY-2026"
+    ]
+  },
+  {
+    "id": "REL-371",
+    "type": "relationship",
+    "source": "CAMPAIGN-STAC6994-AGENTIC-EDR-EVASION-LAB",
+    "relationship": "uses",
+    "target": "LLMI-T015",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-SOPHOS-AI-SECURITY-2026"
+    ]
+  },
+  {
+    "id": "REL-372",
+    "type": "relationship",
+    "source": "ACTOR-DRAGONFORCE",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-DRAGONFORCE-AI-EXTORTION-REPORT",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-SOPHOS-AI-SECURITY-2026"
+    ]
+  },
+  {
+    "id": "REL-373",
+    "type": "relationship",
+    "source": "CAMPAIGN-DRAGONFORCE-AI-EXTORTION-REPORT",
+    "relationship": "uses",
+    "target": "LLMI-T014",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-SOPHOS-AI-SECURITY-2026"
+    ]
+  },
+  {
+    "id": "REL-374",
+    "type": "relationship",
+    "source": "ACTOR-THE-GENTLEMEN",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-THE-GENTLEMEN-AI-SCRIPTS",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-SOPHOS-AI-SECURITY-2026"
+    ]
+  },
+  {
+    "id": "REL-375",
+    "type": "relationship",
+    "source": "CAMPAIGN-THE-GENTLEMEN-AI-SCRIPTS",
+    "relationship": "uses",
+    "target": "LLMI-T028",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-SOPHOS-AI-SECURITY-2026"
+    ]
+  },
+  {
+    "id": "REL-376",
+    "type": "relationship",
+    "source": "ACTOR-GTG-2002",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-GTG-2002-VIBE-HACKING-EXTORTION",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-TI-REPORT-2025-08",
+      "SRC-ANTHROPIC-MISUSE-2025-08"
+    ]
+  },
+  {
+    "id": "REL-377",
+    "type": "relationship",
+    "source": "CAMPAIGN-GTG-2002-VIBE-HACKING-EXTORTION",
+    "relationship": "uses",
+    "target": "LLMI-T015",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-TI-REPORT-2025-08",
+      "SRC-ANTHROPIC-MISUSE-2025-08"
+    ]
+  },
+  {
+    "id": "REL-378",
+    "type": "relationship",
+    "source": "CAMPAIGN-GTG-2002-VIBE-HACKING-EXTORTION",
+    "relationship": "uses",
+    "target": "LLMI-T014",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-TI-REPORT-2025-08",
+      "SRC-ANTHROPIC-MISUSE-2025-08"
+    ]
+  },
+  {
+    "id": "REL-379",
+    "type": "relationship",
+    "source": "CAMPAIGN-GTG-2002-VIBE-HACKING-EXTORTION",
+    "relationship": "uses",
+    "target": "LLMI-T028",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-TI-REPORT-2025-08",
+      "SRC-ANTHROPIC-MISUSE-2025-08"
+    ]
+  },
+  {
+    "id": "REL-380",
+    "type": "relationship",
+    "source": "CAMPAIGN-GTG-2002-VIBE-HACKING-EXTORTION",
+    "relationship": "uses",
+    "target": "LLMI-T003",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-TI-REPORT-2025-08",
+      "SRC-ANTHROPIC-MISUSE-2025-08"
+    ]
+  },
+  {
+    "id": "REL-381",
+    "type": "relationship",
+    "source": "ACTOR-GTG-5004",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-GTG-5004-AI-BUILT-RAAS",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-TI-REPORT-2025-08",
+      "SRC-ANTHROPIC-MISUSE-2025-08"
+    ]
+  },
+  {
+    "id": "REL-382",
+    "type": "relationship",
+    "source": "CAMPAIGN-GTG-5004-AI-BUILT-RAAS",
+    "relationship": "uses",
+    "target": "LLMI-T028",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-TI-REPORT-2025-08",
+      "SRC-ANTHROPIC-MISUSE-2025-08"
+    ]
+  },
+  {
+    "id": "REL-383",
+    "type": "relationship",
+    "source": "ACTOR-BUGSTER",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-BUGSTER-HERMES-DEEPSEEK-CYBERCRIME",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-UNIT42-BUGSTER"
+    ]
+  },
+  {
+    "id": "REL-384",
+    "type": "relationship",
+    "source": "CAMPAIGN-BUGSTER-HERMES-DEEPSEEK-CYBERCRIME",
+    "relationship": "uses",
+    "target": "LLMI-T014",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-UNIT42-BUGSTER"
+    ]
+  },
+  {
+    "id": "REL-385",
+    "type": "relationship",
+    "source": "CAMPAIGN-BUGSTER-HERMES-DEEPSEEK-CYBERCRIME",
+    "relationship": "uses",
+    "target": "LLMI-T028",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-UNIT42-BUGSTER"
+    ]
+  },
+  {
+    "id": "REL-386",
+    "type": "relationship",
+    "source": "ACTOR-STORM-0940",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-STORM-0940-ARTEX-CONNECTWISE",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MSFT-STORM-0940-ARTEX"
+    ]
+  },
+  {
+    "id": "REL-387",
+    "type": "relationship",
+    "source": "CAMPAIGN-STORM-0940-ARTEX-CONNECTWISE",
+    "relationship": "uses",
+    "target": "LLMI-T015",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-MSFT-STORM-0940-ARTEX"
+    ]
+  },
+  {
+    "id": "REL-388",
+    "type": "relationship",
+    "source": "CAMPAIGN-OPENAI-RU-MALWARE-TOOLING-2025",
+    "relationship": "uses",
+    "target": "LLMI-T028",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-OPENAI-DISRUPTING-2025-10"
+    ]
+  },
+  {
+    "id": "REL-389",
+    "type": "relationship",
+    "source": "CAMPAIGN-OPENAI-KOREAN-LANGUAGE-OPERATORS-2025",
+    "relationship": "uses",
+    "target": "LLMI-T028",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-OPENAI-DISRUPTING-2025-10"
+    ]
+  },
+  {
+    "id": "REL-390",
+    "type": "relationship",
+    "source": "CAMPAIGN-OPENAI-KOREAN-LANGUAGE-OPERATORS-2025",
+    "relationship": "uses",
+    "target": "LLMI-T014",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-OPENAI-DISRUPTING-2025-10"
+    ]
+  },
+  {
+    "id": "REL-391",
+    "type": "relationship",
+    "source": "CAMPAIGN-OPENAI-PHISH-AND-SCRIPTS-2025",
+    "relationship": "uses",
+    "target": "LLMI-T014",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-OPENAI-DISRUPTING-2025-10"
+    ]
+  },
+  {
+    "id": "REL-392",
+    "type": "relationship",
+    "source": "CAMPAIGN-OPENAI-PHISH-AND-SCRIPTS-2025",
+    "relationship": "uses",
+    "target": "LLMI-T028",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-OPENAI-DISRUPTING-2025-10"
+    ]
+  },
+  {
+    "id": "REL-393",
+    "type": "relationship",
+    "source": "INCIDENT-GAMBIT-AI-AGENT-RETAIL-SKIMMING",
+    "relationship": "demonstrates",
+    "target": "LLMI-T015",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GAMBIT-AI-AGENTS-RETAILERS"
+    ]
+  },
+  {
+    "id": "REL-394",
+    "type": "relationship",
+    "source": "INCIDENT-TREND-CLAUDE-CODE-AGENT-THAILAND",
+    "relationship": "demonstrates",
+    "target": "LLMI-T015",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-TRENDMICRO-2026-H1-APT"
+    ]
+  },
+  {
+    "id": "REL-395",
+    "type": "relationship",
+    "source": "INCIDENT-TREND-CLAUDE-CODE-AGENT-THAILAND",
+    "relationship": "demonstrates",
+    "target": "LLMI-T003",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-TRENDMICRO-2026-H1-APT"
+    ]
+  },
+  {
+    "id": "REL-396",
+    "type": "relationship",
+    "source": "INCIDENT-IC3-AI-VOICE-OFFICIAL-IMPERSONATION",
+    "relationship": "demonstrates",
+    "target": "LLMI-T014",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-FBI-IC3-PSA251219"
+    ]
+  },
+  {
+    "id": "REL-397",
+    "type": "relationship",
+    "source": "INCIDENT-GREECE-VOICE-CLONE-GANG",
+    "relationship": "demonstrates",
+    "target": "LLMI-T014",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-EURONEWS-GREECE-VOICE-CLONE"
+    ]
+  },
+  {
+    "id": "REL-398",
+    "type": "relationship",
+    "source": "CAMPAIGN-CROWDSTRIKE-TA1-ARGENTINA-HEALTHCARE",
+    "relationship": "uses",
+    "target": "LLMI-T015",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-CROWDSTRIKE-AGENTIC-AI-CAMPAIGNS-2026-10"
+    ]
+  },
+  {
+    "id": "REL-399",
+    "type": "relationship",
+    "source": "CAMPAIGN-CROWDSTRIKE-TA1-ARGENTINA-HEALTHCARE",
+    "relationship": "uses",
+    "target": "LLMI-T028",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-CROWDSTRIKE-AGENTIC-AI-CAMPAIGNS-2026-10"
+    ]
+  },
+  {
+    "id": "REL-400",
+    "type": "relationship",
+    "source": "CAMPAIGN-CROWDSTRIKE-TA2-CHINESE-SPEAKING-HARNESS",
+    "relationship": "uses",
+    "target": "LLMI-T015",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-CROWDSTRIKE-AGENTIC-AI-CAMPAIGNS-2026-10"
+    ]
+  },
+  {
+    "id": "REL-401",
+    "type": "relationship",
+    "source": "CAMPAIGN-CROWDSTRIKE-TA2-CHINESE-SPEAKING-HARNESS",
+    "relationship": "uses",
+    "target": "LLMI-T013",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-CROWDSTRIKE-AGENTIC-AI-CAMPAIGNS-2026-10"
+    ]
+  },
+  {
+    "id": "REL-402",
+    "type": "relationship",
+    "source": "CAMPAIGN-CROWDSTRIKE-TA3-INDONESIAN-SKILLS",
+    "relationship": "uses",
+    "target": "LLMI-T015",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-CROWDSTRIKE-AGENTIC-AI-CAMPAIGNS-2026-10"
+    ]
+  },
+  {
+    "id": "REL-403",
+    "type": "relationship",
+    "source": "CAMPAIGN-CROWDSTRIKE-TA3-INDONESIAN-SKILLS",
+    "relationship": "uses",
+    "target": "LLMI-T003",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-CROWDSTRIKE-AGENTIC-AI-CAMPAIGNS-2026-10"
+    ]
+  },
+  {
+    "id": "REL-404",
+    "type": "relationship",
+    "source": "CAMPAIGN-CROWDSTRIKE-TA4-PENTEST-SETUP",
+    "relationship": "uses",
+    "target": "LLMI-T015",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-CROWDSTRIKE-AGENTIC-AI-CAMPAIGNS-2026-10"
+    ]
+  },
+  {
+    "id": "REL-405",
+    "type": "relationship",
+    "source": "ACTOR-LAUNDRY-BEAR",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-LAUNDRY-BEAR-ZIMBRA-FLOWERBED",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-CISA-AA26-204A"
+    ]
+  },
+  {
+    "id": "REL-406",
+    "type": "relationship",
+    "source": "CAMPAIGN-LAUNDRY-BEAR-ZIMBRA-FLOWERBED",
+    "relationship": "uses",
+    "target": "LLMI-T028",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-CISA-AA26-204A"
+    ]
+  },
+  {
+    "id": "REL-407",
+    "type": "relationship",
+    "source": "INCIDENT-FORTIGATE-AI-AUGMENTED-ACCESS",
+    "relationship": "demonstrates",
+    "target": "LLMI-T028",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-AWS-FORTIGATE-AI-2026-02"
+    ]
+  },
+  {
+    "id": "REL-408",
+    "type": "relationship",
+    "source": "INCIDENT-LOVABLE-PHISHING-ABUSE",
+    "relationship": "demonstrates",
+    "target": "LLMI-T014",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-PROOFPOINT-LOVABLE-PHISHING"
+    ]
+  },
+  {
+    "id": "REL-409",
+    "type": "relationship",
+    "source": "INCIDENT-SYMANTEC-LLM-GENERATED-LOADERS",
+    "relationship": "demonstrates",
+    "target": "LLMI-T028",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-SYMANTEC-MALWARE-AI-LLM"
+    ]
+  },
+  {
+    "id": "REL-410",
+    "type": "relationship",
+    "source": "ACTOR-EARTH-KRAHANG",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-EARTH-KRAHANG-AI-EXPLOIT-SCANNER",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-TRENDAI-2026-H1-APT"
+    ]
+  },
+  {
+    "id": "REL-411",
+    "type": "relationship",
+    "source": "CAMPAIGN-EARTH-KRAHANG-AI-EXPLOIT-SCANNER",
+    "relationship": "uses",
+    "target": "LLMI-T028",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-TRENDAI-2026-H1-APT"
+    ]
+  },
+  {
+    "id": "REL-412",
+    "type": "relationship",
+    "source": "ACTOR-EARTH-NAGA",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-EARTH-NAGA-VIBE-CODED-LOADER",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-TRENDAI-2026-H1-APT"
+    ]
+  },
+  {
+    "id": "REL-413",
+    "type": "relationship",
+    "source": "CAMPAIGN-EARTH-NAGA-VIBE-CODED-LOADER",
+    "relationship": "uses",
+    "target": "LLMI-T028",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-TRENDAI-2026-H1-APT"
+    ]
+  },
+  {
+    "id": "REL-414",
+    "type": "relationship",
+    "source": "CAMPAIGN-ARTEX-EXTORTION-AND-PRC-CLUSTERS",
+    "relationship": "uses",
+    "target": "LLMI-T015",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-ARTEX-2026-10"
+    ]
+  },
+  {
+    "id": "REL-415",
+    "type": "relationship",
+    "source": "CAMPAIGN-PENTAGI-ASIA-TELECOM",
+    "relationship": "uses",
+    "target": "LLMI-T015",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-GTIG-ARTEX-2026-10"
+    ]
+  },
+  {
+    "id": "REL-416",
+    "type": "relationship",
+    "source": "ACTOR-CYBERXERO",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-CYBERXERO-CLAUDE-AGENT-SWARM",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-SOCRADAR-CYBERXERO"
+    ]
+  },
+  {
+    "id": "REL-417",
+    "type": "relationship",
+    "source": "CAMPAIGN-CYBERXERO-CLAUDE-AGENT-SWARM",
+    "relationship": "uses",
+    "target": "LLMI-T015",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-SOCRADAR-CYBERXERO"
+    ]
+  },
+  {
+    "id": "REL-418",
+    "type": "relationship",
+    "source": "CAMPAIGN-CYBERXERO-CLAUDE-AGENT-SWARM",
+    "relationship": "uses",
+    "target": "LLMI-T003",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-SOCRADAR-CYBERXERO"
+    ]
+  },
+  {
+    "id": "REL-419",
+    "type": "relationship",
+    "source": "ACTOR-STORM-2945",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-CAPTIVECRUNCH",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-MSFT-CAPTIVECRUNCH"
+    ]
+  },
+  {
+    "id": "REL-420",
+    "type": "relationship",
+    "source": "CAMPAIGN-CAPTIVECRUNCH",
+    "relationship": "uses",
+    "target": "LLMI-T014",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-MSFT-CAPTIVECRUNCH"
+    ]
+  },
+  {
+    "id": "REL-421",
+    "type": "relationship",
+    "source": "CAMPAIGN-CAPTIVECRUNCH",
+    "relationship": "uses",
+    "target": "LLMI-T028",
+    "confidence": "low",
+    "evidence_sources": [
+      "SRC-MSFT-CAPTIVECRUNCH"
+    ]
+  },
+  {
+    "id": "REL-422",
+    "type": "relationship",
+    "source": "CAMPAIGN-INC-GENTLEMEN-PHANTOM-AI",
+    "relationship": "uses",
+    "target": "LLMI-T015",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-SOCRADAR-INC-GENTLEMEN-AI"
+    ]
+  },
+  {
+    "id": "REL-423",
+    "type": "relationship",
+    "source": "CAMPAIGN-INC-GENTLEMEN-PHANTOM-AI",
+    "relationship": "uses",
+    "target": "LLMI-T014",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-SOCRADAR-INC-GENTLEMEN-AI"
+    ]
+  },
+  {
+    "id": "REL-424",
+    "type": "relationship",
+    "source": "CAMPAIGN-INC-GENTLEMEN-PHANTOM-AI",
+    "relationship": "uses",
+    "target": "LLMI-T028",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-SOCRADAR-INC-GENTLEMEN-AI"
+    ]
+  },
+  {
+    "id": "REL-425",
+    "type": "relationship",
+    "source": "ACTOR-REVENGEHOTELS",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-REVENGEHOTELS-2025-LLM-VENOMRAT",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-KASPERSKY-REVENGEHOTELS-2025"
+    ]
+  },
+  {
+    "id": "REL-426",
+    "type": "relationship",
+    "source": "CAMPAIGN-REVENGEHOTELS-2025-LLM-VENOMRAT",
+    "relationship": "uses",
+    "target": "LLMI-T028",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-KASPERSKY-REVENGEHOTELS-2025"
+    ]
+  },
+  {
+    "id": "REL-427",
+    "type": "relationship",
+    "source": "INCIDENT-MEXICAN-GOVERNMENT-AI-BREACH",
+    "relationship": "demonstrates",
+    "target": "LLMI-T015",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GAMBIT-MEXGOV-AI-BREACH"
+    ]
+  },
+  {
+    "id": "REL-428",
+    "type": "relationship",
+    "source": "INCIDENT-MEXICAN-GOVERNMENT-AI-BREACH",
+    "relationship": "demonstrates",
+    "target": "LLMI-T014",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GAMBIT-MEXGOV-AI-BREACH"
+    ]
+  },
+  {
+    "id": "REL-429",
+    "type": "relationship",
+    "source": "INCIDENT-IC3-IMPERSONATION-DEEPFAKES",
+    "relationship": "demonstrates",
+    "target": "LLMI-T014",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-FBI-IC3-PSA260720"
+    ]
+  },
+  {
+    "id": "REL-430",
+    "type": "relationship",
+    "source": "ACTOR-CL-CRI-1163",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-CL-CRI-1163-BRAZIL-FINANCE",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-UNIT42-LATAM-AI"
+    ]
+  },
+  {
+    "id": "REL-431",
+    "type": "relationship",
+    "source": "CAMPAIGN-CL-CRI-1163-BRAZIL-FINANCE",
+    "relationship": "uses",
+    "target": "LLMI-T028",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-UNIT42-LATAM-AI"
+    ]
+  },
+  {
+    "id": "REL-432",
+    "type": "relationship",
+    "source": "ACTOR-JADE-SLEET",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-JADE-SLEET-FRONT-COMPANIES-2026-06",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MSFT-DPRK-AI-2026-10"
+    ]
+  },
+  {
+    "id": "REL-433",
+    "type": "relationship",
+    "source": "CAMPAIGN-JADE-SLEET-FRONT-COMPANIES-2026-06",
+    "relationship": "uses",
+    "target": "LLMI-T014",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MSFT-DPRK-AI-2026-10"
+    ]
+  },
+  {
+    "id": "REL-434",
+    "type": "relationship",
+    "source": "CAMPAIGN-JADE-SLEET-FRONT-COMPANIES-2026-06",
+    "relationship": "uses",
+    "target": "LLMI-T028",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-MSFT-DPRK-AI-2026-10"
+    ]
+  },
+  {
+    "id": "REL-435",
+    "type": "relationship",
+    "source": "ACTOR-PEARL-SLEET",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-PEARL-SLEET-ARTEX",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-MSFT-DPRK-AI-2026-10"
+    ]
+  },
+  {
+    "id": "REL-436",
+    "type": "relationship",
+    "source": "CAMPAIGN-PEARL-SLEET-ARTEX",
+    "relationship": "uses",
+    "target": "LLMI-T015",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-MSFT-DPRK-AI-2026-10"
+    ]
+  },
+  {
+    "id": "REL-437",
+    "type": "relationship",
+    "source": "ACTOR-SAPPHIRE-SLEET",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-SAPPHIRE-SLEET-RUST-2026-08",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MSFT-DPRK-AI-2026-10"
+    ]
+  },
+  {
+    "id": "REL-438",
+    "type": "relationship",
+    "source": "CAMPAIGN-SAPPHIRE-SLEET-RUST-2026-08",
+    "relationship": "uses",
+    "target": "LLMI-T028",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-MSFT-DPRK-AI-2026-10"
+    ]
+  },
+  {
+    "id": "REL-439",
+    "type": "relationship",
+    "source": "ACTOR-KNAITHE",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-KNAITHE-HERMES-AUTONOMOUS",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-UNIT42-KNAITHE-2026-07"
+    ]
+  },
+  {
+    "id": "REL-440",
+    "type": "relationship",
+    "source": "CAMPAIGN-KNAITHE-HERMES-AUTONOMOUS",
+    "relationship": "uses",
+    "target": "LLMI-T015",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-UNIT42-KNAITHE-2026-07"
+    ]
+  },
+  {
+    "id": "REL-441",
+    "type": "relationship",
+    "source": "CAMPAIGN-KNAITHE-HERMES-AUTONOMOUS",
+    "relationship": "uses",
+    "target": "LLMI-T024",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-UNIT42-KNAITHE-2026-07"
+    ]
+  },
+  {
+    "id": "REL-442",
+    "type": "relationship",
+    "source": "ACTOR-AURORA-RANSOMWARE",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-AURORA-CURSOR-AGENT",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GAMBIT-AURORA-CURSOR-2026-08"
+    ]
+  },
+  {
+    "id": "REL-443",
+    "type": "relationship",
+    "source": "CAMPAIGN-AURORA-CURSOR-AGENT",
+    "relationship": "uses",
+    "target": "LLMI-T015",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GAMBIT-AURORA-CURSOR-2026-08"
+    ]
+  },
+  {
+    "id": "REL-444",
+    "type": "relationship",
+    "source": "ACTOR-VAPOR-PANDA",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-VAPOR-PANDA-ARTEX",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-CROWDSTRIKE-VAPOR-PANDA-2026-10"
+    ]
+  },
+  {
+    "id": "REL-445",
+    "type": "relationship",
+    "source": "CAMPAIGN-VAPOR-PANDA-ARTEX",
+    "relationship": "uses",
+    "target": "LLMI-T015",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-CROWDSTRIKE-VAPOR-PANDA-2026-10"
+    ]
+  },
+  {
+    "id": "REL-446",
+    "type": "relationship",
+    "source": "CAMPAIGN-VAPOR-PANDA-ARTEX",
+    "relationship": "uses",
+    "target": "LLMI-T028",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-CROWDSTRIKE-VAPOR-PANDA-2026-10"
+    ]
+  },
+  {
+    "id": "REL-447",
+    "type": "relationship",
+    "source": "ACTOR-GREYVIBE",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-GREYVIBE-UKRAINE",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-WITHSECURE-GREYVIBE-2026-05"
+    ]
+  },
+  {
+    "id": "REL-448",
+    "type": "relationship",
+    "source": "CAMPAIGN-GREYVIBE-UKRAINE",
+    "relationship": "uses",
+    "target": "LLMI-T028",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-WITHSECURE-GREYVIBE-2026-05"
+    ]
+  },
+  {
+    "id": "REL-449",
+    "type": "relationship",
+    "source": "CAMPAIGN-GREYVIBE-UKRAINE",
+    "relationship": "uses",
+    "target": "LLMI-T014",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-WITHSECURE-GREYVIBE-2026-05"
+    ]
+  },
+  {
+    "id": "REL-450",
+    "type": "relationship",
+    "source": "INCIDENT-SWEETSPECTER-OPENAI-PHISHING",
+    "relationship": "demonstrates",
+    "target": "LLMI-T014",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-OPENAI-THREAT-2024-10"
+    ]
+  },
+  {
+    "id": "REL-451",
+    "type": "relationship",
+    "source": "ACTOR-CL-CRI-1131",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-CL-CRI-1131",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-UNIT42-LATAM-AI"
+    ]
   }
 ]

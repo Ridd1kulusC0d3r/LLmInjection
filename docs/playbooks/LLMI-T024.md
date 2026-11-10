@@ -13,7 +13,7 @@
 
 | Layer | Status |
 |---|---|
-| Evidence | 2 record(s), 2 publisher(s), best grade A, newest 2026 |
+| Evidence | 3 record(s), 3 publisher(s), best grade A, newest 2026 |
 | Safe tests | 1 |
 | Detections | 0 rule file(s), 1 specification(s) |
 | Controls | 2 |
@@ -28,9 +28,10 @@ Model-serving endpoints, agent builders, vector stores or MCP servers are reacha
 What the repository links to it:
 
 - 2026 · [JADEPUFFER agentic database extortion](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-JADEPUFFER-AGENTIC-EXTORTION) (campaign, high)
+- 2026-07 · [knaithe autonomous exploitation with DeepSeek and Hermes Agent](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-KNAITHE-HERMES-AUTONOMOUS) (campaign, confirmed)
 - 2026-05-07 · [Threat Actor Uses a DeepSeek-Powered Hermes Agent in Langflow and n8n Exploitation Attempts (AML.CS0070)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-ATLAS-CS0070) (atlas-incident, high)
 
-Actors whose campaigns use it: JADEPUFFER. Vendor labels are kept as published and never merged without evidence.
+Actors whose campaigns use it: JADEPUFFER, knaithe. Vendor labels are kept as published and never merged without evidence.
 
 ## 2. Test it safely
 

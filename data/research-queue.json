@@ -1632,7 +1632,7 @@
     },
     {
       "id": "RQ-AIT-ACTOR-APT45",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -1650,8 +1650,8 @@
         "APT45"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
@@ -1680,7 +1680,7 @@
     },
     {
       "id": "RQ-AIT-ACTOR-EARTH-KRAHANG",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -1698,13 +1698,13 @@
         "Earth Krahang"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-EARTH-NAGA",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -1722,8 +1722,8 @@
         "Earth Naga"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
@@ -1752,7 +1752,7 @@
     },
     {
       "id": "RQ-AIT-ACTOR-LAUNDRY-BEAR",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -1770,13 +1770,13 @@
         "LAUNDRY BEAR"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-SAPPHIRE-SLEET",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -1794,13 +1794,13 @@
         "Sapphire Sleet"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-SHINYHUNTERS",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -1818,13 +1818,13 @@
         "ShinyHunters"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "not promoted",
+        "notes": "Report labels the cluster GTG-50014 and only says operators are 'suspected' ShinyHunters affiliates; promoted as ACTOR-GTG-50014 without merging into a ShinyHunters/UNC6240 actor (UNC6240 is not in the Anthropic report)."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-TEMP-HEX",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -1842,8 +1842,8 @@
         "Temp.HEX"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
@@ -1872,7 +1872,7 @@
     },
     {
       "id": "RQ-AIT-ACTOR-UNSUB-FORTIGATE-CAMPAIGN-AMAZON-THREAT-I",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -1890,13 +1890,13 @@
         "UnSub (FortiGate campaign) — Amazon Threat Intelligence"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "not promoted",
+        "notes": "No designation assigned; captured as INCIDENT-FORTIGATE-AI-AUGMENTED-ACCESS."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-UNSUB-MEXICAN-GOVERNMENT-CAMPAIGN-GAMBIT",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -1914,13 +1914,13 @@
         "UnSub (Mexican government campaign) — Gambit Security"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "not promoted",
+        "notes": "No designation given by vendor; recorded as INCIDENT-MEXICAN-GOVERNMENT-AI-BREACH."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-UNSUB-PAPERCUT-NG-MF-AGENTIC-EXPLOITATIO",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -1938,13 +1938,13 @@
         "UnSub (PaperCut NG/MF agentic exploitation campaign) — GreyNoise/Blackpoint"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "not promoted",
+        "notes": "Unnamed operator; recorded as INCIDENT-PAPERCUT-AI-AGENT-EXPLOITATION. GreyNoise's 'likely Russian-speaking' is hedged and Blackpoint gives no attribution, so no nexus is asserted."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-UNSUB-POSSIBLY-EARTH-LAMIA-TREND-MICRO",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -1962,13 +1962,13 @@
         "UnSub (possibly Earth Lamia) — Trend Micro"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "not promoted",
+        "notes": "Unnamed actor; attribution to Earth Lamia is only 'possible'. Recorded as INCIDENT-THAILAND-CLAUDE-CODE-AGENT-INTRUSION, no actor created."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-UNSUB-SUSPECTED-CHINA-NEXUS-HUNT-IO",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -1986,13 +1986,13 @@
         "UnSub (suspected China-nexus) — Hunt.io"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "not promoted",
+        "notes": "Unnamed activity; Hunt.io stops short of naming a group. Recorded as CAMPAIGN-CN-CLAUDE-CODE-DEEPSEEK-GOV with no actor."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-UNC1069",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -2010,8 +2010,8 @@
         "UNC1069"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
@@ -2040,7 +2040,7 @@
     },
     {
       "id": "RQ-AIT-ACTOR-APT31",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -2058,13 +2058,13 @@
         "APT31"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-ARMORED-LIKHO",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -2082,13 +2082,13 @@
         "Armored Likho"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-BUGSTER",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -2106,13 +2106,13 @@
         "BUGSTER"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-CL-CRI-1131",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -2130,13 +2130,13 @@
         "CL-CRI-1131"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-CL-CRI-1163",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -2154,13 +2154,13 @@
         "CL-CRI-1163"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-CRAFTY-FALCON",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -2178,13 +2178,13 @@
         "CRAFTY FALCON"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "not promoted",
+        "notes": "Reviewer: the CERT-In advisory lists AI offensive tools but never ties them to CRAFTY FALCON by name, so AI use by this actor is not established."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-CYBERXERO",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -2202,13 +2202,13 @@
         "CyberXero"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-DRAGONFORCE",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -2226,13 +2226,13 @@
         "DragonForce"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-EVILTOKENS",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -2250,13 +2250,13 @@
         "EvilTokens"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-GTG-10007",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -2274,13 +2274,13 @@
         "GTG-10007"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-GTG-14021",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -2298,13 +2298,13 @@
         "GTG-14021"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-GTG-14022",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -2322,13 +2322,13 @@
         "GTG-14022"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-GTG-15001",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -2346,13 +2346,13 @@
         "GTG-15001"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-GTG-17001",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -2370,13 +2370,13 @@
         "GTG-17001"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-GTG-17002",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -2394,13 +2394,13 @@
         "GTG-17002"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-GTG-20006",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -2418,13 +2418,13 @@
         "GTG-20006"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-GTG-27005",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -2442,13 +2442,13 @@
         "GTG-27005"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-GTG-30004",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -2466,13 +2466,13 @@
         "GTG-30004"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-GTG-30005",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -2490,13 +2490,13 @@
         "GTG-30005"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-GTG-30006",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -2514,13 +2514,13 @@
         "GTG-30006"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-GTG-34007",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -2538,13 +2538,13 @@
         "GTG-34007"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-GTG-50020",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -2562,13 +2562,13 @@
         "GTG-50020"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-GTG-50021",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -2586,13 +2586,13 @@
         "GTG-50021"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-GTG-50027",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -2610,13 +2610,13 @@
         "GTG-50027"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-GTG-50029",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -2634,13 +2634,13 @@
         "GTG-50029"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-GTG-87001",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -2658,13 +2658,13 @@
         "GTG-87001"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-JADE-SLEET",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -2682,13 +2682,13 @@
         "Jade Sleet"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-KNAITHE",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -2706,13 +2706,13 @@
         "knaithe"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-MULTIPLE-UNSUB-DPRK-GTIG",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -2730,13 +2730,13 @@
         "Multiple UnSub (DPRK) — GTIG"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "not promoted",
+        "notes": "Unnamed clusters; recorded as CAMPAIGN-DPRK-CLUSTERS-GEMINI-MISUSE-2026 with no actor."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-MULTIPLE-UNSUB-CROWDSTRIKE",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -2754,13 +2754,13 @@
         "Multiple UnSub — CrowdStrike"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "not promoted",
+        "notes": "CrowdStrike blog gives only aggregate statistics (89% rise in attacks by AI-enabled adversaries; prompt injection against GenAI tools at 90+ organizations) with no named actor or specific incident; source recorded only."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-PEARL-SLEET",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -2778,8 +2778,8 @@
         "Pearl Sleet"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
@@ -2808,7 +2808,7 @@
     },
     {
       "id": "RQ-AIT-ACTOR-RAVINE-CASTLE",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -2826,13 +2826,13 @@
         "RAVINE CASTLE"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-SANDWORM-RELIC",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -2850,13 +2850,13 @@
         "SANDWORM RELIC"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-SILKPARASITE",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -2874,13 +2874,13 @@
         "SilkParasite"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-STAC6994",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -2898,13 +2898,13 @@
         "STAC6994"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-STORM-0940",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -2922,13 +2922,13 @@
         "Storm-0940"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-STORM-1747",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -2946,8 +2946,8 @@
         "Storm-1747"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "not promoted",
+        "notes": "Microsoft's April 2026 post describes Storm-1747/Tycoon2FA as a phishing-as-a-service operation but attributes no AI use to it; AI content in the post is general trend commentary."
       }
     },
     {
@@ -2976,7 +2976,7 @@
     },
     {
       "id": "RQ-AIT-ACTOR-THE-GENTLEMEN",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -2994,13 +2994,13 @@
         "The Gentlemen"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-UNC2814",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -3018,13 +3018,13 @@
         "UNC2814"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-UNC5356",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -3042,13 +3042,13 @@
         "UNC5356"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-UNC5673",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -3066,13 +3066,13 @@
         "UNC5673"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-UNC5792",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -3090,13 +3090,13 @@
         "UNC5792"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-UNC6201",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -3114,13 +3114,13 @@
         "UNC6201"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-UNC6418",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -3138,13 +3138,13 @@
         "UNC6418"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-UNC6508",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -3162,13 +3162,13 @@
         "UNC6508"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-UNC795",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -3186,13 +3186,13 @@
         "UNC795"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-UNSUB-RECON-AGENTIC-INFOSTEALER-FRAMEWOR",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -3210,13 +3210,13 @@
         "UnSub (\"Recon\" agentic infostealer framework) — GTIG"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "not promoted",
+        "notes": "Unnamed; recorded as INCIDENT-GTIG-RECON-AGENTIC-FRAMEWORK."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-UNSUB-10-HOUR-AUTONOMOUS-AGENTIC-RANSOMW",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -3234,13 +3234,13 @@
         "UnSub (10-hour autonomous agentic ransomware attack) — Unit 42"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "not promoted",
+        "notes": "Unnamed; recorded as INCIDENT-UNIT42-AI-ASSISTED-INTRUSION. Unit 42 corrected the article: an intrusion, not a ransomware attack."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-UNSUB-AI-ASSISTED-EXPLOITATION-PIPELINE-",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -3258,8 +3258,8 @@
         "UnSub (AI-assisted exploitation pipeline: CC Switch/Phalanx/Shai-Hulud) — GTIG"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "not promoted",
+        "notes": "Unnamed PRC-nexus group; recorded as CAMPAIGN-PRC-CC-SWITCH-EXPLOITATION-PIPELINE with no actor."
       }
     },
     {
@@ -3288,7 +3288,7 @@
     },
     {
       "id": "RQ-AIT-ACTOR-UNSUB-ARTEX-EXTORTION-AND-SUSPECTED-PRC-",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -3306,13 +3306,13 @@
         "UnSub (ARTEX extortion and suspected PRC-nexus clusters) — GTIG"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "not promoted",
+        "notes": "Unnamed clusters; recorded as CAMPAIGN-ARTEX-EXTORTION-AND-PRC-CLUSTERS with no actor. GTIG also names UNC7228 (overlaps Microsoft STORM-0940) as an ARTEX user; not a batch candidate, consider separately."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-UNSUB-ARTEX-MULTI-MODEL-OPERATOR-19-MARK",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -3330,13 +3330,13 @@
         "UnSub (ARTEX multi-model operator, 19-market targeting) — Zscaler ThreatLabz"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "not promoted",
+        "notes": "Zscaler does not name the actor; recorded as CAMPAIGN-ARTEX-MULTI-MODEL-OPERATOR with no actor. Overlap with Recorded Future TAG-217 is noted by Zscaler but not stated as identical."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-UNSUB-ATTEMPTED-AGENTIC-PENTEST-FRAMEWOR",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -3354,8 +3354,8 @@
         "UnSub (attempted agentic pentest framework) — GTIG"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "not promoted",
+        "notes": "Unnamed PRC-nexus group; recorded as CAMPAIGN-PRC-AGENTIC-PENTEST-FRAMEWORK-DESIGN with no actor."
       }
     },
     {
@@ -3384,7 +3384,7 @@
     },
     {
       "id": "RQ-AIT-ACTOR-UNSUB-AUTONOMOUS-AI-AGENT-FRAMEWORK-HUGG",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -3402,13 +3402,13 @@
         "UnSub (autonomous AI agent framework) — Hugging Face"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "not promoted",
+        "notes": "No name or attribution; recorded as INCIDENT-HUGGINGFACE-AGENTIC-INTRUSION-2026-07."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-UNSUB-AUTONOMOUS-CREDENTIAL-THEFT-FRAMEW",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -3426,13 +3426,13 @@
         "UnSub (autonomous credential-theft framework) — GTIG"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "not promoted",
+        "notes": "Unnamed suspected financially motivated actor; recorded as INCIDENT-GTIG-AGENTIC-CREDENTIAL-HARVESTING."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-UNSUB-CAMBODIA-SCAM-OPERATION-OPENAI",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -3450,8 +3450,8 @@
         "UnSub (Cambodia scam operation) — OpenAI"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "not promoted",
+        "notes": "https://openai.com/index/disrupting-malicious-uses-of-ai-criminal-scam-operation/ returned HTTP 403 on two attempts; no other_refs; nothing primary could be read."
       }
     },
     {
@@ -3504,7 +3504,7 @@
     },
     {
       "id": "RQ-AIT-ACTOR-UNSUB-DAIQ-WEALTH-SHA-ZHU-PAN-SOPHOS-CTU",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -3522,8 +3522,8 @@
         "UnSub (DAIQ Wealth sha zhu pan) — Sophos CTU"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "not promoted",
+        "notes": "Sophos describes an AI-themed investment scam lure (fake 'AI-powered' platform), not use of AI by the scammers; no AI use shown."
       }
     },
     {
@@ -3552,7 +3552,7 @@
     },
     {
       "id": "RQ-AIT-ACTOR-UNSUB-FINANCIALLY-MOTIVATED-SYGNIA",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -3570,13 +3570,13 @@
         "UnSub (financially motivated) — Sygnia"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "not promoted",
+        "notes": "https://www.sygnia.co/threat-reports/inside-an-ai-assisted-cloud-attack/ returned HTTP 403; no other_refs; nothing primary read."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-UNSUB-INC-THE-GENTLEMEN-AFFILIATES-PHANT",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -3594,8 +3594,8 @@
         "UnSub (INC / The Gentlemen affiliates, \"Phantom\" framework) — SOCRadar"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "not promoted",
+        "notes": "Affiliates unnamed and the INC/Gentlemen link is partly low confidence; recorded as CAMPAIGN-INC-GENTLEMEN-PHANTOM-AI with no actor. INC = GOLD IONIC/G1032 labels are not attributed in the report and were not used."
       }
     },
     {
@@ -3624,7 +3624,7 @@
     },
     {
       "id": "RQ-AIT-ACTOR-UNSUB-IRANIAN-NEXUS-DEVELOPER-UNIT-42",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -3642,13 +3642,13 @@
         "UnSub (Iranian-nexus developer) — Unit 42"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "not promoted",
+        "notes": "Unit 42 names no actor and attributes only an Iranian-hosted developer workstation plus Keksec-ecosystem infrastructure overlap, not an Iranian-nexus actor; recorded as INCIDENT-TUXBOT-V3-LLM-DEVELOPMENT."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-UNSUB-PENTAGI-BASED-ORCHESTRATION-ASIAN-",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -3666,13 +3666,13 @@
         "UnSub (PentAGI-based orchestration, Asian telecom/integrators) — GTIG"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "not promoted",
+        "notes": "Unattributed; recorded as CAMPAIGN-PENTAGI-ASIA-TELECOM with no actor."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-UNSUB-RUSSIA-NEXUS-GTIG",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -3690,8 +3690,8 @@
         "UnSub (Russia-nexus) — GTIG"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "not promoted",
+        "notes": "Unnamed activity; recorded as INCIDENT-CANFAIL-LONGSTREAM-LLM-DECOY-CODE rather than an actor."
       }
     },
     {
@@ -3720,7 +3720,7 @@
     },
     {
       "id": "RQ-AIT-ACTOR-UNSUB-SIEMENS-S7-PLC-TARGETING-CISA",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -3738,8 +3738,8 @@
         "UnSub (Siemens S7 PLC targeting) — CISA"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "not promoted",
+        "notes": "Advisory names no actor; recorded as INCIDENT-SIEMENS-S7-AI-EXPLOIT-SCRIPTS."
       }
     },
     {
@@ -3768,7 +3768,7 @@
     },
     {
       "id": "RQ-AIT-ACTOR-UNSUB-SUSPECTED-PRC-NEXUS-AGENTIC-FRAMEW",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -3786,13 +3786,13 @@
         "UnSub (suspected PRC-nexus, agentic frameworks) — GTIG"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "not promoted",
+        "notes": "Unnamed activity; recorded as INCIDENT-HEXSTRIKE-STRIX-EAST-ASIA rather than an actor."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-VAPOR-PANDA",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -3810,13 +3810,13 @@
         "VAPOR PANDA"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-APT41",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -3834,13 +3834,13 @@
         "APT41"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-FUNKSEC",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -3858,13 +3858,13 @@
         "FunkSec"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-GLOBAL-GROUP",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -3882,13 +3882,13 @@
         "Global Group"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "not promoted",
+        "notes": "https://www.sentinelone.com/labs/llms-ransomware-an-operational-accelerator-not-a-revolution/ returned HTTP 429 on repeated attempts; no other_refs; nothing primary could be read."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-GTG-2002",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -3906,13 +3906,13 @@
         "GTG-2002"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-GTG-5004",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -3930,13 +3930,13 @@
         "GTG-5004"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-MULTIPLE-UNSUB-OPENAI-OCT-2025",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -3954,13 +3954,13 @@
         "Multiple UnSub — OpenAI (Oct 2025)"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "not promoted",
+        "notes": "Unnamed clusters; recorded as three actor-less campaigns. Openai.com landing page returned 403; the official PDF on cdn.openai.com was read instead. 'Phish and Scripts' only overlaps UNK_DROPPITCH/UTA0388 per OpenAI, so not merged."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-MULTIPLE-UNSUB-PROOFPOINT",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -3978,13 +3978,13 @@
         "Multiple UnSub — Proofpoint"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "not promoted",
+        "notes": "Unnamed operators; captured as INCIDENT-LOVABLE-PHISHING-ABUSE."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-PROMPTFLUX",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -4002,13 +4002,13 @@
         "PROMPTFLUX"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-QUIETVAULT",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -4026,13 +4026,13 @@
         "QUIETVAULT"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-REVENGEHOTELS",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -4050,13 +4050,13 @@
         "RevengeHotels"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-TEMP-ZAGROS",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -4074,13 +4074,13 @@
         "TEMP.Zagros"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-UNC4899",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -4098,13 +4098,13 @@
         "UNC4899"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-UNSUB-CHINA-NEXUS-CLOUD-INTRUSION-GTIG",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -4122,13 +4122,13 @@
         "UnSub (China-nexus, cloud intrusion) — GTIG"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "not promoted",
+        "notes": "Unnamed activity; recorded as campaign CAMPAIGN-GTIG-CHINA-NEXUS-GEMINI-INTRUSION-LIFECYCLE without actor."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-UNSUB-CHINA-NEXUS-CTF-PRETEXT-GTIG",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -4146,13 +4146,13 @@
         "UnSub (China-nexus, CTF-pretext) — GTIG"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "not promoted",
+        "notes": "Unnamed activity; recorded as campaign CAMPAIGN-GTIG-CHINA-NEXUS-CTF-PRETEXT without actor."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-UNSUB-CARDING-OPERATOR-ANTHROPIC",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -4170,13 +4170,13 @@
         "UnSub carding operator — Anthropic"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "not promoted",
+        "notes": "Unnamed; recorded as INCIDENT-ANTHROPIC-AI-CARDING-STORE."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-BANDCAMPRO",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -4194,13 +4194,13 @@
         "bandcampro"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
       "id": "RQ-AIT-ACTOR-GREYVIBE",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -4218,8 +4218,8 @@
         "GREYVIBE"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "promoted",
+        "notes": "Primary report read on 2026-11-10; see the actor, campaign or incident with this name."
       }
     },
     {
@@ -4248,7 +4248,7 @@
     },
     {
       "id": "RQ-AIT-ACTOR-UNSUB-HUNTRESS-AI-GENERATED-AD-RECON",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "actor-candidate",
@@ -4266,13 +4266,13 @@
         "UnSub — Huntress (AI-generated AD recon)"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the primary report. Promote only what it states: the vendor's label, nexus wording, the AI role (see docs/ACTORS-USING-AI.md) and confidence. Never merge with an existing actor without evidence."
+        "decision": "not promoted",
+        "notes": "Unnamed actor; recorded as INCIDENT-HUNTRESS-VIBE-CODED-AD-ENUMERATION from the primary Huntress report found via The Hacker News."
       }
     },
     {
       "id": "RQ-AIT-SRC-144F9E04AB",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -4288,13 +4288,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (Amazon). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "not promoted",
+        "notes": "Blog index page, not a report; only a defensive Bedrock AgentCore memory-poisoning post visible, no threat activity documented."
       }
     },
     {
       "id": "RQ-AIT-SRC-A551637D29",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -4310,13 +4310,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (Amazon). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
       "id": "RQ-AIT-SRC-31CB2BD77D",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -4332,13 +4332,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (Anthropic). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
       "id": "RQ-AIT-SRC-D4E87D2EE1",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -4354,13 +4354,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (Anthropic). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
       "id": "RQ-AIT-SRC-54E16AB1D4",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -4376,13 +4376,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (Anthropic). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
       "id": "RQ-AIT-SRC-063322EE8B",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -4398,13 +4398,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (anthropic.com). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
       "id": "RQ-AIT-SRC-2E4D8B580C",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -4420,13 +4420,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (bitdefender.com). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
       "id": "RQ-AIT-SRC-0F87B7D666",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -4442,13 +4442,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (cert-in.org.in). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
       "id": "RQ-AIT-SRC-48E906CF2B",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -4464,13 +4464,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (Check Point). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
       "id": "RQ-AIT-SRC-3D99F15443",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -4486,13 +4486,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (cisa.gov). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
       "id": "RQ-AIT-SRC-99E473B71E",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -4508,13 +4508,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (cisa.gov). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
       "id": "RQ-AIT-SRC-323BFAFC66",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -4530,13 +4530,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (CrowdStrike). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
       "id": "RQ-AIT-SRC-103FC57B10",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -4552,13 +4552,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (CrowdStrike). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
       "id": "RQ-AIT-SRC-E958A4AFBD",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -4574,13 +4574,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (CrowdStrike). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
       "id": "RQ-AIT-SRC-94A2492B97",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -4596,13 +4596,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (CrowdStrike). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
       "id": "RQ-AIT-SRC-01126A95A6",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -4618,8 +4618,8 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (CrowdStrike). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
@@ -4646,7 +4646,7 @@
     },
     {
       "id": "RQ-AIT-SRC-8600C4AEE6",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -4662,13 +4662,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (FBI IC3). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
       "id": "RQ-AIT-SRC-C9471936C8",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -4684,13 +4684,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (FBI IC3). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
       "id": "RQ-AIT-SRC-287DC7A087",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -4706,13 +4706,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (gambit.security). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
       "id": "RQ-AIT-SRC-4512C27A5A",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -4728,13 +4728,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (gambit.security). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
       "id": "RQ-AIT-SRC-08FAF5BC4C",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -4750,8 +4750,8 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (gambit.security). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
@@ -4778,7 +4778,7 @@
     },
     {
       "id": "RQ-AIT-SRC-C1BE2FED4A",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -4794,13 +4794,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (Google Threat Intelligence Group). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
       "id": "RQ-AIT-SRC-547A4FF6D9",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -4816,13 +4816,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (Google Threat Intelligence Group). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
       "id": "RQ-AIT-SRC-CBA6F65C89",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -4838,13 +4838,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (greynoise.io). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
       "id": "RQ-AIT-SRC-F4A116A9C3",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -4860,13 +4860,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (group-ib.com). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
       "id": "RQ-AIT-SRC-CA8F4D9B20",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -4882,13 +4882,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (huggingface.co). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
       "id": "RQ-AIT-SRC-181E0ACDF7",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -4904,8 +4904,8 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (Hunt.io). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
@@ -4932,7 +4932,7 @@
     },
     {
       "id": "RQ-AIT-SRC-39536C5837",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -4948,13 +4948,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (ic3.gov). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "not promoted",
+        "notes": "The original URL returns 404; the same PSA was read at https://www.ic3.gov/PSA/2023/PSA230605 and recorded as a source only. It is a general deepfake-sextortion warning, not a discrete incident."
       }
     },
     {
       "id": "RQ-AIT-SRC-98881EF4AE",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -4970,13 +4970,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (Kaspersky). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
       "id": "RQ-AIT-SRC-31AA3F021C",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -4992,13 +4992,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (Kaspersky). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
       "id": "RQ-AIT-SRC-6483FE591E",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -5014,13 +5014,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (Kaspersky). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
       "id": "RQ-AIT-SRC-110D3DF2E0",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -5036,13 +5036,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (Mandiant). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "not promoted",
+        "notes": "Redirected; read at cloud.google.com. 2023 overview of limited GenAI use (DRAGONBRIDGE, Ghostwriter, APT43 'may potentially'); source only."
       }
     },
     {
       "id": "RQ-AIT-SRC-8AB4A96606",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -5058,13 +5058,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (Microsoft). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
       "id": "RQ-AIT-SRC-086483DA23",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -5080,13 +5080,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (Microsoft). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "not promoted",
+        "notes": "Read successfully but contains no AI-related content (2021 BazaCall call-centre campaign); out of scope, source not recorded."
       }
     },
     {
       "id": "RQ-AIT-SRC-F65B90570E",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -5102,13 +5102,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (Microsoft). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
       "id": "RQ-AIT-SRC-51A03C0C39",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -5124,13 +5124,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (Microsoft). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
       "id": "RQ-AIT-SRC-259B6050D0",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -5146,13 +5146,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (Microsoft). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
       "id": "RQ-AIT-SRC-1B8876B90C",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -5168,8 +5168,8 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (Microsoft). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
@@ -5196,7 +5196,7 @@
     },
     {
       "id": "RQ-AIT-SRC-5773811063",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -5212,8 +5212,8 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (Microsoft). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
@@ -5240,7 +5240,7 @@
     },
     {
       "id": "RQ-AIT-SRC-3ACE99B3C9",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -5256,13 +5256,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (microsoft.com). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "not promoted",
+        "notes": "The PDF URL now serves the Security Insider landing page (curl 403; WebFetch returned an unrelated page). Cyber Signals Issue 6 content was not read; no other_refs."
       }
     },
     {
       "id": "RQ-AIT-SRC-753A325D91",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -5278,13 +5278,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (microsoft.com). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
       "id": "RQ-AIT-SRC-57B7588E49",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -5300,8 +5300,8 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (NCSC UK). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
@@ -5328,7 +5328,7 @@
     },
     {
       "id": "RQ-AIT-SRC-9480F43418",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -5344,8 +5344,8 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (OpenAI). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
@@ -5394,7 +5394,7 @@
     },
     {
       "id": "RQ-AIT-SRC-960AD84788",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -5410,13 +5410,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (openai.com). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "not promoted",
+        "notes": "Fetch returned HTTP 403 (also at /index/ path); not recorded."
       }
     },
     {
       "id": "RQ-AIT-SRC-F014A35879",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -5432,13 +5432,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (openai.com). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "not promoted",
+        "notes": "HTTP 403 for both WebFetch and curl; no other_refs; primary not read."
       }
     },
     {
       "id": "RQ-AIT-SRC-AB29312602",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -5454,13 +5454,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (Palo Alto Networks Unit 42). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
       "id": "RQ-AIT-SRC-B376B54FD7",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -5476,13 +5476,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (Palo Alto Networks Unit 42). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
       "id": "RQ-AIT-SRC-EACE05FB01",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -5498,13 +5498,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (Palo Alto Networks Unit 42). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
       "id": "RQ-AIT-SRC-19E690D581",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -5520,13 +5520,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (Palo Alto Networks Unit 42). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
       "id": "RQ-AIT-SRC-403961E5BB",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -5542,13 +5542,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (Palo Alto Networks Unit 42). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
       "id": "RQ-AIT-SRC-1299D373C0",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -5564,13 +5564,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (Proofpoint). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
       "id": "RQ-AIT-SRC-757A9A1F90",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -5586,13 +5586,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (Proofpoint). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
       "id": "RQ-AIT-SRC-CD215BDAD9",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -5608,13 +5608,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (Recorded Future). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
       "id": "RQ-AIT-SRC-3DD14B9944",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -5630,8 +5630,8 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (Resecurity). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
@@ -5658,7 +5658,7 @@
     },
     {
       "id": "RQ-AIT-SRC-2F65973130",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -5674,13 +5674,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (slashnext.com). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "not promoted",
+        "notes": "Original post now redirects to a Varonis product page; archive copy not fetchable. Nothing primary could be read."
       }
     },
     {
       "id": "RQ-AIT-SRC-FB679B68F3",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -5696,13 +5696,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (socradar.io). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
       "id": "RQ-AIT-SRC-7FD2E0B539",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -5718,8 +5718,8 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (socradar.io). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
@@ -5812,7 +5812,7 @@
     },
     {
       "id": "RQ-AIT-SRC-D0BC177AF9",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -5828,13 +5828,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (Trend Micro). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
       "id": "RQ-AIT-SRC-DD6FB8404F",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -5850,8 +5850,8 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (Trend Micro). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "not promoted",
+        "notes": "Source-only trend report; URL redirects to trendaisecurity.com, which was read and recorded. No discrete incident added."
       }
     },
     {
@@ -5878,7 +5878,7 @@
     },
     {
       "id": "RQ-AIT-SRC-A46F557D4E",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -5894,13 +5894,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (zscaler.com). Not in any LLMInjection dataset. Vendor or government publication.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
       "id": "RQ-AIT-SRC-46072F16C1",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -5916,13 +5916,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (asantecloud.com). Not in any LLMInjection dataset. Press or other secondary publication: look for the primary report it cites.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "not promoted",
+        "notes": "HTTP 404; third-party mirror, not read."
       }
     },
     {
       "id": "RQ-AIT-SRC-DE99521570",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -5938,13 +5938,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (blackpointcyber.com). Not in any LLMInjection dataset. Press or other secondary publication: look for the primary report it cites.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
       "id": "RQ-AIT-SRC-2458F97780",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -5960,13 +5960,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (cdn.prod.website-files.com). Not in any LLMInjection dataset. Press or other secondary publication: look for the primary report it cites.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
       "id": "RQ-AIT-SRC-A6AB289E0E",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -5982,13 +5982,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (CNBC). Not in any LLMInjection dataset. Press or other secondary publication: look for the primary report it cites.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "not promoted",
+        "notes": "Press. It cites SlashNext State of Phishing 2023, but that URL now redirects to a Varonis landing page, so the primary could not be read. It is also a trend statistic, not an actor or incident."
       }
     },
     {
       "id": "RQ-AIT-SRC-A3FA447367",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -6004,13 +6004,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (cyberandramen.net). Not in any LLMInjection dataset. Press or other secondary publication: look for the primary report it cites.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
       "id": "RQ-AIT-SRC-F577F6803B",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -6026,13 +6026,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (dreamgroup.com). Not in any LLMInjection dataset. Press or other secondary publication: look for the primary report it cites.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
       "id": "RQ-AIT-SRC-D499EAC1BC",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -6048,13 +6048,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (euronews.com). Not in any LLMInjection dataset. Press or other secondary publication: look for the primary report it cites.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
       "id": "RQ-AIT-SRC-A1CB257A2C",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -6070,13 +6070,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (focustaiwan.tw). Not in any LLMInjection dataset. Press or other secondary publication: look for the primary report it cites.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "not promoted",
+        "notes": "Press article (Focus Taiwan/CNA) on a Taipei prosecutors' indictment of an AI voice-changing romance-scam ring; the primary prosecutors' statement was not available to fetch, so nothing primary was read."
       }
     },
     {
       "id": "RQ-AIT-SRC-3573BFC7B5",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -6092,13 +6092,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (hongkongfp.com). Not in any LLMInjection dataset. Press or other secondary publication: look for the primary report it cites.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "not promoted",
+        "notes": "Fetch failed (HTTP 429 three times); press article and no primary source available."
       }
     },
     {
       "id": "RQ-AIT-SRC-C539EC91CE",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -6114,13 +6114,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (ilpost.it). Not in any LLMInjection dataset. Press or other secondary publication: look for the primary report it cites.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "not promoted",
+        "notes": "Italian press (Il Post), citing Corriere della Sera (also press), on a roughly EUR 95M CEO-fraud against Fideuram with reportedly AI-cloned voice. No primary vendor or government report available; AI voice cloning is reported in the conditional by press only."
       }
     },
     {
       "id": "RQ-AIT-SRC-53FF85DFCC",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -6136,13 +6136,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (Infosecurity Magazine). Not in any LLMInjection dataset. Press or other secondary publication: look for the primary report it cites.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "not promoted",
+        "notes": "Press article (2024-11-19) with a single unsupported line that Salt Typhoon used 'advanced use of artificial intelligence'; its cited primary (WSJ) is paywalled and not read. Not recorded."
       }
     },
     {
       "id": "RQ-AIT-SRC-FA1D4760F8",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -6158,13 +6158,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (ithsecure.com). Not in any LLMInjection dataset. Press or other secondary publication: look for the primary report it cites.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
       "id": "RQ-AIT-SRC-58DF34CDC8",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -6180,13 +6180,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (JFrog). Not in any LLMInjection dataset. Press or other secondary publication: look for the primary report it cites.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
       "id": "RQ-AIT-SRC-0CBD448951",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -6202,13 +6202,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (psni.police.uk). Not in any LLMInjection dataset. Press or other secondary publication: look for the primary report it cites.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "not promoted",
+        "notes": "HTTP 403; page could not be read."
       }
     },
     {
       "id": "RQ-AIT-SRC-65A231F27B",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -6224,13 +6224,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (securityaffairs.com). Not in any LLMInjection dataset. Press or other secondary publication: look for the primary report it cites.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "not promoted",
+        "notes": "Press. The primary Hunt.io report was fetched and recorded instead (SRC-HUNTIO-CLAUDE-DEEPSEEK-INTRUSION)."
       }
     },
     {
       "id": "RQ-AIT-SRC-A869096406",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -6246,13 +6246,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (securityweek.com). Not in any LLMInjection dataset. Press or other secondary publication: look for the primary report it cites.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
       "id": "RQ-AIT-SRC-E2E1E86C64",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -6268,13 +6268,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (sj.com). Not in any LLMInjection dataset. Press or other secondary publication: look for the primary report it cites.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "not promoted",
+        "notes": "Fetch blocked for wsj.com; press article with no other_refs; nothing read."
       }
     },
     {
       "id": "RQ-AIT-SRC-EC89FD6FE3",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -6290,13 +6290,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (South China Morning Post). Not in any LLMInjection dataset. Press or other secondary publication: look for the primary report it cites.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "not promoted",
+        "notes": "Fetch failed (HTTP 403) and no other_refs or primary report available; nothing recorded."
       }
     },
     {
       "id": "RQ-AIT-SRC-835A9221F4",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -6312,13 +6312,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (Symantec). Not in any LLMInjection dataset. Press or other secondary publication: look for the primary report it cites.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "not promoted",
+        "notes": "Press article; primary joint advisory (https://www.ic3.gov/CSA/2026/260723.pdf) fetched and recorded instead."
       }
     },
     {
       "id": "RQ-AIT-SRC-7C298C0995",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -6334,13 +6334,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (The Hacker News). Not in any LLMInjection dataset. Press or other secondary publication: look for the primary report it cites.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
       "id": "RQ-AIT-SRC-E49939701E",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -6356,13 +6356,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (The Register). Not in any LLMInjection dataset. Press or other secondary publication: look for the primary report it cites.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "added to sources",
+        "notes": "Read and graded on 2026-11-10."
       }
     },
     {
       "id": "RQ-AIT-SRC-D14E71C875",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -6378,13 +6378,13 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (tripwire.com). Not in any LLMInjection dataset. Press or other secondary publication: look for the primary report it cites.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "not promoted",
+        "notes": "Fetch returned HTTP 403; no other refs; nothing primary read."
       }
     },
     {
       "id": "RQ-AIT-SRC-15DF061CF0",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-AI-ACTOR-TRACKER",
       "source_grade": "D",
       "kind": "source-candidate",
@@ -6400,8 +6400,8 @@
       "summary": "Report cited by a community tracker of threat-actor use of AI (WeChat (Chinese vendor)). Not in any LLMInjection dataset. Press or other secondary publication: look for the primary report it cites.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "Read it and grade it (docs/SOURCE-GRADING.md) before adding it to data/sources.json."
+        "decision": "not promoted",
+        "notes": "WeChat returned a verification wall ('环境异常'); no content readable."
       }
     }
   ]

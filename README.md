@@ -62,7 +62,7 @@ Each row is a record in [`data/threat-landscape-2026.json`](data/threat-landscap
 
 <!-- gen:landscape-evidence:start -->
 
-Of the **28 techniques** tracked, **18** have activity observed in the wild, **0** are tied to a disclosed vulnerability, **8** are demonstrated in research and **2** have no linked evidence yet (a gap in this repository, not a claim that they are theoretical). On the defensive side, **5 of 45** detections exist as rule files; the rest are specifications.
+Of the **28 techniques** tracked, **22** have activity observed in the wild, **0** are tied to a disclosed vulnerability, **6** are demonstrated in research and **0** have no linked evidence yet (a gap in this repository, not a claim that they are theoretical). On the defensive side, **5 of 45** detections exist as rule files; the rest are specifications.
 
 <!-- gen:landscape-evidence:end -->
 
@@ -94,11 +94,11 @@ New [source registry and ingestion guidance](docs/AI-INTELLIGENCE-SOURCES.md), [
 
 | Actors | Campaigns | Incidents | Vulnerabilities | Techniques | Sources |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| **13** | **15** | **33** | **9** | **28** | **59** |
+| **73** | **91** | **65** | **9** | **28** | **132** |
 
 | Test cases | Detections | Controls | Frameworks | Model families | Relationships | Ecosystem repos |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| **40** | **45** | **32** | **19** | **12** | **229** | **117** |
+| **40** | **45** | **32** | **19** | **12** | **451** | **117** |
 
 <!-- gen:stats:end -->
 
@@ -229,10 +229,10 @@ Maturity is **derived, not asserted**: `scripts/maturity.py` computes it from th
 
 | Maturity | Derived from | Techniques | IDs |
 |---|---|---|---|
-| `observed-in-the-wild` | Linked to a campaign, or to an incident whose status is observed | 18 | T003, T005, T008, T010, T011, T012, T013, T014, T015, T016, T017, T018, T019, T021, T023, T024, T026, T028 |
+| `observed-in-the-wild` | Linked to a campaign, or to an incident whose status is observed | 22 | T001, T003, T004, T005, T008, T010, T011, T012, T013, T014, T015, T016, T017, T018, T019, T021, T022, T023, T024, T026, T027, T028 |
 | `disclosed-vulnerability` | Linked to a vulnerability record (CVE, GHSA or malicious package) | 0 |  |
-| `research-demonstrated` | Linked to a research or lab incident, or mapped by a research or benchmark project | 8 | T001, T002, T004, T006, T007, T009, T020, T025 |
-| `no-linked-evidence` | Nothing in this repository links to it yet. Not a claim that it is theoretical | 2 | T022, T027 |
+| `research-demonstrated` | Linked to a research or lab incident, or mapped by a research or benchmark project | 6 | T002, T006, T007, T009, T020, T025 |
+| `no-linked-evidence` | Nothing in this repository links to it yet. Not a claim that it is theoretical | 0 |  |
 
 <!-- gen:maturity:end -->
 
@@ -413,6 +413,66 @@ Real-world reporting is intentionally placed on the front page because AI securi
 | **Jasper Sleet** | North Korea | offensive-enabler | Microsoft reports Jasper Sleet using generative and agentic AI in resume workflows to build fake digital personas and to keep… | high |
 | **Onyx Sleet** | North Korea | offensive-enabler | Microsoft reports Onyx Sleet produced more than 100 target-specific PDF lures in August and September 2026, dozens within minutes… | high |
 | **APT27** | China | tooling-development | Google Threat Intelligence Group observed the PRC-nexus actor APT27 using Gemini to accelerate development of a fleet-management… | confirmed |
+| **GTG-20006** | Russia (report: consistent with Russian state-nexus espionage and with public reporting linking the actor to Midnight Blizzard) | autonomous-operator, tooling-development | Anthropic reports that GTG-20006, a Russian espionage cluster whose attribution it calls consistent with public reporting on… | confirmed |
+| **GTG-50014** | Not stated in report (operators suspected to be affiliates of the ShinyHunters collective; financially motivated extortion) | autonomous-operator, tooling-development | Anthropic reports that GTG-50014, operators it suspects are affiliates of the ShinyHunters collective (operator handles MeowSHA… | confirmed |
+| **GTG-10007** | China (report: Chinese-speaking operators likely residing in Changsha, Hunan province) | autonomous-operator, tooling-development | Anthropic reports that GTG-10007, Chinese-speaking operators it assesses likely reside in Changsha, used Claude as the… | confirmed |
+| **GTG-50020** | Unattributed, financially motivated (report: Russian-speaking, financially-motivated actor) | ai-infrastructure-targeting, ai-supply-chain-targeting, autonomous-operator | Anthropic reports that GTG-50020, a Russian-speaking financially motivated actor, moved from hotel-booking and fintech targets to… | confirmed |
+| **GTG-50021** | Not stated in report (Russian- and Ukrainian-speaking group; fraud) | ai-infrastructure-targeting | Anthropic reports that GTG-50021 (alias kl1zy), a Russian- and Ukrainian-speaking group, ran a fraudulent AI reseller that… | confirmed |
+| **GTG-50029** | Not stated in report (single French-speaking hacktivist actor) | tooling-development, offensive-enabler | Anthropic reports that GTG-50029, a single French-speaking hacktivist, used Claude to build a Rust scanner for exposed AI API… | confirmed |
+| **GTG-14021** | China (report: believed associated with a municipal cyber police unit; Zhejiang location assessed with medium confidence) | tooling-development, offensive-enabler | Anthropic reports that GTG-14021, which it believes is associated with a Chinese municipal cyber police unit (institution… | confirmed |
+| **GTG-14022** | China (report: assessed with medium confidence to be a contractor for PRC-government clients) | tooling-development, offensive-enabler | Anthropic reports that GTG-14022, assessed with medium confidence to be a contractor working for PRC government clients, used… | confirmed |
+| **GTG-15001** | China (report: a China-based app studio using PRC-based proxy infrastructure) | runtime-enabler, tooling-development | Anthropic reports that GTG-15001, a China-based app studio relying on PRC-based proxy infrastructure, used Claude both to build a… | confirmed |
+| **GTG-17002** | China (report: assessed China-based defense and military-industrial researcher with links to PRC research institutions including the PLA Academy of Military Sciences) | tooling-development | Anthropic reports that GTG-17002, which it assesses is a China-based defense researcher linked to PRC research institutions… | confirmed |
+| **GTG-27005** | Russia (report: Russia-based; assessed small specialized freelance team, not a state entity, with assessed ties to a regional university linked to a Russian Academy of Sciences research center) | tooling-development | Anthropic reports that GTG-27005 (operation names DronDoc / Serafim), assessed as a small Russia-based freelance team, used… | confirmed |
+| **GTG-30004** | Iran (report: Iran-nexus threat actor) | tooling-development, offensive-enabler | Anthropic reports that GTG-30004, an Iran-nexus threat actor, used Claude to orchestrate an OSINT identity-profiling harness… | confirmed |
+| **GTG-30005** | Iran (report: Iran-nexus threat actor) | tooling-development, offensive-enabler | Anthropic reports that GTG-30005, an Iran-nexus threat actor, used Claude to build targeting handbooks and a Python… | confirmed |
+| **GTG-30006** | Iran (report: Iranian threat actor) | tooling-development | Anthropic reports that GTG-30006, an Iranian threat actor building domestic-surveillance tooling, used fragmented sessions on… | confirmed |
+| **GTG-34007** | Iran (report: assessed with high confidence to be associated with Iranian paramilitary domestic security entities) | tooling-development, offensive-enabler | Anthropic reports that GTG-34007, two units it assesses with high confidence are associated with Iranian paramilitary… | confirmed |
+| **GTG-50027** | Mali (report: likely a Bamako-based independent consultant working with Mali's state intelligence service, ANSE) | tooling-development | Anthropic reports that GTG-50027, likely a Bamako-based independent consultant working with Mali's state intelligence service… | confirmed |
+| **GTG-87001** | Not stated in report (report: based in northern Yemen; no group named) | tooling-development | Anthropic reports that GTG-87001, a weapons engineering cell based in northern Yemen, used Claude Code as a substitute for… | confirmed |
+| **RAVINE CASTLE** | China | offensive-enabler | Google Threat Intelligence Group describes RAVINE CASTLE, a PRC-nexus espionage group previously known as COULEE and APT24… | confirmed |
+| **SANDWORM RELIC** | Russia | tooling-development, offensive-enabler | Google Threat Intelligence Group reports that SANDWORM RELIC, the Russian espionage group formerly tracked as FROZENBARENTS… | confirmed |
+| **UNC5792** | Russia | runtime-enabler | Google Threat Intelligence Group reports that the Russia-based group UNC5792 experimented with integrating AI models into… | confirmed |
+| **UNC6508** | China | ai-infrastructure-targeting | Google Threat Intelligence Group describes UNC6508 as a PRC-nexus actor running a multi-year espionage campaign against academic… | confirmed |
+| **UNC1069** | North Korea | offensive-enabler, tooling-development | Google Threat Intelligence Group reports the North Korean cryptocurrency-theft actor UNC1069 (aka MASAN) used Gemini to research… | confirmed |
+| **APT41** | China | tooling-development | Google Threat Intelligence Group observed the PRC-backed actor APT41 throughout August 2025 using Gemini for C++ and Golang code… | confirmed |
+| **TEMP.Zagros** | Iran | tooling-development | Google Threat Intelligence Group reports the Iranian state-sponsored actor TEMP.Zagros (aka MUDDYCOAST, Muddy Water) used Gemini… | confirmed |
+| **UNC4899** | North Korea | tooling-development | Google Threat Intelligence Group reports the North Korean supply-chain-compromise actor UNC4899 (aka PUKCHONG) used Gemini to… | confirmed |
+| **FunkSec** | Unattributed; hacktivism/cybercrime hybrid (developer assessed as based in Algeria) | tooling-development | Check Point Research describes FunkSec as a new ransomware-as-a-service operation that emerged in late 2024, straddling… | medium |
+| **APT45** | Not stated in report | offensive-enabler | Google Threat Intelligence Group reports observing APT45 send thousands of repetitive prompts that recursively analyse different… | confirmed |
+| **UNC2814** | Not stated in report | offensive-enabler | Google Threat Intelligence Group observed UNC2814 using expert-persona prompting with Gemini, directing the model to act as a… | confirmed |
+| **UNC5673** | China | offensive-enabler | Google Threat Intelligence Group describes UNC5673 as a PRC-nexus cluster with notable overlaps with TEMP.Hex that has targeted… | confirmed |
+| **UNC6201** | China | offensive-enabler | Google Threat Intelligence Group observed attempted use, by PRC-nexus UNC6201, of a public GitHub Python script that automates… | confirmed |
+| **bandcampro** | Unattributed, Russian-speaking; financially motivated | autonomous-operator, tooling-development | Trend Micro (TrendAI Research) analysed about 200 Gemini CLI session logs (19 March to 21 April 2026) from the Russian-speaking… | confirmed |
+| **Temp.HEX** | China | offensive-enabler | Google Threat Intelligence Group reports that the PRC-based actor Temp.HEX used Gemini and other AI tools in Q4 2025 to compile… | confirmed |
+| **APT31** | China | offensive-enabler | Google Threat Intelligence Group reports that the PRC-based actor APT31 prompted Gemini with an expert cybersecurity persona and… | confirmed |
+| **UNC5356** | Unattributed, financially motivated | tooling-development | Google Threat Intelligence Group assesses with high confidence that part of the COINBAIT phishing-kit activity, which targets… | medium |
+| **UNC6418** | Unattributed | offensive-enabler | Google Threat Intelligence Group reports that the unattributed cluster UNC6418 used Gemini for targeted intelligence gathering on… | confirmed |
+| **UNC795** | China | tooling-development, offensive-enabler | Google Threat Intelligence Group reports that the PRC-based actor UNC795 used Gemini several days a week in Q4 2025 across the… | confirmed |
+| **Armored Likho** | Not stated in report | tooling-development | Kaspersky reports that the first-stage loaders and stagers in Armored Likho's BusySnake Stealer campaign against government and… | high |
+| **SilkParasite** | China (medium confidence) | tooling-development | Bitdefender designates SilkParasite as an activity cluster targeting Central Asian government bodies and holds its China-nexus… | medium |
+| **STAC6994** | Not stated in report | tooling-development | Sophos found a rogue device in a customer environment (May 2026) where the actor tracked as STAC6994 ran about a dozen… | confirmed |
+| **DragonForce** | Not stated in report | offensive-enabler | In a DragonForce ransomware case investigated by Sophos IR, the actor produced what Sophos 'strongly suspect[s]' was an… | medium |
+| **The Gentlemen** | Not stated in report | tooling-development | Sophos states that leaked chats from The Gentlemen ransomware group confirmed the group used generative AI to produce attack… | medium |
+| **GTG-2002** | Unattributed, financially motivated | autonomous-operator, offensive-enabler | Anthropic disrupted a data-extortion operation tracked as GTG-2002 in which a cybercriminal used Claude Code, guided by a… | confirmed |
+| **GTG-5004** | Unattributed, financially motivated (UK-based per Anthropic) | tooling-development | Anthropic reports a UK-based actor tracked as GTG-5004 used Claude to develop, market and distribute ransomware-as-a-service… | confirmed |
+| **BUGSTER** | Unattributed, financially motivated (English-speaking per Unit 42) | offensive-enabler, tooling-development | Unit 42, with visibility into the actor's operational environment, reports BUGSTER used Hermes Agent with DeepSeek V4 (controlled… | confirmed |
+| **Storm-0940** | China | autonomous-operator | Microsoft reports that Storm-0940, a China-state aligned actor active since 2021, used the open-source multi-agent penetration… | confirmed |
+| **LAUNDRY BEAR** | Russia | tooling-development | A joint advisory led by CISA, NSA and FBI with 27 partner agencies describes LAUNDRY BEAR as a Russian state-supported espionage… | medium |
+| **Earth Krahang** | China | tooling-development | TrendAI describes Earth Krahang, a China-aligned group targeting government and defense sectors globally, using generative AI to… | confirmed |
+| **Earth Naga** | China | tooling-development | TrendAI reports that Earth Naga, a China-aligned group it associates with Flax Typhoon, used an iterative AI prompting ('vibe… | confirmed |
+| **CyberXero** | Unattributed, financially motivated (Russian-speaking initial access broker; no state nexus asserted) | autonomous-operator, offensive-enabler | SOCRadar describes CyberXero as a Russian-speaking, financially motivated initial access broker that ran up to 51 specialised… | confirmed |
+| **Storm-2945** | Russia | offensive-enabler, tooling-development | Microsoft Threat Intelligence assesses Storm-2945 to be an operational sub-cluster of Midnight Blizzard and attributes the… | confirmed |
+| **RevengeHotels** | Unattributed, financially motivated | tooling-development | Kaspersky attributes a summer 2025 wave of hotel-targeting phishing delivering VenomRAT to RevengeHotels (TA558) with high… | medium |
+| **CL-CRI-1131** | Not stated in report | tooling-development, offensive-enabler | Palo Alto Networks Unit 42 tracks CL-CRI-1131 attacking a transportation organization, government ministries and water utilities… | high |
+| **CL-CRI-1163** | Not stated in report | tooling-development | Palo Alto Networks Unit 42 tracks CL-CRI-1163 targeting the Brazilian financial sector with job- or resume-themed phishing from… | medium |
+| **Jade Sleet** | North Korea | offensive-enabler, tooling-development | Microsoft Threat Intelligence assesses that the North Korean actor Jade Sleet has operationalized AI across its operations, using… | high |
+| **Pearl Sleet** | North Korea | autonomous-operator, tooling-development | Microsoft Threat Intelligence places the North Korean actor Pearl Sleet at the accelerating stage of AI adoption and has… | confirmed |
+| **Sapphire Sleet** | North Korea | tooling-development | Microsoft Threat Intelligence places the North Korean actor Sapphire Sleet at the accelerating stage of AI adoption, saying it… | medium |
+| **knaithe** | China (Chinese-speaking actor based in Zhuhai; opportunistic exploit operator) | autonomous-operator | Palo Alto Networks Unit 42 describes a Chinese-speaking, opportunistic exploit operator (knaithe / KnYuan) running DeepSeek… | confirmed |
+| **Aurora** | Not stated in report (ransomware/extortion group; operator prompts written in Russian) | offensive-enabler, autonomous-operator | Gambit Security reports the Aurora ransomware group, active since about April 2026, used Cursor Agent running Claude Sonnet… | confirmed |
+| **VAPOR PANDA** | China | autonomous-operator | CrowdStrike reports the China-nexus adversary VAPOR PANDA used the ARTEX multi-agent framework, mainly with DeepSeek, to run… | confirmed |
+| **GREYVIBE** | Russia | tooling-development, offensive-enabler | WithSecure assesses with high confidence that GREYVIBE's activity aligns with Russian state interests, targeting mainly Ukrainian… | high |
 
 <!-- gen:actors:end -->
 
@@ -437,6 +497,82 @@ Real-world reporting is intentionally placed on the front page because AI securi
 | **Jasper Sleet AI-built remote-worker personas** | 2026 | 2026-10-29 |  | high | Microsoft reports Jasper Sleet using generative and agentic AI to build fake digital personas and keep fraudulent worker identities… |
 | **Onyx Sleet AI-generated lures against South Korea** | 2026-08 | 2026-10-29 | KR | high | Microsoft reports more than 100 target-specific PDF lures, highly likely generated by an AI platform, for phishing against South Korean… |
 | **APT27 Gemini-assisted ORB management tooling** | 2026 | 2026-05-11 |  | confirmed | Google Threat Intelligence Group observed APT27 using Gemini to accelerate development of a fleet-management application likely to support… |
+| **GTG-20006 Claude-driven espionage operation lifecycle** | 2026 | 2026-09 |  | confirmed | Anthropic reports that GTG-20006, a Russian espionage cluster whose attribution it calls consistent with public reporting on Midnight… |
+| **GTG-50014 AI-driven smash-and-grab intrusions and extortion** | 2026-02 | 2026-09 |  | confirmed | Anthropic reports that GTG-50014, operators it suspects are affiliates of the ShinyHunters collective (operator handles MeowSHA, frkoo and… |
+| **GTG-10007 exploit foundry and autonomous attack frameworks** | 2026 | 2026-09 |  | confirmed | Anthropic reports that GTG-10007, Chinese-speaking operators it assesses likely reside in Changsha, used Claude as the engineering and… |
+| **GTG-50020 AI vendor sandbox injection and AI-company targeting** | 2026-05 | 2026-09 |  | confirmed | Anthropic reports that GTG-50020, a Russian-speaking financially motivated actor, moved from hotel-booking and fintech targets to the AI… |
+| **GTG-50021 fraudulent Claude reseller and account credential harvesting** | 2026 | 2026-09 |  | confirmed | Anthropic reports that GTG-50021 (alias kl1zy), a Russian- and Ukrainian-speaking group, ran a fraudulent AI reseller that advertised… |
+| **GTG-50029 hacktivist campaign against European political entities** | 2026-02 | 2026-09 |  | confirmed | Anthropic reports that GTG-50029, a single French-speaking hacktivist, used Claude to build a Rust scanner for exposed AI API keys, develop… |
+| **GTG-14021 stability-maintenance and transnational repression tooling** | 2026 | 2026-09 |  | confirmed | Anthropic reports that GTG-14021, which it believes is associated with a Chinese municipal cyber police unit (institution attribution at… |
+| **GTG-14022 public-opinion monitoring pipeline** | 2026 | 2026-09 |  | confirmed | Anthropic reports that GTG-14022, assessed with medium confidence to be a contractor working for PRC government clients, used Claude with… |
+| **GTG-15001 deceptive dating-app network** | 2026-04 | 2026-09 |  | confirmed | Anthropic reports that GTG-15001, a China-based app studio relying on PRC-based proxy infrastructure, used Claude both to build a network… |
+| **GTG-17002 electronic warfare and SEAD targeting software** | 2026 | 2026-09 |  | confirmed | Anthropic reports that GTG-17002, which it assesses is a China-based defense researcher linked to PRC research institutions including the… |
+| **GTG-27005 autonomous drone-swarm software development** | 2025 | 2026-09 |  | confirmed | Anthropic reports that GTG-27005 (operation names DronDoc / Serafim), assessed as a small Russia-based freelance team, used Claude Code to… |
+| **GTG-30004 OSINT profiling and malware obfuscation** | 2026 | 2026-09 |  | confirmed | Anthropic reports that GTG-30004, an Iran-nexus threat actor, used Claude to orchestrate an OSINT identity-profiling harness against… |
+| **GTG-30005 military reconnaissance and surveillance tooling** | 2026 | 2026-09 |  | confirmed | Anthropic reports that GTG-30005, an Iran-nexus threat actor, used Claude to build targeting handbooks and a Python naval-tracking pipeline… |
+| **GTG-30006 domestic surveillance malware and phishing tooling** | 2026 | 2026-09 |  | confirmed | Anthropic reports that GTG-30006, an Iranian threat actor building domestic-surveillance tooling, used fragmented sessions on free Claude… |
+| **GTG-34007 paramilitary surveillance tooling** | 2026 | 2026-09 |  | confirmed | Anthropic reports that GTG-34007, two units it assesses with high confidence are associated with Iranian paramilitary domestic-security… |
+| **GTG-50027 Lakana 360 mass-interception platform development** | 2026 | 2026-09 |  | confirmed | Anthropic reports that GTG-50027, likely a Bamako-based independent consultant working with Mali's state intelligence service (ANSE), used… |
+| **GTG-87001 guided weapons GNC software development** | 2026 | 2026-09 |  | confirmed | Anthropic reports that GTG-87001, a weapons engineering cell based in northern Yemen, used Claude Code as a substitute for engineers on… |
+| **GTG-17001 anti-torpedo fire-control specification and acquisition documents** | 2026 | 2026-09 |  | confirmed | Anthropic reports that an actor posing as a US defense OEM, which it assesses was associated with a Chinese defense industry manufacturer… |
+| **RAVINE CASTLE Gemini misuse across the attack lifecycle** | 2026 | 2026-09-08 |  | confirmed | GTIG observed RAVINE CASTLE using Gemini for target research supporting social engineering, exploit and post-exploitation research… |
+| **SANDWORM RELIC Gemini-assisted operations against Ukraine** | 2026 | 2026-09-08 |  | confirmed | GTIG observed SANDWORM RELIC using Gemini to write password-spraying and endpoint-fingerprinting scripts, support intelligence gathering… |
+| **UNC5792 AI-assisted Telegram channel monitoring** | 2026 | 2026-09-08 |  | confirmed | GTIG reports UNC5792 experimenting with AI models inside Telegram monitoring bots to classify messages and output structured intelligence… |
+| **UNC6508 targeting of proprietary AI research** | 2026 | 2026-09-08 |  | confirmed | GTIG describes a multi-year UNC6508 espionage campaign (first reported by GTIG in June 2026) against North American research institutions… |
+| **Unnamed DPRK clusters using Gemini for recon and pretexting** | 2026 | 2026-09-08 |  | confirmed | GTIG reports multiple unnamed DPRK-associated clusters using AI for resource procurement, profiling aerospace and defense targets, and… |
+| **Unnamed PRC-nexus AI-assisted exploitation pipeline (CC Switch, Phalanx, Shai-Hulud)** | 2026 | 2026-09-08 |  | confirmed | GTIG observed an unnamed PRC-nexus espionage group with a history of targeting government entities using CC Switch to query Claude, Gemini… |
+| **Unnamed PRC-nexus attempt to build an agentic pentest framework with Gemini** | 2026 | 2026-09-08 |  | confirmed | GTIG observed an unnamed PRC-nexus espionage group using Gemini to design an agentic penetration-testing framework for discovery tasks such… |
+| **UNC1069 Gemini-assisted cryptocurrency theft and deepfake lures** | 2025 | 2025-11-05 |  | confirmed | Google Threat Intelligence Group reports UNC1069 used Gemini for cryptocurrency and wallet-data reconnaissance, attempted crypto-stealing… |
+| **APT41 Gemini-assisted OSSTUN C2 and obfuscation development** | 2025-08 | 2025-11-05 |  | confirmed | Google Threat Intelligence Group observed APT41 during August 2025 seeking Gemini help with C++ and Golang code for tools including the… |
+| **TEMP.Zagros Gemini-assisted custom malware development** | 2025 | 2025-11-05 |  | confirmed | Google Threat Intelligence Group reports TEMP.Zagros used Gemini, under student and research-paper pretexts, to develop web shells and a… |
+| **UNC4899 Gemini-assisted exploit research and tooling** | 2025 | 2025-11-05 |  | confirmed | Google Threat Intelligence Group reports UNC4899 used Gemini for code development, exploit research and tooling improvement, likely aimed… |
+| **Suspected China-nexus actor using Gemini across an intrusion lifecycle (cloud, vSphere, Kubernetes)** | 2025 | 2025-11-05 |  | confirmed | Google Threat Intelligence Group observed an unnamed suspected China-nexus actor using Gemini for reconnaissance, phishing research… |
+| **China-nexus actor using a capture-the-flag pretext to misuse Gemini** | 2025 | 2025-11-05 |  | confirmed | Google Threat Intelligence Group reports an unnamed China-nexus actor that reframed refused prompts as a capture-the-flag exercise and then… |
+| **FunkSec AI-assisted ransomware-as-a-service operation** | 2024-10 | 2025-01-10 |  | medium | Check Point Research reports FunkSec launched a leak site in December 2024 claiming more than 85 victims, mainly in India and the US, with… |
+| **APT45 recursive CVE analysis and PoC validation prompting** | 2026 | 2026-05-11 |  | confirmed | Google Threat Intelligence Group observed APT45 sending thousands of repetitive prompts to recursively analyse CVEs and validate… |
+| **UNC2814 expert-persona prompting for embedded-device vulnerability research** | 2026 | 2026-05-11 |  | confirmed | Google Threat Intelligence Group observed UNC2814 prompting Gemini with fabricated expert-auditor personas to look for pre-authentication… |
+| **UNC5673 pooled multi-provider LLM access via relay services** | 2026 | 2026-05-11 |  | confirmed | Google Threat Intelligence Group observed UNC5673 using Claude-Relay-Service and CLI-Proxy-API to aggregate Gemini, Claude and OpenAI… |
+| **UNC6201 automated premium LLM account registration and cancellation** | 2026 | 2026-05-11 |  | medium | Google Threat Intelligence Group observed attempted use by UNC6201 of a public script automating sign-up and immediate cancellation of… |
+| **bandcampro Gemini CLI-driven C2 botnet build and fraud operations** | 2026-03 | 2026-07-14 |  | confirmed | Trend Micro reports that bandcampro used a jailbroken Gemini CLI agent to migrate and run a C2 server for a small botnet on a dental… |
+| **Chinese-speaking ARTEX multi-model operator targeting 19 markets** | 2026-08 | 2026-10 |  | high | Zscaler ThreatLabz analysed recovered prompts (4 August to 4 October 2026) from an unnamed, Chinese-speaking, likely financially motivated… |
+| **Temp.HEX Gemini-assisted research on Pakistan targets and separatist organizations** | 2025 | 2026-02-12 |  | confirmed | GTIG observed Temp.HEX using Gemini and other AI tools to compile information on individuals in Pakistan and on separatist organizations… |
+| **APT31 Gemini-assisted vulnerability analysis against US targets** | 2025 | 2026-02-12 |  | confirmed | GTIG observed APT31 using a security-researcher persona and a Hexstrike MCP pretext to have Gemini automate vulnerability analysis and… |
+| **COINBAIT phishing kit built with Lovable AI** | 2025-11 | 2026-02-12 |  | medium | GTIG identified the COINBAIT phishing kit, built with Lovable AI and likely accelerated by AI code generation, targeting customers of… |
+| **UNC6418 Gemini-assisted reconnaissance before phishing in Ukraine and defense sector** | 2025 | 2026-02-12 |  | confirmed | GTIG observed UNC6418 using Gemini to gather sensitive account credentials and email addresses, followed shortly by phishing against… |
+| **UNC795 Gemini use across the attack lifecycle** | 2025 | 2026-02-12 |  | confirmed | GTIG observed UNC795 using Gemini for code troubleshooting, research and generating intrusion capabilities, including an AI-integrated code… |
+| **Armored Likho BusySnake Stealer campaign with AI-generated first-stage payloads** | 2026 | 2026-07-03 |  | high | Kaspersky reports an ongoing BusySnake Stealer campaign against government and electric-power organizations in Russia, Kazakhstan and… |
+| **SilkParasite espionage against Central Asian governments** | 2025-10 | 2026-08-19 |  | medium | Bitdefender tracks SilkParasite activity against Central Asian government bodies since about October 2025, with tooling showing traces of… |
+| **STAC6994 agent-driven EDR-evasion development lab** | 2026-05 | 2026-07 |  | confirmed | Sophos recovered an AI-agent development framework (Cursor IDE, ~12 agents, Ludus VMs, Sliver C2, Git via MCP) that reproduced techniques… |
+| **DragonForce suspected AI-generated extortion analysis** | 2026 | 2026-07 |  | medium | Sophos IR observed a DragonForce negotiation in which the actor supplied a detailed analysis of stolen data that Sophos strongly suspects… |
+| **The Gentlemen AI-generated attack scripts** | 2026 | 2026-07 |  | medium | Sophos cites leaked chats from The Gentlemen ransomware group as confirming use of generative AI to produce scripts deployed manually. |
+| **GTG-2002 Claude Code data-extortion operation ("vibe hacking")** | 2025 | 2025-08-27 |  | confirmed | Anthropic disrupted a scaled data-theft and extortion operation in which Claude Code ran reconnaissance (including scanning thousands of… |
+| **GTG-5004 Claude-assisted ransomware-as-a-service** | 2025-01 | 2025-08-27 |  | confirmed | Anthropic reports GTG-5004 used Claude to build and refine ransomware with ChaCha20 encryption, syscall-based EDR evasion and shadow-copy… |
+| **BUGSTER Hermes Agent/DeepSeek multi-domain cybercrime** | 2026 | 2026-10-21 |  | confirmed | Unit 42 describes BUGSTER using a Hermes Agent backed by DeepSeek V4 for reconnaissance reports and criminal planning, and AI-assisted code… |
+| **Storm-0940 ARTEX-automated attacks and ConnectWise supply chain compromise** | 2026-09 | 2026-10-21 |  | high | Microsoft reports Storm-0940 used the agentic ARTEX framework to run around-the-clock scanning, password spraying (327 accounts across… |
+| **Russian-speaking malware tooling development (OpenAI)** | 2025 | 2025-10-07 |  | confirmed | OpenAI banned accounts of a Russian-language operator, assessed as linked to Russian-speaking criminal groups, who used ChatGPT to iterate… |
+| **Korean-language operators malware and C2 development (OpenAI)** | 2025 | 2025-10-07 |  | confirmed | OpenAI banned a cluster of Korean-language accounts that used ChatGPT for malware, C2, credential-theft and Korean-language crypto-themed… |
+| **Phish and Scripts: Chinese-language phishing and tooling (OpenAI)** | 2025 | 2025-10-07 |  | confirmed | OpenAI banned Chinese-language accounts, overlapping public reporting on UNK_DROPPITCH (Proofpoint) and UTA0388 (Volexity), that used… |
+| **CrowdStrike Threat Actor 1: Claude Code dual-agent harness against Argentine healthcare** | 2026-05 | 2026-10-21 |  | confirmed | CrowdStrike reports an unnamed Spanish/English-speaking operator (its 'Threat Actor 1') running a dual-agent autonomous pentesting harness… |
+| **CrowdStrike Threat Actor 2: Chinese-speaking operator's Claude pentesting harnesses** | 2026-05 | 2026-10-21 |  | confirmed | CrowdStrike reports an unnamed Chinese-speaking operator ('Threat Actor 2') reaching Claude models through a China-based AI proxy and… |
+| **CrowdStrike Threat Actor 3: Indonesian-speaking operator using public Claude Code skills** | 2026-05 | 2026-10-21 |  | confirmed | CrowdStrike reports an unnamed Indonesian-speaking operator ('Threat Actor 3') instructing Claude Code to compromise targets using 819… |
+| **CrowdStrike Threat Actor 4: Russian-speaking group's /pentest-setup Claude Code workflow** | 2026-05 | 2026-10-21 |  | confirmed | CrowdStrike reports an unnamed group of Russian-speaking individuals ('Threat Actor 4') using a '/pentest-setup' slash command that… |
+| **LAUNDRY BEAR Zimbra phishing with AI-assisted Flowerbed development** | 2025-07 | 2026-07-23 |  | medium | The AA26-204A advisory describes LAUNDRY BEAR exploiting a Zimbra zero-day (CVE-2025-66376) via phishing, including from compromised… |
+| **Earth Krahang AI-enhanced CVE-2026-0740 exploit scanner** | 2026 | 2026-07-29 |  | confirmed | TrendAI reports Earth Krahang used generative AI to enhance a public CVE-2026-0740 proof-of-concept into a mass scanner for vulnerable… |
+| **Earth Naga vibe-coded PowerShell/C# backdoor loader** | 2026 | 2026-07-29 |  | confirmed | TrendAI observed Earth Naga iteratively prompting an AI to develop a PowerShell script that compiles C# at runtime for process hollowing… |
+| **ARTEX agentic offensive framework use by extortion groups and suspected PRC-nexus clusters** | 2026-08 | 2026-10-30 |  | confirmed | GTIG and Mandiant observed, in incident response since late August 2026, unnamed financially motivated extortion groups and suspected… |
+| **PentAGI-based orchestration against Asian telecoms and system integrators** | 2026-08 | 2026-10-30 |  | medium | GTIG reports unattributed operators using the open-source PentAGI agent framework, including a custom orchestration platform built on it… |
+| **CyberXero Claude Code agent swarm against Ukrainian critical infrastructure** | 2026-07 | 2026-10-06 |  | confirmed | SOCRadar reports CyberXero ran up to 51 Claude Code agents and PentAGI with Cobalt Strike, using a rehearsed ownership narrative and… |
+| **CaptiveCrunch** | 2026-02 | 2026-07-31 |  | confirmed | Microsoft attributes CaptiveCrunch, captive-portal traffic manipulation, AitM and device code phishing and malware delivery (CornFlake… |
+| **INC / The Gentlemen affiliate AI-driven ransomware operations (Phantom framework)** | 2026-07 | 2026-10-20 |  | confirmed | SOCRadar recovered exposed infrastructure showing affiliates of INC Ransomware (and, with lower confidence, The Gentlemen) using OpenCode… |
+| **RevengeHotels 2025 LLM-generated loaders delivering VenomRAT** | 2025 | 2025-09-16 |  | medium | Kaspersky reports RevengeHotels phishing hotels in Brazil and Spanish-speaking markets in summer 2025 with infectors and downloaders that… |
+| **CL-CRI-1163 phishing against Brazilian financial sector with LLM-generated scripts** | 2026-02 | 2026-09-03 |  | medium | Unit 42 reports CL-CRI-1163 targeted the Brazilian financial sector via likely job- or resume-themed phishing, with exposed staging scripts… |
+| **Jade Sleet AI-accelerated job-themed targeting via front companies** | 2026-06 | 2026-10-29 |  | high | Microsoft Threat Intelligence identified Jade Sleet running job-themed targeting through three front companies between 8 and 12 June 2026… |
+| **Pearl Sleet operations using the ARTEX agentic penetration-testing framework** | 2026-10 | 2026-10-29 |  | confirmed | Microsoft Threat Intelligence has identified Pearl Sleet, together with Onyx Sleet, using the open-source agentic AI penetration-testing… |
+| **Sapphire Sleet Rust software supply-chain compromise** | 2026-08 | 2026-10-29 |  | medium | Microsoft Threat Intelligence says Sapphire Sleet likely incorporated AI into its August 2026 Rust software compromise, which targeted Rust… |
+| **knaithe autonomous exploitation with DeepSeek and Hermes Agent** | 2026-05 | 2026-07-30 |  | confirmed | Unit 42 reports knaithe used a DeepSeek-driven Hermes Agent, tasked over Telegram, to autonomously enumerate and exploit targets found via… |
+| **Aurora ransomware intrusions driven through Cursor Agent** | 2026-04 | 2026-08-27 |  | confirmed | Gambit Security reports Aurora ransomware operators used Cursor Agent with Claude Sonnet in sessions from 8 April to 21 May 2026 against… |
+| **VAPOR PANDA ARTEX-driven global espionage campaign** | 2026-10 | 2026-10-29 |  | confirmed | CrowdStrike reports VAPOR PANDA used ARTEX planner and worker agents, primarily on DeepSeek, to write web shells, extract domain… |
+| **GREYVIBE AI-assisted operations against Ukraine** | 2025-08 | 2026-05-28 |  | high | WithSecure reports GREYVIBE campaigns (PhantomMail, PhantomClick, PrincessClub, DroneLink, Nebo) against Ukrainian targets using GenAI-made… |
 
 <!-- gen:campaigns:end -->
 
@@ -479,6 +615,38 @@ Real-world reporting is intentionally placed on the front page because AI securi
 | **PROMPTSPY Android backdoor with a Gemini UI agent** | malware | observed | confirmed |
 | **Criminal actor uses an AI model to develop a 2FA-bypass zero-day** | intrusion | observed | high |
 | **FakeAgent: malicious Claude Artifact as a Claude Desktop download page** | malware | observed | confirmed |
+| **Multi-agent credential harvesting from compromised cloud in under six hours** | intrusion | observed | confirmed |
+| **"Recon" agentic reconnaissance and credential-management framework** | intrusion | observed | confirmed |
+| **Unit 42 investigation of a sub-10-hour AI-agent-assisted intrusion** | intrusion | observed | high |
+| **TuxBot v3 Evolution IoT botnet built with LLM assistance** | malware | observed | confirmed |
+| **Carding store maintained with Claude Code** | fraud | observed | confirmed |
+| **Suspected Chinese operators use Claude Code and DeepSeek in government and financial intrusions** | intrusion | observed | confirmed |
+| **PROMPTFLUX: experimental VBScript dropper that rewrites itself via the Gemini API** | malware | observed | confirmed |
+| **QUIETVAULT: JavaScript credential stealer using on-host AI CLI tools to hunt secrets** | malware | observed | confirmed |
+| **Hugging Face production intrusion driven by an autonomous AI agent system** | intrusion | observed | high |
+| **Multi-agent AI framework (Hermes/OpenClaw) used to compromise Asian government entities** | intrusion | observed | high |
+| **ARXON custom MCP server driving LLM-assisted FortiGate intrusions** | intrusion | observed | high |
+| **Deepfakes and stolen PII used to apply for remote IT jobs (FBI IC3 PSA)** | fraud | observed | confirmed |
+| **CANFAIL and LONGSTREAM: LLM-generated decoy code in Russia-nexus malware against Ukraine** | malware | observed | high |
+| **Agentic Hexstrike and Strix operations against East Asian targets** | intrusion | observed | confirmed |
+| **AI-agent-driven mass exploitation of PaperCut NG/MF** | intrusion | observed | confirmed |
+| **EvilTokens AI-enabled email compromise service disrupted** | fraud | observed | confirmed |
+| **AI-generated exploitation scripts against Siemens S7 PLCs** | exploit-development | observed | confirmed |
+| **TAG-217 ARTEX-linked intrusions at South Korean financial institutions** | intrusion | observed | medium |
+| **Malicious Hugging Face models with pickle reverse-shell payloads** | supply-chain | observed | confirmed |
+| **Suspected AI-generated PowerShell script used for Active Directory enumeration** | intrusion | observed | high |
+| **GXC Team AI-enabled Business Invoice Swapper** | fraud | observed | medium |
+| **WaterPlum (Contagious Interview) use of AI face-swapping in online interviews** | fraud | observed | confirmed |
+| **Autonomous AI agents used to compromise online retailers and plant card skimmers** | intrusion | observed | confirmed |
+| **Claude Code CLI run as autonomous lateral-movement agent against a Thai organisation** | intrusion | observed | confirmed |
+| **AI voice-cloned impersonation of senior U.S. officials** | fraud | observed | confirmed |
+| **Greek gang uses AI voice clones of relatives to steal cash and valuables** | fraud | observed | medium |
+| **AI-augmented mass access to FortiGate devices** | intrusion | observed | confirmed |
+| **Abuse of the Lovable AI website builder for phishing and malware delivery** | fraud | observed | confirmed |
+| **LLM-generated PowerShell and HTML delivery scripts in malware campaigns** | malware | observed | high |
+| **Single operator uses Claude Code and GPT-4.1 to breach nine Mexican government organisations** | intrusion | observed | confirmed |
+| **Deepfake videos and voice cloning in scams impersonating the FBI IC3** | fraud | observed | confirmed |
+| **SweetSpecter spear-phishing of OpenAI employees** | intrusion | observed | confirmed |
 
 <!-- gen:incidents:end -->
 
@@ -606,10 +774,10 @@ Read the full model: [AI-THREAT-MODEL.md](docs/AI-THREAT-MODEL.md).
 
 | ID | Technique | Category | Maturity | Mapped to |
 |---|---|---|---|---|
-| `LLMI-T001` | **Direct Prompt Injection** | prompt-context | research-demonstrated | OWASP LLM, MITRE ATLAS, Google SAIF |
+| `LLMI-T001` | **Direct Prompt Injection** | prompt-context | observed-in-the-wild | OWASP LLM, MITRE ATLAS, Google SAIF |
 | `LLMI-T002` | **Indirect Prompt Injection** | prompt-context | research-demonstrated | OWASP LLM, MITRE ATLAS, Google SAIF, CSA MAESTRO |
 | `LLMI-T003` | **Jailbreak / Safety Boundary Manipulation** | model-behavior | observed-in-the-wild | OWASP LLM, NIST AI 100-2e2025 |
-| `LLMI-T004` | **Sensitive Information Disclosure** | confidentiality | research-demonstrated | OWASP LLM, Google SAIF, MITRE ATLAS |
+| `LLMI-T004` | **Sensitive Information Disclosure** | confidentiality | observed-in-the-wild | OWASP LLM, Google SAIF, MITRE ATLAS |
 | `LLMI-T005` | **Model Extraction / Theft** | model | observed-in-the-wild | MITRE ATLAS, NIST AI 100-2e2025, Google SAIF |
 | `LLMI-T006` | **Data or Model Poisoning** | training-data | research-demonstrated | OWASP LLM, MITRE ATLAS, NIST AI 100-2e2025, Google SAIF |
 | `LLMI-T007` | **RAG Knowledge Poisoning** | rag | research-demonstrated | OWASP LLM, CSA MAESTRO, Google SAIF |
@@ -627,12 +795,12 @@ Read the full model: [AI-THREAT-MODEL.md](docs/AI-THREAT-MODEL.md).
 | `LLMI-T019` | **Model Distillation Campaign** | model-theft | observed-in-the-wild | OWASP LLM, MITRE ATLAS |
 | `LLMI-T020` | **Improper Output Handling and Rendering Exfiltration** | application | research-demonstrated | MITRE ATLAS |
 | `LLMI-T021` | **Agent Tool Poisoning and Rug Pull** | agentic-supply-chain | observed-in-the-wild | MITRE ATLAS |
-| `LLMI-T022` | **Agentic Resource Consumption and Cost Harvesting** | availability | no-linked-evidence | MITRE ATLAS |
+| `LLMI-T022` | **Agentic Resource Consumption and Cost Harvesting** | availability | observed-in-the-wild | MITRE ATLAS |
 | `LLMI-T023` | **Crafted AI Assistant Links and Recommendation Poisoning** | prompt-context | observed-in-the-wild | MITRE ATLAS |
 | `LLMI-T024` | **Exposed or Misconfigured AI Services** | infrastructure | observed-in-the-wild | MITRE ATLAS |
 | `LLMI-T025` | **Multimodal Instruction Triggers** | prompt-context | research-demonstrated | MITRE ATLAS |
 | `LLMI-T026` | **Inter-Agent Instruction Propagation** | agentic | observed-in-the-wild | MITRE ATLAS |
-| `LLMI-T027` | **Unsanctioned AI Runtime (Shadow AI)** | runtime-security | no-linked-evidence | MITRE ATT&CK, MITRE ATLAS |
+| `LLMI-T027` | **Unsanctioned AI Runtime (Shadow AI)** | runtime-security | observed-in-the-wild | MITRE ATT&CK, MITRE ATLAS |
 | `LLMI-T028` | **AI-Assisted Tooling Development** | offensive-enablement | observed-in-the-wild | MITRE ATLAS |
 
 <!-- gen:techniques:end -->
@@ -977,9 +1145,9 @@ Every intelligence item should answer:
 
 | Grade | Class | Sources |
 |---|---|---|
-| **A** | Primary or authoritative | 45 |
+| **A** | Primary or authoritative | 114 |
 | **B** | Strong secondary | 7 |
-| **C** | Reputable press | 2 |
+| **C** | Reputable press | 6 |
 | **D** | Community | 5 |
 | **E** | Unsupported | 0 |
 
