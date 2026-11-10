@@ -310,3 +310,8 @@ th[aria-sort="ascending"] .sortbtn,th[aria-sort="descending"] .sortbtn{color:var
   .view{display:block!important}.covdetail{display:none}
   body,.mast{background:#fff}.dp,.row,.stat,.table-wrap,.src .it{box-shadow:none}
 }
+
+/* ---------- 13. long lists: the actor ledger grows with the pipeline, so it scrolls inside its column */
+#actors{max-height:1100px;overflow-y:auto;padding:2px 6px 2px 2px;scrollbar-width:thin;
+  -webkit-mask-image:linear-gradient(#000 calc(100% - 40px),transparent);mask-image:linear-gradient(#000 calc(100% - 40px),transparent)}
+@media print{#actors{max-height:none;overflow:visible;-webkit-mask-image:none;mask-image:none}}

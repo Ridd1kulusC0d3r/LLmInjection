@@ -54,7 +54,9 @@
     "id": "ACTOR-APT42",
     "type": "actor",
     "name": "APT42",
-    "aliases": [],
+    "aliases": [
+      "CALANQUE ION"
+    ],
     "nexus": "Iran",
     "ai_role": [
       "offensive-enabler"
@@ -142,7 +144,9 @@
     "id": "ACTOR-TEAMPCP",
     "type": "actor",
     "name": "TeamPCP",
-    "aliases": [],
+    "aliases": [
+      "UNC6780"
+    ],
     "nexus": "Unattributed",
     "ai_role": [
       "ai-infrastructure-targeting",
@@ -308,6 +312,1457 @@
         "publisher": "Google Threat Intelligence Group",
         "grade": "A",
         "url": "https://cloud.google.com/blog/topics/threat-intelligence/ai-vulnerability-exploitation-initial-access"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-GTG-20006",
+    "type": "actor",
+    "name": "GTG-20006",
+    "aliases": [],
+    "nexus": "Russia (report: consistent with Russian state-nexus espionage and with public reporting linking the actor to Midnight Blizzard)",
+    "ai_role": [
+      "autonomous-operator",
+      "tooling-development"
+    ],
+    "confidence": "confirmed",
+    "regions": [
+      "UA"
+    ],
+    "summary": "Anthropic reports that GTG-20006, a Russian espionage cluster whose attribution it calls consistent with public reporting on Midnight Blizzard, used Claude Code skills to drive workflows covering infrastructure setup, phishing, persistence, C2 and exfiltration, with monitoring agents rebuilding implants after security products flagged them. More than 20 organizations were targeted, mainly in Ukraine and Europe; Anthropic does not equate the cluster with Midnight Blizzard outright.",
+    "last_verified": "2026-11-10",
+    "sources": [
+      {
+        "title": "Detecting and countering misuse of AI: September 2026",
+        "publisher": "Anthropic Threat Intelligence",
+        "grade": "A",
+        "url": "https://www.anthropic.com/threat-intelligence-report-september-2026"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-GTG-50014",
+    "type": "actor",
+    "name": "GTG-50014",
+    "aliases": [],
+    "nexus": "Not stated in report (operators suspected to be affiliates of the ShinyHunters collective; financially motivated extortion)",
+    "ai_role": [
+      "autonomous-operator",
+      "tooling-development"
+    ],
+    "confidence": "confirmed",
+    "summary": "Anthropic reports that GTG-50014, operators it suspects are affiliates of the ShinyHunters collective (operator handles MeowSHA, frkoo and blazespider), used Claude in often multi-agent setups for scanning, exploitation, credential harvesting, data extraction and extortion against technology, SaaS, airline, energy, retail and Web3 victims. They also reused an AI API key stolen from a victim environment for about three weeks; Anthropic states its own systems were not compromised.",
+    "last_verified": "2026-11-10",
+    "sources": [
+      {
+        "title": "Detecting and countering misuse of AI: September 2026",
+        "publisher": "Anthropic Threat Intelligence",
+        "grade": "A",
+        "url": "https://www.anthropic.com/threat-intelligence-report-september-2026"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-GTG-10007",
+    "type": "actor",
+    "name": "GTG-10007",
+    "aliases": [],
+    "nexus": "China (report: Chinese-speaking operators likely residing in Changsha, Hunan province)",
+    "ai_role": [
+      "autonomous-operator",
+      "tooling-development"
+    ],
+    "confidence": "confirmed",
+    "regions": [
+      "CN"
+    ],
+    "summary": "Anthropic reports that GTG-10007, Chinese-speaking operators it assesses likely reside in Changsha, used Claude as the engineering and orchestration layer of an offensive programme: agent swarms, autonomous vulnerability research and exploit development, malware development, attack-surface reconnaissance and a 13-agent collection fleet. Roughly 50 organizations were affected, including foreign government networks in the Middle East, Europe and Southeast Asia, while hands-on intrusions focused on domestic Chinese victims.",
+    "last_verified": "2026-11-10",
+    "sources": [
+      {
+        "title": "Detecting and countering misuse of AI: September 2026",
+        "publisher": "Anthropic Threat Intelligence",
+        "grade": "A",
+        "url": "https://www.anthropic.com/threat-intelligence-report-september-2026"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-GTG-50020",
+    "type": "actor",
+    "name": "GTG-50020",
+    "aliases": [],
+    "nexus": "Unattributed, financially motivated (report: Russian-speaking, financially-motivated actor)",
+    "ai_role": [
+      "ai-infrastructure-targeting",
+      "ai-supply-chain-targeting",
+      "autonomous-operator"
+    ],
+    "confidence": "confirmed",
+    "summary": "Anthropic reports that GTG-50020, a Russian-speaking financially motivated actor, moved from hotel-booking and fintech targets to the AI supply chain: it injected instructions into an AI vendor's automated evaluation sandbox to obtain production API keys for multiple model providers, used the stolen keys for its own workloads, and ran human-directed and autonomous exploitation pipelines against about 30 AI companies in roughly four days. Its stated goal, access to a pre-release Claude model, was never achieved.",
+    "last_verified": "2026-11-10",
+    "sources": [
+      {
+        "title": "Detecting and countering misuse of AI: September 2026",
+        "publisher": "Anthropic Threat Intelligence",
+        "grade": "A",
+        "url": "https://www.anthropic.com/threat-intelligence-report-september-2026"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-GTG-50021",
+    "type": "actor",
+    "name": "GTG-50021",
+    "aliases": [
+      "kl1zy"
+    ],
+    "nexus": "Not stated in report (Russian- and Ukrainian-speaking group; fraud)",
+    "ai_role": [
+      "ai-infrastructure-targeting"
+    ],
+    "confidence": "confirmed",
+    "summary": "Anthropic reports that GTG-50021 (alias kl1zy), a Russian- and Ukrainian-speaking group, ran a fraudulent AI reseller that advertised discounted Claude access but proxied customer traffic to a different model while a credential harvester stole Anthropic account credentials for resale. The report does not describe the group using Claude directly.",
+    "last_verified": "2026-11-10",
+    "sources": [
+      {
+        "title": "Detecting and countering misuse of AI: September 2026",
+        "publisher": "Anthropic Threat Intelligence",
+        "grade": "A",
+        "url": "https://www.anthropic.com/threat-intelligence-report-september-2026"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-GTG-50029",
+    "type": "actor",
+    "name": "GTG-50029",
+    "aliases": [],
+    "nexus": "Not stated in report (single French-speaking hacktivist actor)",
+    "ai_role": [
+      "tooling-development",
+      "offensive-enabler"
+    ],
+    "confidence": "confirmed",
+    "summary": "Anthropic reports that GTG-50029, a single French-speaking hacktivist, used Claude to build a Rust scanner for exposed AI API keys, develop exploits (including a WordPress race condition) and webshells, run sub-agents for reconnaissance and code review, and build the fafsearch doxxing platform; the campaign reportedly ran for a month entirely on stolen API keys. Of 42 tracked European political, media, think-tank and SaaS entities, at least 14 were accessed.",
+    "last_verified": "2026-11-10",
+    "sources": [
+      {
+        "title": "Detecting and countering misuse of AI: September 2026",
+        "publisher": "Anthropic Threat Intelligence",
+        "grade": "A",
+        "url": "https://www.anthropic.com/threat-intelligence-report-september-2026"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-GTG-14021",
+    "type": "actor",
+    "name": "GTG-14021",
+    "aliases": [],
+    "nexus": "China (report: believed associated with a municipal cyber police unit; Zhejiang location assessed with medium confidence)",
+    "ai_role": [
+      "tooling-development",
+      "offensive-enabler"
+    ],
+    "confidence": "confirmed",
+    "regions": [
+      "CN",
+      "HK"
+    ],
+    "summary": "Anthropic reports that GTG-14021, which it believes is associated with a Chinese municipal cyber police unit (institution attribution at varying confidence), used Claude Code with custom skills to build sentiment-monitoring pipelines, draft suppression guidance naming individual citizens, and compile pre-operational intelligence on venues. Targets included Hong Kong pro-democracy figures, Tiananmen commemoration organizers and Uyghur advocates, including events abroad.",
+    "last_verified": "2026-11-10",
+    "sources": [
+      {
+        "title": "Detecting and countering misuse of AI: September 2026",
+        "publisher": "Anthropic Threat Intelligence",
+        "grade": "A",
+        "url": "https://www.anthropic.com/threat-intelligence-report-september-2026"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-GTG-14022",
+    "type": "actor",
+    "name": "GTG-14022",
+    "aliases": [],
+    "nexus": "China (report: assessed with medium confidence to be a contractor for PRC-government clients)",
+    "ai_role": [
+      "tooling-development",
+      "offensive-enabler"
+    ],
+    "confidence": "confirmed",
+    "regions": [
+      "CN",
+      "TW"
+    ],
+    "summary": "Anthropic reports that GTG-14022, assessed with medium confidence to be a contractor working for PRC government clients, used Claude with code execution to score articles for political sensitivity, reframe content and produce daily government-style public-opinion briefings covering dissidents, ethnic minorities, Taiwanese political figures, activists and foreign media.",
+    "last_verified": "2026-11-10",
+    "sources": [
+      {
+        "title": "Detecting and countering misuse of AI: September 2026",
+        "publisher": "Anthropic Threat Intelligence",
+        "grade": "A",
+        "url": "https://www.anthropic.com/threat-intelligence-report-september-2026"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-GTG-15001",
+    "type": "actor",
+    "name": "GTG-15001",
+    "aliases": [],
+    "nexus": "China (report: a China-based app studio using PRC-based proxy infrastructure)",
+    "ai_role": [
+      "runtime-enabler",
+      "tooling-development"
+    ],
+    "confidence": "confirmed",
+    "regions": [
+      "US"
+    ],
+    "summary": "Anthropic reports that GTG-15001, a China-based app studio relying on PRC-based proxy infrastructure, used Claude both to build a network of more than 20 deceptive dating apps and to power their AI personas, contacting over 25,000 US users within a two-week window in April 2026.",
+    "last_verified": "2026-11-10",
+    "sources": [
+      {
+        "title": "Detecting and countering misuse of AI: September 2026",
+        "publisher": "Anthropic Threat Intelligence",
+        "grade": "A",
+        "url": "https://www.anthropic.com/threat-intelligence-report-september-2026"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-GTG-17002",
+    "type": "actor",
+    "name": "GTG-17002",
+    "aliases": [],
+    "nexus": "China (report: assessed China-based defense and military-industrial researcher with links to PRC research institutions including the PLA Academy of Military Sciences)",
+    "ai_role": [
+      "tooling-development"
+    ],
+    "confidence": "confirmed",
+    "regions": [
+      "CN",
+      "TW"
+    ],
+    "summary": "Anthropic reports that GTG-17002, which it assesses is a China-based defense researcher linked to PRC research institutions including the PLA Academy of Military Sciences (a link indicated by metadata and flagged content), used Claude to design and iterate a Chinese-language suite of about 16 electronic-warfare and air-defense-suppression targeting modules, with a simulation altered to 12 targets in Taiwan. This is weapons-software development rather than cyber intrusion.",
+    "last_verified": "2026-11-10",
+    "sources": [
+      {
+        "title": "Detecting and countering misuse of AI: September 2026",
+        "publisher": "Anthropic Threat Intelligence",
+        "grade": "A",
+        "url": "https://www.anthropic.com/threat-intelligence-report-september-2026"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-GTG-27005",
+    "type": "actor",
+    "name": "GTG-27005",
+    "aliases": [
+      "DronDoc",
+      "Serafim"
+    ],
+    "nexus": "Russia (report: Russia-based; assessed small specialized freelance team, not a state entity, with assessed ties to a regional university linked to a Russian Academy of Sciences research center)",
+    "ai_role": [
+      "tooling-development"
+    ],
+    "confidence": "confirmed",
+    "regions": [
+      "RU",
+      "UA"
+    ],
+    "summary": "Anthropic reports that GTG-27005 (operation names DronDoc / Serafim), assessed as a small Russia-based freelance team, used Claude Code to write and test autonomous military drone-swarm software including targeting and detonation logic, with a demonstration strike point in Donetsk Oblast. Accounts were created late 2025 to early 2026 and the operation began mid-May 2026; funding claims could not be verified.",
+    "last_verified": "2026-11-10",
+    "sources": [
+      {
+        "title": "Detecting and countering misuse of AI: September 2026",
+        "publisher": "Anthropic Threat Intelligence",
+        "grade": "A",
+        "url": "https://www.anthropic.com/threat-intelligence-report-september-2026"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-GTG-30004",
+    "type": "actor",
+    "name": "GTG-30004",
+    "aliases": [],
+    "nexus": "Iran (report: Iran-nexus threat actor)",
+    "ai_role": [
+      "tooling-development",
+      "offensive-enabler"
+    ],
+    "confidence": "confirmed",
+    "regions": [
+      "IL"
+    ],
+    "summary": "Anthropic reports that GTG-30004, an Iran-nexus threat actor, used Claude to orchestrate an OSINT identity-profiling harness against Israeli government and non-government individuals and Jewish diaspora organizations, and to modify NanoDump and build an obfuscation pipeline.",
+    "last_verified": "2026-11-10",
+    "sources": [
+      {
+        "title": "Detecting and countering misuse of AI: September 2026",
+        "publisher": "Anthropic Threat Intelligence",
+        "grade": "A",
+        "url": "https://www.anthropic.com/threat-intelligence-report-september-2026"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-GTG-30005",
+    "type": "actor",
+    "name": "GTG-30005",
+    "aliases": [],
+    "nexus": "Iran (report: Iran-nexus threat actor)",
+    "ai_role": [
+      "tooling-development",
+      "offensive-enabler"
+    ],
+    "confidence": "confirmed",
+    "regions": [
+      "IR"
+    ],
+    "summary": "Anthropic reports that GTG-30005, an Iran-nexus threat actor, used Claude to build targeting handbooks and a Python naval-tracking pipeline focused on US naval forces in the region, research CVEs, and design a component of a mass-surveillance platform aimed at the Iranian domestic population.",
+    "last_verified": "2026-11-10",
+    "sources": [
+      {
+        "title": "Detecting and countering misuse of AI: September 2026",
+        "publisher": "Anthropic Threat Intelligence",
+        "grade": "A",
+        "url": "https://www.anthropic.com/threat-intelligence-report-september-2026"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-GTG-30006",
+    "type": "actor",
+    "name": "GTG-30006",
+    "aliases": [],
+    "nexus": "Iran (report: Iranian threat actor)",
+    "ai_role": [
+      "tooling-development"
+    ],
+    "confidence": "confirmed",
+    "regions": [
+      "IR"
+    ],
+    "summary": "Anthropic reports that GTG-30006, an Iranian threat actor building domestic-surveillance tooling, used fragmented sessions on free Claude accounts across 16 organizations to build malware (the SECOMS64 implant), phishing pages using an Azar-News lure brand, and a Microsoft 365 mailbox-theft toolset; Claude refused nine of ten direct requests.",
+    "last_verified": "2026-11-10",
+    "sources": [
+      {
+        "title": "Detecting and countering misuse of AI: September 2026",
+        "publisher": "Anthropic Threat Intelligence",
+        "grade": "A",
+        "url": "https://www.anthropic.com/threat-intelligence-report-september-2026"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-GTG-34007",
+    "type": "actor",
+    "name": "GTG-34007",
+    "aliases": [],
+    "nexus": "Iran (report: assessed with high confidence to be associated with Iranian paramilitary domestic security entities)",
+    "ai_role": [
+      "tooling-development",
+      "offensive-enabler"
+    ],
+    "confidence": "confirmed",
+    "regions": [
+      "IR"
+    ],
+    "summary": "Anthropic reports that GTG-34007, two units it assesses with high confidence are associated with Iranian paramilitary domestic-security entities, used Claude to develop a malicious Firefox extension, build a front end for the Arman case-management system, run social-network analysis on about 155,000 tweets and voice-clone three writers; roughly 6,388 people were profiled in a year.",
+    "last_verified": "2026-11-10",
+    "sources": [
+      {
+        "title": "Detecting and countering misuse of AI: September 2026",
+        "publisher": "Anthropic Threat Intelligence",
+        "grade": "A",
+        "url": "https://www.anthropic.com/threat-intelligence-report-september-2026"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-GTG-50027",
+    "type": "actor",
+    "name": "GTG-50027",
+    "aliases": [],
+    "nexus": "Mali (report: likely a Bamako-based independent consultant working with Mali's state intelligence service, ANSE)",
+    "ai_role": [
+      "tooling-development"
+    ],
+    "confidence": "confirmed",
+    "regions": [
+      "ML"
+    ],
+    "summary": "Anthropic reports that GTG-50027, likely a Bamako-based independent consultant working with Mali's state intelligence service (ANSE), used Claude as the primary engineering workforce for Lakana 360, a mass-interception platform monitoring about 25 million SIM cards.",
+    "last_verified": "2026-11-10",
+    "sources": [
+      {
+        "title": "Detecting and countering misuse of AI: September 2026",
+        "publisher": "Anthropic Threat Intelligence",
+        "grade": "A",
+        "url": "https://www.anthropic.com/threat-intelligence-report-september-2026"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-GTG-87001",
+    "type": "actor",
+    "name": "GTG-87001",
+    "aliases": [],
+    "nexus": "Not stated in report (report: based in northern Yemen; no group named)",
+    "ai_role": [
+      "tooling-development"
+    ],
+    "confidence": "confirmed",
+    "regions": [
+      "YE"
+    ],
+    "summary": "Anthropic reports that GTG-87001, a weapons engineering cell based in northern Yemen, used Claude Code as a substitute for engineers on guidance, navigation and control software, simulation and post-test failure analysis for guided rocket, ballistic missile and hypersonic glide designs. Anthropic says it has no evidence the actors fielded an operational device, and the report does not name the group (press labels such as Houthi are not used by Anthropic).",
+    "last_verified": "2026-11-10",
+    "sources": [
+      {
+        "title": "Detecting and countering misuse of AI: September 2026",
+        "publisher": "Anthropic Threat Intelligence",
+        "grade": "A",
+        "url": "https://www.anthropic.com/threat-intelligence-report-september-2026"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-RAVINE-CASTLE",
+    "type": "actor",
+    "name": "RAVINE CASTLE",
+    "aliases": [
+      "COULEE",
+      "APT24"
+    ],
+    "nexus": "China",
+    "ai_role": [
+      "offensive-enabler"
+    ],
+    "confidence": "confirmed",
+    "summary": "Google Threat Intelligence Group describes RAVINE CASTLE, a PRC-nexus espionage group previously known as COULEE and APT24, misusing Gemini across several operations: researching foreign ministries and international organisations for social engineering, researching virtualization-platform exploits and Active Directory post-exploitation methods, generating political propaganda, and translating and summarising exfiltrated data into intelligence reports. The activity triggered Gemini safety responses and Google disabled associated assets.",
+    "last_verified": "2026-11-10",
+    "sources": [
+      {
+        "title": "GTIG AI Threat Tracker: From Prompting to Autonomy - The Evolution of Adversarial AI",
+        "publisher": "Google Threat Intelligence Group",
+        "grade": "A",
+        "url": "https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-SANDWORM-RELIC",
+    "type": "actor",
+    "name": "SANDWORM RELIC",
+    "aliases": [
+      "FROZENBARENTS",
+      "SANDWORM",
+      "APT44"
+    ],
+    "nexus": "Russia",
+    "ai_role": [
+      "tooling-development",
+      "offensive-enabler"
+    ],
+    "confidence": "confirmed",
+    "regions": [
+      "UA"
+    ],
+    "summary": "Google Threat Intelligence Group reports that SANDWORM RELIC, the Russian espionage group formerly tracked as FROZENBARENTS, SANDWORM and APT44, used Gemini in continued operations against Ukraine to write and refine password-spraying and host-fingerprinting scripts, support intelligence gathering and social engineering, and build local projects calling the Gemini API for automated tasks. Google disabled associated assets.",
+    "last_verified": "2026-11-10",
+    "sources": [
+      {
+        "title": "GTIG AI Threat Tracker: From Prompting to Autonomy - The Evolution of Adversarial AI",
+        "publisher": "Google Threat Intelligence Group",
+        "grade": "A",
+        "url": "https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-UNC5792",
+    "type": "actor",
+    "name": "UNC5792",
+    "aliases": [],
+    "nexus": "Russia",
+    "ai_role": [
+      "runtime-enabler"
+    ],
+    "confidence": "confirmed",
+    "summary": "Google Threat Intelligence Group reports that the Russia-based group UNC5792 experimented with integrating AI models into automated Telegram monitoring bots to flag content of interest to Russian authorities, such as security threats and extremist content, and to produce structured intelligence reports. GTIG frames this as experimentation building on an earlier non-AI Telegram bot.",
+    "last_verified": "2026-11-10",
+    "sources": [
+      {
+        "title": "GTIG AI Threat Tracker: From Prompting to Autonomy - The Evolution of Adversarial AI",
+        "publisher": "Google Threat Intelligence Group",
+        "grade": "A",
+        "url": "https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-UNC6508",
+    "type": "actor",
+    "name": "UNC6508",
+    "aliases": [],
+    "nexus": "China",
+    "ai_role": [
+      "ai-infrastructure-targeting"
+    ],
+    "confidence": "confirmed",
+    "summary": "Google Threat Intelligence Group describes UNC6508 as a PRC-nexus actor running a multi-year espionage campaign against academic, medical and military research institutions in North America that specifically targets proprietary AI research. GTIG also observed suspected UNC6508 activity deploying local open-weight LLM infrastructure in compromised cloud environments, which avoids commercial AI API monitoring; this element is described as suspected.",
+    "last_verified": "2026-11-10",
+    "sources": [
+      {
+        "title": "GTIG AI Threat Tracker: From Prompting to Autonomy - The Evolution of Adversarial AI",
+        "publisher": "Google Threat Intelligence Group",
+        "grade": "A",
+        "url": "https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-UNC1069",
+    "type": "actor",
+    "name": "UNC1069",
+    "aliases": [
+      "MASAN"
+    ],
+    "nexus": "North Korea",
+    "ai_role": [
+      "offensive-enabler",
+      "tooling-development"
+    ],
+    "confidence": "confirmed",
+    "summary": "Google Threat Intelligence Group reports the North Korean cryptocurrency-theft actor UNC1069 (aka MASAN) used Gemini to research cryptocurrency concepts and wallet data locations, and attempted to use it to develop crypto-stealing code and craft fake software-update credential lures; GTIG disabled the account. GTIG also observed the group using deepfake image and video lures impersonating crypto-industry figures to distribute the BIGMACHO backdoor via a fake Zoom SDK link.",
+    "last_verified": "2026-11-10",
+    "sources": [
+      {
+        "title": "GTIG AI Threat Tracker: Advances in Threat Actor Usage of AI Tools",
+        "publisher": "Google Threat Intelligence Group",
+        "grade": "A",
+        "url": "https://cloud.google.com/blog/topics/threat-intelligence/threat-actor-usage-of-ai-tools"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-APT41",
+    "type": "actor",
+    "name": "APT41",
+    "aliases": [],
+    "nexus": "China",
+    "ai_role": [
+      "tooling-development"
+    ],
+    "confidence": "confirmed",
+    "summary": "Google Threat Intelligence Group observed the PRC-backed actor APT41 throughout August 2025 using Gemini for C++ and Golang code development support for several tools, including a C2 framework the actor calls OSSTUN, and for help with code obfuscation using two public libraries.",
+    "last_verified": "2026-11-10",
+    "sources": [
+      {
+        "title": "GTIG AI Threat Tracker: Advances in Threat Actor Usage of AI Tools",
+        "publisher": "Google Threat Intelligence Group",
+        "grade": "A",
+        "url": "https://cloud.google.com/blog/topics/threat-intelligence/threat-actor-usage-of-ai-tools"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-TEMP-ZAGROS",
+    "type": "actor",
+    "name": "TEMP.Zagros",
+    "aliases": [
+      "MUDDYCOAST",
+      "Muddy Water"
+    ],
+    "nexus": "Iran",
+    "ai_role": [
+      "tooling-development"
+    ],
+    "confidence": "confirmed",
+    "summary": "Google Threat Intelligence Group reports the Iranian state-sponsored actor TEMP.Zagros (aka MUDDYCOAST, Muddy Water) used Gemini to research and develop custom malware, including web shells and a Python-based C2 server, using student or paper-writing pretexts to get past safety guardrails. The actor exposed its C2 domain and encryption key in prompts, which GTIG says aided disruption of the campaign.",
+    "last_verified": "2026-11-10",
+    "sources": [
+      {
+        "title": "GTIG AI Threat Tracker: Advances in Threat Actor Usage of AI Tools",
+        "publisher": "Google Threat Intelligence Group",
+        "grade": "A",
+        "url": "https://cloud.google.com/blog/topics/threat-intelligence/threat-actor-usage-of-ai-tools"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-UNC4899",
+    "type": "actor",
+    "name": "UNC4899",
+    "aliases": [
+      "PUKCHONG"
+    ],
+    "nexus": "North Korea",
+    "ai_role": [
+      "tooling-development"
+    ],
+    "confidence": "confirmed",
+    "summary": "Google Threat Intelligence Group reports the North Korean supply-chain-compromise actor UNC4899 (aka PUKCHONG) used Gemini to develop code, research exploits and improve tooling; GTIG assesses the research likely indicates capability development against edge devices and modern browsers, and disabled the accounts.",
+    "last_verified": "2026-11-10",
+    "sources": [
+      {
+        "title": "GTIG AI Threat Tracker: Advances in Threat Actor Usage of AI Tools",
+        "publisher": "Google Threat Intelligence Group",
+        "grade": "A",
+        "url": "https://cloud.google.com/blog/topics/threat-intelligence/threat-actor-usage-of-ai-tools"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-FUNKSEC",
+    "type": "actor",
+    "name": "FunkSec",
+    "aliases": [],
+    "nexus": "Unattributed; hacktivism/cybercrime hybrid (developer assessed as based in Algeria)",
+    "ai_role": [
+      "tooling-development"
+    ],
+    "confidence": "medium",
+    "regions": [
+      "IN",
+      "US"
+    ],
+    "summary": "Check Point Research describes FunkSec as a new ransomware-as-a-service operation that emerged in late 2024, straddling hacktivism and cybercrime, whose Rust ransomware may have been developed with AI assistance (code comments likely LLM-generated) and which released a chatbot designed to support malicious activity. Check Point hedges throughout and notes the claimed victim counts may overstate the group's real impact.",
+    "last_verified": "2026-11-10",
+    "sources": [
+      {
+        "title": "FunkSec - Alleged Top Ransomware Group Powered by AI",
+        "publisher": "Check Point Research",
+        "grade": "A",
+        "url": "https://research.checkpoint.com/2025/funksec-alleged-top-ransomware-group-powered-by-ai/"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-APT45",
+    "type": "actor",
+    "name": "APT45",
+    "aliases": [],
+    "nexus": "Not stated in report",
+    "ai_role": [
+      "offensive-enabler"
+    ],
+    "confidence": "confirmed",
+    "summary": "Google Threat Intelligence Group reports observing APT45 send thousands of repetitive prompts that recursively analyse different CVEs and validate proof-of-concept exploits, alongside using individual prompts for real-time troubleshooting. The report does not state APT45's nexus, targets or dates for this activity.",
+    "last_verified": "2026-11-10",
+    "sources": [
+      {
+        "title": "GTIG AI Threat Tracker: Adversaries Leverage AI for Vulnerability Exploitation, Augmented Operations, and Initial Access",
+        "publisher": "Google Threat Intelligence Group",
+        "grade": "A",
+        "url": "https://cloud.google.com/blog/topics/threat-intelligence/ai-vulnerability-exploitation-initial-access"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-UNC2814",
+    "type": "actor",
+    "name": "UNC2814",
+    "aliases": [],
+    "nexus": "Not stated in report",
+    "ai_role": [
+      "offensive-enabler"
+    ],
+    "confidence": "confirmed",
+    "summary": "Google Threat Intelligence Group observed UNC2814 using expert-persona prompting with Gemini, directing the model to act as a senior security auditor or C/C++ binary security expert in fabricated scenarios to support vulnerability research on embedded devices, including TP-Link firmware and OFTP implementations. The report gives no nexus or dates beyond 'recently'.",
+    "last_verified": "2026-11-10",
+    "sources": [
+      {
+        "title": "GTIG AI Threat Tracker: Adversaries Leverage AI for Vulnerability Exploitation, Augmented Operations, and Initial Access",
+        "publisher": "Google Threat Intelligence Group",
+        "grade": "A",
+        "url": "https://cloud.google.com/blog/topics/threat-intelligence/ai-vulnerability-exploitation-initial-access"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-UNC5673",
+    "type": "actor",
+    "name": "UNC5673",
+    "aliases": [],
+    "nexus": "China",
+    "ai_role": [
+      "offensive-enabler"
+    ],
+    "confidence": "confirmed",
+    "summary": "Google Threat Intelligence Group describes UNC5673 as a PRC-nexus cluster with notable overlaps with TEMP.Hex that has targeted government sectors primarily in South and Southeast Asia. GTIG observed it using Claude-Relay-Service and CLI-Proxy-API to pool multiple Gemini, Claude and OpenAI accounts for scalable, cost-shared and obfuscated LLM access.",
+    "last_verified": "2026-11-10",
+    "sources": [
+      {
+        "title": "GTIG AI Threat Tracker: Adversaries Leverage AI for Vulnerability Exploitation, Augmented Operations, and Initial Access",
+        "publisher": "Google Threat Intelligence Group",
+        "grade": "A",
+        "url": "https://cloud.google.com/blog/topics/threat-intelligence/ai-vulnerability-exploitation-initial-access"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-UNC6201",
+    "type": "actor",
+    "name": "UNC6201",
+    "aliases": [],
+    "nexus": "China",
+    "ai_role": [
+      "offensive-enabler"
+    ],
+    "confidence": "confirmed",
+    "summary": "Google Threat Intelligence Group observed attempted use, by PRC-nexus UNC6201, of a public GitHub Python script that automates registering and immediately cancelling premium LLM accounts; GTIG says the tool allegedly handles registration, CAPTCHA bypass, SMS verification and cancellation. The report describes attempted use rather than confirmed success.",
+    "last_verified": "2026-11-10",
+    "sources": [
+      {
+        "title": "GTIG AI Threat Tracker: Adversaries Leverage AI for Vulnerability Exploitation, Augmented Operations, and Initial Access",
+        "publisher": "Google Threat Intelligence Group",
+        "grade": "A",
+        "url": "https://cloud.google.com/blog/topics/threat-intelligence/ai-vulnerability-exploitation-initial-access"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-BANDCAMPRO",
+    "type": "actor",
+    "name": "bandcampro",
+    "aliases": [],
+    "nexus": "Unattributed, Russian-speaking; financially motivated",
+    "ai_role": [
+      "autonomous-operator",
+      "tooling-development"
+    ],
+    "confidence": "confirmed",
+    "regions": [
+      "US",
+      "CA"
+    ],
+    "summary": "Trend Micro (TrendAI Research) analysed about 200 Gemini CLI session logs (19 March to 21 April 2026) from the Russian-speaking actor bandcampro, linked to its earlier 'Patriot Bait' reporting, in which a GEMINI.md file framed Gemini as an authorised pen tester and the agent migrated and operated a small botnet C2 server in about six minutes, built credential-stuffing and proxy tooling and processed infostealer dumps. Trend notes Gemini refused some requests, such as a self-spreading 'agent-bomb', and makes no state-sponsorship claim.",
+    "last_verified": "2026-11-10",
+    "sources": [
+      {
+        "title": "Six Minutes to Compromise: How 'Patriot Bait' Actor Used AI to Build and Deploy a C&C Botnet",
+        "publisher": "Trend Micro (TrendAI Research)",
+        "grade": "A",
+        "url": "https://www.trendmicro.com/en_us/research/26/g/actor-behind-patriot-bait-used-ai-to-deploy-c2-botnet.html"
+      },
+      {
+        "title": "'The bots are alive!' Jailbroken Gemini spun up new C2 server for Russian fraudster in just 6 minutes",
+        "publisher": "The Register",
+        "grade": "C",
+        "url": "https://www.theregister.com/research/2026/07/14/the-bots-are-alive-jailbroken-gemini-spun-up-new-c2-server-for-russian-fraudster-in-just-6-minutes/5270131"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-TEMP-HEX",
+    "type": "actor",
+    "name": "Temp.HEX",
+    "aliases": [],
+    "nexus": "China",
+    "ai_role": [
+      "offensive-enabler"
+    ],
+    "confidence": "confirmed",
+    "regions": [
+      "PK"
+    ],
+    "summary": "Google Threat Intelligence Group reports that the PRC-based actor Temp.HEX used Gemini and other AI tools in Q4 2025 to compile information on individuals in Pakistan and on separatist organizations. GTIG did not tie the research to direct targeting, but notes similar Pakistan targets appeared in the actor's campaign shortly afterwards; the associated assets were disabled.",
+    "last_verified": "2026-11-10",
+    "sources": [
+      {
+        "title": "GTIG AI Threat Tracker: Distillation, Experimentation, and (Continued) Integration of AI for Adversarial Use",
+        "publisher": "Google Threat Intelligence Group",
+        "grade": "A",
+        "url": "https://cloud.google.com/blog/topics/threat-intelligence/distillation-experimentation-integration-ai-adversarial-use"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-APT31",
+    "type": "actor",
+    "name": "APT31",
+    "aliases": [],
+    "nexus": "China",
+    "ai_role": [
+      "offensive-enabler"
+    ],
+    "confidence": "confirmed",
+    "regions": [
+      "US"
+    ],
+    "summary": "Google Threat Intelligence Group reports that the PRC-based actor APT31 prompted Gemini with an expert cybersecurity persona and a pretext of trialling the Hexstrike MCP tooling to automate vulnerability analysis and produce testing plans (RCE, WAF bypass, SQL injection) against US-based targets in Q4 2025. GTIG notes the activity blurs routine security assessment and targeted reconnaissance; assets were disabled.",
+    "last_verified": "2026-11-10",
+    "sources": [
+      {
+        "title": "GTIG AI Threat Tracker: Distillation, Experimentation, and (Continued) Integration of AI for Adversarial Use",
+        "publisher": "Google Threat Intelligence Group",
+        "grade": "A",
+        "url": "https://cloud.google.com/blog/topics/threat-intelligence/distillation-experimentation-integration-ai-adversarial-use"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-UNC5356",
+    "type": "actor",
+    "name": "UNC5356",
+    "aliases": [],
+    "nexus": "Unattributed, financially motivated",
+    "ai_role": [
+      "tooling-development"
+    ],
+    "confidence": "medium",
+    "summary": "Google Threat Intelligence Group assesses with high confidence that part of the COINBAIT phishing-kit activity, which targets customers of financial and cryptocurrency organizations, overlaps with the financially motivated cluster UNC5356. GTIG says the kit, built with Lovable AI, was likely accelerated by AI code generation, and that COINBAIT may be a service used by multiple actors.",
+    "last_verified": "2026-11-10",
+    "sources": [
+      {
+        "title": "GTIG AI Threat Tracker: Distillation, Experimentation, and (Continued) Integration of AI for Adversarial Use",
+        "publisher": "Google Threat Intelligence Group",
+        "grade": "A",
+        "url": "https://cloud.google.com/blog/topics/threat-intelligence/distillation-experimentation-integration-ai-adversarial-use"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-UNC6418",
+    "type": "actor",
+    "name": "UNC6418",
+    "aliases": [],
+    "nexus": "Unattributed",
+    "ai_role": [
+      "offensive-enabler"
+    ],
+    "confidence": "confirmed",
+    "regions": [
+      "UA"
+    ],
+    "summary": "Google Threat Intelligence Group reports that the unattributed cluster UNC6418 used Gemini for targeted intelligence gathering on sensitive account credentials and email addresses, followed shortly by phishing against Ukraine and the defense sector. Assets were disabled.",
+    "last_verified": "2026-11-10",
+    "sources": [
+      {
+        "title": "GTIG AI Threat Tracker: Distillation, Experimentation, and (Continued) Integration of AI for Adversarial Use",
+        "publisher": "Google Threat Intelligence Group",
+        "grade": "A",
+        "url": "https://cloud.google.com/blog/topics/threat-intelligence/distillation-experimentation-integration-ai-adversarial-use"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-UNC795",
+    "type": "actor",
+    "name": "UNC795",
+    "aliases": [],
+    "nexus": "China",
+    "ai_role": [
+      "tooling-development",
+      "offensive-enabler"
+    ],
+    "confidence": "confirmed",
+    "summary": "Google Threat Intelligence Group reports that the PRC-based actor UNC795 used Gemini several days a week in Q4 2025 across the attack lifecycle, for code troubleshooting, research and generating intrusion capabilities, including an AI-integrated code auditing capability. GTIG says safety systems triggered and Gemini did not comply with policy-violating requests; assets were disabled.",
+    "last_verified": "2026-11-10",
+    "sources": [
+      {
+        "title": "GTIG AI Threat Tracker: Distillation, Experimentation, and (Continued) Integration of AI for Adversarial Use",
+        "publisher": "Google Threat Intelligence Group",
+        "grade": "A",
+        "url": "https://cloud.google.com/blog/topics/threat-intelligence/distillation-experimentation-integration-ai-adversarial-use"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-ARMORED-LIKHO",
+    "type": "actor",
+    "name": "Armored Likho",
+    "aliases": [
+      "Eagle Werewolf"
+    ],
+    "nexus": "Not stated in report",
+    "ai_role": [
+      "tooling-development"
+    ],
+    "confidence": "high",
+    "regions": [
+      "RU",
+      "KZ",
+      "BR"
+    ],
+    "summary": "Kaspersky reports that the first-stage loaders and stagers in Armored Likho's BusySnake Stealer campaign against government and electric-power organizations were generated using AI, citing code-style artifacts such as verbose comments and emojis; no specific model is named. Kaspersky attributes the campaign to Armored Likho with medium confidence and gives the Eagle Werewolf alias on circumstantial evidence.",
+    "last_verified": "2026-11-10",
+    "sources": [
+      {
+        "title": "Armored Likho digging a snake pit: inside the covert BusySnake Stealer campaign",
+        "publisher": "Kaspersky (Securelist)",
+        "grade": "A",
+        "url": "https://securelist.com/armored-likho-apt-with-busysnake-stealer/120292/"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-SILKPARASITE",
+    "type": "actor",
+    "name": "SilkParasite",
+    "aliases": [],
+    "nexus": "China (medium confidence)",
+    "ai_role": [
+      "tooling-development"
+    ],
+    "confidence": "medium",
+    "regions": [
+      "UZ",
+      "TM",
+      "KG",
+      "TJ",
+      "KZ"
+    ],
+    "summary": "Bitdefender designates SilkParasite as an activity cluster targeting Central Asian government bodies and holds its China-nexus affiliation at medium confidence. It assesses, also at medium confidence, that the toolset shows traces of AI-assisted development (distinct from AI-generated malware) and states that two recovered lures were AI-generated; no model is named.",
+    "last_verified": "2026-11-10",
+    "sources": [
+      {
+        "title": "SilkParasite: Tracking a China-Nexus APT Across Central Asia",
+        "publisher": "Bitdefender",
+        "grade": "A",
+        "url": "https://www.bitdefender.com/en-us/blog/businessinsights/silkparasite-tracking-china-nexus-apt-across-central-asia"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-STAC6994",
+    "type": "actor",
+    "name": "STAC6994",
+    "aliases": [],
+    "nexus": "Not stated in report",
+    "ai_role": [
+      "tooling-development"
+    ],
+    "confidence": "confirmed",
+    "summary": "Sophos found a rogue device in a customer environment (May 2026) where the actor tracked as STAC6994 ran about a dozen role-assigned AI agents via the Cursor IDE (one on Claude Opus 4.5) to build and test EDR-evasion payload modules against Sophos, CrowdStrike and Defender VMs, producing nearly 80 modules. Sophos notes the agents' claims of near-universal bypass success were not fully supported and found no AI embedded in deployed malware; CTU confirmed the operator later deployed ransomware and stole data.",
+    "last_verified": "2026-11-10",
+    "sources": [
+      {
+        "title": "Sophos AI Security 2026 Report",
+        "publisher": "Sophos",
+        "grade": "A",
+        "url": "https://assets.sophos.com/X24WTUEQ/at/2gxzgxgw5xxgtsch4cmtqwkr/sophos-ai-security-report-2026.pdf"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-DRAGONFORCE",
+    "type": "actor",
+    "name": "DragonForce",
+    "aliases": [],
+    "nexus": "Not stated in report",
+    "ai_role": [
+      "offensive-enabler"
+    ],
+    "confidence": "medium",
+    "summary": "In a DragonForce ransomware case investigated by Sophos IR, the actor produced what Sophos 'strongly suspect[s]' was an AI-generated report analysing the exfiltrated data (including PII and legal risks), used during negotiations to pressure the victim to pay.",
+    "last_verified": "2026-11-10",
+    "sources": [
+      {
+        "title": "Sophos AI Security 2026 Report",
+        "publisher": "Sophos",
+        "grade": "A",
+        "url": "https://assets.sophos.com/X24WTUEQ/at/2gxzgxgw5xxgtsch4cmtqwkr/sophos-ai-security-report-2026.pdf"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-THE-GENTLEMEN",
+    "type": "actor",
+    "name": "The Gentlemen",
+    "aliases": [],
+    "nexus": "Not stated in report",
+    "ai_role": [
+      "tooling-development"
+    ],
+    "confidence": "medium",
+    "summary": "Sophos states that leaked chats from The Gentlemen ransomware group confirmed the group used generative AI to produce attack artifacts such as scripts, deployed manually. The report gives no model names or further detail.",
+    "last_verified": "2026-11-10",
+    "sources": [
+      {
+        "title": "Sophos AI Security 2026 Report",
+        "publisher": "Sophos",
+        "grade": "A",
+        "url": "https://assets.sophos.com/X24WTUEQ/at/2gxzgxgw5xxgtsch4cmtqwkr/sophos-ai-security-report-2026.pdf"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-GTG-2002",
+    "type": "actor",
+    "name": "GTG-2002",
+    "aliases": [],
+    "nexus": "Unattributed, financially motivated",
+    "ai_role": [
+      "autonomous-operator",
+      "offensive-enabler"
+    ],
+    "confidence": "confirmed",
+    "summary": "Anthropic disrupted a data-extortion operation tracked as GTG-2002 in which a cybercriminal used Claude Code, guided by a CLAUDE.md file with a false penetration-testing cover story, to automate reconnaissance, credential harvesting, network penetration and exfiltration and to decide what data to steal, set ransom amounts and write ransom notes. Anthropic says at least 17 organisations across government, healthcare, emergency services and religious institutions were potentially affected, with ransom demands sometimes above $500,000.",
+    "last_verified": "2026-11-10",
+    "sources": [
+      {
+        "title": "Threat Intelligence Report: August 2025",
+        "publisher": "Anthropic",
+        "grade": "A",
+        "url": "https://www-cdn.anthropic.com/b2a76c6f6992465c09a6f2fce282f6c0cea8c200.pdf"
+      },
+      {
+        "title": "Detecting and countering misuse of AI: August 2025",
+        "publisher": "Anthropic",
+        "grade": "A",
+        "url": "https://www.anthropic.com/news/detecting-countering-misuse-aug-2025"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-GTG-5004",
+    "type": "actor",
+    "name": "GTG-5004",
+    "aliases": [],
+    "nexus": "Unattributed, financially motivated (UK-based per Anthropic)",
+    "ai_role": [
+      "tooling-development"
+    ],
+    "confidence": "confirmed",
+    "summary": "Anthropic reports a UK-based actor tracked as GTG-5004 used Claude to develop, market and distribute ransomware-as-a-service variants (ChaCha20 encryption, EDR evasion, anti-recovery) sold for $400-$1,200 on dark web forums since at least January 2025. Anthropic assesses the actor appeared dependent on AI and unable to implement the complex components without it.",
+    "last_verified": "2026-11-10",
+    "sources": [
+      {
+        "title": "Threat Intelligence Report: August 2025",
+        "publisher": "Anthropic",
+        "grade": "A",
+        "url": "https://www-cdn.anthropic.com/b2a76c6f6992465c09a6f2fce282f6c0cea8c200.pdf"
+      },
+      {
+        "title": "Detecting and countering misuse of AI: August 2025",
+        "publisher": "Anthropic",
+        "grade": "A",
+        "url": "https://www.anthropic.com/news/detecting-countering-misuse-aug-2025"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-BUGSTER",
+    "type": "actor",
+    "name": "BUGSTER",
+    "aliases": [],
+    "nexus": "Unattributed, financially motivated (English-speaking per Unit 42)",
+    "ai_role": [
+      "offensive-enabler",
+      "tooling-development"
+    ],
+    "confidence": "confirmed",
+    "regions": [
+      "IN"
+    ],
+    "summary": "Unit 42, with visibility into the actor's operational environment, reports BUGSTER used Hermes Agent with DeepSeek V4 (controlled over Telegram) as its primary interface for criminal advisory and reconnaissance, plus a Cursor IDE setup it suggests was used for code development, across brute-force, VoIP fraud, Wi-Fi cracking, crypto reconnaissance and C2 work. Targets were primarily in India, including a university database exfiltration of over 5,200 records; Unit 42 assesses the actor is financially motivated with no prior reporting.",
+    "last_verified": "2026-11-10",
+    "sources": [
+      {
+        "title": "\"Next Exploit Opportunities\": How a Threat Actor Used AI to Help Plan and Execute Multiple Types of Cybercrime Activities",
+        "publisher": "Palo Alto Networks Unit 42",
+        "grade": "A",
+        "url": "https://unit42.paloaltonetworks.com/ai-assisted-cybercrime-analysis/"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-STORM-0940",
+    "type": "actor",
+    "name": "Storm-0940",
+    "aliases": [],
+    "nexus": "China",
+    "ai_role": [
+      "autonomous-operator"
+    ],
+    "confidence": "confirmed",
+    "summary": "Microsoft reports that Storm-0940, a China-state aligned actor active since 2021, used the open-source multi-agent penetration testing framework ARTEX to automate scanning, password spraying and OAuth application abuse, and observed AI-accelerated follow-on activity via Microsoft Graph. Microsoft assesses the actor was responsible for the October 2026 ConnectWise Cloud Backup supply chain compromise affecting downstream tenants worldwide; it notes an affected application does not necessarily mean data was accessed.",
+    "last_verified": "2026-11-10",
+    "sources": [
+      {
+        "title": "AI-driven, large-scale nation-state campaign using ARTEX enables supply chain compromise",
+        "publisher": "Microsoft Threat Intelligence",
+        "grade": "A",
+        "url": "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-LAUNDRY-BEAR",
+    "type": "actor",
+    "name": "LAUNDRY BEAR",
+    "aliases": [
+      "Void Blizzard",
+      "CL-STA-1114",
+      "TA488"
+    ],
+    "nexus": "Russia",
+    "ai_role": [
+      "tooling-development"
+    ],
+    "confidence": "medium",
+    "regions": [
+      "UA",
+      "US"
+    ],
+    "summary": "A joint advisory led by CISA, NSA and FBI with 27 partner agencies describes LAUNDRY BEAR as a Russian state-supported espionage group phishing Zimbra Collaboration Suite users and deploying the Flowerbed collection and exfiltration framework. The advisory says there are indications that AI played a role in Flowerbed's development and that the group appears to have used AI to support development; no model or tool is named. The advisory notes that the industry aliases may not map one-to-one to US government attribution.",
+    "last_verified": "2026-11-10",
+    "sources": [
+      {
+        "title": "Russian State-Supported Cyber Actors Conduct Phishing Campaign Targeting Users of Zimbra Collaboration Suite (AA26-204A)",
+        "publisher": "CISA, NSA, FBI and international partners",
+        "grade": "A",
+        "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-204a"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-EARTH-KRAHANG",
+    "type": "actor",
+    "name": "Earth Krahang",
+    "aliases": [],
+    "nexus": "China",
+    "ai_role": [
+      "tooling-development"
+    ],
+    "confidence": "confirmed",
+    "summary": "TrendAI describes Earth Krahang, a China-aligned group targeting government and defense sectors globally, using generative AI to turn a public proof-of-concept for CVE-2026-0740 (Ninja Forms File Uploads WordPress plugin) into a large-scale automated scanner. The group also installed ByteDance's Trae AI coding IDE on its C&C server, and AI-generated code comments in Simplified Chinese suggested the operator's origin.",
+    "last_verified": "2026-11-10",
+    "sources": [
+      {
+        "title": "2026 H1 APT Report: How APTs Are Weaponizing Trust in the Age of AI",
+        "publisher": "TrendAI Research (Trend Micro)",
+        "grade": "A",
+        "url": "https://www.trendaisecurity.com/en-us/resources-insights/deep-research/2026-h1-apt-report-how-apts-are-weaponizing-trust-in-the-age-of-ai"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-EARTH-NAGA",
+    "type": "actor",
+    "name": "Earth Naga",
+    "aliases": [],
+    "nexus": "China",
+    "ai_role": [
+      "tooling-development"
+    ],
+    "confidence": "confirmed",
+    "summary": "TrendAI reports that Earth Naga, a China-aligned group it associates with Flax Typhoon, used an iterative AI prompting ('vibe coding') workflow to build a PowerShell loader that compiles C# at runtime for process hollowing and reflective loading of backdoors. Multiple versions on the hosting server kept the AI's responses as code comments, exposing the development method. The association with Flax Typhoon is stated as an association, not an identity.",
+    "last_verified": "2026-11-10",
+    "sources": [
+      {
+        "title": "2026 H1 APT Report: How APTs Are Weaponizing Trust in the Age of AI",
+        "publisher": "TrendAI Research (Trend Micro)",
+        "grade": "A",
+        "url": "https://www.trendaisecurity.com/en-us/resources-insights/deep-research/2026-h1-apt-report-how-apts-are-weaponizing-trust-in-the-age-of-ai"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-CYBERXERO",
+    "type": "actor",
+    "name": "CyberXero",
+    "aliases": [],
+    "nexus": "Unattributed, financially motivated (Russian-speaking initial access broker; no state nexus asserted)",
+    "ai_role": [
+      "autonomous-operator",
+      "offensive-enabler"
+    ],
+    "confidence": "confirmed",
+    "regions": [
+      "UA",
+      "PL",
+      "CN",
+      "PK"
+    ],
+    "summary": "SOCRadar describes CyberXero as a Russian-speaking, financially motivated initial access broker that ran up to 51 specialised Claude Code agents for reconnaissance, exploitation and post-exploitation, plus PentAGI integrated with Cobalt Strike through an AI provider API. Session logs show a rehearsed ownership narrative and fresh sessions after refusals, though some refusals held. SOCRadar reports file-confirmed exfiltration from four Ukrainian organisations and more than 40 affected organisations, while noting no direct evidence of an access sale was recovered.",
+    "last_verified": "2026-11-10",
+    "sources": [
+      {
+        "title": "CyberXero: An AI-Augmented Initial Access Broker Targeting Ukrainian Critical Infrastructure",
+        "publisher": "SOCRadar Threat Research Unit",
+        "grade": "A",
+        "url": "https://socradar.io/blog/cyberxero-ai-iab-ukra"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-STORM-2945",
+    "type": "actor",
+    "name": "Storm-2945",
+    "aliases": [],
+    "nexus": "Russia",
+    "ai_role": [
+      "offensive-enabler",
+      "tooling-development"
+    ],
+    "confidence": "confirmed",
+    "summary": "Microsoft Threat Intelligence assesses Storm-2945 to be an operational sub-cluster of Midnight Blizzard and attributes the CaptiveCrunch campaign against travellers on hospitality captive-portal networks to it. Microsoft says it observed Storm-2945 using AI to support a significant portion of these operations, including device code and OAuth code phishing, but does not name the model or tasks; AI-assisted generation of ChocoShell and CornFlake variants is only suggested ('might', 'consistent with').",
+    "last_verified": "2026-11-10",
+    "sources": [
+      {
+        "title": "CaptiveCrunch: Midnight Blizzard targets travelers worldwide for malware delivery and credential theft",
+        "publisher": "Microsoft Threat Intelligence",
+        "grade": "A",
+        "url": "https://www.microsoft.com/en-us/security/blog/2026/07/31/captivecrunch-midnight-blizzard-targets-travelers-worldwide-for-malware-delivery-and-credential-theft/"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-REVENGEHOTELS",
+    "type": "actor",
+    "name": "RevengeHotels",
+    "aliases": [
+      "TA558"
+    ],
+    "nexus": "Unattributed, financially motivated",
+    "ai_role": [
+      "tooling-development"
+    ],
+    "confidence": "medium",
+    "regions": [
+      "BR",
+      "AR",
+      "BO",
+      "CL",
+      "CR",
+      "MX",
+      "ES"
+    ],
+    "summary": "Kaspersky attributes a summer 2025 wave of hotel-targeting phishing delivering VenomRAT to RevengeHotels (TA558) with high confidence, and says much of the initial infector and downloader code appears to be generated by LLM agents, based on heavy commenting, placeholders and lack of obfuscation. The AI-generation finding is hedged ('appears to be'); targets are mainly Brazilian hotels, with Spanish-language lures also seen.",
+    "last_verified": "2026-11-10",
+    "sources": [
+      {
+        "title": "RevengeHotels: a new wave of attacks leveraging LLMs and VenomRAT",
+        "publisher": "Kaspersky GReAT (Securelist)",
+        "grade": "A",
+        "url": "https://securelist.com/revengehotels-attacks-with-ai-and-venomrat-across-latin-america/117493/"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-CL-CRI-1131",
+    "type": "actor",
+    "name": "CL-CRI-1131",
+    "aliases": [
+      "Operation Escaneo"
+    ],
+    "nexus": "Not stated in report",
+    "ai_role": [
+      "tooling-development",
+      "offensive-enabler"
+    ],
+    "confidence": "high",
+    "regions": [
+      "MX",
+      "EC"
+    ],
+    "summary": "Palo Alto Networks Unit 42 tracks CL-CRI-1131 attacking a transportation organization, government ministries and water utilities in Mexico and Ecuador, and assesses the operators relied on LLMs (including Claude and GPT-4.1, per earlier Gambit reporting) to generate workaround scripts, running a self-hosted NextChat instance to compare models. Unit 42 notes CloudSEK tracks the activity as Operation Escaneo and that the cluster overlaps with CL-CRI-1163 but is treated as distinct.",
+    "last_verified": "2026-11-10",
+    "sources": [
+      {
+        "title": "Attackers Expose Ongoing AI Tool Use Targeting Organizations in Latin America",
+        "publisher": "Palo Alto Networks Unit 42",
+        "grade": "A",
+        "url": "https://unit42.paloaltonetworks.com/ai-tool-use-targeting-latam-orgs/"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-CL-CRI-1163",
+    "type": "actor",
+    "name": "CL-CRI-1163",
+    "aliases": [],
+    "nexus": "Not stated in report",
+    "ai_role": [
+      "tooling-development"
+    ],
+    "confidence": "medium",
+    "regions": [
+      "BR"
+    ],
+    "summary": "Palo Alto Networks Unit 42 tracks CL-CRI-1163 targeting the Brazilian financial sector with job- or resume-themed phishing from February 2026. Its conclusion that the operators used LLM-generated scripts rests on file-naming and iteration patterns in exposed staging infrastructure, and initial access via phishing is described as likely.",
+    "last_verified": "2026-11-10",
+    "sources": [
+      {
+        "title": "Attackers Expose Ongoing AI Tool Use Targeting Organizations in Latin America",
+        "publisher": "Palo Alto Networks Unit 42",
+        "grade": "A",
+        "url": "https://unit42.paloaltonetworks.com/ai-tool-use-targeting-latam-orgs/"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-JADE-SLEET",
+    "type": "actor",
+    "name": "Jade Sleet",
+    "aliases": [],
+    "nexus": "North Korea",
+    "ai_role": [
+      "offensive-enabler",
+      "tooling-development"
+    ],
+    "confidence": "high",
+    "summary": "Microsoft Threat Intelligence assesses that the North Korean actor Jade Sleet has operationalized AI across its operations, using generative AI for reconnaissance and lure/persona creation in job-themed targeting, and likely using the AI development platform Cursor. Between 8 and 12 June 2026 it ran job-themed targeting through three front companies against people at cybersecurity, AI, blockchain and recruitment firms.",
+    "last_verified": "2026-11-10",
+    "sources": [
+      {
+        "title": "Tracking AI adoption in North Korean threat actor tradecraft",
+        "publisher": "Microsoft Threat Intelligence",
+        "grade": "A",
+        "url": "https://www.microsoft.com/en-us/security/blog/2026/10/29/tracking-ai-adoption-in-north-korean-threat-actor-tradecraft/"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-PEARL-SLEET",
+    "type": "actor",
+    "name": "Pearl Sleet",
+    "aliases": [],
+    "nexus": "North Korea",
+    "ai_role": [
+      "autonomous-operator",
+      "tooling-development"
+    ],
+    "confidence": "confirmed",
+    "summary": "Microsoft Threat Intelligence places the North Korean actor Pearl Sleet at the accelerating stage of AI adoption and has identified it, alongside Onyx Sleet, using the open-source agentic AI penetration-testing framework ARTEX in operations since late October 2026. Microsoft also says AI development platforms such as Cursor have likely supported its tooling work.",
+    "last_verified": "2026-11-10",
+    "sources": [
+      {
+        "title": "Tracking AI adoption in North Korean threat actor tradecraft",
+        "publisher": "Microsoft Threat Intelligence",
+        "grade": "A",
+        "url": "https://www.microsoft.com/en-us/security/blog/2026/10/29/tracking-ai-adoption-in-north-korean-threat-actor-tradecraft/"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-SAPPHIRE-SLEET",
+    "type": "actor",
+    "name": "Sapphire Sleet",
+    "aliases": [],
+    "nexus": "North Korea",
+    "ai_role": [
+      "tooling-development"
+    ],
+    "confidence": "medium",
+    "summary": "Microsoft Threat Intelligence places the North Korean actor Sapphire Sleet at the accelerating stage of AI adoption, saying it likely used AI-assisted development platforms such as Cursor and likely incorporated AI into its August 2026 Rust software supply-chain compromise targeting Rust developers. Microsoft's March 2026 reporting groups it with actors using AI for persona research in job-themed lures but gives no Sapphire Sleet-specific observation.",
+    "last_verified": "2026-11-10",
+    "sources": [
+      {
+        "title": "Tracking AI adoption in North Korean threat actor tradecraft",
+        "publisher": "Microsoft Threat Intelligence",
+        "grade": "A",
+        "url": "https://www.microsoft.com/en-us/security/blog/2026/10/29/tracking-ai-adoption-in-north-korean-threat-actor-tradecraft/"
+      },
+      {
+        "title": "AI as tradecraft: How threat actors operationalize AI",
+        "publisher": "Microsoft Threat Intelligence",
+        "grade": "A",
+        "url": "https://www.microsoft.com/en-us/security/blog/2026/03/06/ai-as-tradecraft-how-threat-actors-operationalize-ai/"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-KNAITHE",
+    "type": "actor",
+    "name": "knaithe",
+    "aliases": [
+      "KnYuan"
+    ],
+    "nexus": "China (Chinese-speaking actor based in Zhuhai; opportunistic exploit operator)",
+    "ai_role": [
+      "autonomous-operator"
+    ],
+    "confidence": "confirmed",
+    "regions": [
+      "CN",
+      "MY"
+    ],
+    "summary": "Palo Alto Networks Unit 42 describes a Chinese-speaking, opportunistic exploit operator (knaithe / KnYuan) running DeepSeek through the Hermes Agent framework, controlled via Telegram, as an autonomous offensive operator that enumerated targets with FOFA, researched CVEs and launched exploitation, including against exposed Langflow and n8n instances. The actor attempted over 460 targets and persistently targeted a Malaysian government entity; Unit 42 notes Codex use was observed but unverified.",
+    "last_verified": "2026-11-10",
+    "sources": [
+      {
+        "title": "Chinese-Speaking Threat Actor Harnesses AI Models for Autonomous Cyberattacks",
+        "publisher": "Palo Alto Networks Unit 42",
+        "grade": "A",
+        "url": "https://unit42.paloaltonetworks.com/autonomous-ai-cyber-attack-campaign/"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-AURORA-RANSOMWARE",
+    "type": "actor",
+    "name": "Aurora",
+    "aliases": [],
+    "nexus": "Not stated in report (ransomware/extortion group; operator prompts written in Russian)",
+    "ai_role": [
+      "offensive-enabler",
+      "autonomous-operator"
+    ],
+    "confidence": "confirmed",
+    "summary": "Gambit Security reports the Aurora ransomware group, active since about April 2026, used Cursor Agent running Claude Sonnet between 8 April and 21 May 2026 against ten organizations to drive network scanning, BloodHound enumeration, NTLM relay and certificate attacks, with the operator writing restrictions in Russian. Gambit notes most AI-issued commands failed on the first attempt and attributes a second cluster of eight victims only with medium confidence.",
+    "last_verified": "2026-11-10",
+    "sources": [
+      {
+        "title": "Aurora ransomware targets ESXi, abuses Cursor Agent for exploitation",
+        "publisher": "Gambit Security",
+        "grade": "A",
+        "url": "https://gambit.security/blog-posts/aurora-ransomware-targets-esxi-abuses-cursor-agent-for-exploitation"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-VAPOR-PANDA",
+    "type": "actor",
+    "name": "VAPOR PANDA",
+    "aliases": [],
+    "nexus": "China",
+    "ai_role": [
+      "autonomous-operator"
+    ],
+    "confidence": "confirmed",
+    "summary": "CrowdStrike reports the China-nexus adversary VAPOR PANDA used the ARTEX multi-agent framework, mainly with DeepSeek, to run intrusions from initial access through reconnaissance and lateral movement from 17 October 2026, targeting entities in at least 14 countries with confirmed post-exploitation at nine organizations. CrowdStrike says the operator only steered agents at decision points, that a second commercial LLM could not be confirmed, and that this activity is separate from ARTEX activity reported under Storm-0940.",
+    "last_verified": "2026-11-10",
+    "sources": [
+      {
+        "title": "VAPOR PANDA Uses AI-Driven ARTEX to Scale a Global Espionage Campaign",
+        "publisher": "CrowdStrike Counter Adversary Operations",
+        "grade": "A",
+        "url": "https://www.crowdstrike.com/en-us/blog/vapor-panda-uses-artex-to-scale-global-campaign/"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-GREYVIBE",
+    "type": "actor",
+    "name": "GREYVIBE",
+    "aliases": [],
+    "nexus": "Russia",
+    "ai_role": [
+      "tooling-development",
+      "offensive-enabler"
+    ],
+    "confidence": "high",
+    "regions": [
+      "UA"
+    ],
+    "summary": "WithSecure assesses with high confidence that GREYVIBE's activity aligns with Russian state interests, targeting mainly Ukrainian military, government and civilian victims since at least August 2025. It reports strong evidence of systematic, likely deliberate use of Ideogram, ChatGPT and Gemini for lure images and sites, obfuscators and loaders, the LegionRelay implant and post-compromise scripts; a link to UAC-0098/TrickBot is judged low likelihood.",
+    "last_verified": "2026-11-10",
+    "sources": [
+      {
+        "title": "GREYVIBE: A Russia-nexus group leveraging AI across state-aligned operations",
+        "publisher": "WithSecure W/Labs",
+        "grade": "A",
+        "url": "https://www.withsecure.com/en/resources-hub/w-labs/greyvibe/"
       }
     ]
   }

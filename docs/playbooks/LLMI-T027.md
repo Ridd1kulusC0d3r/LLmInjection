@@ -5,15 +5,15 @@
 | | |
 |---|---|
 | Category | runtime-security |
-| Maturity | **no linked evidence yet** |
-| Priority | 1 of 16 (maturity weight times the layers still missing) |
+| Maturity | **observed in the wild** |
+| Priority | 4 of 16 (maturity weight times the layers still missing) |
 | Frameworks | none mapped |
 
 ## Where it stands
 
 | Layer | Status |
 |---|---|
-| Evidence | 0 record(s), 0 publisher(s), best grade n/a, newest undated |
+| Evidence | 1 record(s), 1 publisher(s), best grade A, newest 2026 |
 | Safe tests | 2 |
 | Detections | 2 rule file(s), 0 specification(s) |
 | Controls | 2 |
@@ -24,6 +24,12 @@
 ## 1. Understand it
 
 AI runtimes, local models or provider endpoints are used outside the approved inventory, hiding data flows and capability from security teams.
+
+What the repository links to it:
+
+- 2026 · [UNC6508 targeting of proprietary AI research](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-UNC6508-AI-RESEARCH-TARGETING) (campaign, confirmed)
+
+Actors whose campaigns use it: UNC6508. Vendor labels are kept as published and never merged without evidence.
 
 ## 2. Test it safely
 
@@ -83,7 +89,7 @@ The runner has plan and mock adapters only: it does not call your system. To run
 
 ## 6. Limits of this page
 
-- No incident, campaign or vulnerability in this repository is linked to this technique. That is a gap here, not proof that it has not happened.
+- All the evidence comes from one publisher (Google Threat Intelligence Group). Treat it as one voice until a second source confirms it.
 - No benchmark maps to it, so there is no public yardstick for how well a defence performs.
 - The tests use benign markers and synthetic data. A pass in a lab is not a security rating for a production system.
 - Ecosystem tools and benchmarks help you test and measure. They never support a claim that an actor used the technique.
