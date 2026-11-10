@@ -2368,5 +2368,159 @@
     "evidence_sources": [
       "SRC-MITRE-ATLAS"
     ]
+  },
+  {
+    "id": "REL-216",
+    "type": "relationship",
+    "source": "ACTOR-JADEPUFFER",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-JADEPUFFER-AGENTIC-EXTORTION",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-SYSDIG-JADEPUFFER"
+    ]
+  },
+  {
+    "id": "REL-217",
+    "type": "relationship",
+    "source": "CAMPAIGN-JADEPUFFER-AGENTIC-EXTORTION",
+    "relationship": "uses",
+    "target": "LLMI-T015",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-SYSDIG-JADEPUFFER"
+    ]
+  },
+  {
+    "id": "REL-218",
+    "type": "relationship",
+    "source": "CAMPAIGN-JADEPUFFER-AGENTIC-EXTORTION",
+    "relationship": "uses",
+    "target": "LLMI-T024",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-SYSDIG-JADEPUFFER"
+    ]
+  },
+  {
+    "id": "REL-219",
+    "type": "relationship",
+    "source": "ACTOR-CORAL-SLEET",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-CORAL-SLEET-REPO-TROJANIZATION",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MSFT-DPRK-AI-2026-10"
+    ]
+  },
+  {
+    "id": "REL-220",
+    "type": "relationship",
+    "source": "CAMPAIGN-CORAL-SLEET-REPO-TROJANIZATION",
+    "relationship": "uses",
+    "target": "LLMI-T028",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MSFT-DPRK-AI-2026-10"
+    ]
+  },
+  {
+    "id": "REL-221",
+    "type": "relationship",
+    "source": "ACTOR-JASPER-SLEET",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-JASPER-SLEET-AI-PERSONAS",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MSFT-DPRK-AI-2026-10"
+    ]
+  },
+  {
+    "id": "REL-222",
+    "type": "relationship",
+    "source": "CAMPAIGN-JASPER-SLEET-AI-PERSONAS",
+    "relationship": "uses",
+    "target": "LLMI-T014",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MSFT-DPRK-AI-2026-10"
+    ]
+  },
+  {
+    "id": "REL-223",
+    "type": "relationship",
+    "source": "ACTOR-ONYX-SLEET",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-ONYX-SLEET-AI-LURES",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MSFT-DPRK-AI-2026-10"
+    ]
+  },
+  {
+    "id": "REL-224",
+    "type": "relationship",
+    "source": "CAMPAIGN-ONYX-SLEET-AI-LURES",
+    "relationship": "uses",
+    "target": "LLMI-T014",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MSFT-DPRK-AI-2026-10"
+    ]
+  },
+  {
+    "id": "REL-225",
+    "type": "relationship",
+    "source": "CAMPAIGN-ONYX-SLEET-AI-LURES",
+    "relationship": "uses",
+    "target": "LLMI-T015",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-MSFT-DPRK-AI-2026-10"
+    ]
+  },
+  {
+    "id": "REL-226",
+    "type": "relationship",
+    "source": "ACTOR-APT27",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-APT27-ORB-TOOLING",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-AI-TRACKER-2026-05"
+    ]
+  },
+  {
+    "id": "REL-227",
+    "type": "relationship",
+    "source": "CAMPAIGN-APT27-ORB-TOOLING",
+    "relationship": "uses",
+    "target": "LLMI-T028",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-AI-TRACKER-2026-05"
+    ]
+  },
+  {
+    "id": "REL-228",
+    "type": "relationship",
+    "source": "INCIDENT-PROMPTSPY",
+    "relationship": "demonstrates",
+    "target": "LLMI-T013",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-AI-TRACKER-2026-05"
+    ]
+  },
+  {
+    "id": "REL-229",
+    "type": "relationship",
+    "source": "INCIDENT-GTIG-AI-ZERO-DAY",
+    "relationship": "demonstrates",
+    "target": "LLMI-T028",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-GTIG-AI-TRACKER-2026-05"
+    ]
   }
 ]

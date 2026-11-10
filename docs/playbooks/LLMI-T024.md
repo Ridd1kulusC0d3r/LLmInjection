@@ -13,7 +13,7 @@
 
 | Layer | Status |
 |---|---|
-| Evidence | 1 record(s), 1 publisher(s), best grade A, newest 2026-05-07 |
+| Evidence | 2 record(s), 2 publisher(s), best grade A, newest 2026 |
 | Safe tests | 1 |
 | Detections | 0 rule file(s), 1 specification(s) |
 | Controls | 2 |
@@ -27,7 +27,10 @@ Model-serving endpoints, agent builders, vector stores or MCP servers are reacha
 
 What the repository links to it:
 
+- 2026 · [JADEPUFFER agentic database extortion](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-JADEPUFFER-AGENTIC-EXTORTION) (campaign, high)
 - 2026-05-07 · [Threat Actor Uses a DeepSeek-Powered Hermes Agent in Langflow and n8n Exploitation Attempts (AML.CS0070)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-ATLAS-CS0070) (atlas-incident, high)
+
+Actors whose campaigns use it: JADEPUFFER. Vendor labels are kept as published and never merged without evidence.
 
 ## 2. Test it safely
 
@@ -72,7 +75,6 @@ The runner has plan and mock adapters only: it does not call your system. To run
 
 ## 6. Limits of this page
 
-- All the evidence comes from one publisher (MITRE). Treat it as one voice until a second source confirms it.
 - 1 of 1 detection(s) are specifications, not rules. They say what to look for, not how to query it. Nothing here has been run against real telemetry.
 - No benchmark maps to it, so there is no public yardstick for how well a defence performs.
 - The tests use benign markers and synthetic data. A pass in a lab is not a security rating for a production system.

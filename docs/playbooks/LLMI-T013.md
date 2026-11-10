@@ -13,7 +13,7 @@
 
 | Layer | Status |
 |---|---|
-| Evidence | 2 record(s), 2 publisher(s), best grade A, newest 2026 |
+| Evidence | 3 record(s), 2 publisher(s), best grade A, newest 2026 |
 | Safe tests | 1 |
 | Detections | 1 rule file(s), 0 specification(s) |
 | Controls | 0 |
@@ -29,6 +29,7 @@ What the repository links to it:
 
 - 2026 · [APT28 PROMPTSTEAL / LAMEHUG runtime LLM use](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-APT28-PROMPTSTEAL) (campaign, confirmed)
 - 2025-06-03 · [LAMEHUG: Malware Leveraging Dynamic AI-Generated Commands (AML.CS0044)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-ATLAS-CS0044) (atlas-incident, high)
+- 2026 · [PROMPTSPY Android backdoor with a Gemini UI agent](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-PROMPTSPY) (malware, confirmed)
 
 Actors whose campaigns use it: APT28. Vendor labels are kept as published and never merged without evidence.
 

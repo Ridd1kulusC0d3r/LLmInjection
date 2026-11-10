@@ -13,7 +13,7 @@
 
 | Layer | Status |
 |---|---|
-| Evidence | 4 record(s), 5 publisher(s), best grade A, newest 2026 |
+| Evidence | 7 record(s), 7 publisher(s), best grade A, newest 2026 |
 | Safe tests | 1 |
 | Detections | 0 rule file(s), 1 specification(s) |
 | Controls | 1 |
@@ -27,12 +27,15 @@ Operators use LLMs to generate or iterate on reconnaissance, exploitation, crede
 
 What the repository links to it:
 
+- 2026 · [APT27 Gemini-assisted ORB management tooling](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-APT27-ORB-TOOLING) (campaign, confirmed)
 - 2026 · [BREEZE COMET payment-system fraud in Brazil](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-BREEZE-COMET-PAYMENTS) (campaign, confirmed)
 - 2026 · [CL-CRI-1131 LLM-assisted intrusions in Mexico and Ecuador](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-CL-CRI-1131) (campaign, medium)
+- 2026 · [Coral Sleet AI-built repository trojanization](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-CORAL-SLEET-REPO-TROJANIZATION) (campaign, high)
 - 2026 · [SHADOW-AETHER-040 agentic intrusions against Latin American governments](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-SHADOW-AETHER-040) (campaign, high)
+- 2026 · [Criminal actor uses an AI model to develop a 2FA-bypass zero-day](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-GTIG-AI-ZERO-DAY) (intrusion, high)
 - 2026 · [VoidLink AI-assisted malware engineering case](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-VOIDLINK) (observed-research-case, confirmed)
 
-Actors whose campaigns use it: BREEZE COMET. Vendor labels are kept as published and never merged without evidence.
+Actors whose campaigns use it: APT27, BREEZE COMET, Coral Sleet. Vendor labels are kept as published and never merged without evidence.
 
 ## 2. Test it safely
 

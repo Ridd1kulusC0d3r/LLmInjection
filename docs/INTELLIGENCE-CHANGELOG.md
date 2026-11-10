@@ -2,6 +2,34 @@
 
 This changelog records material changes to attribution, confidence, external mappings and structured intelligence. Ordinary prose edits do not belong here.
 
+## 2026-11-09 — First promotions from the adversary-use pipeline
+
+### Added
+
+- Actors: JADEPUFFER (Microsoft's Storm-3168 recorded as an alias because Microsoft links the two), Coral Sleet, Jasper Sleet, Onyx Sleet and APT27, each with a campaign and the techniques its report describes.
+- Incidents: PROMPTSPY (Android backdoor driving the UI through gemini-2.5-flash-lite), a criminal actor's AI-developed 2FA-bypass zero-day, and FakeAgent (a malicious Claude Artifact used as a fake Claude Desktop download page).
+- Five grade-A sources: Sysdig, Microsoft (2), Google Threat Intelligence Group and Huntress. The matching research-queue items are marked `accepted`.
+
+### Confidence notes
+
+- Every record states only what its report says. Microsoft does not confirm that an AI agent ran Storm-3168's activity; that rests on Sysdig's reporting of JADEPUFFER.
+- APT45, Sapphire Sleet, Pearl Sleet, Diamond Sleet and Emerald Sleet stay in the queue: the reports read so far either do not state a nexus in that section or describe AI use as possible.
+- FakeAgent is linked to no technique: abusing an AI product's user-content hosting as a lure does not fit an existing one.
+
+## 2026-11-09 — Adversary use of AI: candidate pipeline from a community tracker
+
+### Added
+
+- Scope stated in `docs/METHODOLOGY.md`: attacks against AI and adversary use of AI, under the same evidence rules; a rule for indicators of compromise (never infer a field, never copy unlicensed indicators).
+- `scripts/ai_actor_tracker_check.py` and `references/crosswalks/ai-actor-tracker.json`: `cybershujin/Threat-Actors-use-of-Artifical-Intelligence` (ECO-117, no licence declared) compared with the datasets. 6 of its 141 actors are already held; 110 reported since 2025 and 97 report URLs are in `data/research-queue.json` as `actor-candidate` and `source-candidate` from the disabled feed `FEED-AI-ACTOR-TRACKER`.
+- `docs/ACTORS-USING-AI.md`: the candidate pipeline and a promotion checklist.
+
+### Confidence notes
+
+- Nothing was added to `actors.json`, `campaigns.json` or `sources.json`. A candidate is a lead from a one-person curation (grade D).
+- Two of the tracker's matches go through an alias (APT43 to our Kimsuky record, UNC6780 to TeamPCP); the crosswalk records the label that matched so it can be reviewed.
+- Two ATT&CK IDs the tracker uses (T1562.001, T1656) are retired in Enterprise ATT&CK 20.1.
+
 ## 2026-10-12 — Third-party AI-security skills mapped; defender playbooks
 
 ### Added

@@ -85,6 +85,46 @@ Test / Detection / Control
 Evidence source
 ```
 
+## Candidate pipeline
+
+LLMInjection tracks both halves of the problem: attacks **against** AI systems and adversaries **using** AI in their operations. The second half grows through a candidate pipeline, never by bulk import. A community tracker is compared with the datasets by `scripts/ai_actor_tracker_check.py`; what is missing goes to the research queue, and an analyst promotes a candidate only after reading the primary report.
+
+<!-- gen:actor-tracker-gap:start -->
+
+The tracker lists **141** actors or clusters that use AI in cyber operations (plus 17 deepfake-fraud entries). LLMInjection holds **9** of them. **107** reported in 2025 or later are in the research queue as `actor-candidate`, and **92** report URLs we do not cite (69 from vendors or governments) as `source-candidate`. Its 78 ATT&CK IDs were checked against Enterprise ATT&CK 20.1: 2 are retired there, 0 unknown.
+
+Top candidates by score (recency, number of references, vendor or government reporting). None is verified yet.
+
+| Candidate | Reported | References | Vendor or government |
+|---|---|---|---|
+| APT45 | May 2026 | 2 | yes |
+| Earth Krahang | Jul 2026 | 2 | yes |
+| Earth Naga | Jul 2026 | 2 | yes |
+| LAUNDRY BEAR | Jul 2026 | 2 | yes |
+| Sapphire Sleet | Mar 2026 | 2 | yes |
+| ShinyHunters | Sep 2026 | 2 | yes |
+| Temp.HEX | Feb 2026 (updated Sep 2026) | 2 | yes |
+| UnSub (ARTEX agentic pentest, South Korean finance) — CrowdStrike | Oct 2026 | 2 | yes |
+| UnSub (FortiGate campaign) — Amazon Threat Intelligence | Feb 2026 | 2 | yes |
+| UnSub (Mexican government campaign) — Gambit Security | Apr 2026 | 2 | yes |
+| UnSub (PaperCut NG/MF agentic exploitation campaign) — GreyNoise/Blackpoint | Sep 2026 | 2 | yes |
+| UnSub (possibly Earth Lamia) — Trend Micro | Jul 2026 | 2 | yes |
+| UnSub (suspected China-nexus) — Hunt.io | Jul 2026 | 2 | yes |
+| UNC1069 | Nov 2025 (updated Sep 2026) | 3 | yes |
+| APT31 | Feb 2026 | 1 | yes |
+
+Snapshot of `cybershujin/Threat-Actors-use-of-Artifical-Intelligence` at `6aba8f0a0c` (2026-11-09); licence: none declared. Regenerate with `scripts/ai_actor_tracker_check.py`.
+
+<!-- gen:actor-tracker-gap:end -->
+
+Promotion checklist for an `actor-candidate`:
+
+1. Read the vendor or government report, not the tracker's summary or press coverage.
+2. Record the vendor's own label and nexus wording. Do not merge it with an existing actor unless the report says they are the same.
+3. Pick the AI role from the taxonomy above from what the report shows, not from what it speculates.
+4. Grade the source and set confidence separately (see [Methodology](METHODOLOGY.md)).
+5. Link the campaign to techniques only where the report describes the behaviour.
+
 ## Expansion rule
 
 The target is not to collect every APT name.
