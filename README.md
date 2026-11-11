@@ -68,9 +68,22 @@ Of the **28 techniques** tracked, **22** have activity observed in the wild, **0
 
 Attribution is the weakest link: AI use is usually **inferred from artifacts**, vendors track actors under their own labels, and those labels are kept as published, never merged without evidence. The [methodology](docs/METHODOLOGY.md) explains the source grades (A to E), the confidence levels and how each technique maps to MITRE ATLAS, OWASP, NIST and Google SAIF.
 
-<a href="https://ridd1kulusc0d3r.github.io/LLmInjection/"><img src="assets/explorer-tour.gif" alt="Explorer tour: overview dashboard, landscape, graph, the coverage matrix sorted by priority with a technique opened, actors by technique, ecosystem, and the Portuguese interface" width="100%"></a>
+<a href="https://ridd1kulusc0d3r.github.io/LLmInjection/"><img src="assets/explorer-tour.gif" alt="Explorer tour: dashboard, actors using AI, landscape, the graph with a pinned selection, the coverage matrix sorted by priority with a technique opened, actors by technique, timeline, ecosystem, dark theme and the Portuguese interface" width="100%"></a>
 
-<sub>A tour of the Explorer: dashboard, landscape, graph, the coverage matrix (sort, drill down, actors by technique), ecosystem and the language switch. Click it to open the live site, which is rebuilt from the datasets on every merge to main. Regenerate the GIF with `scripts/record_tour.js` and `scripts/make_tour_gif.py`.</sub>
+<sub>A tour of the Explorer: dashboard, actors using AI, landscape, graph, the coverage matrix (sort, drill down, actors by technique), timeline, ecosystem, dark theme and the language switch. Click it to open the live site, which is rebuilt from the datasets on every merge to main.</sub>
+
+<table>
+<tr>
+<td width="50%"><a href="https://ridd1kulusc0d3r.github.io/LLmInjection/#tab=graph"><img src="assets/explorer-graph.gif" alt="Graph interaction: hover traces a node, a click pins it and lists its linked records, a linked record is selected, the view is dragged and zoomed, two columns are hidden and the whole graph is shown" width="100%"></a></td>
+<td width="50%"><a href="https://ridd1kulusc0d3r.github.io/LLmInjection/#tab=overview"><img src="assets/explorer-filters.gif" alt="Dashboard filters: a confidence segment filters the Explorer and shows a removable chip, a maturity bar opens the coverage matrix filtered, and a source-grade bar opens the filtered source registry" width="100%"></a></td>
+</tr>
+<tr>
+<td><sub><b>Graph.</b> Click a node to pin it and trace its links, jump along a link, drag to pan, zoom with the buttons or Ctrl + wheel, hide columns by type.</sub></td>
+<td><sub><b>Selectable charts.</b> Every bar, meter and confidence segment on the dashboard is a filter; active filters show as chips.</sub></td>
+</tr>
+</table>
+
+<sub>Regenerate the GIFs with `node scripts/record_tour.js <url> <frames> tour|graph|filters` and `python scripts/make_tour_gif.py <frames> assets/explorer-<name>.gif`.</sub>
 
 ### ▶ Video tour (73 s)
 

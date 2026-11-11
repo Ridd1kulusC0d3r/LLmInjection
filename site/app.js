@@ -1,4 +1,4 @@
-const state={graph:null,landscape:null,diff:null,eco:[],cov:null,translations:null,search:"",type:"",confidence:"",region:"",ecoClass:"",ecoSection:""};
+const state={grade:"",graph:null,landscape:null,diff:null,eco:[],cov:null,translations:null,search:"",type:"",confidence:"",region:"",ecoClass:"",ecoSection:""};
 const TYPE_ORDER=["actor","campaign","incident","vulnerability","technique","test-case","detection","control","framework","model","source"];
 const CONF_ORDER=["confirmed","high","medium","low","unverified"];
 const MATURITY_ORDER=["observed-in-the-wild","disclosed-vulnerability","research-demonstrated","no-linked-evidence"];
@@ -77,9 +77,13 @@ function initControls(){
   document.addEventListener("keydown",e=>{
     if(e.key==="Escape"&&$("#drawer").classList.contains("open"))closeDrawer();
     if(e.key==="Tab"&&$("#drawer").classList.contains("open")&&$("#drawer").contains(document.activeElement))trapFocus(e);
+    if((e.key==="Enter"||e.key===" ")&&e.target.matches?.("[data-filter]")){e.preventDefault();applyFilter(e.target.dataset.filter);return}
     if((e.key==="Enter"||e.key===" ")&&e.target.matches?.("[data-id]:not(a):not(button)")){e.preventDefault();openNode(e.target.dataset.id)}
   });
-  document.addEventListener("click",e=>{const el=e.target.closest("[data-id]");if(el&&!el.closest("svg")){if(e.target.closest("a[href]"))e.preventDefault();openNode(el.dataset.id)}});
+  document.addEventListener("click",e=>{const f=e.target.closest("[data-filter]");if(f){applyFilter(f.dataset.filter);return}
+    const u=e.target.closest("[data-unset]");if(u){const k=u.dataset.unset;state[k]="";const sel={type:"#typeFilter",confidence:"#confidenceFilter",region:"#regionFilter"}[k];if(sel)$(sel).value="";renderAll();return}
+    const el=e.target.closest("[data-id]");if(el&&!el.closest("svg")){if(e.target.closest("a[href]"))e.preventDefault();openNode(el.dataset.id)}});
+  initGraphControls();
   $("#theme").onclick=()=>{
     const cur=document.documentElement.dataset.theme||(matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light");
     const next=cur==="dark"?"light":"dark";document.documentElement.dataset.theme=next;
@@ -100,6 +104,8 @@ function showTab(name,push){
   document.querySelectorAll(".tab").forEach(x=>{const on=x===tab;x.classList.toggle("active",on);x.setAttribute("aria-selected",on);x.tabIndex=on?0:-1});
   document.querySelectorAll(".view").forEach(x=>x.classList.toggle("active",x.id===name));
   if(push)patchHash({tab:name});
+  /* the graph is laid out while hidden; size the first view once it has real dimensions */
+  if(name==="graph"&&G.full&&!G.sized&&$("#graphSvg").clientWidth){G.sized=true;graphStart()}
 }
 function tabKeys(e){
   const tabs=[...document.querySelectorAll(".tab")],i=tabs.indexOf(e.currentTarget);
@@ -123,6 +129,8 @@ function applyHash(){
 function nodeTab(id){const n=state.graph.nodes.find(x=>x.id===id);return{technique:"coverage",source:"sources",actor:"overview",campaign:"timeline",incident:"timeline",vulnerability:"timeline"}[n?.type]||null}
 /* rows and cards that open a record must be reachable and operable from the keyboard */
 function afterRender(){
+  document.querySelectorAll("[data-filter]").forEach(el=>{el.tabIndex=0;el.setAttribute("role","button");if(!el.title)el.title=t("dash.filter.hint")});
+  renderChips();
   document.querySelectorAll("[data-id]:not(a):not(.node)").forEach(el=>{if(!el.hasAttribute("tabindex"))el.tabIndex=0;if(el.tagName!=="TR"&&!el.hasAttribute("role"))el.setAttribute("role","button")});
 }
 
@@ -163,34 +171,99 @@ function renderLandscape(){
   }).join("");
   $("#leads").innerHTML=(L.research_queue||[]).map(q=>`<div class="dom"><header><h3 style="font-weight:500">${esc(q.claim)}</h3></header><p>${esc(q.reason)}</p><div class="tags"><span>${esc(q.status)}</span></div></div>`).join("");
 }
+/* ---------- graph: curved edges, pan and zoom on the viewBox, a pinned selection, type toggles */
+const G={hidden:new Set(),sel:null,view:null,full:null,anim:0};
+function setView(v,animate=true){
+  const svg=$("#graphSvg"),from=G.view||v;cancelAnimationFrame(G.anim);
+  const apply=b=>{G.view=b;svg.setAttribute("viewBox",`${b.x.toFixed(1)} ${b.y.toFixed(1)} ${b.w.toFixed(1)} ${b.h.toFixed(1)}`)};
+  if(!animate||matchMedia("(prefers-reduced-motion:reduce)").matches){apply(v);return}
+  const t0=performance.now(),D=280,ease=k=>1-Math.pow(1-k,3);
+  const step=now=>{const k=Math.min(1,(now-t0)/D),e=ease(k),m=a=>from[a]+(v[a]-from[a])*e;apply({x:m("x"),y:m("y"),w:m("w"),h:m("h")});if(k<1)G.anim=requestAnimationFrame(step)};
+  G.anim=requestAnimationFrame(step);
+}
+const graphAR=()=>{const svg=$("#graphSvg");return svg.clientWidth/Math.max(1,svg.clientHeight)||1.6};
+function clampView(v){const f=G.full,ar=graphAR(),maxW=Math.max(f.w*1.1,f.h*ar*1.05),w=Math.min(Math.max(v.w,f.w/8),maxW),h=w/ar;
+  const x=w>=f.w?f.x+(f.w-w)/2:Math.min(Math.max(v.x,f.x-40),f.x+f.w-w+40),y=h>=f.h?f.y+(f.h-h)/2:Math.min(Math.max(v.y,f.y-20),f.y+f.h-h+20);return{x,y,w,h}}
+function zoomAt(factor,cx,cy,animate=true){
+  const v=G.view;if(!v)return;const w=v.w*factor,h=v.h*factor;
+  cx??=v.x+v.w/2;cy??=v.y+v.h/2;
+  setView(clampView({x:cx-(cx-v.x)*factor,y:cy-(cy-v.y)*factor,w,h}),animate);
+}
+/* fit the columns to the width and start at the top; the graph is taller than wide, so it scrolls vertically */
+function graphFit(){const f=G.full,ar=graphAR(),w=f.w+20,h=w/ar;setView({x:f.x-10,y:f.y,w,h})}
+/* first view: labels at reading size, top-left; Fit and Whole graph are one click away */
+function graphStart(){const svg=$("#graphSvg"),f=G.full,ar=graphAR(),w=Math.min(f.w+20,Math.max(900,svg.clientWidth*1.05)),h=w/ar;setView({x:f.x-10,y:f.y,w,h},false)}
+function graphOverview(){const f=G.full,ar=graphAR();let h=f.h+20,w=h*ar;if(w<f.w){w=f.w;h=w/ar}setView(clampView({x:0,y:0,w,h}))}
+function graphSelect(id,{center=false}={}){
+  const svg=$("#graphSvg");G.sel=id;
+  const near=new Set(id?[id]:[]);
+  svg.querySelectorAll(".edge").forEach(l=>{const hit=!!id&&(l.dataset.a===id||l.dataset.b===id);l.classList.toggle("on",hit);if(hit){near.add(l.dataset.a);near.add(l.dataset.b)}});
+  svg.querySelectorAll(".node").forEach(g=>{g.classList.toggle("dim",!!id&&!near.has(g.dataset.nid));g.classList.toggle("on",g.dataset.nid===id);g.setAttribute("aria-pressed",g.dataset.nid===id)});
+  svg.classList.toggle("has-sel",!!id);
+  const card=$("#graphSel");
+  if(!id){card.hidden=true;return}
+  const n=state.graph.nodes.find(x=>x.id===id),links=[...near].filter(x=>x!==id).map(x=>state.graph.nodes.find(y=>y.id===x)).filter(Boolean).sort((a,b)=>TYPE_ORDER.indexOf(a.type)-TYPE_ORDER.indexOf(b.type));
+  card.hidden=false;
+  card.innerHTML=`<div class="gsel-head"><span class="eyebrow">${esc(t("graph.selected"))} · ${esc(typeLabel(n.type))}</span><h3>${esc(n.label)}</h3><div class="gsel-meta">${n.data.confidence?conf(n.data.confidence):""}<span class="id">${esc(n.id)}</span></div></div>
+    <p class="note">${esc(t("graph.linked",{n:nf(links.length)}))}</p>
+    <ul class="gsel-list">${links.slice(0,40).map(x=>`<li><button type="button" class="gsel-go" data-go="${esc(x.id)}"><span class="gsel-type">${esc(typeLabel(x.type))}</span>${esc(x.label)}</button></li>`).join("")}</ul>
+    <div class="gsel-actions"><button type="button" class="export primary" data-open="${esc(id)}">${esc(t("graph.open"))}</button><button type="button" class="export" data-clear>${esc(t("graph.clear"))}</button></div>`;
+  if(center){const g=svg.querySelector(`.node[data-nid="${CSS.escape(id)}"]`);if(g&&G.view){const m=g.transform.baseVal.consolidate()?.matrix;if(m){const v=G.view;setView(clampView({x:m.e-v.w/2+80,y:m.f-v.h/2,w:v.w,h:v.h}))}}}
+}
 function renderGraph(){
-  const nodes=visibleNodes().slice(0,400),ids=new Set(nodes.map(n=>n.id));
+  const all=visibleNodes().slice(0,1200);
+  const present=[...TYPE_ORDER.filter(x=>all.some(n=>n.type===x)),...[...new Set(all.map(n=>n.type))].filter(x=>!TYPE_ORDER.includes(x))];
+  $("#graphTypes").innerHTML=present.map(x=>{const on=!G.hidden.has(x),c=all.filter(n=>n.type===x).length;return`<button type="button" class="chip${on?" on":""}" data-gtype="${esc(x)}" aria-pressed="${on}" title="${esc(t("graph.legend.toggle"))}">${esc(typeLabel(x))}<b>${c}</b></button>`}).join("");
+  const nodes=all.filter(n=>!G.hidden.has(n.type)),ids=new Set(nodes.map(n=>n.id));
   const edges=state.graph.edges.filter(e=>ids.has(e.source)&&ids.has(e.target));
   $("#graphCount").textContent=t("graph.count",{n:nf(nodes.length),e:nf(edges.length)});
-  const types=[...TYPE_ORDER.filter(x=>nodes.some(n=>n.type===x)),...[...new Set(nodes.map(n=>n.type))].filter(x=>!TYPE_ORDER.includes(x))];
-  const W=1900,pad=44,rowH=22,top=64,groups=types.map(x=>nodes.filter(n=>n.type===x));
+  const types=present.filter(x=>!G.hidden.has(x));
+  const W=Math.max(900,types.length*190),pad=44,rowH=24,top=64,groups=types.map(x=>nodes.filter(n=>n.type===x));
   const H=top+Math.max(1,...groups.map(g=>g.length))*rowH+30,pos={};
   const colX=i=>types.length===1?W/2:pad+i*(W-2*pad-150)/(types.length-1);
   types.forEach((x,i)=>groups[i].forEach((n,j)=>pos[n.id]={x:colX(i),y:top+j*rowH,col:i,row:j}));
-  const svg=$("#graphSvg");svg.setAttribute("viewBox",`0 0 ${W} ${H}`);
-  svg.innerHTML=types.map((x,i)=>`<text class="gcol" x="${colX(i)-6}" y="30">${esc(typeLabel(x))} · ${groups[i].length}</text><line x1="${colX(i)-6}" x2="${colX(i)+150}" y1="40" y2="40" stroke="currentColor" opacity=".35"/>`).join("")+
-    edges.map(e=>{const a=pos[e.source],b=pos[e.target];return`<line class="edge" data-a="${esc(e.source)}" data-b="${esc(e.target)}" x1="${a.x}" y1="${a.y}" x2="${b.x}" y2="${b.y}"/>`}).join("")+
-    nodes.map((n,k)=>{const p=pos[n.id],name=`${n.label} (${typeLabel(n.type)}, ${n.data.confidence?confLabel(n.data.confidence):t("conf.notrated")})`;return`<g class="node" data-nid="${esc(n.id)}" data-col="${p.col}" data-row="${p.row}" tabindex="${k===0?0:-1}" role="button" aria-label="${esc(name)}" transform="translate(${p.x} ${p.y})" style="color:var(--ink)"><title>${esc(name)}</title><g transform="translate(-6 -6)">${confShape(n.data.confidence)}</g><text x="12" y="4">${esc(n.label.length>23?n.label.slice(0,22)+"…":n.label)}</text></g>`}).join("");
-  const trace=(id,on)=>{
+  const svg=$("#graphSvg");G.full={x:0,y:0,w:W,h:H};
+  const curve=(a,b)=>{const dx=(b.x-a.x)*.5;return`M${a.x} ${a.y}C${a.x+dx} ${a.y} ${b.x-dx} ${b.y} ${b.x} ${b.y}`};
+  svg.innerHTML=`<rect class="gbg" x="-5000" y="-5000" width="${W+10000}" height="${H+10000}"/>`+
+    types.map((x,i)=>`<text class="gcol" x="${colX(i)-6}" y="30">${esc(typeLabel(x))} · ${groups[i].length}</text><line class="gcol-rule" x1="${colX(i)-6}" x2="${colX(i)+150}" y1="40" y2="40"/>`).join("")+
+    `<g class="edges">`+edges.map(e=>`<path class="edge" data-a="${esc(e.source)}" data-b="${esc(e.target)}" d="${curve(pos[e.source],pos[e.target])}"/>`).join("")+`</g>`+
+    nodes.map((n,k)=>{const p=pos[n.id],name=`${n.label} (${typeLabel(n.type)}, ${n.data.confidence?confLabel(n.data.confidence):t("conf.notrated")})`;return`<g class="node" data-nid="${esc(n.id)}" data-col="${p.col}" data-row="${p.row}" tabindex="${k===0?0:-1}" role="button" aria-pressed="false" aria-label="${esc(name)}" transform="translate(${p.x} ${p.y})" style="color:var(--ink)"><title>${esc(name)}</title><rect class="hit" x="-10" y="-11" width="168" height="22" rx="6"/><g transform="translate(-6 -6)">${confShape(n.data.confidence)}</g><text x="12" y="4">${esc(n.label.length>23?n.label.slice(0,22)+"…":n.label)}</text></g>`}).join("");
+  if(!G.view||!svg.dataset.ready){svg.dataset.ready="1";G.view=null;requestAnimationFrame(()=>graphStart())}else setView(clampView(G.view),false);
+  if(G.sel&&ids.has(G.sel))graphSelect(G.sel);else graphSelect(null);
+  const hover=(id,on)=>{if(G.sel)return;
     const near=new Set([id]);svg.querySelectorAll(".edge").forEach(l=>{const hit=l.dataset.a===id||l.dataset.b===id;l.classList.toggle("on",on&&hit);if(hit){near.add(l.dataset.a);near.add(l.dataset.b)}});
-    svg.querySelectorAll(".node").forEach(g=>{g.classList.toggle("dim",on&&!near.has(g.dataset.nid));g.classList.toggle("on",on&&g.dataset.nid===id)});
-  };
-  svg.onmouseover=e=>{const g=e.target.closest(".node");if(g)trace(g.dataset.nid,true)};
-  svg.onmouseout=e=>{const g=e.target.closest(".node");if(g)trace(g.dataset.nid,false)};
-  svg.onfocusin=e=>{const g=e.target.closest(".node");if(g)trace(g.dataset.nid,true)};
-  svg.onfocusout=e=>{const g=e.target.closest(".node");if(g)trace(g.dataset.nid,false)};
-  svg.onclick=e=>{const g=e.target.closest(".node");if(g)openNode(g.dataset.nid)};
+    svg.querySelectorAll(".node").forEach(g=>{g.classList.toggle("dim",on&&!near.has(g.dataset.nid));g.classList.toggle("on",on&&g.dataset.nid===id)})};
+  svg.onmouseover=e=>{const g=e.target.closest(".node");if(g)hover(g.dataset.nid,true)};
+  svg.onmouseout=e=>{const g=e.target.closest(".node");if(g)hover(g.dataset.nid,false)};
+  svg.onfocusin=e=>{const g=e.target.closest(".node");if(g)hover(g.dataset.nid,true)};
+  svg.onfocusout=e=>{const g=e.target.closest(".node");if(g)hover(g.dataset.nid,false)};
+  /* drag pans, a click without movement selects; Ctrl/Cmd + wheel zooms around the pointer */
+  let drag=null;
+  const toSvg=(cx,cy)=>{const r=svg.getBoundingClientRect(),v=G.view;return{x:v.x+(cx-r.left)/r.width*v.w,y:v.y+(cy-r.top)/r.height*v.h}};
+  svg.onpointerdown=e=>{if(e.button!==0)return;drag={x:e.clientX,y:e.clientY,v:{...G.view},moved:false,id:e.pointerId}};
+  svg.onpointermove=e=>{if(!drag)return;const dx=e.clientX-drag.x,dy=e.clientY-drag.y;
+    if(!drag.moved&&Math.hypot(dx,dy)<4)return;
+    if(!drag.moved){drag.moved=true;svg.setPointerCapture(drag.id);svg.classList.add("panning")}
+    const r=svg.getBoundingClientRect();setView(clampView({...drag.v,x:drag.v.x-dx/r.width*drag.v.w,y:drag.v.y-dy/r.height*drag.v.h}),false)};
+  svg.onpointerup=e=>{const d=drag;drag=null;svg.classList.remove("panning");if(!d||d.moved)return;
+    const g=e.target.closest(".node");if(g){graphSelect(G.sel===g.dataset.nid?null:g.dataset.nid);g.focus({preventScroll:true})}else graphSelect(null)};
+  svg.onpointercancel=()=>{drag=null;svg.classList.remove("panning")};
+  svg.onwheel=e=>{
+    if(e.ctrlKey||e.metaKey){e.preventDefault();const p=toSvg(e.clientX,e.clientY);zoomAt(e.deltaY>0?1.15:1/1.15,p.x,p.y,false);return}
+    /* plain wheel scrolls the graph; at its top or bottom edge the page takes over */
+    const v=G.view,r=svg.getBoundingClientRect(),dy=e.deltaY/r.height*v.h,dx=e.deltaX/r.width*v.w,next=clampView({...v,x:v.x+dx,y:v.y+dy});
+    if(Math.abs(next.y-v.y)<.5&&Math.abs(next.x-v.x)<.5)return;
+    e.preventDefault();setView(next,false)};
+  svg.ondblclick=e=>{const g=e.target.closest(".node");if(g)openNode(g.dataset.nid);else{const p=toSvg(e.clientX,e.clientY);zoomAt(1/1.6,p.x,p.y)}};
   /* roving tabindex: one tab stop for the graph, arrows move between nodes */
   svg.onkeydown=e=>{
     const g=e.target.closest(".node");if(!g)return;
-    if(e.key==="Enter"||e.key===" "){e.preventDefault();openNode(g.dataset.nid);return}
-    const col=+g.dataset.col,row=+g.dataset.row,all=[...svg.querySelectorAll(".node")];
-    const inCol=c=>all.filter(n=>+n.dataset.col===c).sort((a,b)=>a.dataset.row-b.dataset.row);
+    if(e.key==="Enter"){e.preventDefault();openNode(g.dataset.nid);return}
+    if(e.key===" "){e.preventDefault();graphSelect(G.sel===g.dataset.nid?null:g.dataset.nid);return}
+    if(e.key==="Escape"&&G.sel){graphSelect(null);return}
+    if(e.key==="+"||e.key==="="){zoomAt(1/1.3);return}if(e.key==="-"){zoomAt(1.3);return}if(e.key==="0"){graphFit();return}
+    const col=+g.dataset.col,row=+g.dataset.row,nodesEl=[...svg.querySelectorAll(".node")];
+    const inCol=c=>nodesEl.filter(n=>+n.dataset.col===c).sort((a,b)=>a.dataset.row-b.dataset.row);
     let next=null;
     if(e.key==="ArrowDown")next=inCol(col)[row+1];
     else if(e.key==="ArrowUp")next=inCol(col)[row-1];
@@ -198,8 +271,15 @@ function renderGraph(){
       for(let c=col+(e.key==="ArrowRight"?1:-1);c>=0&&c<types.length&&!next;c+=(e.key==="ArrowRight"?1:-1)){const list=inCol(c);if(list.length)next=list[Math.min(row,list.length-1)]}
     }else return;
     e.preventDefault();
-    if(next){all.forEach(n=>n.tabIndex=-1);next.tabIndex=0;next.focus()}
+    if(next){nodesEl.forEach(n=>n.tabIndex=-1);next.tabIndex=0;next.focus()}
   };
+}
+function initGraphControls(){
+  $("#graphTools").onclick=e=>{const b=e.target.closest("button");if(!b)return;({in:()=>zoomAt(1/1.3),out:()=>zoomAt(1.3),fit:graphFit,all:graphOverview})[b.dataset.zoom]?.()};
+  $("#graphTypes").onclick=e=>{const b=e.target.closest("[data-gtype]");if(!b)return;const x=b.dataset.gtype;G.hidden.has(x)?G.hidden.delete(x):G.hidden.add(x);G.view=null;renderGraph()};
+  $("#graphSel").onclick=e=>{const go=e.target.closest("[data-go]"),op=e.target.closest("[data-open]");
+    if(go)graphSelect(go.dataset.go,{center:true});else if(op)openNode(op.dataset.open);else if(e.target.closest("[data-clear]"))graphSelect(null)};
+  window.addEventListener("resize",()=>{if(G.view)setView(clampView(G.view),false)});
 }
 function techStats(){
   const nodes=new Map(state.graph.nodes.map(n=>[n.id,n]));
@@ -217,7 +297,7 @@ function renderTimeline(){
   $("#timelineList").innerHTML=timelineItems().map(({n,date})=>`<div class="d">${esc(date)}</div><div class="e" data-id="${esc(n.id)}"><div class="kind">${esc(typeLabel(n.type))}${(n.data.regions||[]).length?" · "+esc(n.data.regions.join(", ")):""}</div><h3>${esc(n.label)}</h3><p>${esc(n.data.summary||"")}</p><div style="margin-top:6px">${conf(n.data.confidence)}</div></div>`).join("")||`<p class="empty">${esc(t("common.nothing"))}</p>`;
 }
 function renderSources(){
-  $("#sourceList").innerHTML=visibleNodes().filter(n=>n.type==="source").map(n=>`<div class="it" data-id="${esc(n.id)}"><div class="grade" aria-label="${esc(grade(n.data.grade))}">${esc(n.data.grade)}</div><div><h3>${esc(n.label)}</h3><p>${esc(n.data.publisher||"")} · ${esc(n.data.role||"")}</p></div></div>`).join("")||`<p class="empty">${esc(t("common.nothing"))}</p>`;
+  $("#sourceList").innerHTML=visibleNodes().filter(n=>n.type==="source"&&(!state.grade||n.data.grade===state.grade)).map(n=>`<div class="it" data-id="${esc(n.id)}"><div class="grade" aria-label="${esc(grade(n.data.grade))}">${esc(n.data.grade)}</div><div><h3>${esc(n.label)}</h3><p>${esc(n.data.publisher||"")} · ${esc(n.data.role||"")}</p></div></div>`).join("")||`<p class="empty">${esc(t("common.nothing"))}</p>`;
 }
 function renderWhatsNew(){
   const box=$("#diffSummary"),table=$("#diffTable");
@@ -229,11 +309,11 @@ function renderWhatsNew(){
     (rows.length?rows.map(([k,v])=>`<tr><td>${esc(k)}</td><td class="num">${v.added.length}</td><td class="num">${v.removed.length}</td><td class="num">${v.changed.length}</td></tr>`).join(""):`<tr><td colspan="4">${esc(t("new.nochanges"))}</td></tr>`)+"</tbody>";
 }
 const link=(id,text)=>`<a href="#" data-id="${esc(id)}">${esc(text)}</a>`;
-const meter=(label,n,total,cls="")=>`<div class="meter ${cls}"><span>${esc(label)}</span><em>${n}/${total}</em><i><b style="width:${total?(100*n/total).toFixed(1):0}%"></b></i></div>`;
+const meter=(label,n,total,cls="",f="")=>`<div class="meter ${cls}"${f?` data-filter="${f}"`:""}><span>${esc(label)}</span><em>${n}/${total}</em><i><b style="width:${total?(100*n/total).toFixed(1):0}%"></b></i></div>`;
 function renderDashboard(){
   const rows=techStats(),N=rows.length;
   const full=rows.filter(r=>r.tests&&r.detections&&r.controls).length;
-  $("#dashCoverage").innerHTML=meter(t("cov.test"),rows.filter(r=>r.tests).length,N)+meter(t("cov.det"),rows.filter(r=>r.detections).length,N)+meter(t("cov.ctl"),rows.filter(r=>r.controls).length,N)+meter(t("cov.full"),full,N,"hero")+meter(t("cov.tool"),rows.filter(r=>r.tools).length,N)+(state.cov?meter(t("cov.rules"),state.cov.summary.detections_with_rule_file,state.cov.summary.detections_total)+meter(t("cov.bench"),state.cov.summary.with_benchmark,N):"");
+  $("#dashCoverage").innerHTML=meter(t("cov.test"),rows.filter(r=>r.tests).length,N)+meter(t("cov.det"),rows.filter(r=>r.detections).length,N)+meter(t("cov.ctl"),rows.filter(r=>r.controls).length,N,"","cov:noctl")+meter(t("cov.full"),full,N,"hero")+meter(t("cov.tool"),rows.filter(r=>r.tools).length,N)+(state.cov?meter(t("cov.rules"),state.cov.summary.detections_with_rule_file,state.cov.summary.detections_total,"","cov:spec")+meter(t("cov.bench"),state.cov.summary.with_benchmark,N,"","cov:nobench"):"");
   const gaps=rows.filter(r=>r.evidence&&(!r.tests||!r.detections)).sort((a,b)=>b.evidence-a.evidence);
   const noCtl=rows.filter(r=>!r.controls).sort((a,b)=>b.evidence-a.evidence);
   const gapRow=(r,txt)=>`<div class="gap-item" data-id="${esc(r.n.id)}"><span class="id">${esc(r.n.id.slice(-4))}</span><span><b>${esc(r.n.label)}</b><span class="tags note">${esc(txt)}</span></span></div>`;
@@ -242,7 +322,7 @@ function renderDashboard(){
     `<p class="empty" style="padding-top:0">${esc(t("gaps.none"))}</p>`+(noCtl.length?`<p class="note" style="margin-top:14px">${esc(t("gaps.next"))}</p><div class="gaplist">`+noCtl.slice(0,5).map(r=>gapRow(r,`${t("gaps.linked",{n:r.evidence})} · ${t("gaps.noctl")}`)).join("")+`</div>`:"");
   const rated=state.graph.nodes.filter(n=>n.data.confidence),tot=rated.length,by={};rated.forEach(n=>by[n.data.confidence]=(by[n.data.confidence]||0)+1);
   const ramp=["var(--seq-4)","var(--seq-3)","var(--seq-2)","var(--seq-1)","var(--seq-0)"];
-  $("#dashConf").innerHTML=`<div class="stack" role="img" aria-label="${esc(t("dash.conf.aria"))}">${CONF_ORDER.map((c,i)=>by[c]?`<i title="${esc(confLabel(c))}: ${by[c]}" style="width:${(100*by[c]/tot).toFixed(1)}%;background:${ramp[i]}"></i>`:"").join("")}</div><div class="leg">${CONF_ORDER.map(c=>`<span>${conf(c)}</span><b>${by[c]||0}</b>`).join("")}</div><p class="note" style="margin-top:12px">${esc(t("dash.conf.note",{n:nf(tot)}))}</p>`;
+  $("#dashConf").innerHTML=`<div class="stack" role="img" aria-label="${esc(t("dash.conf.aria"))}">${CONF_ORDER.map((c,i)=>by[c]?`<i data-filter="confidence:${c}" title="${esc(confLabel(c))}: ${by[c]}" style="width:${(100*by[c]/tot).toFixed(1)}%;background:${ramp[i]}"></i>`:"").join("")}</div><div class="leg">${CONF_ORDER.map(c=>`<span data-filter="confidence:${c}">${conf(c)}</span><b>${by[c]||0}</b>`).join("")}</div><p class="note" style="margin-top:12px">${esc(t("dash.conf.note",{n:nf(tot)}))}</p>`;
   const L=state.landscape,pick=["METRIC-WEF-AI-DRIVER","METRIC-GTIG-6H-HARVEST","METRIC-GTIG-DISTILL","METRIC-IBM-SUPPLYCHAIN"].map(id=>(L.key_metrics||[]).find(m=>m.id===id)).filter(Boolean);
   const heads=pick.length?pick:(L.key_metrics||[]).slice(0,4);
   $("#dashHeadlines").innerHTML=heads.map(m=>`<div class="head"><b>${fmt(m.value)}${/percent/.test(m.unit)?"%":""}</b><span>${esc(m.name)}</span><small>${esc(m.unit.replace(/^percent.*/,"percent"))} · ${esc(m.source.publisher)} · ${esc(grade(m.source.grade))}</small></div>`).join("");
@@ -253,11 +333,27 @@ function renderDashboard(){
   const tl=state.graph.nodes.filter(n=>["campaign","incident","vulnerability"].includes(n.type)).map(n=>({n,date:nodeDate(n)})).filter(x=>x.date).sort((a,b)=>b.date.localeCompare(a.date)).slice(0,7);
   $("#dashTimeline").innerHTML=`<div class="mini">${tl.map(({n,date})=>`<span class="d">${esc(date.slice(0,10))}</span><span>${link(n.id,n.label)}<br><span class="note">${esc(typeLabel(n.type))} · ${esc(n.data.confidence?confLabel(n.data.confidence):(n.data.severity||""))}</span></span>`).join("")}</div>`;
   const mt={};rows.forEach(r=>mt[r.n.data.maturity]=(mt[r.n.data.maturity]||0)+1);
-  $("#dashMaturity").innerHTML=`<div class="bars sm">${MATURITY_ORDER.map(k=>`<div class="bar"><span>${esc(matLabel(k))}</span><i style="width:${(100*(mt[k]||0)/Math.max(1,...Object.values(mt))).toFixed(1)}%"></i><b>${mt[k]||0}</b></div>`).join("")}</div><p class="note" style="margin-top:8px">${esc(t("dash.maturity.note"))}</p>`;
+  $("#dashMaturity").innerHTML=`<div class="bars sm">${MATURITY_ORDER.map(k=>`<div class="bar" data-filter="maturity:${k}"><span>${esc(matLabel(k))}</span><i style="width:${(100*(mt[k]||0)/Math.max(1,...Object.values(mt))).toFixed(1)}%"></i><b>${mt[k]||0}</b></div>`).join("")}</div><p class="note" style="margin-top:8px">${esc(t("dash.maturity.note"))}</p>`;
   const src=state.graph.nodes.filter(n=>n.type==="source"),gs=["A","B","C","D","E"].map(g=>[g,src.filter(n=>n.data.grade===g).length]),mx=Math.max(1,...gs.map(x=>x[1]));
-  $("#dashGrades").innerHTML=`<div class="bars sm">${gs.map(([g,n])=>`<div class="bar"><span>${esc(t("common.grade",{g}))}</span><i style="width:${(100*n/mx).toFixed(1)}%"></i><b>${n}</b></div>`).join("")}</div>`;
+  $("#dashGrades").innerHTML=`<div class="bars sm">${gs.map(([g,n])=>`<div class="bar" data-filter="grade:${g}"><span>${esc(t("common.grade",{g}))}</span><i style="width:${(100*n/mx).toFixed(1)}%"></i><b>${n}</b></div>`).join("")}</div>`;
   const cl={};state.eco.forEach(e=>cl[e.evidence_class]=(cl[e.evidence_class]||0)+1);const cm=Math.max(1,...Object.values(cl));
-  $("#dashEco").innerHTML=state.eco.length?`<div class="bars sm">${Object.entries(cl).sort((a,b)=>b[1]-a[1]).map(([k,n])=>`<div class="bar"><span>${esc(tOr("ecoclass."+k,k))}</span><i style="width:${(100*n/cm).toFixed(1)}%"></i><b>${n}</b></div>`).join("")}</div><p class="note" style="margin-top:8px">${esc(t("dash.eco.note",{n:nf(state.eco.length),s:nf(state.eco.filter(e=>e.priority==="start-here").length)}))}</p>`:`<p class="empty">${esc(t("dash.eco.none"))}</p>`;
+  $("#dashEco").innerHTML=state.eco.length?`<div class="bars sm">${Object.entries(cl).sort((a,b)=>b[1]-a[1]).map(([k,n])=>`<div class="bar" data-filter="eco:${esc(k)}"><span>${esc(tOr("ecoclass."+k,k))}</span><i style="width:${(100*n/cm).toFixed(1)}%"></i><b>${n}</b></div>`).join("")}</div><p class="note" style="margin-top:8px">${esc(t("dash.eco.note",{n:nf(state.eco.length),s:nf(state.eco.filter(e=>e.priority==="start-here").length)}))}</p>`:`<p class="empty">${esc(t("dash.eco.none"))}</p>`;
+}
+/* ---------- chart filters: every bar, meter and segment on the dashboard narrows the Explorer */
+const MAT_SHOW={"observed-in-the-wild":"observed","no-linked-evidence":"noev"};
+function applyFilter(spec){
+  const i=spec.indexOf(":"),kind=spec.slice(0,i),val=spec.slice(i+1);
+  if(kind==="confidence"){state.confidence=state.confidence===val?"":val;$("#confidenceFilter").value=state.confidence;renderAll();return}
+  if(kind==="grade"){state.grade=state.grade===val?"":val;renderAll();showTab("sources",true);return}
+  if(kind==="eco"){state.ecoClass=val;$("#ecoClass").value=val;renderEcosystem();afterRender();showTab("ecosystem",true);return}
+  if(kind==="maturity"||kind==="cov"){const show=kind==="cov"?val:(MAT_SHOW[val]||"");COV.show=show;COV.view="matrix";const sel=$("#covShow");if(sel)sel.value=show;$("#covView").value="matrix";
+    patchHash({show:show||null,view:null});renderCoverage();showTab("coverage",true)}
+}
+function renderChips(){
+  const chips=[["type",state.type,typeLabel],["confidence",state.confidence,confLabel],["region",state.region,x=>x],["grade",state.grade,g=>grade(g)]].filter(c=>c[1]);
+  $("#filterChips").innerHTML=chips.map(([k,v,lab])=>`<button type="button" class="chip on" data-unset="${k}" title="${esc(t("filter.clear"))}">${esc(t("filter.active",{f:lab(v)}))}<span aria-hidden="true">×</span></button>`).join("");
+  $("#filterChips").hidden=!chips.length;
+  document.querySelectorAll("[data-filter]").forEach(el=>{const [k,v]=el.dataset.filter.split(":");el.classList.toggle("sel",(k==="confidence"&&state.confidence===v)||(k==="grade"&&state.grade===v))});
 }
 function ecoRows(){
   const q=norm(state.search);
