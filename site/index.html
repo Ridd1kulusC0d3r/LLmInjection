@@ -46,6 +46,7 @@
       <select id="regionFilter" data-i18n-attr="aria-label:filter.region.aria" aria-label="Region"></select>
       <select id="confidenceFilter" data-i18n-attr="aria-label:filter.conf.aria" aria-label="Confidence"></select>
     </div>
+    <div id="filterChips" class="chips filters" aria-live="polite" hidden></div>
     <p id="dataNotice" class="data-notice" hidden data-i18n="data.notice"></p>
 
     <nav class="tabs" role="tablist" data-i18n-attr="aria-label:tabs.aria" aria-label="Sections">
@@ -64,7 +65,7 @@
       <section id="overview" class="view active" role="tabpanel" aria-labelledby="tab-overview" tabindex="0">
         <div class="eyebrow" data-i18n="dash.eyebrow">Dashboard</div>
         <h2 data-i18n="dash.title">The state of the evidence</h2>
-        <p class="sub" data-i18n="dash.sub">Computed from the graph and datasets on every build. Click anything with an underline to open its record.</p>
+        <p class="sub"><span data-i18n="dash.sub">Computed from the graph and datasets on every build. Click anything with an underline to open its record.</span> <span data-i18n="dash.filter.hint">Click a bar or a segment to filter the Explorer by it.</span></p>
         <div class="dash three">
           <div class="dp"><h3 data-i18n="dash.coverage">Defensive coverage</h3><div id="dashCoverage"></div></div>
           <div class="dp"><h3 data-i18n="dash.gaps">Priority gaps</h3><p class="note" data-i18n="dash.gaps.note">Techniques with linked evidence but no test or detection.</p><div id="dashGaps"></div></div>
@@ -120,8 +121,17 @@
           <span id="graphCount" class="mono" style="font-size:12px;color:var(--ink-3)"></span>
         </div>
         <div id="graphLegend" class="legend"></div>
-        <p class="note" style="margin:0 0 10px" data-i18n="graph.kbd">Keyboard: arrow keys move between nodes, Enter opens a record.</p>
-        <div class="gwrap"><svg id="graphSvg" role="group" data-i18n-attr="aria-label:graph.aria" aria-label="LLMInjection intelligence graph"></svg></div>
+        <div class="gbar">
+          <div id="graphTypes" class="chips" role="group" data-i18n-attr="aria-label:graph.legend.toggle" aria-label="Show or hide this type"></div>
+          <div id="graphTools" class="gtools" role="group">
+            <button type="button" data-zoom="out" data-i18n-attr="aria-label:graph.zoomout;title:graph.zoomout" aria-label="Zoom out" title="Zoom out">&minus;</button>
+            <button type="button" data-zoom="fit" data-i18n="graph.fit">Fit to view</button>
+            <button type="button" data-zoom="in" data-i18n-attr="aria-label:graph.zoomin;title:graph.zoomin" aria-label="Zoom in" title="Zoom in">+</button>
+            <button type="button" data-zoom="all" data-i18n="graph.all">Whole graph</button>
+          </div>
+        </div>
+        <p class="note" style="margin:0 0 10px"><span data-i18n="graph.hint">Drag to pan, scroll with Ctrl or use the buttons to zoom.</span> <span data-i18n="graph.kbd">Keyboard: arrow keys move between nodes, Space selects, Enter opens a record.</span></p>
+        <div class="gwrap"><svg id="graphSvg" role="group" data-i18n-attr="aria-label:graph.aria" aria-label="LLMInjection intelligence graph"></svg><aside id="graphSel" class="gsel" aria-live="polite" hidden></aside></div>
       </section>
 
       <section id="coverage" class="view" role="tabpanel" aria-labelledby="tab-coverage" tabindex="0">
