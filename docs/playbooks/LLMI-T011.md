@@ -13,7 +13,7 @@
 
 | Layer | Status |
 |---|---|
-| Evidence | 6 record(s), 6 publisher(s), best grade A, newest 2026 |
+| Evidence | 9 record(s), 9 publisher(s), best grade A, newest 2026 |
 | Safe tests | 2 |
 | Detections | 1 rule file(s), 4 specification(s) |
 | Controls | 1 |
@@ -27,14 +27,17 @@ Packages, CI/CD, gateways, frameworks or registries used by AI systems are compr
 
 What the repository links to it:
 
+- 2026-06 · [GTG-50020 AI vendor sandbox injection and AI-company targeting](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-GTG-50020) (campaign, confirmed)
 - 2026 · [TeamPCP LiteLLM supply-chain compromise](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-TEAMPCP-LITELLM) (campaign, confirmed)
 - 2025-07-13 · [Code to Deploy Destructive AI Agent Discovered in Amazon Q VS Code Extension (AML.CS0047)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-ATLAS-CS0047) (atlas-incident, high)
 - 2025-09-01 · [Poisoned Postmark MCP Server Email Exfiltration (AML.CS0053)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-ATLAS-CS0053) (atlas-incident, high)
 - 2026 · [DUSTMAKER credential stealer targeting AI coding-assistant workspaces](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-DUSTMAKER) (malware, confirmed)
+- 2024-02 · [Malicious Hugging Face models with pickle reverse-shell payloads](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-HF-MALICIOUS-PICKLE-MODELS) (supply-chain, confirmed)
+- 2026-07 · [Hugging Face production intrusion driven by an autonomous AI agent system](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-HUGGINGFACE-AGENTIC-INTRUSION-2026-07) (intrusion, high)
 - 2026 · [STARDUST CHOLLIMA Mastra AI package compromise](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-MASTRA-STARDUST) (supply-chain, confirmed)
 - 2026-03-21 · [Trivy Ecosystem Supply-Chain Compromise](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-TRIVY-CVE-2026-33634) (supply-chain-compromise, confirmed)
 
-Actors whose campaigns use it: TeamPCP. Vendor labels are kept as published and never merged without evidence.
+Actors whose campaigns use it: GTG-50020, TeamPCP. Vendor labels are kept as published and never merged without evidence.
 
 ## 2. Test it safely
 

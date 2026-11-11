@@ -197,4 +197,9 @@ Evidence → Campaign → Technique → Test → Detection → Control → Frame
 - [ ] Rights-aware AIID, VCDB, NVD, EPSS and vendor-report adapters.
 - [ ] Normalized OpenTelemetry event ingestion and sanitized fixtures.
 - [ ] Long-running cursor checkpoints, full source record crosswalks and Explorer data views.
+- [x] Scope covers adversary use of AI as well as attacks against AI; candidate pipeline from a community tracker ([ACTORS-USING-AI.md](ACTORS-USING-AI.md))
+- [x] Read the tracker candidates and promote from primary reports (60 actors, 76 campaigns, 32 incidents)
+- [ ] Re-read the 56 `reviewing` items when the blocked pages become reachable, and the 18 still `candidate`
+- [ ] Promote the further cases named in the reports read (Anthropic influence and distillation cases, BASIN CASTLE, MIDNIGHT NEPTUNE, UNC7228, TAG-217)
+- [ ] Extend ATT&CK mappings for adversary-use campaigns, using the tracker's IDs as a work list only
 - [ ] Verify the TRAIL attribution reference and the cryptocurrency-extortion study cited in a secondary survey; both are unverified and not cited (see [METHODOLOGY 5.1](METHODOLOGY.md))

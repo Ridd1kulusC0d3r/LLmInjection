@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import json
+import re
 import sys
 from datetime import date, datetime
 from pathlib import Path
@@ -47,6 +48,14 @@ def valid_date(value: str) -> bool:
         return True
     except (TypeError, ValueError):
         return False
+
+def valid_partial_date(value: str) -> bool:
+    """A date as precise as the source states it: YYYY-MM-DD, YYYY-MM or YYYY."""
+    if not isinstance(value, str):
+        return False
+    if len(value) == 10:
+        return valid_date(value)
+    return bool(re.fullmatch(r"\d{4}(-(0[1-9]|1[0-2]))?", value))
 
 def check_https(value: str) -> bool:
     return isinstance(value, str) and value.startswith("https://")
@@ -213,7 +222,7 @@ def validate():
 
     published = {s["id"]: s.get("published") for s in datasets["sources"]}
     for i, source in enumerate(datasets["sources"]):
-        if source.get("published") is not None and not valid_date(source["published"]):
+        if source.get("published") is not None and not valid_partial_date(source["published"]):
             errors.append(f"sources[{i}]: invalid published date")
     for name in ("campaigns", "incidents"):
         for i, record in enumerate(datasets[name]):
@@ -221,7 +230,7 @@ def validate():
             reported = record.get("reported")
             if reported is None:
                 continue
-            if not valid_date(reported):
+            if not valid_partial_date(reported):
                 errors.append(f"{prefix}: invalid reported date")
                 continue
             dates = [published.get(sid) for sid in record.get("source_ids", [])]

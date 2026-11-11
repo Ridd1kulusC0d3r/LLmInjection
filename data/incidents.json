@@ -395,5 +395,498 @@
     "source_ids": [
       "SRC-MITRE-ATLAS-2026-09"
     ]
+  },
+  {
+    "id": "INCIDENT-PROMPTSPY",
+    "type": "incident",
+    "name": "PROMPTSPY Android backdoor with a Gemini UI agent",
+    "kind": "malware",
+    "status": "observed",
+    "confidence": "confirmed",
+    "date": "2026",
+    "summary": "Google Threat Intelligence Group describes PROMPTSPY, an Android backdoor first identified by ESET, whose GeminiAutomationAgent sends the serialized UI hierarchy to gemini-2.5-flash-lite and executes the returned actions and coordinates as gestures. No nexus is attributed.",
+    "source_ids": [
+      "SRC-GTIG-AI-TRACKER-2026-05"
+    ],
+    "reported": "2026-05-11"
+  },
+  {
+    "id": "INCIDENT-GTIG-AI-ZERO-DAY",
+    "type": "incident",
+    "name": "Criminal actor uses an AI model to develop a 2FA-bypass zero-day",
+    "kind": "intrusion",
+    "status": "observed",
+    "confidence": "high",
+    "date": "2026",
+    "summary": "Google Threat Intelligence Group has high confidence that a criminal actor planning mass exploitation used an AI model, assessed not to be Gemini, to discover and weaponize a 2FA bypass in a popular open-source web administration tool; GTIG cites a hallucinated CVSS score and educational docstrings and says its proactive discovery may have prevented use.",
+    "source_ids": [
+      "SRC-GTIG-AI-TRACKER-2026-05"
+    ],
+    "reported": "2026-05-11"
+  },
+  {
+    "id": "INCIDENT-FAKEAGENT",
+    "type": "incident",
+    "name": "FakeAgent: malicious Claude Artifact as a Claude Desktop download page",
+    "kind": "malware",
+    "status": "observed",
+    "confidence": "confirmed",
+    "date": "2026-07",
+    "summary": "Huntress reports a sponsored Bing result leading to a malicious public Claude Artifact posing as a Claude Desktop download page (about 7,100 views), which redirected to a sideloading chain that delivered SectopRAT to at least 29 organizations on 21 and 22 July 2026. The artifact was removed after it was reported. No actor group is named.",
+    "source_ids": [
+      "SRC-HUNTRESS-FAKEAGENT"
+    ],
+    "reported": "2026-07-22"
+  },
+  {
+    "id": "INCIDENT-GTIG-AGENTIC-CREDENTIAL-HARVESTING",
+    "type": "incident",
+    "name": "Multi-agent credential harvesting from compromised cloud in under six hours",
+    "kind": "intrusion",
+    "status": "observed",
+    "confidence": "confirmed",
+    "date": "2026",
+    "summary": "Mandiant, as reported by GTIG, observed a suspected financially motivated actor compromise an organisation's cloud infrastructure and deploy an autonomous multi-agent framework, using an AI coding chatbot and markdown agent instructions to plan, build and run a mass scanning and credential-harvesting campaign in under six hours that compromised thousands of third-party credentials. No actor name is given.",
+    "source_ids": [
+      "SRC-GTIG-PROMPTING-TO-AUTONOMY"
+    ],
+    "reported": "2026-09-08"
+  },
+  {
+    "id": "INCIDENT-GTIG-RECON-AGENTIC-FRAMEWORK",
+    "type": "incident",
+    "name": "\"Recon\" agentic reconnaissance and credential-management framework",
+    "kind": "intrusion",
+    "status": "observed",
+    "confidence": "confirmed",
+    "date": "2026",
+    "summary": "GTIG found an exposed C2 server hosting an agentic framework dubbed \"Recon\" (with AGENTS.md and vulnerability-research agent files) and a dashboard managing over 23,800 harvested secrets, including cloud and AI service API keys. GTIG describes AI agents researching vulnerabilities, scanning infrastructure and running exploits with minimal human intervention; no actor or nexus is named.",
+    "source_ids": [
+      "SRC-GTIG-PROMPTING-TO-AUTONOMY"
+    ],
+    "reported": "2026-09-08"
+  },
+  {
+    "id": "INCIDENT-UNIT42-AI-ASSISTED-INTRUSION",
+    "type": "incident",
+    "name": "Unit 42 investigation of a sub-10-hour AI-agent-assisted intrusion",
+    "kind": "intrusion",
+    "status": "observed",
+    "confidence": "high",
+    "date": "2026",
+    "summary": "Unit 42 describes an intrusion completed in under 10 hours in which parallel AI agents mapped internal services, searched repositories for hard-coded secrets, harvested credentials, abused CI/CD to exfiltrate cloud keys, and used stolen keys to invoke the victim's AI endpoints. The AI-framework claims partly come from the attacker's own negotiation statements, custom scripts were assessed with high confidence to be AI-generated, and Unit 42 later corrected the article to say it was an intrusion, not ransomware. No actor, victim sector or region is disclosed.",
+    "source_ids": [
+      "SRC-UNIT42-AI-ASSISTED-INTRUSION"
+    ],
+    "reported": "2026-09-02"
+  },
+  {
+    "id": "INCIDENT-TUXBOT-V3-LLM-DEVELOPMENT",
+    "type": "incident",
+    "name": "TuxBot v3 Evolution IoT botnet built with LLM assistance",
+    "kind": "malware",
+    "status": "observed",
+    "confidence": "confirmed",
+    "date": "2026",
+    "summary": "Unit 42 analysed the TuxBot v3 Evolution IoT/DDoS botnet framework and found the developer relied on an LLM to generate C modules, port exploits and write C2 code, leaving LLM reasoning and a safety disclaimer in the source; LLM-introduced bugs (including a hallucinated Argon2id implementation) broke several features. Unit 42 notes an Iranian-hosted developer workstation and infrastructure shared with the Keksec ecosystem but names no actor.",
+    "source_ids": [
+      "SRC-UNIT42-TUXBOT-V3"
+    ],
+    "reported": "2026-07-15"
+  },
+  {
+    "id": "INCIDENT-ANTHROPIC-AI-CARDING-STORE",
+    "type": "incident",
+    "name": "Carding store maintained with Claude Code",
+    "kind": "fraud",
+    "status": "observed",
+    "confidence": "confirmed",
+    "date": "2025",
+    "summary": "Anthropic's August 2025 threat intelligence report describes an unnamed Spanish-speaking actor using Claude Code to maintain an invite-only service validating and reselling stolen credit cards, including rotation across card-checker APIs, failover, request throttling to avoid detection and batch processing of stolen cards.",
+    "source_ids": [
+      "SRC-ANTHROPIC-TI-REPORT-2025-08"
+    ],
+    "reported": "2025-08-27"
+  },
+  {
+    "id": "INCIDENT-HUNTIO-CLAUDE-DEEPSEEK-INTRUSIONS",
+    "type": "incident",
+    "name": "Suspected Chinese operators use Claude Code and DeepSeek in government and financial intrusions",
+    "kind": "intrusion",
+    "status": "observed",
+    "confidence": "confirmed",
+    "date": "2026-06",
+    "summary": "Hunt.io found an open directory on Hong Kong infrastructure linked to TencShell C2 whose logs show Claude Code used as the agentic execution engine and DeepSeek-v4-pro as the reasoning model for script generation and attack decisions, including building cloned phishing pages, in intrusions against government bodies in Thailand and Afghanistan, Taiwanese organisations and financial services firms. Hunt.io says the indicators are consistent with China-based activity but names no group.",
+    "source_ids": [
+      "SRC-HUNTIO-CLAUDE-DEEPSEEK-INTRUSION"
+    ],
+    "reported": "2026-07-14"
+  },
+  {
+    "id": "INCIDENT-PROMPTFLUX",
+    "type": "incident",
+    "name": "PROMPTFLUX: experimental VBScript dropper that rewrites itself via the Gemini API",
+    "kind": "malware",
+    "status": "observed",
+    "confidence": "confirmed",
+    "date": "2025-06",
+    "summary": "Google Threat Intelligence Group identified PROMPTFLUX in early June 2025, a VBScript dropper that queries the Gemini API to rewrite its own source for obfuscation and evasion. GTIG assesses it as experimental and in a development or testing phase rather than used in the wild; filenames suggest financially motivated actors, but it is unattributed.",
+    "source_ids": [
+      "SRC-GTIG-AI-THREATS"
+    ],
+    "reported": "2025-11-05"
+  },
+  {
+    "id": "INCIDENT-QUIETVAULT",
+    "type": "incident",
+    "name": "QUIETVAULT: JavaScript credential stealer using on-host AI CLI tools to hunt secrets",
+    "kind": "malware",
+    "status": "observed",
+    "confidence": "confirmed",
+    "date": "2025",
+    "summary": "Google Threat Intelligence Group lists QUIETVAULT as observed in operations: a JavaScript stealer targeting GitHub and NPM tokens that also uses an AI prompt with on-host installed AI CLI tools to search for further secrets, exfiltrating via a public GitHub repository. GTIG gives no actor attribution and does not name the AI CLI tools.",
+    "source_ids": [
+      "SRC-GTIG-AI-THREATS"
+    ],
+    "reported": "2025-11-05"
+  },
+  {
+    "id": "INCIDENT-HUGGINGFACE-AGENTIC-INTRUSION-2026-07",
+    "type": "incident",
+    "name": "Hugging Face production intrusion driven by an autonomous AI agent system",
+    "kind": "intrusion",
+    "status": "observed",
+    "confidence": "high",
+    "date": "2026-07",
+    "summary": "Hugging Face disclosed an intrusion it says was driven end to end by an autonomous AI agent system: a malicious dataset exploited code-execution paths in dataset processing, after which the attacker harvested cloud and cluster credentials and moved laterally into internal clusters over a weekend. The company says the framework appears to be built on a security-research harness, the underlying LLM is unknown, no attribution is given, and impact assessment was ongoing; it found no tampering with public models, datasets or Spaces.",
+    "source_ids": [
+      "SRC-HUGGINGFACE-INCIDENT-2026-07"
+    ],
+    "reported": "2026-07-16"
+  },
+  {
+    "id": "INCIDENT-DREAM-MULTI-AGENT-ASIA-GOV",
+    "type": "incident",
+    "name": "Multi-agent AI framework (Hermes/OpenClaw) used to compromise Asian government entities",
+    "kind": "intrusion",
+    "status": "observed",
+    "confidence": "high",
+    "date": "2026-07",
+    "summary": "Dream Research Labs analysed a recovered archive showing an unnamed operator running Hermes and OpenClaw agent sub-agents across 12 waves (1-4 July 2026) against government entities, IT vendors and energy companies in Asia, with confirmed compromises including credential cracking and exfiltration of personnel records; model refusals were bypassed by framing the work as authorised penetration testing. Dream says the attack appears near-autonomous, names no actor or model, and only notes linguistic indicators of a Chinese-language operator.",
+    "source_ids": [
+      "SRC-DREAM-MULTI-AGENT-ASIA-GOV"
+    ],
+    "reported": "2026-08-12"
+  },
+  {
+    "id": "INCIDENT-ARXON-FORTIGATE-MCP",
+    "type": "incident",
+    "name": "ARXON custom MCP server driving LLM-assisted FortiGate intrusions",
+    "kind": "intrusion",
+    "status": "observed",
+    "confidence": "high",
+    "date": "2026-02",
+    "summary": "The Cyber and Ramen blog analysed an exposed open directory showing a likely single, low-to-average-skilled operator using a custom Python MCP server (ARXON) with DeepSeek and Claude Code to triage compromised FortiGate targets and generate attack plans in parallel, with a deployment log listing 2,516 targets in 106 countries and confirmed compromises in Asia-Pacific and Turkey. The author notes the models were not used to write exploits or find zero-days, gives no attribution, and did not determine initial access.",
+    "source_ids": [
+      "SRC-CYBERANDRAMEN-FORTIGATE-MCP"
+    ],
+    "reported": "2026-02-21"
+  },
+  {
+    "id": "INCIDENT-IC3-DEEPFAKE-REMOTE-JOB-APPLICANTS",
+    "type": "incident",
+    "name": "Deepfakes and stolen PII used to apply for remote IT jobs (FBI IC3 PSA)",
+    "kind": "fraud",
+    "status": "observed",
+    "confidence": "confirmed",
+    "date": "2022-06",
+    "summary": "The FBI IC3 reported an increase in complaints about applicants using voice or video deepfakes and stolen personal data in online interviews for remote IT, programming and database roles, some with access to sensitive data. No actor is named.",
+    "source_ids": [
+      "SRC-FBI-IC3-PSA220628"
+    ],
+    "reported": "2022-06-28"
+  },
+  {
+    "id": "INCIDENT-CANFAIL-LONGSTREAM-LLM-DECOY-CODE",
+    "type": "incident",
+    "name": "CANFAIL and LONGSTREAM: LLM-generated decoy code in Russia-nexus malware against Ukraine",
+    "kind": "malware",
+    "status": "observed",
+    "confidence": "high",
+    "date": "2026",
+    "summary": "Google Threat Intelligence Group reports suspected Russia-nexus intrusion activity against Ukrainian organisations delivering CANFAIL and LONGSTREAM, malware that uses LLM-generated inert decoy code (for example, LLM comments flagging unused blocks and 32 repeated daylight-saving queries) to obfuscate its functionality. Attribution is 'suspected' and no actor is named.",
+    "source_ids": [
+      "SRC-GTIG-AI-TRACKER-2026-05"
+    ],
+    "reported": "2026-05-11"
+  },
+  {
+    "id": "INCIDENT-HEXSTRIKE-STRIX-EAST-ASIA",
+    "type": "incident",
+    "name": "Agentic Hexstrike and Strix operations against East Asian targets",
+    "kind": "intrusion",
+    "status": "observed",
+    "confidence": "confirmed",
+    "date": "2026",
+    "summary": "Google Threat Intelligence Group analysed a suspected PRC-nexus actor using Hexstrike with the Graphiti memory system to autonomously pivot between reconnaissance tools, and the Strix multi-agent framework to automate vulnerability identification and validation, against a Japanese technology firm and an East Asian cybersecurity platform. No actor is named.",
+    "source_ids": [
+      "SRC-GTIG-AI-TRACKER-2026-05"
+    ],
+    "reported": "2026-05-11"
+  },
+  {
+    "id": "INCIDENT-PAPERCUT-AI-AGENT-EXPLOITATION",
+    "type": "incident",
+    "name": "AI-agent-driven mass exploitation of PaperCut NG/MF",
+    "kind": "intrusion",
+    "status": "observed",
+    "confidence": "confirmed",
+    "date": "2026-08",
+    "summary": "GreyNoise and Blackpoint independently report an operator using AI agents (GreyNoise cites OpenAI Codex as harness with a DeepSeek model) to research CVE-2026-81578 and CVE-2026-82078, build exploits and tooling, and exploit PaperCut servers from 31 August to 2 September 2026; GreyNoise counts 440 instances at 395 organisations in 48 countries, mostly education. GreyNoise calls the actor 'likely Russian-speaking' without cited evidence, Blackpoint gives no attribution, and Blackpoint stresses the campaign is not evidence of fully autonomous exploitation.",
+    "source_ids": [
+      "SRC-GREYNOISE-PAPERCUT-AGENTS",
+      "SRC-BLACKPOINT-PAPERCUTS"
+    ],
+    "reported": "2026-09-09"
+  },
+  {
+    "id": "INCIDENT-EVILTOKENS-AI-BEC-SERVICE",
+    "type": "incident",
+    "name": "EvilTokens AI-enabled email compromise service disrupted",
+    "kind": "fraud",
+    "status": "observed",
+    "confidence": "confirmed",
+    "date": "2026-02",
+    "summary": "Microsoft's Digital Crimes Unit describes EvilTokens, a subscription cybercrime service launched in February 2026 whose AI chatbot analysed compromised inboxes to summarise and translate mail, map roles and trusted relationships, recommend targets and draft impersonation messages; investigators found much of it was 'vibe coded' using multiple unnamed AI models. Linked to over 12,000 compromised inboxes at more than 10,000 organisations, it was disrupted by civil action and domain seizures, and two men were arrested in the UK on suspicion of operating it; no actor group is named.",
+    "source_ids": [
+      "SRC-MSFT-DCU-EVILTOKENS"
+    ],
+    "reported": "2026-09-22"
+  },
+  {
+    "id": "INCIDENT-SIEMENS-S7-AI-EXPLOIT-SCRIPTS",
+    "type": "incident",
+    "name": "AI-generated exploitation scripts against Siemens S7 PLCs",
+    "kind": "exploit-development",
+    "status": "observed",
+    "confidence": "confirmed",
+    "date": "2026-08",
+    "summary": "A joint NSA, CISA, FBI, DOE and EPA advisory warns that unnamed, unattributed threat actors are using AI-generated exploitation scripts disguised as monitoring tools, built with python-snap7, to read and write memory and logic on internet-exposed Siemens S7 PLCs in U.S. critical infrastructure. The agencies assess the activity is likely persistent reconnaissance ahead of possible disruption and do not name the AI tool.",
+    "source_ids": [
+      "SRC-CISA-AA26-231A"
+    ],
+    "reported": "2026-08-19"
+  },
+  {
+    "id": "INCIDENT-TAG-217-SOUTH-KOREA-FINANCE",
+    "type": "incident",
+    "name": "TAG-217 ARTEX-linked intrusions at South Korean financial institutions",
+    "kind": "intrusion",
+    "status": "observed",
+    "confidence": "medium",
+    "date": "2026-09",
+    "summary": "Recorded Future's Insikt Group links TAG-217 to intrusions at South Korean financial institutions that industry sources say used the ARTEX AI penetration-testing framework, and found AI tools and records tied to reconnaissance, proxying, payload delivery and payment-process review. Recorded Future cautions that the evidence does not establish how much AI accelerated the attacks.",
+    "source_ids": [
+      "SRC-RECORDEDFUTURE-TAG-217-ARTEX"
+    ],
+    "reported": "2026-10"
+  },
+  {
+    "id": "INCIDENT-HF-MALICIOUS-PICKLE-MODELS",
+    "type": "incident",
+    "name": "Malicious Hugging Face models with pickle reverse-shell payloads",
+    "kind": "supply-chain",
+    "status": "observed",
+    "confidence": "confirmed",
+    "date": "2024-02",
+    "summary": "JFrog found around 100 malicious models on Hugging Face, including baller423/goober2, whose PyTorch pickle file opened a reverse shell to 210.117.212.93:4242 when loaded. JFrog notes the uploaders may have been researchers or AI practitioners and that its honeypot received no commands.",
+    "source_ids": [
+      "SRC-JFROG-HF-MALICIOUS-MODELS"
+    ],
+    "reported": "2024-02-27"
+  },
+  {
+    "id": "INCIDENT-HUNTRESS-VIBE-CODED-AD-ENUMERATION",
+    "type": "incident",
+    "name": "Suspected AI-generated PowerShell script used for Active Directory enumeration",
+    "kind": "intrusion",
+    "status": "observed",
+    "confidence": "high",
+    "date": "2026-06",
+    "summary": "Huntress reports an unnamed attacker who, after RDP access with pre-compromised credentials in early June 2026, ran a PowerShell AD enumeration script that Huntress judges to be LLM-generated from artifacts such as a prompt-iteration title, a leftover placeholder and over-engineered fallbacks, then staged share discovery and exfiltration. The AI attribution rests on code-style indicators, and Huntress frames it as augmenting a familiar playbook rather than a new technique.",
+    "source_ids": [
+      "SRC-HUNTRESS-AI-AD-ENUMERATION",
+      "SRC-THN-AI-GENERATED-AD-SCRIPT"
+    ],
+    "reported": "2026-07-08"
+  },
+  {
+    "id": "INCIDENT-GXC-TEAM-AI-INVOICE-SWAPPER",
+    "type": "incident",
+    "name": "GXC Team AI-enabled Business Invoice Swapper",
+    "kind": "fraud",
+    "status": "observed",
+    "confidence": "medium",
+    "date": "2023-12",
+    "summary": "Resecurity reports that the GXC Team offered a Business Invoice Swapper tool that scans compromised mailboxes for invoices and replaces bank details, stating its creator used AI mainly to identify invoices and to process multiple languages; victims were mostly in the UK and EU. The AI component is described from the tool's offering rather than independently demonstrated.",
+    "source_ids": [
+      "SRC-RESECURITY-GXC-INVOICE-FRAUD"
+    ],
+    "reported": "2024-01-03"
+  },
+  {
+    "id": "INCIDENT-WATERPLUM-AI-FACE-SWAP-INTERVIEWS",
+    "type": "incident",
+    "name": "WaterPlum (Contagious Interview) use of AI face-swapping in online interviews",
+    "kind": "fraud",
+    "status": "observed",
+    "confidence": "confirmed",
+    "date": "2026-09",
+    "summary": "A joint advisory by Japanese, US, Australian and German agencies states that North Korean WaterPlum members conducted online interviews using AI face-swapping software, used text-to-speech to practise Japanese, and consistently used free machine-translation and AI service plans; it also describes the first laptop farm dismantled in Japan. The advisory does not name model vendors.",
+    "source_ids": [
+      "SRC-NPA-FBI-WATERPLUM-ADVISORY-2026-09",
+      "SRC-SECURITYWEEK-JAPAN-LAPTOP-FARM"
+    ],
+    "reported": "2026-09-18"
+  },
+  {
+    "id": "INCIDENT-GAMBIT-AI-AGENT-RETAIL-SKIMMING",
+    "type": "incident",
+    "name": "Autonomous AI agents used to compromise online retailers and plant card skimmers",
+    "kind": "intrusion",
+    "status": "observed",
+    "confidence": "confirmed",
+    "date": "2026-09",
+    "summary": "Gambit Security's interim report describes an unnamed financially motivated operator (Chinese-language prompts, no attribution) who used Strix, Cairn and Hermes agents via OpenRouter (GLM, DeepSeek and Claude Opus models) to find and exploit flaws in online retailers at about $25 per scan; at least 27 companies were compromised, skimmers confirmed on 19, and over 600,000 card records stolen. Gambit cautions that some AI-generated claims may be inaccurate and that impact is likely larger than reported.",
+    "source_ids": [
+      "SRC-GAMBIT-AI-AGENTS-RETAILERS"
+    ],
+    "reported": "2026-09-22"
+  },
+  {
+    "id": "INCIDENT-TREND-CLAUDE-CODE-AGENT-THAILAND",
+    "type": "incident",
+    "name": "Claude Code CLI run as autonomous lateral-movement agent against a Thai organisation",
+    "kind": "intrusion",
+    "status": "observed",
+    "confidence": "confirmed",
+    "date": "2026",
+    "summary": "TrendAI Research reports an unknown actor (possibly Earth Lamia) deployed the Claude Code CLI as an autonomous agent against an organisation in Thailand after jailbreaking it with a false penetration-test claim; the agent then performed internal scanning, exploitation attempts (EternalBlue, SMBGhost, PrintNightmare), credential harvesting and password spraying.",
+    "source_ids": [
+      "SRC-TRENDMICRO-2026-H1-APT"
+    ],
+    "reported": "2026-07"
+  },
+  {
+    "id": "INCIDENT-IC3-AI-VOICE-OFFICIAL-IMPERSONATION",
+    "type": "incident",
+    "name": "AI voice-cloned impersonation of senior U.S. officials",
+    "kind": "fraud",
+    "status": "observed",
+    "confidence": "confirmed",
+    "date": "2025",
+    "summary": "The FBI's IC3 warns that unidentified actors, active since at least 2023, impersonate senior U.S. officials via smishing and AI-generated voice messages, then move targets to encrypted apps to obtain authentication codes, personal documents, funds or introductions. No actor is named.",
+    "source_ids": [
+      "SRC-FBI-IC3-PSA251219"
+    ],
+    "reported": "2025-12-19"
+  },
+  {
+    "id": "INCIDENT-GREECE-VOICE-CLONE-GANG",
+    "type": "incident",
+    "name": "Greek gang uses AI voice clones of relatives to steal cash and valuables",
+    "kind": "fraud",
+    "status": "observed",
+    "confidence": "medium",
+    "date": "2026-09",
+    "summary": "Euronews, citing the Hellenic Police, reports that a gang recorded short voice samples of victims' relatives and used an AI tool to clone them to confirm fake utility-company inspection stories, with estimated proceeds above EUR 1 million; two alleged collectors were arrested in Attica in September 2026. Press report only; no primary police statement was read.",
+    "source_ids": [
+      "SRC-EURONEWS-GREECE-VOICE-CLONE"
+    ],
+    "reported": "2026-09-18"
+  },
+  {
+    "id": "INCIDENT-FORTIGATE-AI-AUGMENTED-ACCESS",
+    "type": "incident",
+    "name": "AI-augmented mass access to FortiGate devices",
+    "kind": "intrusion",
+    "status": "observed",
+    "confidence": "confirmed",
+    "date": "2026-01",
+    "summary": "Amazon Threat Intelligence reports an unnamed, likely financially motivated Russian-speaking individual or small group that accessed over 600 FortiGate devices in more than 55 countries between 11 January and 18 February 2026 without exploiting any FortiGate vulnerability. The actor used at least two commercial LLM providers to produce attack plans, a Go/Python reconnaissance tool, configuration-decryption scripts and command sequences. Amazon links it to no state-sponsored group.",
+    "source_ids": [
+      "SRC-AWS-FORTIGATE-AI-2026-02"
+    ],
+    "reported": "2026-02-20"
+  },
+  {
+    "id": "INCIDENT-LOVABLE-PHISHING-ABUSE",
+    "type": "incident",
+    "name": "Abuse of the Lovable AI website builder for phishing and malware delivery",
+    "kind": "fraud",
+    "status": "observed",
+    "confidence": "confirmed",
+    "date": "2025-02",
+    "summary": "Proofpoint reports observing tens of thousands of Lovable-hosted URLs per month in email since February 2025, used by multiple unnamed actors for credential and MFA phishing (including Tycoon kits), UPS and DeFi fraud lures and malware delivery. Proofpoint says the AI site builder's free hosting and remixing lowered the barrier to entry; Lovable added detections in July 2025.",
+    "source_ids": [
+      "SRC-PROOFPOINT-LOVABLE-PHISHING"
+    ],
+    "reported": "2025-08-20"
+  },
+  {
+    "id": "INCIDENT-SYMANTEC-LLM-GENERATED-LOADERS",
+    "type": "incident",
+    "name": "LLM-generated PowerShell and HTML delivery scripts in malware campaigns",
+    "kind": "malware",
+    "status": "observed",
+    "confidence": "high",
+    "date": "2024",
+    "summary": "Symantec reports phishing campaigns delivering Rhadamanthys, CleanUpLoader, Dunihi and other malware whose PowerShell and HTML/JavaScript delivery scripts it judges likely or highly likely to be LLM-generated, based on stylistic features. The model used is not identified and no actor is named.",
+    "source_ids": [
+      "SRC-SYMANTEC-MALWARE-AI-LLM"
+    ],
+    "reported": "2024-07-25"
+  },
+  {
+    "id": "INCIDENT-MEXICAN-GOVERNMENT-AI-BREACH",
+    "type": "incident",
+    "name": "Single operator uses Claude Code and GPT-4.1 to breach nine Mexican government organisations",
+    "kind": "intrusion",
+    "status": "observed",
+    "confidence": "confirmed",
+    "date": "2025-12",
+    "summary": "Gambit Security reports, from recovered forensic materials, that one unnamed operator breached nine Mexican government organisations between late December 2025 and mid-February 2026; about 75% of remote command execution was generated and executed by Claude Code, and a custom tool sent harvested server data to GPT-4.1 to produce 2,597 intelligence reports across 305 servers. No actor name, nexus or motive is given.",
+    "source_ids": [
+      "SRC-GAMBIT-MEXGOV-AI-BREACH"
+    ],
+    "reported": "2026-04-10"
+  },
+  {
+    "id": "INCIDENT-IC3-IMPERSONATION-DEEPFAKES",
+    "type": "incident",
+    "name": "Deepfake videos and voice cloning in scams impersonating the FBI IC3",
+    "kind": "fraud",
+    "status": "observed",
+    "confidence": "confirmed",
+    "date": "2026-07",
+    "summary": "The FBI IC3 warns that scammers impersonating IC3 use AI-generated videos of public figures, including a senior FBI leader, to promote spoofed complaint sites, and AI-cloned voices and video chats to convince victims, chiefly targeting people already defrauded with fake fund-recovery offers. No actors are named.",
+    "source_ids": [
+      "SRC-FBI-IC3-PSA260720"
+    ],
+    "reported": "2026-07-20"
+  },
+  {
+    "id": "INCIDENT-SWEETSPECTER-OPENAI-PHISHING",
+    "type": "incident",
+    "name": "SweetSpecter spear-phishing of OpenAI employees",
+    "kind": "intrusion",
+    "status": "observed",
+    "confidence": "confirmed",
+    "date": "2024",
+    "summary": "OpenAI reports the suspected China-based actor SweetSpecter sent spear-phishing emails posing as a ChatGPT user seeking support to OpenAI employees, which its controls blocked, and that linked ChatGPT accounts were used for reconnaissance, vulnerability research and scripting. OpenAI says the model use gave no novel capability.",
+    "source_ids": [
+      "SRC-OPENAI-THREAT-2024-10"
+    ],
+    "reported": "2024-10"
   }
 ]

@@ -13,7 +13,7 @@
 
 | Layer | Status |
 |---|---|
-| Evidence | 2 record(s), 2 publisher(s), best grade A, newest 2026 |
+| Evidence | 7 record(s), 4 publisher(s), best grade A, newest 2026 |
 | Safe tests | 1 |
 | Detections | 1 rule file(s), 0 specification(s) |
 | Controls | 0 |
@@ -28,9 +28,14 @@ Malware or tooling queries an LLM at runtime to generate host-specific commands 
 What the repository links to it:
 
 - 2026 · [APT28 PROMPTSTEAL / LAMEHUG runtime LLM use](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-APT28-PROMPTSTEAL) (campaign, confirmed)
+- 2026-08 · [CrowdStrike Threat Actor 2: Chinese-speaking operator's Claude pentesting harnesses](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-CROWDSTRIKE-TA2-CHINESE-SPEAKING-HARNESS) (campaign, confirmed)
+- 2026-04 · [GTG-15001 deceptive dating-app network](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-GTG-15001) (campaign, confirmed)
 - 2025-06-03 · [LAMEHUG: Malware Leveraging Dynamic AI-Generated Commands (AML.CS0044)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-ATLAS-CS0044) (atlas-incident, high)
+- 2025-06 · [PROMPTFLUX: experimental VBScript dropper that rewrites itself via the Gemini API](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-PROMPTFLUX) (malware, confirmed)
+- 2026 · [PROMPTSPY Android backdoor with a Gemini UI agent](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-PROMPTSPY) (malware, confirmed)
+- 2025 · [QUIETVAULT: JavaScript credential stealer using on-host AI CLI tools to hunt secrets](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-QUIETVAULT) (malware, confirmed)
 
-Actors whose campaigns use it: APT28. Vendor labels are kept as published and never merged without evidence.
+Actors whose campaigns use it: APT28, GTG-15001. Vendor labels are kept as published and never merged without evidence.
 
 ## 2. Test it safely
 

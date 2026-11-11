@@ -23,7 +23,7 @@ A repository listed here can inform test cases, detections, controls and taxonom
 | `framework-data` | Taxonomies and knowledge bases | Technique definitions and framework mappings | Observed activity | 7 |
 | `incident-data` | Incident databases | Incident references, citing the primary report | Actor attribution or cyber campaigns (scope is broader than cybersecurity) | 1 |
 | `detection-content` | Community detection rules | Detection ideas and telemetry requirements | Proof of in-the-wild behavior | 4 |
-| `curated-list` | Curated lists | Discovering sources and tools | Any claim on their own | 23 |
+| `curated-list` | Curated lists | Discovering sources and tools | Any claim on their own | 24 |
 | `assessment-tool` | Scanners and red-team tools | Test design and control evaluation | Effectiveness against current models | 28 |
 | `benchmark` | Benchmarks and environments | Reproducible tests and coverage measurement | Real-world prevalence | 13 |
 | `research-technique` | Attack research code | Techniques demonstrated in research | Use in the wild | 16 |
@@ -72,6 +72,7 @@ Ten entries chosen as the highest-value inputs for taxonomy, evidence, tests and
 | [responsible-ai-collaborative/aiid](https://github.com/responsible-ai-collaborative/aiid) | `incident-data` | none | 2026-10-05 · Apache-2.0 | AI Incident Database: incidents and harms involving AI, broader than cybersecurity. · **start here** |
 | [Agent-Threat-Rule/agent-threat-rules](https://github.com/Agent-Threat-Rule/agent-threat-rules) | `detection-content` | `LLMI-T001`, `LLMI-T002`, `LLMI-T004`, `LLMI-T008`, `LLMI-T009`, `LLMI-T011`, `LLMI-T018`, `LLMI-T021` | 2026-10-07 · MIT | Detection rules for agent threats, including injection, tools and MCP. · **start here** |
 | [OWASP/www-project-ai-testing-guide](https://github.com/OWASP/www-project-ai-testing-guide) | `framework-data` | none | 2026-06-01 · other | OWASP AI Testing Guide: 32 test procedures across application, data, infrastructure and model layers. · **start here** |
+| [cybershujin/Threat-Actors-use-of-Artifical-Intelligence](https://github.com/cybershujin/Threat-Actors-use-of-Artifical-Intelligence) | `curated-list` | none | 2026-11-09 · none-found | One-person tracker of threat actors that use AI in their operations: 158 entries (141 cyber, 17 deepfake fraud) with reporting dates, ATT&CK IDs, report links, a STIX 2.1 bundle and IOC CSVs. No licence declared, so only names, links, dates and ATT&CK IDs are used, as a work list in references/crosswalks/ai-actor-tracker.json. |
 
 <!-- gen:eco-knowledge:end -->
 

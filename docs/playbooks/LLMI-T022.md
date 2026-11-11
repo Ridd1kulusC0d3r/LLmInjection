@@ -5,15 +5,15 @@
 | | |
 |---|---|
 | Category | availability |
-| Maturity | **no linked evidence yet** |
-| Priority | 1.5 of 16 (maturity weight times the layers still missing) |
+| Maturity | **observed in the wild** |
+| Priority | 6 of 16 (maturity weight times the layers still missing) |
 | Frameworks | [AML.T0034.002](https://atlas.mitre.org/techniques/AML.T0034.002) ATLAS (exact), [AML.T0034](https://atlas.mitre.org/techniques/AML.T0034) ATLAS (related), [AML.T0029](https://atlas.mitre.org/techniques/AML.T0029) ATLAS (related) |
 
 ## Where it stands
 
 | Layer | Status |
 |---|---|
-| Evidence | 0 record(s), 0 publisher(s), best grade n/a, newest undated |
+| Evidence | 4 record(s), 2 publisher(s), best grade A, newest 2026 |
 | Safe tests | 2 |
 | Detections | 0 rule file(s), 2 specification(s) |
 | Controls | 1 |
@@ -24,6 +24,15 @@
 ## 1. Understand it
 
 Inputs coerce a model or agent into expensive reasoning, recursive planning or tool loops that exhaust budgets or degrade service.
+
+What the repository links to it:
+
+- 2026-05 · [GTG-50014 AI-driven smash-and-grab intrusions and extortion](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-GTG-50014) (campaign, confirmed)
+- 2026-06 · [GTG-50020 AI vendor sandbox injection and AI-company targeting](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-GTG-50020) (campaign, confirmed)
+- 2026-07 · [GTG-50029 hacktivist campaign against European political entities](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-GTG-50029) (campaign, confirmed)
+- 2026 · [UNC6201 automated premium LLM account registration and cancellation](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-UNC6201-PREMIUM-LLM-ACCOUNT-CHURN) (campaign, medium)
+
+Actors whose campaigns use it: GTG-50014, GTG-50020, GTG-50029, UNC6201. Vendor labels are kept as published and never merged without evidence.
 
 ## 2. Test it safely
 
@@ -82,7 +91,6 @@ The runner has plan and mock adapters only: it does not call your system. To run
 
 ## 6. Limits of this page
 
-- No incident, campaign or vulnerability in this repository is linked to this technique. That is a gap here, not proof that it has not happened.
 - 2 of 2 detection(s) are specifications, not rules. They say what to look for, not how to query it. Nothing here has been run against real telemetry.
 - No benchmark maps to it, so there is no public yardstick for how well a defence performs.
 - The tests use benign markers and synthetic data. A pass in a lab is not a security rating for a production system.

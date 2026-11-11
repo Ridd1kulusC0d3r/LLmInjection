@@ -20,7 +20,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from common import ROOT, load_data  # noqa: E402
 
 README = ROOT / "README.md"
-FILES = [README, *(ROOT / f"README.{name}.md" for name in ("pt-BR", "es", "zh-CN", "ru")), ROOT / "docs" / "ECOSYSTEM.md", ROOT / "docs" / "TRANSLATIONS.md", ROOT / "docs" / "KNOWLEDGE-STRATEGY.md"]
+FILES = [README, *(ROOT / f"README.{name}.md" for name in ("pt-BR", "es", "zh-CN", "ru")), ROOT / "docs" / "ECOSYSTEM.md", ROOT / "docs" / "TRANSLATIONS.md", ROOT / "docs" / "ACTORS-USING-AI.md", ROOT / "docs" / "KNOWLEDGE-STRATEGY.md"]
 
 GROUPS = [
     [("Actors", "actors"), ("Campaigns", "campaigns"), ("Incidents", "incidents"),
@@ -291,10 +291,29 @@ def skills_crosswalk() -> str:
     return "\n".join(out)
 
 
+def actor_tracker_gap() -> str:
+    """What a community tracker of threat-actor use of AI lists that LLMInjection does not hold yet (names and counts only)."""
+    data = json.loads((ROOT / "references" / "crosswalks" / "ai-actor-tracker.json").read_text(encoding="utf-8"))
+    s, src = data["summary"], data["source"]
+    new = [a for a in data["actors"] if a["table"] == "main" and not a["llminjection_actor"]]
+    out = [
+        f"The tracker lists **{s['entries_main']}** actors or clusters that use AI in cyber operations (plus {s['entries_deepfake']} deepfake-fraud entries). "
+        f"LLMInjection holds **{s['already_held']}** of them. **{s['new_main_2025_or_later']}** reported in 2025 or later are in the research queue as `actor-candidate`, "
+        f"and **{s['report_urls_not_held']}** report URLs we do not cite ({s['report_urls_not_held_primary']} from vendors or governments) as `source-candidate`. "
+        f"Its {s['attack_ids']} ATT&CK IDs were checked against {data['attack_release']}: {s.get('attack_ids_retired', 0)} are retired there, {s.get('attack_ids_unknown', 0)} unknown.",
+        "", "Top candidates by score (recency, number of references, vendor or government reporting). None is verified yet.", "",
+        "| Candidate | Reported | References | Vendor or government |", "|---|---|---|---|",
+    ]
+    for a in new[:15]:
+        out.append(f"| {cell(a['name'])} | {cell(a['reported'])} | {len(a['references'])} | {'yes' if a['has_primary_reference'] else 'no'} |")
+    out += ["", f"Snapshot of `{src['repo']}` at `{src['commit'][:10]}` ({src['date']}); licence: {src['license']}. Regenerate with `scripts/ai_actor_tracker_check.py`."]
+    return "\n".join(out)
+
+
 MATURITY_LEVELS = ["observed-in-the-wild", "disclosed-vulnerability", "research-demonstrated", "no-linked-evidence"]
 
 BLOCKS = {
-    "stats": stats, "landscape-headlines": landscape_headlines, "landscape-domains": landscape_domains, "landscape-evidence": landscape_evidence, "skills-crosswalk": skills_crosswalk, "maturity": maturity, "glossary": glossary,
+    "stats": stats, "landscape-headlines": landscape_headlines, "landscape-domains": landscape_domains, "landscape-evidence": landscape_evidence, "actor-tracker-gap": actor_tracker_gap, "skills-crosswalk": skills_crosswalk, "maturity": maturity, "glossary": glossary,
     **{f"stats-{lang}": stats_lang(lang) for lang in STAT_LABELS}, "actors": actors, "campaigns": campaigns, "incidents": incidents,
     "vulnerabilities": vulnerabilities, "techniques": techniques, "test-cases": test_cases,
     "detections": detections, "controls": controls, "frameworks": frameworks, "models": models,

@@ -3060,5 +3060,28 @@
       "last_commit": "2026-08-31",
       "license": "Apache-2.0"
     }
+  },
+  {
+    "id": "ECO-117",
+    "type": "ecosystem",
+    "name": "Threat-Actors-use-of-Artifical-Intelligence",
+    "owner": "cybershujin",
+    "url": "https://github.com/cybershujin/Threat-Actors-use-of-Artifical-Intelligence",
+    "section": "knowledge",
+    "evidence_class": "curated-list",
+    "priority": "standard",
+    "status": "listed",
+    "techniques": [],
+    "summary": "One-person tracker of threat actors that use AI in their operations: 158 entries (141 cyber, 17 deepfake fraud) with reporting dates, ATT&CK IDs, report links, a STIX 2.1 bundle and IOC CSVs. No licence declared, so only names, links, dates and ATT&CK IDs are used, as a work list in references/crosswalks/ai-actor-tracker.json.",
+    "source_grade": "D",
+    "provenance": "research-sweep 2026-11-09: cloned with git --depth 1; README, Sources.md, tracker.json, the STIX bundle and iocs/README.md read; ATT&CK IDs checked against Enterprise ATT&CK 20.1; no licence file or statement found; archive flag not visible to git",
+    "added": "2026-11-09",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-11-09",
+      "reachable": true,
+      "last_commit": "2026-11-09",
+      "license": "none-found"
+    }
   }
 ]

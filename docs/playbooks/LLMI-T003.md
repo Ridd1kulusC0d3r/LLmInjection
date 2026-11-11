@@ -13,7 +13,7 @@
 
 | Layer | Status |
 |---|---|
-| Evidence | 1 record(s), 1 publisher(s), best grade A, newest 2024-12-01 |
+| Evidence | 10 record(s), 9 publisher(s), best grade A, newest 2026 |
 | Safe tests | 1 |
 | Detections | 0 rule file(s), 1 specification(s) |
 | Controls | 2 |
@@ -27,7 +27,18 @@ Adversarial inputs attempt to elicit behavior outside intended safety or policy 
 
 What the repository links to it:
 
+- 2026-04 · [bandcampro Gemini CLI-driven C2 botnet build and fraud operations](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-BANDCAMPRO-GEMINI-CLI-C2) (campaign, confirmed)
+- 2026-08 · [CrowdStrike Threat Actor 3: Indonesian-speaking operator using public Claude Code skills](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-CROWDSTRIKE-TA3-INDONESIAN-SKILLS) (campaign, confirmed)
+- 2026-10 · [CyberXero Claude Code agent swarm against Ukrainian critical infrastructure](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-CYBERXERO-CLAUDE-AGENT-SWARM) (campaign, confirmed)
+- 2025-08 · [GTG-2002 Claude Code data-extortion operation ("vibe hacking")](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-GTG-2002-VIBE-HACKING-EXTORTION) (campaign, confirmed)
+- 2025 · [China-nexus actor using a capture-the-flag pretext to misuse Gemini](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-GTIG-CHINA-NEXUS-CTF-PRETEXT) (campaign, confirmed)
+- 2025 · [TEMP.Zagros Gemini-assisted custom malware development](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-TEMP-ZAGROS-GEMINI-MALWARE-DEV) (campaign, confirmed)
+- 2026 · [UNC2814 expert-persona prompting for embedded-device vulnerability research](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-UNC2814-PERSONA-VULN-RESEARCH) (campaign, confirmed)
 - 2024-12-01 · [Storm-2139 Azure OpenAI Guardrail Bypass (AML.CS0057)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-ATLAS-CS0057) (atlas-incident, high)
+- 2026-07 · [Multi-agent AI framework (Hermes/OpenClaw) used to compromise Asian government entities](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-DREAM-MULTI-AGENT-ASIA-GOV) (intrusion, high)
+- 2026 · [Claude Code CLI run as autonomous lateral-movement agent against a Thai organisation](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-TREND-CLAUDE-CODE-AGENT-THAILAND) (intrusion, confirmed)
+
+Actors whose campaigns use it: bandcampro, CyberXero, GTG-2002, TEMP.Zagros, UNC2814. Vendor labels are kept as published and never merged without evidence.
 
 ## 2. Test it safely
 
@@ -73,8 +84,6 @@ The runner has plan and mock adapters only: it does not call your system. To run
 
 ## 6. Limits of this page
 
-- All the evidence comes from one publisher (MITRE). Treat it as one voice until a second source confirms it.
-- The newest evidence (2024-12-01) is more than 365 days older than the newest in the dataset.
 - 1 of 1 detection(s) are specifications, not rules. They say what to look for, not how to query it. Nothing here has been run against real telemetry.
 - The tests use benign markers and synthetic data. A pass in a lab is not a security rating for a production system.
 - Ecosystem tools and benchmarks help you test and measure. They never support a claim that an actor used the technique.
