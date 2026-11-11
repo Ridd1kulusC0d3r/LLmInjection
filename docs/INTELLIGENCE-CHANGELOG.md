@@ -49,6 +49,15 @@ This changelog records material changes to attribution, confidence, external map
 - Nothing was added to `actors.json`, `campaigns.json` or `sources.json`. A candidate is a lead from a one-person curation (grade D).
 - Two of the tracker's matches go through an alias (APT43 to our Kimsuky record, UNC6780 to TeamPCP); the crosswalk records the label that matched so it can be reviewed.
 - Two ATT&CK IDs the tracker uses (T1562.001, T1656) are retired in Enterprise ATT&CK 20.1.
+## 2026-10-31 — Automated attribution research, as a research method only
+
+### Added
+
+- `docs/METHODOLOGY.md` section 5.1: APT-MMF and TAA-EPLMR linked as research methods (grade D), with the rule that a model's attribution is an analyst hypothesis and never changes a record.
+
+### Confidence notes
+
+- Both papers were confirmed to exist; their reported results were not reproduced. A TRAIL attribution paper and a cryptocurrency-extortion study named in a secondary survey could not be found and are not cited.
 
 ## 2026-10-12 — Third-party AI-security skills mapped; defender playbooks
 
