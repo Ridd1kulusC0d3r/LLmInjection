@@ -203,3 +203,4 @@ Evidence → Campaign → Technique → Test → Detection → Control → Frame
 - [ ] Re-read the 56 `reviewing` items when the blocked pages become reachable, and the 18 still `candidate`
 - [ ] Promote the further cases named in the reports read (Anthropic influence and distillation cases, BASIN CASTLE, MIDNIGHT NEPTUNE, UNC7228, TAG-217)
 - [ ] Extend ATT&CK mappings for adversary-use campaigns, using the tracker's IDs as a work list only
+- [x] Explorer: selectable graph (pin, pan, zoom, type toggles) and dashboard charts that filter the Explorer; new README GIFs for the tour, the graph and the filters
