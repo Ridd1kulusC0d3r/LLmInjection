@@ -161,6 +161,13 @@ def page(tid: str, data: Data) -> str:
         profiles = sorted({p for tc_id in row["tests"] for p in profiles_for(data.tests[tc_id])})
         lines += ["```bash", f"python scripts/query_intel.py coverage {tid}"] + [f"python scripts/run_safe_lab.py --profile {p}   # lists the cases for this surface; plan mode makes no model calls" for p in profiles] + ["```", "",
                   "The runner has plan and mock adapters only: it does not call your system. To run a case, build its stimulus in your own harness (section 7 points at tools that do) and record the outcome in the shape of [`schemas/lab-result.schema.json`](../../schemas/lab-result.schema.json).", ""]
+        recorded = [r for f in sorted((ROOT / "lab-results").glob("*.json")) for r in json.loads(f.read_text(encoding="utf-8"))["results"] if r["test_case"] in row["tests"]]
+        if recorded:
+            lines += ["**Recorded results** (see [LAB-RESULTS](../LAB-RESULTS.md)):", "", "| Case | System under test | Result | Recorded |", "|---|---|---|---|"]
+            lines += [f"| {r['test_case']} | {cell(r['adapter'])} | {r['result']} | {r['timestamp'][:10]} |" for r in recorded]
+            lines += ["", f"{len({r['test_case'] for r in recorded})} of {len(row['tests'])} cases for this technique have a recorded result. The rest are designed, not tested.", ""]
+        elif row["tests"]:
+            lines += ["**Recorded results:** none. These cases are designed, not tested.", ""]
         ex = EXAMPLES.get(tid)
         if ex:
             lines += [f"**Worked example.** [`{ex['code']}`](../../{ex['code']}) is a small tool-invocation gate and [`{ex['tests']}`](../../{ex['tests']}) turns {', '.join(f'`{c}`' for c in ex['covers'])} into assertions you can run with `python -m unittest`.", ""]
