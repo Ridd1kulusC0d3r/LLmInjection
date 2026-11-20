@@ -1,0 +1,24 @@
+// DET-AI-046 — Sub-Second Permission Probing With Cloud Credentials (LLMI-T015)
+// Status: experimental hunting query, not tested against live data.
+// Basis: FBI FLASH-20261113-001 (ARTEX): "sub-second capability checks, test blob writes/deletes,
+// ARM deployment validation dry-runs" against SAS tokens, service principals and storage keys.
+// Part 1: a blob written and deleted by the same caller within one second.
+let window = 1s;
+let writes = StorageBlobLogs
+    | where OperationName == "PutBlob" and StatusCode between (200 .. 299)
+    | project WriteTime = TimeGenerated, AccountName, Uri, CallerIpAddress, AuthenticationType, RequesterObjectId;
+StorageBlobLogs
+| where OperationName == "DeleteBlob" and StatusCode between (200 .. 299)
+| project DeleteTime = TimeGenerated, AccountName, Uri, CallerIpAddress
+| join kind=inner writes on AccountName, Uri, CallerIpAddress
+| where DeleteTime between (WriteTime .. WriteTime + window)
+| summarize Probes = count(), Blobs = make_set(Uri, 20), First = min(WriteTime), Last = max(DeleteTime)
+    by AccountName, CallerIpAddress, AuthenticationType, RequesterObjectId
+| order by Probes desc
+// Part 2 (run separately): bursts of ARM deployment validation by one caller.
+// AzureActivity
+// | where OperationNameValue =~ "MICROSOFT.RESOURCES/DEPLOYMENTS/VALIDATE/ACTION"
+// | summarize Validations = count(), Ops = make_set(ResourceGroup, 20) by Caller, CallerIpAddress, bin(TimeGenerated, 5m)
+// | where Validations >= 10
+// False positives: deployment pipelines and IaC linters validate templates in bursts; storage health probes
+// write and delete canary blobs. Allowlist by service principal and pipeline address, then review what is left.

@@ -1,0 +1,11 @@
+`comment("DET-AI-047 Denied-Call Burst Across Services Followed by a Success (LLMI-T015, LLMI-T016). Experimental hunting search, not tested against live data. Basis: CSA note on AntiFox, 2026-11-12.")`
+index=aws sourcetype=aws:cloudtrail earliest=-24h
+| eval denied=if(match(errorCode, "^(AccessDenied|AccessDeniedException|UnauthorizedOperation|Client.UnauthorizedOperation)$"), 1, 0)
+| eval secret_read=if(denied=0 AND match(eventName, "^(GetSecretValue|GetParameters?|Decrypt)$"), 1, 0)
+| bin _time span=30m
+| stats count AS calls sum(denied) AS denied_calls dc(eventSource) AS services sum(secret_read) AS secret_reads
+        values(eval(if(denied=0, eventSource.":".eventName, null()))) AS succeeded
+        BY _time, userIdentity.arn, sourceIPAddress
+| where calls>=100 AND services>=10 AND denied_calls*2>=calls
+| eval priority=if(secret_reads>0, "review-now", "review")
+| sort - secret_reads, - denied_calls

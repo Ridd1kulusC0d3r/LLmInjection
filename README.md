@@ -62,7 +62,7 @@ Each row is a record in [`data/threat-landscape-2026.json`](data/threat-landscap
 
 <!-- gen:landscape-evidence:start -->
 
-Of the **28 techniques** tracked, **22** have activity observed in the wild, **2** are tied to a disclosed vulnerability, **4** are demonstrated in research and **0** have no linked evidence yet (a gap in this repository, not a claim that they are theoretical). On the defensive side, **5 of 45** detections exist as rule files; the rest are specifications.
+Of the **28 techniques** tracked, **22** have activity observed in the wild, **2** are tied to a disclosed vulnerability, **4** are demonstrated in research and **0** have no linked evidence yet (a gap in this repository, not a claim that they are theoretical). On the defensive side, **8 of 47** detections exist as rule files; the rest are specifications.
 
 <!-- gen:landscape-evidence:end -->
 
@@ -111,7 +111,7 @@ New [source registry and ingestion guidance](docs/AI-INTELLIGENCE-SOURCES.md), [
 
 | Test cases | Detections | Controls | Frameworks | Model families | Relationships | Ecosystem repos |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| **40** | **45** | **32** | **19** | **12** | **476** | **117** |
+| **40** | **47** | **32** | **19** | **12** | **479** | **117** |
 
 <!-- gen:stats:end -->
 
@@ -1080,6 +1080,8 @@ telemetry + detection
 | `DET-AI-043` | **Agent Outbound Communication Anomaly** | agent-runtime | medium | specification |
 | `DET-AI-044` | **Model Output Reaching an Interpreter Unsanitized** | application | high | specification |
 | `DET-AI-045` | **Rapid Iterative Script Variants on One Host** | endpoint | medium | specification |
+| `DET-AI-046` | **Sub-Second Permission Probing With Cloud Credentials** | cloud-identity | high | specification |
+| `DET-AI-047` | **Denied-Call Burst Across Services Followed by a Success** | cloud-identity | high | specification |
 
 <!-- gen:detections:end -->
 

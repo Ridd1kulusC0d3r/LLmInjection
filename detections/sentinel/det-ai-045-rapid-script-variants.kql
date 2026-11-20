@@ -1,0 +1,17 @@
+// DET-AI-045 — Rapid Iterative Script Variants on One Host (LLMI-T028, LLMI-T015)
+// Status: experimental hunting query, not tested against live data.
+// Basis: Unit 42 on CL-CRI-1131: near-identical scripts with incrementally changed names, failures followed by
+// corrections, in a short window from a user-writable path.
+let window = 30m;
+DeviceProcessEvents
+| where FileName in~ ("python.exe", "python3", "python", "powershell.exe", "pwsh.exe", "node.exe", "bash", "sh", "cscript.exe", "wscript.exe")
+| extend Script = extract(@"([^\\/\s""']+\.(py|ps1|js|sh|vbs))", 1, ProcessCommandLine)
+| where isnotempty(Script)
+| where ProcessCommandLine matches regex @"(?i)(\\Users\\|\\AppData\\|\\Temp\\|/tmp/|/home/|/var/tmp/|/dev/shm/)"
+| extend Stem = replace_regex(tolower(Script), @"(_?v?\d+|_(new|fix|fixed|final|test|old))*\.(py|ps1|js|sh|vbs)$", "")
+| summarize Variants = dcount(Script), Runs = count(), Names = make_set(Script, 20), Lines = make_set(ProcessCommandLine, 5)
+    by DeviceName, AccountName, Stem, bin(Timestamp, window)
+| where Variants >= 4
+| order by Variants desc
+// False positives: developers iterating on their own scripts, notebook exports, build tools that version files.
+// Most useful on servers and on hosts where nobody is expected to write code.

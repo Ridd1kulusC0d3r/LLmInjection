@@ -5256,5 +5256,38 @@
     "evidence_sources": [
       "SRC-NVD-CVE-2026-2286"
     ]
+  },
+  {
+    "id": "REL-477",
+    "type": "relationship",
+    "source": "DET-AI-046",
+    "relationship": "detects",
+    "target": "LLMI-T015",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-MSFT-STORM-0940-ARTEX"
+    ]
+  },
+  {
+    "id": "REL-478",
+    "type": "relationship",
+    "source": "DET-AI-047",
+    "relationship": "detects",
+    "target": "LLMI-T015",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-MSFT-STORM-0940-ARTEX"
+    ]
+  },
+  {
+    "id": "REL-479",
+    "type": "relationship",
+    "source": "DET-AI-047",
+    "relationship": "detects",
+    "target": "LLMI-T016",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-MSFT-STORM-0940-ARTEX"
+    ]
   }
 ]

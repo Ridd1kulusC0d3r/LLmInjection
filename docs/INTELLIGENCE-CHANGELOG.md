@@ -2,6 +2,20 @@
 
 This changelog records material changes to attribution, confidence, external mappings and structured intelligence. Ordinary prose edits do not belong here.
 
+## 2026-11-20 — Detection: two cloud-identity specifications and the first hunting queries
+
+### Added
+
+- `DET-AI-046` Sub-Second Permission Probing With Cloud Credentials (FBI FLASH-20261113-001 on ARTEX) with a Sentinel query over `StorageBlobLogs` and `AzureActivity`.
+- `DET-AI-047` Denied-Call Burst Across Services Followed by a Success (the AntiFox intrusions) with Sentinel (`AWSCloudTrail`) and Splunk (`aws:cloudtrail`) queries.
+- Sentinel and Splunk hunting queries for `DET-AI-045` Rapid Iterative Script Variants, the top-ranked hunting hypothesis.
+- A test that every query file belongs to a known detection.
+
+### Confidence notes
+
+- All queries are experimental and untested against live data; thresholds (100 calls, 10 services, 4 variants) are starting points to tune.
+- The `detects` links are `medium`. Their evidence source is the Storm-0940 report already held; the FBI FLASH and CSA note that the queries cite arrive with the sources review.
+
 ## 2026-11-20 — ATR CVE candidates triaged: 22 AI vulnerabilities promoted
 
 ### Added
