@@ -775,5 +775,33 @@
     "test_ids": [
       "TC-TOOL-040"
     ]
+  },
+  {
+    "id": "DET-AI-046",
+    "type": "detection",
+    "name": "Sub-Second Permission Probing With Cloud Credentials",
+    "category": "cloud-identity",
+    "severity": "high",
+    "status": "specification",
+    "hypothesis": "A principal that has just been used from a new address writes and deletes a test blob within a second, or fires bursts of ARM deployment validation (dry-run) calls, mapping what a stolen credential can do. The FBI describes this machine-speed capability check in ARTEX intrusions.",
+    "telemetry": [
+      "StorageBlobLogs (PutBlob/DeleteBlob with caller and object id)",
+      "AzureActivity (deployments/validate)",
+      "sign-in logs for the same principal"
+    ],
+    "test_ids": []
+  },
+  {
+    "id": "DET-AI-047",
+    "type": "detection",
+    "name": "Denied-Call Burst Across Services Followed by a Success",
+    "category": "cloud-identity",
+    "severity": "high",
+    "status": "specification",
+    "hypothesis": "One cloud identity issues hundreds of API calls across many services in minutes, most of them denied, and one of them, often a secret read, succeeds. The Cloud Security Alliance's reading of the AntiFox intrusions describes this pattern; the value of the sweep is the few calls that succeed.",
+    "telemetry": [
+      "CloudTrail (eventSource, eventName, errorCode, userIdentity.arn, sourceIPAddress)"
+    ],
+    "test_ids": []
   }
 ]

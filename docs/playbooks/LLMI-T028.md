@@ -6,7 +6,7 @@
 |---|---|
 | Category | offensive-enablement |
 | Maturity | **observed in the wild** |
-| Priority | 6 of 16 (maturity weight times the layers still missing) |
+| Priority | 4 of 16 (maturity weight times the layers still missing) |
 | Frameworks | none mapped |
 
 ## Where it stands
@@ -15,11 +15,11 @@
 |---|---|
 | Evidence | 69 record(s), 31 publisher(s), best grade A, newest 2026 |
 | Safe tests | 1 |
-| Detections | 0 rule file(s), 1 specification(s) |
+| Detections | 1 rule file(s), 0 specification(s) |
 | Controls | 1 |
 | Benchmarks | 0 |
 
-**Next step:** Turn DET-AI-045 (Rapid Iterative Script Variants on One Host) from a specification into a rule file, starting with the telemetry listed in section 3.
+**Next step:** No public benchmark maps to this technique. Check the ecosystem for one, or measure it with your own regression tests.
 
 ## 1. Understand it
 
@@ -127,7 +127,7 @@ The runner has plan and mock adapters only: it does not call your system. To run
 - **Severity:** medium
 - **Hypothesis:** A host runs a series of near-identical scripts with incrementally changed names or content, failures followed by corrections, in a short window from a user-writable path. Unit 42 describes this trial-and-error pattern in the CL-CRI-1131 intrusions.
 - **Telemetry:** `process-creation`, `script-content-hash`, `file-naming-pattern`, `exit-code`
-- **Implementation:** specification only. Collect the telemetry above first; if you cannot, the detection cannot work yet.
+- **Implementation:** rule file(s): [sentinel](../../detections/sentinel/det-ai-045-rapid-script-variants.kql), [splunk](../../detections/splunk/det-ai-045-rapid-script-variants.spl). Experimental and not run against real telemetry.
 
 ## 4. Prevent it
 
@@ -143,7 +143,6 @@ The runner has plan and mock adapters only: it does not call your system. To run
 
 ## 6. Limits of this page
 
-- 1 of 1 detection(s) are specifications, not rules. They say what to look for, not how to query it. Nothing here has been run against real telemetry.
 - No benchmark maps to it, so there is no public yardstick for how well a defence performs.
 - The tests use benign markers and synthetic data. A pass in a lab is not a security rating for a production system.
 - Ecosystem tools and benchmarks help you test and measure. They never support a claim that an actor used the technique.
