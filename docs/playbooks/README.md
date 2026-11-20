@@ -10,7 +10,7 @@ Sorted by priority, the techniques with the most missing defence first. `E` evid
 | [LLMI-T013](LLMI-T013.md) Runtime LLM Command Generation | observed in the wild | 8 | 7 | 1 | 1 | 0 | 0 | 0 |
 | [LLMI-T010](LLMI-T010.md) Model Source Tampering | observed in the wild | 6 | 1 | 1 | 0 | 3 | 2 | 0 |
 | [LLMI-T012](LLMI-T012.md) Coding-Agent Dependency Manipulation | observed in the wild | 6 | 1 | 2 | 0 | 2 | 1 | 0 |
-| [LLMI-T014](LLMI-T014.md) AI-Assisted Reconnaissance and Social Engineering | observed in the wild | 6 | 44 | 1 | 0 | 1 | 1 | 0 |
+| [LLMI-T014](LLMI-T014.md) AI-Assisted Reconnaissance and Social Engineering | observed in the wild | 6 | 45 | 1 | 0 | 1 | 1 | 0 |
 | [LLMI-T017](LLMI-T017.md) Prompt Injection Against AI Security Scanners | observed in the wild | 6 | 3 | 1 | 0 | 2 | 2 | 0 |
 | [LLMI-T019](LLMI-T019.md) Model Distillation Campaign | observed in the wild | 6 | 2 | 1 | 0 | 1 | 1 | 0 |
 | [LLMI-T021](LLMI-T021.md) Agent Tool Poisoning and Rug Pull | observed in the wild | 6 | 4 | 1 | 0 | 2 | 3 | 0 |
@@ -24,7 +24,7 @@ Sorted by priority, the techniques with the most missing defence first. `E` evid
 | [LLMI-T016](LLMI-T016.md) AI Gateway Credential Compromise | observed in the wild | 4 | 7 | 1 | 1 | 1 | 1 | 0 |
 | [LLMI-T018](LLMI-T018.md) AI Coding-Assistant Workspace Abuse | observed in the wild | 4 | 6 | 1 | 1 | 5 | 2 | 0 |
 | [LLMI-T027](LLMI-T027.md) Unsanctioned AI Runtime (Shadow AI) | observed in the wild | 4 | 1 | 2 | 2 | 0 | 2 | 0 |
-| [LLMI-T028](LLMI-T028.md) AI-Assisted Tooling Development | observed in the wild | 4 | 70 | 1 | 1 | 0 | 1 | 0 |
+| [LLMI-T028](LLMI-T028.md) AI-Assisted Tooling Development | observed in the wild | 4 | 71 | 1 | 1 | 0 | 1 | 0 |
 | [LLMI-T006](LLMI-T006.md) Data or Model Poisoning | demonstrated in research | 3 | 0 | 1 | 0 | 1 | 0 | 1 |
 | [LLMI-T025](LLMI-T025.md) Multimodal Instruction Triggers | demonstrated in research | 3 | 0 | 2 | 0 | 1 | 2 | 0 |
 | [LLMI-T001](LLMI-T001.md) Direct Prompt Injection | observed in the wild | 2 | 2 | 2 | 0 | 2 | 2 | 6 |

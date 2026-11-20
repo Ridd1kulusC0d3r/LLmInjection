@@ -122,11 +122,11 @@ New [source registry and ingestion guidance](docs/AI-INTELLIGENCE-SOURCES.md), [
 
 | Actors | Campaigns | Incidents | Vulnerabilities | Techniques | Sources |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| **75** | **98** | **69** | **32** | **28** | **174** |
+| **75** | **99** | **69** | **32** | **28** | **176** |
 
 | Test cases | Detections | Controls | Frameworks | Model families | Relationships | Ecosystem repos |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| **40** | **47** | **32** | **19** | **12** | **519** | **126** |
+| **40** | **47** | **32** | **19** | **12** | **521** | **126** |
 
 <!-- gen:stats:end -->
 
@@ -610,6 +610,7 @@ Real-world reporting is intentionally placed on the front page because AI securi
 | **Storm-3358 ARTEX-driven intrusions against financial organisations** | 2026-10 | 2026-11-06 |  | confirmed | Microsoft observed Storm-3358 using ARTEX agents with conventional automated tools to scan internet-facing systems, exploit anonymous file… |
 | **ARTEX-using actor targeting IT and software vendors (overlaps Storm-0940)** | 2026-10 | 2026-10-22 |  | high | Wiz observed throughout October 2026 an actor using ARTEX tooling against multiple IT and software vendors, probing Okta, Entra ID and… |
 | **AntiFox (ARTEX fork) intrusions against IIS applications and AWS** | 2026-11 | 2026-11-10 |  | medium | Per the Cloud Security Alliance's reading of Arctic Wolf Labs (2026-11-10), self-hosted, Chinese-language AntiFox instances on Alibaba… |
+| **AI-built clones of Brazilian government sites collecting Pix payments** | 2025 | 2025-08-05 | BR | high | Zscaler ThreatLabz found phishing replicas of a Brazilian State Department of Traffic and the Ministry of Education built with the… |
 
 <!-- gen:campaigns:end -->
 
@@ -1211,7 +1212,7 @@ Every intelligence item should answer:
 
 | Grade | Class | Sources |
 |---|---|---|
-| **A** | Primary or authoritative | 152 |
+| **A** | Primary or authoritative | 154 |
 | **B** | Strong secondary | 8 |
 | **C** | Reputable press | 9 |
 | **D** | Community | 5 |

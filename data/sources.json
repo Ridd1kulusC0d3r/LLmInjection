@@ -1850,5 +1850,27 @@
     "role": "journalism",
     "url": "https://bleepingcomputer.com/news/security/hackers-use-antifox-ai-agents-in-aws-credential-theft-attacks",
     "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-ZSCALER-BR-GOV-GENAI-PHISHING",
+    "type": "source",
+    "name": "GenAI Used For Phishing Websites Impersonating Brazil's Government",
+    "publisher": "Zscaler ThreatLabz",
+    "grade": "A",
+    "role": "threat-report",
+    "url": "https://www.zscaler.com/blogs/security-research/genai-used-phishing-websites-impersonating-brazil-s-government",
+    "published": "2025-08-05",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-ZIMPERIUM-PIXREVOLUTION",
+    "type": "source",
+    "name": "PixRevolution: The Agent-Operated Android Trojan Hijacking Brazil's PIX Payments in Real Time",
+    "publisher": "Zimperium zLabs",
+    "grade": "A",
+    "role": "threat-report",
+    "url": "https://zimperium.com/blog/pixrevolution-the-agent-operated-android-trojan-hijacking-brazils-pix-payments-in-real-time",
+    "published": "2026-03-11",
+    "last_verified": "2026-11-20"
   }
 ]

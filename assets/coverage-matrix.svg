@@ -220,7 +220,7 @@
 <line x1="40" x2="1364" y1="450" y2="450" stroke="#e0dacb"/>
 <text x="40" y="467" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T014  </tspan>AI-Assisted Reconnaissance and Social Engineering</text>
 <rect x="461.0" y="453" width="34" height="20" fill="#7c2406"/>
-<text x="478.0" y="468" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">44</text>
+<text x="478.0" y="468" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">45</text>
 <rect x="553.0" y="453" width="34" height="20" fill="#e9b394"/>
 <text x="570.0" y="468" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
 <rect x="645.0" y="453" width="34" height="20" fill="#e9b394"/>
@@ -434,7 +434,7 @@
 <line x1="40" x2="1364" y1="814" y2="814" stroke="#e0dacb"/>
 <text x="40" y="831" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T028  </tspan>AI-Assisted Tooling Development</text>
 <rect x="461.0" y="817" width="34" height="20" fill="#7c2406"/>
-<text x="478.0" y="832" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">70</text>
+<text x="478.0" y="832" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">71</text>
 <rect x="553.0" y="817" width="34" height="20" fill="#e9b394"/>
 <text x="570.0" y="832" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
 <rect x="645.0" y="817" width="34" height="20" fill="#e9b394"/>

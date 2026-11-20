@@ -5738,5 +5738,27 @@
     "evidence_sources": [
       "SRC-CSA-ANTIFOX"
     ]
+  },
+  {
+    "id": "REL-520",
+    "type": "relationship",
+    "source": "CAMPAIGN-BR-GOV-GENAI-PIX-PHISHING",
+    "relationship": "uses",
+    "target": "LLMI-T014",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-ZSCALER-BR-GOV-GENAI-PHISHING"
+    ]
+  },
+  {
+    "id": "REL-521",
+    "type": "relationship",
+    "source": "CAMPAIGN-BR-GOV-GENAI-PIX-PHISHING",
+    "relationship": "uses",
+    "target": "LLMI-T028",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-ZSCALER-BR-GOV-GENAI-PHISHING"
+    ]
   }
 ]
