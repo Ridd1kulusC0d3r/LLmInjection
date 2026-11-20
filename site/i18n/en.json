@@ -425,5 +425,18 @@
  "tm.frameworks": "Frameworks",
  "tm.fw": "Framework",
  "tm.scope": "Scope",
- "tm.use": "How it is used here"
+ "tm.use": "How it is used here",
+ "tab.latam": "Brazil & LATAM",
+ "latam.eyebrow": "Regional view",
+ "latam.title": "Brazil and Latin America",
+ "latam.sub": "Actors, campaigns and incidents tagged with a Latin American country, or whose report names the region, plus the campaigns of those actors. The record content stays in English, as the reports state it.",
+ "latam.countries": "By country",
+ "latam.techniques": "Techniques seen in the region",
+ "latam.actors": "Actors",
+ "latam.records": "Campaigns and incidents, newest first",
+ "latam.bytext": "named in the report text",
+ "latam.rule": "Regional relevance is shown only where a source states it. Elsewhere the rule is: regional impact not demonstrated in the sources consulted.",
+ "latam.doc.pt": "Brazil and Latin America overview (PT)",
+ "latam.doc.es": "Latin America overview (ES)",
+ "latam.fraud": "Fraud taxonomy: FraudNeuron"
 }

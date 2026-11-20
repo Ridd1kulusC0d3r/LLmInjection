@@ -58,6 +58,7 @@
       <button class="tab" role="tab" id="tab-graph" aria-controls="graph" aria-selected="false" tabindex="-1" data-tab="graph" data-i18n="tab.graph">Graph</button>
       <button class="tab" role="tab" id="tab-timeline" aria-controls="timeline" aria-selected="false" tabindex="-1" data-tab="timeline" data-i18n="tab.timeline">Timeline</button>
       <button class="tab" role="tab" id="tab-whatsnew" aria-controls="whatsnew" aria-selected="false" tabindex="-1" data-tab="whatsnew" data-i18n="tab.whatsnew">What's new</button>
+      <button class="tab" role="tab" id="tab-latam" aria-controls="latam" aria-selected="false" tabindex="-1" data-tab="latam" data-i18n="tab.latam">Brazil &amp; LATAM</button>
       <button class="tab" role="tab" id="tab-reports" aria-controls="reports" aria-selected="false" tabindex="-1" data-tab="reports" data-i18n="tab.reports">Reports</button>
       <span class="tabgrp" role="presentation" data-i18n="tabgrp.defense">Defense</span>
       <button class="tab" role="tab" id="tab-coverage" aria-controls="coverage" aria-selected="false" tabindex="-1" data-tab="coverage" data-i18n="tab.coverage">Coverage</button>
@@ -209,6 +210,14 @@
         <p class="sub" data-i18n="rep.sub"></p>
         <div id="reportList"></div>
         <div id="reportView" class="rview" hidden></div>
+      </section>
+
+      <section id="latam" class="view" role="tabpanel" aria-labelledby="tab-latam" tabindex="0">
+        <div class="eyebrow" data-i18n="latam.eyebrow"></div>
+        <h2 data-i18n="latam.title"></h2>
+        <p class="sub" data-i18n="latam.sub"></p>
+        <p class="links" style="margin:0 0 18px"><a class="out" href="https://github.com/Ridd1kulusC0d3r/LLmInjection/blob/main/docs/pt-BR/PANORAMA-BRASIL-LATAM.md" rel="noopener" data-i18n="latam.doc.pt">Panorama Brasil e América Latina</a><a class="out" href="https://github.com/Ridd1kulusC0d3r/LLmInjection/blob/main/docs/es/PANORAMA-LATAM.md" rel="noopener" data-i18n="latam.doc.es">Panorama América Latina (ES)</a><a class="out" href="https://github.com/MrCl0wnLab/FraudNeuron" rel="noopener" data-i18n="latam.fraud">Fraud taxonomy: FraudNeuron</a></p>
+        <div id="latamBody"></div>
       </section>
 
       <section id="trends" class="view" role="tabpanel" aria-labelledby="tab-trends" tabindex="0">

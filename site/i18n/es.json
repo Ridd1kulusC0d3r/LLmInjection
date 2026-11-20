@@ -425,5 +425,18 @@
  "tm.frameworks": "Marcos",
  "tm.fw": "Marco",
  "tm.scope": "Alcance",
- "tm.use": "Cómo se usa aquí"
+ "tm.use": "Cómo se usa aquí",
+ "tab.latam": "Brasil y LATAM",
+ "latam.eyebrow": "Vista regional",
+ "latam.title": "Brasil y América Latina",
+ "latam.sub": "Actores, campañas e incidentes etiquetados con un país latinoamericano, o cuyo informe nombra la región, más las campañas de esos actores. El contenido de los registros sigue en inglés, como lo dicen las fuentes.",
+ "latam.countries": "Por país",
+ "latam.techniques": "Técnicas vistas en la región",
+ "latam.actors": "Actores",
+ "latam.records": "Campañas e incidentes, del más reciente",
+ "latam.bytext": "nombrado en el texto del informe",
+ "latam.rule": "La relevancia regional solo aparece donde una fuente la afirma. En el resto rige la regla: impacto regional no demostrado en las fuentes consultadas.",
+ "latam.doc.pt": "Panorama Brasil y América Latina (PT)",
+ "latam.doc.es": "Panorama América Latina (ES)",
+ "latam.fraud": "Taxonomía de fraude: FraudNeuron"
 }

@@ -139,7 +139,7 @@ function renderHunting(){
   const tele=[...new Set(rows.flatMap(r=>r.n.data.telemetry||[]))].sort();
   if(sel&&sel.options.length!==tele.length+1){sel.innerHTML=`<option value="">${esc(t("hunt.tele.all"))}</option>`+tele.map(x=>`<option>${esc(x)}</option>`).join("");sel.value=cur;sel.onchange=renderHunting}
   const shown=rows.filter(r=>!cur||(r.n.data.telemetry||[]).includes(cur));
-  box.innerHTML=`<p class="note" style="margin:0 0 14px">${esc(t("hunt.count",{n:nf(shown.length)}))}</p><div class="hunts">${shown.map((r,i)=>`<div class="hunt" data-id="${esc(r.n.id)}"><div class="hunt-h"><span class="rank">${i+1}</span><span class="id">${esc(r.n.id)} · ${esc(r.n.data.severity||"")}</span><span class="trend${r.best===3?" rising":""}">${esc(r.best===3?t("hunt.wild"):r.best===2?t("hunt.vuln"):t("hunt.research"))}</span></div><h3>${esc(r.n.data.hypothesis||r.n.label)}</h3><p class="note">${esc(r.n.label)}</p><div class="tele">${(r.n.data.telemetry||[]).map(x=>`<span>${esc(x)}</span>`).join("")}</div><div class="hunt-f">${r.techs.map(chipLink).join(" ")}<span class="id">${esc(t("hunt.evidence",{n:r.evidence}))}</span></div></div>`).join("")}</div>`;
+  box.innerHTML=`<p class="note" style="margin:0 0 14px">${esc(t("hunt.count",{n:nf(shown.length)}))}</p><div class="hunts">${shown.map((r,i)=>`<div class="hunt" data-id="${esc(r.n.id)}"><div class="hunt-h"><span class="rank">${i+1}</span><span class="id">${esc(r.n.id)} · ${esc(r.n.data.severity||"")}</span><span class="trend${r.best===3?" rising":""}">${esc(r.best===3?t("hunt.wild"):r.best===2?t("hunt.vuln"):t("hunt.research"))}</span></div><h3>${esc(r.n.data.hypothesis||r.n.label)}</h3><p class="note">${esc(r.n.label)}</p><div class="tele">${(r.n.data.telemetry||[]).map(x=>`<span>${esc(x)}</span>`).join("")}</div><div class="hunt-f">${r.techs.map(chipLink).join(" ")}<span class="id">${esc(t("hunt.evidence",{n:r.evidence}))}</span>${(SP.reports?.rule_files?.[r.n.id]||[]).map(p=>`<a class="out tchip" href="${REPO_BLOB}${esc(p)}" rel="noopener">${esc(p.split("/")[1])}</a>`).join("")}</div></div>`).join("")}</div>`;
 }
 
 /* ---------- detection engineering: every detection, its rule files and its tests */
@@ -160,4 +160,30 @@ function renderThreatModel(){
   box.innerHTML=`<div class="tm">${cats.map(c=>{const ts=techs.filter(n=>n.data.category===c);return`<div class="dp"><h3>${esc(tOr("cat."+c,c.replace(/-/g," ")))}</h3><ul class="plain">${ts.map(n=>{const cs=ctl(n.id);return`<li><a href="#" data-id="${esc(n.id)}">${esc(n.label)}</a> <span class="id">${esc(matLabel(n.data.maturity))}</span><div class="tm-ctl">${cs.length?cs.map(id=>`<a href="#" class="tchip ctl" data-id="${esc(id)}">${esc(nodeById(id)?.label||id)}</a>`).join(""):`<span class="gap">${esc(t("tm.noctl"))}</span>`}</div></li>`}).join("")}</ul></div>`}).join("")}</div>
     <h3 class="sect">${esc(t("tm.frameworks"))}</h3><div class="table-wrap" tabindex="0"><table class="tbl"><thead><tr><th>${esc(t("tm.fw"))}</th><th>${esc(t("tm.scope"))}</th><th>${esc(t("tm.use"))}</th></tr></thead><tbody>${fw.map(n=>`<tr><td>${n.data.url?`<a class="out" href="${esc(n.data.url)}" rel="noopener"><b>${esc(n.label)}</b></a>`:`<b>${esc(n.label)}</b>`}</td><td>${esc(n.data.scope||"")}</td><td>${esc(n.data.use||"")}</td></tr>`).join("")}</tbody></table></div>`;
 }
-function renderSpaces(){renderReports();renderTrends();renderTTPs();renderHunting();renderDetection();renderThreatModel()}
+function renderSpaces(){renderReports();renderTrends();renderTTPs();renderHunting();renderDetection();renderThreatModel();renderLatam()}
+
+/* ---------- Brazil and Latin America: records tagged with a LATAM region, or whose report text names the region */
+const LATAM=new Set(["BR","MX","AR","CL","CO","PE","EC","BO","CR","UY","PY","VE","GT","HN","SV","NI","PA","DO","CU","LATAM"]);
+const LATAM_TEXT=/Brazil|Brasil|Latin America|LATAM|\bPix\b|Mexic|Argentin|Colombia|Chile|Peru/i;
+function latamRecords(){
+  const ev=state.graph.nodes.filter(n=>["actor","campaign","incident"].includes(n.type));
+  const hit=new Map();
+  ev.forEach(n=>{const r=(n.data.regions||[]).filter(x=>LATAM.has(x));if(r.length||LATAM_TEXT.test(n.label+" "+(n.data.summary||"")))hit.set(n.id,{n,regions:r,byText:!r.length})});
+  /* campaigns of a LATAM actor count too */
+  [...hit.values()].filter(x=>x.n.type==="actor").forEach(a=>edgesOf(a.n.id,"conducts").forEach(e=>{const c=nodeById(other(e,a.n.id));if(c&&!hit.has(c.id))hit.set(c.id,{n:c,regions:a.regions,byText:false,via:a.n.id})}));
+  return[...hit.values()];
+}
+function renderLatam(){
+  const box=$("#latamBody");if(!box)return;
+  const rows=latamRecords(),by=ty=>rows.filter(r=>r.n.type===ty);
+  const ctry={};rows.forEach(r=>(r.regions.length?r.regions:["–"]).forEach(c=>ctry[c]=(ctry[c]||0)+1));const cm=Math.max(1,...Object.values(ctry));
+  const tech={};rows.filter(r=>r.n.type!=="actor").forEach(r=>edgesOf(r.n.id).filter(e=>["uses","demonstrates"].includes(e.relationship)).forEach(e=>{const id=other(e,r.n.id);tech[id]=(tech[id]||0)+1}));
+  const tm=Math.max(1,...Object.values(tech));
+  const dated=rows.filter(r=>r.n.type!=="actor").map(r=>({...r,date:nodeDate(r.n)})).sort((a,b)=>b.date.localeCompare(a.date));
+  box.innerHTML=`<div class="strip" style="grid-template-columns:repeat(4,1fr)">${stat(nf(by("actor").length),t("stat.actors"))}${stat(nf(by("campaign").length),t("stat.campaigns"))}${stat(nf(by("incident").length),t("stat.incidents"))}${stat(nf(Object.keys(tech).length),t("stat.techniques"))}</div>
+    <div class="dash two"><div class="dp"><h3>${esc(t("latam.countries"))}</h3><div class="bars sm">${Object.entries(ctry).sort((a,b)=>b[1]-a[1]).map(([c,n])=>`<div class="bar"><span>${esc(c==="–"?t("latam.bytext"):c)}</span><i style="width:${(100*n/cm).toFixed(1)}%"></i><b>${n}</b></div>`).join("")}</div></div>
+    <div class="dp"><h3>${esc(t("latam.techniques"))}</h3><div class="bars sm">${Object.entries(tech).sort((a,b)=>b[1]-a[1]).slice(0,10).map(([id,n])=>`<div class="bar" data-id="${esc(id)}"><span>${esc(id.slice(5))} · ${esc(nodeById(id)?.label||id)}</span><i style="width:${(100*n/tm).toFixed(1)}%"></i><b>${n}</b></div>`).join("")}</div></div></div>
+    <h3 class="sect">${esc(t("latam.actors"))}</h3><div class="rcards">${by("actor").map(r=>`<button type="button" class="rcard" data-id="${esc(r.n.id)}"><span class="eyebrow">${esc((r.regions.join(" · "))||t("latam.bytext"))}</span><b>${esc(r.n.label)}</b><span class="id">${esc(String(r.n.data.nexus||"").split(" (")[0])} · ${esc((r.n.data.ai_role||[]).join(", "))}</span>${conf(r.n.data.confidence)}</button>`).join("")}</div>
+    <h3 class="sect">${esc(t("latam.records"))}</h3><div class="tl">${dated.map(({n,date,regions,byText})=>`<div class="d">${esc(date||t("common.undated"))}</div><div class="e" data-id="${esc(n.id)}"><div class="kind">${esc(typeLabel(n.type))} · ${esc(regions.join(", ")||(byText?t("latam.bytext"):""))}</div><h3>${esc(n.label)}</h3><p>${esc(n.data.summary||"")}</p><div style="margin-top:6px">${conf(n.data.confidence)}</div></div>`).join("")}</div>
+    <p class="note" style="margin-top:18px">${esc(t("latam.rule"))}</p>`;
+}
