@@ -88,5 +88,5 @@ No control is linked yet.
 
 ## 7. Go deeper (links only)
 
-- **Tools and projects:** [NVIDIA/garak](https://github.com/NVIDIA/garak), [microsoft/PyRIT](https://github.com/microsoft/PyRIT), [promptfoo/promptfoo](https://github.com/promptfoo/promptfoo), [msoedov/agentic_security](https://github.com/msoedov/agentic_security), [Tencent/AI-Infra-Guard](https://github.com/Tencent/AI-Infra-Guard), [praetorian-inc/augustus](https://github.com/praetorian-inc/augustus)
+- **Tools and projects:** [NVIDIA/garak](https://github.com/NVIDIA/garak), [microsoft/PyRIT](https://github.com/microsoft/PyRIT), [promptfoo/promptfoo](https://github.com/promptfoo/promptfoo), [msoedov/agentic_security](https://github.com/msoedov/agentic_security), [Tencent/AI-Infra-Guard](https://github.com/Tencent/AI-Infra-Guard), [praetorian-inc/augustus](https://github.com/praetorian-inc/augustus), [crazywifi/Redteam_LLM_Injection_payloads](https://github.com/crazywifi/Redteam_LLM_Injection_payloads)
 - **Live record:** [this technique in the Explorer](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=LLMI-T013)

@@ -62,6 +62,7 @@
       <button class="tab" role="tab" id="tab-reports" aria-controls="reports" aria-selected="false" tabindex="-1" data-tab="reports" data-i18n="tab.reports">Reports</button>
       <span class="tabgrp" role="presentation" data-i18n="tabgrp.defense">Defense</span>
       <button class="tab" role="tab" id="tab-coverage" aria-controls="coverage" aria-selected="false" tabindex="-1" data-tab="coverage" data-i18n="tab.coverage">Coverage</button>
+      <button class="tab" role="tab" id="tab-matrix" aria-controls="matrix" aria-selected="false" tabindex="-1" data-tab="matrix" data-i18n="tab.matrix">Defense matrix</button>
       <button class="tab" role="tab" id="tab-hunting" aria-controls="hunting" aria-selected="false" tabindex="-1" data-tab="hunting" data-i18n="tab.hunting">Hunting</button>
       <button class="tab" role="tab" id="tab-detection" aria-controls="detection" aria-selected="false" tabindex="-1" data-tab="detection" data-i18n="tab.detection">Detection</button>
       <button class="tab" role="tab" id="tab-threatmodel" aria-controls="threatmodel" aria-selected="false" tabindex="-1" data-tab="threatmodel" data-i18n="tab.threatmodel">Threat modeling</button>
@@ -143,6 +144,7 @@
         </div>
         <p class="note" style="margin:0 0 10px"><span data-i18n="graph.hint">Drag to pan, scroll with Ctrl or use the buttons to zoom.</span> <span data-i18n="graph.kbd">Keyboard: arrow keys move between nodes, Space selects, Enter opens a record.</span></p>
         <div class="gwrap"><svg id="graphSvg" role="group" data-i18n-attr="aria-label:graph.aria" aria-label="LLMInjection intelligence graph"></svg><aside id="graphSel" class="gsel" aria-live="polite" hidden></aside></div>
+        <section id="reportsPanel" class="rpanel" aria-live="polite" hidden></section>
       </section>
 
       <section id="coverage" class="view" role="tabpanel" aria-labelledby="tab-coverage" tabindex="0">
@@ -232,6 +234,14 @@
         <h2 data-i18n="ttp.title"></h2>
         <p class="sub" data-i18n="ttp.sub"></p>
         <div id="ttpBody"></div>
+      </section>
+
+      <section id="matrix" class="view" role="tabpanel" aria-labelledby="tab-matrix" tabindex="0">
+        <div class="eyebrow" data-i18n="mx.eyebrow"></div>
+        <h2 data-i18n="mx.title"></h2>
+        <p class="sub" data-i18n="mx.sub"></p>
+        <div class="controls" style="padding-top:0"><label class="ctl"><span data-i18n="mx.show.label">Show</span><select id="matrixShow"></select></label></div>
+        <div id="matrixBody"></div>
       </section>
 
       <section id="hunting" class="view" role="tabpanel" aria-labelledby="tab-hunting" tabindex="0">

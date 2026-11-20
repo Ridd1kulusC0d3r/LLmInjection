@@ -88,6 +88,9 @@ def build(out: Path) -> None:
         if det.startswith("DET-"):
             by_det.setdefault(det, []).append(rel)
     assert set(by_det) >= set(rule_files())
+    vault = json.loads((ROOT / "references" / "crosswalks" / "payload-vault.json").read_text(encoding="utf-8"))
+    (out / "payload-vault.json").write_text(json.dumps({k: vault[k] for k in ("meta", "summary", "categories")}, ensure_ascii=False),
+                                            encoding="utf-8")
     (out / "reports.json").write_text(json.dumps({"repo": REPO, "reports": report_index(platform), "rule_files": by_det},
                                                  ensure_ascii=False, indent=1), encoding="utf-8")
     shutil.copytree(dist / "navigator", out / "navigator")

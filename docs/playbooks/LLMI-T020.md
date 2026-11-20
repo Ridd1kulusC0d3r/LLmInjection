@@ -110,5 +110,5 @@ The runner has plan and mock adapters only: it does not call your system. To run
 
 ## 7. Go deeper (links only)
 
-- **Tools and projects:** [guardrails-ai/guardrails](https://github.com/guardrails-ai/guardrails), [AISecurityConsortium/AIGoat](https://github.com/AISecurityConsortium/AIGoat), [byt3n33dl3/thc-BloodMiami](https://github.com/byt3n33dl3/thc-BloodMiami), [shreyansbhatt/rag-prompt-injection-echoleak](https://github.com/shreyansbhatt/rag-prompt-injection-echoleak)
+- **Tools and projects:** [guardrails-ai/guardrails](https://github.com/guardrails-ai/guardrails), [AISecurityConsortium/AIGoat](https://github.com/AISecurityConsortium/AIGoat), [byt3n33dl3/thc-BloodMiami](https://github.com/byt3n33dl3/thc-BloodMiami), [crazywifi/Redteam_LLM_Injection_payloads](https://github.com/crazywifi/Redteam_LLM_Injection_payloads), [shreyansbhatt/rag-prompt-injection-echoleak](https://github.com/shreyansbhatt/rag-prompt-injection-echoleak)
 - **Live record:** [this technique in the Explorer](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=LLMI-T020)

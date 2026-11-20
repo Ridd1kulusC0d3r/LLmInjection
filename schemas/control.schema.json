@@ -7,6 +7,7 @@
     "type",
     "name",
     "category",
+    "layer",
     "description",
     "source_ids"
   ],
@@ -23,6 +24,14 @@
     },
     "category": {
       "type": "string"
+    },
+    "layer": {
+      "enum": [
+        "guardrail",
+        "hardening",
+        "monitoring"
+      ],
+      "description": "guardrail: checks each input, output or action at run time; hardening: architecture or configuration that removes the opportunity; monitoring: records or tripwires that show it happened"
     },
     "description": {
       "type": "string",

@@ -2204,11 +2204,20 @@
     "status": "listed",
     "techniques": [
       "LLMI-T001",
-      "LLMI-T002"
+      "LLMI-T002",
+      "LLMI-T003",
+      "LLMI-T004",
+      "LLMI-T007",
+      "LLMI-T008",
+      "LLMI-T009",
+      "LLMI-T013",
+      "LLMI-T020",
+      "LLMI-T021",
+      "LLMI-T025"
     ],
-    "summary": "Large categorised prompt-injection corpus; use only as test inspiration, never as intelligence.",
+    "summary": "LLM Red Team Payload Vault: about 1,200 prompt-injection payloads in single-page HTML libraries (core, enterprise, financial, medical), sorted by OWASP LLM Top 10 categories and merged from Promptfoo, Garak, PyRIT and research compendiums. No licence declared: link only; references/crosswalks/payload-vault.json holds IDs, labels and hashes, not payload text.",
     "source_grade": "D",
-    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
+    "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git; re-read on 2026-11-20 and cross-referenced by scripts/payload_vault_check.py",
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",

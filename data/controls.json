@@ -4,6 +4,7 @@
     "type": "control",
     "name": "External Policy Enforcement",
     "category": "authorization",
+    "layer": "guardrail",
     "description": "Enforce security policy outside the model so generated text cannot self-authorize privileged actions.",
     "source_ids": [
       "SRC-OWASP-ACS"
@@ -14,6 +15,7 @@
     "type": "control",
     "name": "Instruction / Data Separation",
     "category": "prompt-context",
+    "layer": "hardening",
     "description": "Preserve provenance and trust boundaries between control instructions and untrusted content.",
     "source_ids": [
       "SRC-OWASP-LLM-2026"
@@ -24,6 +26,7 @@
     "type": "control",
     "name": "Tool Capability Allowlist",
     "category": "agentic",
+    "layer": "hardening",
     "description": "Allow only explicitly approved tools and capabilities for an agent identity.",
     "source_ids": [
       "SRC-OWASP-AGENTIC-2026",
@@ -35,6 +38,7 @@
     "type": "control",
     "name": "Contextual Tool Authorization",
     "category": "authorization",
+    "layer": "guardrail",
     "description": "Evaluate identity, requested capability, resource and context before each tool action.",
     "source_ids": [
       "SRC-OWASP-ACS",
@@ -46,6 +50,7 @@
     "type": "control",
     "name": "Human Checkpoint for High-Impact Actions",
     "category": "agentic",
+    "layer": "guardrail",
     "description": "Require explicit approval before high-impact or irreversible actions.",
     "source_ids": [
       "SRC-OWASP-AGENTIC-2026"
@@ -56,6 +61,7 @@
     "type": "control",
     "name": "Memory Provenance and Scope",
     "category": "memory",
+    "layer": "hardening",
     "description": "Track source, scope, expiry and review state for persistent agent memory.",
     "source_ids": [
       "SRC-OWASP-AGENTIC-2026"
@@ -66,6 +72,7 @@
     "type": "control",
     "name": "RAG Source Provenance",
     "category": "rag",
+    "layer": "hardening",
     "description": "Record trust and origin of retrieved documents and preserve that metadata through inference.",
     "source_ids": [
       "SRC-GOOGLE-SAIF"
@@ -76,6 +83,7 @@
     "type": "control",
     "name": "Untrusted Output Handling",
     "category": "application",
+    "layer": "guardrail",
     "description": "Encode, validate or sanitize model output before downstream interpretation or rendering.",
     "source_ids": [
       "SRC-OWASP-LLM-2026"
@@ -86,6 +94,7 @@
     "type": "control",
     "name": "AI Egress Policy",
     "category": "network",
+    "layer": "guardrail",
     "description": "Restrict and monitor network access to model providers and AI gateways by workload identity.",
     "source_ids": [
       "SRC-GOOGLE-SAIF"
@@ -96,6 +105,7 @@
     "type": "control",
     "name": "AI Asset and Service Inventory",
     "category": "governance",
+    "layer": "hardening",
     "description": "Maintain inventory of models, runtimes, agents, gateways, MCP servers and external providers.",
     "source_ids": [
       "SRC-CSA-AICM-11"
@@ -106,6 +116,7 @@
     "type": "control",
     "name": "Artifact Digest Pinning",
     "category": "supply-chain",
+    "layer": "hardening",
     "description": "Pin model, package and deployment artifacts to approved immutable digests.",
     "source_ids": [
       "SRC-CYCLONEDX-MLBOM",
@@ -117,6 +128,7 @@
     "type": "control",
     "name": "Artifact Signature Verification",
     "category": "supply-chain",
+    "layer": "hardening",
     "description": "Verify trusted publisher identity and artifact integrity before promotion or execution.",
     "source_ids": [
       "SRC-CYCLONEDX-MLBOM",
@@ -128,6 +140,7 @@
     "type": "control",
     "name": "Dependency Admission Policy",
     "category": "supply-chain",
+    "layer": "hardening",
     "description": "Require provenance, approved registries and review before dependencies suggested by automation are installed.",
     "source_ids": [
       "SRC-CYCLONEDX-MLBOM",
@@ -139,6 +152,7 @@
     "type": "control",
     "name": "MCP Token Audience Validation",
     "category": "mcp",
+    "layer": "hardening",
     "description": "Validate that access tokens were issued for the MCP server receiving them; prohibit token passthrough.",
     "source_ids": [
       "SRC-MCP-SECURITY-2026"
@@ -149,6 +163,7 @@
     "type": "control",
     "name": "MCP Explicit User Consent",
     "category": "mcp",
+    "layer": "guardrail",
     "description": "Require clear user consent before connecting servers or invoking consequential tools.",
     "source_ids": [
       "SRC-MCP-SECURITY-2026"
@@ -159,6 +174,7 @@
     "type": "control",
     "name": "MCP State Handle Binding",
     "category": "mcp",
+    "layer": "hardening",
     "description": "Bind server-side state handles to verified identities and re-authorize every use.",
     "source_ids": [
       "SRC-MCP-SECURITY-2026"
@@ -169,6 +185,7 @@
     "type": "control",
     "name": "AI/ML Bill of Materials",
     "category": "supply-chain",
+    "layer": "hardening",
     "description": "Track models, datasets, configurations and dependencies using AI/ML-BOM-capable formats.",
     "source_ids": [
       "SRC-CYCLONEDX-MLBOM"
@@ -179,6 +196,7 @@
     "type": "control",
     "name": "Secret Isolation",
     "category": "identity",
+    "layer": "hardening",
     "description": "Keep model/provider credentials outside prompts and minimize which agents can access them.",
     "source_ids": [
       "SRC-CSA-AICM-11"
@@ -189,6 +207,7 @@
     "type": "control",
     "name": "Agent Action and Resource Budgets",
     "category": "availability",
+    "layer": "guardrail",
     "description": "Apply hard limits to iterations, tool calls, tokens, time and cost.",
     "source_ids": [
       "SRC-OWASP-LLM-2026",
@@ -200,6 +219,7 @@
     "type": "control",
     "name": "Agent Decision and Action Telemetry",
     "category": "observability",
+    "layer": "monitoring",
     "description": "Log identity, plan step, capability request, authorization result and side effect for agent actions.",
     "source_ids": [
       "SRC-OWASP-ACS"
@@ -210,6 +230,7 @@
     "type": "control",
     "name": "Input/Output Injection & Policy Classifier",
     "category": "prompt-context",
+    "layer": "guardrail",
     "description": "Run a dedicated classifier/guard model (and heuristics such as perplexity) on untrusted inputs and on model outputs/tool calls; log verdicts; never rely on it as sole control (defence-in-depth, measure false-positive/over-defence).",
     "source_ids": [
       "SRC-TLDRSEC-PI-DEFENSES"
@@ -220,6 +241,7 @@
     "type": "control",
     "name": "Privileged-Context Canary Tokens",
     "category": "observability",
+    "layer": "monitoring",
     "description": "Insert unique per-session canaries into system prompts/secret-bearing context and alert when they appear in output, tool arguments or egress (pairs with DET-AI-010).",
     "source_ids": [
       "SRC-TLDRSEC-PI-DEFENSES"
@@ -230,6 +252,7 @@
     "type": "control",
     "name": "Privileged / Quarantined LLM Separation",
     "category": "agentic",
+    "layer": "hardening",
     "description": "Planner model with tool access only sees trusted instructions; untrusted content is processed by a tool-less model returning schema-typed values that cannot alter control flow.",
     "source_ids": [
       "SRC-CAMEL",
@@ -241,6 +264,7 @@
     "type": "control",
     "name": "Data-Flow Provenance and Taint Policy",
     "category": "authorization",
+    "layer": "guardrail",
     "description": "Attach source/reader capability tags to all data, propagate through derivations, and deny side-effecting tool calls whose arguments depend on untrusted or non-shareable data unless an explicit policy allows it (default deny).",
     "source_ids": [
       "SRC-CAMEL",
@@ -252,6 +276,7 @@
     "type": "control",
     "name": "Task-Alignment Verification of Agent Actions",
     "category": "agentic",
+    "layer": "guardrail",
     "description": "Verify each planned tool call contributes to the user-stated goal (Task Shield) or remains stable when untrusted context is masked/re-executed (MELON) or cross-checked by an independent model.",
     "source_ids": [
       "SRC-TLDRSEC-PI-DEFENSES"
@@ -262,6 +287,7 @@
     "type": "control",
     "name": "Untrusted Input Transformation and Spotlighting",
     "category": "prompt-context",
+    "layer": "guardrail",
     "description": "Mark/encode untrusted content (spotlighting, datamarking, random delimiters) and optionally paraphrase/retokenize/normalise (Unicode, invisible chars) before inference.",
     "source_ids": [
       "SRC-TLDRSEC-PI-DEFENSES"
@@ -272,6 +298,7 @@
     "type": "control",
     "name": "Typed / Templated Model Output",
     "category": "application",
+    "layer": "guardrail",
     "description": "Constrain model output to schemas/enums/templates validated by deterministic code before use (complements CTRL-OUTPUT-SANITIZATION).",
     "source_ids": [
       "SRC-TLDRSEC-PI-DEFENSES"
@@ -282,6 +309,7 @@
     "type": "control",
     "name": "Model Injection-Robustness Selection and Evaluation",
     "category": "governance",
+    "layer": "hardening",
     "description": "Select/finetune models with instruction-hierarchy or injection-resistant training and re-evaluate with adversarial suites (e.g., AgentDojo-style) on each model/version change.",
     "source_ids": [
       "SRC-AGENTDOJO",
@@ -293,6 +321,7 @@
     "type": "control",
     "name": "Tool Definition Pinning",
     "category": "mcp",
+    "layer": "hardening",
     "description": "Hash each approved tool's name, description and input schema; block or re-prompt for consent when any of them changes after approval.",
     "source_ids": [
       "SRC-MCP-SECURITY-2026",
@@ -304,6 +333,7 @@
     "type": "control",
     "name": "AI Service Exposure Management",
     "category": "infrastructure",
+    "layer": "hardening",
     "description": "Inventory model servers, agent builders, vector stores and MCP endpoints, require authentication on every one and scan the external perimeter for them.",
     "source_ids": [
       "SRC-MITRE-ATLAS-2026-09",
@@ -315,6 +345,7 @@
     "type": "control",
     "name": "Pre-filled Prompt and Memory Write Policy",
     "category": "memory",
+    "layer": "hardening",
     "description": "Treat prompts arriving through URL parameters as untrusted, show them to the user before sending, and require confirmation before any memory write they request.",
     "source_ids": [
       "SRC-MITRE-ATLAS-2026-09",
@@ -326,6 +357,7 @@
     "type": "control",
     "name": "Script and Unknown Binary Execution Policy",
     "category": "endpoint",
+    "layer": "hardening",
     "description": "Restrict execution of unsigned or unknown scripts and binaries from user-writable paths, so attacker tooling is stopped by behavior and provenance regardless of how it was written.",
     "source_ids": [
       "SRC-UNIT42-LATAM-AI"

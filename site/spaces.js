@@ -56,6 +56,7 @@ function md(text,base){
 /* ---------- reports */
 async function loadReports(){
   try{SP.reports=await fetch("reports.json").then(r=>r.ok?r.json():null)}catch(_){SP.reports=null}
+  try{SP.vault=await fetch("payload-vault.json").then(r=>r.ok?r.json():null)}catch(_){SP.vault=null}
 }
 const KIND_ORDER=["platform","landscape","trends","intel","dossier","intake","report","template"];
 function renderReports(){
@@ -121,7 +122,7 @@ function renderTTPs(){
   const techs=state.graph.nodes.filter(n=>n.type==="technique");
   const cats=[...new Set(techs.map(n=>n.data.category))];
   box.innerHTML=`<p class="links" style="margin:0 0 18px"><a class="out" href="navigator/atlas-coverage.layer.json" download>${esc(t("ttp.layer.atlas"))}</a><a class="out" href="navigator/attack-coverage.layer.json" download>${esc(t("ttp.layer.attack"))}</a><a class="out" href="https://mitre-atlas.github.io/atlas-navigator/" rel="noopener">${esc(t("ttp.navigator"))}</a></p>`+
-  cats.map(c=>`<h3 class="sect">${esc(tOr("cat."+c,c.replace(/-/g," ")))}</h3><div class="table-wrap" tabindex="0"><table class="tbl"><thead><tr><th>${esc(t("th.technique"))}</th><th>${esc(t("ttp.maturity"))}</th><th class="num">${esc(t("ttp.actors"))}</th><th class="num">${esc(t("ttp.evidence"))}</th><th>OWASP</th><th>MITRE ATLAS</th><th>${esc(t("ttp.playbook"))}</th></tr></thead><tbody>${techs.filter(n=>n.data.category===c).map(n=>{const r=cov.get(n.id)||{};return`<tr data-id="${esc(n.id)}"><td><span class="id">${esc(n.id)}</span><br><b>${esc(n.label)}</b></td><td>${esc(matLabel(n.data.maturity))}</td><td class="num">${(r.actors||[]).length}</td><td class="num">${(r.evidence||[]).length}</td><td class="id">${esc(ext(n,"OWASP").join(", ")||"–")}</td><td class="id">${esc(ext(n,"MITRE ATLAS").join(", ")||"–")}</td><td><a class="out" href="${REPO_BLOB}docs/playbooks/${esc(n.id)}.md" rel="noopener">${esc(t("ttp.open"))}</a></td></tr>`}).join("")}</tbody></table></div>`).join("");
+  cats.map(c=>`<h3 class="sect">${esc(tOr("cat."+c,c.replace(/-/g," ")))}</h3><div class="table-wrap" tabindex="0"><table class="tbl"><thead><tr><th>${esc(t("th.technique"))}</th><th>${esc(t("ttp.maturity"))}</th><th class="num">${esc(t("ttp.actors"))}</th><th class="num">${esc(t("ttp.evidence"))}</th><th>OWASP</th><th>MITRE ATLAS</th><th>${esc(t("ttp.playbook"))}</th></tr></thead><tbody>${techs.filter(n=>n.data.category===c).map(n=>{const r=cov.get(n.id)||{};return`<tr data-id="${esc(n.id)}"><td><span class="id">${esc(n.id)}</span><br><b>${esc(n.label)}</b></td><td>${esc(matLabel(n.data.maturity))}</td><td class="num">${(r.actors||[]).length}</td><td class="num">${(r.evidence||[]).length}${(r.evidence||[]).length?` <button type="button" class="rmore" data-explode="${esc(n.id)}">↗</button>`:""}</td><td class="id">${esc(ext(n,"OWASP").join(", ")||"–")}</td><td class="id">${esc(ext(n,"MITRE ATLAS").join(", ")||"–")}</td><td><a class="out" href="${REPO_BLOB}docs/playbooks/${esc(n.id)}.md" rel="noopener">${esc(t("ttp.open"))}</a></td></tr>`}).join("")}</tbody></table></div>`).join("");
 }
 
 /* ---------- threat hunting: detection hypotheses ranked by the evidence behind their techniques */
@@ -160,7 +161,7 @@ function renderThreatModel(){
   box.innerHTML=`<div class="tm">${cats.map(c=>{const ts=techs.filter(n=>n.data.category===c);return`<div class="dp"><h3>${esc(tOr("cat."+c,c.replace(/-/g," ")))}</h3><ul class="plain">${ts.map(n=>{const cs=ctl(n.id);return`<li><a href="#" data-id="${esc(n.id)}">${esc(n.label)}</a> <span class="id">${esc(matLabel(n.data.maturity))}</span><div class="tm-ctl">${cs.length?cs.map(id=>`<a href="#" class="tchip ctl" data-id="${esc(id)}">${esc(nodeById(id)?.label||id)}</a>`).join(""):`<span class="gap">${esc(t("tm.noctl"))}</span>`}</div></li>`}).join("")}</ul></div>`}).join("")}</div>
     <h3 class="sect">${esc(t("tm.frameworks"))}</h3><div class="table-wrap" tabindex="0"><table class="tbl"><thead><tr><th>${esc(t("tm.fw"))}</th><th>${esc(t("tm.scope"))}</th><th>${esc(t("tm.use"))}</th></tr></thead><tbody>${fw.map(n=>`<tr><td>${n.data.url?`<a class="out" href="${esc(n.data.url)}" rel="noopener"><b>${esc(n.label)}</b></a>`:`<b>${esc(n.label)}</b>`}</td><td>${esc(n.data.scope||"")}</td><td>${esc(n.data.use||"")}</td></tr>`).join("")}</tbody></table></div>`;
 }
-function renderSpaces(){renderReports();renderTrends();renderTTPs();renderHunting();renderDetection();renderThreatModel();renderLatam()}
+function renderSpaces(){renderMatrix();renderReports();renderTrends();renderTTPs();renderHunting();renderDetection();renderThreatModel();renderLatam()}
 
 /* ---------- Brazil and Latin America: records tagged with a LATAM region, or whose report text names the region */
 const LATAM=new Set(["BR","MX","AR","CL","CO","PE","EC","BO","CR","UY","PY","VE","GT","HN","SV","NI","PA","DO","CU","LATAM"]);
@@ -184,6 +185,80 @@ function renderLatam(){
     <div class="dash two"><div class="dp"><h3>${esc(t("latam.countries"))}</h3><div class="bars sm">${Object.entries(ctry).sort((a,b)=>b[1]-a[1]).map(([c,n])=>`<div class="bar"><span>${esc(c==="–"?t("latam.bytext"):c)}</span><i style="width:${(100*n/cm).toFixed(1)}%"></i><b>${n}</b></div>`).join("")}</div></div>
     <div class="dp"><h3>${esc(t("latam.techniques"))}</h3><div class="bars sm">${Object.entries(tech).sort((a,b)=>b[1]-a[1]).slice(0,10).map(([id,n])=>`<div class="bar" data-id="${esc(id)}"><span>${esc(id.slice(5))} · ${esc(nodeById(id)?.label||id)}</span><i style="width:${(100*n/tm).toFixed(1)}%"></i><b>${n}</b></div>`).join("")}</div></div></div>
     <h3 class="sect">${esc(t("latam.actors"))}</h3><div class="rcards">${by("actor").map(r=>`<button type="button" class="rcard" data-id="${esc(r.n.id)}"><span class="eyebrow">${esc((r.regions.join(" · "))||t("latam.bytext"))}</span><b>${esc(r.n.label)}</b><span class="id">${esc(String(r.n.data.nexus||"").split(" (")[0])} · ${esc((r.n.data.ai_role||[]).join(", "))}</span>${conf(r.n.data.confidence)}</button>`).join("")}</div>
-    <h3 class="sect">${esc(t("latam.records"))}</h3><div class="tl">${dated.map(({n,date,regions,byText})=>`<div class="d">${esc(date||t("common.undated"))}</div><div class="e" data-id="${esc(n.id)}"><div class="kind">${esc(typeLabel(n.type))} · ${esc(regions.join(", ")||(byText?t("latam.bytext"):""))}</div><h3>${esc(n.label)}</h3><p>${esc(n.data.summary||"")}</p><div style="margin-top:6px">${conf(n.data.confidence)}</div></div>`).join("")}</div>
+    <h3 class="sect">${esc(t("latam.records"))}</h3><div class="tl">${dated.map(({n,date,regions,byText})=>`<div class="d">${esc(date||t("common.undated"))}</div><div class="e" data-id="${esc(n.id)}"><div class="kind">${esc(typeLabel(n.type))} · ${esc(regions.join(", ")||(byText?t("latam.bytext"):""))}</div><h3>${esc(n.label)}</h3><p>${esc(n.data.summary||"")}</p><div style="margin-top:6px">${conf(n.data.confidence)}</div>${linksRow(n.id,3)}</div>`).join("")}</div>
     <p class="note" style="margin-top:18px">${esc(t("latam.rule"))}</p>`;
 }
+
+/* ---------- defense matrix: threat model x harness x guardrail x hardening, one row per technique */
+const HARNESS_CLASSES=new Set(["assessment-tool","benchmark","prompt-corpus","research-technique","lab-exercise"]);
+function matrixRows(){
+  const cov=new Map((state.cov?.techniques||[]).map(r=>[r.id,r])),eco=new Map(state.eco.map(e=>[e.id,e]));
+  const vault=SP.vault?.summary?.per_technique||{};
+  return state.graph.nodes.filter(n=>n.type==="technique").map(n=>{
+    const r=cov.get(n.id)||{},ctl=edgesOf(n.id,"mitigated-by").map(e=>nodeById(other(e,n.id))).filter(Boolean);
+    const tools=(r.tools||[]).map(id=>eco.get(id)).filter(Boolean);
+    return{n,r,tests:r.tests||[],harness:tools.filter(e=>HARNESS_CLASSES.has(e.evidence_class)),payloads:vault[n.id]||0,
+      guard:ctl.filter(c=>c.data.layer==="guardrail"),guardTools:tools.filter(e=>e.evidence_class==="defence-tool"),
+      hard:ctl.filter(c=>c.data.layer==="hardening"),mon:ctl.filter(c=>c.data.layer==="monitoring"),dets:r.detections||[]};
+  });
+}
+function renderMatrix(){
+  const box=$("#matrixBody");if(!box)return;
+  const rows=matrixRows(),show=$("#matrixShow")?.value||"";
+  const full=r=>(r.tests.length||r.harness.length||r.payloads)&&(r.guard.length||r.guardTools.length)&&r.hard.length;
+  const gaps={harness:r=>!r.tests.length&&!r.harness.length&&!r.payloads,guard:r=>!r.guard.length&&!r.guardTools.length,hard:r=>!r.hard.length};
+  const sel=$("#matrixShow");
+  if(sel&&!sel.options.length){sel.innerHTML=[["",t("mx.show.all")],["gaps",t("mx.show.gaps")],["harness",t("mx.show.harness")],["guard",t("mx.show.guard")],["hard",t("mx.show.hard")]].map(([v,l])=>`<option value="${v}">${esc(l)}</option>`).join("");sel.onchange=()=>{renderMatrix();afterRender()}}
+  const shown=rows.filter(r=>!show||(show==="gaps"?!full(r):gaps[show](r)));
+  const list=(xs,f)=>xs.length?xs.map(f).join(""):`<span class="gap">${esc(t("mx.none"))}</span>`;
+  const ctlChip=c=>`<a href="#" class="tchip ctl" data-id="${esc(c.id)}">${esc(c.label)}</a>`;
+  const ecoChip=e=>`<a class="out tchip ctl" href="${esc(e.url)}" rel="noopener">${esc(e.name)}</a>`;
+  const cats=[...new Set(shown.map(r=>r.n.data.category))];
+  box.innerHTML=`<div class="strip" style="grid-template-columns:repeat(4,1fr)">${stat(nf(rows.filter(full).length)+"/"+nf(rows.length),t("mx.full"))}${stat(nf(rows.filter(gaps.harness).length),t("mx.gap.harness"))}${stat(nf(rows.filter(gaps.guard).length),t("mx.gap.guard"))}${stat(nf(rows.filter(gaps.hard).length),t("mx.gap.hard"))}</div>`+
+  cats.map(c=>`<h3 class="sect">${esc(tOr("cat."+c,c.replace(/-/g," ")))}</h3><div class="table-wrap" tabindex="0"><table class="tbl dmx"><thead><tr><th>${esc(t("mx.col.tm"))}</th><th>${esc(t("mx.col.harness"))}</th><th>${esc(t("mx.col.guard"))}</th><th>${esc(t("mx.col.hard"))}</th></tr></thead><tbody>${shown.filter(r=>r.n.data.category===c).map(r=>`<tr>
+    <td><a href="#" data-id="${esc(r.n.id)}"><b>${esc(r.n.label)}</b></a><br><span class="id">${esc(r.n.id)} · ${esc(matLabel(r.n.data.maturity))}</span><br><span class="id">${esc(t("mx.evidence",{n:(r.r.evidence||[]).length,a:(r.r.actors||[]).length}))}</span>${(r.r.evidence||[]).length?` <button type="button" class="rmore" data-explode="${esc(r.n.id)}">${esc(t("rl.reports"))}</button>`:""}${r.dets.length?`<br><span class="id">${esc(t("mx.dets",{n:r.dets.length}))}</span>`:""}${r.mon.map(ctlChip).join("")}</td>
+    <td>${r.tests.length?`<span class="id">${esc(t("mx.tests",{n:r.tests.length}))}: ${esc(r.tests.join(", "))}</span><br>`:""}${r.payloads?`<span class="id">${esc(t("mx.payloads",{n:nf(r.payloads)}))}</span><br>`:""}${r.harness.length?r.harness.slice(0,6).map(ecoChip).join(""):(r.tests.length||r.payloads?"":`<span class="gap">${esc(t("mx.none"))}</span>`)}${r.harness.length>6?`<span class="id"> +${r.harness.length-6}</span>`:""}</td>
+    <td>${list([...r.guard.map(ctlChip),...r.guardTools.slice(0,4).map(ecoChip)],x=>x)}</td>
+    <td>${list(r.hard,ctlChip)}</td></tr>`).join("")}</tbody></table></div>`).join("")+
+  (SP.vault?`<p class="note" style="margin-top:14px">${esc(t("mx.vault",{n:nf(SP.vault.summary.payloads),date:SP.vault.meta.read}))} <a class="out" href="${esc(SP.vault.meta.source)}" rel="noopener">Payload Vault</a></p>`:"");
+}
+
+/* ---------- report links: every place that names a record can open the report behind it */
+function reportLinks(id,{deep=false}={}){
+  const n=nodeById(id);if(!n)return[];
+  const out=new Map(),add=(url,label,grade,publisher,date)=>{if(url&&/^https:\/\//.test(url)&&!out.has(url))out.set(url,{url,label:label||url,grade:grade||"",publisher:publisher||"",date:date||""})};
+  const fromNode=x=>{
+    if(x.type==="source")add(x.data.url,x.label,x.data.grade,x.data.publisher,x.data.published);
+    (x.data.source_ids||[]).forEach(s=>{const sn=nodeById(s);if(sn)add(sn.data.url,sn.label,sn.data.grade,sn.data.publisher,sn.data.published)});
+    (Array.isArray(x.data.sources)?x.data.sources:[]).forEach(s=>s&&add(s.url,s.title,s.grade,s.publisher));
+  };
+  fromNode(n);
+  if(deep||["actor","technique","tool"].includes(n.type))
+    edgesOf(id).forEach(e=>{const o=nodeById(other(e,id));if(o&&["campaign","incident","vulnerability","actor","source"].includes(o.type))fromNode(o)});
+  return[...out.values()].sort((a,b)=>(a.grade||"Z").localeCompare(b.grade||"Z")||String(b.date).localeCompare(String(a.date)));
+}
+const linkChip=l=>`<a class="rlink" href="${esc(l.url)}" target="_blank" rel="noopener" title="${esc(l.publisher)}${l.date?" · "+esc(l.date):""}"><b>${esc(l.grade||"·")}</b>${esc(l.label.length>70?l.label.slice(0,69)+"…":l.label)}<span aria-hidden="true">↗</span></a>`;
+function linksRow(id,max=4){
+  const ls=reportLinks(id);if(!ls.length)return"";
+  return`<div class="rlinks">${ls.slice(0,max).map(linkChip).join("")}${ls.length>max?`<button type="button" class="rmore" data-explode="${esc(id)}">${esc(t("rl.more",{n:ls.length-max}))}</button>`:""}</div>`;
+}
+/* the exploded list: all reports behind a set of records, grouped by publisher, copyable */
+function explodeReports(ids,title){
+  const box=$("#reportsPanel");if(!box)return;
+  const all=new Map();ids.forEach(id=>reportLinks(id,{deep:true}).forEach(l=>{if(!all.has(l.url))all.set(l.url,{...l,via:new Set()});all.get(l.url).via.add(id)}));
+  const ls=[...all.values()],q=norm($("#rlFilter")?.value||"");
+  const shown=ls.filter(l=>!q||norm(l.label+" "+l.publisher).includes(q));
+  const pubs={};shown.forEach(l=>(pubs[l.publisher||"–"]=pubs[l.publisher||"–"]||[]).push(l));
+  box.hidden=false;
+  box.innerHTML=`<div class="rp-head"><div><span class="eyebrow">${esc(t("rl.eyebrow"))}</span><h3>${esc(title)}</h3><p class="note">${esc(t("rl.count",{n:nf(ls.length),p:nf(Object.keys(pubs).length)}))}</p></div><div class="rp-tools"><input id="rlFilter" type="search" placeholder="${esc(t("rl.filter"))}" value="${esc($("#rlFilter")?.value||"")}"><button type="button" class="export" data-copy-links>${esc(t("rl.copy"))}</button><button type="button" class="export" data-close-links>${esc(t("rep.close"))}</button></div></div>
+    <div class="rp-body">${Object.entries(pubs).sort((a,b)=>b[1].length-a[1].length).map(([p,xs])=>`<div class="rp-pub"><h4>${esc(p)} · ${xs.length}</h4>${xs.map(l=>`<div class="rp-row">${linkChip(l)}<span class="id">${esc([...l.via].slice(0,3).map(v=>nodeById(v)?.label||v).join(" · "))}${l.via.size>3?" +"+(l.via.size-3):""}</span></div>`).join("")}</div>`).join("")||`<p class="empty">${esc(t("common.nothing"))}</p>`}</div>`;
+  const f=$("#rlFilter");f.oninput=()=>{const pos=f.selectionStart;explodeReports(ids,title);const g=$("#rlFilter");g.focus();g.setSelectionRange(pos,pos)};
+  box.querySelector("[data-close-links]").onclick=()=>{box.hidden=true;patchHash({reports:null})};
+  box.querySelector("[data-copy-links]").onclick=e=>{const md=shown.map(l=>`- [${l.label}](${l.url}) — ${l.publisher}${l.grade?" (grade "+l.grade+")":""}`).join("\n");
+    navigator.clipboard?.writeText(md).then(()=>{e.target.textContent=t("rl.copied")},()=>{})};
+}
+document.addEventListener("click",e=>{const b=e.target.closest("[data-explode]");if(!b)return;e.preventDefault();e.stopPropagation();
+  const id=b.dataset.explode,ids=id==="@focus"?[...egoIds(G.focus)]:[id],n=nodeById(id==="@focus"?G.focus:id);
+  if(!$("#graph").classList.contains("active"))showTab("graph",true);
+  explodeReports(ids,t("rl.title",{name:n?.label||id}));patchHash({reports:id});
+  requestAnimationFrame(()=>$("#reportsPanel").scrollIntoView({behavior:"smooth",block:"start"}))},true);
