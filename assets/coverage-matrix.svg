@@ -236,7 +236,7 @@
 <line x1="40" x2="1364" y1="476" y2="476" stroke="#e0dacb"/>
 <text x="40" y="493" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T015  </tspan>Agentic Attack Orchestration</text>
 <rect x="461.0" y="479" width="34" height="20" fill="#7c2406"/>
-<text x="478.0" y="494" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">53</text>
+<text x="478.0" y="494" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">59</text>
 <rect x="553.0" y="479" width="34" height="20" fill="#e9b394"/>
 <text x="570.0" y="494" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
 <rect x="645.0" y="479" width="34" height="20" fill="#7c2406"/>
@@ -252,7 +252,7 @@
 <line x1="40" x2="1364" y1="502" y2="502" stroke="#e0dacb"/>
 <text x="40" y="519" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T016  </tspan>AI Gateway Credential Compromise</text>
 <rect x="461.0" y="505" width="34" height="20" fill="#7c2406"/>
-<text x="478.0" y="520" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">8</text>
+<text x="478.0" y="520" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">9</text>
 <rect x="553.0" y="505" width="34" height="20" fill="#e9b394"/>
 <text x="570.0" y="520" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
 <rect x="645.0" y="505" width="34" height="20" fill="#7c2406"/>
@@ -436,7 +436,7 @@
 <line x1="40" x2="1364" y1="814" y2="814" stroke="#e0dacb"/>
 <text x="40" y="831" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T028  </tspan>AI-Assisted Tooling Development</text>
 <rect x="461.0" y="817" width="34" height="20" fill="#7c2406"/>
-<text x="478.0" y="832" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">71</text>
+<text x="478.0" y="832" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">72</text>
 <rect x="553.0" y="817" width="34" height="20" fill="#e9b394"/>
 <text x="570.0" y="832" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
 <rect x="645.0" y="817" width="34" height="20" fill="#e9b394"/>

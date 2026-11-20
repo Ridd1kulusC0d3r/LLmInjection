@@ -6296,5 +6296,182 @@
     "evidence_sources": [
       "SRC-SPECTRUM-SWARM-CHASING"
     ]
+  },
+  {
+    "id": "REL-570",
+    "type": "relationship",
+    "source": "INCIDENT-BARRACUDA-ARTEX-CLOUD-2026-11",
+    "relationship": "uses-tool",
+    "target": "TOOL-ARTEX",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-BARRACUDA-ARTEX-2026-11"
+    ]
+  },
+  {
+    "id": "REL-571",
+    "type": "relationship",
+    "source": "INCIDENT-BARRACUDA-ARTEX-CLOUD-2026-11",
+    "relationship": "demonstrates",
+    "target": "LLMI-T015",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-BARRACUDA-ARTEX-2026-11"
+    ]
+  },
+  {
+    "id": "REL-572",
+    "type": "relationship",
+    "source": "INCIDENT-BARRACUDA-ARTEX-CLOUD-2026-11",
+    "relationship": "demonstrates",
+    "target": "LLMI-T016",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-BARRACUDA-ARTEX-2026-11"
+    ]
+  },
+  {
+    "id": "REL-573",
+    "type": "relationship",
+    "source": "INCIDENT-EC-ARTEX-2026-11",
+    "relationship": "uses-tool",
+    "target": "TOOL-ARTEX",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-CSN-EC-ARTEX-2026-11"
+    ]
+  },
+  {
+    "id": "REL-574",
+    "type": "relationship",
+    "source": "INCIDENT-EC-ARTEX-2026-11",
+    "relationship": "demonstrates",
+    "target": "LLMI-T015",
+    "confidence": "low",
+    "evidence_sources": [
+      "SRC-CSN-EC-ARTEX-2026-11"
+    ]
+  },
+  {
+    "id": "REL-575",
+    "type": "relationship",
+    "source": "INCIDENT-DIVD-AGENTIC-ZAMMAD-2026-09",
+    "relationship": "demonstrates",
+    "target": "LLMI-T015",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-DIVD-WHEN-NOT-IF",
+      "SRC-SYSDIG-DIVD-ZAMMAD"
+    ]
+  },
+  {
+    "id": "REL-576",
+    "type": "relationship",
+    "source": "VULN-ZAMMAD-CVE-2026-102489",
+    "relationship": "observed-in",
+    "target": "INCIDENT-DIVD-AGENTIC-ZAMMAD-2026-09",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-DIVD-CASE-2026-00015"
+    ]
+  },
+  {
+    "id": "REL-577",
+    "type": "relationship",
+    "source": "VULN-ZAMMAD-CVE-2026-102490",
+    "relationship": "observed-in",
+    "target": "INCIDENT-DIVD-AGENTIC-ZAMMAD-2026-09",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-DIVD-CASE-2026-00015"
+    ]
+  },
+  {
+    "id": "REL-578",
+    "type": "relationship",
+    "source": "VULN-ZAMMAD-CVE-2026-102489",
+    "relationship": "demonstrates",
+    "target": "LLMI-T015",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-SYSDIG-DIVD-ZAMMAD"
+    ]
+  },
+  {
+    "id": "REL-579",
+    "type": "relationship",
+    "source": "VULN-ZAMMAD-CVE-2026-102490",
+    "relationship": "demonstrates",
+    "target": "LLMI-T015",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-SYSDIG-DIVD-ZAMMAD"
+    ]
+  },
+  {
+    "id": "REL-580",
+    "type": "relationship",
+    "source": "VULN-BEYONDTRUST-CVE-2026-1731",
+    "relationship": "demonstrates",
+    "target": "LLMI-T028",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-GTIG-VULN-AI-ERA-2026-09"
+    ]
+  },
+  {
+    "id": "REL-581",
+    "type": "relationship",
+    "source": "CAMPAIGN-CRAFTY-FALCON-BFSI-INDIA",
+    "relationship": "uses-tool",
+    "target": "TOOL-ARTEX",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-CERTIN-CIAD-2026-0058"
+    ]
+  },
+  {
+    "id": "REL-582",
+    "type": "relationship",
+    "source": "CAMPAIGN-CRAFTY-FALCON-BFSI-INDIA",
+    "relationship": "uses-tool",
+    "target": "TOOL-PENTAGI",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-CERTIN-CIAD-2026-0058"
+    ]
+  },
+  {
+    "id": "REL-583",
+    "type": "relationship",
+    "source": "CAMPAIGN-CRAFTY-FALCON-BFSI-INDIA",
+    "relationship": "uses-tool",
+    "target": "TOOL-CAIRN",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-CERTIN-CIAD-2026-0058"
+    ]
+  },
+  {
+    "id": "REL-584",
+    "type": "relationship",
+    "source": "CAMPAIGN-CRAFTY-FALCON-BFSI-INDIA",
+    "relationship": "uses-tool",
+    "target": "TOOL-CYBERSTRIKEAI",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-CERTIN-CIAD-2026-0058"
+    ]
+  },
+  {
+    "id": "REL-585",
+    "type": "relationship",
+    "source": "CAMPAIGN-CRAFTY-FALCON-BFSI-INDIA",
+    "relationship": "uses",
+    "target": "LLMI-T015",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-CERTIN-CIAD-2026-0058"
+    ]
   }
 ]

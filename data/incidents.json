@@ -948,5 +948,50 @@
     "source_ids": [
       "SRC-WORKOS-BULLETIN-2026-10-30"
     ]
+  },
+  {
+    "id": "INCIDENT-BARRACUDA-ARTEX-CLOUD-2026-11",
+    "type": "incident",
+    "name": "Barracuda cloud intrusion through a vendor's unretired access key, run with ARTEX",
+    "kind": "intrusion",
+    "status": "observed",
+    "confidence": "confirmed",
+    "date": "2026-11-01",
+    "summary": "Barracuda says an attacker used a cloud access key it had given an AI vendor and never retired; the key was taken when the vendor's development environment was compromised in October. Over about 44 hours (1-2 November) the attacker chained secrets across about 10 cloud accounts, a data-analytics system, source-code tokens and Kubernetes, printed CI secrets into build logs, hunted cryptocurrency material and left a container mounting the host file system; a new admin identity was blocked. Probe names, machine-style labels and credential-hunting routines match ARTEX, which tells how, not who.",
+    "source_ids": [
+      "SRC-BARRACUDA-ARTEX-2026-11"
+    ],
+    "reported": "2026-11-11"
+  },
+  {
+    "id": "INCIDENT-EC-ARTEX-2026-11",
+    "type": "incident",
+    "name": "European Commission staff systems disrupted; CERT-EU found ARTEX in use",
+    "kind": "intrusion",
+    "status": "reported",
+    "confidence": "medium",
+    "date": "2026-11",
+    "summary": "POLITICO reported on 2026-11-19 that CERT-EU detected the use of ARTEX in an attack on the European Commission earlier in November; staff applications (Sysper, MyPMO, translation services) were taken offline as a precaution. The report names no actor or flaw, does not say whether ARTEX was used to break in or only to scan, and no data exfiltration was confirmed. Known here through a relay of the POLITICO report.",
+    "source_ids": [
+      "SRC-CSN-EC-ARTEX-2026-11"
+    ],
+    "reported": "2026-11-19"
+  },
+  {
+    "id": "INCIDENT-DIVD-AGENTIC-ZAMMAD-2026-09",
+    "type": "incident",
+    "name": "Agentic attacker breaches DIVD through a Zammad zero-day chain",
+    "kind": "intrusion",
+    "status": "observed",
+    "confidence": "confirmed",
+    "date": "2026-09-21",
+    "summary": "The Dutch Institute for Vulnerability Disclosure reported that an attack whose modus operandi indicates agentic AI breached its infrastructure, and later confirmed data exfiltration. The attacker chained a Zammad session hijack to code execution (CVE-2026-102489) with a local privilege escalation in the packaged builds (CVE-2026-102490). Zammad says it had a report on the first flaw in August, so whether the agent found the flaws or only used them is not established. Both CVEs entered CISA KEV on 2026-10-02.",
+    "source_ids": [
+      "SRC-DIVD-WHEN-NOT-IF",
+      "SRC-DIVD-CASE-2026-00015",
+      "SRC-ZAMMAD-ADV-2026-102489",
+      "SRC-SYSDIG-DIVD-ZAMMAD"
+    ],
+    "reported": "2026-09-25"
   }
 ]

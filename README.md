@@ -122,11 +122,11 @@ New [source registry and ingestion guidance](docs/AI-INTELLIGENCE-SOURCES.md), [
 
 | Actors | Campaigns | Incidents | Vulnerabilities | Techniques | Sources |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| **75** | **99** | **69** | **46** | **28** | **198** |
+| **75** | **100** | **72** | **49** | **28** | **208** |
 
 | Test cases | Detections | Controls | Frameworks | Model families | Relationships | Ecosystem repos |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| **40** | **58** | **32** | **21** | **12** | **569** | **127** |
+| **40** | **58** | **32** | **21** | **12** | **585** | **127** |
 
 <!-- gen:stats:end -->
 
@@ -611,6 +611,7 @@ Real-world reporting is intentionally placed on the front page because AI securi
 | **ARTEX-using actor targeting IT and software vendors (overlaps Storm-0940)** | 2026-10 | 2026-10-22 |  | high | Wiz observed throughout October 2026 an actor using ARTEX tooling against multiple IT and software vendors, probing Okta, Entra ID and… |
 | **AntiFox (ARTEX fork) intrusions against IIS applications and AWS** | 2026-11 | 2026-11-10 |  | medium | Per the Cloud Security Alliance's reading of Arctic Wolf Labs (2026-11-10), self-hosted, Chinese-language AntiFox instances on Alibaba… |
 | **AI-built clones of Brazilian government sites collecting Pix payments** | 2025 | 2025-08-05 | BR | high | Zscaler ThreatLabz found phishing replicas of a Brazilian State Department of Traffic and the Ministry of Education built with the… |
+| **CRAFTY FALCON AI-driven attacks on Indian banking, fintech and payment entities** | 2026-10 | 2026-11-04 |  | confirmed | CERT-In (CIAD-2026-0058, critical, 2026-11-04) describes an active campaign by a threat actor it tracks as CRAFTY FALCON against NBFCs… |
 
 <!-- gen:campaigns:end -->
 
@@ -689,6 +690,9 @@ Real-world reporting is intentionally placed on the front page because AI securi
 | **Exploitation attempts against LiteLLM's guardrail tester (CVE-2026-40217)** | exploitation | observed | high |
 | **Indirect prompt injection through EDR telemetry against AI-assisted SOCs (Viaconnect research)** | research-artifact | research | medium |
 | **ARTEX agent escapes a researcher's sandbox and reaches WorkOS's internal sales tool** | unintended-access | observed | confirmed |
+| **Barracuda cloud intrusion through a vendor's unretired access key, run with ARTEX** | intrusion | observed | confirmed |
+| **European Commission staff systems disrupted; CERT-EU found ARTEX in use** | intrusion | reported | medium |
+| **Agentic attacker breaches DIVD through a Zammad zero-day chain** | intrusion | observed | confirmed |
 
 <!-- gen:incidents:end -->
 
@@ -943,6 +947,9 @@ An optional **MCP v2 read-only server** exposes search, object lookup, graph tra
 | Cursor creates new workspace dotfiles without approval (CurXecute) | `CVE-2025-54135`<br>`GHSA-4cxx-hrm3-49rm` | prompt-injection-to-rce | high | 2025-08-05 |
 | CrewAI CodeInterpreter falls back to SandboxPython when Docker is… | `CVE-2026-2275` | sandbox-escape | critical | 2026-03-30 |
 | CrewAI does not re-check Docker at runtime before falling back to the… | `CVE-2026-2287` | sandbox-escape | critical | 2026-03-30 |
+| BeyondTrust Remote Support and PRA pre-authentication OS command… | `CVE-2026-1731` | command-injection | critical | 2026-02-06 |
+| Zammad session hijack leading to code execution | `CVE-2026-102489` | session-hijack | critical | 2026-09-30 |
+| Zammad packaged builds allow local escalation to root | `CVE-2026-102490` | privilege-escalation | high | 2026-09-30 |
 
 <!-- gen:vulnerabilities:end -->
 
@@ -1239,9 +1246,9 @@ Every intelligence item should answer:
 
 | Grade | Class | Sources |
 |---|---|---|
-| **A** | Primary or authoritative | 172 |
-| **B** | Strong secondary | 12 |
-| **C** | Reputable press | 9 |
+| **A** | Primary or authoritative | 180 |
+| **B** | Strong secondary | 13 |
+| **C** | Reputable press | 10 |
 | **D** | Community | 5 |
 | **E** | Unsupported | 0 |
 

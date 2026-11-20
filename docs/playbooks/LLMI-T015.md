@@ -13,7 +13,7 @@
 
 | Layer | Status |
 |---|---|
-| Evidence | 53 record(s), 33 publisher(s), best grade A, newest 2026 |
+| Evidence | 59 record(s), 42 publisher(s), best grade A, newest 2026 |
 | Safe tests | 1 |
 | Detections | 4 rule file(s), 5 specification(s) |
 | Controls | 2 |
@@ -36,6 +36,7 @@ What the repository links to it:
 - 2026-10 · [Chinese-speaking ARTEX multi-model operator targeting 19 markets](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-ARTEX-MULTI-MODEL-OPERATOR) (campaign, high)
 - 2026-05 · [Aurora ransomware intrusions driven through Cursor Agent](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-AURORA-CURSOR-AGENT) (campaign, confirmed)
 - 2026-04 · [bandcampro Gemini CLI-driven C2 botnet build and fraud operations](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-BANDCAMPRO-GEMINI-CLI-C2) (campaign, confirmed)
+- 2026-11 · [CRAFTY FALCON AI-driven attacks on Indian banking, fintech and payment entities](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-CRAFTY-FALCON-BFSI-INDIA) (campaign, confirmed)
 - 2026-08 · [CrowdStrike Threat Actor 1: Claude Code dual-agent harness against Argentine healthcare](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-CROWDSTRIKE-TA1-ARGENTINA-HEALTHCARE) (campaign, confirmed)
 - 2026-08 · [CrowdStrike Threat Actor 2: Chinese-speaking operator's Claude pentesting harnesses](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-CROWDSTRIKE-TA2-CHINESE-SPEAKING-HARNESS) (campaign, confirmed)
 - 2026-08 · [CrowdStrike Threat Actor 3: Indonesian-speaking operator using public Claude Code skills](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-CROWDSTRIKE-TA3-INDONESIAN-SKILLS) (campaign, confirmed)
@@ -64,8 +65,11 @@ What the repository links to it:
 - 2026-07-08 · [Autonomous OpenAI Evaluation Agents Compromise Hugging Face Infrastructure (AML.CS0068)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-ATLAS-CS0068) (atlas-incident, high)
 - 2026-05-07 · [Threat Actor Uses a DeepSeek-Powered Hermes Agent in Langflow and n8n Exploitation Attempts (AML.CS0070)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-ATLAS-CS0070) (atlas-incident, high)
 - 2026-07-01 · [Multi-Agent Framework Compromises Taiwanese Government Systems (AML.CS0071)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-ATLAS-CS0071) (atlas-incident, high)
+- 2026-11-01 · [Barracuda cloud intrusion through a vendor's unretired access key, run with ARTEX](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-BARRACUDA-ARTEX-CLOUD-2026-11) (intrusion, confirmed)
 - 2026 · [CLOSEDQUORUM autonomous AI C2 research case](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-CLOSEDQUORUM) (research-artifact, confirmed)
+- 2026-09-21 · [Agentic attacker breaches DIVD through a Zammad zero-day chain](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-DIVD-AGENTIC-ZAMMAD-2026-09) (intrusion, confirmed)
 - 2026-07 · [Multi-agent AI framework (Hermes/OpenClaw) used to compromise Asian government entities](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-DREAM-MULTI-AGENT-ASIA-GOV) (intrusion, high)
+- 2026-11 · [European Commission staff systems disrupted; CERT-EU found ARTEX in use](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-EC-ARTEX-2026-11) (intrusion, medium)
 - 2026-11 · [Eye Security incident response to an ARTEX-driven intrusion](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-EYE-ARTEX-IR) (intrusion, confirmed)
 - 2026-09 · [Autonomous AI agents used to compromise online retailers and plant card skimmers](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-GAMBIT-AI-AGENT-RETAIL-SKIMMING) (intrusion, confirmed)
 - 2026 · [Multi-agent credential harvesting from compromised cloud in under six hours](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-GTIG-AGENTIC-CREDENTIAL-HARVESTING) (intrusion, confirmed)
@@ -80,6 +84,8 @@ What the repository links to it:
 - 2026 · [Claude Code CLI run as autonomous lateral-movement agent against a Thai organisation](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-TREND-CLAUDE-CODE-AGENT-THAILAND) (intrusion, confirmed)
 - 2026 · [Unit 42 investigation of a sub-10-hour AI-agent-assisted intrusion](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-UNIT42-AI-ASSISTED-INTRUSION) (intrusion, high)
 - 2026-10-30 · [ARTEX agent escapes a researcher's sandbox and reaches WorkOS's internal sales tool](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-WORKOS-ARTEX-SANDBOX-ESCAPE) (unintended-access, confirmed)
+- 2026-09-30 · [Zammad session hijack leading to code execution](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-ZAMMAD-CVE-2026-102489) (session-hijack, confirmed)
+- 2026-09-30 · [Zammad packaged builds allow local escalation to root](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-ZAMMAD-CVE-2026-102490) (privilege-escalation, confirmed)
 
 Actors whose campaigns use it: Aurora, bandcampro, CyberXero, GTG-10007, GTG-1002, GTG-20006, GTG-2002, GTG-50014, GTG-50020, GTG-50029, JADEPUFFER, knaithe, Onyx Sleet, Pearl Sleet, STAC6994, Storm-0940, Storm-3358, VAPOR PANDA. Vendor labels are kept as published and never merged without evidence.
 

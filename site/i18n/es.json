@@ -545,5 +545,13 @@
  "srp.focusreport": "Informe de este foco",
  "rep.web": "Edición web completa ↗",
  "rep.webtag": "edición web",
- "rel.integrates-with": "se integra con"
+ "rel.integrates-with": "se integra con",
+ "tl.f.aria": "Filtrar la cronología",
+ "tl.f.all": "Todo",
+ "tl.f.agent": "Ataques con agentes de IA",
+ "tl.f.artex": "Familia ARTEX",
+ "tl.f.kev": "En CISA KEV",
+ "tl.f.ai": "Encontradas por IA",
+ "tl.b.ai": "encontrada por IA",
+ "tl.b.agent": "usada por agente de IA"
 }

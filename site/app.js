@@ -1,4 +1,4 @@
-const state={tech:"",grade:"",graph:null,landscape:null,diff:null,eco:[],cov:null,translations:null,search:"",type:"",confidence:"",region:"",ecoClass:"",ecoSection:""};
+const state={tlf:"",tech:"",grade:"",graph:null,landscape:null,diff:null,eco:[],cov:null,translations:null,search:"",type:"",confidence:"",region:"",ecoClass:"",ecoSection:""};
 const TYPE_ORDER=["actor","campaign","incident","vulnerability","tool","technique","test-case","detection","control","framework","model","source"];
 const CONF_ORDER=["confirmed","high","medium","low","unverified"];
 const MATURITY_ORDER=["observed-in-the-wild","disclosed-vulnerability","research-demonstrated","no-linked-evidence"];
@@ -127,6 +127,7 @@ function applyHash(){
   applyCoverageHash(p);
   if(p.has("focus")||G.focus){const f=p.get("focus")||null;if(f!==G.focus){G.focus=f;G.view=null;renderGraph();if(f)requestAnimationFrame(()=>graphSelect(f))}}
   if(p.has("pick")||G.pick.length){const k=(p.get("pick")||"").split(",").filter(Boolean);if(k.join()!==G.pick.join()){G.pick=k;renderPick()}}
+  if(p.has("tlf")||state.tlf){const x=p.get("tlf")||"";if(x!==(state.tlf||"")){state.tlf=x;renderTimeline()}}
   if(p.has("tech")||state.tech){const x=p.get("tech")||"";if(x!==state.tech){state.tech=x;const s=$("#tlTech");if(s)s.value=x;renderTimeline()}}
   if(p.get("reports")){const r=p.get("reports");requestAnimationFrame(()=>explodeReports(r==="@focus"&&G.focus?[...egoIds(G.focus)]:[r],t("rl.title",{name:nodeById(r==="@focus"?G.focus:r)?.label||r})))}
   if(p.get("report")&&p.get("report")!==SP.report){SP.report=p.get("report");renderReports()}
@@ -326,17 +327,31 @@ function techStats(){
   });
 }
 const nodeDate=n=>String(n.data.reported||n.data.first_seen||n.data.date||n.data.published||"");
+/* chronology filters: KEV entries, flaws found by AI agents, attacks run with agents, ARTEX-family use */
+const AGENT_TOOLS=new Set(["TOOL-ARTEX","TOOL-ANTIFOX","TOOL-PENTAGI","TOOL-CAIRN","TOOL-CYBERSTRIKEAI","TOOL-HEXSTRIKE-AI","TOOL-STRIX","TOOL-SCOPESENTRY"]);
+const ARTEX_FAMILY=new Set(["TOOL-ARTEX","TOOL-ANTIFOX","TOOL-SCOPESENTRY"]);
+function tlTools(id){return state.graph.edges.filter(e=>e.source===id&&e.relationship==="uses-tool").map(e=>e.target)}
+function tlFacets(n){
+  const tools=tlTools(n.id),d=n.data;
+  const agent=tools.some(x=>AGENT_TOOLS.has(x))||d.ai_relation==="exploited-by-ai-agent"||state.graph.edges.some(e=>e.source===n.id&&e.target==="LLMI-T015"&&["demonstrates","uses"].includes(e.relationship));
+  return{tools,kev:!!d.kev_added,ai:d.ai_relation==="ai-discovered",agent,artex:tools.some(x=>ARTEX_FAMILY.has(x))};
+}
 function timelineItems(){
   const linked=state.tech?new Set(state.graph.edges.filter(e=>e.source===state.tech||e.target===state.tech).map(e=>e.source===state.tech?e.target:e.source)):null;
-  return visibleNodes().filter(n=>["campaign","incident","vulnerability"].includes(n.type)&&(!linked||linked.has(n.id))).map(n=>({n,date:nodeDate(n)||t("common.undated")})).sort((a,b)=>b.date.localeCompare(a.date))}
+  return visibleNodes().filter(n=>["campaign","incident","vulnerability"].includes(n.type)&&(!linked||linked.has(n.id))).map(n=>({n,f:tlFacets(n),date:nodeDate(n)||t("common.undated")}))
+    .filter(x=>!state.tlf||x.f[state.tlf]).sort((a,b)=>b.date.localeCompare(a.date))}
 function renderTimeline(){
   const sel=$("#tlTech");
   if(sel){const techs=state.graph.nodes.filter(n=>n.type==="technique");sel.innerHTML=`<option value="">${esc(t("tl.tech.all"))}</option>`+techs.map(n=>`<option value="${esc(n.id)}">${esc(n.id.slice(5))} · ${esc(n.label)}</option>`).join("");sel.value=state.tech||"";
     sel.onchange=e=>{state.tech=e.target.value;patchHash({tech:state.tech||null});renderTimeline();afterRender()}}
+  const all=visibleNodes().filter(n=>["campaign","incident","vulnerability"].includes(n.type)).map(tlFacets),cnt=k=>all.filter(f=>f[k]).length;
+  const fbox=$("#tlFilters");if(fbox){fbox.innerHTML=[["",t("tl.f.all"),all.length],["agent",t("tl.f.agent"),cnt("agent")],["artex",t("tl.f.artex"),cnt("artex")],["kev",t("tl.f.kev"),cnt("kev")],["ai",t("tl.f.ai"),cnt("ai")]].map(([k,l,c])=>`<button type="button" class="chip${(state.tlf||"")===k?" on":""}" data-tlf="${k}" aria-pressed="${(state.tlf||"")===k}">${esc(l)}<b>${nf(c)}</b></button>`).join("");
+    fbox.onclick=e=>{const b=e.target.closest("[data-tlf]");if(!b)return;state.tlf=b.dataset.tlf;patchHash({tlf:state.tlf||null});renderTimeline();afterRender()}}
   const items=timelineItems(),byM={};items.forEach(({date})=>{const m=/^\d{4}-\d{2}/.test(date)?date.slice(0,7):"";if(m)byM[m]=(byM[m]||0)+1});
   const ms=Object.keys(byM).sort(),mx=Math.max(1,...Object.values(byM));
   $("#tlHist").innerHTML=ms.length?`<div class="mchart sm" role="img" aria-label="${esc(t("tl.hist.aria"))}">${ms.map(m=>`<div class="mcol"><div class="mstack"><i style="height:${(100*byM[m]/mx).toFixed(1)}%;background:var(--seq-3)"></i></div><b>${byM[m]}</b><span>${esc(m.slice(2))}</span></div>`).join("")}</div><p class="note">${esc(t("tl.count",{n:nf(items.length)}))}</p>`:"";
-  $("#timelineList").innerHTML=timelineItems().map(({n,date})=>`<div class="d">${esc(date)}</div><div class="e" data-id="${esc(n.id)}"><div class="kind">${esc(typeLabel(n.type))}${(n.data.regions||[]).length?" · "+esc(n.data.regions.join(", ")):""}</div><h3>${esc(n.label)}</h3><p>${esc(n.data.summary||"")}</p><div style="margin-top:6px">${conf(n.data.confidence)}</div>${linksRow(n.id,3)}</div>`).join("")||`<p class="empty">${esc(t("common.nothing"))}</p>`;
+  const badges=(n,f)=>[f.kev?`<span class="tlb kev" title="CISA KEV">KEV ${esc(n.data.kev_added)}</span>`:"",f.ai?`<span class="tlb ai">${esc(t("tl.b.ai"))}</span>`:"",n.data.ai_relation==="exploited-by-ai-agent"?`<span class="tlb agent">${esc(t("tl.b.agent"))}</span>`:"",...f.tools.map(x=>`<span class="tlb tool">${esc(state.graph.nodes.find(y=>y.id===x)?.label||x)}</span>`)].join("");
+  $("#timelineList").innerHTML=items.map(({n,f,date})=>`<div class="d">${esc(date)}</div><div class="e" data-id="${esc(n.id)}"><div class="kind">${esc(typeLabel(n.type))}${(n.data.regions||[]).length?" · "+esc(n.data.regions.join(", ")):""}${badges(n,f)?` <span class="tlbs">${badges(n,f)}</span>`:""}</div><h3>${esc(n.label)}</h3><p>${esc(n.data.summary||"")}</p><div style="margin-top:6px">${conf(n.data.confidence)}</div>${linksRow(n.id,3)}</div>`).join("")||`<p class="empty">${esc(t("common.nothing"))}</p>`;
 }
 function renderSources(){
   $("#sourceList").innerHTML=visibleNodes().filter(n=>n.type==="source"&&(!state.grade||n.data.grade===state.grade)).map(n=>`<div class="it" data-id="${esc(n.id)}"><div class="grade" aria-label="${esc(grade(n.data.grade))}">${esc(n.data.grade)}</div><div><h3>${esc(n.label)}</h3><p>${esc(n.data.publisher||"")} · ${esc(n.data.role||"")}${n.data.published?" · "+esc(n.data.published):""} · <a class="rlink-inline" href="${esc(n.data.url)}" target="_blank" rel="noopener">${esc(t("rl.open"))} ↗</a></p></div></div>`).join("")||`<p class="empty">${esc(t("common.nothing"))}</p>`;

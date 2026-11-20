@@ -1318,5 +1318,19 @@
     "source_ids": [
       "SRC-ZSCALER-BR-GOV-GENAI-PHISHING"
     ]
+  },
+  {
+    "id": "CAMPAIGN-CRAFTY-FALCON-BFSI-INDIA",
+    "type": "campaign",
+    "name": "CRAFTY FALCON AI-driven attacks on Indian banking, fintech and payment entities",
+    "confidence": "confirmed",
+    "first_seen": "2026-10",
+    "last_seen": "2026-11",
+    "summary": "CERT-In (CIAD-2026-0058, critical, 2026-11-04) describes an active campaign by a threat actor it tracks as CRAFTY FALCON against NBFCs, fintechs, payment aggregators and crypto platforms, using ARTEX, PentAGI, Cairn and CyberStrikeAI. The actor reverse-engineers application code, calls payment and disbursement APIs from the victims' own allow-listed infrastructure, tests with micro-value transfers, moves funds to mule accounts and tampers with logs and endpoint tools. Entities that had already remediated were re-targeted.",
+    "source_ids": [
+      "SRC-CERTIN-CIAD-2026-0058",
+      "SRC-THN-CERTIN-CRAFTY-FALCON"
+    ],
+    "reported": "2026-11-04"
   }
 ]

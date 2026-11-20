@@ -2,6 +2,25 @@
 
 This changelog records material changes to attribution, confidence, external mappings and structured intelligence. Ordinary prose edits do not belong here.
 
+## 2026-11-20 — ARTEX incidents with named victims; vulnerabilities found or exploited by AI agents
+
+### Added
+
+- Incidents: `INCIDENT-BARRACUDA-ARTEX-CLOUD-2026-11` (Barracuda's own write-up, grade A), `INCIDENT-EC-ARTEX-2026-11` (European Commission; known through a relay of POLITICO, grade C, confidence medium) and `INCIDENT-DIVD-AGENTIC-ZAMMAD-2026-09` (DIVD, DIVD CSIRT and Zammad advisories).
+- Campaign `CAMPAIGN-CRAFTY-FALCON-BFSI-INDIA` from CERT-In CIAD-2026-0058, using ARTEX, PentAGI, Cairn and CyberStrikeAI.
+- Vulnerabilities with a new optional `ai_relation` field:
+  - `VULN-BEYONDTRUST-CVE-2026-1731`: `ai-discovered`, found by an AI research agent per GTIG; exploited within four days.
+  - `VULN-ZAMMAD-CVE-2026-102489` and `-102490`: `exploited-by-ai-agent`.
+- New optional `kev_added` field, filled from the KEV feed for every KEV record.
+- Sources: GTIG "Vulnerability discovery and exploitation trends in the AI era" (2026-09-30), Barracuda, DIVD, Zammad, Sysdig and NVD records.
+- Explorer chronology: filters for attacks run with AI agents, the ARTEX family, CISA KEV and flaws found by AI, plus badges on each record.
+- 2026 report v1.1: 16 new chronology rows (ARTEX cases, DIVD, BeyondTrust) and a new subsection on vulnerabilities found by AI.
+
+### Confidence notes
+
+- Whether the DIVD agent found the Zammad flaws or only used them is not established; Zammad had a report on CVE-2026-102489 in August.
+- The KEV chart in the report counts only `ai-software` records, so AI-discovered flaws in other products do not inflate it.
+
 ## 2026-11-20 — Spectrum census of offensive AI consoles; ScopeSentry fork wired to ARTEX
 
 ### Added
