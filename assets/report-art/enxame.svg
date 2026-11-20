@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="t"><title id="t">O Enxame: agentes ofensivos em paralelo (ARTEX)</title>
+<defs><radialGradient id="g" cx="50%" cy="45%" r="60%"><stop offset="0" stop-color="#f0885a"/><stop offset="1" stop-color="#b43c0e"/></radialGradient></defs>
+<g fill="none" stroke="#15140f" stroke-width="2" opacity=".25"><path d="M200 200 L70 90 M200 200 L330 80 M200 200 L350 260 M200 200 L60 300 M200 200 L210 360 M200 200 L120 40"/></g>
+<g><circle cx="200" cy="200" r="92" fill="url(#g)"/><circle cx="200" cy="200" r="92" fill="none" stroke="#15140f" stroke-width="5"/>
+<path d="M118 170 q82 -70 164 0" fill="#15140f"/><circle cx="165" cy="198" r="22" fill="#f3f0e8" stroke="#15140f" stroke-width="5"/><circle cx="235" cy="198" r="22" fill="#f3f0e8" stroke="#15140f" stroke-width="5"/>
+<circle cx="170" cy="202" r="9" fill="#15140f"/><circle cx="240" cy="202" r="9" fill="#15140f"/>
+<path d="M160 248 l12 -12 12 12 12 -12 12 12 12 -12 12 12 12 -12" fill="none" stroke="#15140f" stroke-width="5" stroke-linejoin="round"/></g>
+<g stroke="#15140f" stroke-width="4">
+<circle cx="70" cy="90" r="24" fill="#f3f0e8"/><circle cx="70" cy="92" r="8" fill="#15140f"/>
+<circle cx="330" cy="80" r="20" fill="#f0885a"/><circle cx="330" cy="82" r="7" fill="#15140f"/>
+<circle cx="350" cy="260" r="26" fill="#f3f0e8"/><circle cx="352" cy="262" r="9" fill="#15140f"/>
+<circle cx="60" cy="300" r="18" fill="#f0885a"/><circle cx="62" cy="302" r="6" fill="#15140f"/>
+<circle cx="210" cy="360" r="16" fill="#f3f0e8"/><circle cx="211" cy="361" r="6" fill="#15140f"/>
+<circle cx="120" cy="40" r="14" fill="#f0885a"/><circle cx="121" cy="41" r="5" fill="#15140f"/></g>
+</svg>

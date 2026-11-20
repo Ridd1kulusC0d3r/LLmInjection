@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="t"><title id="t">O Rastreador: reconhecimento e engenharia social com IA</title>
+<g fill="none" stroke="#f0885a" stroke-width="3" opacity=".7"><circle cx="200" cy="200" r="170"/><circle cx="200" cy="200" r="130"/><circle cx="200" cy="200" r="90"/></g>
+<path d="M200 200 L340 110" stroke="#b43c0e" stroke-width="6"/>
+<circle cx="200" cy="200" r="70" fill="#15140f"/>
+<circle cx="200" cy="200" r="38" fill="#f3f0e8"/><circle cx="210" cy="194" r="18" fill="#b43c0e"/><circle cx="214" cy="190" r="6" fill="#15140f"/>
+<g fill="#15140f"><path d="M150 140 l-30 -40 12 -4z"/><path d="M250 140 l30 -40 -12 -4z"/><path d="M140 250 l-40 30 -4 -12z"/><path d="M260 250 l40 30 4 -12z"/></g>
+<g fill="#f3f0e8" stroke="#15140f" stroke-width="3"><circle cx="340" cy="110" r="10"/><circle cx="90" cy="280" r="7"/><circle cx="300" cy="320" r="7"/></g>
+</svg>

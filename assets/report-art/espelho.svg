@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="t"><title id="t">O Espelho: destilação e extração de modelos</title>
+<ellipse cx="200" cy="200" rx="120" ry="150" fill="#1f6f8b" stroke="#15140f" stroke-width="6"/>
+<ellipse cx="200" cy="200" rx="92" ry="120" fill="#f3f0e8" stroke="#15140f" stroke-width="4"/>
+<path d="M200 80 v240" stroke="#15140f" stroke-width="3" stroke-dasharray="6 6"/>
+<circle cx="160" cy="180" r="22" fill="#15140f"/><circle cx="240" cy="180" r="22" fill="#15140f" opacity=".35"/>
+<circle cx="166" cy="174" r="7" fill="#f0885a"/><circle cx="246" cy="174" r="7" fill="#f0885a" opacity=".5"/>
+<path d="M150 250 q20 18 50 0" fill="none" stroke="#15140f" stroke-width="5" stroke-linecap="round"/><path d="M200 250 q30 18 50 0" fill="none" stroke="#15140f" stroke-width="5" stroke-linecap="round" opacity=".35"/>
+<g fill="#f0885a" stroke="#15140f" stroke-width="3"><rect x="40" y="60" width="26" height="26" rx="4"/><rect x="334" y="300" width="26" height="26" rx="4"/><rect x="330" y="70" width="18" height="18" rx="3"/></g>
+</svg>

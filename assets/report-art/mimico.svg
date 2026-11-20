@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="t"><title id="t">O Mímico: injeção de prompt que fala como dado</title>
+<path d="M70 90 h260 a30 30 0 0 1 30 30 v150 a30 30 0 0 1 -30 30 h-150 l-60 55 v-55 h-50 a30 30 0 0 1 -30 -30 v-150 a30 30 0 0 1 30 -30z" fill="#f3f0e8" stroke="#15140f" stroke-width="6"/>
+<path d="M110 220 q90 70 180 0 q-90 30 -180 0z" fill="#b43c0e" stroke="#15140f" stroke-width="5"/>
+<path d="M120 222 l14 18 14 -14 14 18 14 -16 14 18 14 -16 14 18 14 -14 14 16 14 -18" fill="#f3f0e8" stroke="#15140f" stroke-width="3" stroke-linejoin="round"/>
+<circle cx="150" cy="160" r="26" fill="#15140f"/><circle cx="250" cy="160" r="26" fill="#15140f"/>
+<circle cx="158" cy="152" r="8" fill="#f0885a"/><circle cx="258" cy="152" r="8" fill="#f0885a"/>
+<g font-family="monospace" font-size="15" font-weight="700" fill="#15140f" opacity=".55"><text x="96" y="122">ignore…</text><text x="250" y="122">{data}</text></g>
+</svg>
