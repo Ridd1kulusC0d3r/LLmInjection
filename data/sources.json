@@ -2207,5 +2207,93 @@
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102490",
     "published": "2026-09-30",
     "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-ANTHROPIC-GLASSWING",
+    "type": "source",
+    "name": "Project Glasswing: securing critical software with Claude Mythos Preview",
+    "publisher": "Anthropic",
+    "grade": "A",
+    "role": "research-report",
+    "url": "https://www.anthropic.com/project/glasswing",
+    "published": "2026-04-07",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-ANTHROPIC-MYTHOS-PREVIEW",
+    "type": "source",
+    "name": "Claude Mythos Preview: assessing cybersecurity capabilities",
+    "publisher": "Anthropic Frontier Red Team",
+    "grade": "A",
+    "role": "research-report",
+    "url": "https://red.anthropic.com/2026/mythos-preview/",
+    "published": "2026-04-07",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-MOZILLA-ANTHROPIC-REDTEAM",
+    "type": "source",
+    "name": "Hardening Firefox with Anthropic's Red Team",
+    "publisher": "Mozilla",
+    "grade": "A",
+    "role": "security-advisory",
+    "url": "https://blog.mozilla.org/en/firefox/hardening-firefox-anthropic-red-team/",
+    "published": "2026-03-06",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-CURL-MYTHOS",
+    "type": "source",
+    "name": "Mythos finds a curl vulnerability",
+    "publisher": "Daniel Stenberg (curl maintainer)",
+    "grade": "A",
+    "role": "vulnerability-research",
+    "url": "https://daniel.haxx.se/blog/2026/05/11/mythos-finds-a-curl-vulnerability/",
+    "published": "2026-05-11",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-VULNCHECK-ANTHROPIC-CVES",
+    "type": "source",
+    "name": "Tracking CVEs Attributed to Anthropic Researchers and Project Glasswing",
+    "publisher": "VulnCheck",
+    "grade": "B",
+    "role": "vulnerability-research",
+    "url": "https://www.vulncheck.com/blog/anthropic-glasswing-cves",
+    "published": "2026-04-15",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-VULNCHECK-AI-CVE-WAVE",
+    "type": "source",
+    "name": "The First CVE Wave: Signs That AI-Assisted Vulnerability Discovery Is Reshaping Disclosure Volumes",
+    "publisher": "VulnCheck",
+    "grade": "B",
+    "role": "vulnerability-research",
+    "url": "https://www.vulncheck.com/blog/ai-assisted-vulnerability-discovery",
+    "published": "2026-05-14",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-DEPTHFIRST-FFMPEG-21",
+    "type": "source",
+    "name": "21 Zero-Days in FFmpeg",
+    "publisher": "depthfirst",
+    "grade": "B",
+    "role": "vulnerability-research",
+    "url": "https://depthfirst.com/research/21-zero-days-in-ffmpeg",
+    "published": "2026-06-02",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-NVD-CVE-2026-4747",
+    "type": "source",
+    "name": "CVE-2026-4747 (NVD record)",
+    "publisher": "NIST National Vulnerability Database",
+    "grade": "A",
+    "role": "security-advisory",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4747",
+    "published": "2026-03-26",
+    "last_verified": "2026-11-20"
   }
 ]

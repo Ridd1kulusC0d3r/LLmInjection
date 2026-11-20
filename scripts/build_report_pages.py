@@ -145,7 +145,8 @@ def render(md: str, link: Linker) -> tuple[str, list[tuple[int, str, str]]]:
             th = "".join(f"<th>{inline(h, link)}</th>" for h in head)
             tb = "".join("<tr>" + "".join(f'<td data-label="{esc(head[k] if k < len(head) else "")}">{cell(c, link, head[k] if k < len(head) else "")}</td>' for k, c in enumerate(r)) + "</tr>" for r in rows)
             filt = '<input class="tfilter" type="search" placeholder="Filtrar esta tabela" aria-label="Filtrar esta tabela">' if len(rows) >= 10 else ""
-            out.append(f'<div class="wtbl">{filt}<div class="tscroll"><table><thead><tr>{th}</tr></thead><tbody>{tb}</tbody></table></div></div>')
+            dated = " class=\"dated\"" if head and head[0].lower().startswith(("data", "date")) else ""
+            out.append(f'<div class="wtbl">{filt}<div class="tscroll"><table{dated}><thead><tr>{th}</tr></thead><tbody>{tb}</tbody></table></div></div>')
             continue
         elif re.match(r"^(\d+)\.\s+", s) or re.match(r"^[-*]\s+", s):
             flush()
@@ -312,6 +313,7 @@ thead th{{position:sticky;top:0;z-index:1;background:var(--paper-2);font:600 11p
 td{{padding:11px 14px;border-bottom:1px solid var(--rule-2);vertical-align:top;color:var(--ink-2);overflow-wrap:anywhere}}
 tbody tr:hover td{{background:var(--paper)}}
 tbody tr:last-child td{{border-bottom:0}}
+table.dated td:first-child{{white-space:nowrap}}table.dated td:nth-child(2){{min-width:170px}}
 .tfilter{{width:100%;max-width:340px;margin:0 0 10px;padding:9px 14px;border:1px solid var(--rule);border-radius:var(--pill);background:var(--card);color:var(--ink);font:14px var(--sans)}}
 .wgrade,.tag,.sev{{display:inline-block;font:700 11px var(--mono);padding:2px 8px;border-radius:5px;letter-spacing:.04em;white-space:nowrap}}
 .wgrade.g-A{{background:var(--ink);color:var(--paper)}}.wgrade.g-B{{background:var(--paper-2);color:var(--ink);border:1px solid var(--ink-3)}}.wgrade.g-C{{border:1px dashed var(--ink-3);color:var(--ink-2)}}

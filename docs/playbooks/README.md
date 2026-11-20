@@ -24,7 +24,7 @@ Sorted by priority, the techniques with the most missing defence first. `E` evid
 | [LLMI-T018](LLMI-T018.md) AI Coding-Assistant Workspace Abuse | observed in the wild | 4 | 7 | 1 | 1 | 5 | 2 | 0 |
 | [LLMI-T024](LLMI-T024.md) Exposed or Misconfigured AI Services | observed in the wild | 4 | 23 | 1 | 2 | 3 | 2 | 0 |
 | [LLMI-T027](LLMI-T027.md) Unsanctioned AI Runtime (Shadow AI) | observed in the wild | 4 | 1 | 2 | 2 | 1 | 2 | 0 |
-| [LLMI-T028](LLMI-T028.md) AI-Assisted Tooling Development | observed in the wild | 4 | 72 | 1 | 1 | 0 | 1 | 0 |
+| [LLMI-T028](LLMI-T028.md) AI-Assisted Tooling Development | observed in the wild | 4 | 73 | 1 | 1 | 0 | 1 | 0 |
 | [LLMI-T006](LLMI-T006.md) Data or Model Poisoning | demonstrated in research | 3 | 0 | 1 | 0 | 1 | 0 | 1 |
 | [LLMI-T025](LLMI-T025.md) Multimodal Instruction Triggers | demonstrated in research | 3 | 0 | 2 | 0 | 1 | 2 | 0 |
 | [LLMI-T001](LLMI-T001.md) Direct Prompt Injection | observed in the wild | 2 | 2 | 2 | 0 | 2 | 2 | 6 |

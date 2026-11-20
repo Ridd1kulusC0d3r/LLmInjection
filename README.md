@@ -122,11 +122,11 @@ New [source registry and ingestion guidance](docs/AI-INTELLIGENCE-SOURCES.md), [
 
 | Actors | Campaigns | Incidents | Vulnerabilities | Techniques | Sources |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| **75** | **100** | **72** | **49** | **28** | **208** |
+| **75** | **100** | **72** | **50** | **28** | **216** |
 
 | Test cases | Detections | Controls | Frameworks | Model families | Relationships | Ecosystem repos |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| **40** | **58** | **32** | **21** | **12** | **585** | **127** |
+| **40** | **58** | **32** | **21** | **12** | **586** | **127** |
 
 <!-- gen:stats:end -->
 
@@ -950,6 +950,7 @@ An optional **MCP v2 read-only server** exposes search, object lookup, graph tra
 | BeyondTrust Remote Support and PRA pre-authentication OS command… | `CVE-2026-1731` | command-injection | critical | 2026-02-06 |
 | Zammad session hijack leading to code execution | `CVE-2026-102489` | session-hijack | critical | 2026-09-30 |
 | Zammad packaged builds allow local escalation to root | `CVE-2026-102490` | privilege-escalation | high | 2026-09-30 |
+| FreeBSD NFS RPCSEC_GSS stack overflow leading to remote root | `CVE-2026-4747` | memory-corruption | high | 2026-03-26 |
 
 <!-- gen:vulnerabilities:end -->
 
@@ -1246,8 +1247,8 @@ Every intelligence item should answer:
 
 | Grade | Class | Sources |
 |---|---|---|
-| **A** | Primary or authoritative | 180 |
-| **B** | Strong secondary | 13 |
+| **A** | Primary or authoritative | 185 |
+| **B** | Strong secondary | 16 |
 | **C** | Reputable press | 10 |
 | **D** | Community | 5 |
 | **E** | Unsupported | 0 |

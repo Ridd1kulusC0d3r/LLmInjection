@@ -1,6 +1,6 @@
 ---
 title: "Threat Intelligence: vulnerabilidades e incidentes em sistemas de IA, 2026"
-kpis: "13|vulnerabilidades de software de IA incluídas no CISA KEV em 2026 (conferido no feed);6 de 25|CVEs da tabela com exploração confirmada em campo;~36 h|do advisory à exploração do LiteLLM CVE-2026-42208;62|entradas na cronologia de 2026, de janeiro a 19 de novembro, 16 novas (v1.1)"
+kpis: "13|vulnerabilidades de software de IA incluídas no CISA KEV em 2026 (conferido no feed);6 de 25|CVEs da tabela com exploração confirmada em campo;~36 h|do advisory à exploração do LiteLLM CVE-2026-42208;65|entradas na cronologia de 2026, de janeiro a 19 de novembro, 19 novas (v1.1)"
 kev_chart: true
 ---
 
@@ -9,11 +9,12 @@ kev_chart: true
 <p class="rpt-head"><span>LLMI-RI-2026-11-20 · v1.1</span><span class="tlp">TLP:CLEAR</span><span>Corte 2026-11-20</span></p>
 
 <div class="injected" markdown="1">
-**v1.1 (2026-11-20, mesmo dia).** O texto original não tinha nenhum caso de ARTEX na cronologia. Entraram 16 linhas novas, todas conferidas em fonte primária ou em registro já lido do repositório:
+**v1.1 (2026-11-20, mesmo dia).** O texto original não tinha nenhum caso de ARTEX na cronologia. Entraram 19 linhas novas, todas conferidas em fonte primária ou em registro já lido do repositório:
 - **Casos de ARTEX:** Comissão Europeia, Barracuda, CERT-In/CRAFTY FALCON, imagem Docker com backdoor, WorkOS, VAPOR PANDA, Storm-0940, TAG-217, remoção do repositório, fork do ScopeSentry e o censo da Spectrum.
 - **CVEs encontrados ou explorados por agentes:** DIVD/Zammad e BeyondTrust.
+- **Marcos de descoberta por IA:** Mozilla (06/03), Project Glasswing (07/04) e depthfirst no FFmpeg (02/06).
 
-A §4 ganha a subseção *Vulnerabilidades encontradas por IA* (GTIG, 30/09). O CVE-2026-40217 no KEV deixa de ser "a confirmar". Ficou de fora, aguardando decisão do dono do relatório, o material sobre descoberta de vulnerabilidades por IA cujas fontes citam um programa de modelo que o dono pediu para revisar antes.
+A §4 ganha a subseção *Vulnerabilidades encontradas por IA* (GTIG, 30/09). O CVE-2026-40217 no KEV deixa de ser "a confirmar". A mesma subseção traz os marcos públicos de descoberta por IA: Mozilla, Project Glasswing e Claude Mythos Preview, VulnCheck, curl e depthfirst.
 
 **Proveniência.** Relatório autoral recebido em 2026-11-20 com a planilha de 156 fontes. O texto abaixo é o original; esta caixa registra o que foi conferido contra fonte primária antes de entrar nos datasets.
 
@@ -164,6 +165,22 @@ A pergunta deixou de ser se agentes acham falhas reais e passou a ser quais. Os 
 - **Agente que explora, e talvez descubra.** No caso DIVD (21/09), um atacante agêntico encadeou CVE-2026-102489 e CVE-2026-102490 do Zammad, de sequestro de sessão até root. A Zammad diz que recebeu o relato da primeira falha em agosto. Por isso, não está estabelecido se o agente achou as falhas ou só as usou. As duas entraram no KEV em 02/10.
 - **Volume.** O GTIG viu as divulgações mensais de CVE dobrarem em 2026, de 5.045 em janeiro para 10.740 em agosto, e as explorações em campo subirem de 10,5 para 18 por mês. A leitura deles é que o crescimento vem sobretudo de n-days transformados em arma rapidamente, não de mais zero-days.
 
+**Marcos públicos de 2026.** As alegações de fornecedor aparecem lado a lado com a checagem de terceiros, porque as duas medem coisas diferentes:
+
+| Data | Marco | O que a fonte diz | Contraponto |
+| --- | --- | --- | --- |
+| 06/03 | [Mozilla e o Frontier Red Team da Anthropic](https://blog.mozilla.org/en/firefox/hardening-firefox-anthropic-red-team/) | Mais de uma dúzia de bugs de segurança verificáveis, com testes reproduzíveis, corrigidos antes do Firefox 148 | A Mozilla validou cada achado; o próprio texto lembra o histórico de falsos positivos de relatos gerados por IA |
+| 07/04 | [Project Glasswing](https://www.anthropic.com/project/glasswing) e [Claude Mythos Preview](https://red.anthropic.com/2026/mythos-preview/) | A Anthropic afirma que o modelo acha e explora zero-days em todos os grandes sistemas operacionais e navegadores; diz ter milhares de achados altos ou críticos, mais de 99% ainda sem correção, e 89% de concordância de severidade em 198 revisões manuais. Exemplos públicos: um bug de 27 anos no SACK do OpenBSD e o CVE-2026-4747 no NFS do FreeBSD, achado e explorado sem humano até root. O acesso fica restrito a parceiros e a mais de 40 organizações | É alegação do próprio fornecedor; a maior parte dos achados segue embargada |
+| 15/04 | [VulnCheck: CVEs atribuídos à Anthropic](https://www.vulncheck.com/blog/anthropic-glasswing-cves) | 75 registros de CVE citam "Anthropic", 40 creditados a pesquisadores dela (28 no Firefox, 9 no wolfSSL) | Só 1 era atribuído explicitamente ao Glasswing naquela data |
+| 11/05 | [curl](https://daniel.haxx.se/blog/2026/05/11/mythos-finds-a-curl-vulnerability/) | O relatório do Mythos listou cinco vulnerabilidades "confirmadas" e cerca de vinte bugs bem explicados, quase sem falso positivo | Depois da revisão do time do curl, uma única virou CVE |
+| 14/05 | [VulnCheck: a primeira onda de CVEs](https://www.vulncheck.com/blog/ai-assisted-vulnerability-discovery) | Alta de CVEs no ano até então: Chrome +563%, Apache +170%, emissões do GitHub +476% | A VulnCheck diz que a alta é compatível com descoberta assistida por IA, mas que nem toda ela pode ser atribuída |
+| 02/06 | [depthfirst no FFmpeg](https://depthfirst.com/research/21-zero-days-in-ffmpeg) | 21 zero-days com prova de conceito reproduzível, por cerca de US$ 1 mil; nove com CVE (CVE-2026-39210 a CVE-2026-39218) | Comparação de custo feita pela própria empresa; os nove CVEs ainda não aparecem no NVD |
+
+A leitura para o defensor tem três partes:
+- **Volume.** Descoberta por IA já muda o volume de CVEs (VulnCheck, GTIG) e a gravidade média do que é achado (GTIG).
+- **Prazo.** O tempo entre um aviso que credita um agente e a exploração pode ser de dias (BeyondTrust).
+- **Contagem.** A contagem pública fica abaixo do real, porque falta um campo padrão de atribuição e há muito embargo.
+
 **O que fazer:** tratar como sinal de prioridade todo aviso que credita a descoberta a um agente. Esses casos tendem a cair em RCE e em fronteiras de privilégio, e o atacante lê o mesmo aviso. No Explorer, o filtro *Encontradas por IA* da cronologia mostra esses registros.
 
 ### Rejeitados: Rails, Adminer e Achievo
@@ -172,7 +189,7 @@ A rejeição está correta para o escopo de IA. CVE-2019-5418 (Rails, divulgaç�
 
 ## 5. Cronologia de incidentes de IA em 2026
 
-A cronologia reúne 62 entradas (16 adicionadas na v1.1, marcadas com *v1.1*), do mais recente ao mais antigo. As categorias são: EXP (exploração de vulnerabilidade), SC (cadeia de suprimentos), PI (injeção de prompt), OFF (IA usada por atacante), AUT (agente sem adversário), ID (identidade e credenciais) e EXPO (exposição ou configuração).
+A cronologia reúne 65 entradas (19 adicionadas na v1.1, marcadas com *v1.1*), do mais recente ao mais antigo. As categorias são: EXP (exploração de vulnerabilidade), SC (cadeia de suprimentos), PI (injeção de prompt), OFF (IA usada por atacante), AUT (agente sem adversário), ID (identidade e credenciais) e EXPO (exposição ou configuração).
 
 | Data (2026) | Incidente | Cat. | O que aconteceu |
 | --- | --- | --- | --- |
@@ -221,6 +238,7 @@ A cronologia reúne 62 entradas (16 adicionadas na v1.1, marcadas com *v1.1*), d
 | 7–22 jul | Langflow CVE-2026-55255 e CVE-2026-0770 no KEV | EXP | Bypass de autorização entre inquilinos e RCE como root; operador único combinou a primeira com CVE-2026-33017 |
 | 3–17 jun | [Agentjacking via Sentry MCP](https://thenewstack.io/agentjacking-sentry-mcp-attack/) | PI | Evento de erro forjado com DSN público sequestra Claude Code, Cursor e Codex; 2.388 organizações com DSN injetável; 85% de execução em testes |
 | 8 jun | LiteLLM CVE-2026-42271 no KEV | EXP | Ver seção 4 |
+| 2 jun | [depthfirst: 21 zero-days no FFmpeg](https://depthfirst.com/research/21-zero-days-in-ffmpeg) *v1.1* | EXP | Agente autônomo acha 21 falhas com prova de conceito por cerca de US$ 1 mil; nove com CVE (CVE-2026-39210 a -39218) |
 | 31 mai | [Bot de suporte da Meta](https://krebsonsecurity.com/2026/06/hackers-used-metas-ai-support-bot-to-seize-instagram-accounts/) | ID | O assistente trocava o e-mail da conta sem verificar identidade; 20.225 contas redefinidas entre 17/04 e 31/05, entre elas a da Casa Branca da era Obama e a da Sephora |
 | 21 mai | [Composio](https://composio.dev/blog/composio-may-2026-security-incident) | ID | Token OAuth do Gmail de um funcionário levou a 5.241 chaves de API e 5.001 tokens OAuth do GitHub de clientes |
 | 11–13 mai | [Mini Shai-Hulud](https://venturebeat.com/security/shai-hulud-worm-172-npm-pypi-packages-valid-provenance-ci-cd-audit) | SC | Worm em mais de 170 pacotes npm e PyPI (TanStack, Mistral AI, Guardrails AI); persiste via hook `SessionStart` do Claude Code e tarefa de abertura de pasta do VS Code |
@@ -230,9 +248,11 @@ A cronologia reúne 62 entradas (16 adicionadas na v1.1, marcadas com *v1.1*), d
 | 19 abr | [Vercel via Context.ai](https://thehackernews.com/2026/04/vercel-breach-tied-to-context-ai-hack.html) | ID | Infostealer em funcionário da Context.ai levou a tokens OAuth do Google Workspace e a variáveis de ambiente de clientes da Vercel |
 | 15 abr | [Comment and Control](https://www.securityweek.com/claude-code-gemini-cli-github-copilot-agents-vulnerable-to-prompt-injection-via-comments/) e MCP STDIO | PI | Título de PR ou comentário de issue faz agentes de CI publicarem segredos do workflow; no mesmo dia a OX Security divulgou a falha de projeto do STDIO |
 | 7–13 abr | Flowise CVE-2025-59528 e nginx-ui CVE-2026-33032 explorados | EXP | Ver seção 4 |
+| 7 abr | [Project Glasswing e Claude Mythos Preview](https://red.anthropic.com/2026/mythos-preview/) *v1.1* | EXP | A Anthropic restringe o modelo a parceiros e afirma ter milhares de zero-days altos ou críticos; exemplo público: CVE-2026-4747 (FreeBSD NFS), achado e explorado de forma autônoma |
 | 24 mar | [LiteLLM no PyPI (TeamPCP)](https://snyk.io/articles/poisoned-security-scanner-backdooring-litellm) | SC | Versões 1.82.7 e 1.82.8 publicadas com credencial roubada via Trivy; cerca de 3 horas no ar; a 1.82.8 usa arquivo `.pth` que executa em todo início do Python |
 | 17–25 mar | Langflow CVE-2026-33017 | EXP | RCE sem autenticação explorado em cerca de 20 horas; KEV em 25/03 |
 | 18 mar | "Claudy Day" | PI | Injeção por parâmetro de URL, exfiltração pela Files API e redirecionamento aberto encadeados contra o claude.ai |
+| 6 mar | [Mozilla corrige bugs achados pelo Red Team da Anthropic](https://blog.mozilla.org/en/firefox/hardening-firefox-anthropic-red-team/) *v1.1* | EXP | Mais de uma dúzia de bugs verificados, com testes reproduzíveis, corrigidos antes do Firefox 148 |
 | 17–25 fev | Clinejection e CVEs do Claude Code | PI | Título de issue injetado em bot de triagem leva a token npm roubado e `cline@2.3.0` falso por cerca de 8 horas; Check Point publica CVE-2025-59536 e CVE-2026-21852 |
 | 13 fev | BeyondTrust CVE-2026-1731 no KEV *v1.1* | EXP | Injeção de comando sem autenticação encontrada por agente de IA (Hacktron AI); um cluster explorou em 4 dias e outros cinco em 7 dias ([GTIG](https://cloud.google.com/blog/topics/threat-intelligence/vulnerability-discovery-and-exploitation-trends-in-the-ai-era)) |
 | jan–fev | [OpenClaw e ClawHavoc](https://thehackernews.com/2026/02/researchers-find-341-malicious-clawhub.html) | SC | CVE-2026-25253 (RCE em um clique), dezenas de milhares de instâncias expostas e de 341 a 1.184 skills maliciosas no ClawHub, conforme a contagem |
