@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>LLMInjection · Report</title>
+  <meta name="description" content="An on-demand intelligence report built from the records picked in the LLMInjection graph.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body{background:var(--paper)}
+    .rwrap{max-width:1080px;margin:0 auto;padding:18px 16px 72px}
+    .rbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:5;padding:10px 0;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule-2)}
+    .rbar a,.rbar button,.rbar select{font:600 11px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2);background:var(--card);border:1px solid var(--rule);padding:7px 12px;border-radius:var(--pill);cursor:pointer;text-decoration:none}
+    .rbar a:hover,.rbar button:hover{border-color:var(--ink);color:var(--ink)}
+    .rbar [aria-pressed=true]{background:var(--signal);color:var(--signal-ink);border-color:var(--signal)}
+    .rbar .grp{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+    .rmast{margin:26px 0 18px;padding:22px 24px;background:var(--card);border:1px solid var(--ink);border-radius:var(--radius-sm)}
+    .rmast-bar{display:flex;justify-content:space-between;font:700 12px var(--mono);letter-spacing:.16em;color:var(--ink-2);border-bottom:1px solid var(--ink);padding-bottom:10px}
+    .rmast .tlp{color:var(--signal)}
+    .rmast h1{font:700 clamp(28px,4.6vw,46px)/1.1 Georgia,"Times New Roman",serif;letter-spacing:-.02em;margin:18px 0 10px;outline:none}
+    .rmast h1:focus{box-shadow:0 2px 0 var(--signal)}
+    .rhead{display:flex;flex-wrap:wrap;gap:6px 18px;margin:0;font:12px var(--mono);color:var(--ink-3)}
+    .rbluf{border-left:4px solid var(--signal);background:var(--signal-soft);padding:14px 18px;border-radius:0 var(--radius-sm) var(--radius-sm) 0;font-size:16px}
+    .rbluf b{font:700 12px var(--mono);letter-spacing:.12em;margin-right:8px;color:var(--signal)}
+    .rprov{font-size:13px;color:var(--ink-3);margin:10px 0 0}
+    .rsec{margin-top:38px}
+    .rsec h2{display:flex;gap:12px;align-items:baseline;font:700 24px/1.2 Georgia,serif;margin:0 0 8px;padding-bottom:8px;border-bottom:1px solid var(--rule)}
+    .rsec h2 span{font:700 12px var(--mono);color:var(--signal)}
+    .rsec h4{font:600 12px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);margin:22px 0 8px}
+    .rsec .note{color:var(--ink-3);font-size:13px;margin:0 0 12px}
+    .rcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px}
+    .rcard{background:var(--card);border:1px solid var(--rule-2);border-radius:var(--radius-sm);padding:16px 18px;box-shadow:var(--shadow-1)}
+    .rcard header{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+    .rcard h3{margin:6px 0;font-size:18px}
+    .rcard p{margin:6px 0;color:var(--ink-2)}
+    .rcard dl{display:grid;grid-template-columns:max-content 1fr;gap:4px 12px;font-size:13px;margin:10px 0}
+    .rcard dt{font:600 11px var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--ink-3);padding-top:2px}
+    .rcard dd{margin:0;overflow-wrap:anywhere}
+    .rcard .more{font:600 12px var(--mono)}
+    .rtable{overflow-x:auto;border:1px solid var(--rule-2);border-radius:var(--radius-sm);background:var(--card)}
+    .rtable table{border-collapse:collapse;width:100%;font-size:13.5px}
+    .rtable th{font:600 11px var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--ink-3);text-align:left;padding:9px 12px;border-bottom:1px solid var(--rule);background:var(--paper-2)}
+    .rtable td{padding:9px 12px;border-bottom:1px solid var(--rule-2);vertical-align:top;overflow-wrap:anywhere}
+    .rtable tr:last-child td{border-bottom:0}
+    .rchip{display:inline-flex;gap:6px;align-items:baseline;margin:2px 4px 2px 0;padding:2px 9px;border:1px solid var(--rule);border-radius:var(--pill);background:var(--paper);font-size:12.5px;text-decoration:none;color:var(--ink);white-space:nowrap;max-width:100%;overflow:hidden;text-overflow:ellipsis}
+    .rchip span{font:600 9.5px var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--signal)}
+    .rchip:hover{border-color:var(--signal)}
+    .rconf{font:600 10.5px var(--mono);text-transform:uppercase;letter-spacing:.06em;padding:2px 8px;border-radius:var(--pill);border:1px solid var(--rule)}
+    .rconf.c-confirmed,.rconf.c-high{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+    .rconf.c-low,.rconf.c-unverified{border-style:dashed}
+    .kev,.grade{font:700 11px var(--mono);padding:1px 7px;border-radius:4px;background:var(--signal);color:var(--signal-ink)}
+    .grade:not(.g-A){background:var(--paper-2);color:var(--ink)}
+    .rlist{padding-left:18px}.rlist li{margin:6px 0}
+    .id{font:12px var(--mono);color:var(--ink-3)}
+    .empty{color:var(--ink-3);font-style:italic}
+    @media print{
+      .rbar{display:none}
+      body{background:#fff}
+      .rmast,.rcard,.rtable{box-shadow:none}
+      .rsec{break-inside:auto}.rcard,.rtable tr{break-inside:avoid}
+      a.out:after{content:" (" attr(href) ")";font-size:10px;color:#666;word-break:break-all}
+    }
+  </style>
+</head>
+<body>
+  <div class="rwrap">
+    <nav class="rbar" aria-label="Report tools">
+      <div class="grp"><a id="back" href="./#tab=graph">← <span data-i18n="srp.back">Graph</span></a>
+        <button type="button" data-depth="0" aria-pressed="false" data-i18n="srp.depth0">Only selected</button>
+        <button type="button" data-depth="1" aria-pressed="true" data-i18n="srp.depth1">With context</button></div>
+      <div class="grp"><button type="button" data-act="print" data-i18n="srp.print">Print / PDF</button>
+        <button type="button" data-act="md" data-i18n="srp.md">Download Markdown</button>
+        <button type="button" data-act="copy" data-i18n="srp.copy">Copy link</button>
+        <select id="lang" aria-label="Language"></select></div>
+    </nav>
+    <main id="doc" aria-live="polite"><p class="empty">…</p></main>
+  </div>
+  <script src="i18n.js"></script>
+  <script src="report.js"></script>
+</body>
+</html>

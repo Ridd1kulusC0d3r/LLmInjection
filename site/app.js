@@ -126,6 +126,7 @@ function applyHash(){
   const l=p.get("lang");if(l&&l!==I18N.lang&&LANGS.some(x=>x.code===l)){switchLang(l);return}
   applyCoverageHash(p);
   if(p.has("focus")||G.focus){const f=p.get("focus")||null;if(f!==G.focus){G.focus=f;G.view=null;renderGraph();if(f)requestAnimationFrame(()=>graphSelect(f))}}
+  if(p.has("pick")||G.pick.length){const k=(p.get("pick")||"").split(",").filter(Boolean);if(k.join()!==G.pick.join()){G.pick=k;renderPick()}}
   if(p.has("tech")||state.tech){const x=p.get("tech")||"";if(x!==state.tech){state.tech=x;const s=$("#tlTech");if(s)s.value=x;renderTimeline()}}
   if(p.get("reports")){const r=p.get("reports");requestAnimationFrame(()=>explodeReports(r==="@focus"&&G.focus?[...egoIds(G.focus)]:[r],t("rl.title",{name:nodeById(r==="@focus"?G.focus:r)?.label||r})))}
   if(p.get("report")&&p.get("report")!==SP.report){SP.report=p.get("report");renderReports()}
@@ -178,7 +179,16 @@ function renderLandscape(){
   $("#leads").innerHTML=(L.research_queue||[]).map(q=>`<div class="dom"><header><h3 style="font-weight:500">${esc(q.claim)}</h3></header><p>${esc(q.reason)}</p><div class="tags"><span>${esc(q.status)}</span></div></div>`).join("");
 }
 /* ---------- graph: curved edges, pan and zoom on the viewBox, a pinned selection, type toggles */
-const G={hidden:new Set(),sel:null,view:null,full:null,anim:0,focus:null};
+const G={hidden:new Set(),sel:null,view:null,full:null,anim:0,focus:null,pick:[]};
+/* the report basket: records picked in the graph, opened together as an on-demand report page */
+const reportHref=(ids,depth=1)=>`report.html#ids=${ids.map(encodeURIComponent).join(",")}&depth=${depth}&lang=${I18N.lang}`;
+function setPick(ids){G.pick=[...new Set(ids)].filter(id=>state.graph.nodes.some(n=>n.id===id)).slice(0,40);patchHash({pick:G.pick.length?G.pick.join(","):null});renderPick();if(G.sel)graphSelect(G.sel)}
+function renderPick(){
+  const box=$("#graphPick");if(!box)return;
+  box.hidden=!G.pick.length;if(!G.pick.length){box.innerHTML="";return}
+  const lab=id=>state.graph.nodes.find(n=>n.id===id)?.label||id;
+  box.innerHTML=`<span class="gpick-h">${esc(t("srp.basket",{n:nf(G.pick.length)}))}</span>${G.pick.map(id=>`<button type="button" class="chip on" data-unpick="${esc(id)}" title="${esc(t("srp.remove"))}">${esc(lab(id))}<span aria-hidden="true">×</span></button>`).join("")}<a class="export primary" href="${esc(reportHref(G.pick))}" target="_blank" rel="noopener">${esc(t("srp.openreport"))} ↗</a><button type="button" class="export" data-unpick-all>${esc(t("srp.clear"))}</button>`;
+}
 /* focus: the record, its direct links, and what those evidence and actor records link to (sources left out) */
 function egoIds(id){
   const nodes=new Map(state.graph.nodes.map(n=>[n.id,n])),adj=new Map();
@@ -223,6 +233,7 @@ function graphSelect(id,{center=false}={}){
     <p class="note">${esc(t("graph.linked",{n:nf(links.length)}))}</p>
     ${reportLinks(id).length?`<p class="note" style="margin-top:8px">${esc(t("rl.here",{n:reportLinks(id).length}))}</p>${linksRow(id,3)}<button type="button" class="export" data-explode="${esc(id)}">${esc(t("rl.explode"))}</button>`:""}
     <ul class="gsel-list">${links.slice(0,40).map(x=>`<li><button type="button" class="gsel-go" data-go="${esc(x.id)}"><span class="gsel-type">${esc(typeLabel(x.type))}</span>${esc(x.label)}</button></li>`).join("")}</ul>
+    <div class="gsel-actions gsel-report"><button type="button" class="export${G.pick.includes(id)?" on":""}" data-pick="${esc(id)}" aria-pressed="${G.pick.includes(id)}">${esc(t(G.pick.includes(id)?"srp.picked":"srp.pick"))}</button><a class="export" href="${esc(reportHref(G.pick.includes(id)?G.pick:[...G.pick,id]))}" target="_blank" rel="noopener">${esc(t(G.pick.length&&!(G.pick.length===1&&G.pick[0]===id)?"srp.openwith":"srp.openone"))} ↗</a></div>
     <div class="gsel-actions"><button type="button" class="export primary" data-open="${esc(id)}">${esc(t("graph.open"))}</button>${G.focus===id?"":`<button type="button" class="export" data-focus="${esc(id)}">${esc(t("graph.focus"))}</button>`}<button type="button" class="export" data-clear>${esc(t("graph.clear"))}</button></div>`;
   if(center){const g=svg.querySelector(`.node[data-nid="${CSS.escape(id)}"]`);if(g&&G.view){const m=g.transform.baseVal.consolidate()?.matrix;if(m){const v=G.view;setView(clampView({x:m.e-v.w/2+80,y:m.f-v.h/2,w:v.w,h:v.h}))}}}
 }
@@ -230,7 +241,7 @@ function renderGraph(){
   const ego=G.focus&&state.graph.nodes.some(n=>n.id===G.focus)?egoIds(G.focus):null;
   const all=visibleNodes().filter(n=>!ego||ego.has(n.id)).slice(0,1200);
   const fn=ego&&state.graph.nodes.find(n=>n.id===G.focus);
-  $("#graphFocus").innerHTML=fn?`<button type="button" class="chip on" data-unfocus title="${esc(t("graph.unfocus"))}">${esc(t("graph.focused",{name:fn.label}))}<span aria-hidden="true">×</span></button><button type="button" class="chip" data-explode="@focus">${esc(t("rl.focus"))}</button>`:"";
+  $("#graphFocus").innerHTML=fn?`<button type="button" class="chip on" data-unfocus title="${esc(t("graph.unfocus"))}">${esc(t("graph.focused",{name:fn.label}))}<span aria-hidden="true">×</span></button><button type="button" class="chip" data-explode="@focus">${esc(t("rl.focus"))}</button><a class="chip" href="${esc(reportHref([G.focus]))}" target="_blank" rel="noopener">${esc(t("srp.focusreport"))} ↗</a>`:"";
   $("#graphFocus").hidden=!fn;
   const present=[...TYPE_ORDER.filter(x=>all.some(n=>n.type===x)),...[...new Set(all.map(n=>n.type))].filter(x=>!TYPE_ORDER.includes(x))];
   $("#graphTypes").innerHTML=present.map(x=>{const on=!G.hidden.has(x),c=all.filter(n=>n.type===x).length;return`<button type="button" class="chip${on?" on":""}" data-gtype="${esc(x)}" aria-pressed="${on}" title="${esc(t("graph.legend.toggle"))}">${esc(typeLabel(x))}<b>${c}</b></button>`}).join("");
@@ -299,8 +310,9 @@ function initGraphControls(){
   $("#graphTypes").onclick=e=>{const b=e.target.closest("[data-gtype]");if(!b)return;const x=b.dataset.gtype;G.hidden.has(x)?G.hidden.delete(x):G.hidden.add(x);G.view=null;renderGraph()};
   const setFocus=id=>{G.focus=id;G.view=null;patchHash({focus:id});renderGraph();if(id)requestAnimationFrame(()=>graphSelect(id))};
   $("#graphFocus").onclick=e=>{if(e.target.closest("[data-unfocus]"))setFocus(null)};
-  $("#graphSel").onclick=e=>{const go=e.target.closest("[data-go]"),op=e.target.closest("[data-open]"),fo=e.target.closest("[data-focus]");
-    if(fo)setFocus(fo.dataset.focus);else if(go)graphSelect(go.dataset.go,{center:true});else if(op)openNode(op.dataset.open);else if(e.target.closest("[data-clear]"))graphSelect(null)};
+  $("#graphPick").onclick=e=>{const u=e.target.closest("[data-unpick]");if(u)setPick(G.pick.filter(x=>x!==u.dataset.unpick));else if(e.target.closest("[data-unpick-all]"))setPick([])};
+  $("#graphSel").onclick=e=>{const go=e.target.closest("[data-go]"),op=e.target.closest("[data-open]"),fo=e.target.closest("[data-focus]"),pk=e.target.closest("[data-pick]");
+    if(pk){const x=pk.dataset.pick;setPick(G.pick.includes(x)?G.pick.filter(y=>y!==x):[...G.pick,x])}else if(fo)setFocus(fo.dataset.focus);else if(go)graphSelect(go.dataset.go,{center:true});else if(op)openNode(op.dataset.open);else if(e.target.closest("[data-clear]"))graphSelect(null)};
   window.addEventListener("resize",()=>{if(G.view)setView(clampView(G.view),false)});
 }
 function techStats(){
@@ -441,6 +453,6 @@ function openNode(id,push=true){
 }
 function renderAll(){
   if(!state.graph)return;
-  renderMetrics();renderDashboard();renderEcosystem();renderActors();renderDomains();renderLandscape();renderWhatsNew();renderGraph();renderCoverage();renderTimeline();renderSources();renderLanguages();renderSpaces();afterRender();
+  renderMetrics();renderDashboard();renderEcosystem();renderActors();renderDomains();renderLandscape();renderWhatsNew();renderGraph();renderPick();renderCoverage();renderTimeline();renderSources();renderLanguages();renderSpaces();afterRender();
 }
 load().catch(e=>{document.body.insertAdjacentHTML("afterbegin",`<p role="alert" style="padding:12px 28px;background:var(--signal);color:var(--signal-ink);margin:0">${esc(t("err.load",{msg:e.message}))}</p>`)});
