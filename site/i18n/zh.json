@@ -554,5 +554,7 @@
  "tl.f.ai": "由 AI 发现",
  "tl.b.ai": "AI 发现",
  "tl.b.agent": "被 AI 智能体利用",
- "tabgrp.go": "打开该组的第一个部分"
+ "tabgrp.go": "打开该组的第一个部分",
+ "rep.pdf": "下载 PDF",
+ "rep.print": "打印为 PDF"
 }

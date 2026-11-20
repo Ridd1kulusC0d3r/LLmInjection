@@ -64,9 +64,16 @@ function renderReports(){
   const rows=SP.reports?.reports||[];
   if(!rows.length){box.innerHTML=`<p class="empty">${esc(t("rep.none"))}</p>`;view.hidden=true;return}
   const groups=KIND_ORDER.map(k=>[k,rows.filter(r=>r.kind===k)]).filter(([,v])=>v.length);
-  box.innerHTML=groups.map(([k,v])=>`<h3 class="sect">${esc(t("rep.kind."+k))}</h3><div class="rcards">${v.map(r=>`<button type="button" class="rcard${SP.report===r.path?" on":""}" data-report="${esc(r.path)}"><span class="eyebrow">${esc(t("rep.kind."+r.kind))}</span><b>${esc(r.kind==="platform"?t("rep.platform"):r.title)}</b><span class="id">${esc(r.date||r.path)}${r.page?` · ${esc(t("rep.webtag"))}`:""}</span></button>`).join("")}</div>`).join("");
+  box.innerHTML=groups.map(([k,v])=>`<h3 class="sect">${esc(t("rep.kind."+k))}</h3><div class="rcards">${v.map(r=>`<button type="button" class="rcard${SP.report===r.path?" on":""}" data-report="${esc(r.path)}"><span class="eyebrow">${esc(t("rep.kind."+r.kind))}</span><b>${esc(r.kind==="platform"?t("rep.platform"):r.title)}</b><span class="id">${esc(r.date||r.path)}${r.page?` · ${esc(t("rep.webtag"))}`:""}${r.pdf?" · PDF":""}</span></button>`).join("")}</div>`).join("");
   box.querySelectorAll("[data-report]").forEach(b=>b.onclick=()=>openReport(b.dataset.report,true));
   if(SP.report)openReport(SP.report,false);else view.hidden=true;
+}
+/* reports without a designed PDF: print the rendered report alone, in the site's style */
+function printReport(article,title){
+  if(!article)return;const w=window.open("","_blank");if(!w){window.print();return}
+  const css=[...document.querySelectorAll('link[rel="stylesheet"]')].map(l=>`<link rel="stylesheet" href="${l.href}">`).join("");
+  w.document.write(`<!doctype html><html lang="${document.documentElement.lang}"><head><meta charset="utf-8"><title>${esc(title)}</title>${css}<style>body{background:#fff;padding:24px 32px}.md-doc{max-width:860px;margin:0 auto}@page{size:A4;margin:16mm}</style></head><body><article class="md-doc">${article.innerHTML}</article></body></html>`);
+  w.document.close();w.addEventListener("load",()=>{w.focus();w.print()});setTimeout(()=>{try{w.focus();w.print()}catch(_){}},800);
 }
 async function openReport(path,push){
   const r=(SP.reports?.reports||[]).find(x=>x.path===path),view=$("#reportView");if(!r)return;
@@ -75,7 +82,8 @@ async function openReport(path,push){
   view.hidden=false;view.innerHTML=`<p class="note">${esc(t("rep.loading"))}</p>`;
   try{
     const text=await fetch(path).then(x=>{if(!x.ok)throw new Error(x.status);return x.text()});
-    view.innerHTML=`<div class="rbar"><span class="id">${esc(path)}</span><span>${r.page?`<a class="out" href="${esc(r.page)}" rel="noopener">${esc(t("rep.web"))}</a> · `:""}<a class="out" href="${esc(r.github)}" rel="noopener">${esc(t("rep.github"))}</a> · <button type="button" class="export" data-close-report>${esc(t("rep.close"))}</button></span></div><article class="md-doc">${md(text,path)}</article>`;
+    view.innerHTML=`<div class="rbar"><span class="id">${esc(path)}</span><span>${r.pdf?`<a class="export primary" href="${esc(r.pdf)}" download>${esc(t("rep.pdf"))} ↓</a> `:`<button type="button" class="export" data-print-report>${esc(t("rep.print"))}</button> `}${r.page?`<a class="out" href="${esc(r.page)}" rel="noopener">${esc(t("rep.web"))}</a> · `:""}<a class="out" href="${esc(r.github)}" rel="noopener">${esc(t("rep.github"))}</a> · <button type="button" class="export" data-close-report>${esc(t("rep.close"))}</button></span></div><article class="md-doc">${md(text,path)}</article>`;
+    view.querySelector("[data-print-report]")?.addEventListener("click",()=>printReport(view.querySelector(".md-doc"),r.title));
     view.querySelector("[data-close-report]").onclick=()=>{SP.report=null;patchHash({report:null});view.hidden=true;document.querySelectorAll(".rcard").forEach(b=>b.classList.remove("on"))};
     if(push)view.scrollIntoView({behavior:"smooth",block:"start"});
   }catch(e){view.innerHTML=`<p class="empty">${esc(t("rep.fail",{msg:e.message}))}</p>`}

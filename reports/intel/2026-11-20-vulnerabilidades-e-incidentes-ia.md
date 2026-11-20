@@ -1,4 +1,5 @@
 ---
+pdf: reports/pdf/LLMI-RI-2026-11-20-ameacas-sistemas-ia.pdf
 title: "Threat Intelligence: vulnerabilidades e incidentes em sistemas de IA, 2026"
 kpis: "13|vulnerabilidades de software de IA incluídas no CISA KEV em 2026 (conferido no feed);6 de 25|CVEs da tabela com exploração confirmada em campo;~36 h|do advisory à exploração do LiteLLM CVE-2026-42208;65|entradas na cronologia de 2026, de janeiro a 19 de novembro, 19 novas (v1.1)"
 kev_chart: true

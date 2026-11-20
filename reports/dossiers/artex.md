@@ -1,4 +1,5 @@
 ---
+pdf: reports/pdf/LLMI-DS-ARTEX.pdf
 title: "Dossiê: ARTEX, framework ofensivo agêntico em uso por vários atores"
 ---
 
