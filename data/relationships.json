@@ -6229,5 +6229,72 @@
     "evidence_sources": [
       "SRC-CISA-KEV-CATALOG"
     ]
+  },
+  {
+    "id": "REL-564",
+    "type": "relationship",
+    "source": "TOOL-SCOPESENTRY",
+    "relationship": "integrates-with",
+    "target": "TOOL-ARTEX",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-GH-SCOPESENTRY-NIUDAII"
+    ]
+  },
+  {
+    "id": "REL-565",
+    "type": "relationship",
+    "source": "DET-AI-058",
+    "relationship": "detects",
+    "target": "TOOL-SCOPESENTRY",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-GH-SCOPESENTRY-NIUDAII"
+    ]
+  },
+  {
+    "id": "REL-566",
+    "type": "relationship",
+    "source": "DET-AI-058",
+    "relationship": "detects",
+    "target": "TOOL-ARTEX",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-GH-SCOPESENTRY-NIUDAII",
+      "SRC-SPECTRUM-SWARM-CHASING"
+    ]
+  },
+  {
+    "id": "REL-567",
+    "type": "relationship",
+    "source": "DET-AI-058",
+    "relationship": "detects",
+    "target": "LLMI-T015",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-SPECTRUM-SWARM-CHASING"
+    ]
+  },
+  {
+    "id": "REL-568",
+    "type": "relationship",
+    "source": "DET-AI-052",
+    "relationship": "detects",
+    "target": "TOOL-CAIRN",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-SPECTRUM-SWARM-CHASING"
+    ]
+  },
+  {
+    "id": "REL-569",
+    "type": "relationship",
+    "source": "DET-AI-052",
+    "relationship": "detects",
+    "target": "TOOL-CYBERSTRIKEAI",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-SPECTRUM-SWARM-CHASING"
+    ]
   }
 ]

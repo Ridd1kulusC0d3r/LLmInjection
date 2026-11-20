@@ -544,5 +544,6 @@
  "srp.openwith": "Informe con la cesta",
  "srp.focusreport": "Informe de este foco",
  "rep.web": "Edición web completa ↗",
- "rep.webtag": "edición web"
+ "rep.webtag": "edición web",
+ "rel.integrates-with": "se integra con"
 }

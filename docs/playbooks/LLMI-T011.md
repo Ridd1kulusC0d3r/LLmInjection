@@ -110,7 +110,7 @@ The runner has plan and mock adapters only: it does not call your system. To run
 
 - **Severity:** high
 - **Hypothesis:** A host listens with an agentic offensive framework console, or runs a container image known to be a backdoored build of one, inside the estate: an unsanctioned offensive runtime or an implant.
-- **Telemetry:** `network scans and listening ports`, `HTTP responses (console pages, auth realm)`, `container image inventory`, `EDR process and file events`
+- **Telemetry:** `network scans and listening ports`, `HTTP responses (console pages, auth realm)`, `container image inventory`, `EDR process and file events`, `console fingerprints that survive renames: page markers from tool templates, shared TLS certificates, private build strings, the 'ARTEX' 401 realm on port 8787 (Spectrum, RST Cloud, Check Point)`
 - **Implementation:** specification only. Collect the telemetry above first; if you cannot, the detection cannot work yet.
 
 ### DET-AI-054 · Python Startup .pth File Created Outside a Known Package Install

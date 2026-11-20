@@ -33,6 +33,6 @@ Sorted by priority, the techniques with the most missing defence first. `E` evid
 | [LLMI-T002](LLMI-T002.md) Indirect Prompt Injection | tied to a disclosed vulnerability | 1.5 | 7 | 1 | 0 | 2 | 3 | 6 |
 | [LLMI-T009](LLMI-T009.md) Memory / Context Poisoning | demonstrated in research | 1 | 2 | 1 | 0 | 2 | 1 | 1 |
 | [LLMI-T008](LLMI-T008.md) Agent Tool Misuse | observed in the wild | 0 | 18 | 6 | 1 | 3 | 2 | 3 |
-| [LLMI-T015](LLMI-T015.md) Agentic Attack Orchestration | observed in the wild | 0 | 53 | 1 | 3 | 5 | 2 | 1 |
+| [LLMI-T015](LLMI-T015.md) Agentic Attack Orchestration | observed in the wild | 0 | 53 | 1 | 4 | 5 | 2 | 1 |
 
 Pages with a worked example or hand-written notes: [LLMI-T008](LLMI-T008.md).

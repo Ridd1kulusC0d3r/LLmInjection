@@ -2075,5 +2075,27 @@
     "role": "security-advisory",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2287",
     "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-SPECTRUM-SWARM-CHASING",
+    "type": "source",
+    "name": "Swarm Chasing: Hunting ARTEX and Other Agentic Offensive Frameworks in the Wild",
+    "publisher": "Spectrum (Delta research)",
+    "grade": "B",
+    "role": "threat-research",
+    "url": "https://www.spectrum.security/blog/offensive-ai-tools-in-the-wild",
+    "published": "2026-11-18",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-GH-SCOPESENTRY-NIUDAII",
+    "type": "source",
+    "name": "ScopeSentry fork with ARTEX task integration and MCP server (niudaii/ScopeSentry, commit f19a973)",
+    "publisher": "GitHub (niudaii; upstream Autumn-27/ScopeSentry)",
+    "grade": "B",
+    "role": "threat-research",
+    "url": "https://github.com/niudaii/ScopeSentry",
+    "published": "2026-08-26",
+    "last_verified": "2026-11-20"
   }
 ]

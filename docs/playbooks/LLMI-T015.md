@@ -15,7 +15,7 @@
 |---|---|
 | Evidence | 53 record(s), 33 publisher(s), best grade A, newest 2026 |
 | Safe tests | 1 |
-| Detections | 3 rule file(s), 5 specification(s) |
+| Detections | 4 rule file(s), 5 specification(s) |
 | Controls | 2 |
 | Benchmarks | 1 |
 
@@ -162,6 +162,13 @@ The runner has plan and mock adapters only: it does not call your system. To run
 - **Telemetry:** `CloudTrail (cognito-idp SignUp and following calls)`
 - **Implementation:** specification only. Collect the telemetry above first; if you cannot, the detection cannot work yet.
 
+### DET-AI-058 · Internal Scanner or Asset Platform Hands Targets to an Agentic Offensive Framework
+
+- **Severity:** high
+- **Hypothesis:** A host inside the estate logs in to an agentic offensive framework's API and submits targets as tasks: for example a ScopeSentry server posting to /api/auth/login and then /api/tasks on port 8787 (the ARTEX API), or an AI client driving a recon platform through its MCP endpoint. Recon output feeding autonomous exploitation is either an unsanctioned red-team setup or an operator's staging host.
+- **Telemetry:** `proxy or NGFW logs with method, path and destination port`, `netflow from scanner and inventory hosts`, `MCP endpoint access logs and API-key use on recon platforms`
+- **Implementation:** rule file(s): [sigma](../../detections/sigma/det-ai-058-scanner-hands-targets-to-agent-framework.yml). Experimental and not run against real telemetry.
+
 ## 4. Prevent it
 
 - **Agent Decision and Action Telemetry** (`CTRL-AGENT-TELEMETRY`): Log identity, plan step, capability request, authorization result and side effect for agent actions.
@@ -177,7 +184,7 @@ The runner has plan and mock adapters only: it does not call your system. To run
 
 ## 6. Limits of this page
 
-- 5 of 8 detection(s) are specifications, not rules. They say what to look for, not how to query it. Nothing here has been run against real telemetry.
+- 5 of 9 detection(s) are specifications, not rules. They say what to look for, not how to query it. Nothing here has been run against real telemetry.
 - The tests use benign markers and synthetic data. A pass in a lab is not a security rating for a production system.
 - Ecosystem tools and benchmarks help you test and measure. They never support a claim that an actor used the technique.
 
