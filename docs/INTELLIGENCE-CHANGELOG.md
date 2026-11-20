@@ -14,6 +14,7 @@ This changelog records material changes to attribution, confidence, external map
 - New optional `kev_added` field, filled from the KEV feed for every KEV record.
 - Sources: GTIG "Vulnerability discovery and exploitation trends in the AI era" (2026-09-30), Barracuda, DIVD, Zammad, Sysdig and NVD records.
 - Explorer chronology: filters for attacks run with AI agents, the ARTEX family, CISA KEV and flaws found by AI, plus badges on each record.
+- 2026 report v1.2: "O mais quente agora" (last 30 days), Appendix A (2026 incident and leak timeline) and Appendix B (every documented CVE) are generated from the datasets on each build (`hot_days` and `appendix` front matter in `scripts/build_report_pages.py`); print layout compacted (53 A4 pages).
 - `VULN-FREEBSD-CVE-2026-4747` (`ai-discovered`): FreeBSD NFS stack overflow that Anthropic says Claude Mythos Preview found and exploited autonomously.
 - Sources on AI-driven discovery: Anthropic's Project Glasswing and Mythos Preview write-ups (vendor claims), Mozilla, the curl maintainer, VulnCheck (two analyses) and depthfirst.
 - 2026 report v1.1: 19 new chronology rows (ARTEX cases, DIVD, BeyondTrust, Mozilla, Glasswing, depthfirst) and a new subsection on vulnerabilities found by AI, which sets vendor claims next to third-party checks.

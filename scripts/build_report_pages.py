@@ -225,11 +225,103 @@ def kev_chart(vulns: list[dict]) -> str:
             f'<p class="csrc">Fonte: feed JSON do CISA KEV, conferido em cada registro de <code>data/vulnerabilities.json</code>.</p></figure>')
 
 
+# ---- generated sections: what is hot, the incident and leak timeline, every documented CVE ----
+CONF_PT = {"confirmed": "confirmada", "high": "alta", "medium": "média", "low": "baixa", "unverified": "não verificada"}
+KIND_PT = {"intrusion": "intrusão", "fraud": "fraude", "malware": "malware", "supply-chain": "cadeia de suprimentos",
+           "atlas-incident": "incidente (ATLAS)", "unintended-access": "acesso não intencional", "exploitation": "exploração",
+           "model-extraction": "extração de modelo", "exploit-development": "desenvolvimento de exploit", "campaign": "campanha"}
+SKIP_KINDS = {"atlas-exercise", "research-artifact", "research-framework", "defensive-research", "observed-research-case"}
+LEAK = re.compile(r"(?i)exfiltrat|stole|stolen|theft|leak|exposed|dump|records|personal data|credentials? (?:taken|stolen)|card")
+AGENT_TOOLS = {"TOOL-ARTEX", "TOOL-ANTIFOX", "TOOL-PENTAGI", "TOOL-CAIRN", "TOOL-CYBERSTRIKEAI", "TOOL-HEXSTRIKE-AI", "TOOL-STRIX", "TOOL-SCOPESENTRY"}
+REL_PT = {"ai-software": "software de IA", "ai-discovered": "encontrada por IA", "exploited-by-ai-agent": "usada por agente de IA"}
+
+
+def _data(name: str) -> list[dict]:
+    return json.loads((ROOT / "data" / f"{name}.json").read_text(encoding="utf-8"))
+
+
+def _cell(s: str) -> str:
+    return str(s or "").replace("|", "/").replace("\n", " ").strip()
+
+
+def _when(r: dict) -> str:
+    return str(r.get("reported") or r.get("date") or r.get("first_seen") or r.get("published") or "")
+
+
+def generated_sections(fm: dict, cut: str) -> tuple[str, str]:
+    """Markdown for the hot box (top) and the appendices (bottom), from the datasets."""
+    if fm.get("appendix") != "true" and not fm.get("hot_days"):
+        return "", ""
+    inc, cam, vul, rel = _data("incidents"), _data("campaigns"), _data("vulnerabilities"), _data("relationships")
+    src = {s["id"]: s for s in _data("sources")}
+    tools = {t["id"]: t["name"] for t in _data("tools")}
+    used: dict[str, list[str]] = {}
+    for r in rel:
+        if r["relationship"] == "uses-tool":
+            used.setdefault(r["source"], []).append(tools.get(r["target"], r["target"]))
+    agent = {r["source"] for r in rel if (r["relationship"] == "uses-tool" and r["target"] in AGENT_TOOLS)
+             or (r["target"] == "LLMI-T015" and r["relationship"] in ("demonstrates", "uses"))}
+
+    def best(r: dict) -> str:
+        ss = [src[i] for i in r.get("source_ids", []) if i in src and src[i].get("url", "").startswith("https://")]
+        if not ss:
+            return ""
+        s = sorted(ss, key=lambda x: x.get("grade", "Z"))[0]
+        return f"[{_cell(s.get('publisher') or s['name'])}]({s['url']}) ({s.get('grade', '?')})"
+
+    events = []
+    for r in inc + cam:
+        when = _when(r)
+        if not when.startswith("2026") or r.get("kind") in SKIP_KINDS:
+            continue
+        kind = KIND_PT.get(r.get("kind", "campaign"), r.get("kind", "campanha"))
+        flags = [f for f, ok in (("vazamento", bool(LEAK.search(r.get("summary", "")))), ("agente de IA", r["id"] in agent)) if ok]
+        events.append((when, r, kind, flags))
+    events.sort(key=lambda x: x[0], reverse=True)
+    hot = ""
+    if fm.get("hot_days"):
+        days = int(fm["hot_days"])
+        y, m, d = (int(x) for x in cut.split("-"))
+        import datetime as _dt
+        since = (_dt.date(y, m, d) - _dt.timedelta(days=days)).isoformat()
+        rows = [e for e in events if e[0][:10] >= since[:len(e[0][:10])]]
+        kevs = sorted((v for v in vul if v.get("kev_added", "") >= since), key=lambda v: v["kev_added"], reverse=True)
+        hot = (f"## O mais quente agora\n\nGerado dos datasets do repositório na data de corte ({cut}): tudo o que foi divulgado nos últimos {days} dias, "
+               f"do mais recente ao mais antigo. Os títulos ficam em inglês, como nos registros. São {len(rows)} incidentes e campanhas e "
+               + (f"{len(kevs)} entrada nova no CISA KEV.\n\n" if len(kevs) == 1 else f"{len(kevs)} entradas novas no CISA KEV.\n\n")
+               + "| Data | Registro | Tipo | Conf. | Sinais | Ferramentas | Fonte principal |\n| --- | --- | --- | --- | --- | --- | --- |\n"
+               + "".join(f"| {w} | {_cell(r['name'])} | {k} | {CONF_PT.get(r.get('confidence'), '')} | {', '.join(f)} | {', '.join(used.get(r['id'], []))} | {best(r)} |\n" for w, r, k, f in rows)
+               + ("\n**Entradas novas no KEV no período:** " + "; ".join(f"{v['identifiers'][0]} ({_cell(v['package'])}, {v['kev_added']})" for v in kevs) + ".\n" if kevs else ""))
+    app = ""
+    if fm.get("appendix") == "true":
+        app += ("\n## Apêndice A. Linha do tempo de incidentes e vazamentos de 2026\n\n"
+                f"Todos os incidentes e campanhas de 2026 nos datasets ({len(events)} registros), excluídos exercícios e artefatos de pesquisa. "
+                "\"Vazamento\" marca registros cujo resumo descreve exfiltração, roubo ou exposição de dados; \"agente de IA\" marca uso de "
+                "framework ofensivo agêntico ou orquestração por agente. A data é a da divulgação primária quando conhecida. A coluna Conf. "
+                "usa os níveis do repositório, não os graus de fonte.\n\n"
+                "| Data | Registro | Tipo | Confiança | Sinais | Ferramentas | Fonte principal |\n| --- | --- | --- | --- | --- | --- | --- |\n"
+                + "".join(f"| {w} | {_cell(r['name'])} | {k} | {CONF_PT.get(r.get('confidence'), '')} | {', '.join(f)} | {', '.join(used.get(r['id'], []))} | {best(r)} |\n" for w, r, k, f in events))
+        cves = sorted((v for v in vul if any(i.startswith("CVE-") for i in v["identifiers"])), key=lambda v: (v.get("kev_added", ""), v["published"]), reverse=True)
+        app += ("\n## Apêndice B. CVEs documentadas\n\n"
+                f"Todas as {len(cves)} vulnerabilidades com CVE nos datasets, conferidas em NVD, GHSA ou aviso do fornecedor. Primeiro as que estão no "
+                "CISA KEV, pela data de entrada; depois as demais, pela data de publicação. \"Relação com IA\" separa falha em software de IA, falha "
+                "encontrada por agente de IA e falha usada por agente atacante.\n\n"
+                "| CVE | Produto | Falha | Severidade | Corrigida em | KEV | Relação com IA | Publicada |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n"
+                + "".join(f"| {', '.join(i for i in v['identifiers'] if i.startswith('CVE-'))} | {_cell(v['package'])} | {_cell(v['name'])} | {v.get('severity', '')} | "
+                          f"{_cell(', '.join(v.get('patched') or []) or 'sem versão registrada')} | {v.get('kev_added', '')} | {REL_PT.get(v.get('ai_relation', 'ai-software'))} | {v['published']} |\n" for v in cves))
+    return hot, app
+
+
 def page(path: Path, vulns: list[dict], index: list[dict]) -> tuple[str, dict]:
     fm, body = front_matter(path.read_text(encoding="utf-8"))
     link = Linker(vulns)
     title = fm.get("title") or (re.search(r"^#\s+(.+)$", body, re.M) or [None, path.stem])[1]
-    content, toc = render(body, link)
+    cutm = re.search(r"Corte (\d{4}-\d{2}-\d{2})", body)
+    hot, app = generated_sections(fm, cutm.group(1) if cutm else "2026-11-20")
+    if hot:
+        marker = "\n## 1."
+        body = body.replace(marker, "\n" + hot + "\n" + marker, 1) if marker in body else hot + body
+    content, toc = render(body + app, link)
     rel = path.relative_to(ROOT).as_posix()
     kind = "Dossiê" if path.parent.name == "dossiers" else "Relatório de inteligência"
     head = re.search(r'<p class="rpt-head">(.*?)</p>', body)
@@ -310,7 +402,7 @@ blockquote{{margin:20px 0;padding:14px 20px;border-left:4px solid var(--signal);
 .tscroll{{overflow:auto;max-height:78vh;border:1px solid var(--rule-2);border-radius:12px;background:var(--card);box-shadow:var(--shadow-1)}}
 table{{border-collapse:collapse;width:100%;font-size:14px;line-height:1.5}}
 thead th{{position:sticky;top:0;z-index:1;background:var(--paper-2);font:600 11px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);text-align:left;padding:11px 14px;border-bottom:1px solid var(--rule)}}
-td{{padding:11px 14px;border-bottom:1px solid var(--rule-2);vertical-align:top;color:var(--ink-2);overflow-wrap:anywhere}}
+td{{padding:11px 14px;border-bottom:1px solid var(--rule-2);vertical-align:top;color:var(--ink-2);overflow-wrap:break-word}}
 tbody tr:hover td{{background:var(--paper)}}
 tbody tr:last-child td{{border-bottom:0}}
 table.dated td:first-child{{white-space:nowrap}}table.dated td:nth-child(2){{min-width:170px}}
@@ -340,7 +432,7 @@ a.cve.kev:after{{content:"KEV";font:700 9px var(--mono);margin-left:4px;padding:
 @media (max-width:980px){{.layout{{grid-template-columns:1fr;gap:0}}nav.toc{{position:static;max-height:none;border:1px solid var(--rule-2);border-radius:12px;padding:12px 0;margin-bottom:28px;background:var(--card)}}
   .top .acts button:not(.keep){{display:none}}}}
 @media (max-width:640px){{thead{{display:none}}table,tbody,tr,td{{display:block}}tr{{padding:10px 0;border-bottom:1px solid var(--rule)}}td{{border:0;padding:4px 14px}}td:before{{content:attr(data-label);display:block;font:600 10px var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--ink-3)}}.tscroll{{max-height:none}}}}
-@media print{{.top,.progress,nav.toc,.ctas,.tfilter,.copy,.end .others{{display:none!important}}.layout{{display:block;padding:0}}.hero{{-webkit-print-color-adjust:exact;print-color-adjust:exact}}.tscroll{{max-height:none;overflow:visible;box-shadow:none}}article h2{{break-before:page}}tr,.code,.chart{{break-inside:avoid}}a.out:after{{content:" (" attr(href) ")";font-size:10px;color:#666;word-break:break-all}}}}
+@media print{{.top,.progress,nav.toc,.ctas,.tfilter,.copy,.end .others{{display:none!important}}.layout{{display:block;padding:0}}.hero{{-webkit-print-color-adjust:exact;print-color-adjust:exact}}.tscroll{{max-height:none;overflow:visible;box-shadow:none}}article h2{{break-before:page}}tr,.code,.chart{{break-inside:avoid}}a.out:after{{content:" (" attr(href) ")";font-size:9px;color:#666;word-break:break-all}}td a.out:after,li a.out:after{{content:none}}table{{font-size:9.5px;line-height:1.35}}td{{padding:5px 7px;overflow-wrap:break-word}}thead th{{position:static;padding:6px 7px;font-size:8.5px}}article{{font-size:12.5px;line-height:1.55}}article h2{{margin-top:0}}.kpis{{margin-top:18px}}.hero{{padding:36px 28px 26px}}}}
 </style>
 </head>
 <body>
