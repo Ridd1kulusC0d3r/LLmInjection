@@ -2,6 +2,24 @@
 
 This changelog records material changes to attribution, confidence, external mappings and structured intelligence. Ordinary prose edits do not belong here.
 
+## 2026-11-20 — ATR CVE candidates triaged: 22 AI vulnerabilities promoted
+
+### Added
+
+- 22 vulnerability records from the 25 `FEED-ATR-RULE-COMMITS` candidates, each with its own source (the GitHub advisory when one exists, otherwise the NVD record, grade A): LiteLLM (2), Flowise (3), Claude Code (2), mcp-server-git (2), CrewAI (2), mcp-remote, MCP Inspector, Cursor, GitHub Copilot / Visual Studio, Microsoft 365 Copilot, EmailGPT, MLflow, Ray, nginx-ui (MCP integration), Zen MCP Server and ChuanhuChatGPT. The dataset now holds 31 vulnerabilities and 154 sources.
+- 25 `demonstrates` relationships from those records to LLMInjection techniques.
+
+### Changed
+
+- LLMI-T002 and LLMI-T020 move from `research-demonstrated` to `disclosed-vulnerability` (Microsoft 365 Copilot CVE-2025-32711 and ChuanhuChatGPT CVE-2024-3402).
+- The 25 queue items are closed: 22 `accepted`, 3 `rejected` (Ruby on Rails CVE-2019-5418, Adminer CVE-2021-21311 and Achievo CVE-2008-2742 are not AI systems; ATR cites them as pattern references).
+
+### Confidence notes
+
+- Every record states only what the NVD record or the advisory says. KEV and EPSS were read on 2026-11-20 from the CISA catalog and FIRST; only the two LiteLLM CVEs in this set are in KEV.
+- Affected and patched versions follow the GitHub advisory where it differs from NVD, and the record says so (Flowise CVE-2025-8943: NVD gives before 3.0.1, the advisory lists 3.0.5 as last affected). Empty `patched` means no fixed version is published, not that none exists.
+- The technique links are an analyst mapping, recorded at `medium` confidence. A disclosed vulnerability is not evidence of exploitation.
+
 ## 2026-11-10 — Adversary use of AI: tracker candidates read and promoted
 
 ### Added

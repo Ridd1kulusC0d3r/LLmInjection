@@ -1415,5 +1415,225 @@
     "url": "https://cdn.prod.website-files.com/69944dd945f20ca4a27a7c47/69d8bb5aea59e31efb3b8a7f_Tech_Report_ai_breach_mex_gov.pdf",
     "published": "2026-04-10",
     "last_verified": "2026-11-10"
+  },
+  {
+    "id": "SRC-NVD-CVE-2026-42271",
+    "type": "source",
+    "name": "CVE-2026-42271: LiteLLM proxy command injection in two endpoints",
+    "publisher": "GitHub Advisory Database",
+    "grade": "A",
+    "role": "security-advisory",
+    "url": "https://github.com/advisories/GHSA-v4p8-mg3p-g94g",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-NVD-CVE-2026-42208",
+    "type": "source",
+    "name": "CVE-2026-42208: LiteLLM proxy SQL injection via authorization header",
+    "publisher": "GitHub Advisory Database",
+    "grade": "A",
+    "role": "security-advisory",
+    "url": "https://github.com/advisories/GHSA-r75f-5x8p-qvmc",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-NVD-CVE-2025-6514",
+    "type": "source",
+    "name": "CVE-2025-6514: mcp-remote OS command injection from a malicious MCP server",
+    "publisher": "GitHub Advisory Database",
+    "grade": "A",
+    "role": "security-advisory",
+    "url": "https://github.com/advisories/GHSA-6xpm-ggf7-wc3p",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-NVD-CVE-2025-59528",
+    "type": "source",
+    "name": "CVE-2025-59528: Flowise CustomMCP remote code execution",
+    "publisher": "GitHub Advisory Database",
+    "grade": "A",
+    "role": "security-advisory",
+    "url": "https://github.com/advisories/GHSA-3gcm-f6qx-ff7p",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-NVD-CVE-2025-59536",
+    "type": "source",
+    "name": "CVE-2025-59536: Claude Code code execution before the startup trust dialog",
+    "publisher": "GitHub Advisory Database",
+    "grade": "A",
+    "role": "security-advisory",
+    "url": "https://github.com/advisories/GHSA-4fgq-fpq9-mr3g",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-NVD-CVE-2025-8943",
+    "type": "source",
+    "name": "CVE-2025-8943: Flowise Custom MCP OS command execution without authentication",
+    "publisher": "GitHub Advisory Database",
+    "grade": "A",
+    "role": "security-advisory",
+    "url": "https://github.com/advisories/GHSA-2vv2-3x8x-4gv7",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-NVD-CVE-2023-1177",
+    "type": "source",
+    "name": "CVE-2023-1177: MLflow path traversal",
+    "publisher": "GitHub Advisory Database",
+    "grade": "A",
+    "role": "security-advisory",
+    "url": "https://github.com/advisories/GHSA-xg73-94fp-g449",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-NVD-CVE-2025-32711",
+    "type": "source",
+    "name": "CVE-2025-32711: Microsoft 365 Copilot AI command injection (information disclosure)",
+    "publisher": "NIST National Vulnerability Database",
+    "grade": "A",
+    "role": "security-advisory",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-32711",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-NVD-CVE-2025-53773",
+    "type": "source",
+    "name": "CVE-2025-53773: GitHub Copilot and Visual Studio command injection",
+    "publisher": "NIST National Vulnerability Database",
+    "grade": "A",
+    "role": "security-advisory",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-53773",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-NVD-CVE-2026-21852",
+    "type": "source",
+    "name": "CVE-2026-21852: Claude Code project-load flow credential exfiltration",
+    "publisher": "GitHub Advisory Database",
+    "grade": "A",
+    "role": "security-advisory",
+    "url": "https://github.com/advisories/GHSA-jh7p-qr78-84p7",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-NVD-CVE-2024-5184",
+    "type": "source",
+    "name": "CVE-2024-5184: EmailGPT direct prompt injection",
+    "publisher": "NIST National Vulnerability Database",
+    "grade": "A",
+    "role": "security-advisory",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-5184",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-NVD-CVE-2024-8181",
+    "type": "source",
+    "name": "CVE-2024-8181: Flowise 1.8.2 authentication bypass",
+    "publisher": "GitHub Advisory Database",
+    "grade": "A",
+    "role": "security-advisory",
+    "url": "https://github.com/advisories/GHSA-2q4w-x8h2-2fvh",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-NVD-CVE-2025-49596",
+    "type": "source",
+    "name": "CVE-2025-49596: MCP Inspector unauthenticated proxy remote code execution",
+    "publisher": "GitHub Advisory Database",
+    "grade": "A",
+    "role": "security-advisory",
+    "url": "https://github.com/advisories/GHSA-7f8r-222p-6f5g",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-NVD-CVE-2023-6021",
+    "type": "source",
+    "name": "CVE-2023-6021: Ray log API local file inclusion",
+    "publisher": "GitHub Advisory Database",
+    "grade": "A",
+    "role": "security-advisory",
+    "url": "https://github.com/advisories/GHSA-3pww-qvr8-6mhp",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-NVD-CVE-2025-68143",
+    "type": "source",
+    "name": "CVE-2025-68143: mcp-server-git path traversal in git_init",
+    "publisher": "GitHub Advisory Database",
+    "grade": "A",
+    "role": "security-advisory",
+    "url": "https://github.com/advisories/GHSA-5cgr-j3jf-jw3v",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-NVD-CVE-2025-68144",
+    "type": "source",
+    "name": "CVE-2025-68144: mcp-server-git argument injection in git_diff and git_checkout",
+    "publisher": "GitHub Advisory Database",
+    "grade": "A",
+    "role": "security-advisory",
+    "url": "https://github.com/advisories/GHSA-9xwc-hfwc-8w59",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-NVD-CVE-2025-54136",
+    "type": "source",
+    "name": "CVE-2025-54136: Cursor MCP configuration persistent code execution",
+    "publisher": "GitHub Advisory Database",
+    "grade": "A",
+    "role": "security-advisory",
+    "url": "https://github.com/advisories/GHSA-24mc-g4xr-4395",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-NVD-CVE-2026-33032",
+    "type": "source",
+    "name": "CVE-2026-33032: nginx-ui MCP integration exposed without authentication",
+    "publisher": "GitHub Advisory Database",
+    "grade": "A",
+    "role": "security-advisory",
+    "url": "https://github.com/advisories/GHSA-h6c2-x2m2-mwhf",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-NVD-CVE-2024-3402",
+    "type": "source",
+    "name": "CVE-2024-3402: ChuanhuChatGPT stored cross-site scripting",
+    "publisher": "NIST National Vulnerability Database",
+    "grade": "A",
+    "role": "security-advisory",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-3402",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-NVD-CVE-2025-66689",
+    "type": "source",
+    "name": "CVE-2025-66689: Zen MCP Server path traversal",
+    "publisher": "NIST National Vulnerability Database",
+    "grade": "A",
+    "role": "security-advisory",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-66689",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-NVD-CVE-2026-2285",
+    "type": "source",
+    "name": "CVE-2026-2285: CrewAI JSON loader arbitrary local file read",
+    "publisher": "NIST National Vulnerability Database",
+    "grade": "A",
+    "role": "security-advisory",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2285",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-NVD-CVE-2026-2286",
+    "type": "source",
+    "name": "CVE-2026-2286: CrewAI RAG tool server-side request forgery",
+    "publisher": "NIST National Vulnerability Database",
+    "grade": "A",
+    "role": "security-advisory",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2286",
+    "last_verified": "2026-11-20"
   }
 ]

@@ -13,7 +13,7 @@
 
 | Layer | Status |
 |---|---|
-| Evidence | 3 record(s), 3 publisher(s), best grade A, newest 2026 |
+| Evidence | 5 record(s), 4 publisher(s), best grade A, newest 2026 |
 | Safe tests | 1 |
 | Detections | 0 rule file(s), 1 specification(s) |
 | Controls | 1 |
@@ -30,6 +30,8 @@ What the repository links to it:
 - 2026 · [TeamPCP LiteLLM supply-chain compromise](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-TEAMPCP-LITELLM) (campaign, confirmed)
 - 2024-05-06 · [LLM Jacking (AML.CS0030)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-ATLAS-CS0030) (atlas-incident, high)
 - 2024-12-01 · [Storm-2139 Azure OpenAI Guardrail Bypass (AML.CS0057)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-ATLAS-CS0057) (atlas-incident, high)
+- 2026-05-08 · [LiteLLM proxy SQL injection via authorization header](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-LITELLM-CVE-2026-42208) (sql-injection, confirmed)
+- 2026-05-08 · [LiteLLM proxy command injection in two endpoints](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-LITELLM-CVE-2026-42271) (command-injection, confirmed)
 
 Actors whose campaigns use it: TeamPCP. Vendor labels are kept as published and never merged without evidence.
 

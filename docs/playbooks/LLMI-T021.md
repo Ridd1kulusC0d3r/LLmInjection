@@ -13,7 +13,7 @@
 
 | Layer | Status |
 |---|---|
-| Evidence | 2 record(s), 1 publisher(s), best grade A, newest 2025-09-01 |
+| Evidence | 4 record(s), 2 publisher(s), best grade A, newest 2025-09-01 |
 | Safe tests | 1 |
 | Detections | 0 rule file(s), 2 specification(s) |
 | Controls | 3 |
@@ -29,6 +29,8 @@ What the repository links to it:
 
 - 2025-06-24 · [Data Exfiltration via an MCP Server used by Cursor (AML.CS0045)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-ATLAS-CS0045) (atlas-exercise, confirmed)
 - 2025-09-01 · [Poisoned Postmark MCP Server Email Exfiltration (AML.CS0053)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-ATLAS-CS0053) (atlas-incident, high)
+- 2025-08-02 · [Cursor MCP configuration persistent code execution](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-CURSOR-CVE-2025-54136) (remote-code-execution, confirmed)
+- 2025-07-09 · [mcp-remote OS command injection from a malicious MCP server](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-MCP-REMOTE-CVE-2025-6514) (command-injection, confirmed)
 
 ## 2. Test it safely
 
@@ -83,7 +85,6 @@ The runner has plan and mock adapters only: it does not call your system. To run
 
 ## 6. Limits of this page
 
-- All the evidence comes from one publisher (MITRE). Treat it as one voice until a second source confirms it.
 - 2 of 2 detection(s) are specifications, not rules. They say what to look for, not how to query it. Nothing here has been run against real telemetry.
 - No benchmark maps to it, so there is no public yardstick for how well a defence performs.
 - The tests use benign markers and synthetic data. A pass in a lab is not a security rating for a production system.

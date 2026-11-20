@@ -218,5 +218,536 @@
     "source_ids": [
       "SRC-OX-MCP-STDIO"
     ]
+  },
+  {
+    "id": "VULN-LITELLM-CVE-2026-42271",
+    "type": "vulnerability",
+    "name": "LiteLLM proxy command injection in two endpoints",
+    "kind": "command-injection",
+    "package": "litellm",
+    "ecosystem": "PyPI",
+    "identifiers": [
+      "CVE-2026-42271",
+      "GHSA-v4p8-mg3p-g94g"
+    ],
+    "severity": "high",
+    "affected": [
+      ">=1.74.2 <1.83.7"
+    ],
+    "patched": [
+      "1.83.7"
+    ],
+    "published": "2026-05-08",
+    "confidence": "confirmed",
+    "summary": "Two LiteLLM proxy endpoints passed caller input to an OS command, giving command execution on the AI gateway host; fixed in 1.83.7. In CISA KEV since 2026-06-08.",
+    "source_ids": [
+      "SRC-NVD-CVE-2026-42271"
+    ]
+  },
+  {
+    "id": "VULN-LITELLM-CVE-2026-42208",
+    "type": "vulnerability",
+    "name": "LiteLLM proxy SQL injection via authorization header",
+    "kind": "sql-injection",
+    "package": "litellm",
+    "ecosystem": "PyPI",
+    "identifiers": [
+      "CVE-2026-42208",
+      "GHSA-r75f-5x8p-qvmc"
+    ],
+    "severity": "critical",
+    "affected": [
+      ">=1.81.16 <1.83.7"
+    ],
+    "patched": [
+      "1.83.7"
+    ],
+    "published": "2026-05-08",
+    "confidence": "confirmed",
+    "summary": "A database query in the LiteLLM proxy was built from the authorization header, allowing SQL injection against the gateway's key store; fixed in 1.83.7. In CISA KEV since 2026-05-08.",
+    "source_ids": [
+      "SRC-NVD-CVE-2026-42208"
+    ]
+  },
+  {
+    "id": "VULN-MCP-REMOTE-CVE-2025-6514",
+    "type": "vulnerability",
+    "name": "mcp-remote OS command injection from a malicious MCP server",
+    "kind": "command-injection",
+    "package": "mcp-remote",
+    "ecosystem": "npm",
+    "identifiers": [
+      "CVE-2025-6514",
+      "GHSA-6xpm-ggf7-wc3p"
+    ],
+    "severity": "critical",
+    "affected": [
+      ">=0.0.5 <0.1.16"
+    ],
+    "patched": [
+      "0.1.16"
+    ],
+    "published": "2025-07-09",
+    "confidence": "confirmed",
+    "summary": "mcp-remote passed a crafted authorization_endpoint value returned by an untrusted MCP server to the operating system, so connecting to a malicious server could run commands on the client. Fixed in 0.1.16.",
+    "source_ids": [
+      "SRC-NVD-CVE-2025-6514"
+    ]
+  },
+  {
+    "id": "VULN-FLOWISE-CVE-2025-59528",
+    "type": "vulnerability",
+    "name": "Flowise CustomMCP remote code execution",
+    "kind": "remote-code-execution",
+    "package": "flowise",
+    "ecosystem": "npm",
+    "identifiers": [
+      "CVE-2025-59528",
+      "GHSA-3gcm-f6qx-ff7p"
+    ],
+    "severity": "critical",
+    "affected": [
+      "3.0.5"
+    ],
+    "patched": [
+      "3.0.6"
+    ],
+    "published": "2025-09-22",
+    "confidence": "confirmed",
+    "summary": "Flowise 3.0.5 evaluated user-supplied CustomMCP configuration as code, allowing unauthenticated remote code execution on the LLM-flow server.",
+    "source_ids": [
+      "SRC-NVD-CVE-2025-59528"
+    ]
+  },
+  {
+    "id": "VULN-CLAUDE-CODE-CVE-2025-59536",
+    "type": "vulnerability",
+    "name": "Claude Code code execution before the startup trust dialog",
+    "kind": "code-injection",
+    "package": "@anthropic-ai/claude-code",
+    "ecosystem": "npm",
+    "identifiers": [
+      "CVE-2025-59536",
+      "GHSA-4fgq-fpq9-mr3g"
+    ],
+    "severity": "high",
+    "affected": [
+      "<1.0.111"
+    ],
+    "patched": [
+      "1.0.111"
+    ],
+    "published": "2025-10-03",
+    "confidence": "confirmed",
+    "summary": "A bug in Claude Code's startup trust dialog let a malicious project run code before the user accepted the trust prompt; fixed in 1.0.111.",
+    "source_ids": [
+      "SRC-NVD-CVE-2025-59536"
+    ]
+  },
+  {
+    "id": "VULN-FLOWISE-CVE-2025-8943",
+    "type": "vulnerability",
+    "name": "Flowise Custom MCP OS command execution without authentication",
+    "kind": "remote-code-execution",
+    "package": "flowise",
+    "ecosystem": "npm",
+    "identifiers": [
+      "CVE-2025-8943",
+      "GHSA-2vv2-3x8x-4gv7"
+    ],
+    "severity": "critical",
+    "affected": [
+      "<=3.0.5 (GHSA; NVD lists <3.0.1)"
+    ],
+    "patched": [],
+    "published": "2025-08-14",
+    "confidence": "confirmed",
+    "summary": "Flowise's Custom MCP feature, designed to launch local MCP servers with commands such as npx, could be reached without authentication, giving OS command execution (NVD gives versions before 3.0.1; the GitHub advisory lists 3.0.5 as last affected).",
+    "source_ids": [
+      "SRC-NVD-CVE-2025-8943"
+    ]
+  },
+  {
+    "id": "VULN-MLFLOW-CVE-2023-1177",
+    "type": "vulnerability",
+    "name": "MLflow path traversal",
+    "kind": "path-traversal",
+    "package": "mlflow",
+    "ecosystem": "PyPI",
+    "identifiers": [
+      "CVE-2023-1177",
+      "GHSA-xg73-94fp-g449"
+    ],
+    "severity": "critical",
+    "affected": [
+      "<2.2.1"
+    ],
+    "patched": [
+      "2.2.1"
+    ],
+    "published": "2023-03-24",
+    "confidence": "confirmed",
+    "summary": "A path traversal in MLflow before 2.2.1 allowed reading files outside the artifact store on the ML tracking server.",
+    "source_ids": [
+      "SRC-NVD-CVE-2023-1177"
+    ]
+  },
+  {
+    "id": "VULN-M365-COPILOT-CVE-2025-32711",
+    "type": "vulnerability",
+    "name": "Microsoft 365 Copilot AI command injection (information disclosure)",
+    "kind": "prompt-injection",
+    "package": "Microsoft 365 Copilot",
+    "ecosystem": "SaaS",
+    "identifiers": [
+      "CVE-2025-32711"
+    ],
+    "severity": "critical",
+    "affected": [
+      "service (fixed server-side)"
+    ],
+    "patched": [
+      "service fix"
+    ],
+    "published": "2025-06-11",
+    "confidence": "confirmed",
+    "summary": "Microsoft describes AI command injection in Microsoft 365 Copilot that let an unauthorized attacker disclose information over a network; fixed by Microsoft in the service.",
+    "source_ids": [
+      "SRC-NVD-CVE-2025-32711"
+    ]
+  },
+  {
+    "id": "VULN-GITHUB-COPILOT-CVE-2025-53773",
+    "type": "vulnerability",
+    "name": "GitHub Copilot and Visual Studio command injection",
+    "kind": "command-injection",
+    "package": "Visual Studio 2022 / GitHub Copilot",
+    "ecosystem": "Microsoft",
+    "identifiers": [
+      "CVE-2025-53773"
+    ],
+    "severity": "high",
+    "affected": [
+      ">=17.14.0 <17.14.12"
+    ],
+    "patched": [
+      "17.14.12"
+    ],
+    "published": "2025-08-12",
+    "confidence": "confirmed",
+    "summary": "Improper neutralization in GitHub Copilot and Visual Studio 2022 allowed command injection and local code execution; fixed in Visual Studio 17.14.12.",
+    "source_ids": [
+      "SRC-NVD-CVE-2025-53773"
+    ]
+  },
+  {
+    "id": "VULN-CLAUDE-CODE-CVE-2026-21852",
+    "type": "vulnerability",
+    "name": "Claude Code project-load flow credential exfiltration",
+    "kind": "credential-exposure",
+    "package": "@anthropic-ai/claude-code",
+    "ecosystem": "npm",
+    "identifiers": [
+      "CVE-2026-21852",
+      "GHSA-jh7p-qr78-84p7"
+    ],
+    "severity": "high",
+    "affected": [
+      "<2.0.65"
+    ],
+    "patched": [
+      "2.0.65"
+    ],
+    "published": "2026-01-21",
+    "confidence": "confirmed",
+    "summary": "Claude Code's project-load flow let a malicious repository exfiltrate data, including API credentials, before the user trusted the project; fixed in 2.0.65.",
+    "source_ids": [
+      "SRC-NVD-CVE-2026-21852"
+    ]
+  },
+  {
+    "id": "VULN-EMAILGPT-CVE-2024-5184",
+    "type": "vulnerability",
+    "name": "EmailGPT direct prompt injection",
+    "kind": "prompt-injection",
+    "package": "EmailGPT",
+    "ecosystem": "service",
+    "identifiers": [
+      "CVE-2024-5184"
+    ],
+    "severity": "moderate",
+    "affected": [
+      "service (no fix announced)"
+    ],
+    "patched": [],
+    "published": "2024-06-05",
+    "confidence": "confirmed",
+    "summary": "The EmailGPT service let a user inject a direct prompt that took over the service logic and could expose system instructions.",
+    "source_ids": [
+      "SRC-NVD-CVE-2024-5184"
+    ]
+  },
+  {
+    "id": "VULN-FLOWISE-CVE-2024-8181",
+    "type": "vulnerability",
+    "name": "Flowise 1.8.2 authentication bypass",
+    "kind": "authentication-bypass",
+    "package": "flowise",
+    "ecosystem": "npm",
+    "identifiers": [
+      "CVE-2024-8181",
+      "GHSA-2q4w-x8h2-2fvh"
+    ],
+    "severity": "critical",
+    "affected": [
+      "<=1.8.2"
+    ],
+    "patched": [],
+    "published": "2024-08-27",
+    "confidence": "confirmed",
+    "summary": "Flowise 1.8.2 allowed a remote, unauthenticated attacker to reach API endpoints as an administrator.",
+    "source_ids": [
+      "SRC-NVD-CVE-2024-8181"
+    ]
+  },
+  {
+    "id": "VULN-MCP-INSPECTOR-CVE-2025-49596",
+    "type": "vulnerability",
+    "name": "MCP Inspector unauthenticated proxy remote code execution",
+    "kind": "remote-code-execution",
+    "package": "@modelcontextprotocol/inspector",
+    "ecosystem": "npm",
+    "identifiers": [
+      "CVE-2025-49596",
+      "GHSA-7f8r-222p-6f5g"
+    ],
+    "severity": "critical",
+    "affected": [
+      "<0.14.1"
+    ],
+    "patched": [
+      "0.14.1"
+    ],
+    "published": "2025-06-13",
+    "confidence": "confirmed",
+    "summary": "MCP Inspector below 0.14.1 had no authentication between the browser client and its local proxy, so a web page could make it launch commands; fixed in 0.14.1.",
+    "source_ids": [
+      "SRC-NVD-CVE-2025-49596"
+    ]
+  },
+  {
+    "id": "VULN-RAY-CVE-2023-6021",
+    "type": "vulnerability",
+    "name": "Ray log API local file inclusion",
+    "kind": "path-traversal",
+    "package": "ray",
+    "ecosystem": "PyPI",
+    "identifiers": [
+      "CVE-2023-6021",
+      "GHSA-3pww-qvr8-6mhp"
+    ],
+    "severity": "high",
+    "affected": [
+      "<2.8.1"
+    ],
+    "patched": [
+      "2.8.1"
+    ],
+    "published": "2023-11-16",
+    "confidence": "confirmed",
+    "summary": "Ray's log API endpoint let unauthenticated callers read any file on the server; the issue is fixed in 2.8.1.",
+    "source_ids": [
+      "SRC-NVD-CVE-2023-6021"
+    ]
+  },
+  {
+    "id": "VULN-MCP-SERVER-GIT-CVE-2025-68143",
+    "type": "vulnerability",
+    "name": "mcp-server-git path traversal in git_init",
+    "kind": "path-traversal",
+    "package": "mcp-server-git",
+    "ecosystem": "PyPI",
+    "identifiers": [
+      "CVE-2025-68143",
+      "GHSA-5cgr-j3jf-jw3v"
+    ],
+    "severity": "high",
+    "affected": [
+      "<2025.9.25"
+    ],
+    "patched": [
+      "2025.9.25"
+    ],
+    "published": "2025-12-17",
+    "confidence": "confirmed",
+    "summary": "The reference MCP git server accepted arbitrary filesystem paths in git_init, letting a model-issued tool call create repositories outside the intended directory.",
+    "source_ids": [
+      "SRC-NVD-CVE-2025-68143"
+    ]
+  },
+  {
+    "id": "VULN-MCP-SERVER-GIT-CVE-2025-68144",
+    "type": "vulnerability",
+    "name": "mcp-server-git argument injection in git_diff and git_checkout",
+    "kind": "argument-injection",
+    "package": "mcp-server-git",
+    "ecosystem": "PyPI",
+    "identifiers": [
+      "CVE-2025-68144",
+      "GHSA-9xwc-hfwc-8w59"
+    ],
+    "severity": "high",
+    "affected": [
+      "<2025.12.18"
+    ],
+    "patched": [
+      "2025.12.18"
+    ],
+    "published": "2025-12-17",
+    "confidence": "confirmed",
+    "summary": "mcp-server-git passed user-controlled arguments from git_diff and git_checkout straight to the git CLI, so a tool call could inject git options.",
+    "source_ids": [
+      "SRC-NVD-CVE-2025-68144"
+    ]
+  },
+  {
+    "id": "VULN-CURSOR-CVE-2025-54136",
+    "type": "vulnerability",
+    "name": "Cursor MCP configuration persistent code execution",
+    "kind": "remote-code-execution",
+    "package": "Cursor",
+    "ecosystem": "desktop",
+    "identifiers": [
+      "CVE-2025-54136",
+      "GHSA-24mc-g4xr-4395"
+    ],
+    "severity": "high",
+    "affected": [
+      "<=1.2.4"
+    ],
+    "patched": [
+      "1.3"
+    ],
+    "published": "2025-08-02",
+    "confidence": "confirmed",
+    "summary": "Cursor 1.2.4 and below trusted a previously approved MCP configuration after it was modified, giving attackers persistent code execution through a shared repository; fixed in 1.3.",
+    "source_ids": [
+      "SRC-NVD-CVE-2025-54136"
+    ]
+  },
+  {
+    "id": "VULN-NGINX-UI-CVE-2026-33032",
+    "type": "vulnerability",
+    "name": "nginx-ui MCP integration exposed without authentication",
+    "kind": "missing-authentication",
+    "package": "nginx-ui",
+    "ecosystem": "Go",
+    "identifiers": [
+      "CVE-2026-33032",
+      "GHSA-h6c2-x2m2-mwhf"
+    ],
+    "severity": "critical",
+    "affected": [
+      "<=2.3.5"
+    ],
+    "patched": [],
+    "published": "2026-03-30",
+    "confidence": "confirmed",
+    "summary": "The MCP integration in nginx-ui 2.3.5 and earlier exposed management tools without authentication, letting a client drive the web server's configuration.",
+    "source_ids": [
+      "SRC-NVD-CVE-2026-33032"
+    ]
+  },
+  {
+    "id": "VULN-CHUANHUCHATGPT-CVE-2024-3402",
+    "type": "vulnerability",
+    "name": "ChuanhuChatGPT stored cross-site scripting",
+    "kind": "improper-output-handling",
+    "package": "chuanhuchatgpt",
+    "ecosystem": "GitHub",
+    "identifiers": [
+      "CVE-2024-3402"
+    ],
+    "severity": "moderate",
+    "affected": [
+      "<20240918"
+    ],
+    "patched": [
+      "20240918"
+    ],
+    "published": "2024-06-06",
+    "confidence": "confirmed",
+    "summary": "ChuanhuChatGPT did not sanitize chat content before rendering it, allowing stored cross-site scripting in the LLM chat interface.",
+    "source_ids": [
+      "SRC-NVD-CVE-2024-3402"
+    ]
+  },
+  {
+    "id": "VULN-ZEN-MCP-CVE-2025-66689",
+    "type": "vulnerability",
+    "name": "Zen MCP Server path traversal",
+    "kind": "path-traversal",
+    "package": "zen-mcp-server",
+    "ecosystem": "GitHub",
+    "identifiers": [
+      "CVE-2025-66689"
+    ],
+    "severity": "moderate",
+    "affected": [
+      "<9.8.2"
+    ],
+    "patched": [
+      "9.8.2"
+    ],
+    "published": "2026-01-12",
+    "confidence": "confirmed",
+    "summary": "Zen MCP Server (PAL MCP Server) before 9.8.2 let authenticated callers read arbitrary files through a path traversal in its tool inputs.",
+    "source_ids": [
+      "SRC-NVD-CVE-2025-66689"
+    ]
+  },
+  {
+    "id": "VULN-CREWAI-CVE-2026-2285",
+    "type": "vulnerability",
+    "name": "CrewAI JSON loader arbitrary local file read",
+    "kind": "path-traversal",
+    "package": "crewai",
+    "ecosystem": "PyPI",
+    "identifiers": [
+      "CVE-2026-2285"
+    ],
+    "severity": "high",
+    "affected": [
+      "1.0.0"
+    ],
+    "patched": [],
+    "published": "2026-03-30",
+    "confidence": "confirmed",
+    "summary": "CrewAI's JSON loader tool read files without path validation, so an agent could be steered into reading files on the host.",
+    "source_ids": [
+      "SRC-NVD-CVE-2026-2285"
+    ]
+  },
+  {
+    "id": "VULN-CREWAI-CVE-2026-2286",
+    "type": "vulnerability",
+    "name": "CrewAI RAG tool server-side request forgery",
+    "kind": "server-side-request-forgery",
+    "package": "crewai",
+    "ecosystem": "PyPI",
+    "identifiers": [
+      "CVE-2026-2286"
+    ],
+    "severity": "critical",
+    "affected": [
+      "1.0.0"
+    ],
+    "patched": [],
+    "published": "2026-03-30",
+    "confidence": "confirmed",
+    "summary": "CrewAI's RAG search tools fetched URLs without restriction, enabling server-side request forgery against internal and cloud metadata services.",
+    "source_ids": [
+      "SRC-NVD-CVE-2026-2286"
+    ]
   }
 ]

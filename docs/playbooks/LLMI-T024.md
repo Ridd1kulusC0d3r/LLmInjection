@@ -13,7 +13,7 @@
 
 | Layer | Status |
 |---|---|
-| Evidence | 3 record(s), 3 publisher(s), best grade A, newest 2026 |
+| Evidence | 11 record(s), 4 publisher(s), best grade A, newest 2026 |
 | Safe tests | 1 |
 | Detections | 0 rule file(s), 1 specification(s) |
 | Controls | 2 |
@@ -30,6 +30,14 @@ What the repository links to it:
 - 2026 · [JADEPUFFER agentic database extortion](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-JADEPUFFER-AGENTIC-EXTORTION) (campaign, high)
 - 2026-07 · [knaithe autonomous exploitation with DeepSeek and Hermes Agent](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-KNAITHE-HERMES-AUTONOMOUS) (campaign, confirmed)
 - 2026-05-07 · [Threat Actor Uses a DeepSeek-Powered Hermes Agent in Langflow and n8n Exploitation Attempts (AML.CS0070)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-ATLAS-CS0070) (atlas-incident, high)
+- 2024-08-27 · [Flowise 1.8.2 authentication bypass](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-FLOWISE-CVE-2024-8181) (authentication-bypass, confirmed)
+- 2025-09-22 · [Flowise CustomMCP remote code execution](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-FLOWISE-CVE-2025-59528) (remote-code-execution, confirmed)
+- 2025-08-14 · [Flowise Custom MCP OS command execution without authentication](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-FLOWISE-CVE-2025-8943) (remote-code-execution, confirmed)
+- 2026-05-08 · [LiteLLM proxy command injection in two endpoints](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-LITELLM-CVE-2026-42271) (command-injection, confirmed)
+- 2025-06-13 · [MCP Inspector unauthenticated proxy remote code execution](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-MCP-INSPECTOR-CVE-2025-49596) (remote-code-execution, confirmed)
+- 2023-03-24 · [MLflow path traversal](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-MLFLOW-CVE-2023-1177) (path-traversal, confirmed)
+- 2026-03-30 · [nginx-ui MCP integration exposed without authentication](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-NGINX-UI-CVE-2026-33032) (missing-authentication, confirmed)
+- 2023-11-16 · [Ray log API local file inclusion](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-RAY-CVE-2023-6021) (path-traversal, confirmed)
 
 Actors whose campaigns use it: JADEPUFFER, knaithe. Vendor labels are kept as published and never merged without evidence.
 

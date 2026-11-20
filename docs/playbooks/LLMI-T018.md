@@ -13,7 +13,7 @@
 
 | Layer | Status |
 |---|---|
-| Evidence | 2 record(s), 2 publisher(s), best grade A, newest 2026 |
+| Evidence | 6 record(s), 4 publisher(s), best grade A, newest 2026 |
 | Safe tests | 1 |
 | Detections | 1 rule file(s), 5 specification(s) |
 | Controls | 2 |
@@ -29,6 +29,10 @@ What the repository links to it:
 
 - 2025-03-18 · [Rules File Backdoor: Supply Chain Attack on AI Coding Assistants (AML.CS0041)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-ATLAS-CS0041) (atlas-exercise, confirmed)
 - 2026 · [DUSTMAKER credential stealer targeting AI coding-assistant workspaces](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-DUSTMAKER) (malware, confirmed)
+- 2025-10-03 · [Claude Code code execution before the startup trust dialog](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-CLAUDE-CODE-CVE-2025-59536) (code-injection, confirmed)
+- 2026-01-21 · [Claude Code project-load flow credential exfiltration](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-CLAUDE-CODE-CVE-2026-21852) (credential-exposure, confirmed)
+- 2025-08-02 · [Cursor MCP configuration persistent code execution](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-CURSOR-CVE-2025-54136) (remote-code-execution, confirmed)
+- 2025-08-12 · [GitHub Copilot and Visual Studio command injection](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-GITHUB-COPILOT-CVE-2025-53773) (command-injection, confirmed)
 
 ## 2. Test it safely
 

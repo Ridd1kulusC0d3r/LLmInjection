@@ -4981,5 +4981,280 @@
     "evidence_sources": [
       "SRC-UNIT42-LATAM-AI"
     ]
+  },
+  {
+    "id": "REL-452",
+    "type": "relationship",
+    "source": "VULN-LITELLM-CVE-2026-42271",
+    "relationship": "demonstrates",
+    "target": "LLMI-T016",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-NVD-CVE-2026-42271"
+    ]
+  },
+  {
+    "id": "REL-453",
+    "type": "relationship",
+    "source": "VULN-LITELLM-CVE-2026-42271",
+    "relationship": "demonstrates",
+    "target": "LLMI-T024",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-NVD-CVE-2026-42271"
+    ]
+  },
+  {
+    "id": "REL-454",
+    "type": "relationship",
+    "source": "VULN-LITELLM-CVE-2026-42208",
+    "relationship": "demonstrates",
+    "target": "LLMI-T016",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-NVD-CVE-2026-42208"
+    ]
+  },
+  {
+    "id": "REL-455",
+    "type": "relationship",
+    "source": "VULN-MCP-REMOTE-CVE-2025-6514",
+    "relationship": "demonstrates",
+    "target": "LLMI-T021",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-NVD-CVE-2025-6514"
+    ]
+  },
+  {
+    "id": "REL-456",
+    "type": "relationship",
+    "source": "VULN-FLOWISE-CVE-2025-59528",
+    "relationship": "demonstrates",
+    "target": "LLMI-T024",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-NVD-CVE-2025-59528"
+    ]
+  },
+  {
+    "id": "REL-457",
+    "type": "relationship",
+    "source": "VULN-CLAUDE-CODE-CVE-2025-59536",
+    "relationship": "demonstrates",
+    "target": "LLMI-T018",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-NVD-CVE-2025-59536"
+    ]
+  },
+  {
+    "id": "REL-458",
+    "type": "relationship",
+    "source": "VULN-FLOWISE-CVE-2025-8943",
+    "relationship": "demonstrates",
+    "target": "LLMI-T024",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-NVD-CVE-2025-8943"
+    ]
+  },
+  {
+    "id": "REL-459",
+    "type": "relationship",
+    "source": "VULN-MLFLOW-CVE-2023-1177",
+    "relationship": "demonstrates",
+    "target": "LLMI-T024",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-NVD-CVE-2023-1177"
+    ]
+  },
+  {
+    "id": "REL-460",
+    "type": "relationship",
+    "source": "VULN-M365-COPILOT-CVE-2025-32711",
+    "relationship": "demonstrates",
+    "target": "LLMI-T002",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-NVD-CVE-2025-32711"
+    ]
+  },
+  {
+    "id": "REL-461",
+    "type": "relationship",
+    "source": "VULN-M365-COPILOT-CVE-2025-32711",
+    "relationship": "demonstrates",
+    "target": "LLMI-T020",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-NVD-CVE-2025-32711"
+    ]
+  },
+  {
+    "id": "REL-462",
+    "type": "relationship",
+    "source": "VULN-GITHUB-COPILOT-CVE-2025-53773",
+    "relationship": "demonstrates",
+    "target": "LLMI-T018",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-NVD-CVE-2025-53773"
+    ]
+  },
+  {
+    "id": "REL-463",
+    "type": "relationship",
+    "source": "VULN-CLAUDE-CODE-CVE-2026-21852",
+    "relationship": "demonstrates",
+    "target": "LLMI-T018",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-NVD-CVE-2026-21852"
+    ]
+  },
+  {
+    "id": "REL-464",
+    "type": "relationship",
+    "source": "VULN-EMAILGPT-CVE-2024-5184",
+    "relationship": "demonstrates",
+    "target": "LLMI-T001",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-NVD-CVE-2024-5184"
+    ]
+  },
+  {
+    "id": "REL-465",
+    "type": "relationship",
+    "source": "VULN-FLOWISE-CVE-2024-8181",
+    "relationship": "demonstrates",
+    "target": "LLMI-T024",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-NVD-CVE-2024-8181"
+    ]
+  },
+  {
+    "id": "REL-466",
+    "type": "relationship",
+    "source": "VULN-MCP-INSPECTOR-CVE-2025-49596",
+    "relationship": "demonstrates",
+    "target": "LLMI-T024",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-NVD-CVE-2025-49596"
+    ]
+  },
+  {
+    "id": "REL-467",
+    "type": "relationship",
+    "source": "VULN-RAY-CVE-2023-6021",
+    "relationship": "demonstrates",
+    "target": "LLMI-T024",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-NVD-CVE-2023-6021"
+    ]
+  },
+  {
+    "id": "REL-468",
+    "type": "relationship",
+    "source": "VULN-MCP-SERVER-GIT-CVE-2025-68143",
+    "relationship": "demonstrates",
+    "target": "LLMI-T008",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-NVD-CVE-2025-68143"
+    ]
+  },
+  {
+    "id": "REL-469",
+    "type": "relationship",
+    "source": "VULN-MCP-SERVER-GIT-CVE-2025-68144",
+    "relationship": "demonstrates",
+    "target": "LLMI-T008",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-NVD-CVE-2025-68144"
+    ]
+  },
+  {
+    "id": "REL-470",
+    "type": "relationship",
+    "source": "VULN-CURSOR-CVE-2025-54136",
+    "relationship": "demonstrates",
+    "target": "LLMI-T018",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-NVD-CVE-2025-54136"
+    ]
+  },
+  {
+    "id": "REL-471",
+    "type": "relationship",
+    "source": "VULN-CURSOR-CVE-2025-54136",
+    "relationship": "demonstrates",
+    "target": "LLMI-T021",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-NVD-CVE-2025-54136"
+    ]
+  },
+  {
+    "id": "REL-472",
+    "type": "relationship",
+    "source": "VULN-NGINX-UI-CVE-2026-33032",
+    "relationship": "demonstrates",
+    "target": "LLMI-T024",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-NVD-CVE-2026-33032"
+    ]
+  },
+  {
+    "id": "REL-473",
+    "type": "relationship",
+    "source": "VULN-CHUANHUCHATGPT-CVE-2024-3402",
+    "relationship": "demonstrates",
+    "target": "LLMI-T020",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-NVD-CVE-2024-3402"
+    ]
+  },
+  {
+    "id": "REL-474",
+    "type": "relationship",
+    "source": "VULN-ZEN-MCP-CVE-2025-66689",
+    "relationship": "demonstrates",
+    "target": "LLMI-T008",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-NVD-CVE-2025-66689"
+    ]
+  },
+  {
+    "id": "REL-475",
+    "type": "relationship",
+    "source": "VULN-CREWAI-CVE-2026-2285",
+    "relationship": "demonstrates",
+    "target": "LLMI-T008",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-NVD-CVE-2026-2285"
+    ]
+  },
+  {
+    "id": "REL-476",
+    "type": "relationship",
+    "source": "VULN-CREWAI-CVE-2026-2286",
+    "relationship": "demonstrates",
+    "target": "LLMI-T008",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-NVD-CVE-2026-2286"
+    ]
   }
 ]
