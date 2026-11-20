@@ -85,6 +85,7 @@ The runner has plan and mock adapters only: it does not call your system. To run
 
 ## 6. Limits of this page
 
+- The newest evidence (2025-09-01) is more than 365 days older than the newest in the dataset.
 - 2 of 2 detection(s) are specifications, not rules. They say what to look for, not how to query it. Nothing here has been run against real telemetry.
 - No benchmark maps to it, so there is no public yardstick for how well a defence performs.
 - The tests use benign markers and synthetic data. A pass in a lab is not a security rating for a production system.

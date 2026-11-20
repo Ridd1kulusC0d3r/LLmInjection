@@ -83,6 +83,7 @@ The runner has plan and mock adapters only: it does not call your system. To run
 
 - The evidence is demonstrated in research. Do not read it as activity seen against real organisations.
 - All the evidence comes from one publisher (MITRE). Treat it as one voice until a second source confirms it.
+- The newest evidence (2025-09-25) is more than 365 days older than the newest in the dataset.
 - 2 of 2 detection(s) are specifications, not rules. They say what to look for, not how to query it. Nothing here has been run against real telemetry.
 - The tests use benign markers and synthetic data. A pass in a lab is not a security rating for a production system.
 - Ecosystem tools and benchmarks help you test and measure. They never support a claim that an actor used the technique.

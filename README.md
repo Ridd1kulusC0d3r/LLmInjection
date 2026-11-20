@@ -107,11 +107,11 @@ New [source registry and ingestion guidance](docs/AI-INTELLIGENCE-SOURCES.md), [
 
 | Actors | Campaigns | Incidents | Vulnerabilities | Techniques | Sources |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| **74** | **95** | **68** | **32** | **28** | **169** |
+| **75** | **98** | **69** | **32** | **28** | **174** |
 
 | Test cases | Detections | Controls | Frameworks | Model families | Relationships | Ecosystem repos |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| **40** | **45** | **32** | **19** | **12** | **489** | **126** |
+| **40** | **45** | **32** | **19** | **12** | **516** | **126** |
 
 <!-- gen:stats:end -->
 
@@ -487,6 +487,7 @@ Real-world reporting is intentionally placed on the front page because AI securi
 | **VAPOR PANDA** | China | autonomous-operator | CrowdStrike reports the China-nexus adversary VAPOR PANDA used the ARTEX multi-agent framework, mainly with DeepSeek, to run… | confirmed |
 | **GREYVIBE** | Russia | tooling-development, offensive-enabler | WithSecure assesses with high confidence that GREYVIBE's activity aligns with Russian state interests, targeting mainly Ukrainian… | high |
 | **Exilware** | Not stated in report (Initial Access Broker selling Iberian and Latin American access) | tooling-development | Group-IB assesses with high confidence that the BraZetsu malware framework supplies Exilware's Initial Access Broker operation… | medium |
+| **Storm-3358** | Cambodia-based, financially motivated (Microsoft) | autonomous-operator | Microsoft tracks Storm-3358 as a Cambodia-based, financially motivated intrusion cluster that mainly targets financial… | confirmed |
 
 <!-- gen:actors:end -->
 
@@ -591,6 +592,9 @@ Real-world reporting is intentionally placed on the front page because AI securi
 | **ARTEX-driven search and abuse of secrets exposed on GitHub** | 2026-10 | 2026-11-05 |  | high | Microsoft observed threat actors using the agentic ARTEX framework to search public GitHub repositories for credentials, application… |
 | **ARTEX abuse of password-reset pages and exposed APIs to reach cloud access** | 2026-10 | 2026-11-11 |  | high | Unit 42 Incident Response and Managed Threat Hunting observed ARTEX turning public password-reset pages and exposed APIs into cloud access… |
 | **ARTEX activity in AWS accounts with compromised IAM keys** | 2026-11 |  |  | high | Datadog Security Labs attributes activity in real AWS accounts to ARTEX: with compromised long-term IAM access keys it searched CloudWatch… |
+| **Storm-3358 ARTEX-driven intrusions against financial organisations** | 2026-10 | 2026-11-06 |  | confirmed | Microsoft observed Storm-3358 using ARTEX agents with conventional automated tools to scan internet-facing systems, exploit anonymous file… |
+| **ARTEX-using actor targeting IT and software vendors (overlaps Storm-0940)** | 2026-10 | 2026-10-22 |  | high | Wiz observed throughout October 2026 an actor using ARTEX tooling against multiple IT and software vendors, probing Okta, Entra ID and… |
+| **AntiFox (ARTEX fork) intrusions against IIS applications and AWS** | 2026-11 | 2026-11-10 |  | medium | Per the Cloud Security Alliance's reading of Arctic Wolf Labs (2026-11-10), self-hosted, Chinese-language AntiFox instances on Alibaba… |
 
 <!-- gen:campaigns:end -->
 
@@ -668,6 +672,7 @@ Real-world reporting is intentionally placed on the front page because AI securi
 | **Eye Security incident response to an ARTEX-driven intrusion** | intrusion | observed | confirmed |
 | **Exploitation attempts against LiteLLM's guardrail tester (CVE-2026-40217)** | exploitation | observed | high |
 | **Indirect prompt injection through EDR telemetry against AI-assisted SOCs (Viaconnect research)** | research-artifact | research | medium |
+| **ARTEX agent escapes a researcher's sandbox and reaches WorkOS's internal sales tool** | unintended-access | observed | confirmed |
 
 <!-- gen:incidents:end -->
 
@@ -1189,9 +1194,9 @@ Every intelligence item should answer:
 
 | Grade | Class | Sources |
 |---|---|---|
-| **A** | Primary or authoritative | 149 |
-| **B** | Strong secondary | 7 |
-| **C** | Reputable press | 8 |
+| **A** | Primary or authoritative | 152 |
+| **B** | Strong secondary | 8 |
+| **C** | Reputable press | 9 |
 | **D** | Community | 5 |
 | **E** | Unsupported | 0 |
 

@@ -1262,5 +1262,45 @@
     "source_ids": [
       "SRC-DATADOG-ARTEX-AWS"
     ]
+  },
+  {
+    "id": "CAMPAIGN-STORM-3358-ARTEX-FINANCE",
+    "type": "campaign",
+    "name": "Storm-3358 ARTEX-driven intrusions against financial organisations",
+    "confidence": "confirmed",
+    "first_seen": "2026-10",
+    "last_seen": "2026-11",
+    "reported": "2026-11-06",
+    "summary": "Microsoft observed Storm-3358 using ARTEX agents with conventional automated tools to scan internet-facing systems, exploit anonymous file upload and SSRF, and pull open-source RATs (WISP, vshell, AdaptixC2) onto compromised hosts with netcat and curl, against financial organisations mainly in Southeast Asia.",
+    "source_ids": [
+      "SRC-MSFT-STORM-3358-ARTEX"
+    ]
+  },
+  {
+    "id": "CAMPAIGN-ARTEX-IT-SOFTWARE-VENDORS",
+    "type": "campaign",
+    "name": "ARTEX-using actor targeting IT and software vendors (overlaps Storm-0940)",
+    "confidence": "high",
+    "first_seen": "2026-10",
+    "last_seen": "2026-10",
+    "reported": "2026-10-22",
+    "summary": "Wiz observed throughout October 2026 an actor using ARTEX tooling against multiple IT and software vendors, probing Okta, Entra ID and Cognito for authentication bypasses, enumerating APIs and abusing Microsoft 365 integrations to reach vendors' customer data. Wiz says its observations overlap Microsoft's Storm-0940 reporting and extend to other software sectors; the overlap is Wiz's assessment, so no actor is linked here.",
+    "source_ids": [
+      "SRC-WIZ-ARTEX-VENDORS"
+    ]
+  },
+  {
+    "id": "CAMPAIGN-ANTIFOX-AWS-IIS",
+    "type": "campaign",
+    "name": "AntiFox (ARTEX fork) intrusions against IIS applications and AWS",
+    "confidence": "medium",
+    "first_seen": "2026-11",
+    "last_seen": "2026-11",
+    "reported": "2026-11-10",
+    "summary": "Per the Cloud Security Alliance's reading of Arctic Wolf Labs (2026-11-10), self-hosted, Chinese-language AntiFox instances on Alibaba Cloud were tied to compromises of internet-facing IIS applications and abuse of valid AWS credentials; in one case hundreds of API calls across a dozen services in about 30 minutes ended in a successful GetSecretValue on a production secret. AntiFox's README calls it secondary development of ARTEX 0.1.1. The Arctic Wolf original was not read.",
+    "source_ids": [
+      "SRC-CSA-ANTIFOX",
+      "SRC-BC-ANTIFOX"
+    ]
   }
 ]

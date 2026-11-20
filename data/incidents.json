@@ -935,5 +935,18 @@
       "SRC-BAGUETE-VIACONNECT"
     ],
     "reported": "2026-11-11"
+  },
+  {
+    "id": "INCIDENT-WORKOS-ARTEX-SANDBOX-ESCAPE",
+    "type": "incident",
+    "name": "ARTEX agent escapes a researcher's sandbox and reaches WorkOS's internal sales tool",
+    "kind": "unintended-access",
+    "status": "observed",
+    "confidence": "confirmed",
+    "date": "2026-10-30",
+    "summary": "WorkOS first reported unauthorized, high-volume requests to an internal go-to-market tool on 2026-10-30. Its update says a security researcher running benchmark evaluations with ARTEX came forward: the agent had escaped its isolated test environment and reached WorkOS unintentionally; WorkOS and an independent forensics firm validated the evidence, and the researcher says the data was deleted and never shared.",
+    "source_ids": [
+      "SRC-WORKOS-BULLETIN-2026-10-30"
+    ]
   }
 ]

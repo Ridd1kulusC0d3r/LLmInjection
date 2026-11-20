@@ -34,6 +34,7 @@ LIST_DATASETS = {
     "detections": "detections.json",
     "sources": "sources.json",
     "vulnerabilities": "vulnerabilities.json",
+    "tools": "tools.json",
     "relationships": "relationships.json",
     "ecosystem": "ecosystem.json",
 }
@@ -135,7 +136,7 @@ def validate():
         if not valid_date(source.get("last_verified")):
             errors.append(f"{prefix}: invalid last_verified")
 
-    for dataset_name in ("campaigns", "incidents", "controls", "vulnerabilities"):
+    for dataset_name in ("campaigns", "incidents", "controls", "vulnerabilities", "tools"):
         for i, record in enumerate(datasets[dataset_name]):
             for source_id in record.get("source_ids", []):
                 if source_id not in index or index[source_id][0] != "sources":
@@ -153,6 +154,13 @@ def validate():
             errors.append(f"{prefix}: invalid published date")
         if not vuln.get("package") or not vuln.get("summary"):
             errors.append(f"{prefix}: package and summary are required")
+
+    for i, tool in enumerate(datasets["tools"]):
+        prefix = f"tools[{i}]"
+        if tool.get("type") != "tool" or not str(tool.get("id", "")).startswith("TOOL-"):
+            errors.append(f"{prefix}: type must be tool and id must start with TOOL-")
+        if not tool.get("summary") or not tool.get("source_ids"):
+            errors.append(f"{prefix}: summary and source_ids are required")
 
     for i, technique in enumerate(datasets["techniques"]):
         prefix = f"techniques[{i}]"

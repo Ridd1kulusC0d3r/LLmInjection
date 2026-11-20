@@ -19,6 +19,7 @@
     "relationships.json",
     "ecosystem.json",
     "vulnerabilities.json",
+    "tools.json",
     "threat-landscape-2026.json",
     "ot-source-registry.json",
     "ot-scenarios.json",

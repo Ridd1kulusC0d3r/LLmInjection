@@ -1797,5 +1797,26 @@
         "url": "https://hunt.io/blog/brazetsu-access-broker-infrastructure"
       }
     ]
+  },
+  {
+    "id": "ACTOR-STORM-3358",
+    "type": "actor",
+    "name": "Storm-3358",
+    "aliases": [],
+    "nexus": "Cambodia-based, financially motivated (Microsoft)",
+    "ai_role": [
+      "autonomous-operator"
+    ],
+    "confidence": "confirmed",
+    "summary": "Microsoft tracks Storm-3358 as a Cambodia-based, financially motivated intrusion cluster that mainly targets financial organisations in Southeast Asia, plus a few large ones elsewhere. From October 2026 it combined the ARTEX agentic framework with conventional scanners to exploit anonymous file upload and SSRF and to install the WISP, vshell and AdaptixC2 RATs.",
+    "last_verified": "2026-11-20",
+    "sources": [
+      {
+        "title": "ARTEX abuse expands as cybercriminals target financial sector",
+        "publisher": "Microsoft Threat Intelligence",
+        "grade": "A",
+        "url": "https://www.microsoft.com/en-us/security/blog/2026/11/06/artex-abuse-expands-as-cybercriminals-target-financial-sector/"
+      }
+    ]
   }
 ]

@@ -4,10 +4,10 @@ title: "Dossiê: ARTEX, framework ofensivo agêntico em uso por vários atores"
 
 ![Masthead](../../assets/reports/artex.svg)
 
-<p class="rpt-head"><span>LLMI-DS-ARTEX · v0.2</span><span class="tlp">TLP:CLEAR</span><span>Corte 2026-11-20</span></p>
+<p class="rpt-head"><span>LLMI-DS-ARTEX · v0.3</span><span class="tlp">TLP:CLEAR</span><span>Corte 2026-11-20</span></p>
 
 <div class="injected" markdown="1">
-v0.2 (2026-11-20): nove fontes de novembro foram lidas no original e entraram em `data/` com ID `SRC-…`. O que ainda tem <span class="verify">A VERIFICAR</span> não foi lido: Wiz (22/10), Microsoft sobre o Storm-3358 (06/11), Arctic Wolf (AntiFox) e WorkOS.
+v0.3 (2026-11-20): todas as fontes de outubro e novembro citadas foram lidas no original e estão em `data/` com ID `SRC-…`, exceto o boletim da Arctic Wolf sobre o AntiFox, conhecido aqui pela nota da Cloud Security Alliance (grau B). O ARTEX agora é um objeto do grafo: `TOOL-ARTEX`, com arestas `uses-tool` vindas de 14 campanhas e incidentes.
 </div>
 
 <div class="bluf" markdown="1">
@@ -46,14 +46,15 @@ ARTEX é descrito pelas fontes como plataforma open-source multiagente, guiada p
 | 2026-10 | Comprometimento do ConnectWise Cloud Backup, atribuído pela Microsoft ao Storm-0940; app afetado não significa dado acessado | `SRC-MSFT-STORM-0940-ARTEX` | <span class="conf conf-high">alta</span> |
 | 2026-10 | VAPOR PANDA: 14+ países em 11 dias, pós-exploração confirmada em 9 organizações | `SRC-CROWDSTRIKE-VAPOR-PANDA-2026-10` | <span class="conf conf-high">confirmada</span> |
 | 2026-10 (fim) | Pearl Sleet e Onyx Sleet passam a usar ARTEX | `SRC-MSFT-DPRK-AI-2026-10` | <span class="conf conf-high">confirmada</span> |
-| 2026-10-22 | Wiz: Storm-0940 se expande para fornecedores de TI e software | Wiz <span class="verify">A VERIFICAR</span> | — |
+| 2026-10 | Wiz: ator com ARTEX ataca fornecedores de TI e software (Okta, Entra ID, Cognito, integrações M365); sobreposição com Storm-0940 é avaliação da Wiz (`CAMPAIGN-ARTEX-IT-SOFTWARE-VENDORS`) | `SRC-WIZ-ARTEX-VENDORS` | <span class="conf conf-high">alta</span> |
+| 2026-10-25 → 10-30 | WorkOS: agente ARTEX de um pesquisador escapa do sandbox e acessa ferramenta interna de vendas, sem intenção maliciosa (`INCIDENT-WORKOS-ARTEX-SANDBOX-ESCAPE`) | `SRC-WORKOS-BULLETIN-2026-10-30` | <span class="conf conf-high">confirmada</span> |
 | 2026-10-28 → 11-05 | Microsoft: ARTEX busca segredos expostos no GitHub; um agente foi do scan à exfiltração do Azure Key Vault em cinco minutos (`CAMPAIGN-ARTEX-EXPOSED-SECRETS`) | `SRC-MSFT-ARTEX-SECRETS-2026-11` | <span class="conf conf-high">alta</span> |
 | 2026-11-05 | Check Point "Hacking on Autopilot" e Censys "Agentic Asbestos": painéis e consoles expostos | `SRC-CHECKPOINT-ARTEX-2026-11`, `SRC-CENSYS-ARTEX-2026-11` | <span class="conf conf-high">alta</span> |
 | 2026-11-06 | Microsoft: Storm-3358 mira o setor financeiro | <span class="verify">A VERIFICAR</span> | — |
 | 2026-11 | Datadog: ARTEX em contas AWS com chaves IAM comprometidas (`CAMPAIGN-ARTEX-AWS`) | `SRC-DATADOG-ARTEX-AWS` | <span class="conf conf-high">alta</span> |
 | 2026-11-11 | Unit 42: páginas de reset de senha e APIs expostas viram acesso à nuvem, sem explorar vulnerabilidade (`CAMPAIGN-ARTEX-IDENTITY-WORKFLOWS`) | `SRC-UNIT42-ARTEX-2026-11` | <span class="conf conf-high">alta</span> |
 | 2026-11-12 | Eye Security: resposta a incidente de intrusão guiada por ARTEX (`INCIDENT-EYE-ARTEX-IR`) | `SRC-EYE-ARTEX-IR-2026-11` | <span class="conf conf-high">confirmada</span> |
-| 2026-11 | Arctic Wolf: fork "AntiFox" | <span class="verify">A VERIFICAR</span> | — |
+| 2026-11-10 | Arctic Wolf (via CSA): AntiFox, fork do ARTEX 0.1.1, em intrusões contra IIS e AWS (`CAMPAIGN-ANTIFOX-AWS-IIS`, `TOOL-ANTIFOX`) | `SRC-CSA-ANTIFOX` (B) | <span class="conf conf-med">média</span> |
 | 2026-11-13 | FBI FLASH-20261113-001: 67 mil pessoas com dados exfiltrados na Coreia do Sul; mais de 2.250 tenants com tentativas de login no caso ConnectWise | `SRC-FBI-FLASH-20261113-ARTEX` | <span class="conf conf-high">confirmada</span> |
 | 2026-11-13 → 11-20 | Pack de detecção MalwareMustDie MMD-072 (v1.1.6 em 20/11), DRL 1.1 | `ECO-126` | — |
 | 2026-11-16 | GTIG: frameworks multiagente (ARTEX, CAIRN, CyberStrikeAI, PentAGI) e exploração de n-days automatizada | `SRC-GTIG-AGENTIC-THRESHOLD-2026-11` | <span class="conf conf-high">confirmada</span> |
@@ -71,7 +72,7 @@ ARTEX é descrito pelas fontes como plataforma open-source multiagente, guiada p
 | Grupos de extorsão sem nome | financeiro | reconhecimento até extorsão por roubo de dados | — | `SRC-GTIG-ARTEX-2026-10` |
 | Sem nome (Microsoft) | não declarado | segredos expostos no GitHub, credenciais de app multitenant | autonomous-operator | `SRC-MSFT-ARTEX-SECRETS-2026-11` |
 | Sem nome (Unit 42) | não declarado | reset de senha e APIs expostas, varejo e consultoria | — | `SRC-UNIT42-ARTEX-2026-11` |
-| Storm-3358 | Camboja | setor financeiro | — | Microsoft 2026-11-06 <span class="verify">A VERIFICAR</span> |
+| Storm-3358 | Camboja, financeiro | upload anônimo, SSRF, RATs WISP, vshell e AdaptixC2 contra finanças no Sudeste Asiático | autonomous-operator | `SRC-MSFT-STORM-3358-ARTEX` |
 
 **Vizinho no mesmo relatório do GTIG:** PentAGI, outro framework agêntico aberto, usado por operadores sem atribuição contra integradores e operadoras de telecom na Ásia (`CAMPAIGN-PENTAGI-ASIA-TELECOM`, confiança média).
 
@@ -131,8 +132,8 @@ Impacto regional não demonstrado nas fontes consultadas. Hipótese a testar: co
 
 ## 12. Mudanças propostas no repositório
 
-- Tipo `tool` nos datasets (`TOOL-ARTEX`, `TOOL-PENTAGI`) com arestas `actor → uses → tool`, para responder "quem usa ARTEX" com uma consulta.
-- Ler no original as fontes que restam <span class="verify">A VERIFICAR</span>: Wiz (22/10), Microsoft 06/11 (Storm-3358), Arctic Wolf e WorkOS.
+- Feito em v0.3: `data/tools.json` com ARTEX, AntiFox, PentAGI, CAIRN, CyberStrikeAI, HexStrike AI e Strix; `uses-tool` liga campanhas e incidentes a cada um, e `TOOL-ANTIFOX derived-from TOOL-ARTEX`. No Explorer, `#tab=graph&focus=TOOL-ARTEX` mostra quem usa.
+- Ler o boletim original da Arctic Wolf sobre o AntiFox quando for localizado.
 - Avaliar Storm-3358 como ator.
 
 ## 13. Fontes
@@ -149,4 +150,6 @@ Impacto regional não demonstrado nas fontes consultadas. Hipótese a testar: co
 
 **Lidas em 2026-11-20 e registradas:** `SRC-FBI-FLASH-20261113-ARTEX` · `SRC-MSFT-ARTEX-SECRETS-2026-11` · `SRC-CHECKPOINT-ARTEX-2026-11` · `SRC-CENSYS-ARTEX-2026-11` · `SRC-EYE-ARTEX-IR-2026-11` · `SRC-DATADOG-ARTEX-AWS` · `SRC-UNIT42-ARTEX-2026-11` · `SRC-GTIG-AGENTIC-THRESHOLD-2026-11` · `SRC-JPCERT-AT-2026-0030` · `SRC-THN-CERTIN-CRAFTY-FALCON` (grau C).
 
-**Ainda a ler:** Wiz "artex-in-the-wild" (22/10), Microsoft sobre o Storm-3358 (06/11), Arctic Wolf (AntiFox), WorkOS; a Huntress (403) e a SentinelOne (429) recusaram o acesso automático.
+Também lidas: `SRC-MSFT-STORM-3358-ARTEX` · `SRC-WIZ-ARTEX-VENDORS` · `SRC-WORKOS-BULLETIN-2026-10-30` · `SRC-CSA-ANTIFOX` (B) · `SRC-BC-ANTIFOX` (C).
+
+**Ainda a ler:** o boletim da Arctic Wolf (não localizado); a Huntress (403) e a SentinelOne (429) recusaram o acesso automático.

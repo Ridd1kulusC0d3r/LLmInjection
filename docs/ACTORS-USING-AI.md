@@ -86,6 +86,7 @@ Generated from `data/actors.json`; every row cites at least one source.
 | **VAPOR PANDA** | China | autonomous-operator | CrowdStrike reports the China-nexus adversary VAPOR PANDA used the ARTEX multi-agent framework, mainly with DeepSeek, to run… | confirmed |
 | **GREYVIBE** | Russia | tooling-development, offensive-enabler | WithSecure assesses with high confidence that GREYVIBE's activity aligns with Russian state interests, targeting mainly Ukrainian… | high |
 | **Exilware** | Not stated in report (Initial Access Broker selling Iberian and Latin American access) | tooling-development | Group-IB assesses with high confidence that the BraZetsu malware framework supplies Exilware's Initial Access Broker operation… | medium |
+| **Storm-3358** | Cambodia-based, financially motivated (Microsoft) | autonomous-operator | Microsoft tracks Storm-3358 as a Cambodia-based, financially motivated intrusion cluster that mainly targets financial… | confirmed |
 
 <!-- gen:actors:end -->
 

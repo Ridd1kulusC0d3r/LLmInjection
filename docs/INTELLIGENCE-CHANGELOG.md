@@ -13,6 +13,9 @@ This changelog records material changes to attribution, confidence, external map
 - `VULN-LITELLM-CVE-2026-40217`, in CISA KEV since 2026-11-18 (checked on the catalog; the daily digest had it unconfirmed).
 - 9 ecosystem entries, each cloned and read: mcp-sentinel, mcp-scrutiny, guardmcp, AIAgentFirewall, medusa (AGPL-3.0, reference only), agenttrace, AgentDFIR, agentforensics and the MalwareMustDie ARTEX detection pack (DRL 1.1).
 
+- A new object type, `tool` (`data/tools.json`, `schemas/tool.schema.json`): ARTEX, AntiFox, PentAGI, CAIRN, CyberStrikeAI, HexStrike AI and Strix, described for defenders. 20 `uses-tool` relationships link campaigns and incidents to them, and `TOOL-ANTIFOX derived-from TOOL-ARTEX`. They appear in the graph, the STIX export (as STIX `tool`) and the snapshot.
+- Read after the first pass: Microsoft on Storm-3358 (2026-11-06), Wiz (2026-10-22) and the WorkOS bulletin (grade A), the Cloud Security Alliance note on AntiFox (B) and BleepingComputer (C). They add actor Storm-3358, campaigns `CAMPAIGN-STORM-3358-ARTEX-FINANCE`, `CAMPAIGN-ARTEX-IT-SOFTWARE-VENDORS` (Wiz's overlap with Storm-0940 is recorded as its assessment, not as an actor link) and `CAMPAIGN-ANTIFOX-AWS-IIS` (medium), and incident `INCIDENT-WORKOS-ARTEX-SANDBOX-ESCAPE`, an unintended intrusion by a researcher's escaped agent.
+
 ### Changed
 
 - The FBI FLASH and Censys become second publishers for the Storm-0940 ConnectWise campaign and the TAG-217 South Korea incident; Check Point for the GTIG ARTEX campaign; GTIG (2026-11-16) for the PentAGI campaign.
@@ -25,7 +28,7 @@ This changelog records material changes to attribution, confidence, external map
 - The AI part of BraZetsu is Group-IB's reading of code style and log strings that name a server-side AI triage engine. Neither report saw that engine run, so Exilware is `medium` and the campaign uses LLMI-T028 at `medium`.
 - Viaconnect is known only through sponsored press; the talk or paper was not read.
 - Crafty Falcon stays out: The Hacker News quotes CERT-In calling the actor AI-assisted, but no CERT-In text naming the AI tools was read.
-- Huntress (HTTP 403) and SentinelOne (HTTP 429) refused automated reading; Wiz (2026-10-22), Microsoft on Storm-3358 (2026-11-06), Arctic Wolf and WorkOS are still unread.
+- Huntress (HTTP 403) and SentinelOne (HTTP 429) refused automated reading. Arctic Wolf's AntiFox bulletin was not found; AntiFox rests on the CSA note and press, hence `medium`.
 
 ## 2026-11-20 — ATR CVE candidates triaged: 22 AI vulnerabilities promoted
 
