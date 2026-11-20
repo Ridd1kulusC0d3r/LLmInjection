@@ -85,6 +85,7 @@ The runner has plan and mock adapters only: it does not call your system. To run
 
 ## 6. Limits of this page
 
+- The newest evidence (2025-09-01) is more than 365 days older than the newest in the dataset.
 - 2 of 2 detection(s) are specifications, not rules. They say what to look for, not how to query it. Nothing here has been run against real telemetry.
 - No benchmark maps to it, so there is no public yardstick for how well a defence performs.
 - The tests use benign markers and synthetic data. A pass in a lab is not a security rating for a production system.
@@ -92,6 +93,6 @@ The runner has plan and mock adapters only: it does not call your system. To run
 
 ## 7. Go deeper (links only)
 
-- **Tools and projects:** [Agent-Threat-Rule/agent-threat-rules](https://github.com/Agent-Threat-Rule/agent-threat-rules), [invariantlabs-ai/mcp-injection-experiments](https://github.com/invariantlabs-ai/mcp-injection-experiments), [pathakabhi24/LLM-MCP-Security-Field-Guide](https://github.com/pathakabhi24/LLM-MCP-Security-Field-Guide), [Puliczek/awesome-mcp-security](https://github.com/Puliczek/awesome-mcp-security), [mukul975/anthropic-cybersecurity-skills](https://github.com/mukul975/anthropic-cybersecurity-skills)
+- **Tools and projects:** [Agent-Threat-Rule/agent-threat-rules](https://github.com/Agent-Threat-Rule/agent-threat-rules), [invariantlabs-ai/mcp-injection-experiments](https://github.com/invariantlabs-ai/mcp-injection-experiments), [pathakabhi24/LLM-MCP-Security-Field-Guide](https://github.com/pathakabhi24/LLM-MCP-Security-Field-Guide), [Puliczek/awesome-mcp-security](https://github.com/Puliczek/awesome-mcp-security), [mukul975/anthropic-cybersecurity-skills](https://github.com/mukul975/anthropic-cybersecurity-skills), [TiaMEOWS/mcp-sentinel](https://github.com/TiaMEOWS/mcp-sentinel), [bryand410/mcp-scrutiny](https://github.com/bryand410/mcp-scrutiny), [BerkantACUN/guardmcp](https://github.com/BerkantACUN/guardmcp), and 2 more in the [Explorer](https://ridd1kulusc0d3r.github.io/LLmInjection/#tab=ecosystem)
 - **Third-party procedures (not ours, link only):** [auditing-mcp-servers-for-tool-poisoning](https://github.com/mukul975/anthropic-cybersecurity-skills/tree/main/skills/auditing-mcp-servers-for-tool-poisoning) (audit: tool poisoning, shadowing and rug pulls with an MCP scanner). Independent community project, Apache-2.0, not affiliated with Anthropic; see the [knowledge strategy](../KNOWLEDGE-STRATEGY.md).
 - **Live record:** [this technique in the Explorer](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=LLMI-T021)

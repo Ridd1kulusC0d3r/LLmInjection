@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "LLMInjection tool record (an offensive framework or harness reported in use, described for defenders)",
+  "type": "object",
+  "required": ["id", "type", "name", "kind", "origin", "summary", "source_ids"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^TOOL-"},
+    "type": {"const": "tool"},
+    "name": {"type": "string"},
+    "kind": {"enum": ["agentic-offensive-framework", "offensive-mcp-harness", "malware-framework", "other"]},
+    "origin": {"type": "string"},
+    "models": {"type": "string"},
+    "first_seen": {"type": "string", "pattern": "^\\d{4}(-\\d{2}(-\\d{2})?)?$"},
+    "summary": {"type": "string", "minLength": 20},
+    "source_ids": {"type": "array", "minItems": 1, "items": {"type": "string", "pattern": "^SRC-"}}
+  },
+  "additionalProperties": false
+}

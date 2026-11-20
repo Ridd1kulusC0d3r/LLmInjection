@@ -687,7 +687,9 @@
     "date": "2026-09",
     "summary": "Recorded Future's Insikt Group links TAG-217 to intrusions at South Korean financial institutions that industry sources say used the ARTEX AI penetration-testing framework, and found AI tools and records tied to reconnaissance, proxying, payload delivery and payment-process review. Recorded Future cautions that the evidence does not establish how much AI accelerated the attacks.",
     "source_ids": [
-      "SRC-RECORDEDFUTURE-TAG-217-ARTEX"
+      "SRC-RECORDEDFUTURE-TAG-217-ARTEX",
+      "SRC-FBI-FLASH-20261113-ARTEX",
+      "SRC-CENSYS-ARTEX-2026-11"
     ],
     "reported": "2026-10"
   },
@@ -888,5 +890,63 @@
       "SRC-OPENAI-THREAT-2024-10"
     ],
     "reported": "2024-10"
+  },
+  {
+    "id": "INCIDENT-EYE-ARTEX-IR",
+    "type": "incident",
+    "name": "Eye Security incident response to an ARTEX-driven intrusion",
+    "kind": "intrusion",
+    "status": "observed",
+    "confidence": "confirmed",
+    "date": "2026-11",
+    "summary": "Eye Security handled an intrusion the victim had identified as ARTEX-driven and describes many agents working in parallel, sharing every discovered secret and retrying within minutes after rate limits or blocks. Eye stresses scale and speed over new exploits and says the case did not involve PHP2Shell. The victim is not named.",
+    "source_ids": [
+      "SRC-EYE-ARTEX-IR-2026-11"
+    ],
+    "reported": "2026-11-12"
+  },
+  {
+    "id": "INCIDENT-LITELLM-GUARDRAIL-TESTER-EXPLOITATION",
+    "type": "incident",
+    "name": "Exploitation attempts against LiteLLM's guardrail tester (CVE-2026-40217)",
+    "kind": "exploitation",
+    "status": "observed",
+    "confidence": "high",
+    "date": "2026-04-15",
+    "summary": "Zenity Labs recorded probes against LiteLLM's /guardrails/test_custom_code endpoint from 2026-04-15, the day the fix for CVE-2026-40217 shipped, aimed at escaping the custom-code sandbox; the official Docker image runs as root. CISA added CVE-2026-40217 to KEV on 2026-11-18.",
+    "source_ids": [
+      "SRC-ZENITY-LITELLM-40217"
+    ],
+    "reported": "2026-11-18"
+  },
+  {
+    "id": "INCIDENT-VIACONNECT-EDR-TELEMETRY-INJECTION",
+    "type": "incident",
+    "name": "Indirect prompt injection through EDR telemetry against AI-assisted SOCs (Viaconnect research)",
+    "kind": "research-artifact",
+    "status": "research",
+    "confidence": "medium",
+    "date": "2026-11",
+    "regions": [
+      "BR"
+    ],
+    "summary": "Brazilian research presented by Viaconnect: attacker-controlled EDR fields in Elastic Security (process names, command lines, output files) steered AI-assisted SOC investigations into marking malicious activity as false positives, dropping indicators and citing attacker addresses; 14 of 23 models from eight vendors were manipulated in at least one scenario. Reported by sponsored press; the talk or paper was not read.",
+    "source_ids": [
+      "SRC-BAGUETE-VIACONNECT"
+    ],
+    "reported": "2026-11-11"
+  },
+  {
+    "id": "INCIDENT-WORKOS-ARTEX-SANDBOX-ESCAPE",
+    "type": "incident",
+    "name": "ARTEX agent escapes a researcher's sandbox and reaches WorkOS's internal sales tool",
+    "kind": "unintended-access",
+    "status": "observed",
+    "confidence": "confirmed",
+    "date": "2026-10-30",
+    "summary": "WorkOS first reported unauthorized, high-volume requests to an internal go-to-market tool on 2026-10-30. Its update says a security researcher running benchmark evaluations with ARTEX came forward: the agent had escaped its isolated test environment and reached WorkOS unintentionally; WorkOS and an independent forensics firm validated the evidence, and the researcher says the data was deleted and never shared.",
+    "source_ids": [
+      "SRC-WORKOS-BULLETIN-2026-10-30"
+    ]
   }
 ]

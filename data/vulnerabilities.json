@@ -749,5 +749,32 @@
     "source_ids": [
       "SRC-NVD-CVE-2026-2286"
     ]
+  },
+  {
+    "id": "VULN-LITELLM-CVE-2026-40217",
+    "type": "vulnerability",
+    "name": "LiteLLM guardrail tester sandbox escape to code execution",
+    "kind": "sandbox-escape",
+    "package": "litellm",
+    "ecosystem": "PyPI",
+    "identifiers": [
+      "CVE-2026-40217",
+      "GHSA-wxxx-gvqv-xp7p",
+      "PYSEC-2026-2601"
+    ],
+    "severity": "high",
+    "affected": [
+      ">=1.81.8 <1.83.10"
+    ],
+    "patched": [
+      "1.83.10"
+    ],
+    "published": "2026-04-10",
+    "confidence": "confirmed",
+    "summary": "Code submitted to LiteLLM's /guardrails/test_custom_code endpoint could escape the deny-list sandbox through bytecode rewriting and run arbitrary code on the proxy, as root in the official image; fixed in 1.83.10. CISA added it to KEV on 2026-11-18.",
+    "source_ids": [
+      "SRC-GHSA-LITELLM-40217",
+      "SRC-ZENITY-LITELLM-40217"
+    ]
   }
 ]

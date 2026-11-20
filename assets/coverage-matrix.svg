@@ -31,14 +31,14 @@
 <rect x="737.0" y="115" width="34" height="20" fill="#d4804f"/>
 <text x="754.0" y="130" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
 <rect x="829.0" y="115" width="34" height="20" fill="#7c2406"/>
-<text x="846.0" y="130" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">47</text>
+<text x="846.0" y="130" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">48</text>
 <rect x="921.0" y="115" width="34" height="20" fill="#7c2406"/>
 <text x="938.0" y="130" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">6</text>
 <text x="1002" y="129" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#b43c0e">OBSERVED IN THE WILD</text>
 <line x1="40" x2="1364" y1="138" y2="138" stroke="#e0dacb"/>
 <text x="40" y="155" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T002  </tspan>Indirect Prompt Injection</text>
 <rect x="461.0" y="141" width="34" height="20" fill="#7c2406"/>
-<text x="478.0" y="156" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">5</text>
+<text x="478.0" y="156" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">6</text>
 <rect x="553.0" y="141" width="34" height="20" fill="#e9b394"/>
 <text x="570.0" y="156" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
 <rect x="645.0" y="141" width="34" height="20" fill="#d4804f"/>
@@ -46,7 +46,7 @@
 <rect x="737.0" y="141" width="34" height="20" fill="#b43c0e"/>
 <text x="754.0" y="156" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">3</text>
 <rect x="829.0" y="141" width="34" height="20" fill="#7c2406"/>
-<text x="846.0" y="156" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">45</text>
+<text x="846.0" y="156" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">47</text>
 <rect x="921.0" y="141" width="34" height="20" fill="#7c2406"/>
 <text x="938.0" y="156" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">6</text>
 <text x="1002" y="155" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#7b766a">DISCLOSED VULNERABILITY</text>
@@ -76,7 +76,7 @@
 <rect x="737.0" y="193" width="34" height="20" fill="#e9b394"/>
 <text x="754.0" y="208" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
 <rect x="829.0" y="193" width="34" height="20" fill="#7c2406"/>
-<text x="846.0" y="208" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">30</text>
+<text x="846.0" y="208" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">31</text>
 <rect x="921.0" y="193" width="34" height="20" fill="#b43c0e"/>
 <text x="938.0" y="208" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">3</text>
 <text x="1002" y="207" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#b43c0e">OBSERVED IN THE WILD</text>
@@ -136,7 +136,7 @@
 <rect x="737.0" y="297" width="34" height="20" fill="#d4804f"/>
 <text x="754.0" y="312" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
 <rect x="829.0" y="297" width="34" height="20" fill="#7c2406"/>
-<text x="846.0" y="312" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">28</text>
+<text x="846.0" y="312" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">33</text>
 <rect x="921.0" y="297" width="34" height="20" fill="#b43c0e"/>
 <text x="938.0" y="312" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">3</text>
 <text x="1002" y="311" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#b43c0e">OBSERVED IN THE WILD</text>
@@ -182,7 +182,7 @@
 <rect x="737.0" y="375" width="34" height="20" fill="#e9b394"/>
 <text x="754.0" y="390" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
 <rect x="829.0" y="375" width="34" height="20" fill="#7c2406"/>
-<text x="846.0" y="390" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">16</text>
+<text x="846.0" y="390" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">18</text>
 <rect x="921.0" y="375" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <text x="938.0" y="390" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
 <text x="1002" y="389" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#b43c0e">OBSERVED IN THE WILD</text>
@@ -197,7 +197,7 @@
 <rect x="737.0" y="401" width="34" height="20" fill="#e9b394"/>
 <text x="754.0" y="416" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
 <rect x="829.0" y="401" width="34" height="20" fill="#7c2406"/>
-<text x="846.0" y="416" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">6</text>
+<text x="846.0" y="416" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">7</text>
 <rect x="921.0" y="401" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <text x="938.0" y="416" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
 <text x="1002" y="415" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#b43c0e">OBSERVED IN THE WILD</text>
@@ -235,7 +235,7 @@
 <line x1="40" x2="1364" y1="476" y2="476" stroke="#e0dacb"/>
 <text x="40" y="493" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T015  </tspan>Agentic Attack Orchestration</text>
 <rect x="461.0" y="479" width="34" height="20" fill="#7c2406"/>
-<text x="478.0" y="494" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">45</text>
+<text x="478.0" y="494" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">53</text>
 <rect x="553.0" y="479" width="34" height="20" fill="#e9b394"/>
 <text x="570.0" y="494" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
 <rect x="645.0" y="479" width="34" height="20" fill="#7c2406"/>
@@ -244,14 +244,14 @@
 <rect x="737.0" y="479" width="34" height="20" fill="#d4804f"/>
 <text x="754.0" y="494" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
 <rect x="829.0" y="479" width="34" height="20" fill="#7c2406"/>
-<text x="846.0" y="494" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">8</text>
+<text x="846.0" y="494" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">11</text>
 <rect x="921.0" y="479" width="34" height="20" fill="#e9b394"/>
 <text x="938.0" y="494" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
 <text x="1002" y="493" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#b43c0e">OBSERVED IN THE WILD</text>
 <line x1="40" x2="1364" y1="502" y2="502" stroke="#e0dacb"/>
 <text x="40" y="519" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T016  </tspan>AI Gateway Credential Compromise</text>
 <rect x="461.0" y="505" width="34" height="20" fill="#7c2406"/>
-<text x="478.0" y="520" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">5</text>
+<text x="478.0" y="520" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">7</text>
 <rect x="553.0" y="505" width="34" height="20" fill="#e9b394"/>
 <text x="570.0" y="520" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
 <rect x="645.0" y="505" width="34" height="20" fill="#d4804f"/>
@@ -266,8 +266,8 @@
 <text x="1002" y="519" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#b43c0e">OBSERVED IN THE WILD</text>
 <line x1="40" x2="1364" y1="528" y2="528" stroke="#e0dacb"/>
 <text x="40" y="545" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T017  </tspan>Prompt Injection Against AI Security Scanners</text>
-<rect x="461.0" y="531" width="34" height="20" fill="#d4804f"/>
-<text x="478.0" y="546" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
+<rect x="461.0" y="531" width="34" height="20" fill="#b43c0e"/>
+<text x="478.0" y="546" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">3</text>
 <rect x="553.0" y="531" width="34" height="20" fill="#e9b394"/>
 <text x="570.0" y="546" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
 <rect x="645.0" y="531" width="34" height="20" fill="#d4804f"/>
@@ -291,7 +291,7 @@
 <rect x="737.0" y="557" width="34" height="20" fill="#d4804f"/>
 <text x="754.0" y="572" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
 <rect x="829.0" y="557" width="34" height="20" fill="#7c2406"/>
-<text x="846.0" y="572" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">9</text>
+<text x="846.0" y="572" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">11</text>
 <rect x="921.0" y="557" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <text x="938.0" y="572" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
 <text x="1002" y="571" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#b43c0e">OBSERVED IN THE WILD</text>
@@ -336,7 +336,7 @@
 <rect x="737.0" y="635" width="34" height="20" fill="#b43c0e"/>
 <text x="754.0" y="650" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">3</text>
 <rect x="829.0" y="635" width="34" height="20" fill="#7c2406"/>
-<text x="846.0" y="650" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">5</text>
+<text x="846.0" y="650" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">10</text>
 <rect x="921.0" y="635" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <text x="938.0" y="650" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
 <text x="1002" y="649" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#b43c0e">OBSERVED IN THE WILD</text>
@@ -373,15 +373,15 @@
 <line x1="40" x2="1364" y1="710" y2="710" stroke="#e0dacb"/>
 <text x="40" y="727" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T024  </tspan>Exposed or Misconfigured AI Services</text>
 <rect x="461.0" y="713" width="34" height="20" fill="#7c2406"/>
-<text x="478.0" y="728" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">11</text>
+<text x="478.0" y="728" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">13</text>
 <rect x="553.0" y="713" width="34" height="20" fill="#e9b394"/>
 <text x="570.0" y="728" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
 <rect x="645.0" y="713" width="34" height="20" fill="#e9b394"/>
 <text x="662.0" y="728" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
 <rect x="737.0" y="713" width="34" height="20" fill="#d4804f"/>
 <text x="754.0" y="728" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
-<rect x="829.0" y="713" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
-<text x="846.0" y="728" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
+<rect x="829.0" y="713" width="34" height="20" fill="#d4804f"/>
+<text x="846.0" y="728" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">2</text>
 <rect x="921.0" y="713" width="34" height="20" fill="none" stroke="#cfc9ba" stroke-dasharray="3 2"/>
 <text x="938.0" y="728" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#7b766a">0</text>
 <text x="1002" y="727" font-family="'Courier New',monospace" font-size="10" font-weight="700" letter-spacing="1" fill="#b43c0e">OBSERVED IN THE WILD</text>
@@ -434,7 +434,7 @@
 <line x1="40" x2="1364" y1="814" y2="814" stroke="#e0dacb"/>
 <text x="40" y="831" font-family="system-ui,Helvetica,Arial,sans-serif" font-size="13" fill="#17150f"><tspan font-family="'Courier New',monospace" font-size="10" fill="#7b766a">T028  </tspan>AI-Assisted Tooling Development</text>
 <rect x="461.0" y="817" width="34" height="20" fill="#7c2406"/>
-<text x="478.0" y="832" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">69</text>
+<text x="478.0" y="832" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#ffffff">70</text>
 <rect x="553.0" y="817" width="34" height="20" fill="#e9b394"/>
 <text x="570.0" y="832" text-anchor="middle" font-family="'Courier New',monospace" font-size="12" font-weight="700" fill="#17150f">1</text>
 <rect x="645.0" y="817" width="34" height="20" fill="#e9b394"/>

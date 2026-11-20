@@ -122,11 +122,11 @@ New [source registry and ingestion guidance](docs/AI-INTELLIGENCE-SOURCES.md), [
 
 | Actors | Campaigns | Incidents | Vulnerabilities | Techniques | Sources |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| **73** | **91** | **65** | **31** | **28** | **154** |
+| **75** | **98** | **69** | **32** | **28** | **174** |
 
 | Test cases | Detections | Controls | Frameworks | Model families | Relationships | Ecosystem repos |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| **40** | **47** | **32** | **19** | **12** | **479** | **117** |
+| **40** | **47** | **32** | **19** | **12** | **519** | **126** |
 
 <!-- gen:stats:end -->
 
@@ -501,6 +501,8 @@ Real-world reporting is intentionally placed on the front page because AI securi
 | **Aurora** | Not stated in report (ransomware/extortion group; operator prompts written in Russian) | offensive-enabler, autonomous-operator | Gambit Security reports the Aurora ransomware group, active since about April 2026, used Cursor Agent running Claude Sonnet… | confirmed |
 | **VAPOR PANDA** | China | autonomous-operator | CrowdStrike reports the China-nexus adversary VAPOR PANDA used the ARTEX multi-agent framework, mainly with DeepSeek, to run… | confirmed |
 | **GREYVIBE** | Russia | tooling-development, offensive-enabler | WithSecure assesses with high confidence that GREYVIBE's activity aligns with Russian state interests, targeting mainly Ukrainian… | high |
+| **Exilware** | Not stated in report (Initial Access Broker selling Iberian and Latin American access) | tooling-development | Group-IB assesses with high confidence that the BraZetsu malware framework supplies Exilware's Initial Access Broker operation… | medium |
+| **Storm-3358** | Cambodia-based, financially motivated (Microsoft) | autonomous-operator | Microsoft tracks Storm-3358 as a Cambodia-based, financially motivated intrusion cluster that mainly targets financial… | confirmed |
 
 <!-- gen:actors:end -->
 
@@ -601,6 +603,13 @@ Real-world reporting is intentionally placed on the front page because AI securi
 | **Aurora ransomware intrusions driven through Cursor Agent** | 2026-04 | 2026-08-27 |  | confirmed | Gambit Security reports Aurora ransomware operators used Cursor Agent with Claude Sonnet in sessions from 8 April to 21 May 2026 against… |
 | **VAPOR PANDA ARTEX-driven global espionage campaign** | 2026-10 | 2026-10-29 |  | confirmed | CrowdStrike reports VAPOR PANDA used ARTEX planner and worker agents, primarily on DeepSeek, to write web shells, extract domain… |
 | **GREYVIBE AI-assisted operations against Ukraine** | 2025-08 | 2026-05-28 |  | high | WithSecure reports GREYVIBE campaigns (PhantomMail, PhantomClick, PrincessClub, DroneLink, Nebo) against Ukrainian targets using GenAI-made… |
+| **BraZetsu access-broker framework and Infected Marketplace** | 2026-02 | 2026-08-31 | BR, LATAM, ES | high | Group-IB tracks the Python-based BraZetsu framework from February 2026 as it grew into an access-broker toolkit that steals browser data… |
+| **ARTEX-driven search and abuse of secrets exposed on GitHub** | 2026-10 | 2026-11-05 |  | high | Microsoft observed threat actors using the agentic ARTEX framework to search public GitHub repositories for credentials, application… |
+| **ARTEX abuse of password-reset pages and exposed APIs to reach cloud access** | 2026-10 | 2026-11-11 |  | high | Unit 42 Incident Response and Managed Threat Hunting observed ARTEX turning public password-reset pages and exposed APIs into cloud access… |
+| **ARTEX activity in AWS accounts with compromised IAM keys** | 2026-11 |  |  | high | Datadog Security Labs attributes activity in real AWS accounts to ARTEX: with compromised long-term IAM access keys it searched CloudWatch… |
+| **Storm-3358 ARTEX-driven intrusions against financial organisations** | 2026-10 | 2026-11-06 |  | confirmed | Microsoft observed Storm-3358 using ARTEX agents with conventional automated tools to scan internet-facing systems, exploit anonymous file… |
+| **ARTEX-using actor targeting IT and software vendors (overlaps Storm-0940)** | 2026-10 | 2026-10-22 |  | high | Wiz observed throughout October 2026 an actor using ARTEX tooling against multiple IT and software vendors, probing Okta, Entra ID and… |
+| **AntiFox (ARTEX fork) intrusions against IIS applications and AWS** | 2026-11 | 2026-11-10 |  | medium | Per the Cloud Security Alliance's reading of Arctic Wolf Labs (2026-11-10), self-hosted, Chinese-language AntiFox instances on Alibaba… |
 
 <!-- gen:campaigns:end -->
 
@@ -675,6 +684,10 @@ Real-world reporting is intentionally placed on the front page because AI securi
 | **Single operator uses Claude Code and GPT-4.1 to breach nine Mexican government organisations** | intrusion | observed | confirmed |
 | **Deepfake videos and voice cloning in scams impersonating the FBI IC3** | fraud | observed | confirmed |
 | **SweetSpecter spear-phishing of OpenAI employees** | intrusion | observed | confirmed |
+| **Eye Security incident response to an ARTEX-driven intrusion** | intrusion | observed | confirmed |
+| **Exploitation attempts against LiteLLM's guardrail tester (CVE-2026-40217)** | exploitation | observed | high |
+| **Indirect prompt injection through EDR telemetry against AI-assisted SOCs (Viaconnect research)** | research-artifact | research | medium |
+| **ARTEX agent escapes a researcher's sandbox and reaches WorkOS's internal sales tool** | unintended-access | observed | confirmed |
 
 <!-- gen:incidents:end -->
 
@@ -914,6 +927,7 @@ An optional **MCP v2 read-only server** exposes search, object lookup, graph tra
 | Zen MCP Server path traversal | `CVE-2025-66689` | path-traversal | moderate | 2026-01-12 |
 | CrewAI JSON loader arbitrary local file read | `CVE-2026-2285` | path-traversal | high | 2026-03-30 |
 | CrewAI RAG tool server-side request forgery | `CVE-2026-2286` | server-side-request-forgery | critical | 2026-03-30 |
+| LiteLLM guardrail tester sandbox escape to code execution | `CVE-2026-40217`<br>`GHSA-wxxx-gvqv-xp7p`<br>`PYSEC-2026-2601` | sandbox-escape | high | 2026-04-10 |
 
 <!-- gen:vulnerabilities:end -->
 
@@ -1197,9 +1211,9 @@ Every intelligence item should answer:
 
 | Grade | Class | Sources |
 |---|---|---|
-| **A** | Primary or authoritative | 136 |
-| **B** | Strong secondary | 7 |
-| **C** | Reputable press | 6 |
+| **A** | Primary or authoritative | 152 |
+| **B** | Strong secondary | 8 |
+| **C** | Reputable press | 9 |
 | **D** | Community | 5 |
 | **E** | Unsupported | 0 |
 
@@ -1235,12 +1249,12 @@ The [ecosystem map](docs/ECOSYSTEM.md) classifies related repositories by **what
 |---|---|---|---|---|
 | `framework-data` | Taxonomies and knowledge bases | Technique definitions and framework mappings | Observed activity | 7 |
 | `incident-data` | Incident databases | Incident references, citing the primary report | Actor attribution or cyber campaigns (scope is broader than cybersecurity) | 1 |
-| `detection-content` | Community detection rules | Detection ideas and telemetry requirements | Proof of in-the-wild behavior | 4 |
+| `detection-content` | Community detection rules | Detection ideas and telemetry requirements | Proof of in-the-wild behavior | 5 |
 | `curated-list` | Curated lists | Discovering sources and tools | Any claim on their own | 24 |
-| `assessment-tool` | Scanners and red-team tools | Test design and control evaluation | Effectiveness against current models | 28 |
+| `assessment-tool` | Scanners and red-team tools | Test design and control evaluation | Effectiveness against current models | 33 |
 | `benchmark` | Benchmarks and environments | Reproducible tests and coverage measurement | Real-world prevalence | 13 |
 | `research-technique` | Attack research code | Techniques demonstrated in research | Use in the wild | 16 |
-| `defence-tool` | Defences and guardrails | Control design and comparison | Proven protection | 10 |
+| `defence-tool` | Defences and guardrails | Control design and comparison | Proven protection | 13 |
 | `lab-exercise` | Training labs | Analyst training and onboarding | Threat intelligence | 7 |
 | `prompt-corpus` | Prompt corpora and datasets | Test inspiration and measurement | Threat intelligence or attribution | 7 |
 
@@ -1252,15 +1266,15 @@ The [ecosystem map](docs/ECOSYSTEM.md) classifies related repositories by **what
 
 | Repository | Evidence class | Techniques | Last commit · License | Scope |
 |---|---|---|---|---|
-| [mitre-atlas/atlas-data](https://github.com/mitre-atlas/atlas-data) | `framework-data` | none | 2026-09-10 · Apache-2.0 | Data for tactics, techniques and case studies of threats against AI systems. · **start here** |
+| [mitre-atlas/atlas-data](https://github.com/mitre-atlas/atlas-data) | `framework-data` | none | 2026-10-28 · Apache-2.0 | Data for tactics, techniques and case studies of threats against AI systems. · **start here** |
 | [PLOT4ai/plot4ai-library](https://github.com/PLOT4ai/plot4ai-library) | `framework-data` | none | 2025-06-20 · CC | Threat library for AI threat modeling. · **start here** |
 | [Arcanum-Sec/arc_pi_taxonomy](https://github.com/Arcanum-Sec/arc_pi_taxonomy) | `framework-data` | `LLMI-T001`, `LLMI-T002`, `LLMI-T003` | 2026-06-29 · CC | Taxonomy specialised in prompt injection. · **start here** |
-| [responsible-ai-collaborative/aiid](https://github.com/responsible-ai-collaborative/aiid) | `incident-data` | none | 2026-10-05 · Apache-2.0 | AI Incident Database: incidents and harms involving AI, broader than cybersecurity. · **start here** |
-| [Agent-Threat-Rule/agent-threat-rules](https://github.com/Agent-Threat-Rule/agent-threat-rules) | `detection-content` | `LLMI-T001`, `LLMI-T002`, `LLMI-T004`, `LLMI-T008`, `LLMI-T009`, `LLMI-T011`, `LLMI-T018`, `LLMI-T021` | 2026-10-07 · MIT | Detection rules for agent threats, including injection, tools and MCP. · **start here** |
+| [responsible-ai-collaborative/aiid](https://github.com/responsible-ai-collaborative/aiid) | `incident-data` | none | 2026-11-08 · Apache-2.0 | AI Incident Database: incidents and harms involving AI, broader than cybersecurity. · **start here** |
+| [Agent-Threat-Rule/agent-threat-rules](https://github.com/Agent-Threat-Rule/agent-threat-rules) | `detection-content` | `LLMI-T001`, `LLMI-T002`, `LLMI-T004`, `LLMI-T008`, `LLMI-T009`, `LLMI-T011`, `LLMI-T018`, `LLMI-T021` | 2026-11-20 · MIT | Detection rules for agent threats, including injection, tools and MCP. · **start here** |
 | [tldrsec/prompt-injection-defenses](https://github.com/tldrsec/prompt-injection-defenses) | `curated-list` | `LLMI-T001`, `LLMI-T002` | 2025-02-22 · none-found | Practical and proposed defences against prompt injection. · **start here** |
-| [ShenaoW/awesome-llm-supply-chain-security](https://github.com/ShenaoW/awesome-llm-supply-chain-security) | `curated-list` | `LLMI-T011` | 2025-01-20 · CC | LLM supply chain: papers, reports and CVEs. · **start here** |
-| [NVIDIA/garak](https://github.com/NVIDIA/garak) | `assessment-tool` | `LLMI-T001`, `LLMI-T002`, `LLMI-T003`, `LLMI-T004`, `LLMI-T005`, `LLMI-T008`, `LLMI-T012`, `LLMI-T013`, `LLMI-T014`, `LLMI-T016`, `LLMI-T017` | 2026-10-07 · Apache-2.0 | LLM vulnerability scanner. · **start here** |
-| [microsoft/PyRIT](https://github.com/microsoft/PyRIT) | `assessment-tool` | `LLMI-T001`, `LLMI-T002`, `LLMI-T003`, `LLMI-T004`, `LLMI-T008`, `LLMI-T013`, `LLMI-T014` | 2026-10-07 · MIT | Framework for identifying risks in generative AI systems. · **start here** |
+| [ShenaoW/awesome-llm-supply-chain-security](https://github.com/ShenaoW/awesome-llm-supply-chain-security) | `curated-list` | `LLMI-T011` | 2025-01-20 · CC0 | LLM supply chain: papers, reports and CVEs. · **start here** |
+| [NVIDIA/garak](https://github.com/NVIDIA/garak) | `assessment-tool` | `LLMI-T001`, `LLMI-T002`, `LLMI-T003`, `LLMI-T004`, `LLMI-T005`, `LLMI-T008`, `LLMI-T012`, `LLMI-T013`, `LLMI-T014`, `LLMI-T016`, `LLMI-T017` | 2026-11-18 · Apache-2.0 | LLM vulnerability scanner. · **start here** |
+| [microsoft/PyRIT](https://github.com/microsoft/PyRIT) | `assessment-tool` | `LLMI-T001`, `LLMI-T002`, `LLMI-T003`, `LLMI-T004`, `LLMI-T008`, `LLMI-T013`, `LLMI-T014` | 2026-11-20 · MIT | Framework for identifying risks in generative AI systems. · **start here** |
 | [ethz-spylab/agentdojo](https://github.com/ethz-spylab/agentdojo) | `benchmark` | `LLMI-T001`, `LLMI-T002`, `LLMI-T004`, `LLMI-T008` | 2026-06-02 · MIT | Environment for evaluating attacks and defences of LLM agents. · **start here** |
 | [OWASP/www-project-ai-testing-guide](https://github.com/OWASP/www-project-ai-testing-guide) | `framework-data` | none | 2026-06-01 · other | OWASP AI Testing Guide: 32 test procedures across application, data, infrastructure and model layers. · **start here** |
 

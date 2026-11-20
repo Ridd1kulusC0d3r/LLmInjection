@@ -13,7 +13,7 @@
 
 | Layer | Status |
 |---|---|
-| Evidence | 5 record(s), 2 publisher(s), best grade A, newest 2025-08-06 |
+| Evidence | 6 record(s), 3 publisher(s), best grade A, newest 2026-11 |
 | Safe tests | 1 |
 | Detections | 0 rule file(s), 2 specification(s) |
 | Controls | 3 |
@@ -31,6 +31,7 @@ What the repository links to it:
 - 2025-05-24 · [AI ClickFix: Hijacking Computer-Use Agents Using ClickFix (AML.CS0055)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-ATLAS-CS0055) (atlas-exercise, confirmed)
 - 2025-05-25 · [EchoLeak: Zero-Click Prompt Injection Targeting M365 Copilot for Data Exfiltration (AML.CS0059)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-ATLAS-CS0059) (atlas-exercise, confirmed)
 - 2025-08-06 · [Prompt-Based Attacks Against Gemini via Calendar Invitations (AML.CS0063)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-ATLAS-CS0063) (atlas-exercise, confirmed)
+- 2026-11 · [Indirect prompt injection through EDR telemetry against AI-assisted SOCs (Viaconnect research)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-VIACONNECT-EDR-TELEMETRY-INJECTION) (research-artifact, medium)
 - 2025-06-11 · [Microsoft 365 Copilot AI command injection (information disclosure)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-M365-COPILOT-CVE-2025-32711) (prompt-injection, confirmed)
 
 ## 2. Test it safely
@@ -95,6 +96,6 @@ The runner has plan and mock adapters only: it does not call your system. To run
 ## 7. Go deeper (links only)
 
 - **Benchmarks:** [ethz-spylab/agentdojo](https://github.com/ethz-spylab/agentdojo), [microsoft/BIPIA](https://github.com/microsoft/BIPIA), [liu00222/Open-Prompt-Injection](https://github.com/liu00222/Open-Prompt-Injection), [agiresearch/ASB](https://github.com/agiresearch/ASB), [CheckPointSW/pint-benchmark](https://github.com/CheckPointSW/pint-benchmark), [uiuc-kang-lab/InjecAgent](https://github.com/uiuc-kang-lab/InjecAgent)
-- **Tools and projects:** [Arcanum-Sec/arc_pi_taxonomy](https://github.com/Arcanum-Sec/arc_pi_taxonomy), [Agent-Threat-Rule/agent-threat-rules](https://github.com/Agent-Threat-Rule/agent-threat-rules), [Joe-B-Security/awesome-prompt-injection](https://github.com/Joe-B-Security/awesome-prompt-injection), [tldrsec/prompt-injection-defenses](https://github.com/tldrsec/prompt-injection-defenses), [NVIDIA/garak](https://github.com/NVIDIA/garak), [microsoft/PyRIT](https://github.com/microsoft/PyRIT), [promptfoo/promptfoo](https://github.com/promptfoo/promptfoo), [confident-ai/deepteam](https://github.com/confident-ai/deepteam), and 31 more in the [Explorer](https://ridd1kulusc0d3r.github.io/LLmInjection/#tab=ecosystem)
+- **Tools and projects:** [Arcanum-Sec/arc_pi_taxonomy](https://github.com/Arcanum-Sec/arc_pi_taxonomy), [Agent-Threat-Rule/agent-threat-rules](https://github.com/Agent-Threat-Rule/agent-threat-rules), [Joe-B-Security/awesome-prompt-injection](https://github.com/Joe-B-Security/awesome-prompt-injection), [tldrsec/prompt-injection-defenses](https://github.com/tldrsec/prompt-injection-defenses), [NVIDIA/garak](https://github.com/NVIDIA/garak), [microsoft/PyRIT](https://github.com/microsoft/PyRIT), [promptfoo/promptfoo](https://github.com/promptfoo/promptfoo), [confident-ai/deepteam](https://github.com/confident-ai/deepteam), and 33 more in the [Explorer](https://ridd1kulusc0d3r.github.io/LLmInjection/#tab=ecosystem)
 - **Third-party procedures (not ours, link only):** [continuous-llm-red-teaming-with-promptfoo](https://github.com/mukul975/anthropic-cybersecurity-skills/tree/main/skills/continuous-llm-red-teaming-with-promptfoo) (test: red-team regression gate in CI); [detecting-ai-model-prompt-injection-attacks](https://github.com/mukul975/anthropic-cybersecurity-skills/tree/main/skills/detecting-ai-model-prompt-injection-attacks) (detect: signature, heuristic and classifier detection of injection); [detecting-indirect-prompt-injection](https://github.com/mukul975/anthropic-cybersecurity-skills/tree/main/skills/detecting-indirect-prompt-injection) (detect: hidden and obfuscated content in documents, pages and images); [testing-prompt-injection-in-rag-pipelines](https://github.com/mukul975/anthropic-cybersecurity-skills/tree/main/skills/testing-prompt-injection-in-rag-pipelines) (test: poisoned retrieved documents and embedding manipulation). Independent community project, Apache-2.0, not affiliated with Anthropic; see the [knowledge strategy](../KNOWLEDGE-STRATEGY.md).
 - **Live record:** [this technique in the Explorer](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=LLMI-T002)
