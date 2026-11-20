@@ -887,7 +887,9 @@
     "reported": "2026-10-21",
     "summary": "Microsoft reports Storm-0940 used the agentic ARTEX framework to run around-the-clock scanning, password spraying (327 accounts across eight organisations, 10-14 October 2026) and OAuth abuse, reaching privileged cloud access in some cases in under three hours; Microsoft assesses the actor was behind the ConnectWise Cloud Backup compromise affecting hundreds of organisations.",
     "source_ids": [
-      "SRC-MSFT-STORM-0940-ARTEX"
+      "SRC-MSFT-STORM-0940-ARTEX",
+      "SRC-FBI-FLASH-20261113-ARTEX",
+      "SRC-CENSYS-ARTEX-2026-11"
     ]
   },
   {
@@ -1030,7 +1032,8 @@
     "reported": "2026-10-30",
     "summary": "GTIG and Mandiant observed, in incident response since late August 2026, unnamed financially motivated extortion groups and suspected PRC-nexus clusters using ARTEX, an open-source multi-agent LLM-driven pentest and C2 platform, for reconnaissance, lateral movement, privilege escalation and data-theft extortion, typically seeded with compromised credentials. GTIG separately notes UNC7228 (overlapping Microsoft's STORM-0940) using ARTEX; it describes current use as early and low-sophistication but broad.",
     "source_ids": [
-      "SRC-GTIG-ARTEX-2026-10"
+      "SRC-GTIG-ARTEX-2026-10",
+      "SRC-CHECKPOINT-ARTEX-2026-11"
     ]
   },
   {
@@ -1043,7 +1046,8 @@
     "reported": "2026-10-30",
     "summary": "GTIG reports unattributed operators using the open-source PentAGI agent framework, including a custom orchestration platform built on it that was 'likely used', against system integrators and major telecommunications firms in Asia from late August to early October 2026; PentAGI chained to proxy services was also seen against the aerospace sector.",
     "source_ids": [
-      "SRC-GTIG-ARTEX-2026-10"
+      "SRC-GTIG-ARTEX-2026-10",
+      "SRC-GTIG-AGENTIC-THRESHOLD-2026-11"
     ]
   },
   {
@@ -1200,6 +1204,103 @@
     "summary": "WithSecure reports GREYVIBE campaigns (PhantomMail, PhantomClick, PrincessClub, DroneLink, Nebo) against Ukrainian targets using GenAI-made lure images and sites, LLM-assisted obfuscators and loaders, a likely LLM-assisted LegionRelay implant, and generated post-compromise scripts.",
     "source_ids": [
       "SRC-WITHSECURE-GREYVIBE-2026-05"
+    ]
+  },
+  {
+    "id": "CAMPAIGN-BRAZETSU-INFECTED-MARKETPLACE",
+    "type": "campaign",
+    "name": "BraZetsu access-broker framework and Infected Marketplace",
+    "confidence": "high",
+    "first_seen": "2026-02",
+    "last_seen": "2026-10",
+    "reported": "2026-08-31",
+    "regions": [
+      "BR",
+      "LATAM",
+      "ES"
+    ],
+    "summary": "Group-IB tracks the Python-based BraZetsu framework from February 2026 as it grew into an access-broker toolkit that steals browser data, Brazilian CNAB remittance files and digital certificates and feeds Exilware's marketplace. Hunt.io (2026-10-06) maps further BraZetsu infrastructure. The AI elements are an assessment: generative-AI style code and log strings naming a server-side AI triage engine, which neither report observed running.",
+    "source_ids": [
+      "SRC-GROUPIB-BRAZETSU",
+      "SRC-HUNTIO-BRAZETSU"
+    ]
+  },
+  {
+    "id": "CAMPAIGN-ARTEX-EXPOSED-SECRETS",
+    "type": "campaign",
+    "name": "ARTEX-driven search and abuse of secrets exposed on GitHub",
+    "confidence": "high",
+    "first_seen": "2026-10",
+    "last_seen": "2026-11",
+    "reported": "2026-11-05",
+    "summary": "Microsoft observed threat actors using the agentic ARTEX framework to search public GitHub repositories for credentials, application secrets and AI inference API keys and to act on them; in one case an agent went from scanning GitHub to exfiltrating Azure Key Vault data in five minutes. From 2026-10-28 Microsoft saw service-principal sign-ins with compromised multitenant application credentials reaching downstream tenants. Not attributed in the report.",
+    "source_ids": [
+      "SRC-MSFT-ARTEX-SECRETS-2026-11"
+    ]
+  },
+  {
+    "id": "CAMPAIGN-ARTEX-IDENTITY-WORKFLOWS",
+    "type": "campaign",
+    "name": "ARTEX abuse of password-reset pages and exposed APIs to reach cloud access",
+    "confidence": "high",
+    "first_seen": "2026-10",
+    "last_seen": "2026-11",
+    "reported": "2026-11-11",
+    "summary": "Unit 42 Incident Response and Managed Threat Hunting observed ARTEX turning public password-reset pages and exposed APIs into cloud access, sometimes in under a day and without exploiting a software vulnerability, across multiple organisations, including a coordinated campaign against cloud environments in retail and consulting. Not attributed in the report.",
+    "source_ids": [
+      "SRC-UNIT42-ARTEX-2026-11"
+    ]
+  },
+  {
+    "id": "CAMPAIGN-ARTEX-AWS",
+    "type": "campaign",
+    "name": "ARTEX activity in AWS accounts with compromised IAM keys",
+    "confidence": "high",
+    "first_seen": "2026-11",
+    "last_seen": "2026-11",
+    "summary": "Datadog Security Labs attributes activity in real AWS accounts to ARTEX: with compromised long-term IAM access keys it searched CloudWatch logs for financial data, file paths and further secrets, and Datadog tied the source IPs to a hosted ARTEX console among hundreds of exposed ones. Not attributed to an actor.",
+    "source_ids": [
+      "SRC-DATADOG-ARTEX-AWS"
+    ]
+  },
+  {
+    "id": "CAMPAIGN-STORM-3358-ARTEX-FINANCE",
+    "type": "campaign",
+    "name": "Storm-3358 ARTEX-driven intrusions against financial organisations",
+    "confidence": "confirmed",
+    "first_seen": "2026-10",
+    "last_seen": "2026-11",
+    "reported": "2026-11-06",
+    "summary": "Microsoft observed Storm-3358 using ARTEX agents with conventional automated tools to scan internet-facing systems, exploit anonymous file upload and SSRF, and pull open-source RATs (WISP, vshell, AdaptixC2) onto compromised hosts with netcat and curl, against financial organisations mainly in Southeast Asia.",
+    "source_ids": [
+      "SRC-MSFT-STORM-3358-ARTEX"
+    ]
+  },
+  {
+    "id": "CAMPAIGN-ARTEX-IT-SOFTWARE-VENDORS",
+    "type": "campaign",
+    "name": "ARTEX-using actor targeting IT and software vendors (overlaps Storm-0940)",
+    "confidence": "high",
+    "first_seen": "2026-10",
+    "last_seen": "2026-10",
+    "reported": "2026-10-22",
+    "summary": "Wiz observed throughout October 2026 an actor using ARTEX tooling against multiple IT and software vendors, probing Okta, Entra ID and Cognito for authentication bypasses, enumerating APIs and abusing Microsoft 365 integrations to reach vendors' customer data. Wiz says its observations overlap Microsoft's Storm-0940 reporting and extend to other software sectors; the overlap is Wiz's assessment, so no actor is linked here.",
+    "source_ids": [
+      "SRC-WIZ-ARTEX-VENDORS"
+    ]
+  },
+  {
+    "id": "CAMPAIGN-ANTIFOX-AWS-IIS",
+    "type": "campaign",
+    "name": "AntiFox (ARTEX fork) intrusions against IIS applications and AWS",
+    "confidence": "medium",
+    "first_seen": "2026-11",
+    "last_seen": "2026-11",
+    "reported": "2026-11-10",
+    "summary": "Per the Cloud Security Alliance's reading of Arctic Wolf Labs (2026-11-10), self-hosted, Chinese-language AntiFox instances on Alibaba Cloud were tied to compromises of internet-facing IIS applications and abuse of valid AWS credentials; in one case hundreds of API calls across a dozen services in about 30 minutes ended in a successful GetSecretValue on a production secret. AntiFox's README calls it secondary development of ARTEX 0.1.1. The Arctic Wolf original was not read.",
+    "source_ids": [
+      "SRC-CSA-ANTIFOX",
+      "SRC-BC-ANTIFOX"
     ]
   },
   {

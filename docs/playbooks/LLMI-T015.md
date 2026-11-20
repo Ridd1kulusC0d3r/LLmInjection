@@ -13,7 +13,7 @@
 
 | Layer | Status |
 |---|---|
-| Evidence | 45 record(s), 24 publisher(s), best grade A, newest 2026 |
+| Evidence | 53 record(s), 33 publisher(s), best grade A, newest 2026 |
 | Safe tests | 1 |
 | Detections | 3 rule file(s), 1 specification(s) |
 | Controls | 2 |
@@ -27,7 +27,12 @@ AI agents autonomously chain multiple cyber tasks with limited human interventio
 
 What the repository links to it:
 
+- 2026-11 · [AntiFox (ARTEX fork) intrusions against IIS applications and AWS](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-ANTIFOX-AWS-IIS) (campaign, medium)
+- 2026-11 · [ARTEX activity in AWS accounts with compromised IAM keys](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-ARTEX-AWS) (campaign, high)
+- 2026-11 · [ARTEX-driven search and abuse of secrets exposed on GitHub](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-ARTEX-EXPOSED-SECRETS) (campaign, high)
 - 2026-10 · [ARTEX agentic offensive framework use by extortion groups and suspected PRC-nexus clusters](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-ARTEX-EXTORTION-AND-PRC-CLUSTERS) (campaign, confirmed)
+- 2026-11 · [ARTEX abuse of password-reset pages and exposed APIs to reach cloud access](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-ARTEX-IDENTITY-WORKFLOWS) (campaign, high)
+- 2026-10 · [ARTEX-using actor targeting IT and software vendors (overlaps Storm-0940)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-ARTEX-IT-SOFTWARE-VENDORS) (campaign, high)
 - 2026-10 · [Chinese-speaking ARTEX multi-model operator targeting 19 markets](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-ARTEX-MULTI-MODEL-OPERATOR) (campaign, high)
 - 2026-05 · [Aurora ransomware intrusions driven through Cursor Agent](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-AURORA-CURSOR-AGENT) (campaign, confirmed)
 - 2026-04 · [bandcampro Gemini CLI-driven C2 botnet build and fraud operations](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-BANDCAMPRO-GEMINI-CLI-C2) (campaign, confirmed)
@@ -53,6 +58,7 @@ What the repository links to it:
 - 2026 · [SHADOW-AETHER-040 agentic intrusions against Latin American governments](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-SHADOW-AETHER-040) (campaign, high)
 - 2026 · [STAC6994 agent-driven EDR-evasion development lab](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-STAC6994-AGENTIC-EDR-EVASION-LAB) (campaign, confirmed)
 - 2026-10 · [Storm-0940 ARTEX-automated attacks and ConnectWise supply chain compromise](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-STORM-0940-ARTEX-CONNECTWISE) (campaign, high)
+- 2026-11 · [Storm-3358 ARTEX-driven intrusions against financial organisations](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-STORM-3358-ARTEX-FINANCE) (campaign, confirmed)
 - 2026-10 · [VAPOR PANDA ARTEX-driven global espionage campaign](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-VAPOR-PANDA-ARTEX) (campaign, confirmed)
 - 2026-02 · [ARXON custom MCP server driving LLM-assisted FortiGate intrusions](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-ARXON-FORTIGATE-MCP) (intrusion, high)
 - 2026-07-08 · [Autonomous OpenAI Evaluation Agents Compromise Hugging Face Infrastructure (AML.CS0068)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-ATLAS-CS0068) (atlas-incident, high)
@@ -60,6 +66,7 @@ What the repository links to it:
 - 2026-07-01 · [Multi-Agent Framework Compromises Taiwanese Government Systems (AML.CS0071)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-ATLAS-CS0071) (atlas-incident, high)
 - 2026 · [CLOSEDQUORUM autonomous AI C2 research case](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-CLOSEDQUORUM) (research-artifact, confirmed)
 - 2026-07 · [Multi-agent AI framework (Hermes/OpenClaw) used to compromise Asian government entities](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-DREAM-MULTI-AGENT-ASIA-GOV) (intrusion, high)
+- 2026-11 · [Eye Security incident response to an ARTEX-driven intrusion](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-EYE-ARTEX-IR) (intrusion, confirmed)
 - 2026-09 · [Autonomous AI agents used to compromise online retailers and plant card skimmers](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-GAMBIT-AI-AGENT-RETAIL-SKIMMING) (intrusion, confirmed)
 - 2026 · [Multi-agent credential harvesting from compromised cloud in under six hours](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-GTIG-AGENTIC-CREDENTIAL-HARVESTING) (intrusion, confirmed)
 - 2026 · [Multi-agent mass credential harvesting in under six hours](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-GTIG-AUTONOMOUS-HARVEST) (intrusion, confirmed)
@@ -72,8 +79,9 @@ What the repository links to it:
 - 2026-09 · [TAG-217 ARTEX-linked intrusions at South Korean financial institutions](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-TAG-217-SOUTH-KOREA-FINANCE) (intrusion, medium)
 - 2026 · [Claude Code CLI run as autonomous lateral-movement agent against a Thai organisation](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-TREND-CLAUDE-CODE-AGENT-THAILAND) (intrusion, confirmed)
 - 2026 · [Unit 42 investigation of a sub-10-hour AI-agent-assisted intrusion](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-UNIT42-AI-ASSISTED-INTRUSION) (intrusion, high)
+- 2026-10-30 · [ARTEX agent escapes a researcher's sandbox and reaches WorkOS's internal sales tool](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-WORKOS-ARTEX-SANDBOX-ESCAPE) (unintended-access, confirmed)
 
-Actors whose campaigns use it: Aurora, bandcampro, CyberXero, GTG-10007, GTG-1002, GTG-20006, GTG-2002, GTG-50014, GTG-50020, GTG-50029, JADEPUFFER, knaithe, Onyx Sleet, Pearl Sleet, STAC6994, Storm-0940, VAPOR PANDA. Vendor labels are kept as published and never merged without evidence.
+Actors whose campaigns use it: Aurora, bandcampro, CyberXero, GTG-10007, GTG-1002, GTG-20006, GTG-2002, GTG-50014, GTG-50020, GTG-50029, JADEPUFFER, knaithe, Onyx Sleet, Pearl Sleet, STAC6994, Storm-0940, Storm-3358, VAPOR PANDA. Vendor labels are kept as published and never merged without evidence.
 
 ## 2. Test it safely
 
@@ -148,5 +156,5 @@ The runner has plan and mock adapters only: it does not call your system. To run
 ## 7. Go deeper (links only)
 
 - **Benchmarks:** [andyzorigin/cybench](https://github.com/andyzorigin/cybench)
-- **Tools and projects:** [promptfoo/promptfoo](https://github.com/promptfoo/promptfoo), [confident-ai/deepteam](https://github.com/confident-ai/deepteam), [praetorian-inc/augustus](https://github.com/praetorian-inc/augustus), [cisco-ai-defense/skill-scanner](https://github.com/cisco-ai-defense/skill-scanner), [scadastrangelove/agent-audit](https://github.com/scadastrangelove/agent-audit), [regaan/basilisk](https://github.com/regaan/basilisk), [perplext/LLMrecon](https://github.com/perplext/LLMrecon)
+- **Tools and projects:** [promptfoo/promptfoo](https://github.com/promptfoo/promptfoo), [confident-ai/deepteam](https://github.com/confident-ai/deepteam), [praetorian-inc/augustus](https://github.com/praetorian-inc/augustus), [cisco-ai-defense/skill-scanner](https://github.com/cisco-ai-defense/skill-scanner), [scadastrangelove/agent-audit](https://github.com/scadastrangelove/agent-audit), [regaan/basilisk](https://github.com/regaan/basilisk), [perplext/LLMrecon](https://github.com/perplext/LLMrecon), [rakshanex/agenttrace](https://github.com/rakshanex/agenttrace), and 2 more in the [Explorer](https://ridd1kulusc0d3r.github.io/LLmInjection/#tab=ecosystem)
 - **Live record:** [this technique in the Explorer](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=LLMI-T015)

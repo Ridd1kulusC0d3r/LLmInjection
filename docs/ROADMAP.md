@@ -153,7 +153,7 @@ Evidence → Campaign → Technique → Test → Detection → Control → Frame
 - [x] Triage the 25 ATR CVE candidates: 22 AI-system CVEs promoted into `data/vulnerabilities.json` with a primary advisory, 3 rejected (2026-11-20)
 - [ ] Link observed prompt-injection incidents to LLMI-T001 and LLMI-T002 so their maturity reflects the evidence
 - [ ] Verify the Navigator layer's ATLAS `domain` value against an ATLAS-aware Navigator build
-- [x] Primary reports for the Brazil leads (2026-11-20): Zscaler promoted, PixRevolution re-attributed to Zimperium and held, Serasa figures not found at Serasa
+- [x] Primary reports for the Brazil leads (2026-11-20): Zscaler promoted, PixRevolution re-attributed to Zimperium and held, Serasa figures not found at Serasa; BraZetsu (Group-IB, Hunt.io) and Viaconnect added the same day
 - [ ] Evaluate SHADOW-AETHER-064 as its own record once the overlap with BREEZE COMET is resolved
 
 ## v1.4 — Languages 🟡 2026-10-08

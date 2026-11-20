@@ -98,5 +98,5 @@ The runner has plan and mock adapters only: it does not call your system. To run
 
 ## 7. Go deeper (links only)
 
-- **Tools and projects:** [NVIDIA/garak](https://github.com/NVIDIA/garak), [promptfoo/promptfoo](https://github.com/promptfoo/promptfoo), [praetorian-inc/augustus](https://github.com/praetorian-inc/augustus), [cisco-ai-defense/skill-scanner](https://github.com/cisco-ai-defense/skill-scanner), [NVIDIA/SkillSpector](https://github.com/NVIDIA/SkillSpector), [garagon/aguara](https://github.com/garagon/aguara)
+- **Tools and projects:** [NVIDIA/garak](https://github.com/NVIDIA/garak), [promptfoo/promptfoo](https://github.com/promptfoo/promptfoo), [praetorian-inc/augustus](https://github.com/praetorian-inc/augustus), [cisco-ai-defense/skill-scanner](https://github.com/cisco-ai-defense/skill-scanner), [NVIDIA/SkillSpector](https://github.com/NVIDIA/SkillSpector), [garagon/aguara](https://github.com/garagon/aguara), [mmedabo/AIAgentFirewall](https://github.com/mmedabo/AIAgentFirewall)
 - **Live record:** [this technique in the Explorer](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=LLMI-T012)

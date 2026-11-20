@@ -5265,7 +5265,7 @@
     "target": "LLMI-T015",
     "confidence": "medium",
     "evidence_sources": [
-      "SRC-MSFT-STORM-0940-ARTEX"
+      "SRC-FBI-FLASH-20261113-ARTEX"
     ]
   },
   {
@@ -5276,7 +5276,7 @@
     "target": "LLMI-T015",
     "confidence": "medium",
     "evidence_sources": [
-      "SRC-MSFT-STORM-0940-ARTEX"
+      "SRC-CSA-ANTIFOX"
     ]
   },
   {
@@ -5287,11 +5287,460 @@
     "target": "LLMI-T016",
     "confidence": "medium",
     "evidence_sources": [
-      "SRC-MSFT-STORM-0940-ARTEX"
+      "SRC-CSA-ANTIFOX"
     ]
   },
   {
     "id": "REL-480",
+    "type": "relationship",
+    "source": "ACTOR-EXILWARE",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-BRAZETSU-INFECTED-MARKETPLACE",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-GROUPIB-BRAZETSU",
+      "SRC-HUNTIO-BRAZETSU"
+    ]
+  },
+  {
+    "id": "REL-481",
+    "type": "relationship",
+    "source": "CAMPAIGN-BRAZETSU-INFECTED-MARKETPLACE",
+    "relationship": "uses",
+    "target": "LLMI-T028",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-GROUPIB-BRAZETSU",
+      "SRC-HUNTIO-BRAZETSU"
+    ]
+  },
+  {
+    "id": "REL-482",
+    "type": "relationship",
+    "source": "CAMPAIGN-ARTEX-EXPOSED-SECRETS",
+    "relationship": "uses",
+    "target": "LLMI-T015",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MSFT-ARTEX-SECRETS-2026-11"
+    ]
+  },
+  {
+    "id": "REL-483",
+    "type": "relationship",
+    "source": "CAMPAIGN-ARTEX-EXPOSED-SECRETS",
+    "relationship": "uses",
+    "target": "LLMI-T016",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-MSFT-ARTEX-SECRETS-2026-11"
+    ]
+  },
+  {
+    "id": "REL-484",
+    "type": "relationship",
+    "source": "CAMPAIGN-ARTEX-IDENTITY-WORKFLOWS",
+    "relationship": "uses",
+    "target": "LLMI-T015",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-UNIT42-ARTEX-2026-11"
+    ]
+  },
+  {
+    "id": "REL-485",
+    "type": "relationship",
+    "source": "CAMPAIGN-ARTEX-AWS",
+    "relationship": "uses",
+    "target": "LLMI-T015",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-DATADOG-ARTEX-AWS"
+    ]
+  },
+  {
+    "id": "REL-486",
+    "type": "relationship",
+    "source": "INCIDENT-EYE-ARTEX-IR",
+    "relationship": "demonstrates",
+    "target": "LLMI-T015",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-EYE-ARTEX-IR-2026-11"
+    ]
+  },
+  {
+    "id": "REL-487",
+    "type": "relationship",
+    "source": "INCIDENT-LITELLM-GUARDRAIL-TESTER-EXPLOITATION",
+    "relationship": "demonstrates",
+    "target": "LLMI-T024",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-ZENITY-LITELLM-40217"
+    ]
+  },
+  {
+    "id": "REL-488",
+    "type": "relationship",
+    "source": "INCIDENT-LITELLM-GUARDRAIL-TESTER-EXPLOITATION",
+    "relationship": "demonstrates",
+    "target": "LLMI-T016",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-ZENITY-LITELLM-40217"
+    ]
+  },
+  {
+    "id": "REL-489",
+    "type": "relationship",
+    "source": "INCIDENT-VIACONNECT-EDR-TELEMETRY-INJECTION",
+    "relationship": "demonstrates",
+    "target": "LLMI-T002",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-BAGUETE-VIACONNECT"
+    ]
+  },
+  {
+    "id": "REL-490",
+    "type": "relationship",
+    "source": "INCIDENT-VIACONNECT-EDR-TELEMETRY-INJECTION",
+    "relationship": "demonstrates",
+    "target": "LLMI-T017",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-BAGUETE-VIACONNECT"
+    ]
+  },
+  {
+    "id": "REL-491",
+    "type": "relationship",
+    "source": "VULN-LITELLM-CVE-2026-40217",
+    "relationship": "demonstrates",
+    "target": "LLMI-T024",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-GHSA-LITELLM-40217"
+    ]
+  },
+  {
+    "id": "REL-492",
+    "type": "relationship",
+    "source": "VULN-LITELLM-CVE-2026-40217",
+    "relationship": "observed-in",
+    "target": "INCIDENT-LITELLM-GUARDRAIL-TESTER-EXPLOITATION",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-ZENITY-LITELLM-40217"
+    ]
+  },
+  {
+    "id": "REL-493",
+    "type": "relationship",
+    "source": "ACTOR-STORM-3358",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-STORM-3358-ARTEX-FINANCE",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-MSFT-STORM-3358-ARTEX"
+    ]
+  },
+  {
+    "id": "REL-494",
+    "type": "relationship",
+    "source": "CAMPAIGN-STORM-3358-ARTEX-FINANCE",
+    "relationship": "uses",
+    "target": "LLMI-T015",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MSFT-STORM-3358-ARTEX"
+    ]
+  },
+  {
+    "id": "REL-495",
+    "type": "relationship",
+    "source": "CAMPAIGN-ARTEX-IT-SOFTWARE-VENDORS",
+    "relationship": "uses",
+    "target": "LLMI-T015",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-WIZ-ARTEX-VENDORS"
+    ]
+  },
+  {
+    "id": "REL-496",
+    "type": "relationship",
+    "source": "CAMPAIGN-ANTIFOX-AWS-IIS",
+    "relationship": "uses",
+    "target": "LLMI-T015",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-CSA-ANTIFOX",
+      "SRC-BC-ANTIFOX"
+    ]
+  },
+  {
+    "id": "REL-497",
+    "type": "relationship",
+    "source": "INCIDENT-WORKOS-ARTEX-SANDBOX-ESCAPE",
+    "relationship": "demonstrates",
+    "target": "LLMI-T015",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-WORKOS-BULLETIN-2026-10-30"
+    ]
+  },
+  {
+    "id": "REL-498",
+    "type": "relationship",
+    "source": "CAMPAIGN-ONYX-SLEET-AI-LURES",
+    "relationship": "uses-tool",
+    "target": "TOOL-ARTEX",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-MSFT-DPRK-AI-2026-10"
+    ]
+  },
+  {
+    "id": "REL-499",
+    "type": "relationship",
+    "source": "CAMPAIGN-ARTEX-MULTI-MODEL-OPERATOR",
+    "relationship": "uses-tool",
+    "target": "TOOL-ARTEX",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-ZSCALER-ARTEX-GLOBAL",
+      "SRC-RECORDEDFUTURE-TAG-217-ARTEX"
+    ]
+  },
+  {
+    "id": "REL-500",
+    "type": "relationship",
+    "source": "CAMPAIGN-STORM-0940-ARTEX-CONNECTWISE",
+    "relationship": "uses-tool",
+    "target": "TOOL-ARTEX",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MSFT-STORM-0940-ARTEX",
+      "SRC-FBI-FLASH-20261113-ARTEX"
+    ]
+  },
+  {
+    "id": "REL-501",
+    "type": "relationship",
+    "source": "CAMPAIGN-ARTEX-EXTORTION-AND-PRC-CLUSTERS",
+    "relationship": "uses-tool",
+    "target": "TOOL-ARTEX",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-ARTEX-2026-10",
+      "SRC-CHECKPOINT-ARTEX-2026-11"
+    ]
+  },
+  {
+    "id": "REL-502",
+    "type": "relationship",
+    "source": "CAMPAIGN-PEARL-SLEET-ARTEX",
+    "relationship": "uses-tool",
+    "target": "TOOL-ARTEX",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-MSFT-DPRK-AI-2026-10"
+    ]
+  },
+  {
+    "id": "REL-503",
+    "type": "relationship",
+    "source": "CAMPAIGN-VAPOR-PANDA-ARTEX",
+    "relationship": "uses-tool",
+    "target": "TOOL-ARTEX",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-CROWDSTRIKE-VAPOR-PANDA-2026-10"
+    ]
+  },
+  {
+    "id": "REL-504",
+    "type": "relationship",
+    "source": "CAMPAIGN-ARTEX-EXPOSED-SECRETS",
+    "relationship": "uses-tool",
+    "target": "TOOL-ARTEX",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MSFT-ARTEX-SECRETS-2026-11"
+    ]
+  },
+  {
+    "id": "REL-505",
+    "type": "relationship",
+    "source": "CAMPAIGN-ARTEX-IDENTITY-WORKFLOWS",
+    "relationship": "uses-tool",
+    "target": "TOOL-ARTEX",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-UNIT42-ARTEX-2026-11"
+    ]
+  },
+  {
+    "id": "REL-506",
+    "type": "relationship",
+    "source": "CAMPAIGN-ARTEX-AWS",
+    "relationship": "uses-tool",
+    "target": "TOOL-ARTEX",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-DATADOG-ARTEX-AWS"
+    ]
+  },
+  {
+    "id": "REL-507",
+    "type": "relationship",
+    "source": "CAMPAIGN-STORM-3358-ARTEX-FINANCE",
+    "relationship": "uses-tool",
+    "target": "TOOL-ARTEX",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-MSFT-STORM-3358-ARTEX"
+    ]
+  },
+  {
+    "id": "REL-508",
+    "type": "relationship",
+    "source": "CAMPAIGN-ARTEX-IT-SOFTWARE-VENDORS",
+    "relationship": "uses-tool",
+    "target": "TOOL-ARTEX",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-WIZ-ARTEX-VENDORS"
+    ]
+  },
+  {
+    "id": "REL-509",
+    "type": "relationship",
+    "source": "INCIDENT-TAG-217-SOUTH-KOREA-FINANCE",
+    "relationship": "uses-tool",
+    "target": "TOOL-ARTEX",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-RECORDEDFUTURE-TAG-217-ARTEX",
+      "SRC-FBI-FLASH-20261113-ARTEX"
+    ]
+  },
+  {
+    "id": "REL-510",
+    "type": "relationship",
+    "source": "INCIDENT-EYE-ARTEX-IR",
+    "relationship": "uses-tool",
+    "target": "TOOL-ARTEX",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-EYE-ARTEX-IR-2026-11"
+    ]
+  },
+  {
+    "id": "REL-511",
+    "type": "relationship",
+    "source": "INCIDENT-WORKOS-ARTEX-SANDBOX-ESCAPE",
+    "relationship": "uses-tool",
+    "target": "TOOL-ARTEX",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-WORKOS-BULLETIN-2026-10-30"
+    ]
+  },
+  {
+    "id": "REL-512",
+    "type": "relationship",
+    "source": "CAMPAIGN-ANTIFOX-AWS-IIS",
+    "relationship": "uses-tool",
+    "target": "TOOL-ANTIFOX",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-CSA-ANTIFOX",
+      "SRC-BC-ANTIFOX"
+    ]
+  },
+  {
+    "id": "REL-513",
+    "type": "relationship",
+    "source": "CAMPAIGN-PENTAGI-ASIA-TELECOM",
+    "relationship": "uses-tool",
+    "target": "TOOL-PENTAGI",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-GTIG-ARTEX-2026-10",
+      "SRC-GTIG-AGENTIC-THRESHOLD-2026-11"
+    ]
+  },
+  {
+    "id": "REL-514",
+    "type": "relationship",
+    "source": "CAMPAIGN-CYBERXERO-CLAUDE-AGENT-SWARM",
+    "relationship": "uses-tool",
+    "target": "TOOL-PENTAGI",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-SOCRADAR-CYBERXERO"
+    ]
+  },
+  {
+    "id": "REL-515",
+    "type": "relationship",
+    "source": "INCIDENT-GAMBIT-AI-AGENT-RETAIL-SKIMMING",
+    "relationship": "uses-tool",
+    "target": "TOOL-CAIRN",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GAMBIT-AI-AGENTS-RETAILERS"
+    ]
+  },
+  {
+    "id": "REL-516",
+    "type": "relationship",
+    "source": "INCIDENT-HEXSTRIKE-STRIX-EAST-ASIA",
+    "relationship": "uses-tool",
+    "target": "TOOL-HEXSTRIKE-AI",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-AI-TRACKER-2026-05"
+    ]
+  },
+  {
+    "id": "REL-517",
+    "type": "relationship",
+    "source": "INCIDENT-HEXSTRIKE-STRIX-EAST-ASIA",
+    "relationship": "uses-tool",
+    "target": "TOOL-STRIX",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GTIG-AI-TRACKER-2026-05"
+    ]
+  },
+  {
+    "id": "REL-518",
+    "type": "relationship",
+    "source": "INCIDENT-GAMBIT-AI-AGENT-RETAIL-SKIMMING",
+    "relationship": "uses-tool",
+    "target": "TOOL-STRIX",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GAMBIT-AI-AGENTS-RETAILERS"
+    ]
+  },
+  {
+    "id": "REL-519",
+    "type": "relationship",
+    "source": "TOOL-ANTIFOX",
+    "relationship": "derived-from",
+    "target": "TOOL-ARTEX",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-CSA-ANTIFOX"
+    ]
+  },
+  {
+    "id": "REL-520",
     "type": "relationship",
     "source": "CAMPAIGN-BR-GOV-GENAI-PIX-PHISHING",
     "relationship": "uses",
@@ -5302,7 +5751,7 @@
     ]
   },
   {
-    "id": "REL-481",
+    "id": "REL-521",
     "type": "relationship",
     "source": "CAMPAIGN-BR-GOV-GENAI-PIX-PHISHING",
     "relationship": "uses",

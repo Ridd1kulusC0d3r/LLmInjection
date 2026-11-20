@@ -13,7 +13,7 @@
 
 | Layer | Status |
 |---|---|
-| Evidence | 70 record(s), 31 publisher(s), best grade A, newest 2026 |
+| Evidence | 71 record(s), 32 publisher(s), best grade A, newest 2026 |
 | Safe tests | 1 |
 | Detections | 1 rule file(s), 0 specification(s) |
 | Controls | 1 |
@@ -34,6 +34,7 @@ What the repository links to it:
 - 2026-10 · [Chinese-speaking ARTEX multi-model operator targeting 19 markets](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-ARTEX-MULTI-MODEL-OPERATOR) (campaign, high)
 - 2026-04 · [bandcampro Gemini CLI-driven C2 botnet build and fraud operations](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-BANDCAMPRO-GEMINI-CLI-C2) (campaign, confirmed)
 - 2025-08 · [AI-built clones of Brazilian government sites collecting Pix payments](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-BR-GOV-GENAI-PIX-PHISHING) (campaign, high)
+- 2026-10 · [BraZetsu access-broker framework and Infected Marketplace](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-BRAZETSU-INFECTED-MARKETPLACE) (campaign, high)
 - 2026 · [BREEZE COMET payment-system fraud in Brazil](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-BREEZE-COMET-PAYMENTS) (campaign, confirmed)
 - 2026 · [BUGSTER Hermes Agent/DeepSeek multi-domain cybercrime](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-BUGSTER-HERMES-DEEPSEEK-CYBERCRIME) (campaign, confirmed)
 - 2026-09 · [CaptiveCrunch](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-CAPTIVECRUNCH) (campaign, confirmed)
@@ -98,7 +99,7 @@ What the repository links to it:
 - 2026 · [Unit 42 investigation of a sub-10-hour AI-agent-assisted intrusion](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-UNIT42-AI-ASSISTED-INTRUSION) (intrusion, high)
 - 2026 · [VoidLink AI-assisted malware engineering case](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-VOIDLINK) (observed-research-case, confirmed)
 
-Actors whose campaigns use it: APT27, APT41, APT45, Armored Likho, bandcampro, BREEZE COMET, BUGSTER, CL-CRI-1131, CL-CRI-1163, Coral Sleet, Earth Krahang, Earth Naga, FunkSec, GREYVIBE, GTG-10007, GTG-14021, GTG-14022, GTG-15001, GTG-20006, GTG-2002, GTG-30004, GTG-30005, GTG-30006, GTG-34007, GTG-50014, GTG-50027, GTG-50029, GTG-5004, Jade Sleet, LAUNDRY BEAR, RevengeHotels, SANDWORM RELIC, Sapphire Sleet, SilkParasite, STAC6994, Storm-2945, TEMP.Zagros, The Gentlemen, UNC1069, UNC2814, UNC4899, UNC5356, UNC795, VAPOR PANDA. Vendor labels are kept as published and never merged without evidence.
+Actors whose campaigns use it: APT27, APT41, APT45, Armored Likho, bandcampro, BREEZE COMET, BUGSTER, CL-CRI-1131, CL-CRI-1163, Coral Sleet, Earth Krahang, Earth Naga, Exilware, FunkSec, GREYVIBE, GTG-10007, GTG-14021, GTG-14022, GTG-15001, GTG-20006, GTG-2002, GTG-30004, GTG-30005, GTG-30006, GTG-34007, GTG-50014, GTG-50027, GTG-50029, GTG-5004, Jade Sleet, LAUNDRY BEAR, RevengeHotels, SANDWORM RELIC, Sapphire Sleet, SilkParasite, STAC6994, Storm-2945, TEMP.Zagros, The Gentlemen, UNC1069, UNC2814, UNC4899, UNC5356, UNC795, VAPOR PANDA. Vendor labels are kept as published and never merged without evidence.
 
 ## 2. Test it safely
 

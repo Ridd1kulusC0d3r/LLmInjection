@@ -1,0 +1,89 @@
+[
+  {
+    "id": "TOOL-ARTEX",
+    "type": "tool",
+    "name": "ARTEX",
+    "kind": "agentic-offensive-framework",
+    "origin": "Open-source, Go, published on GitHub by \"Autumn-27\" in July 2026; made unavailable on 2026-10-08, with forks, archived copies and a commercial ARTEX PRO still in circulation",
+    "models": "External providers (Claude, GPT, DeepSeek, GLM, Grok, Kimi); DeepSeek Flash models dominate attacker instances per the FBI",
+    "first_seen": "2026-07",
+    "summary": "Multi-agent, LLM-driven penetration-testing platform: an operator sets a target and objective, a planner agent chooses steps and worker agents run standard tools, sharing findings. Reported in use by state-aligned and financially motivated actors since August 2026; its own consoles are often exposed to the internet.",
+    "source_ids": [
+      "SRC-FBI-FLASH-20261113-ARTEX",
+      "SRC-GTIG-ARTEX-2026-10",
+      "SRC-WIZ-ARTEX-VENDORS",
+      "SRC-CENSYS-ARTEX-2026-11"
+    ]
+  },
+  {
+    "id": "TOOL-ANTIFOX",
+    "type": "tool",
+    "name": "AntiFox",
+    "kind": "agentic-offensive-framework",
+    "origin": "Open-source fork of ARTEX 0.1.1, maintained under the AntiFox-AI GitHub organisation",
+    "first_seen": "2026-10",
+    "summary": "Self-hosted, Chinese-language agentic pentest platform whose README calls it secondary development of ARTEX; tied by Arctic Wolf Labs (as read by the Cloud Security Alliance) to IIS and AWS intrusions.",
+    "source_ids": [
+      "SRC-CSA-ANTIFOX",
+      "SRC-BC-ANTIFOX"
+    ]
+  },
+  {
+    "id": "TOOL-PENTAGI",
+    "type": "tool",
+    "name": "PentAGI",
+    "kind": "agentic-offensive-framework",
+    "origin": "Open-source",
+    "summary": "Autonomous offensive framework aimed at lowering the barrier for entry-level operators; GTIG observed a customised orchestration platform built on it in the wild.",
+    "source_ids": [
+      "SRC-GTIG-AGENTIC-THRESHOLD-2026-11",
+      "SRC-GTIG-ARTEX-2026-10"
+    ]
+  },
+  {
+    "id": "TOOL-CAIRN",
+    "type": "tool",
+    "name": "CAIRN",
+    "kind": "agentic-offensive-framework",
+    "origin": "Open-source",
+    "summary": "Multi-agent pentest framework built on an observe-orient-decide-act loop in which specialised agents share a blackboard; GTIG has seen it deployed in the wild.",
+    "source_ids": [
+      "SRC-GTIG-AGENTIC-THRESHOLD-2026-11"
+    ]
+  },
+  {
+    "id": "TOOL-CYBERSTRIKEAI",
+    "type": "tool",
+    "name": "CyberStrikeAI",
+    "kind": "agentic-offensive-framework",
+    "origin": "Open-source, Go backend acting as C2 and orchestration server",
+    "summary": "LLM-native offensive framework presented as a single pane of glass for operations; GTIG has seen threat-actor experimentation with it, not deployment.",
+    "source_ids": [
+      "SRC-GTIG-AGENTIC-THRESHOLD-2026-11"
+    ]
+  },
+  {
+    "id": "TOOL-HEXSTRIKE-AI",
+    "type": "tool",
+    "name": "HexStrike AI",
+    "kind": "offensive-mcp-harness",
+    "origin": "Open-source",
+    "summary": "MCP-integrated harness that lets LLM clients drive a large set of pre-installed offensive security tools; GTIG reports experimentation by threat actors and one PRC-nexus intrusion using it with a memory system.",
+    "source_ids": [
+      "SRC-GTIG-AGENTIC-THRESHOLD-2026-11",
+      "SRC-GTIG-AI-TRACKER-2026-05"
+    ]
+  },
+  {
+    "id": "TOOL-STRIX",
+    "type": "tool",
+    "name": "Strix",
+    "kind": "agentic-offensive-framework",
+    "origin": "Open-source",
+    "summary": "Multi-agent framework for automated vulnerability identification and validation, seen in a PRC-nexus intrusion (GTIG) and in a financially motivated card-skimming operation (Gambit).",
+    "source_ids": [
+      "SRC-GTIG-AI-TRACKER-2026-05",
+      "SRC-GAMBIT-AI-AGENTS-RETAILERS"
+    ]
+  }
+]

@@ -1765,5 +1765,58 @@
         "url": "https://www.withsecure.com/en/resources-hub/w-labs/greyvibe/"
       }
     ]
+  },
+  {
+    "id": "ACTOR-EXILWARE",
+    "type": "actor",
+    "name": "Exilware",
+    "aliases": [],
+    "nexus": "Not stated in report (Initial Access Broker selling Iberian and Latin American access)",
+    "ai_role": [
+      "tooling-development"
+    ],
+    "confidence": "medium",
+    "regions": [
+      "BR",
+      "LATAM",
+      "ES"
+    ],
+    "summary": "Group-IB assesses with high confidence that the BraZetsu malware framework supplies Exilware's Initial Access Broker operation and its 'Infected Marketplace' (Banco de Infects) of compromised Iberian and Latin American hosts. Group-IB reads emoji-heavy logging as a sign the code was written with generative AI and cites log strings referring to an AI engine on the C2 backend that triages stolen data; it says the extent of AI use across the lifecycle is unknown.",
+    "last_verified": "2026-11-20",
+    "sources": [
+      {
+        "title": "Anatomy of BraZetsu: How Cybercriminals Fuel the Underground Ecosystem",
+        "publisher": "Group-IB",
+        "grade": "A",
+        "url": "https://www.group-ib.com/blog/brazetsu-ai-enhanced-iab-marketplace/"
+      },
+      {
+        "title": "Brazilian Access Broker Targeting Latin America: Mapping BraZetsu Infrastructure Beyond the Published IOCs",
+        "publisher": "Hunt.io",
+        "grade": "A",
+        "url": "https://hunt.io/blog/brazetsu-access-broker-infrastructure"
+      }
+    ]
+  },
+  {
+    "id": "ACTOR-STORM-3358",
+    "type": "actor",
+    "name": "Storm-3358",
+    "aliases": [],
+    "nexus": "Cambodia-based, financially motivated (Microsoft)",
+    "ai_role": [
+      "autonomous-operator"
+    ],
+    "confidence": "confirmed",
+    "summary": "Microsoft tracks Storm-3358 as a Cambodia-based, financially motivated intrusion cluster that mainly targets financial organisations in Southeast Asia, plus a few large ones elsewhere. From October 2026 it combined the ARTEX agentic framework with conventional scanners to exploit anonymous file upload and SSRF and to install the WISP, vshell and AdaptixC2 RATs.",
+    "last_verified": "2026-11-20",
+    "sources": [
+      {
+        "title": "ARTEX abuse expands as cybercriminals target financial sector",
+        "publisher": "Microsoft Threat Intelligence",
+        "grade": "A",
+        "url": "https://www.microsoft.com/en-us/security/blog/2026/11/06/artex-abuse-expands-as-cybercriminals-target-financial-sector/"
+      }
+    ]
   }
 ]
