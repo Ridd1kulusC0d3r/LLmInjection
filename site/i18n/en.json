@@ -554,5 +554,7 @@
  "tl.f.ai": "Found by AI",
  "tl.b.ai": "found by AI",
  "tl.b.agent": "used by an AI agent",
- "tabgrp.go": "Open the first section of this group"
+ "tabgrp.go": "Open the first section of this group",
+ "rep.pdf": "Download PDF",
+ "rep.print": "Print to PDF"
 }

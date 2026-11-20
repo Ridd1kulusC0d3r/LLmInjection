@@ -339,6 +339,9 @@ def page(path: Path, vulns: list[dict], index: list[dict]) -> tuple[str, dict]:
         title=esc(title), kind=esc(kind), kind_up=esc(kind.upper()), code=esc(meta[0] if meta else path.stem.upper()),
         date=esc(date.group(1) if date else ""), tlp=esc(meta[1] if len(meta) > 1 else "TLP:CLEAR"),
         minutes=max(1, round(words / 220)), sections=len([t for t in toc if t[0] == 2]), kpis=hero_kpis,
+        pdfbtn=(f'<a class="btn dl" href="../{esc(fm["pdf"])}" download>Baixar PDF</a>' if fm.get("pdf") and (ROOT / fm["pdf"]).exists()
+                else '<button type="button" onclick="print()">Imprimir em PDF</button>'),
+        pdfhero=(f'<a class="btn" href="../{esc(fm["pdf"])}" download>Baixar PDF ↓</a>' if fm.get("pdf") and (ROOT / fm["pdf"]).exists() else ""),
         chart=chart, toc=toc_html, content=content, github=REPO + rel, graph=graph, others=others,
         desc=esc(re.sub(r"<[^>]+>|\s+", " ", content)[:220].strip()))
     return doc, {"path": rel, "title": title}
@@ -359,7 +362,7 @@ body{{background:var(--paper)}}
 .top{{position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px max(16px,calc((100% - var(--w))/2));background:color-mix(in srgb,var(--paper) 86%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--rule-2);font:600 11px var(--mono);letter-spacing:.12em;text-transform:uppercase}}
 .top a{{color:var(--ink-2);text-decoration:none}}.top a:hover{{color:var(--signal)}}
 .top .acts{{display:flex;gap:6px;flex-wrap:wrap}}
-.top button,.btn{{font:600 11px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--ink);background:var(--card);border:1px solid var(--rule);padding:8px 13px;border-radius:var(--pill);cursor:pointer;text-decoration:none;display:inline-block}}
+.top button,.top a.dl,.btn{{font:600 11px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--ink);background:var(--card);border:1px solid var(--rule);padding:8px 13px;border-radius:var(--pill);cursor:pointer;text-decoration:none;display:inline-block}}
 .top button:hover,.btn:hover{{border-color:var(--ink)}}
 .btn.primary{{background:var(--signal);color:var(--signal-ink);border-color:var(--signal)}}
 .hero{{position:relative;overflow:hidden;background:#15140f;color:#f3f0e8;padding:64px max(16px,calc((100% - var(--w))/2)) 44px}}
@@ -437,12 +440,12 @@ a.cve.kev:after{{content:"KEV";font:700 9px var(--mono);margin-left:4px;padding:
 </head>
 <body>
 <div class="progress" id="progress"></div>
-<header class="top"><a href="../#tab=reports">← LLMInjection · Relatórios</a><div class="acts"><button type="button" onclick="print()">PDF</button><button type="button" class="keep" id="share">Copiar link</button><button type="button" id="theme">Tema</button></div></header>
+<header class="top"><a href="../#tab=reports">← LLMInjection · Relatórios</a><div class="acts">{pdfbtn}<button type="button" class="keep" id="share">Copiar link</button><button type="button" id="theme">Tema</button></div></header>
 <section class="hero">
   <div class="wbar"><span>LLMINJECTION / {kind_up}</span><span class="tlp">{tlp}</span></div>
   <h1>{title}</h1>
   <div class="meta"><span><b>{code}</b></span><span>Corte <b>{date}</b></span><span><b>{sections}</b> seções</span><span>Leitura de <b>{minutes} min</b></span></div>
-  <div class="ctas"><a class="btn primary" href="#conteudo">Ler o relatório</a>{graph}<a class="btn" href="{github}" rel="noopener">Markdown no GitHub ↗</a></div>
+  <div class="ctas"><a class="btn primary" href="#conteudo">Ler o relatório</a>{graph}{pdfhero}<a class="btn" href="{github}" rel="noopener">Markdown no GitHub ↗</a></div>
   <div class="kpis">{kpis}</div>
 </section>
 <div class="layout"><nav class="toc" aria-label="Sumário"><div class="h">Sumário</div>{toc}</nav>

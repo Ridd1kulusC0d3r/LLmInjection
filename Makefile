@@ -41,3 +41,5 @@ navigator:
 print:
 	python3 scripts/build_print_report.py --out dist/print
 	node scripts/render_print_report.js dist/print reports/pdf/LLMI-RI-2026-11-20-ameacas-sistemas-ia.pdf
+	python3 scripts/build_print_report.py --out dist/print-artex --dossier reports/dossiers/artex.md
+	node scripts/render_print_report.js dist/print-artex reports/pdf/LLMI-DS-ARTEX.pdf --dossier reports/dossiers/artex.md

@@ -554,5 +554,7 @@
  "tl.f.ai": "Encontradas por IA",
  "tl.b.ai": "encontrada por IA",
  "tl.b.agent": "usada por agente de IA",
- "tabgrp.go": "Abrir la primera sección de este grupo"
+ "tabgrp.go": "Abrir la primera sección de este grupo",
+ "rep.pdf": "Descargar PDF",
+ "rep.print": "Imprimir en PDF"
 }

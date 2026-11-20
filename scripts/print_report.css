@@ -163,3 +163,9 @@ td.m-observed-in-the-wild{color:var(--sig)!important}
 .refs{font-size:7.6pt;padding-left:6mm;column-count:1}
 .refs li{margin:0 0 1.4mm;break-inside:avoid}
 .refs a{font:7pt "JetBrains Mono";color:var(--ink3);border:0;word-break:break-all}
+
+/* dossier sections flow on without a page break */
+.opener.inline{break-before:auto;min-height:0;padding:10mm 0 2mm;border-top:1.2pt solid var(--ink);margin-top:8mm}
+.opener.inline .onum{font-size:30pt;display:inline-block;margin-right:3mm;vertical-align:middle}
+.opener.inline h1{display:inline-block;font-size:20pt;vertical-align:middle;margin:0}
+.opener.inline .lead,.opener.inline .orule{display:none}

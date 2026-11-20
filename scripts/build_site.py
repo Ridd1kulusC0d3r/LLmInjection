@@ -42,7 +42,12 @@ def report_index(platform: dict) -> list[dict]:
         title = re.search(r'^title:\s*"?(.+?)"?\s*$', text, re.M) or re.search(r"^#\s+(.+)$", text, re.M)
         kind = KIND_BY_DIR.get(path.parent.name, "landscape" if re.fullmatch(r"\d{4}-\d{2}(-diff)?", path.stem) else "report")
         date = re.search(r"\b(20\d\d-\d\d(?:-\d\d)?)\b", path.stem + " " + text[:600])
-        rows.append({"path": rel, "title": title.group(1) if title else path.stem, "kind": kind,
+        pdf = re.search(r"^pdf:\s*(\S+)\s*$", text[:600], re.M)
+        if pdf and (ROOT / pdf.group(1)).exists():
+            extra = {"pdf": pdf.group(1)}
+        else:
+            extra = {}
+        rows.append({**extra, "path": rel, "title": title.group(1) if title else path.stem, "kind": kind,
                      "date": date.group(1) if date else "", "github": REPO + rel})
     authored = sorted(rows[1:], key=lambda r: r["date"], reverse=True)
     return [rows[0], *[r for r in authored if r["kind"] != "template"], *[r for r in authored if r["kind"] == "template"]]

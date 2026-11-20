@@ -125,13 +125,13 @@ class Doc:
         out = re.sub(r'<h2 id="([^"]+)">', r'<h3 class="h2" id="\1">', out).replace("</h2>", "</h3>")
         return out
 
-    def opener(self, key: str, num: str, title: str, lead: str, monster: str | None = None) -> str:
+    def opener(self, key: str, num: str, title: str, lead: str, monster: str | None = None, inline: bool = False) -> str:
         if num.isdigit():
             self.n += 1
             num = f"{self.n:02d}"
         self.toc.append((key, num, title))
         mon = ""  # section openers stay clean; illustrations live on the covers only
-        return (f'<section class="opener" id="{key}"><span class="mk">@@{key}@@</span>{mon}<div class="onum">{esc(num)}</div>'
+        return (f'<section class="opener{" inline" if inline else ""}" id="{key}"><span class="mk">@@{key}@@</span>{mon}<div class="onum">{esc(num)}</div>'
                 f'<h1>{esc(title)}</h1><p class="lead">{lead}</p><div class="orule"></div></section>')
 
 
@@ -269,6 +269,19 @@ def actor_map(actors, cam, inc, rel, tools, w=1000, h=760, dark=True, limit=26):
         lx += 22 + len(label) * 7.2
     g.append("</svg>")
     return "".join(g), act_nodes
+
+
+def back_cover(css: str, K, code: str, version: str) -> str:
+    return f"""<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><style>{css}</style></head><body class="back">
+<div class="cv-grid"></div>
+<div class="bk-monsters">{''.join(art(n, "bk-m") for n in ("enxame", "mimico", "parasita", "devorador", "espelho", "rastreador"))}</div>
+<div class="bk-names"><span>O Enxame<br><i>agentes ofensivos</i></span><span>O Mímico<br><i>injeção de prompt</i></span><span>O Parasita<br><i>cadeia de suprimentos</i></span><span>O Devorador<br><i>chaves e gateways</i></span><span>O Espelho<br><i>destilação</i></span><span>O Rastreador<br><i>reconhecimento</i></span></div>
+<div class="bk-body"><h2>Evidência acima de exagero.</h2>
+<p>LLMInjection é inteligência aberta sobre ameaças a sistemas de IA, LLM e agentes. Cada afirmação traz o grau da fonte e o nível de confiança, e cada registro deste relatório pode ser aberto, conferido e reutilizado no Explorer e no repositório.</p>
+<div class="bk-kpis">{''.join(f'<div><b>{esc(v)}</b><span>{esc(lbl)}</span></div>' for v, lbl in K[:3])}</div>
+<div class="bk-links"><div><span>Explorer</span>ridd1kulusc0d3r.github.io/LLmInjection</div><div><span>Repositório</span>github.com/Ridd1kulusC0d3r/LLmInjection</div><div><span>Dados</span>STIX 2.1 · GraphML · API JSON</div></div></div>
+<footer class="cv-foot"><div><b>{code}</b> · {version} · TLP:CLEAR</div><div>Corte {CUT} · gerado {dt.date.today().isoformat()}</div></footer>
+</body></html>"""
 
 
 def build(out: Path, toc_pages: dict[str, int] | None = None) -> None:
@@ -506,26 +519,79 @@ def build(out: Path, toc_pages: dict[str, int] | None = None) -> None:
     (out / "toc-keys.json").write_text(json.dumps([k for k, _, _ in doc.toc]), encoding="utf-8")
 
     # ---------- back cover ----------
-    back = f"""<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><style>{css}</style></head><body class="back">
-<div class="cv-grid"></div>
-<div class="bk-monsters">{''.join(art(n, "bk-m") for n in ("enxame", "mimico", "parasita", "devorador", "espelho", "rastreador"))}</div>
-<div class="bk-names"><span>O Enxame<br><i>agentes ofensivos</i></span><span>O Mímico<br><i>injeção de prompt</i></span><span>O Parasita<br><i>cadeia de suprimentos</i></span><span>O Devorador<br><i>chaves e gateways</i></span><span>O Espelho<br><i>destilação</i></span><span>O Rastreador<br><i>reconhecimento</i></span></div>
-<div class="bk-body"><h2>Evidência acima de exagero.</h2>
-<p>LLMInjection é inteligência aberta sobre ameaças a sistemas de IA, LLM e agentes. Cada afirmação traz o grau da fonte e o nível de confiança, e cada registro deste relatório pode ser aberto, conferido e reutilizado no Explorer e no repositório.</p>
-<div class="bk-kpis">{''.join(f'<div><b>{esc(v)}</b><span>{esc(lbl)}</span></div>' for v, lbl in K[:3])}</div>
-<div class="bk-links"><div><span>Explorer</span>ridd1kulusc0d3r.github.io/LLmInjection</div><div><span>Repositório</span>github.com/Ridd1kulusC0d3r/LLmInjection</div><div><span>Dados</span>STIX 2.1 · GraphML · API JSON</div></div></div>
-<footer class="cv-foot"><div><b>{CODE}</b> · v2.0 · TLP:CLEAR</div><div>Corte {CUT} · gerado {dt.date.today().isoformat()}</div></footer>
-</body></html>"""
-    (out / "back.html").write_text(back, encoding="utf-8")
+    (out / "back.html").write_text(back_cover(css, K, CODE, "v2.0"), encoding="utf-8")
+
+
+def build_dossier(md_path: Path, out: Path, toc_pages: dict[str, int] | None = None) -> None:
+    """Same design for a dossier: cover with the actor map, sheet, numbered contents, one opener per section."""
+    out.mkdir(parents=True, exist_ok=True)
+    fm, md = brp.front_matter(md_path.read_text(encoding="utf-8"))
+    vul, inc, cam, rel = data("vulnerabilities"), data("incidents"), data("campaigns"), data("relationships")
+    actors = data("actors")
+    tools = {t["id"]: t["name"] for t in data("tools")}
+    css = (ROOT / "scripts" / "print_report.css").read_text(encoding="utf-8")
+    head = re.search(r'<p class="rpt-head">(.*?)</p>', md)
+    meta = re.findall(r"<span[^>]*>(.*?)</span>", head.group(1)) if head else []
+    code_v = (meta[0] if meta else md_path.stem).split(" · ")
+    code, version = code_v[0], (code_v[1] if len(code_v) > 1 else "v1")
+    cut = (re.search(r"Corte (\d{4}-\d{2}-\d{2})", md) or [None, CUT])[1]
+    full = fm.get("title", md_path.stem)
+    after = full.split(":", 1)[1].strip() if ":" in full else full
+    title, _, sub = after.partition(",")
+    sub = sub.strip()
+    amap_dark, _ = actor_map(actors, cam, inc, rel, tools, dark=True)
+    (out / "cover.html").write_text(f"""<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><style>{css}</style></head><body class="cover">
+<div class="cv-grid"></div><div class="cv-map">{amap_dark}</div>
+<header class="cv-top"><span>LLMINJECTION · INTELIGÊNCIA DE AMEAÇAS</span><span class="tlp">TLP:CLEAR</span></header>
+<div class="cv-title"><div class="cv-kicker">Dossiê de ameaça · 2026</div><h1>{esc(title)}</h1><p>{esc(sub[:1].upper() + sub[1:])}</p></div>
+{art("enxame", "cv-monster")}
+<footer class="cv-foot"><div><b>{esc(code)}</b> · {esc(version)}</div><div>Corte {esc(cut)}</div><div>Mapa: atores com campanhas em 2026 e as ferramentas agênticas que usaram</div></footer>
+</body></html>""", encoding="utf-8")
+    doc = Doc(vul)
+    B = [f"""<section class="page front"><div class="fm-head"><span class="eyebrow">Ficha do dossiê</span><h2>{esc(title)}</h2><p class="lead">{esc(sub)}</p></div>
+<dl class="fm"><dt>Código</dt><dd>{esc(code)} · {esc(version)}</dd><dt>Data de corte</dt><dd>{esc(cut)}</dd><dt>Classificação</dt><dd><span class="tlpb">TLP:CLEAR</span> distribuição pública</dd>
+<dt>Produzido por</dt><dd>LLMInjection, inteligência aberta de ameaças a sistemas de IA, LLM e agentes</dd><dt>Edição web</dt><dd>ridd1kulusc0d3r.github.io/LLmInjection</dd></dl>
+<div class="howto"><h3>Como ler</h3><div class="howgrid">
+<div><b>Grau da fonte</b><p><span class="g A">A</span> primária ou confirmada · <span class="g B">B</span> fornecedor reconhecido · <span class="g C">C</span> imprensa ou fonte única</p></div>
+<div><b>Confiança</b><p>alta · média · baixa. Grau mede a fonte; confiança mede a afirmação.</p></div>
+<div><b>Identificadores</b><p>IDs como <code>SRC-…</code>, <code>TOOL-…</code> e <code>DET-AI-…</code> abrem o registro no Explorer.</p></div>
+<div><b>Escopo</b><p>Nenhuma seção traz payload. Indicadores ficam nas fontes e nos pacotes citados.</p></div></div></div></section>""",
+         '<section class="page toc"><span class="mk">@@toc@@</span><span class="eyebrow">Sumário</span><h2 class="toc-h">O que está neste dossiê</h2><ol class="tocl">@@TOCLIST@@</ol></section>']
+    bluf = re.search(r'<div class="bluf" markdown="1">([\s\S]+?)</div>', md)
+    inj = re.search(r'<div class="injected" markdown="1">([\s\S]+?)</div>', md)
+    parts = re.split(r"^## (\d+(?:\.\d+)?)\.\s+(.+)$", md, flags=re.M)
+    first = True
+    for k in range(1, len(parts), 3):
+        _, name, body = parts[k], parts[k + 1].strip(), parts[k + 2]
+        B.append(doc.opener(f"d{k}", "01", name, "", inline=not first))
+        if first:
+            if bluf:
+                B.append('<div class="bluf"><span>BLUF</span>' + doc.render(bluf.group(1).strip())[3:-4] + "</div>")
+            if inj:
+                B.append('<div class="callout"><b>Notas de versão</b>' + doc.render(inj.group(1).strip()) + "</div>")
+            first = False
+        body = re.sub(r"<span class=\"conf conf-\w+\">(.*?)</span>", r"\1", body)
+        B.append(doc.render(body))
+    B.append(doc.opener("dgl", "01", "Glossário", "Os termos deste dossiê, em uma linha cada."))
+    B.append('<dl class="gloss">' + "".join(f"<dt>{esc(a)}</dt><dd>{esc(b)}</dd>" for a, b in GLOSSARY) + "</dl>")
+    pages = toc_pages or {}
+    toc = "".join(f'<li><span class="tn">{esc(n)}</span><span class="tt">{esc(t)}</span><span class="dots"></span><span class="tp">{pages.get(k, "")}</span></li>' for k, n, t in doc.toc)
+    (out / "body.html").write_text(f"""<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><style>{css}</style></head><body class="doc">{''.join(B)}</body></html>""".replace("@@TOCLIST@@", toc), encoding="utf-8")
+    (out / "toc-keys.json").write_text(json.dumps([k for k, _, _ in doc.toc]), encoding="utf-8")
+    (out / "back.html").write_text(back_cover(css, kpis(vul, inc, cam), code, version), encoding="utf-8")
 
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("--out", type=Path, default=ROOT / "dist" / "print")
     ap.add_argument("--toc", type=Path, help="JSON {section key: page number} from the first render")
+    ap.add_argument("--dossier", type=Path, help="build this dossier (reports/dossiers/*.md) instead of the 2026 report")
     a = ap.parse_args()
     toc = json.loads(a.toc.read_text(encoding="utf-8")) if a.toc and a.toc.exists() else None
-    build(a.out, toc)
+    if a.dossier:
+        build_dossier(a.dossier if a.dossier.is_absolute() else ROOT / a.dossier, a.out, toc)
+    else:
+        build(a.out, toc)
     print(a.out)
     return 0
 
