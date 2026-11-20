@@ -209,6 +209,16 @@
       "enabled": false,
       "max_items": 1,
       "relevance_mode": "all"
+    },
+    {
+      "id": "FEED-LLMI-DAILY-DIGEST",
+      "name": "LLMInjection daily AI threat-landscape digest (intake/digests/*.json, read by scripts/import_digest.py)",
+      "kind": "local-digest",
+      "url": "https://github.com/Ridd1kulusC0d3r/LLmInjection/tree/main/intake/digests",
+      "source_grade": "D",
+      "enabled": false,
+      "max_items": 20,
+      "relevance_mode": "all"
     }
   ]
 }

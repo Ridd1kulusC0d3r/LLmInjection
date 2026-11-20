@@ -158,3 +158,26 @@ Before a candidate becomes official intelligence, verify:
 The collector is allowed to be fast.
 
 The intelligence layer is required to be careful.
+
+## Daily digest intake
+
+The scheduled daily digest ("Threat Landscape IA") reads sources every morning, but its edition used to stay in the run's output folder and never reached the datasets. It now feeds the research queue:
+
+1. The task writes, next to its Markdown edition, `intake/digests/YYYY-MM-DD.json` (shape below) and opens a pull request with it.
+2. `python scripts/import_digest.py intake/digests/YYYY-MM-DD.json` turns each item into a `candidate` under `FEED-LLMI-DAILY-DIGEST`. Unconfirmed items and URLs already queued or held are skipped.
+3. An analyst reads the primary source and promotes with `scripts/merge_promotions.py`, or rejects with a reason.
+4. Weekly trends and the monthly landscape (`reports/templates/`) are written from the queue and the datasets, and their open questions become the next month's searches.
+
+Each item carries its own `source_grade` (the analyst's grade for that source, per [SOURCE-GRADING.md](SOURCE-GRADING.md)), so the queue no longer grades everything D.
+
+```json
+{"digest_id": "LLMI-20261120", "date": "2026-11-20", "producer": "...", "window": "...",
+ "items": [{"id": "LLMI-20261120-01", "title": "...", "url": "https://...", "published": "2026-11-20",
+            "seal": "original | secondary | unconfirmed", "temporal": "new | update | retrospective | recovered",
+            "source_grade": "A-E", "kind": "vulnerability | threat-report | research | regulation",
+            "techniques": ["LLMI-T001"], "identifiers": ["CVE-..."], "summary": "...", "brazil_latam": false}]}
+```
+
+### Text to add to the scheduled task's prompt
+
+> 5. Besides the Markdown edition, write `intake/digests/AAAA-MM-DD.json` in the shape described in `docs/LIVING-INTELLIGENCE.md` ("Daily digest intake"): one entry per item of section B, with the item's ID, the seal mapped to `original`, `secondary` or `unconfirmed`, and the source grade A–E from `docs/SOURCE-GRADING.md`. Clone the repository, add the file on a branch `digest/AAAA-MM-DD`, run `python scripts/import_digest.py` and `make check`, and open a pull request. Never promote into `data/` beyond the research queue.
