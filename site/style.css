@@ -434,3 +434,14 @@ th[aria-sort="ascending"] .sortbtn,th[aria-sort="descending"] .sortbtn{color:var
 .rp-body{display:grid;grid-template-columns:repeat(auto-fill,minmax(420px,1fr));gap:14px;max-height:70vh;overflow:auto}
 .rp-pub h4{font:600 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);margin:0 0 6px}
 .rp-row{display:flex;flex-direction:column;gap:2px;padding:6px 0;border-bottom:1px solid var(--rule-2)}
+
+/* chronology filters and badges */
+.tlf{margin:4px 0 10px}
+.tlbs{display:inline-flex;flex-wrap:wrap;gap:4px;margin-left:6px;vertical-align:1px}
+.tlb{font:700 9.5px var(--mono);letter-spacing:.06em;text-transform:uppercase;padding:2px 6px;border-radius:4px;background:var(--paper-2);color:var(--ink-2);border:1px solid var(--rule)}
+.tlb.kev{background:var(--signal);color:var(--signal-ink);border-color:var(--signal)}
+.tlb.ai{background:#1f6f8b;color:#fff;border-color:#1f6f8b}
+.tlb.agent{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.tlf .chip:not(.on){opacity:1;text-decoration:none}
+.tlf .chip.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.tlf .chip b{font-weight:700;color:inherit;opacity:.75}

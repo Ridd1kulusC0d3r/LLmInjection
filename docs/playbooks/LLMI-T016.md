@@ -13,7 +13,7 @@
 
 | Layer | Status |
 |---|---|
-| Evidence | 8 record(s), 8 publisher(s), best grade A, newest 2026 |
+| Evidence | 9 record(s), 9 publisher(s), best grade A, newest 2026 |
 | Safe tests | 1 |
 | Detections | 3 rule file(s), 1 specification(s) |
 | Controls | 1 |
@@ -31,6 +31,7 @@ What the repository links to it:
 - 2026 · [TeamPCP LiteLLM supply-chain compromise](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-TEAMPCP-LITELLM) (campaign, confirmed)
 - 2024-05-06 · [LLM Jacking (AML.CS0030)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-ATLAS-CS0030) (atlas-incident, high)
 - 2024-12-01 · [Storm-2139 Azure OpenAI Guardrail Bypass (AML.CS0057)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-ATLAS-CS0057) (atlas-incident, high)
+- 2026-11-01 · [Barracuda cloud intrusion through a vendor's unretired access key, run with ARTEX](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-BARRACUDA-ARTEX-CLOUD-2026-11) (intrusion, confirmed)
 - 2026-04-15 · [Exploitation attempts against LiteLLM's guardrail tester (CVE-2026-40217)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-LITELLM-GUARDRAIL-TESTER-EXPLOITATION) (exploitation, high)
 - 2025-12-05 · [Langflow CORS and refresh-cookie chain to account takeover and code execution](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-LANGFLOW-CVE-2025-34291) (cors-misconfiguration, confirmed)
 - 2026-05-08 · [LiteLLM proxy SQL injection via authorization header](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-LITELLM-CVE-2026-42208) (sql-injection, confirmed)

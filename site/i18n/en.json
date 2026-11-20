@@ -545,5 +545,13 @@
  "srp.focusreport": "Report on this focus",
  "rep.web": "Full web edition ↗",
  "rep.webtag": "web edition",
- "rel.integrates-with": "integrates with"
+ "rel.integrates-with": "integrates with",
+ "tl.f.aria": "Filter the chronology",
+ "tl.f.all": "All",
+ "tl.f.agent": "Attacks run with AI agents",
+ "tl.f.artex": "ARTEX family",
+ "tl.f.kev": "In CISA KEV",
+ "tl.f.ai": "Found by AI",
+ "tl.b.ai": "found by AI",
+ "tl.b.agent": "used by an AI agent"
 }

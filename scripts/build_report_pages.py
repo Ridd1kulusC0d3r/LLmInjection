@@ -197,8 +197,9 @@ def kev_chart(vulns: list[dict]) -> str:
     pts = []
     for v in vulns:
         m = KEV_DATE.search(v.get("summary", ""))
-        if m and "SRC-CISA-KEV-CATALOG" in v.get("source_ids", []) and m.group(1).startswith("2026"):
-            pts.append((m.group(1), v))
+        added = v.get("kev_added") or (m.group(1) if m else "")
+        if added.startswith("2026") and v.get("ai_relation", "ai-software") == "ai-software" and "SRC-CISA-KEV-CATALOG" in v.get("source_ids", []):
+            pts.append((added, v))
     pts.sort(key=lambda x: x[0])
     if not pts:
         return ""

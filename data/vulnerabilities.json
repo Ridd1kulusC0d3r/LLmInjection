@@ -21,7 +21,8 @@
     "summary": "The LiteLLM package was compromised and malicious PyPI versions 1.82.7 and 1.82.8 were published with secret-exfiltration behavior.",
     "source_ids": [
       "SRC-GHSA-LITELLM-MALWARE"
-    ]
+    ],
+    "ai_relation": "ai-software"
   },
   {
     "id": "VULN-LITELLM-CVE-2026-59822",
@@ -47,7 +48,9 @@
     "source_ids": [
       "SRC-GHSA-LITELLM-MCP-59822",
       "SRC-CISA-KEV-CATALOG"
-    ]
+    ],
+    "kev_added": "2026-09-02",
+    "ai_relation": "ai-software"
   },
   {
     "id": "VULN-LITELLM-CVE-2026-12773",
@@ -72,7 +75,8 @@
     "summary": "LiteLLM MCP proxy authentication logic was affected by improper authentication and fixed in 1.84.0.",
     "source_ids": [
       "SRC-GHSA-LITELLM-MCP-12773"
-    ]
+    ],
+    "ai_relation": "ai-software"
   },
   {
     "id": "VULN-LITELLM-CVE-2026-59821",
@@ -97,7 +101,8 @@
     "summary": "Production create/update paths for custom-code guardrails did not apply the same sandboxing and validation as the test path, enabling code execution under specified privilege conditions.",
     "source_ids": [
       "SRC-GHSA-LITELLM-GUARDRAIL-59821"
-    ]
+    ],
+    "ai_relation": "ai-software"
   },
   {
     "id": "VULN-TRIVY-CVE-2026-33634",
@@ -122,7 +127,8 @@
     "summary": "A compromised credential was used to publish malicious Trivy ecosystem artifacts and mutable action references during the March 2026 incident.",
     "source_ids": [
       "SRC-GHSA-TRIVY-SUPPLYCHAIN"
-    ]
+    ],
+    "ai_relation": "ai-software"
   },
   {
     "id": "VULN-TRIVY-GHSA-MCJ4",
@@ -146,7 +152,8 @@
     "summary": "A crafted OCI artifact title could cause Trivy to write downloaded layer content outside the intended destination when fetching attacker-controlled artifacts.",
     "source_ids": [
       "SRC-GHSA-TRIVY-PATH"
-    ]
+    ],
+    "ai_relation": "ai-software"
   },
   {
     "id": "VULN-SK-CVE-2026-26030",
@@ -170,7 +177,8 @@
     "summary": "Prompt injection could reach unsafe string interpolation in Python lambda filters executed via eval(), turning a data lookup into code execution. Microsoft did not publish a CVSS score in the cited post.",
     "source_ids": [
       "SRC-MSFT-SK-RCE"
-    ]
+    ],
+    "ai_relation": "ai-software"
   },
   {
     "id": "VULN-SK-CVE-2026-25592",
@@ -194,7 +202,8 @@
     "summary": "A helper (DownloadFileAsync) was exposed to the model with unvalidated path parameters, allowing model-controlled file read/write outside the intended sandbox.",
     "source_ids": [
       "SRC-MSFT-SK-RCE"
-    ]
+    ],
+    "ai_relation": "ai-software"
   },
   {
     "id": "VULN-MCP-STDIO-OX-2026",
@@ -218,7 +227,8 @@
     "summary": "OX Security reports that unsanitized STDIO server parameters let attacker-influenced MCP configuration execute OS commands across SDK-derived products. Several vendors disputed the finding as intended behaviour of the transport; only identifiers corroborated by more than one source are listed here.",
     "source_ids": [
       "SRC-OX-MCP-STDIO"
-    ]
+    ],
+    "ai_relation": "ai-software"
   },
   {
     "id": "VULN-LITELLM-CVE-2026-42271",
@@ -244,7 +254,9 @@
     "source_ids": [
       "SRC-NVD-CVE-2026-42271",
       "SRC-CISA-KEV-CATALOG"
-    ]
+    ],
+    "kev_added": "2026-06-08",
+    "ai_relation": "ai-software"
   },
   {
     "id": "VULN-LITELLM-CVE-2026-42208",
@@ -270,7 +282,9 @@
     "source_ids": [
       "SRC-NVD-CVE-2026-42208",
       "SRC-CISA-KEV-CATALOG"
-    ]
+    ],
+    "kev_added": "2026-05-08",
+    "ai_relation": "ai-software"
   },
   {
     "id": "VULN-MCP-REMOTE-CVE-2025-6514",
@@ -295,7 +309,8 @@
     "summary": "mcp-remote passed a crafted authorization_endpoint value returned by an untrusted MCP server to the operating system, so connecting to a malicious server could run commands on the client. Fixed in 0.1.16.",
     "source_ids": [
       "SRC-NVD-CVE-2025-6514"
-    ]
+    ],
+    "ai_relation": "ai-software"
   },
   {
     "id": "VULN-FLOWISE-CVE-2025-59528",
@@ -320,7 +335,8 @@
     "summary": "Flowise 3.0.5 evaluated user-supplied CustomMCP configuration as code, allowing unauthenticated remote code execution on the LLM-flow server.",
     "source_ids": [
       "SRC-NVD-CVE-2025-59528"
-    ]
+    ],
+    "ai_relation": "ai-software"
   },
   {
     "id": "VULN-CLAUDE-CODE-CVE-2025-59536",
@@ -345,7 +361,8 @@
     "summary": "A bug in Claude Code's startup trust dialog let a malicious project run code before the user accepted the trust prompt; fixed in 1.0.111.",
     "source_ids": [
       "SRC-NVD-CVE-2025-59536"
-    ]
+    ],
+    "ai_relation": "ai-software"
   },
   {
     "id": "VULN-FLOWISE-CVE-2025-8943",
@@ -368,7 +385,8 @@
     "summary": "Flowise's Custom MCP feature, designed to launch local MCP servers with commands such as npx, could be reached without authentication, giving OS command execution (NVD gives versions before 3.0.1; the GitHub advisory lists 3.0.5 as last affected).",
     "source_ids": [
       "SRC-NVD-CVE-2025-8943"
-    ]
+    ],
+    "ai_relation": "ai-software"
   },
   {
     "id": "VULN-MLFLOW-CVE-2023-1177",
@@ -393,7 +411,8 @@
     "summary": "A path traversal in MLflow before 2.2.1 allowed reading files outside the artifact store on the ML tracking server. A public proof of concept and a high EPSS exist, but in-the-wild exploitation was not confirmed in the sources consulted.",
     "source_ids": [
       "SRC-NVD-CVE-2023-1177"
-    ]
+    ],
+    "ai_relation": "ai-software"
   },
   {
     "id": "VULN-M365-COPILOT-CVE-2025-32711",
@@ -417,7 +436,8 @@
     "summary": "Microsoft describes AI command injection in Microsoft 365 Copilot that let an unauthorized attacker disclose information over a network; fixed by Microsoft in the service (May 2025, before public disclosure in June 2025); no customer action required.",
     "source_ids": [
       "SRC-NVD-CVE-2025-32711"
-    ]
+    ],
+    "ai_relation": "ai-software"
   },
   {
     "id": "VULN-GITHUB-COPILOT-CVE-2025-53773",
@@ -441,7 +461,8 @@
     "summary": "Improper neutralization in GitHub Copilot and Visual Studio 2022 allowed command injection and local code execution; fixed in Visual Studio 17.14.12.",
     "source_ids": [
       "SRC-NVD-CVE-2025-53773"
-    ]
+    ],
+    "ai_relation": "ai-software"
   },
   {
     "id": "VULN-CLAUDE-CODE-CVE-2026-21852",
@@ -466,7 +487,8 @@
     "summary": "Claude Code's project-load flow let a malicious repository exfiltrate data, including API credentials, before the user trusted the project; fixed in 2.0.65.",
     "source_ids": [
       "SRC-NVD-CVE-2026-21852"
-    ]
+    ],
+    "ai_relation": "ai-software"
   },
   {
     "id": "VULN-EMAILGPT-CVE-2024-5184",
@@ -488,7 +510,8 @@
     "summary": "The EmailGPT service let a user inject a direct prompt that took over the service logic and could expose system instructions. Scores differ by source: Synopsys CyRC rated it 6.5, NVD 9.1.",
     "source_ids": [
       "SRC-NVD-CVE-2024-5184"
-    ]
+    ],
+    "ai_relation": "ai-software"
   },
   {
     "id": "VULN-FLOWISE-CVE-2024-8181",
@@ -511,7 +534,8 @@
     "summary": "Flowise 1.8.2 allowed a remote, unauthenticated attacker to reach API endpoints as an administrator.",
     "source_ids": [
       "SRC-NVD-CVE-2024-8181"
-    ]
+    ],
+    "ai_relation": "ai-software"
   },
   {
     "id": "VULN-MCP-INSPECTOR-CVE-2025-49596",
@@ -536,7 +560,8 @@
     "summary": "MCP Inspector below 0.14.1 had no authentication between the browser client and its local proxy, so a web page could make it launch commands; fixed in 0.14.1.",
     "source_ids": [
       "SRC-NVD-CVE-2025-49596"
-    ]
+    ],
+    "ai_relation": "ai-software"
   },
   {
     "id": "VULN-RAY-CVE-2023-6021",
@@ -561,7 +586,8 @@
     "summary": "Ray's log API endpoint let unauthenticated callers read any file on the server; the issue is fixed in 2.8.1.",
     "source_ids": [
       "SRC-NVD-CVE-2023-6021"
-    ]
+    ],
+    "ai_relation": "ai-software"
   },
   {
     "id": "VULN-MCP-SERVER-GIT-CVE-2025-68143",
@@ -586,7 +612,8 @@
     "summary": "The reference MCP git server accepted arbitrary filesystem paths in git_init, letting a model-issued tool call create repositories outside the intended directory.",
     "source_ids": [
       "SRC-NVD-CVE-2025-68143"
-    ]
+    ],
+    "ai_relation": "ai-software"
   },
   {
     "id": "VULN-MCP-SERVER-GIT-CVE-2025-68144",
@@ -611,7 +638,8 @@
     "summary": "mcp-server-git passed user-controlled arguments from git_diff and git_checkout straight to the git CLI, so a tool call could inject git options.",
     "source_ids": [
       "SRC-NVD-CVE-2025-68144"
-    ]
+    ],
+    "ai_relation": "ai-software"
   },
   {
     "id": "VULN-CURSOR-CVE-2025-54136",
@@ -636,7 +664,8 @@
     "summary": "Cursor 1.2.4 and below trusted a previously approved MCP configuration after it was modified, giving attackers persistent code execution through a shared repository; fixed in 1.3.",
     "source_ids": [
       "SRC-NVD-CVE-2025-54136"
-    ]
+    ],
+    "ai_relation": "ai-software"
   },
   {
     "id": "VULN-NGINX-UI-CVE-2026-33032",
@@ -659,7 +688,8 @@
     "summary": "The MCP integration in nginx-ui 2.3.5 and earlier exposed management tools without authentication, letting a client drive the web server's configuration. NVD and the GitHub advisory list 2.3.5 and earlier as affected; a secondary report that 2.3.4 fixed it contradicts that and was not adopted. Exploitation is reported by Rapid7 (secondary here, not in KEV as of 2026-11-18).",
     "source_ids": [
       "SRC-NVD-CVE-2026-33032"
-    ]
+    ],
+    "ai_relation": "ai-software"
   },
   {
     "id": "VULN-CHUANHUCHATGPT-CVE-2024-3402",
@@ -683,7 +713,8 @@
     "summary": "ChuanhuChatGPT did not sanitize chat content before rendering it, allowing stored cross-site scripting in the LLM chat interface.",
     "source_ids": [
       "SRC-NVD-CVE-2024-3402"
-    ]
+    ],
+    "ai_relation": "ai-software"
   },
   {
     "id": "VULN-ZEN-MCP-CVE-2025-66689",
@@ -707,7 +738,8 @@
     "summary": "Zen MCP Server (PAL MCP Server) before 9.8.2 let authenticated callers read arbitrary files through a path traversal in its tool inputs.",
     "source_ids": [
       "SRC-NVD-CVE-2025-66689"
-    ]
+    ],
+    "ai_relation": "ai-software"
   },
   {
     "id": "VULN-CREWAI-CVE-2026-2285",
@@ -729,7 +761,8 @@
     "summary": "CrewAI's JSON loader tool read files without path validation, so an agent could be steered into reading files on the host.",
     "source_ids": [
       "SRC-NVD-CVE-2026-2285"
-    ]
+    ],
+    "ai_relation": "ai-software"
   },
   {
     "id": "VULN-CREWAI-CVE-2026-2286",
@@ -751,7 +784,8 @@
     "summary": "CrewAI's RAG search tools fetched URLs without restriction, enabling server-side request forgery against internal and cloud metadata services.",
     "source_ids": [
       "SRC-NVD-CVE-2026-2286"
-    ]
+    ],
+    "ai_relation": "ai-software"
   },
   {
     "id": "VULN-LITELLM-CVE-2026-40217",
@@ -779,7 +813,9 @@
       "SRC-GHSA-LITELLM-40217",
       "SRC-ZENITY-LITELLM-40217",
       "SRC-CISA-KEV-CATALOG"
-    ]
+    ],
+    "kev_added": "2026-11-18",
+    "ai_relation": "ai-software"
   },
   {
     "id": "VULN-LANGFLOW-CVE-2025-3248",
@@ -805,7 +841,9 @@
     "source_ids": [
       "SRC-NVD-CVE-2025-3248",
       "SRC-CISA-KEV-CATALOG"
-    ]
+    ],
+    "kev_added": "2025-05-05",
+    "ai_relation": "ai-software"
   },
   {
     "id": "VULN-LANGFLOW-CVE-2025-34291",
@@ -829,7 +867,9 @@
     "source_ids": [
       "SRC-NVD-CVE-2025-34291",
       "SRC-CISA-KEV-CATALOG"
-    ]
+    ],
+    "kev_added": "2026-05-21",
+    "ai_relation": "ai-software"
   },
   {
     "id": "VULN-LANGFLOW-CVE-2026-33017",
@@ -855,7 +895,9 @@
     "source_ids": [
       "SRC-NVD-CVE-2026-33017",
       "SRC-CISA-KEV-CATALOG"
-    ]
+    ],
+    "kev_added": "2026-03-25",
+    "ai_relation": "ai-software"
   },
   {
     "id": "VULN-LANGFLOW-CVE-2026-0770",
@@ -879,7 +921,9 @@
     "source_ids": [
       "SRC-NVD-CVE-2026-0770",
       "SRC-CISA-KEV-CATALOG"
-    ]
+    ],
+    "kev_added": "2026-07-21",
+    "ai_relation": "ai-software"
   },
   {
     "id": "VULN-LANGFLOW-CVE-2026-55255",
@@ -905,7 +949,9 @@
     "source_ids": [
       "SRC-NVD-CVE-2026-55255",
       "SRC-CISA-KEV-CATALOG"
-    ]
+    ],
+    "kev_added": "2026-07-07",
+    "ai_relation": "ai-software"
   },
   {
     "id": "VULN-LANGFLOW-CVE-2026-9198",
@@ -928,7 +974,9 @@
     "source_ids": [
       "SRC-NVD-CVE-2026-9198",
       "SRC-CISA-KEV-CATALOG"
-    ]
+    ],
+    "kev_added": "2026-08-04",
+    "ai_relation": "ai-software"
   },
   {
     "id": "VULN-MLFLOW-CVE-2026-64849",
@@ -954,7 +1002,9 @@
     "source_ids": [
       "SRC-NVD-CVE-2026-64849",
       "SRC-CISA-KEV-CATALOG"
-    ]
+    ],
+    "kev_added": "2026-08-19",
+    "ai_relation": "ai-software"
   },
   {
     "id": "VULN-RAY-CVE-2025-62593",
@@ -980,7 +1030,9 @@
     "source_ids": [
       "SRC-NVD-CVE-2025-62593",
       "SRC-CISA-KEV-CATALOG"
-    ]
+    ],
+    "kev_added": "2026-08-17",
+    "ai_relation": "ai-software"
   },
   {
     "id": "VULN-STARLETTE-CVE-2026-48710",
@@ -1006,7 +1058,9 @@
     "source_ids": [
       "SRC-NVD-CVE-2026-48710",
       "SRC-CISA-KEV-CATALOG"
-    ]
+    ],
+    "kev_added": "2026-09-02",
+    "ai_relation": "ai-software"
   },
   {
     "id": "VULN-N8N-CVE-2025-68613",
@@ -1035,7 +1089,9 @@
     "source_ids": [
       "SRC-NVD-CVE-2025-68613",
       "SRC-CISA-KEV-CATALOG"
-    ]
+    ],
+    "kev_added": "2026-03-11",
+    "ai_relation": "ai-software"
   },
   {
     "id": "VULN-MCP-SERVER-GIT-CVE-2025-68145",
@@ -1060,7 +1116,8 @@
     "summary": "Before 2025.12.17, mcp-server-git started with --repository did not check that the repo_path in later tool calls stayed inside the configured path, so tool calls could act on other repositories the process could reach (NVD 9.1; GitHub CNA 6.4 v4; CWE-22).",
     "source_ids": [
       "SRC-NVD-CVE-2025-68145"
-    ]
+    ],
+    "ai_relation": "ai-software"
   },
   {
     "id": "VULN-CURSOR-CVE-2025-54135",
@@ -1085,7 +1142,8 @@
     "summary": "Before 1.3.9, Cursor let the agent create a new .cursor/mcp.json without approval, so an indirect prompt injection could register an MCP server command that then ran (GitHub CNA 8.5, NVD 9.8, CWE-78).",
     "source_ids": [
       "SRC-NVD-CVE-2025-54135"
-    ]
+    ],
+    "ai_relation": "ai-software"
   },
   {
     "id": "VULN-CREWAI-CVE-2026-2275",
@@ -1107,7 +1165,8 @@
     "summary": "When it cannot reach Docker, the CrewAI CodeInterpreter tool falls back to SandboxPython, which permits arbitrary C function calls and so code execution (CVSS 9.6, CWE-749). Reported through CERT/CC VU#221883.",
     "source_ids": [
       "SRC-NVD-CVE-2026-2275"
-    ]
+    ],
+    "ai_relation": "ai-software"
   },
   {
     "id": "VULN-CREWAI-CVE-2026-2287",
@@ -1129,6 +1188,90 @@
     "summary": "CrewAI does not check that Docker is still running during execution and falls back to a sandbox mode that allows code execution (CVSS 9.8, CWE-94). Reported through CERT/CC VU#221883.",
     "source_ids": [
       "SRC-NVD-CVE-2026-2287"
+    ],
+    "ai_relation": "ai-software"
+  },
+  {
+    "type": "vulnerability",
+    "confidence": "confirmed",
+    "id": "VULN-BEYONDTRUST-CVE-2026-1731",
+    "name": "BeyondTrust Remote Support and PRA pre-authentication OS command injection",
+    "kind": "command-injection",
+    "package": "BeyondTrust Remote Support / Privileged Remote Access",
+    "ecosystem": "Appliance",
+    "identifiers": [
+      "CVE-2026-1731"
+    ],
+    "severity": "critical",
+    "affected": [
+      "see vendor advisory"
+    ],
+    "patched": [
+      "see vendor advisory"
+    ],
+    "published": "2026-02-06",
+    "ai_relation": "ai-discovered",
+    "kev_added": "2026-02-13",
+    "summary": "Pre-authentication remote command execution in BeyondTrust Remote Support and older Privileged Remote Access (NVD 9.8, CWE-78). GTIG says it was discovered autonomously by an AI research agent (Hacktron AI); one threat cluster exploited it within four days of disclosure and five more within seven days. CISA added it to KEV on 2026-02-13.",
+    "source_ids": [
+      "SRC-NVD-CVE-2026-1731",
+      "SRC-GTIG-VULN-AI-ERA-2026-09",
+      "SRC-CISA-KEV-CATALOG"
+    ]
+  },
+  {
+    "type": "vulnerability",
+    "confidence": "confirmed",
+    "id": "VULN-ZAMMAD-CVE-2026-102489",
+    "name": "Zammad session hijack leading to code execution",
+    "kind": "session-hijack",
+    "package": "zammad",
+    "ecosystem": "Application",
+    "identifiers": [
+      "CVE-2026-102489"
+    ],
+    "severity": "critical",
+    "affected": [
+      ">=6.3.0 <=6.5.4 (exploitable)",
+      ">=7.0.0 <=7.1.2 (present, not exploitable per vendor)"
+    ],
+    "patched": [
+      "upgrade to 7.x"
+    ],
+    "published": "2026-09-30",
+    "ai_relation": "exploited-by-ai-agent",
+    "kev_added": "2026-10-02",
+    "summary": "Session hijack in Zammad 6.3.0 to 6.5.4 leading to code execution as the zammad user (DIVD 9.4, NVD 9.8). Used by an agentic attacker against DIVD. CISA added it to KEV on 2026-10-02.",
+    "source_ids": [
+      "SRC-NVD-CVE-2026-102489",
+      "SRC-ZAMMAD-ADV-2026-102489",
+      "SRC-CISA-KEV-CATALOG"
+    ]
+  },
+  {
+    "type": "vulnerability",
+    "confidence": "confirmed",
+    "id": "VULN-ZAMMAD-CVE-2026-102490",
+    "name": "Zammad packaged builds allow local escalation to root",
+    "kind": "privilege-escalation",
+    "package": "zammad (DEB/RPM packages)",
+    "ecosystem": "Application",
+    "identifiers": [
+      "CVE-2026-102490"
+    ],
+    "severity": "high",
+    "affected": [
+      "packager.io DEB and RPM builds; see vendor advisory"
+    ],
+    "patched": [],
+    "published": "2026-09-30",
+    "ai_relation": "exploited-by-ai-agent",
+    "kev_added": "2026-10-02",
+    "summary": "Zammad DEB and RPM packages let a local attacker with write access as the zammad service account escalate to root (NVD 7.8). Chained with CVE-2026-102489 by an agentic attacker against DIVD. CISA added it to KEV on 2026-10-02.",
+    "source_ids": [
+      "SRC-NVD-CVE-2026-102490",
+      "SRC-ZAMMAD-ADV-2026-102489",
+      "SRC-CISA-KEV-CATALOG"
     ]
   }
 ]

@@ -1,14 +1,20 @@
 ---
 title: "Threat Intelligence: vulnerabilidades e incidentes em sistemas de IA, 2026"
-kpis: "13|vulnerabilidades de software de IA incluídas no CISA KEV em 2026 (conferido no feed);6 de 25|CVEs da tabela com exploração confirmada em campo;~36 h|do advisory à exploração do LiteLLM CVE-2026-42208;46|incidentes na cronologia de 2026, de janeiro a 18 de novembro"
+kpis: "13|vulnerabilidades de software de IA incluídas no CISA KEV em 2026 (conferido no feed);6 de 25|CVEs da tabela com exploração confirmada em campo;~36 h|do advisory à exploração do LiteLLM CVE-2026-42208;62|entradas na cronologia de 2026, de janeiro a 19 de novembro, 16 novas (v1.1)"
 kev_chart: true
 ---
 
 ![Masthead](../../assets/reports/ia-2026-vulnerabilidades-incidentes.svg)
 
-<p class="rpt-head"><span>LLMI-RI-2026-11-20 · v1.0</span><span class="tlp">TLP:CLEAR</span><span>Corte 2026-11-20</span></p>
+<p class="rpt-head"><span>LLMI-RI-2026-11-20 · v1.1</span><span class="tlp">TLP:CLEAR</span><span>Corte 2026-11-20</span></p>
 
 <div class="injected" markdown="1">
+**v1.1 (2026-11-20, mesmo dia).** O texto original não tinha nenhum caso de ARTEX na cronologia. Entraram 16 linhas novas, todas conferidas em fonte primária ou em registro já lido do repositório:
+- **Casos de ARTEX:** Comissão Europeia, Barracuda, CERT-In/CRAFTY FALCON, imagem Docker com backdoor, WorkOS, VAPOR PANDA, Storm-0940, TAG-217, remoção do repositório, fork do ScopeSentry e o censo da Spectrum.
+- **CVEs encontrados ou explorados por agentes:** DIVD/Zammad e BeyondTrust.
+
+A §4 ganha a subseção *Vulnerabilidades encontradas por IA* (GTIG, 30/09). O CVE-2026-40217 no KEV deixa de ser "a confirmar". Ficou de fora, aguardando decisão do dono do relatório, o material sobre descoberta de vulnerabilidades por IA cujas fontes citam um programa de modelo que o dono pediu para revisar antes.
+
 **Proveniência.** Relatório autoral recebido em 2026-11-20 com a planilha de 156 fontes. O texto abaixo é o original; esta caixa registra o que foi conferido contra fonte primária antes de entrar nos datasets.
 
 - **KEV conferido no feed JSON da CISA (versão 2026.11.18).** As 13 entradas de ferramentas de IA adicionadas em 2026 conferem: LiteLLM ×4 (CVE-2026-42208, -42271, -59822, -40217, este último em 18/11, portanto confiança A, não C), Langflow ×5 (CVE-2026-33017, -34291 de 2025, -55255, -0770, -9198), MLflow CVE-2026-64849, Ray CVE-2025-62593, Starlette CVE-2026-48710 e n8n CVE-2025-68613. A entrada anterior a 2026 é Langflow CVE-2025-3248. Kestra CVE-2026-49869 e JFrog Artifactory CVE-2026-82329 também entraram em 02/09.
@@ -31,6 +37,14 @@ Os sete achados que orientam o restante do relatório:
 5. **Injeção de prompt segue sem correção estrutural.** Quase metade dos incidentes catalogados (26 de 55) é injeção de prompt. Agentjacking via Sentry atingiu 85% de execução em testes, e ataques adaptativos derrubam defesas que marcam 1–2% em benchmarks estáticos.
 6. **Atacantes já operam com agentes.** Um único operador comprometeu nove órgãos do governo mexicano com 1.088 prompts; um enxame de agentes comprometeu 395 organizações via PaperCut, com o primeiro RCE em menos de quatro horas.
 7. **Agentes sem adversário também causam incidentes.** Agentes da OpenAI escaparam de um ambiente de avaliação e invadiram a Hugging Face (julho); modelos Claude acessaram três organizações reais por erro de configuração de rede em avaliações (divulgado em 30 de julho). Contenção de rede e monitoramento passam a ser requisito, não opção.
+
+**Atualização v1.1:** o uso de agentes ofensivos saiu do laboratório. Em novembro, ARTEX apareceu em quatro casos com vítima conhecida:
+- a Barracuda, com cerca de 10 contas de nuvem em 44 horas a partir de uma chave de fornecedor nunca revogada;
+- a Comissão Europeia, com sistemas de pessoal fora do ar;
+- bancos e fintechs indianos, num aviso crítico do CERT-In;
+- o setor financeiro sul-coreano, citado pelo FBI.
+
+Do lado das vulnerabilidades, o GTIG mostra que falhas encontradas por IA levam a execução remota de código em 50% dos casos, contra 26% no geral. Uma delas, no BeyondTrust, foi explorada em quatro dias.
 
 **Prioridades imediatas:** atualizar LiteLLM (≥ 1.84.0, com Starlette ≥ 1.0.1), Flowise (≥ 3.0.6), nginx-ui (≥ 2.3.6) e MLflow (≥ 3.15.0); tirar da internet qualquer painel de gateway, construtor de agentes ou servidor MCP; rotacionar as chaves que esses hosts guardavam; tratar `.mcp.json`, `.claude/`, `.cursor/` e `.vscode/` como código executável. O plano completo está na seção 12.
 
@@ -134,17 +148,46 @@ Claude Code, Cursor e Copilot falham do mesmo jeito: arquivos do repositório (`
 
 Os dois CVEs da tabela fazem parte de um conjunto de quatro (com CVE-2026-2275 e -2287) publicado pelo CERT/CC em 30/03/2026. O ponto de entrada é o Code Interpreter, que recua para um sandbox Python inseguro quando o Docker não está disponível; o SSRF e a leitura de arquivo ampliam o alcance para metadados de nuvem e arquivos do servidor. O risco só existe com `allow_code_execution=True` ou com a ferramenta adicionada manualmente.
 
+### Vulnerabilidades encontradas por IA
+
+A pergunta deixou de ser se agentes acham falhas reais e passou a ser quais. Os dados abaixo vêm da análise do GTIG de 30/09/2026, que cobre o período de janeiro de 2025 a agosto de 2026 ([GTIG](https://cloud.google.com/blog/topics/threat-intelligence/vulnerability-discovery-and-exploitation-trends-in-the-ai-era), grau A).
+
+| Medida | Encontradas por IA | Demais |
+| --- | --- | --- |
+| Levam a execução remota de código | 50% | 26% |
+| Risco médio (escala do GTIG) | 58% | 28% |
+| Risco baixo | 39% | 69% |
+| Divulgação de informação | 8% | 18% |
+
+- **Por que o número público é menor que o real.** O CVE não tem campo para "encontrada por IA". Além disso, provedores de nuvem e SaaS corrigem em produção sem pedir CVE. O GTIG identifica esses casos por registros de programas de pesquisa e por agradecimentos explícitos em avisos (Hacktron AI e AISLE são citados).
+- **Caso que fecha o ciclo.** O CVE-2026-1731 (BeyondTrust Remote Support e PRA, injeção de comando sem autenticação, NVD 9.8) foi encontrado de forma autônoma por um agente de pesquisa (Hacktron AI). Um cluster o explorou em quatro dias após a divulgação e outros cinco em sete dias. Entrou no KEV em 13/02/2026.
+- **Agente que explora, e talvez descubra.** No caso DIVD (21/09), um atacante agêntico encadeou CVE-2026-102489 e CVE-2026-102490 do Zammad, de sequestro de sessão até root. A Zammad diz que recebeu o relato da primeira falha em agosto. Por isso, não está estabelecido se o agente achou as falhas ou só as usou. As duas entraram no KEV em 02/10.
+- **Volume.** O GTIG viu as divulgações mensais de CVE dobrarem em 2026, de 5.045 em janeiro para 10.740 em agosto, e as explorações em campo subirem de 10,5 para 18 por mês. A leitura deles é que o crescimento vem sobretudo de n-days transformados em arma rapidamente, não de mais zero-days.
+
+**O que fazer:** tratar como sinal de prioridade todo aviso que credita a descoberta a um agente. Esses casos tendem a cair em RCE e em fronteiras de privilégio, e o atacante lê o mesmo aviso. No Explorer, o filtro *Encontradas por IA* da cronologia mostra esses registros.
+
 ### Rejeitados: Rails, Adminer e Achievo
 
 A rejeição está correta para o escopo de IA. CVE-2019-5418 (Rails, divulgação de arquivo), CVE-2021-21311 (Adminer, SSRF) e CVE-2008-2742 (Achievo, inclusão remota de arquivo) não são sistemas de IA. Eles aparecem em qualquer telemetria de borda porque fazem parte de listas de varredura genéricas. Mantenha-os fora do modelo de ameaça de IA, mas use-os como marcador de ruído: um IP que testa Achievo de 2008 e LiteLLM na mesma sessão é um scanner oportunista, não um operador que conhece o seu ambiente.
 
 ## 5. Cronologia de incidentes de IA em 2026
 
-A cronologia reúne 46 entradas, do mais recente ao mais antigo. As categorias são: EXP (exploração de vulnerabilidade), SC (cadeia de suprimentos), PI (injeção de prompt), OFF (IA usada por atacante), AUT (agente sem adversário), ID (identidade e credenciais) e EXPO (exposição ou configuração).
+A cronologia reúne 62 entradas (16 adicionadas na v1.1, marcadas com *v1.1*), do mais recente ao mais antigo. As categorias são: EXP (exploração de vulnerabilidade), SC (cadeia de suprimentos), PI (injeção de prompt), OFF (IA usada por atacante), AUT (agente sem adversário), ID (identidade e credenciais) e EXPO (exposição ou configuração).
 
 | Data (2026) | Incidente | Cat. | O que aconteceu |
 | --- | --- | --- | --- |
-| 18 nov | LiteLLM CVE-2026-40217 no KEV (a confirmar) | EXP | Quarta entrada KEV do produto; execução de código pelo teste de guardrail customizado |
+| 19 nov | Comissão Europeia: CERT-EU detecta ARTEX ([POLITICO, via Cyber Security News](https://cybersecuritynews.com/european-commission-cyberattack/)) *v1.1* | OFF | Sistemas de pessoal (Sysper, MyPMO) e de tradução fora do ar por precaução por mais de 10 dias; sem ator, falha ou exfiltração confirmados; não se sabe se o ARTEX serviu para entrar ou só para varrer |
+| 18 nov | [Censo da Spectrum](https://www.spectrum.security/blog/offensive-ai-tools-in-the-wild) *v1.1* | EXPO | 2.335 consoles ofensivos de IA expostos, 47 variantes de ARTEX, 179 consoles renomeados; frota `sco-fix2` com 348 serviços em um único AS |
+| 18 nov | LiteLLM CVE-2026-40217 no KEV (confirmado no feed da CISA na v1.1) | EXP | Quarta entrada KEV do produto; execução de código pelo teste de guardrail customizado |
+| 13 nov | [FBI FLASH-20261113-001](https://www.ic3.gov/CSA/2026/261113.pdf) *v1.1* | OFF | ARTEX levou a acesso privilegiado em menos de três horas; casos incluem clientes da ConnectWise e o setor financeiro sul-coreano |
+| 4 nov | [CERT-In CIAD-2026-0058](https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES02&VLCODE=CIAD-2026-0058) *v1.1* | OFF | CRAFTY FALCON usa ARTEX, PentAGI, Cairn e CyberStrikeAI contra bancos, fintechs e cripto na Índia; chama APIs de pagamento de dentro da infraestrutura da vítima e testa com transferências de Rs. 1 |
+| 2–4 nov | Imagem Docker do ARTEX com backdoor ([The Hacker News](https://thehackernews.com/2026/11/backdoored-docker-image-for-artex-ai.html)) *v1.1* | SC | 62 consoles rodando o build com backdoor, que dá root a quem publicou a imagem; imagens removidas do Docker Hub, mas 637 repositórios ainda apontavam para ela |
+| 1–2 nov | [Barracuda](https://blog.barracuda.com/2026/11/11/anatomy-of-a-machine-speed-intrusion) *v1.1* | ID | Chave de nuvem dada a um fornecedor de IA e nunca revogada; ~10 contas em 44 h, segredos de CI impressos no log, caça a carteiras de criptomoeda; rótulos e rotinas compatíveis com ARTEX |
+| 30 out | [WorkOS](https://workos.com/security/bulletins/update-for-october-30th-2026-data-security-incident) *v1.1* | AUT | Agente ARTEX de um pesquisador escapou do ambiente de benchmark e atingiu uma ferramenta interna da WorkOS; dados apagados segundo o pesquisador |
+| 29 out | [VAPOR PANDA com ARTEX](https://www.crowdstrike.com/en-us/blog/vapor-panda-uses-artex-to-scale-global-campaign/) *v1.1* | OFF | Agentes planejador e executores, sobretudo com DeepSeek: web shells, senhas de admin de domínio e movimento lateral em 14 países em 11 dias; nove organizações com pós-exploração confirmada |
+| 21 out | [Storm-0940 com ARTEX](https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/) *v1.1* | OFF | Varredura contínua, password spray e abuso de OAuth; acesso privilegiado em nuvem em menos de 3 h em alguns casos; Microsoft atribui ao ator o comprometimento do ConnectWise Cloud Backup |
+| 8 out | Repositório original do ARTEX removido *v1.1* | OFF | O autor tornou o repositório indisponível depois dos relatos de abuso; forks, cópias e uma versão comercial continuam circulando (FBI) |
+| out | [TAG-217 e bancos sul-coreanos](https://www.recordedfuture.com/blog/tag-217-artex-south-korean-banks) *v1.1* | OFF | Intrusões em instituições financeiras atribuídas por fontes do setor ao ARTEX; a Recorded Future avisa que não dá para medir quanto a IA acelerou |
 | 15–30 out | Infostealers [Aoki e Warden](https://spycloud.com/blog/infostealers-now-target-ai-tokens-and-api-keys/) | ID | Famílias comerciais passam a coletar tokens, configurações MCP e histórico de prompts de agentes de código; SpyCloud atribui mais de 130 mil infecções ao Warden |
 | 2 out | GitLab AI Gateway CVE-2026-90970 | EXP | Usuário autenticado escapa do sandbox de template e executa comandos no gateway (CVSS 9.9); sem exploração relatada |
 | 2 out | Loom for AWS (CVE-2026-103956 e seguintes) | EXPO | Sem provedor de identidade configurado, qualquer cliente de rede virava administrador do orquestrador de agentes |
@@ -152,6 +195,7 @@ A cronologia reúne 46 entradas, do mais recente ao mais antigo. As categorias s
 | 1 out | [OpenAI notifica mais de 100 organizações](https://github.com/webpro255/awesome-ai-agent-attacks) | AUT | Investigação independente encontrou acesso de agentes a dados de 55 organizações entre março e setembro |
 | 29 set | Capturas de tela internas no GitHub | AUT | Agentes de código publicaram mais de 13.000 imagens internas de mais de 300 organizações em repositórios públicos |
 | 22 set | Pipeline de três agentes para roubo de cartões | OFF | Mais de 27 empresas invadidas em cinco dias e 600 mil registros de cartão, a um custo de computação de cerca de 7 mil dólares |
+| 21 set | [DIVD invadida por agente](https://www.divd.nl/newsroom/articles/when-no-if/) *v1.1* | EXP | Cadeia de falhas do Zammad (CVE-2026-102489 e CVE-2026-102490, KEV em 02/10): de sessão sequestrada a root em segundos, com exfiltração confirmada; não se sabe se o agente achou as falhas |
 | 18 set | Plugin4Shell | SC | Troca de plugin fixado afeta Claude Code, Codex, Copilot e Gemini CLI; dois corrigidos |
 | 10 set | Relatório de ameaças da Anthropic (GTG-50014, GTG-50020) | OFF | Varredura de 1,8 milhão de APKs por segredos levou a admin de nuvem em cerca de 3 horas; campanha de quatro dias contra cerca de 30 empresas de IA por chaves de API |
 | 9–10 set | [Enxame de agentes contra PaperCut](https://www.greynoise.io/blog/ai-orchestrated-campaign-against-papercut-ng-mf) | OFF | Ator provavelmente russófono usou centenas de agentes (harness Codex e modelo DeepSeek); 440 instâncias em 395 organizações de 48 países; 11 organizações em 26 segundos no pico |
@@ -163,12 +207,15 @@ A cronologia reúne 46 entradas, do mais recente ao mais antigo. As categorias s
 | 20 ago | "Cryptographic context injection" no Grok | PI | Instruções cifradas passam pelo filtro e são decifradas no sandbox do modelo; sem correção na data |
 | 19 ago | [MLflow CVE-2026-64849](https://thehackernews.com/2026/08/attackers-exploit-mlflow-ssrf-flaw-to.html) no KEV | EXP | SSRF sem autenticação no webhook alcança metadados de nuvem; varredura em horas após o CVE; correção na 3.15.0 |
 | ago | Ray CVE-2025-62593 no KEV | EXP | Injeção de código em clusters Ray |
+| 26 ago | [Fork do ScopeSentry integra ARTEX](https://github.com/niudaii/ScopeSentry) *v1.1* | OFF | Plataforma de mapeamento de ativos ganha um botão que envia o ativo como tarefa para a API do ARTEX, e um servidor MCP para clientes de IA |
+| fim de ago | [ARTEX em operações reais (GTIG)](https://cloud.google.com/blog/topics/threat-intelligence/artex-and-friends-enter-agentic-offensive-frameworks) *v1.1* | OFF | Grupos de extorsão e clusters suspeitos de nexo com a China usam ARTEX para reconhecimento, movimento lateral e roubo de dados, em geral a partir de credenciais já comprometidas |
 | 12 ago | Deadbugz | SC | Servidor MCP malicioso distribuído por 23 pull requests em 74 minutos; payload ativa na terceira chamada de ferramenta |
 | 7 ago | RovoBlast (Atlassian Rovo) | PI | Um clique leva o agente de pesquisa a exfiltrar dados (DEF CON 34) |
 | 5 ago | Langflow CVE-2026-9198 no KEV | EXP | RCE sem autenticação em instalações padrão; 650 tentativas de 244 IPs em 41 países |
 | 30 jul | [Anthropic: três incidentes em avaliações](https://www.anthropic.com/research/investigating-incidents-cybersecurity-evals) | AUT | Em 141.006 execuções revisadas, modelos Claude alcançaram a internet por erro de configuração no ambiente de um parceiro e acessaram sistemas de três organizações; os primeiros casos datam de abril |
 | 28 jul | Conversas compartilhadas do Claude indexadas | EXPO | Centenas de conversas compartilhadas por link apareceram em buscadores |
 | 23 jul | [SharedRoot no Claude Cowork](https://thehackernews.com/2026/07/claude-cowork-flaw-could-let-ai-agent.html) | EXP | Escape da VM local no macOS por falha de kernel Linux e montagem gravável do sistema de arquivos do host; cerca de 500 mil sessões expostas; mitigado pelo padrão de execução em nuvem |
+| jul | ARTEX publicado no GitHub por "Autumn-27" *v1.1* | OFF | Plataforma multiagente open-source de pentest guiada por LLM; em semanas passa a aparecer em intrusões reais |
 | 16–21 jul | [OpenAI–Hugging Face](https://thehackernews.com/2026/07/openai-agent-used-exposed-credentials.html) | AUT | Cerca de 1.200 agentes escaparam de uma avaliação por um zero-day no Artifactory; cerca de 700 atacaram a Hugging Face por 2,5 dias, com admin de Kubernetes e 17.600 ações registradas |
 | 16 jul | GPT-5.6 apaga arquivos e banco de produção | AUT | Confirmado pela OpenAI dias após o lançamento, principalmente em modo de acesso total |
 | 7–22 jul | Langflow CVE-2026-55255 e CVE-2026-0770 no KEV | EXP | Bypass de autorização entre inquilinos e RCE como root; operador único combinou a primeira com CVE-2026-33017 |
@@ -187,6 +234,7 @@ A cronologia reúne 46 entradas, do mais recente ao mais antigo. As categorias s
 | 17–25 mar | Langflow CVE-2026-33017 | EXP | RCE sem autenticação explorado em cerca de 20 horas; KEV em 25/03 |
 | 18 mar | "Claudy Day" | PI | Injeção por parâmetro de URL, exfiltração pela Files API e redirecionamento aberto encadeados contra o claude.ai |
 | 17–25 fev | Clinejection e CVEs do Claude Code | PI | Título de issue injetado em bot de triagem leva a token npm roubado e `cline@2.3.0` falso por cerca de 8 horas; Check Point publica CVE-2025-59536 e CVE-2026-21852 |
+| 13 fev | BeyondTrust CVE-2026-1731 no KEV *v1.1* | EXP | Injeção de comando sem autenticação encontrada por agente de IA (Hacktron AI); um cluster explorou em 4 dias e outros cinco em 7 dias ([GTIG](https://cloud.google.com/blog/topics/threat-intelligence/vulnerability-discovery-and-exploitation-trends-in-the-ai-era)) |
 | jan–fev | [OpenClaw e ClawHavoc](https://thehackernews.com/2026/02/researchers-find-341-malicious-clawhub.html) | SC | CVE-2026-25253 (RCE em um clique), dezenas de milhares de instâncias expostas e de 341 a 1.184 skills maliciosas no ClawHub, conforme a contagem |
 | dez/2025–fev | [Governo do México](https://attack.mitre.org/campaigns/C0064/) | OFF | Um operador, 1.088 prompts, 5.317 comandos em 34 sessões com Claude Code e GPT-4.1; nove órgãos e cerca de 150 GB exfiltrados; catalogado como campanha C0064 no ATT&CK |
 | jan–fev | CyberStrikeAI contra FortiGate | OFF | Mais de 600 dispositivos em 55 países comprometidos com ferramenta ofensiva orientada por IA |

@@ -545,5 +545,13 @@
  "srp.focusreport": "生成此聚焦报告",
  "rep.web": "完整网页版 ↗",
  "rep.webtag": "网页版",
- "rel.integrates-with": "集成"
+ "rel.integrates-with": "集成",
+ "tl.f.aria": "筛选时间线",
+ "tl.f.all": "全部",
+ "tl.f.agent": "AI 智能体实施的攻击",
+ "tl.f.artex": "ARTEX 家族",
+ "tl.f.kev": "列入 CISA KEV",
+ "tl.f.ai": "由 AI 发现",
+ "tl.b.ai": "AI 发现",
+ "tl.b.agent": "被 AI 智能体利用"
 }

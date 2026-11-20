@@ -545,5 +545,13 @@
  "srp.focusreport": "Отчёт по этому фокусу",
  "rep.web": "Полная веб-версия ↗",
  "rep.webtag": "веб-версия",
- "rel.integrates-with": "интегрируется с"
+ "rel.integrates-with": "интегрируется с",
+ "tl.f.aria": "Фильтр хронологии",
+ "tl.f.all": "Все",
+ "tl.f.agent": "Атаки с ИИ-агентами",
+ "tl.f.artex": "Семейство ARTEX",
+ "tl.f.kev": "В CISA KEV",
+ "tl.f.ai": "Найдены ИИ",
+ "tl.b.ai": "найдена ИИ",
+ "tl.b.agent": "использована ИИ-агентом"
 }

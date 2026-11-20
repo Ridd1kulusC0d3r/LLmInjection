@@ -2097,5 +2097,115 @@
     "url": "https://github.com/niudaii/ScopeSentry",
     "published": "2026-08-26",
     "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-BARRACUDA-ARTEX-2026-11",
+    "type": "source",
+    "name": "Forty-four hours: Anatomy of a machine-speed intrusion",
+    "publisher": "Barracuda Networks",
+    "grade": "A",
+    "role": "threat-report",
+    "url": "https://blog.barracuda.com/2026/11/11/anatomy-of-a-machine-speed-intrusion",
+    "published": "2026-11-11",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-CSN-EC-ARTEX-2026-11",
+    "type": "source",
+    "name": "Hackers Target European Commission with ARTEX AI Tool (relaying POLITICO, 2026-11-19)",
+    "publisher": "Cyber Security News",
+    "grade": "C",
+    "role": "journalism",
+    "url": "https://cybersecuritynews.com/european-commission-cyberattack/",
+    "published": "2026-11-19",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-GTIG-VULN-AI-ERA-2026-09",
+    "type": "source",
+    "name": "Vulnerability discovery and exploitation trends in the AI era",
+    "publisher": "Google Threat Intelligence Group",
+    "grade": "A",
+    "role": "threat-research",
+    "url": "https://cloud.google.com/blog/topics/threat-intelligence/vulnerability-discovery-and-exploitation-trends-in-the-ai-era",
+    "published": "2026-09-30",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-DIVD-WHEN-NOT-IF",
+    "type": "source",
+    "name": "It was a matter of when, not if (DIVD breach notice)",
+    "publisher": "Dutch Institute for Vulnerability Disclosure",
+    "grade": "A",
+    "role": "security-advisory",
+    "url": "https://www.divd.nl/newsroom/articles/when-no-if/",
+    "published": "2026-09-25",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-DIVD-CASE-2026-00015",
+    "type": "source",
+    "name": "DIVD-2026-00015: Zammad CVE-2026-102489 and CVE-2026-102490",
+    "publisher": "DIVD CSIRT",
+    "grade": "A",
+    "role": "security-advisory",
+    "url": "https://csirt.divd.nl/cases/DIVD-2026-00015/",
+    "published": "2026-09-30",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-ZAMMAD-ADV-2026-102489",
+    "type": "source",
+    "name": "Security Advisory: CVE-2026-102489 and CVE-2026-102490",
+    "publisher": "Zammad",
+    "grade": "A",
+    "role": "security-advisory",
+    "url": "https://zammad.com/en/advisories/cve-2026-102489-cve-2026-102490",
+    "published": "2026-10-05",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-SYSDIG-DIVD-ZAMMAD",
+    "type": "source",
+    "name": "AI agent exploits Zammad zero-days in DIVD breach: what we know and how to detect it",
+    "publisher": "Sysdig Threat Research Team",
+    "grade": "B",
+    "role": "threat-research",
+    "url": "https://www.sysdig.com/blog/ai-agent-exploits-zammad-zero-days-in-divd-breach-what-we-know-and-how-to-detect-it",
+    "published": "2026-10-02",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-NVD-CVE-2026-1731",
+    "type": "source",
+    "name": "CVE-2026-1731 (NVD record)",
+    "publisher": "NIST National Vulnerability Database",
+    "grade": "A",
+    "role": "security-advisory",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-1731",
+    "published": "2026-02-06",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-NVD-CVE-2026-102489",
+    "type": "source",
+    "name": "CVE-2026-102489 (NVD record)",
+    "publisher": "NIST National Vulnerability Database",
+    "grade": "A",
+    "role": "security-advisory",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102489",
+    "published": "2026-09-30",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-NVD-CVE-2026-102490",
+    "type": "source",
+    "name": "CVE-2026-102490 (NVD record)",
+    "publisher": "NIST National Vulnerability Database",
+    "grade": "A",
+    "role": "security-advisory",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102490",
+    "published": "2026-09-30",
+    "last_verified": "2026-11-20"
   }
 ]
