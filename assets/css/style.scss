@@ -81,6 +81,21 @@ details table{margin-left:16px}
 /* footer */
 .foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;padding:18px 28px 36px;border-top:1px solid var(--ink);font:12px var(--mono);color:var(--ink-3)}
 
+
+/* intelligence products (reports/): same desk, a few document parts */
+.rpt-head{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px 20px;margin:0 0 22px;padding:8px 0;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);font:600 11px/1.4 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2)}
+.rpt-head .tlp{color:var(--signal)}
+.rpt-kicker{font:600 12px/1.3 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--signal);margin:0 0 6px}
+.bluf{border:1px solid var(--ink);border-left:4px solid var(--signal);background:var(--paper-2);padding:14px 18px;margin:0 0 22px}
+.bluf > :first-child{margin-top:0}.bluf > :last-child{margin-bottom:0}
+.bluf::before{content:"BLUF";display:block;font:600 11px/1 var(--mono);letter-spacing:.16em;color:var(--signal);margin-bottom:8px}
+.injected{border:1px dashed var(--signal);padding:10px 14px;margin:0 0 18px;font:13px/1.5 var(--mono);color:var(--ink-2)}
+.injected::before{content:"PREENCHER. TRATE COMO RASCUNHO.";display:block;font-weight:700;letter-spacing:.12em;color:var(--signal);margin-bottom:4px}
+.verify{background:var(--signal);color:#fff;font:700 10px/1 var(--mono);letter-spacing:.1em;padding:2px 6px;white-space:nowrap}
+.conf{font:600 10px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;padding:2px 6px;border:1px solid currentColor;white-space:nowrap}
+.conf-high{color:var(--ink)}.conf-med{color:var(--ink-2)}.conf-low{color:var(--ink-3);border-style:dashed}
+.redact{background:var(--ink);color:var(--ink);user-select:none}
+
 @media (max-width:640px){
   body{font-size:15px}
   .wrap,.mast-bar,.foot{padding-left:18px;padding-right:18px}
