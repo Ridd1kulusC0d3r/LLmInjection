@@ -288,8 +288,8 @@ def generated_sections(fm: dict, cut: str) -> tuple[str, str]:
         kevs = sorted((v for v in vul if v.get("kev_added", "") >= since), key=lambda v: v["kev_added"], reverse=True)
         hot = (f"## O mais quente agora\n\nGerado dos datasets do repositório na data de corte ({cut}): tudo o que foi divulgado nos últimos {days} dias, "
                f"do mais recente ao mais antigo. Os títulos ficam em inglês, como nos registros. São {len(rows)} incidentes e campanhas e "
-               f"{len(kevs)} entradas novas no CISA KEV.\n\n"
-               "| Data | Registro | Tipo | Conf. | Sinais | Ferramentas | Fonte principal |\n| --- | --- | --- | --- | --- | --- | --- |\n"
+               + (f"{len(kevs)} entrada nova no CISA KEV.\n\n" if len(kevs) == 1 else f"{len(kevs)} entradas novas no CISA KEV.\n\n")
+               + "| Data | Registro | Tipo | Conf. | Sinais | Ferramentas | Fonte principal |\n| --- | --- | --- | --- | --- | --- | --- |\n"
                + "".join(f"| {w} | {_cell(r['name'])} | {k} | {CONF_PT.get(r.get('confidence'), '')} | {', '.join(f)} | {', '.join(used.get(r['id'], []))} | {best(r)} |\n" for w, r, k, f in rows)
                + ("\n**Entradas novas no KEV no período:** " + "; ".join(f"{v['identifiers'][0]} ({_cell(v['package'])}, {v['kev_added']})" for v in kevs) + ".\n" if kevs else ""))
     app = ""
