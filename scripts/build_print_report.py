@@ -118,6 +118,7 @@ class Doc:
     def __init__(self, vulns: list[dict]):
         self.link = brp.Linker(vulns)
         self.toc: list[tuple[str, str, str]] = []
+        self.n = 0
 
     def render(self, md: str) -> str:
         out, _ = brp.render(md, self.link)
@@ -125,10 +126,48 @@ class Doc:
         return out
 
     def opener(self, key: str, num: str, title: str, lead: str, monster: str | None = None) -> str:
+        if num.isdigit():
+            self.n += 1
+            num = f"{self.n:02d}"
         self.toc.append((key, num, title))
-        mon = art(monster, "opener-art") if monster else ""
+        mon = ""  # section openers stay clean; illustrations live on the covers only
         return (f'<section class="opener" id="{key}"><span class="mk">@@{key}@@</span>{mon}<div class="onum">{esc(num)}</div>'
                 f'<h1>{esc(title)}</h1><p class="lead">{lead}</p><div class="orule"></div></section>')
+
+
+KIND_PT = {"intrusion": "intrusão", "fraud": "fraude", "malware": "malware", "supply-chain": "cadeia de suprimentos", "atlas-incident": "incidente (ATLAS)",
+           "unintended-access": "acesso não intencional", "exploitation": "exploração", "model-extraction": "extração de modelo", "exploit-development": "desenvolvimento de exploit"}
+SKIP_KINDS = {"atlas-exercise", "research-artifact", "research-framework", "defensive-research", "observed-research-case"}
+LEAK = re.compile(r"(?i)exfiltrat|stole|stolen|theft|leak|exposed|dump|personal data|card")
+
+
+def when(r: dict) -> str:
+    return str(r.get("reported") or r.get("date") or r.get("first_seen") or "")
+
+
+def events(inc, cam, rel, src, tools):
+    used = defaultdict(list)
+    for r in rel:
+        if r["relationship"] == "uses-tool":
+            used[r["source"]].append(tools.get(r["target"], r["target"]))
+    agent = {r["source"] for r in rel if (r["relationship"] == "uses-tool" and r["target"] in AGENT_TOOLS)
+             or (r["target"] == "LLMI-T015" and r["relationship"] in ("demonstrates", "uses"))}
+    out = []
+    for r in inc + cam:
+        w = when(r)
+        if not w.startswith("2026") or r.get("kind") in SKIP_KINDS:
+            continue
+        ss = sorted((src[i] for i in r.get("source_ids", []) if i in src and src[i].get("url", "").startswith("https://")), key=lambda x: x.get("grade", "Z"))
+        best = f"[{ss[0].get('publisher') or ss[0]['name']}]({ss[0]['url']}) ({ss[0].get('grade', '?')})" if ss else ""
+        flags = [f for f, ok in (("vazamento", bool(LEAK.search(r.get("summary", "")))), ("agente de IA", r["id"] in agent)) if ok]
+        out.append((w, r, KIND_PT.get(r.get("kind", ""), "campanha"), flags, ", ".join(used.get(r["id"], [])), best.replace("|", "/")))
+    out.sort(key=lambda x: x[0], reverse=True)
+    return out
+
+
+def ev_table(rows) -> str:
+    return ("| Data | Registro | Tipo | Conf. | Sinais | Ferramentas | Fonte principal |\n| --- | --- | --- | --- | --- | --- | --- |\n"
+            + "\n".join(f"| {w} | {r['name'].replace('|', '/')} | {k} | {CONF.get(r.get('confidence'), '')} | {', '.join(f)} | {t} | {b} |" for w, r, k, f, t, b in rows))
 
 
 def kpis(vul, inc, cam) -> list[tuple[str, str]]:
@@ -251,7 +290,7 @@ def build(out: Path, toc_pages: dict[str, int] | None = None) -> None:
 <header class="cv-top"><span>LLMINJECTION · INTELIGÊNCIA DE AMEAÇAS</span><span class="tlp">TLP:CLEAR</span></header>
 <div class="cv-title"><div class="cv-kicker">Relatório de inteligência de ameaças · 2026</div><h1>{TITLE}</h1><p>{SUB}</p></div>
 {art("enxame", "cv-monster")}
-<footer class="cv-foot"><div><b>{CODE}</b> · v1.3</div><div>Corte {CUT}</div><div>Mapa: atores com campanhas em 2026 e as ferramentas agênticas que usaram</div></footer>
+<footer class="cv-foot"><div><b>{CODE}</b> · v2.0</div><div>Corte {CUT}</div><div>Mapa: atores com campanhas em 2026 e as ferramentas agênticas que usaram</div></footer>
 </body></html>"""
     (out / "cover.html").write_text(cover, encoding="utf-8")
 
@@ -260,7 +299,7 @@ def build(out: Path, toc_pages: dict[str, int] | None = None) -> None:
     B.append(f"""<section class="page front">
 <div class="fm-head"><span class="eyebrow">Ficha do relatório</span><h2>{TITLE}</h2><p class="lead">{SUB}</p></div>
 <dl class="fm">
-<dt>Código</dt><dd>{CODE} · versão 1.3</dd><dt>Data de corte</dt><dd>{CUT}</dd><dt>Classificação</dt><dd><span class="tlpb">TLP:CLEAR</span> distribuição pública</dd>
+<dt>Código</dt><dd>{CODE} · versão 2.0</dd><dt>Data de corte</dt><dd>{CUT}</dd><dt>Classificação</dt><dd><span class="tlpb">TLP:CLEAR</span> distribuição pública</dd>
 <dt>Produzido por</dt><dd>LLMInjection, inteligência aberta de ameaças a sistemas de IA, LLM e agentes</dd>
 <dt>Base</dt><dd>Relatório autoral de 20/11/2026 (156 fontes) somado aos datasets do repositório: {len(vul)} vulnerabilidades, {len(inc)} incidentes, {len(cam)} campanhas, {len(actors)} atores, {len(det)} detecções, {len(ctr)} controles</dd>
 <dt>Edição web</dt><dd>ridd1kulusc0d3r.github.io/LLmInjection</dd></dl>
@@ -269,7 +308,6 @@ def build(out: Path, toc_pages: dict[str, int] | None = None) -> None:
 <div><b>Confiança</b><p>confirmada · alta · média · baixa · não verificada. Grau mede a fonte; confiança mede a afirmação.</p></div>
 <div><b>Selos</b><p><span class="kevb">KEV</span> falha no catálogo de exploradas da CISA · CVEs sublinhados têm registro no Explorer.</p></div>
 <div><b>Escopo</b><p>Nenhuma seção traz payload ou cadeia de exploração reproduzível. Indicadores ficam nas fontes.</p></div></div></div>
-{art("rastreador", "fm-art")}
 </section>""")
     B.append('<section class="page toc"><span class="mk">@@toc@@</span><span class="eyebrow">Sumário</span><h2 class="toc-h">O que está neste relatório</h2><ol class="tocl">@@TOCLIST@@</ol></section>')
 
@@ -286,6 +324,23 @@ def build(out: Path, toc_pages: dict[str, int] | None = None) -> None:
         B.append('<div class="callout">' + doc.render(upd.group(1).strip()) + "</div>")
     if prio:
         B.append('<div class="prio"><h4>Prioridades imediatas</h4>' + doc.render(prio.group(1)) + "</div>")
+
+    # hot: last 30 days
+    evs = events(inc, cam, rel, src, tools)
+    since = (dt.date.fromisoformat(CUT) - dt.timedelta(days=30)).isoformat()
+    hot = [e for e in evs if e[0][:10] >= since[:len(e[0][:10])]]
+    kev_new = sorted((v for v in vul if v.get("kev_added", "") >= since), key=lambda v: v["kev_added"], reverse=True)
+    B.append(doc.opener("shot", "02", "O mais quente agora", f"O que foi divulgado nos 30 dias até {CUT}: {len(hot)} incidentes e campanhas e {len(kev_new)} entrada(s) nova(s) no CISA KEV."))
+    B.append(doc.render("Gerado dos datasets do repositório na data de corte. Os títulos ficam em inglês, como nos registros; a fonte principal é a de melhor grau. \"Vazamento\" marca registros cujo resumo descreve exfiltração, roubo ou exposição de dados; \"agente de IA\" marca uso de framework ofensivo agêntico.\n\n" + ev_table(hot)))
+    if kev_new:
+        B.append(doc.render("**Entradas novas no KEV no período:** " + "; ".join(f"{v['identifiers'][0]} ({v['package']}, {v['kev_added']})" for v in kev_new) + "."))
+
+    # scope, method and verification notes
+    B.append(doc.opener("sscope", "03", "Escopo, metodologia e confiança", "O que entra, o que fica de fora, como cada afirmação foi conferida e o que mudou entre as versões."))
+    B.append(doc.render(md_section(md, "2")))
+    inj = re.search(r'<div class="injected" markdown="1">([\s\S]+?)</div>', md)
+    if inj:
+        B.append(doc.render("### Notas de versão e verificação\n\n" + inj.group(1).strip()))
 
     # 02 landscape
     B.append(doc.opener("s02", "02", "Panorama de ameaças", "Onde a exploração de 2026 se concentrou, e a velocidade com que aconteceu.", "parasita"))
@@ -327,7 +382,7 @@ def build(out: Path, toc_pages: dict[str, int] | None = None) -> None:
     s4 = md_section(md, "4")
     B.append(doc.render(s4.split("### LiteLLM")[0]))
     B.append(doc.render("### Vulnerabilidades encontradas por IA\n" + md_sub(md, "Vulnerabilidades encontradas por IA")))
-    for sub in ("LiteLLM: o caso mais grave da tabela", "Flowise", "Família MCP", "Agentes de código e copilots", "CrewAI"):
+    for sub in ("LiteLLM: o caso mais grave da tabela", "Flowise", "Família MCP", "Agentes de código e copilots", "CrewAI", "Rejeitados: Rails, Adminer e Achievo"):
         body = md_sub(md, sub)
         if body:
             B.append(doc.render(f"### {sub}\n{body}"))
@@ -346,6 +401,13 @@ def build(out: Path, toc_pages: dict[str, int] | None = None) -> None:
     B.append(doc.render("Contagem de incidentes e campanhas de 2026 cujo registro cita a família de modelo pelo nome. Citação não é atribuição: muitos casos usam vários modelos e o provedor costuma ser a vítima do abuso, não o atacante.\n\n"
                         "| Família | Provedor | Implantação | Casos em 2026 | Exemplos | Foco de controle |\n| --- | --- | --- | --- | --- | --- |\n" + "\n".join(r for _, r in mrows)))
     B.append(doc.render("**Leitura para o defensor.** Os frameworks agênticos não trazem modelo próprio: ARTEX e afins chamam APIs de terceiros (DeepSeek domina nas instâncias de atacantes analisadas pelo FBI), o que faz da chave de API do provedor o ativo que o atacante precisa e da telemetria do provedor uma fonte de detecção. Modelos locais (Ollama e similares) tiram essa telemetria do caminho e aparecem como runtime não autorizado (`DET-AI-002`)."))
+
+    # ARTEX dossier
+    dfm, dmd = brp.front_matter((ROOT / "reports" / "dossiers" / "artex.md").read_text(encoding="utf-8"))
+    B.append(doc.opener("sartex", "09", "Dossiê ARTEX", "O framework ofensivo agêntico que mais apareceu em intrusões de 2026: quem usa, como opera, como detectar e o que não se pode afirmar."))
+    dbody = dmd[dmd.find("<div class=\"bluf\""):] if "<div class=\"bluf\"" in dmd else dmd
+    dbody = re.sub(r"<span class=\"conf conf-\w+\">(.*?)</span>", r"\1", dbody)
+    B.append(doc.render(dbody))
 
     # 07 threat modeling
     B.append(doc.opener("s07", "07", "Modelagem de ameaças", "Ativos, fronteiras de confiança e os cenários de abuso que mais se repetem em stacks de IA.", "mimico"))
@@ -428,7 +490,9 @@ def build(out: Path, toc_pages: dict[str, int] | None = None) -> None:
     B.append(doc.render("### Fontes do relatório autoral\n" + md_section(md, "14")))
 
     # appendices
-    B.append(doc.opener("s14", "A", "Apêndice: CVEs documentadas", "Todas as vulnerabilidades com CVE nos datasets, conferidas em NVD, GHSA ou aviso do fornecedor.", None))
+    B.append(doc.opener("sappA", "A", "Apêndice A: linha do tempo de incidentes e vazamentos de 2026", f"Todos os incidentes e campanhas de 2026 nos datasets ({len(evs)} registros), sem exercícios e artefatos de pesquisa."))
+    B.append(doc.render(ev_table(evs)))
+    B.append(doc.opener("s14", "B", "Apêndice B: CVEs documentadas", "Todas as vulnerabilidades com CVE nos datasets, conferidas em NVD, GHSA ou aviso do fornecedor.", None))
     rel_pt = {"ai-software": "software de IA", "ai-discovered": "encontrada por IA", "exploited-by-ai-agent": "usada por agente"}
     cves = sorted((v for v in vul if any(i.startswith("CVE-") for i in v["identifiers"])), key=lambda v: (v.get("kev_added", ""), v["published"]), reverse=True)
     B.append(doc.render("| CVE | Produto | Falha | Sev. | Corrigida em | KEV | Relação com IA |\n| --- | --- | --- | --- | --- | --- | --- |\n" + "\n".join(
@@ -450,7 +514,7 @@ def build(out: Path, toc_pages: dict[str, int] | None = None) -> None:
 <p>LLMInjection é inteligência aberta sobre ameaças a sistemas de IA, LLM e agentes. Cada afirmação traz o grau da fonte e o nível de confiança, e cada registro deste relatório pode ser aberto, conferido e reutilizado no Explorer e no repositório.</p>
 <div class="bk-kpis">{''.join(f'<div><b>{esc(v)}</b><span>{esc(lbl)}</span></div>' for v, lbl in K[:3])}</div>
 <div class="bk-links"><div><span>Explorer</span>ridd1kulusc0d3r.github.io/LLmInjection</div><div><span>Repositório</span>github.com/Ridd1kulusC0d3r/LLmInjection</div><div><span>Dados</span>STIX 2.1 · GraphML · API JSON</div></div></div>
-<footer class="cv-foot"><div><b>{CODE}</b> · v1.3 · TLP:CLEAR</div><div>Corte {CUT} · gerado {dt.date.today().isoformat()}</div></footer>
+<footer class="cv-foot"><div><b>{CODE}</b> · v2.0 · TLP:CLEAR</div><div>Corte {CUT} · gerado {dt.date.today().isoformat()}</div></footer>
 </body></html>"""
     (out / "back.html").write_text(back, encoding="utf-8")
 
