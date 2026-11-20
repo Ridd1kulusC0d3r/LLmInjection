@@ -29,6 +29,9 @@ class ReportPageTests(unittest.TestCase):
         self.assertIn('class="cve kev" href="../#node=VULN-LITELLM-CVE-2026-42208"', html)
         self.assertIn('<figure class="chart">', html)
         self.assertNotIn("<script>alert", html)
+        self.assertIn('id="s-o-mais-quente-agora"', html)
+        self.assertIn('id="s-apendice-b-cves-documentadas"', html)
+        self.assertIn("CVE-2026-1731", html.split('id="s-apendice-b-cves-documentadas"')[1])
 
     def test_markdown_subset(self):
         link = build_report_pages.Linker([])
