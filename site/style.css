@@ -412,3 +412,4 @@ th[aria-sort="ascending"] .sortbtn,th[aria-sort="descending"] .sortbtn{color:var
 #graphFocus{margin:0 0 10px}
 .dp .table-wrap{border:0;box-shadow:none;padding:0}.dp .table-wrap .tbl{min-width:0}
 .dp .tbl td:first-child{width:100%}
+.tbl.dmx td{min-width:180px}.tbl.dmx td:first-child{min-width:220px}

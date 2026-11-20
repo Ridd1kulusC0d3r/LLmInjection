@@ -85,6 +85,6 @@ The runner has plan and mock adapters only: it does not call your system. To run
 
 ## 7. Go deeper (links only)
 
-- **Tools and projects:** [trailofbits/anamorpher](https://github.com/trailofbits/anamorpher), [Insider77Circle/LLM-INJECTION-POC](https://github.com/Insider77Circle/LLM-INJECTION-POC), [mukul975/anthropic-cybersecurity-skills](https://github.com/mukul975/anthropic-cybersecurity-skills)
+- **Tools and projects:** [trailofbits/anamorpher](https://github.com/trailofbits/anamorpher), [crazywifi/Redteam_LLM_Injection_payloads](https://github.com/crazywifi/Redteam_LLM_Injection_payloads), [Insider77Circle/LLM-INJECTION-POC](https://github.com/Insider77Circle/LLM-INJECTION-POC), [mukul975/anthropic-cybersecurity-skills](https://github.com/mukul975/anthropic-cybersecurity-skills)
 - **Third-party procedures (not ours, link only):** [detecting-indirect-prompt-injection](https://github.com/mukul975/anthropic-cybersecurity-skills/tree/main/skills/detecting-indirect-prompt-injection) (detect: hidden and obfuscated content in documents, pages and images). Independent community project, Apache-2.0, not affiliated with Anthropic; see the [knowledge strategy](../KNOWLEDGE-STRATEGY.md).
 - **Live record:** [this technique in the Explorer](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=LLMI-T025)

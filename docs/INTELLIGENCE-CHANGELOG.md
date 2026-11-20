@@ -2,6 +2,24 @@
 
 This changelog records material changes to attribution, confidence, external mappings and structured intelligence. Ordinary prose edits do not belong here.
 
+## 2026-11-20 — Payload Vault cross-reference and the defense matrix
+
+### Added
+
+- `scripts/payload_vault_check.py` and `references/crosswalks/payload-vault.json`: the LLM Red Team Payload Vault (crazywifi/Redteam_LLM_Injection_payloads, commit `5847af5`) read as text. 1,201 payloads (1,188 unique) in four libraries (core 462, financial 623, enterprise 78, medical 38) and 18 categories, each mapped to OWASP LLM Top 10 IDs, LLMInjection techniques and the safe tests that validate them. 11 techniques have payloads; 17 have none (agentic orchestration, supply chain, gateways, exposed services and the like).
+- Controls carry a `layer`: 12 `guardrail` (checks each input, output or action at run time), 18 `hardening` (removes the opportunity), 2 `monitoring`.
+- Explorer: a Defense matrix tab (threat model × harness × guardrail × hardening) per technique, with a filter for gaps.
+
+### Changed
+
+- ECO-083 (the same vault, listed since 2026-10-07) now names the 11 techniques it covers instead of 2.
+
+### Confidence notes
+
+- The vault declares no licence. The crosswalk keeps vault IDs, short labels, categories and SHA-256 hashes only; a test fails if payload text ever appears. Use the vault itself, by ID, for authorised tests.
+- The README advertises 700+ payloads; the four libraries hold 1,201 records, 13 of them repeated text.
+- Category-to-technique and control-to-layer assignments are analyst mappings.
+
 ## 2026-11-20 — Brazil leads checked against primary sources
 
 ### Added

@@ -155,6 +155,10 @@ def validate():
         if not vuln.get("package") or not vuln.get("summary"):
             errors.append(f"{prefix}: package and summary are required")
 
+    for i, control in enumerate(datasets["controls"]):
+        if control.get("layer") not in {"guardrail", "hardening", "monitoring"}:
+            errors.append(f"controls[{i}]: layer must be guardrail, hardening or monitoring")
+
     for i, tool in enumerate(datasets["tools"]):
         prefix = f"tools[{i}]"
         if tool.get("type") != "tool" or not str(tool.get("id", "")).startswith("TOOL-"):
