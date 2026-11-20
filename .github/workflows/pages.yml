@@ -5,6 +5,8 @@ on:
     branches: ["main"]
     paths:
       - "site/**"
+      - "reports/**"
+      - "scripts/generate_landscape_report.py"
       - "data/**"
       - "assets/**"
       - "scripts/build_graph.py"

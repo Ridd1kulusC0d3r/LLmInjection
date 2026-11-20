@@ -83,7 +83,22 @@ Attribution is the weakest link: AI use is usually **inferred from artifacts**, 
 </tr>
 </table>
 
-<sub>Regenerate the GIFs with `node scripts/record_tour.js <url> <frames> tour|graph|filters` and `python scripts/make_tour_gif.py <frames> assets/explorer-<name>.gif`.</sub>
+<table>
+<tr>
+<td width="50%"><a href="https://ridd1kulusc0d3r.github.io/LLmInjection/#tab=graph&focus=LLMI-T015"><img src="assets/explorer-orchestration.gif" alt="Graph focused on LLMI-T015 Agentic Attack Orchestration: 17 actors, 27 campaigns and 18 incidents linked to the technique, a campaign and its actor selected, then the view refocused on the actor and shown in Portuguese" width="100%"></a></td>
+<td width="50%"><a href="https://ridd1kulusc0d3r.github.io/LLmInjection/#tab=timeline&tech=LLMI-T015"><img src="assets/explorer-timeline.gif" alt="Chronology filtered by technique: a monthly histogram and the campaigns and incidents of Agentic Attack Orchestration, newest first, with one record opened, then the filter switched to AI-Assisted Tooling Development" width="100%"></a></td>
+</tr>
+<tr>
+<td><sub><b>Focus on a technique.</b> <code>#tab=graph&amp;focus=LLMI-T015</code> keeps only the record, its links and the actors behind its evidence. Any selected node has a <i>Focus on this</i> button.</sub></td>
+<td><sub><b>Chronology by technique.</b> <code>#tab=timeline&amp;tech=LLMI-T015</code> filters the timeline and draws evidence per month.</sub></td>
+</tr>
+</table>
+
+<a href="https://ridd1kulusc0d3r.github.io/LLmInjection/#tab=reports"><img src="assets/explorer-spaces.gif" alt="The Explorer's spaces: Reports with the ARTEX dossier rendered in the site's style, Trends by technique, AI role and nexus, the TTP catalogue, ranked hunting hypotheses, detection rule files and the threat model by attack surface" width="100%"></a>
+
+<sub><b>Spaces.</b> Reports (the platform's own report plus every product under <code>reports/</code>, rendered in the site), Trends, TTPs, Hunting, Detection and Threat modeling, all computed from the same graph.</sub>
+
+<sub>Regenerate the GIFs with `node scripts/record_tour.js <url> <frames> tour|graph|filters|orchestration|timeline|spaces` and `python scripts/make_tour_gif.py <frames> assets/explorer-<name>.gif`.</sub>
 
 ### ▶ Video tour (73 s)
 
