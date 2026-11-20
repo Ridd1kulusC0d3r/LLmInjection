@@ -13,7 +13,7 @@
 
 | Layer | Status |
 |---|---|
-| Evidence | 69 record(s), 31 publisher(s), best grade A, newest 2026 |
+| Evidence | 70 record(s), 31 publisher(s), best grade A, newest 2026 |
 | Safe tests | 1 |
 | Detections | 0 rule file(s), 1 specification(s) |
 | Controls | 1 |
@@ -33,6 +33,7 @@ What the repository links to it:
 - 2026-07 · [Armored Likho BusySnake Stealer campaign with AI-generated first-stage payloads](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-ARMORED-LIKHO-BUSYSNAKE) (campaign, high)
 - 2026-10 · [Chinese-speaking ARTEX multi-model operator targeting 19 markets](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-ARTEX-MULTI-MODEL-OPERATOR) (campaign, high)
 - 2026-04 · [bandcampro Gemini CLI-driven C2 botnet build and fraud operations](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-BANDCAMPRO-GEMINI-CLI-C2) (campaign, confirmed)
+- 2025-08 · [AI-built clones of Brazilian government sites collecting Pix payments](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-BR-GOV-GENAI-PIX-PHISHING) (campaign, high)
 - 2026 · [BREEZE COMET payment-system fraud in Brazil](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-BREEZE-COMET-PAYMENTS) (campaign, confirmed)
 - 2026 · [BUGSTER Hermes Agent/DeepSeek multi-domain cybercrime](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-BUGSTER-HERMES-DEEPSEEK-CYBERCRIME) (campaign, confirmed)
 - 2026-09 · [CaptiveCrunch](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-CAPTIVECRUNCH) (campaign, confirmed)

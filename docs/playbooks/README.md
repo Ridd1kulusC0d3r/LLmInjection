@@ -10,7 +10,7 @@ Sorted by priority, the techniques with the most missing defence first. `E` evid
 | [LLMI-T013](LLMI-T013.md) Runtime LLM Command Generation | observed in the wild | 8 | 7 | 1 | 1 | 0 | 0 | 0 |
 | [LLMI-T010](LLMI-T010.md) Model Source Tampering | observed in the wild | 6 | 1 | 1 | 0 | 3 | 2 | 0 |
 | [LLMI-T012](LLMI-T012.md) Coding-Agent Dependency Manipulation | observed in the wild | 6 | 1 | 2 | 0 | 2 | 1 | 0 |
-| [LLMI-T014](LLMI-T014.md) AI-Assisted Reconnaissance and Social Engineering | observed in the wild | 6 | 44 | 1 | 0 | 1 | 1 | 0 |
+| [LLMI-T014](LLMI-T014.md) AI-Assisted Reconnaissance and Social Engineering | observed in the wild | 6 | 45 | 1 | 0 | 1 | 1 | 0 |
 | [LLMI-T016](LLMI-T016.md) AI Gateway Credential Compromise | observed in the wild | 6 | 5 | 1 | 0 | 1 | 1 | 0 |
 | [LLMI-T017](LLMI-T017.md) Prompt Injection Against AI Security Scanners | observed in the wild | 6 | 2 | 1 | 0 | 2 | 2 | 0 |
 | [LLMI-T019](LLMI-T019.md) Model Distillation Campaign | observed in the wild | 6 | 2 | 1 | 0 | 1 | 1 | 0 |
@@ -19,7 +19,7 @@ Sorted by priority, the techniques with the most missing defence first. `E` evid
 | [LLMI-T023](LLMI-T023.md) Crafted AI Assistant Links and Recommendation Poisoning | observed in the wild | 6 | 1 | 1 | 0 | 1 | 2 | 0 |
 | [LLMI-T024](LLMI-T024.md) Exposed or Misconfigured AI Services | observed in the wild | 6 | 11 | 1 | 0 | 1 | 2 | 0 |
 | [LLMI-T026](LLMI-T026.md) Inter-Agent Instruction Propagation | observed in the wild | 6 | 2 | 1 | 0 | 1 | 3 | 0 |
-| [LLMI-T028](LLMI-T028.md) AI-Assisted Tooling Development | observed in the wild | 6 | 69 | 1 | 0 | 1 | 1 | 0 |
+| [LLMI-T028](LLMI-T028.md) AI-Assisted Tooling Development | observed in the wild | 6 | 70 | 1 | 0 | 1 | 1 | 0 |
 | [LLMI-T007](LLMI-T007.md) RAG Knowledge Poisoning | demonstrated in research | 5 | 1 | 1 | 0 | 1 | 0 | 0 |
 | [LLMI-T020](LLMI-T020.md) Improper Output Handling and Rendering Exfiltration | tied to a disclosed vulnerability | 4.5 | 4 | 3 | 0 | 2 | 3 | 0 |
 | [LLMI-T011](LLMI-T011.md) AI Software Supply Chain Compromise | observed in the wild | 4 | 9 | 2 | 1 | 4 | 1 | 0 |

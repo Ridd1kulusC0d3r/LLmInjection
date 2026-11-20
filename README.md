@@ -107,11 +107,11 @@ New [source registry and ingestion guidance](docs/AI-INTELLIGENCE-SOURCES.md), [
 
 | Actors | Campaigns | Incidents | Vulnerabilities | Techniques | Sources |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| **73** | **91** | **65** | **31** | **28** | **154** |
+| **73** | **92** | **65** | **31** | **28** | **156** |
 
 | Test cases | Detections | Controls | Frameworks | Model families | Relationships | Ecosystem repos |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| **40** | **45** | **32** | **19** | **12** | **476** | **117** |
+| **40** | **45** | **32** | **19** | **12** | **478** | **117** |
 
 <!-- gen:stats:end -->
 
@@ -586,6 +586,7 @@ Real-world reporting is intentionally placed on the front page because AI securi
 | **Aurora ransomware intrusions driven through Cursor Agent** | 2026-04 | 2026-08-27 |  | confirmed | Gambit Security reports Aurora ransomware operators used Cursor Agent with Claude Sonnet in sessions from 8 April to 21 May 2026 against… |
 | **VAPOR PANDA ARTEX-driven global espionage campaign** | 2026-10 | 2026-10-29 |  | confirmed | CrowdStrike reports VAPOR PANDA used ARTEX planner and worker agents, primarily on DeepSeek, to write web shells, extract domain… |
 | **GREYVIBE AI-assisted operations against Ukraine** | 2025-08 | 2026-05-28 |  | high | WithSecure reports GREYVIBE campaigns (PhantomMail, PhantomClick, PrincessClub, DroneLink, Nebo) against Ukrainian targets using GenAI-made… |
+| **AI-built clones of Brazilian government sites collecting Pix payments** | 2025 | 2025-08-05 | BR | high | Zscaler ThreatLabz found phishing replicas of a Brazilian State Department of Traffic and the Ministry of Education built with the… |
 
 <!-- gen:campaigns:end -->
 
@@ -1180,7 +1181,7 @@ Every intelligence item should answer:
 
 | Grade | Class | Sources |
 |---|---|---|
-| **A** | Primary or authoritative | 136 |
+| **A** | Primary or authoritative | 138 |
 | **B** | Strong secondary | 7 |
 | **C** | Reputable press | 6 |
 | **D** | Community | 5 |

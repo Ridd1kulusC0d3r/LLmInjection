@@ -2,6 +2,17 @@
 
 This changelog records material changes to attribution, confidence, external mappings and structured intelligence. Ordinary prose edits do not belong here.
 
+## 2026-11-20 — Brazil leads checked against primary sources
+
+### Added
+
+- `CAMPAIGN-BR-GOV-GENAI-PIX-PHISHING` (high): Zscaler ThreatLabz (2025-08-05) on phishing clones of Brazilian government sites built with DeepSite AI and BlackBox AI, boosted by SEO poisoning, that validated CPF numbers and collected Pix payments. Linked to LLMI-T014 (high) and LLMI-T028 (medium).
+- Source `SRC-ZIMPERIUM-PIXREVOLUTION` (Zimperium zLabs, 2026-03-11).
+
+### Changed
+
+- Landscape leads: the Zscaler lead is promoted; PixRevolution is re-attributed to Zimperium, whose report calls the remote operator "a human or AI agent" without showing an AI agent, so it stays a lead; the "28 million Pix scams / 126% deepfake rise" figures were not found in Serasa Experian's releases or its 2025 Identity and Fraud report and stay out.
+
 ## 2026-11-20 — ATR CVE candidates triaged: 22 AI vulnerabilities promoted
 
 ### Added

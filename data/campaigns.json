@@ -1201,5 +1201,21 @@
     "source_ids": [
       "SRC-WITHSECURE-GREYVIBE-2026-05"
     ]
+  },
+  {
+    "id": "CAMPAIGN-BR-GOV-GENAI-PIX-PHISHING",
+    "type": "campaign",
+    "name": "AI-built clones of Brazilian government sites collecting Pix payments",
+    "confidence": "high",
+    "first_seen": "2025",
+    "last_seen": "2025-08",
+    "reported": "2025-08-05",
+    "regions": [
+      "BR"
+    ],
+    "summary": "Zscaler ThreatLabz found phishing replicas of a Brazilian State Department of Traffic and the Ministry of Education built with the generative AI site builders DeepSite AI and BlackBox AI, pushed up search results with SEO poisoning. The pages collected CPF numbers, validated them through an API to look official, and asked victims for a Pix payment. Zscaler infers AI generation from the source code (over-explanatory comments, non-functional elements, TailwindCSS); no actor is named.",
+    "source_ids": [
+      "SRC-ZSCALER-BR-GOV-GENAI-PHISHING"
+    ]
   }
 ]

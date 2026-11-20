@@ -635,9 +635,9 @@
     },
     {
       "claim": "AI website builders were used to clone Brazilian government sites for Pix payment scams (Zscaler ThreatLabz, August 2025).",
-      "status": "secondary-reporting-only",
-      "confidence": "low",
-      "reason": "Known only through press coverage here; attach the primary Zscaler report before promoting."
+      "status": "promoted",
+      "confidence": "high",
+      "reason": "Primary Zscaler report read on 2026-11-20; recorded as CAMPAIGN-BR-GOV-GENAI-PIX-PHISHING."
     },
     {
       "claim": "80% of Brazilians have encountered deepfakes online (Veriff, Kantar survey of 1,000 respondents, February 2026).",
@@ -649,13 +649,13 @@
       "claim": "28 million Pix scam cases in the first nine months of 2025 and a 126% rise in deepfake fraud (Rio Times citing Serasa Experian).",
       "status": "secondary-reporting-only",
       "confidence": "low",
-      "reason": "Not verified against Serasa or Banco Central primary data."
+      "reason": "Checked on 2026-11-20: neither figure appears in Serasa Experian releases or its 2025 Identity and Fraud report; other press attributes a 28 million Pix figure to BioCatch. Keep out until a primary source with method is found."
     },
     {
-      "claim": "PixRevolution Android banking trojan targets Pix with an operator-in-the-loop model that a human or AI agent could drive (Recorded Future H1 2026).",
+      "claim": "PixRevolution Android banking trojan targets Pix with an operator-in-the-loop model that a human or AI agent could drive (Zimperium zLabs, March 2026).",
       "status": "requires-primary-source-validation",
       "confidence": "low",
-      "reason": "The report raises an AI operator as a possibility; it is not an established finding."
+      "reason": "Primary is Zimperium (SRC-ZIMPERIUM-PIXREVOLUTION), not Recorded Future; it describes the remote operator as \"a human or AI agent\" without showing that an AI agent was used. Not promoted as adversary use of AI."
     }
   ]
 }
