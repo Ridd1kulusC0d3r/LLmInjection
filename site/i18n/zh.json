@@ -474,5 +474,6 @@
  "rl.explode": "展开全部报告",
  "rl.focus": "此聚焦中的全部报告",
  "rl.open": "打开报告",
- "rl.reports": "报告"
+ "rl.reports": "报告",
+ "det.external": "{p}：{n} 条规则"
 }

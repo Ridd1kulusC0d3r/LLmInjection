@@ -1872,5 +1872,68 @@
     "url": "https://zimperium.com/blog/pixrevolution-the-agent-operated-android-trojan-hijacking-brazils-pix-payments-in-real-time",
     "published": "2026-03-11",
     "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-THREATDEFENCE-ARTEX",
+    "type": "source",
+    "name": "ARTEX AI Attack Framework: Detection, IOCs and Hunting",
+    "publisher": "ThreatDefence",
+    "grade": "B",
+    "role": "detection-guidance",
+    "url": "https://threatdefence.com/article/artex-agentic-attack-framework-detection-hunting",
+    "published": "2026-11-16",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-THREATDEFENCE-ARTEX-DETECTIONS",
+    "type": "source",
+    "name": "ARTEX Detections (Sigma, Sentinel, Splunk, Elastic, Zeek, Suricata, YARA, osquery)",
+    "publisher": "ThreatDefence",
+    "grade": "B",
+    "role": "community-detection-rules",
+    "url": "https://github.com/ThreatDefence/artex-detections",
+    "published": "2026-11-20",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-MITRE-ATTACK",
+    "type": "source",
+    "name": "MITRE ATT&CK",
+    "publisher": "MITRE",
+    "grade": "A",
+    "role": "canonical-framework",
+    "url": "https://attack.mitre.org/",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-CISA-KEV-CATALOG",
+    "type": "source",
+    "name": "CISA Known Exploited Vulnerabilities Catalog (JSON feed)",
+    "publisher": "CISA",
+    "grade": "A",
+    "role": "vulnerability-catalog",
+    "url": "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-FIRST-EPSS",
+    "type": "source",
+    "name": "Exploit Prediction Scoring System (EPSS) API",
+    "publisher": "FIRST",
+    "grade": "A",
+    "role": "vulnerability-scoring",
+    "url": "https://api.first.org/data/v1/epss",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-COSAI-MCP-SECURITY",
+    "type": "source",
+    "name": "Model Context Protocol (MCP) Security",
+    "publisher": "Coalition for Secure AI (CoSAI), OASIS Open Project",
+    "grade": "A",
+    "role": "protocol-security",
+    "url": "https://www.coalitionforsecureai.org/wp-content/uploads/2026/03/model-context-protocol-security-1.pdf",
+    "published": "2026-01-08",
+    "last_verified": "2026-11-20"
   }
 ]

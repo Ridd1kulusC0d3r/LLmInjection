@@ -803,5 +803,81 @@
       "CloudTrail (eventSource, eventName, errorCode, userIdentity.arn, sourceIPAddress)"
     ],
     "test_ids": []
+  },
+  {
+    "id": "DET-AI-048",
+    "type": "detection",
+    "name": "Agentic Offensive Framework Fingerprints (User Agents, Probe Artifacts, Callback Services)",
+    "category": "web-network",
+    "severity": "high",
+    "status": "specification",
+    "hypothesis": "Requests or host artifacts carry the fingerprints an agentic pentest framework leaves while validating findings: user agents that name it, placeholder probe paths and files, a probe header, alg:none JWTs or OAuth callback probes on SSO routes, artifact names on disk, and servers calling webhook or DNS-log services to confirm a hit.",
+    "telemetry": [
+      "web and WAF logs (path, user agent, headers)",
+      "proxy logs",
+      "sign-in logs (user agent)",
+      "CloudTrail and Okta user agent",
+      "DNS queries from servers",
+      "EDR file and process events"
+    ],
+    "test_ids": []
+  },
+  {
+    "id": "DET-AI-049",
+    "type": "detection",
+    "name": "Machine-Cadence Identity Attacks (Fixed-Rhythm Spray, User-Agent Family Burst)",
+    "category": "cloud-identity",
+    "severity": "high",
+    "status": "specification",
+    "hypothesis": "Password spraying at a near-constant one-second rhythm, or a burst of rotating user agents of one family from one source, followed by a successful sign-in, indicates an agent rather than a person or a classic spray tool.",
+    "telemetry": [
+      "Entra ID and Okta sign-in logs with timestamps to the second",
+      "web and WAF logs (user agent per source)"
+    ],
+    "test_ids": []
+  },
+  {
+    "id": "DET-AI-050",
+    "type": "detection",
+    "name": "Service Principal Abuse After Agentic Access (Secret Guessing, Self-Granted Roles, Resource Fan-Out)",
+    "category": "cloud-identity",
+    "severity": "high",
+    "status": "specification",
+    "hypothesis": "A service principal fails then succeeds on secret authentication, adds credentials or assigns itself a role, then touches many resources or bursts Microsoft Graph calls: the persistence pattern reported for ARTEX-driven OAuth and application abuse.",
+    "telemetry": [
+      "Entra ID service principal sign-ins",
+      "Entra ID audit logs (credential and role changes)",
+      "Microsoft Graph activity logs"
+    ],
+    "test_ids": []
+  },
+  {
+    "id": "DET-AI-051",
+    "type": "detection",
+    "name": "Self-Service Sign-Up Abuse Followed by Discovery",
+    "category": "cloud-identity",
+    "severity": "medium",
+    "status": "specification",
+    "hypothesis": "Bursts of Cognito (or similar) self-service sign-ups carrying agent probe artifacts, followed by discovery calls from the new identities, show an agent creating its own foothold.",
+    "telemetry": [
+      "CloudTrail (cognito-idp SignUp and following calls)"
+    ],
+    "test_ids": []
+  },
+  {
+    "id": "DET-AI-052",
+    "type": "detection",
+    "name": "Offensive Agent Console or Backdoored Agent Image Inside the Network",
+    "category": "endpoint",
+    "severity": "high",
+    "status": "specification",
+    "hypothesis": "A host listens with an agentic offensive framework console, or runs a container image known to be a backdoored build of one, inside the estate: an unsanctioned offensive runtime or an implant.",
+    "telemetry": [
+      "network scans and listening ports",
+      "HTTP responses (console pages, auth realm)",
+      "container image inventory",
+      "EDR process and file events"
+    ],
+    "test_ids": []
   }
 ]

@@ -91,7 +91,9 @@ def build(out: Path) -> None:
     vault = json.loads((ROOT / "references" / "crosswalks" / "payload-vault.json").read_text(encoding="utf-8"))
     (out / "payload-vault.json").write_text(json.dumps({k: vault[k] for k in ("meta", "summary", "categories")}, ensure_ascii=False),
                                             encoding="utf-8")
-    (out / "reports.json").write_text(json.dumps({"repo": REPO, "reports": report_index(platform), "rule_files": by_det},
+    external = json.loads((ROOT / "references" / "crosswalks" / "artex-detections.json").read_text(encoding="utf-8"))["detection_links"]
+    (out / "reports.json").write_text(json.dumps({"repo": REPO, "reports": report_index(platform), "rule_files": by_det,
+                                                  "external_rules": {k: {"publisher": "ThreatDefence", "urls": v} for k, v in external.items()}},
                                                  ensure_ascii=False, indent=1), encoding="utf-8")
     shutil.copytree(dist / "navigator", out / "navigator")
 

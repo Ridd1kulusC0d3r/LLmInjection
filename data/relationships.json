@@ -5760,5 +5760,165 @@
     "evidence_sources": [
       "SRC-ZSCALER-BR-GOV-GENAI-PHISHING"
     ]
+  },
+  {
+    "id": "REL-522",
+    "type": "relationship",
+    "source": "DET-AI-048",
+    "relationship": "detects",
+    "target": "LLMI-T015",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-THREATDEFENCE-ARTEX",
+      "SRC-FBI-FLASH-20261113-ARTEX"
+    ]
+  },
+  {
+    "id": "REL-523",
+    "type": "relationship",
+    "source": "DET-AI-049",
+    "relationship": "detects",
+    "target": "LLMI-T015",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-THREATDEFENCE-ARTEX",
+      "SRC-FBI-FLASH-20261113-ARTEX"
+    ]
+  },
+  {
+    "id": "REL-524",
+    "type": "relationship",
+    "source": "DET-AI-050",
+    "relationship": "detects",
+    "target": "LLMI-T015",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-THREATDEFENCE-ARTEX",
+      "SRC-FBI-FLASH-20261113-ARTEX"
+    ]
+  },
+  {
+    "id": "REL-525",
+    "type": "relationship",
+    "source": "DET-AI-051",
+    "relationship": "detects",
+    "target": "LLMI-T015",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-THREATDEFENCE-ARTEX",
+      "SRC-FBI-FLASH-20261113-ARTEX"
+    ]
+  },
+  {
+    "id": "REL-526",
+    "type": "relationship",
+    "source": "DET-AI-052",
+    "relationship": "detects",
+    "target": "LLMI-T027",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-THREATDEFENCE-ARTEX",
+      "SRC-FBI-FLASH-20261113-ARTEX"
+    ]
+  },
+  {
+    "id": "REL-527",
+    "type": "relationship",
+    "source": "DET-AI-052",
+    "relationship": "detects",
+    "target": "LLMI-T011",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-THREATDEFENCE-ARTEX",
+      "SRC-FBI-FLASH-20261113-ARTEX"
+    ]
+  },
+  {
+    "id": "REL-528",
+    "type": "relationship",
+    "source": "DET-AI-046",
+    "relationship": "detects",
+    "target": "TOOL-ARTEX",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-THREATDEFENCE-ARTEX-DETECTIONS"
+    ]
+  },
+  {
+    "id": "REL-529",
+    "type": "relationship",
+    "source": "DET-AI-047",
+    "relationship": "detects",
+    "target": "TOOL-ARTEX",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-THREATDEFENCE-ARTEX-DETECTIONS"
+    ]
+  },
+  {
+    "id": "REL-530",
+    "type": "relationship",
+    "source": "DET-AI-048",
+    "relationship": "detects",
+    "target": "TOOL-ARTEX",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-THREATDEFENCE-ARTEX-DETECTIONS"
+    ]
+  },
+  {
+    "id": "REL-531",
+    "type": "relationship",
+    "source": "DET-AI-049",
+    "relationship": "detects",
+    "target": "TOOL-ARTEX",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-THREATDEFENCE-ARTEX-DETECTIONS"
+    ]
+  },
+  {
+    "id": "REL-532",
+    "type": "relationship",
+    "source": "DET-AI-050",
+    "relationship": "detects",
+    "target": "TOOL-ARTEX",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-THREATDEFENCE-ARTEX-DETECTIONS"
+    ]
+  },
+  {
+    "id": "REL-533",
+    "type": "relationship",
+    "source": "DET-AI-051",
+    "relationship": "detects",
+    "target": "TOOL-ARTEX",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-THREATDEFENCE-ARTEX-DETECTIONS"
+    ]
+  },
+  {
+    "id": "REL-534",
+    "type": "relationship",
+    "source": "DET-AI-052",
+    "relationship": "detects",
+    "target": "TOOL-ARTEX",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-THREATDEFENCE-ARTEX-DETECTIONS"
+    ]
+  },
+  {
+    "id": "REL-535",
+    "type": "relationship",
+    "source": "DET-AI-052",
+    "relationship": "detects",
+    "target": "TOOL-ANTIFOX",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-THREATDEFENCE-ARTEX-DETECTIONS"
+    ]
   }
 ]

@@ -2,6 +2,21 @@
 
 This changelog records material changes to attribution, confidence, external mappings and structured intelligence. Ordinary prose edits do not belong here.
 
+## 2026-11-20 — ARTEX detection map; reference frameworks and catalogs as sources
+
+### Added
+
+- `scripts/artex_detections_check.py`, `references/crosswalks/artex-detections.json` and `docs/ARTEX-DETECTION-MAP.md`: every rule of ThreatDefence/artex-detections (MIT, commit `3ad092e`) mapped to a behaviour, an LLMInjection detection, techniques and ATT&CK IDs. 209 rule files, 29 behaviours, 184 indicators (counted, not imported).
+- Detections `DET-AI-048` (agentic framework fingerprints), `DET-AI-049` (machine-cadence identity attacks), `DET-AI-050` (service principal abuse), `DET-AI-051` (self-service sign-up abuse) and `DET-AI-052` (offensive agent console or backdoored image inside the network), each backed by ThreatDefence's rules. DET-AI-046 to DET-AI-052 also `detect` TOOL-ARTEX.
+- ECO-127 (artex-detections, start here) and sources for ThreatDefence's advisory and repository (grade B).
+- Reference frameworks and catalogs as sources: MITRE ATT&CK, the CISA KEV catalog (JSON feed), FIRST EPSS and CoSAI's MCP Security paper (2026-01-08, grade A). CoSAI MCP Security and the CISA KEV catalog are also listed as frameworks. The three LiteLLM vulnerabilities in KEV now cite the catalog.
+- The Detection space shows external rules next to our own rule files.
+
+### Confidence notes
+
+- Behaviour-to-detection mapping is an analyst mapping in one place (`BEHAVIOURS` in the script).
+- MITRE ATLAS and the OWASP Top 10 for LLM Applications 2026 and for Agentic Applications 2026 were already held as sources (`SRC-MITRE-ATLAS`, `SRC-OWASP-LLM-2026`, `SRC-OWASP-AGENTIC-2026`).
+
 ## 2026-11-20 — Payload Vault cross-reference and the defense matrix
 
 ### Added

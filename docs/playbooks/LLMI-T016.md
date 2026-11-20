@@ -13,7 +13,7 @@
 
 | Layer | Status |
 |---|---|
-| Evidence | 7 record(s), 6 publisher(s), best grade A, newest 2026 |
+| Evidence | 7 record(s), 7 publisher(s), best grade A, newest 2026 |
 | Safe tests | 1 |
 | Detections | 1 rule file(s), 1 specification(s) |
 | Controls | 1 |
@@ -95,5 +95,5 @@ The runner has plan and mock adapters only: it does not call your system. To run
 
 ## 7. Go deeper (links only)
 
-- **Tools and projects:** [NVIDIA/garak](https://github.com/NVIDIA/garak), [Tencent/AI-Infra-Guard](https://github.com/Tencent/AI-Infra-Guard), [praetorian-inc/augustus](https://github.com/praetorian-inc/augustus), [NVIDIA/SkillSpector](https://github.com/NVIDIA/SkillSpector), [garagon/aguara](https://github.com/garagon/aguara)
+- **Tools and projects:** [NVIDIA/garak](https://github.com/NVIDIA/garak), [Tencent/AI-Infra-Guard](https://github.com/Tencent/AI-Infra-Guard), [praetorian-inc/augustus](https://github.com/praetorian-inc/augustus), [NVIDIA/SkillSpector](https://github.com/NVIDIA/SkillSpector), [garagon/aguara](https://github.com/garagon/aguara), [ThreatDefence/artex-detections](https://github.com/ThreatDefence/artex-detections)
 - **Live record:** [this technique in the Explorer](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=LLMI-T016)

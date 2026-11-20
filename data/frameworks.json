@@ -158,5 +158,21 @@
     "url": "https://genai.owasp.org/resource-item/tools/",
     "use": "Cross-framework control mapping",
     "status": "current"
+  },
+  {
+    "id": "GUIDE-COSAI-MCP-SECURITY",
+    "name": "CoSAI Model Context Protocol (MCP) Security",
+    "category": "protocol-security-guidance",
+    "scope": "Twelve threat categories and about forty threats across MCP hosts, clients, servers, transport and tools, with layered controls (Workstream 4, 2026-01-08)",
+    "url": "https://www.coalitionforsecureai.org/wp-content/uploads/2026/03/model-context-protocol-security-1.pdf",
+    "use": "MCP threat model and control reference for LLMI-T021, LLMI-T024 and the MCP controls"
+  },
+  {
+    "id": "CATALOG-CISA-KEV",
+    "name": "CISA Known Exploited Vulnerabilities Catalog",
+    "category": "vulnerability-catalog",
+    "scope": "Vulnerabilities with evidence of active exploitation, with dates added and remediation due dates",
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+    "use": "Exploited-in-the-wild signal for vulnerability records; read from the JSON feed"
   }
 ]
