@@ -413,3 +413,18 @@ th[aria-sort="ascending"] .sortbtn,th[aria-sort="descending"] .sortbtn{color:var
 .dp .table-wrap{border:0;box-shadow:none;padding:0}.dp .table-wrap .tbl{min-width:0}
 .dp .tbl td:first-child{width:100%}
 .tbl.dmx td{min-width:180px}.tbl.dmx td:first-child{min-width:220px}
+/* report links: open the report behind a record, or explode every report behind a selection */
+.rlinks{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.rlink{display:inline-flex;align-items:center;gap:6px;max-width:100%;font:12px/1.3 var(--sans);text-decoration:none;color:var(--ink);background:var(--paper-2);border:1px solid var(--rule);border-radius:var(--pill);padding:3px 10px 3px 4px}
+.rlink b{font:700 10px var(--mono);color:var(--signal-ink);background:var(--signal);border-radius:var(--pill);min-width:18px;text-align:center;padding:1px 5px}
+.rlink span{color:var(--signal)}.rlink:hover{border-color:var(--signal);color:var(--signal)}
+.rlink-inline{font-weight:600}
+.rmore{font:600 11px var(--mono);color:var(--signal);background:none;border:1px dashed var(--signal);border-radius:var(--pill);padding:2px 9px;cursor:pointer}
+.rpanel{margin-top:18px;background:var(--card);border:1px solid var(--rule);border-radius:var(--radius);box-shadow:var(--shadow-2);padding:16px 20px}
+.rp-head{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:flex-start;border-bottom:1px solid var(--rule-2);padding-bottom:12px;margin-bottom:12px}
+.rp-head h3{font:700 18px/1.3 var(--display);margin:4px 0}
+.rp-tools{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.rp-tools input{font:14px var(--sans);color:var(--ink);background:var(--paper);border:1px solid var(--rule);border-radius:var(--radius-sm);padding:7px 10px;min-width:220px}
+.rp-body{display:grid;grid-template-columns:repeat(auto-fill,minmax(420px,1fr));gap:14px;max-height:70vh;overflow:auto}
+.rp-pub h4{font:600 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);margin:0 0 6px}
+.rp-row{display:flex;flex-direction:column;gap:2px;padding:6px 0;border-bottom:1px solid var(--rule-2)}

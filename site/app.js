@@ -83,6 +83,7 @@ function initControls(){
   });
   document.addEventListener("click",e=>{const f=e.target.closest("[data-filter]");if(f){applyFilter(f.dataset.filter);return}
     const u=e.target.closest("[data-unset]");if(u){const k=u.dataset.unset;state[k]="";const sel={type:"#typeFilter",confidence:"#confidenceFilter",region:"#regionFilter"}[k];if(sel)$(sel).value="";renderAll();return}
+    if(e.target.closest(".rlink,.rlink-inline"))return;   /* report links open the original, never the drawer */
     const el=e.target.closest("[data-id]");if(el&&!el.closest("svg")){if(e.target.closest("a[href]"))e.preventDefault();openNode(el.dataset.id)}});
   initGraphControls();
   $("#theme").onclick=()=>{
@@ -126,6 +127,7 @@ function applyHash(){
   applyCoverageHash(p);
   if(p.has("focus")||G.focus){const f=p.get("focus")||null;if(f!==G.focus){G.focus=f;G.view=null;renderGraph();if(f)requestAnimationFrame(()=>graphSelect(f))}}
   if(p.has("tech")||state.tech){const x=p.get("tech")||"";if(x!==state.tech){state.tech=x;const s=$("#tlTech");if(s)s.value=x;renderTimeline()}}
+  if(p.get("reports")){const r=p.get("reports");requestAnimationFrame(()=>explodeReports(r==="@focus"&&G.focus?[...egoIds(G.focus)]:[r],t("rl.title",{name:nodeById(r==="@focus"?G.focus:r)?.label||r})))}
   if(p.get("report")&&p.get("report")!==SP.report){SP.report=p.get("report");renderReports()}
   if(p.get("tab"))showTab(p.get("tab"),false);
   if(p.get("node")){const tb=nodeTab(p.get("node"));if(tb&&!p.get("tab"))showTab(tb,false);openNode(p.get("node"),false)}
@@ -219,6 +221,7 @@ function graphSelect(id,{center=false}={}){
   card.hidden=false;
   card.innerHTML=`<div class="gsel-head"><span class="eyebrow">${esc(t("graph.selected"))} · ${esc(typeLabel(n.type))}</span><h3>${esc(n.label)}</h3><div class="gsel-meta">${n.data.confidence?conf(n.data.confidence):""}<span class="id">${esc(n.id)}</span></div></div>
     <p class="note">${esc(t("graph.linked",{n:nf(links.length)}))}</p>
+    ${reportLinks(id).length?`<p class="note" style="margin-top:8px">${esc(t("rl.here",{n:reportLinks(id).length}))}</p>${linksRow(id,3)}<button type="button" class="export" data-explode="${esc(id)}">${esc(t("rl.explode"))}</button>`:""}
     <ul class="gsel-list">${links.slice(0,40).map(x=>`<li><button type="button" class="gsel-go" data-go="${esc(x.id)}"><span class="gsel-type">${esc(typeLabel(x.type))}</span>${esc(x.label)}</button></li>`).join("")}</ul>
     <div class="gsel-actions"><button type="button" class="export primary" data-open="${esc(id)}">${esc(t("graph.open"))}</button>${G.focus===id?"":`<button type="button" class="export" data-focus="${esc(id)}">${esc(t("graph.focus"))}</button>`}<button type="button" class="export" data-clear>${esc(t("graph.clear"))}</button></div>`;
   if(center){const g=svg.querySelector(`.node[data-nid="${CSS.escape(id)}"]`);if(g&&G.view){const m=g.transform.baseVal.consolidate()?.matrix;if(m){const v=G.view;setView(clampView({x:m.e-v.w/2+80,y:m.f-v.h/2,w:v.w,h:v.h}))}}}
@@ -227,7 +230,7 @@ function renderGraph(){
   const ego=G.focus&&state.graph.nodes.some(n=>n.id===G.focus)?egoIds(G.focus):null;
   const all=visibleNodes().filter(n=>!ego||ego.has(n.id)).slice(0,1200);
   const fn=ego&&state.graph.nodes.find(n=>n.id===G.focus);
-  $("#graphFocus").innerHTML=fn?`<button type="button" class="chip on" data-unfocus title="${esc(t("graph.unfocus"))}">${esc(t("graph.focused",{name:fn.label}))}<span aria-hidden="true">×</span></button>`:"";
+  $("#graphFocus").innerHTML=fn?`<button type="button" class="chip on" data-unfocus title="${esc(t("graph.unfocus"))}">${esc(t("graph.focused",{name:fn.label}))}<span aria-hidden="true">×</span></button><button type="button" class="chip" data-explode="@focus">${esc(t("rl.focus"))}</button>`:"";
   $("#graphFocus").hidden=!fn;
   const present=[...TYPE_ORDER.filter(x=>all.some(n=>n.type===x)),...[...new Set(all.map(n=>n.type))].filter(x=>!TYPE_ORDER.includes(x))];
   $("#graphTypes").innerHTML=present.map(x=>{const on=!G.hidden.has(x),c=all.filter(n=>n.type===x).length;return`<button type="button" class="chip${on?" on":""}" data-gtype="${esc(x)}" aria-pressed="${on}" title="${esc(t("graph.legend.toggle"))}">${esc(typeLabel(x))}<b>${c}</b></button>`}).join("");
@@ -321,10 +324,10 @@ function renderTimeline(){
   const items=timelineItems(),byM={};items.forEach(({date})=>{const m=/^\d{4}-\d{2}/.test(date)?date.slice(0,7):"";if(m)byM[m]=(byM[m]||0)+1});
   const ms=Object.keys(byM).sort(),mx=Math.max(1,...Object.values(byM));
   $("#tlHist").innerHTML=ms.length?`<div class="mchart sm" role="img" aria-label="${esc(t("tl.hist.aria"))}">${ms.map(m=>`<div class="mcol"><div class="mstack"><i style="height:${(100*byM[m]/mx).toFixed(1)}%;background:var(--seq-3)"></i></div><b>${byM[m]}</b><span>${esc(m.slice(2))}</span></div>`).join("")}</div><p class="note">${esc(t("tl.count",{n:nf(items.length)}))}</p>`:"";
-  $("#timelineList").innerHTML=timelineItems().map(({n,date})=>`<div class="d">${esc(date)}</div><div class="e" data-id="${esc(n.id)}"><div class="kind">${esc(typeLabel(n.type))}${(n.data.regions||[]).length?" · "+esc(n.data.regions.join(", ")):""}</div><h3>${esc(n.label)}</h3><p>${esc(n.data.summary||"")}</p><div style="margin-top:6px">${conf(n.data.confidence)}</div></div>`).join("")||`<p class="empty">${esc(t("common.nothing"))}</p>`;
+  $("#timelineList").innerHTML=timelineItems().map(({n,date})=>`<div class="d">${esc(date)}</div><div class="e" data-id="${esc(n.id)}"><div class="kind">${esc(typeLabel(n.type))}${(n.data.regions||[]).length?" · "+esc(n.data.regions.join(", ")):""}</div><h3>${esc(n.label)}</h3><p>${esc(n.data.summary||"")}</p><div style="margin-top:6px">${conf(n.data.confidence)}</div>${linksRow(n.id,3)}</div>`).join("")||`<p class="empty">${esc(t("common.nothing"))}</p>`;
 }
 function renderSources(){
-  $("#sourceList").innerHTML=visibleNodes().filter(n=>n.type==="source"&&(!state.grade||n.data.grade===state.grade)).map(n=>`<div class="it" data-id="${esc(n.id)}"><div class="grade" aria-label="${esc(grade(n.data.grade))}">${esc(n.data.grade)}</div><div><h3>${esc(n.label)}</h3><p>${esc(n.data.publisher||"")} · ${esc(n.data.role||"")}</p></div></div>`).join("")||`<p class="empty">${esc(t("common.nothing"))}</p>`;
+  $("#sourceList").innerHTML=visibleNodes().filter(n=>n.type==="source"&&(!state.grade||n.data.grade===state.grade)).map(n=>`<div class="it" data-id="${esc(n.id)}"><div class="grade" aria-label="${esc(grade(n.data.grade))}">${esc(n.data.grade)}</div><div><h3>${esc(n.label)}</h3><p>${esc(n.data.publisher||"")} · ${esc(n.data.role||"")}${n.data.published?" · "+esc(n.data.published):""} · <a class="rlink-inline" href="${esc(n.data.url)}" target="_blank" rel="noopener">${esc(t("rl.open"))} ↗</a></p></div></div>`).join("")||`<p class="empty">${esc(t("common.nothing"))}</p>`;
 }
 function renderWhatsNew(){
   const box=$("#diffSummary"),table=$("#diffTable");

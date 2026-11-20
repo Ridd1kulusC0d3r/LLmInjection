@@ -462,5 +462,17 @@
  "mx.dets": "{n} detecciones",
  "mx.tests": "{n} pruebas seguras",
  "mx.payloads": "{n} payloads en el Payload Vault",
- "mx.vault": "Las cifras de payloads vienen de {n} payloads del LLM Red Team Payload Vault, leído el {date}. El repositorio no declara licencia: aquí solo se guardan ID, etiquetas y hashes."
+ "mx.vault": "Las cifras de payloads vienen de {n} payloads del LLM Red Team Payload Vault, leído el {date}. El repositorio no declara licencia: aquí solo se guardan ID, etiquetas y hashes.",
+ "rl.more": "+{n} informes",
+ "rl.eyebrow": "Informes",
+ "rl.count": "{n} informes de {p} editores. Cada uno abre el original en otra pestaña.",
+ "rl.filter": "Filtrar por título o editor",
+ "rl.copy": "Copiar en Markdown",
+ "rl.copied": "Copiado",
+ "rl.title": "Informes detrás de {name}",
+ "rl.here": "{n} informes detrás de este registro",
+ "rl.explode": "Desplegar todos los informes",
+ "rl.focus": "Todos los informes de este enfoque",
+ "rl.open": "abrir el informe",
+ "rl.reports": "informes"
 }

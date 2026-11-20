@@ -462,5 +462,17 @@
  "mx.dets": "{n} detecções",
  "mx.tests": "{n} testes seguros",
  "mx.payloads": "{n} payloads no Payload Vault",
- "mx.vault": "As contagens de payload vêm de {n} payloads do LLM Red Team Payload Vault, lido em {date}. O repositório não declara licença: aqui ficam só IDs, rótulos e hashes."
+ "mx.vault": "As contagens de payload vêm de {n} payloads do LLM Red Team Payload Vault, lido em {date}. O repositório não declara licença: aqui ficam só IDs, rótulos e hashes.",
+ "rl.more": "+{n} relatórios",
+ "rl.eyebrow": "Relatórios",
+ "rl.count": "{n} relatórios de {p} publicadores. Cada um abre o original em outra aba.",
+ "rl.filter": "Filtrar por título ou publicador",
+ "rl.copy": "Copiar em Markdown",
+ "rl.copied": "Copiado",
+ "rl.title": "Relatórios por trás de {name}",
+ "rl.here": "{n} relatórios por trás deste registro",
+ "rl.explode": "Explodir todos os relatórios",
+ "rl.focus": "Todos os relatórios deste foco",
+ "rl.open": "abrir o relatório",
+ "rl.reports": "relatórios"
 }

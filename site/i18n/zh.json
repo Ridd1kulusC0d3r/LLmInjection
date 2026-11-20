@@ -462,5 +462,17 @@
  "mx.dets": "{n} 项检测",
  "mx.tests": "{n} 项安全测试",
  "mx.payloads": "Payload Vault 中有 {n} 个载荷",
- "mx.vault": "载荷数量来自 LLM Red Team Payload Vault 中的 {n} 个载荷，读取于 {date}。该仓库未声明许可证：此处仅保存编号、标签和哈希。"
+ "mx.vault": "载荷数量来自 LLM Red Team Payload Vault 中的 {n} 个载荷，读取于 {date}。该仓库未声明许可证：此处仅保存编号、标签和哈希。",
+ "rl.more": "另有 {n} 份报告",
+ "rl.eyebrow": "报告",
+ "rl.count": "来自 {p} 个发布方的 {n} 份报告。每份都会在新标签页中打开原文。",
+ "rl.filter": "按标题或发布方筛选",
+ "rl.copy": "复制为 Markdown",
+ "rl.copied": "已复制",
+ "rl.title": "{name} 背后的报告",
+ "rl.here": "此记录背后有 {n} 份报告",
+ "rl.explode": "展开全部报告",
+ "rl.focus": "此聚焦中的全部报告",
+ "rl.open": "打开报告",
+ "rl.reports": "报告"
 }

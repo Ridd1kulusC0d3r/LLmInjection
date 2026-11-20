@@ -462,5 +462,17 @@
  "mx.dets": "{n} detections",
  "mx.tests": "{n} safe tests",
  "mx.payloads": "{n} payloads in the Payload Vault",
- "mx.vault": "Payload counts come from {n} payloads in the LLM Red Team Payload Vault, read on {date}. The vault declares no licence: only IDs, labels and hashes are held here."
+ "mx.vault": "Payload counts come from {n} payloads in the LLM Red Team Payload Vault, read on {date}. The vault declares no licence: only IDs, labels and hashes are held here.",
+ "rl.more": "+{n} more reports",
+ "rl.eyebrow": "Reports",
+ "rl.count": "{n} reports from {p} publishers. Each opens the original in a new tab.",
+ "rl.filter": "Filter by title or publisher",
+ "rl.copy": "Copy as Markdown",
+ "rl.copied": "Copied",
+ "rl.title": "Reports behind {name}",
+ "rl.here": "{n} reports behind this record",
+ "rl.explode": "Explode all reports",
+ "rl.focus": "All reports in this focus",
+ "rl.open": "open the report",
+ "rl.reports": "reports"
 }
