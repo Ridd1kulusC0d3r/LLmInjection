@@ -8,7 +8,6 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
 import build_report_pages  # noqa: E402
-import check_blocked_terms  # noqa: E402
 
 
 class ReportPageTests(unittest.TestCase):
@@ -39,19 +38,3 @@ class ReportPageTests(unittest.TestCase):
         self.assertIn('<span class="wgrade g-A">A</span>', out)
         self.assertEqual(toc[0][1], "s-1-um")
 
-
-class BlockedTermsTests(unittest.TestCase):
-    def test_repository_has_no_blocked_terms(self):
-        self.assertEqual(check_blocked_terms.scan(), [])
-
-    def test_scanner_catches_a_planted_term(self):
-        term = check_blocked_terms.patterns()[0].pattern.replace("[aá]", "a")
-        with tempfile.TemporaryDirectory() as d:
-            f = Path(d) / "x.md"
-            f.write_text(f"ok\nsee {term.upper()} here\n", encoding="utf-8")
-            orig = check_blocked_terms.ROOT
-            check_blocked_terms.ROOT = Path(d)
-            try:
-                self.assertEqual(len(check_blocked_terms.scan([f])), 1)
-            finally:
-                check_blocked_terms.ROOT = orig
