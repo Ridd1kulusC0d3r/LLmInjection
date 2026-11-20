@@ -420,5 +420,18 @@
  "tm.frameworks": "Frameworks",
  "tm.fw": "Framework",
  "tm.scope": "Escopo",
- "tm.use": "Como é usado aqui"
+ "tm.use": "Como é usado aqui",
+ "tab.latam": "Brasil & LATAM",
+ "latam.eyebrow": "Visão regional",
+ "latam.title": "Brasil e América Latina",
+ "latam.sub": "Atores, campanhas e incidentes marcados com um país latino-americano, ou cujo relatório cita a região, mais as campanhas desses atores. O conteúdo dos registros fica em inglês, como as fontes dizem.",
+ "latam.countries": "Por país",
+ "latam.techniques": "Técnicas vistas na região",
+ "latam.actors": "Atores",
+ "latam.records": "Campanhas e incidentes, do mais recente",
+ "latam.bytext": "citado no texto do relatório",
+ "latam.rule": "A relevância regional aparece só onde uma fonte a afirma. No resto vale a regra: impacto regional não demonstrado nas fontes consultadas.",
+ "latam.doc.pt": "Panorama Brasil e América Latina (PT)",
+ "latam.doc.es": "Panorama América Latina (ES)",
+ "latam.fraud": "Taxonomia de fraude: FraudNeuron"
 }
