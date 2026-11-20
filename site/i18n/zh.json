@@ -420,5 +420,18 @@
  "tm.frameworks": "框架",
  "tm.fw": "框架",
  "tm.scope": "范围",
- "tm.use": "在此的用途"
+ "tm.use": "在此的用途",
+ "tab.latam": "巴西与拉美",
+ "latam.eyebrow": "区域视图",
+ "latam.title": "巴西与拉丁美洲",
+ "latam.sub": "标注了拉美国家、或报告正文提及该地区的行为者、攻击活动和事件，以及这些行为者的攻击活动。记录内容保留英文，与来源表述一致。",
+ "latam.countries": "按国家",
+ "latam.techniques": "该地区出现的技术",
+ "latam.actors": "行为者",
+ "latam.records": "攻击活动与事件（最新在前）",
+ "latam.bytext": "报告正文提及",
+ "latam.rule": "仅在来源明确说明时显示区域相关性。其余情况遵循：所查阅来源未证明对该地区有影响。",
+ "latam.doc.pt": "巴西与拉美概览（葡语）",
+ "latam.doc.es": "拉美概览（西语）",
+ "latam.fraud": "欺诈分类：FraudNeuron"
 }

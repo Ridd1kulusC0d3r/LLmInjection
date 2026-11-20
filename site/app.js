@@ -1,5 +1,5 @@
 const state={tech:"",grade:"",graph:null,landscape:null,diff:null,eco:[],cov:null,translations:null,search:"",type:"",confidence:"",region:"",ecoClass:"",ecoSection:""};
-const TYPE_ORDER=["actor","campaign","incident","vulnerability","technique","test-case","detection","control","framework","model","source"];
+const TYPE_ORDER=["actor","campaign","incident","vulnerability","tool","technique","test-case","detection","control","framework","model","source"];
 const CONF_ORDER=["confirmed","high","medium","low","unverified"];
 const MATURITY_ORDER=["observed-in-the-wild","disclosed-vulnerability","research-demonstrated","no-linked-evidence"];
 const DATASET_TYPE={actors:"actor",campaigns:"campaign",incidents:"incident",techniques:"technique","test-cases":"test-case",controls:"control",detections:"detection",vulnerabilities:"vulnerability",models:"model",frameworks:"framework"};
