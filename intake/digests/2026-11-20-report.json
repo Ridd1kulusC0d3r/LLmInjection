@@ -1,0 +1,1503 @@
+{
+  "digest_id": "LLMI-20261120-REPORT",
+  "date": "2026-11-20",
+  "producer": "authored report: Threat Intelligence — Vulnerabilidades e Incidentes em Sistemas de IA 2026 (source workbook fontes-threat-intel-ia-2026.xlsx)",
+  "window": "2026-01-01/2026-11-20",
+  "notes": "Backfill of the report's source list. Excluded: URLs already queued or held; the 17 sources the ARTEX repository cites but the report did not consult; press and database pages about CVEs now held from NVD. Grade follows the workbook's source type; seal follows how the source was consulted.",
+  "items": [
+    {
+      "id": "LLMI-20261120-08",
+      "title": "awesome-ai-agent-attacks (GitHub): Cronologia e estatísticas de incidentes de agentes",
+      "url": "https://github.com/webpro255/awesome-ai-agent-attacks",
+      "published": null,
+      "seal": "original",
+      "temporal": "backfill",
+      "source_grade": "D",
+      "kind": "landscape",
+      "techniques": [],
+      "identifiers": [],
+      "summary": "Source #1 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Panorama e cronologias, type Agregador. Consulted as: Lida na íntegra. Cited in report sections 1, 3, 5, 6, 11. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-09",
+      "title": "host0 — State of AI agent security 2026: CVEs por trimestre, KEV de IA, medições de defesas",
+      "url": "https://host0.ai/blog/state-of-ai-agent-security-2026",
+      "published": null,
+      "seal": "original",
+      "temporal": "backfill",
+      "source_grade": "D",
+      "kind": "landscape",
+      "techniques": [],
+      "identifiers": [],
+      "summary": "Source #2 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Panorama e cronologias, type Agregador. Consulted as: Lida na íntegra. Cited in report sections 1, 3, 5, 11. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-10",
+      "title": "Aisty — The AI Incident Timeline: Linha do tempo de incidentes",
+      "url": "https://www.aisty.ai/papers/ai-incident-timeline/",
+      "published": null,
+      "seal": "original",
+      "temporal": "backfill",
+      "source_grade": "D",
+      "kind": "landscape",
+      "techniques": [],
+      "identifiers": [],
+      "summary": "Source #3 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Panorama e cronologias, type Agregador. Consulted as: Lida na íntegra. Cited in report sections 5. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-11",
+      "title": "CyberDesserts — AI Agent Security Risks 2026: Incidentes e framework de hardening",
+      "url": "https://blog.cyberdesserts.com/ai-agent-security-risks/",
+      "published": null,
+      "seal": "original",
+      "temporal": "backfill",
+      "source_grade": "D",
+      "kind": "landscape",
+      "techniques": [],
+      "identifiers": [],
+      "summary": "Source #4 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Panorama e cronologias, type Agregador. Consulted as: Lida na íntegra. Cited in report sections 3, 5, 10. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-12",
+      "title": "Help Net Security: Relatório OWASP de IA agêntica",
+      "url": "https://www.helpnetsecurity.com/2026/06/11/owasp-prompt-injection-ai-security-failures/",
+      "published": "2026-06-11",
+      "seal": "original",
+      "temporal": "backfill",
+      "source_grade": "C",
+      "kind": "landscape",
+      "techniques": [],
+      "identifiers": [],
+      "summary": "Source #5 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Panorama e cronologias, type Imprensa especializada. Consulted as: Lida na íntegra. Cited in report sections 3, 7, 11. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-13",
+      "title": "PointGuard AI — AI Security Incident Tracker: Rastreador de incidentes",
+      "url": "https://www.pointguardai.com/ai-security-incident-tracker",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "D",
+      "kind": "landscape",
+      "techniques": [],
+      "identifiers": [],
+      "summary": "Source #6 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Panorama e cronologias, type Agregador. Consulted as: Resumo de busca. Cited in report sections 5. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-14",
+      "title": "Check Point Research: Digest de ameaças de IA mar–abr 2026",
+      "url": "https://research.checkpoint.com/2026/ai-threat-landscape-digest-march-april-2026/",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "B",
+      "kind": "landscape",
+      "techniques": [],
+      "identifiers": [],
+      "summary": "Source #7 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Panorama e cronologias, type Pesquisa de fornecedor. Consulted as: Resumo de busca. Cited in report sections 5, 6. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-15",
+      "title": "Cloud Security Alliance: CVE-2026-42271 análise",
+      "url": "https://labs.cloudsecurityalliance.org/research/csa-research-note-litellm-cve-2026-42271-ai-gateway-exploita/",
+      "published": null,
+      "seal": "original",
+      "temporal": "backfill",
+      "source_grade": "B",
+      "kind": "vulnerability",
+      "techniques": [
+        "LLMI-T016",
+        "LLMI-T024"
+      ],
+      "identifiers": [
+        "CVE-2026-42271"
+      ],
+      "summary": "Source #9 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category LiteLLM, type Nota de pesquisa. Consulted as: Lida na íntegra. Cited in report sections 4, 5, 8, 10. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-16",
+      "title": "Penligent: Cadeia de vulnerabilidades e linha do tempo",
+      "url": "https://www.penligent.ai/hackinglabs/litellm-vulnerability-chain/",
+      "published": null,
+      "seal": "original",
+      "temporal": "backfill",
+      "source_grade": "B",
+      "kind": "research",
+      "techniques": [
+        "LLMI-T016",
+        "LLMI-T024"
+      ],
+      "identifiers": [],
+      "summary": "Source #10 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category LiteLLM, type Pesquisa de fornecedor. Consulted as: Lida na íntegra. Cited in report sections 4, 5, 8, 10. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-17",
+      "title": "infosec.ge: Duas entradas KEV em 60 dias",
+      "url": "https://www.infosec.ge/blog/litellm-ai-infrastructure-cve-pattern-2026/",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "D",
+      "kind": "research",
+      "techniques": [
+        "LLMI-T016",
+        "LLMI-T024"
+      ],
+      "identifiers": [],
+      "summary": "Source #11 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category LiteLLM, type Blog. Consulted as: Resumo de busca. Cited in report sections 4, 5, 8, 10. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-18",
+      "title": "danilchenko.dev: Seis CVEs e correções",
+      "url": "https://www.danilchenko.dev/posts/litellm-vulnerability/",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "D",
+      "kind": "research",
+      "techniques": [
+        "LLMI-T016",
+        "LLMI-T024"
+      ],
+      "identifiers": [],
+      "summary": "Source #14 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category LiteLLM, type Blog. Consulted as: Resumo de busca. Cited in report sections 4, 5, 8, 10. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-19",
+      "title": "NVD: CVE-2026-59822",
+      "url": "https://nvd.nist.gov/vuln/detail/cve-2026-59822",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "A",
+      "kind": "vulnerability",
+      "techniques": [
+        "LLMI-T016",
+        "LLMI-T024"
+      ],
+      "identifiers": [
+        "CVE-2026-59822"
+      ],
+      "summary": "Source #16 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category LiteLLM, type Fonte primária. Consulted as: Resumo de busca. Cited in report sections 4, 5, 8, 10. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-20",
+      "title": "eSecurity Planet: Lote KEV de 02/09/2026",
+      "url": "https://www.esecurityplanet.com/news/news-cisa-exploited-ai-flaws/",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "C",
+      "kind": "research",
+      "techniques": [
+        "LLMI-T016",
+        "LLMI-T024"
+      ],
+      "identifiers": [],
+      "summary": "Source #17 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category LiteLLM, type Imprensa especializada. Consulted as: Resumo de busca. Cited in report sections 4, 5, 8, 10. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-21",
+      "title": "Snyk: Pacote PyPI 1.82.7/1.82.8",
+      "url": "https://snyk.io/articles/poisoned-security-scanner-backdooring-litellm",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "B",
+      "kind": "research",
+      "techniques": [
+        "LLMI-T016",
+        "LLMI-T024"
+      ],
+      "identifiers": [],
+      "summary": "Source #18 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category LiteLLM, type Pesquisa de fornecedor. Consulted as: Resumo de busca. Cited in report sections 4, 5, 8, 10. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-22",
+      "title": "Trend Micro: Pacote PyPI — análise TeamPCP",
+      "url": "https://www.trendmicro.com/en_gb/research/26/c/inside-litellm-supply-chain-compromise.html",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "B",
+      "kind": "research",
+      "techniques": [
+        "LLMI-T016",
+        "LLMI-T024"
+      ],
+      "identifiers": [],
+      "summary": "Source #19 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category LiteLLM, type Pesquisa de fornecedor. Consulted as: Resumo de busca. Cited in report sections 4, 5, 8, 10. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-23",
+      "title": "BerriAI/litellm issue 24518: Pacote PyPI — IoCs",
+      "url": "https://github.com/BerriAI/litellm/issues/24518",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "A",
+      "kind": "research",
+      "techniques": [
+        "LLMI-T016",
+        "LLMI-T024"
+      ],
+      "identifiers": [],
+      "summary": "Source #20 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category LiteLLM, type Fonte primária. Consulted as: Resumo de busca. Cited in report sections 4, 5, 8, 10. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-24",
+      "title": "JFrog Security Research: Pacote PyPI",
+      "url": "https://research.jfrog.com/post/litellm-compromised-teampcp/",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "B",
+      "kind": "research",
+      "techniques": [
+        "LLMI-T016",
+        "LLMI-T024"
+      ],
+      "identifiers": [],
+      "summary": "Source #21 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category LiteLLM, type Pesquisa de fornecedor. Consulted as: Resumo de busca. Cited in report sections 4, 5, 8, 10. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-25",
+      "title": "Security Affairs: Pacote PyPI",
+      "url": "https://securityaffairs.com/189948/hacking/malicious-litellm-versions-linked-to-teampcp-supply-chain-attack.html",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "C",
+      "kind": "research",
+      "techniques": [
+        "LLMI-T016",
+        "LLMI-T024"
+      ],
+      "identifiers": [],
+      "summary": "Source #22 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category LiteLLM, type Imprensa especializada. Consulted as: Resumo de busca. Cited in report sections 4, 5, 8, 10. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-26",
+      "title": "CCB Bélgica: CVE-2026-48710 BadHost",
+      "url": "https://ccb.belgium.be/advisories/warning-vulnerability-starlette-framework-and-related-frameworks-fastapi-exposes",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "A",
+      "kind": "vulnerability",
+      "techniques": [
+        "LLMI-T024"
+      ],
+      "identifiers": [
+        "CVE-2026-48710"
+      ],
+      "summary": "Source #23 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Starlette, type CERT. Consulted as: Resumo de busca. Cited in report sections 4, 10. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-27",
+      "title": "OSTIF: CVE-2026-48710 divulgação",
+      "url": "https://ostif.org/?p=4293",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "A",
+      "kind": "vulnerability",
+      "techniques": [
+        "LLMI-T024"
+      ],
+      "identifiers": [
+        "CVE-2026-48710"
+      ],
+      "summary": "Source #24 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Starlette, type Fonte primária. Consulted as: Resumo de busca. Cited in report sections 4, 10. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-28",
+      "title": "SonicWall Capture Labs: CVE-2025-59528 análise técnica",
+      "url": "https://www.sonicwall.com/blog/flowiseai-custom-mcp-node-remote-code-execution-",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "B",
+      "kind": "vulnerability",
+      "techniques": [
+        "LLMI-T024"
+      ],
+      "identifiers": [
+        "CVE-2025-59528"
+      ],
+      "summary": "Source #29 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Flowise, type Pesquisa de fornecedor. Consulted as: Resumo de busca. Cited in report sections 4, 10. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-29",
+      "title": "Cloud Security Alliance: CVE-2025-59528",
+      "url": "https://labs.cloudsecurityalliance.org/research/csa-research-note-flowise-cve-2025-59528-active-exploitation/",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "B",
+      "kind": "vulnerability",
+      "techniques": [
+        "LLMI-T024"
+      ],
+      "identifiers": [
+        "CVE-2025-59528"
+      ],
+      "summary": "Source #30 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Flowise, type Nota de pesquisa. Consulted as: Resumo de busca. Cited in report sections 4, 10. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-30",
+      "title": "Tenable TRA-2024-33: CVE-2024-8181 advisory",
+      "url": "https://tenable.com/security/research/tra-2024-33",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "A",
+      "kind": "vulnerability",
+      "techniques": [
+        "LLMI-T024"
+      ],
+      "identifiers": [
+        "CVE-2024-8181"
+      ],
+      "summary": "Source #33 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Flowise, type Fonte primária. Consulted as: Resumo de busca. Cited in report sections 4, 10. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-31",
+      "title": "Rapid7: CVE-2026-33032",
+      "url": "https://www.rapid7.com/blog/post/etr-cve-2026-33032-nginx-ui-missing-mcp-authentication",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "B",
+      "kind": "vulnerability",
+      "techniques": [
+        "LLMI-T024"
+      ],
+      "identifiers": [
+        "CVE-2026-33032"
+      ],
+      "summary": "Source #36 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category nginx-ui, type Pesquisa de fornecedor. Consulted as: Resumo de busca. Cited in report sections 4, 8, 10. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-32",
+      "title": "CSA Singapura AL-2026-039: CVE-2026-33032",
+      "url": "https://www.csa.gov.sg/alerts-and-advisories/alerts/al-2026-039/",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "A",
+      "kind": "vulnerability",
+      "techniques": [
+        "LLMI-T024"
+      ],
+      "identifiers": [
+        "CVE-2026-33032"
+      ],
+      "summary": "Source #39 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category nginx-ui, type CERT. Consulted as: Resumo de busca. Cited in report sections 4, 8, 10. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-33",
+      "title": "Cloud Security Alliance: CVE-2026-33032",
+      "url": "https://labs.cloudsecurityalliance.org/research/csa-research-note-nginx-ui-mcp-cve-20260416-csa-styled/",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "B",
+      "kind": "vulnerability",
+      "techniques": [
+        "LLMI-T024"
+      ],
+      "identifiers": [
+        "CVE-2026-33032"
+      ],
+      "summary": "Source #40 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category nginx-ui, type Nota de pesquisa. Consulted as: Resumo de busca. Cited in report sections 4, 8, 10. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-34",
+      "title": "CERT/CC VU#221883: CVE-2026-2275/2285/2286/2287",
+      "url": "https://kb.cert.org/vuls/id/221883",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "A",
+      "kind": "vulnerability",
+      "techniques": [
+        "LLMI-T008"
+      ],
+      "identifiers": [
+        "CVE-2026-2275"
+      ],
+      "summary": "Source #42 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category CrewAI, type CERT. Consulted as: Resumo de busca. Cited in report sections 4, 10. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-35",
+      "title": "JFrog: CVE-2025-6514 pesquisa original",
+      "url": "https://jfrog.com/blog/2025-6514-critical-mcp-remote-rce-vulnerability/",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "A",
+      "kind": "vulnerability",
+      "techniques": [
+        "LLMI-T021"
+      ],
+      "identifiers": [
+        "CVE-2025-6514"
+      ],
+      "summary": "Source #50 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category mcp-remote, type Fonte primária. Consulted as: Resumo de busca. Cited in report sections 4, 13 (consultadas na revisão). Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-36",
+      "title": "Oligo Security: CVE-2025-49596 pesquisa original",
+      "url": "https://www.oligo.security/blog/critical-rce-vulnerability-in-anthropic-mcp-inspector-cve-2025-49596",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "A",
+      "kind": "vulnerability",
+      "techniques": [
+        "LLMI-T024"
+      ],
+      "identifiers": [
+        "CVE-2025-49596"
+      ],
+      "summary": "Source #53 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category MCP Inspector, type Fonte primária. Consulted as: Resumo de busca. Cited in report sections 4, 13 (consultadas na revisão). Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-37",
+      "title": "Tenable Research: CVE-2025-49596",
+      "url": "https://www.tenable.com/blog/how-tenable-research-discovered-a-critical-remote-code-execution-vulnerability-on-anthropic",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "B",
+      "kind": "vulnerability",
+      "techniques": [
+        "LLMI-T024"
+      ],
+      "identifiers": [
+        "CVE-2025-49596"
+      ],
+      "summary": "Source #54 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category MCP Inspector, type Pesquisa de fornecedor. Consulted as: Resumo de busca. Cited in report sections 4, 13 (consultadas na revisão). Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-38",
+      "title": "Recorded Future: CVE-2025-49596",
+      "url": "https://www.recordedfuture.com/blog/anthropic-mcp-inspector-cve-2025-49596",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "B",
+      "kind": "vulnerability",
+      "techniques": [
+        "LLMI-T024"
+      ],
+      "identifiers": [
+        "CVE-2025-49596"
+      ],
+      "summary": "Source #55 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category MCP Inspector, type Pesquisa de fornecedor. Consulted as: Resumo de busca. Cited in report sections 4, 13 (consultadas na revisão). Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-39",
+      "title": "SecurityWeek: Correção 2025.12.18",
+      "url": "https://www.securityweek.com/anthropic-mcp-server-flaws-lead-to-code-execution-data-exposure/",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "C",
+      "kind": "research",
+      "techniques": [
+        "LLMI-T008"
+      ],
+      "identifiers": [],
+      "summary": "Source #60 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category mcp-server-git, type Imprensa especializada. Consulted as: Resumo de busca. Cited in report sections 4, 13 (consultadas na revisão). Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-40",
+      "title": "Check Point Research: CVE-2025-54136 MCPoison pesquisa original",
+      "url": "https://research.checkpoint.com/2025/cursor-vulnerability-mcpoison/",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "A",
+      "kind": "vulnerability",
+      "techniques": [
+        "LLMI-T018"
+      ],
+      "identifiers": [
+        "CVE-2025-54136"
+      ],
+      "summary": "Source #61 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Cursor, type Fonte primária. Consulted as: Resumo de busca. Cited in report sections 4, 13 (consultadas na revisão). Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-41",
+      "title": "Tenable: CVE-2025-54135 e CVE-2025-54136 FAQ",
+      "url": "https://www.tenable.com/blog/faq-cve-2025-54135-cve-2025-54136-vulnerabilities-in-cursor-curxecute-mcpoison",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "B",
+      "kind": "vulnerability",
+      "techniques": [
+        "LLMI-T018"
+      ],
+      "identifiers": [
+        "CVE-2025-54135",
+        "CVE-2025-54136"
+      ],
+      "summary": "Source #63 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Cursor, type Pesquisa de fornecedor. Consulted as: Resumo de busca. Cited in report sections 4, 13 (consultadas na revisão). Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-42",
+      "title": "Microsoft MSRC: CVE-2025-53773 advisory",
+      "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-53773",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "A",
+      "kind": "vulnerability",
+      "techniques": [
+        "LLMI-T018"
+      ],
+      "identifiers": [
+        "CVE-2025-53773"
+      ],
+      "summary": "Source #64 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category GitHub Copilot, type Fonte primária. Consulted as: Resumo de busca. Cited in report sections 4, 13 (consultadas na revisão). Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-43",
+      "title": "Embrace The Red: CVE-2025-53773 pesquisa original",
+      "url": "https://embracethered.com/blog/posts/2025/github-copilot-remote-code-execution-via-prompt-injection/",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "A",
+      "kind": "vulnerability",
+      "techniques": [
+        "LLMI-T018"
+      ],
+      "identifiers": [
+        "CVE-2025-53773"
+      ],
+      "summary": "Source #65 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category GitHub Copilot, type Fonte primária. Consulted as: Resumo de busca. Cited in report sections 4, 13 (consultadas na revisão). Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-44",
+      "title": "Field Effect: CVE-2025-32711 correção em maio de 2025",
+      "url": "https://fieldeffect.com/blog/critical-vulnerability-in-microsoft-365-copilot",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "B",
+      "kind": "vulnerability",
+      "techniques": [
+        "LLMI-T002",
+        "LLMI-T020"
+      ],
+      "identifiers": [
+        "CVE-2025-32711"
+      ],
+      "summary": "Source #68 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category M365 Copilot, type Pesquisa de fornecedor. Consulted as: Resumo de busca. Cited in report sections 4, 13 (consultadas na revisão). Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-45",
+      "title": "Synopsys: CVE-2024-5184 advisory CyRC",
+      "url": "https://www.synopsys.com/blogs/software-security/cyrc-advisory-prompt-injection-emailgpt.html",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "A",
+      "kind": "vulnerability",
+      "techniques": [
+        "LLMI-T002"
+      ],
+      "identifiers": [
+        "CVE-2024-5184"
+      ],
+      "summary": "Source #70 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category EmailGPT, type Fonte primária. Consulted as: Resumo de busca. Cited in report sections 4, 13 (consultadas na revisão). Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-46",
+      "title": "huntr: CVE-2023-1177 relatório original",
+      "url": "https://huntr.dev/bounties/1fe8f21a-c438-4cba-9add-e8a5dab94e28",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "A",
+      "kind": "vulnerability",
+      "techniques": [
+        "LLMI-T024"
+      ],
+      "identifiers": [
+        "CVE-2023-1177"
+      ],
+      "summary": "Source #72 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category MLflow, type Fonte primária. Consulted as: Resumo de busca. Cited in report sections 4, 13 (consultadas na revisão). Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-47",
+      "title": "Anyscale: Resposta dos mantenedores aos CVEs de 2023",
+      "url": "https://www.anyscale.com/blog/update-on-ray-cves-cve-2023-6019-cve-2023-6020-cve-2023-6021-cve-2023-48022-cve-2023-48023",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "A",
+      "kind": "research",
+      "techniques": [
+        "LLMI-T024"
+      ],
+      "identifiers": [],
+      "summary": "Source #75 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Ray, type Fonte primária. Consulted as: Resumo de busca. Cited in report sections 4, 13 (consultadas na revisão). Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-48",
+      "title": "Check Point Research: CVE-2025-59536 e CVE-2026-21852",
+      "url": "https://research.checkpoint.com/2026/rce-and-api-token-exfiltration-through-claude-code-project-files-cve-2025-59536/",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "A",
+      "kind": "vulnerability",
+      "techniques": [
+        "LLMI-T018"
+      ],
+      "identifiers": [
+        "CVE-2025-59536",
+        "CVE-2026-21852"
+      ],
+      "summary": "Source #76 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Claude Code, type Fonte primária. Consulted as: Resumo de busca. Cited in report sections 4, 10. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-49",
+      "title": "OX Security: Falha de projeto do STDIO",
+      "url": "https://www.ox.security/blog/the-mother-of-all-ai-supply-chains-critical-systemic-vulnerability-at-the-core-of-the-mcp",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "A",
+      "kind": "research",
+      "techniques": [
+        "LLMI-T021",
+        "LLMI-T008"
+      ],
+      "identifiers": [],
+      "summary": "Source #79 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category MCP, type Fonte primária. Consulted as: Resumo de busca. Cited in report sections 4. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-50",
+      "title": "VentureBeat: Falha de projeto do STDIO",
+      "url": "https://venturebeat.com/security/mcp-stdio-flaw-200000-ai-agent-servers-exposed-ox-security-audit",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "C",
+      "kind": "research",
+      "techniques": [
+        "LLMI-T021",
+        "LLMI-T008"
+      ],
+      "identifiers": [],
+      "summary": "Source #80 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category MCP, type Imprensa especializada. Consulted as: Resumo de busca. Cited in report sections 4. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-51",
+      "title": "Infosecurity Magazine: Falha de projeto do STDIO",
+      "url": "https://www.infosecurity-magazine.com/news/systemic-flaw-mcp-expose-150/",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "C",
+      "kind": "research",
+      "techniques": [
+        "LLMI-T021",
+        "LLMI-T008"
+      ],
+      "identifiers": [],
+      "summary": "Source #81 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category MCP, type Imprensa especializada. Consulted as: Resumo de busca. Cited in report sections 4. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-52",
+      "title": "Cloud Security Alliance: Falha de projeto do STDIO",
+      "url": "https://labs.cloudsecurityalliance.org/research/csa-research-note-mcp-by-design-rce-ox-security-20260420/",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "B",
+      "kind": "research",
+      "techniques": [
+        "LLMI-T021",
+        "LLMI-T008"
+      ],
+      "identifiers": [],
+      "summary": "Source #82 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category MCP, type Nota de pesquisa. Consulted as: Resumo de busca. Cited in report sections 4. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-53",
+      "title": "Cloud Security Alliance: Exploração sustentada",
+      "url": "https://labs.cloudsecurityalliance.org/research/csa-research-note-langflow-sustained-exploitation-20260830-c/",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "B",
+      "kind": "research",
+      "techniques": [
+        "LLMI-T024"
+      ],
+      "identifiers": [],
+      "summary": "Source #87 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Langflow, type Nota de pesquisa. Consulted as: Resumo de busca. Cited in report sections 5. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-54",
+      "title": "Anthropic: Três incidentes em avaliações de cibersegurança",
+      "url": "https://www.anthropic.com/research/investigating-incidents-cybersecurity-evals",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "A",
+      "kind": "incident",
+      "techniques": [
+        "LLMI-T015"
+      ],
+      "identifiers": [],
+      "summary": "Source #91 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Incidentes de agentes e uso ofensivo, type Fonte primária. Consulted as: Resumo de busca. Cited in report sections 5, 11. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-55",
+      "title": "TechCrunch: Incidentes em avaliações da Anthropic",
+      "url": "https://techcrunch.com/2026/07/30/anthropic-says-its-own-ai-models-breached-three-companies-during-security-tests/",
+      "published": "2026-07-30",
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "C",
+      "kind": "incident",
+      "techniques": [
+        "LLMI-T015"
+      ],
+      "identifiers": [],
+      "summary": "Source #92 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Incidentes de agentes e uso ofensivo, type Imprensa. Consulted as: Resumo de busca. Cited in report sections 5. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-56",
+      "title": "Fortune: Incidentes em avaliações da Anthropic",
+      "url": "https://fortune.com/2026/07/31/anthropic-claude-escaped-test-hacked-three-companies-openai/",
+      "published": "2026-07-31",
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "C",
+      "kind": "incident",
+      "techniques": [
+        "LLMI-T015"
+      ],
+      "identifiers": [],
+      "summary": "Source #93 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Incidentes de agentes e uso ofensivo, type Imprensa. Consulted as: Resumo de busca. Cited in report sections 5. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-57",
+      "title": "The Hacker News: OpenAI–Hugging Face: detalhes técnicos",
+      "url": "https://thehackernews.com/2026/07/openai-agent-used-exposed-credentials.html",
+      "published": null,
+      "seal": "original",
+      "temporal": "backfill",
+      "source_grade": "C",
+      "kind": "incident",
+      "techniques": [
+        "LLMI-T015"
+      ],
+      "identifiers": [],
+      "summary": "Source #94 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Incidentes de agentes e uso ofensivo, type Imprensa especializada. Consulted as: Lida na íntegra. Cited in report sections 5, 6, 11. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-58",
+      "title": "Wikipedia — 2026 OpenAI agent cyberattacks: OpenAI–Hugging Face",
+      "url": "https://en.wikipedia.org/wiki/2026_OpenAI_agent_cyberattacks",
+      "published": null,
+      "seal": "original",
+      "temporal": "backfill",
+      "source_grade": "D",
+      "kind": "incident",
+      "techniques": [
+        "LLMI-T015"
+      ],
+      "identifiers": [],
+      "summary": "Source #95 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Incidentes de agentes e uso ofensivo, type Enciclopédia. Consulted as: Lida na íntegra. Cited in report sections 5, 11. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-59",
+      "title": "CNBC: OpenAI–Hugging Face",
+      "url": "https://www.cnbc.com/2026/07/22/open-ai-cyber-models-hack-hugging-face.html",
+      "published": "2026-07-22",
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "C",
+      "kind": "incident",
+      "techniques": [
+        "LLMI-T015"
+      ],
+      "identifiers": [],
+      "summary": "Source #96 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Incidentes de agentes e uso ofensivo, type Imprensa. Consulted as: Resumo de busca. Cited in report sections 5. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-60",
+      "title": "MDPI Future Internet: OpenAI–Hugging Face: estudo de caso",
+      "url": "https://www.mdpi.com/1999-5903/18/11/642",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "B",
+      "kind": "incident",
+      "techniques": [
+        "LLMI-T015"
+      ],
+      "identifiers": [],
+      "summary": "Source #97 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Incidentes de agentes e uso ofensivo, type Artigo acadêmico. Consulted as: Resumo de busca. Cited in report sections 5. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-61",
+      "title": "CASRAI: OpenAI–Hugging Face: linha do tempo",
+      "url": "https://casrai.org/news/openai-hugging-face-agent-hack-timeline-and-fallout",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "D",
+      "kind": "incident",
+      "techniques": [
+        "LLMI-T015"
+      ],
+      "identifiers": [],
+      "summary": "Source #98 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Incidentes de agentes e uso ofensivo, type Agregador. Consulted as: Resumo de busca. Cited in report sections 5. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-62",
+      "title": "BleepingComputer: Enxame de agentes contra PaperCut",
+      "url": "https://bleepingcomputer.com/news/security/ai-powered-attack-exploited-papercut-flaws-to-hack-395-organizations",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "C",
+      "kind": "incident",
+      "techniques": [
+        "LLMI-T015"
+      ],
+      "identifiers": [],
+      "summary": "Source #100 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Incidentes de agentes e uso ofensivo, type Imprensa especializada. Consulted as: Resumo de busca. Cited in report sections 5, 6. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-63",
+      "title": "Cloud Security Alliance: Enxame de agentes contra PaperCut",
+      "url": "https://labs.cloudsecurityalliance.org/research/csa-research-note-papercut-ai-agent-swarm-exploitation-20260/",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "B",
+      "kind": "incident",
+      "techniques": [
+        "LLMI-T015"
+      ],
+      "identifiers": [],
+      "summary": "Source #101 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Incidentes de agentes e uso ofensivo, type Nota de pesquisa. Consulted as: Resumo de busca. Cited in report sections 5. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-64",
+      "title": "MITRE ATT&CK C0064: Campanha do governo do México",
+      "url": "https://attack.mitre.org/campaigns/C0064/",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "A",
+      "kind": "incident",
+      "techniques": [
+        "LLMI-T015"
+      ],
+      "identifiers": [],
+      "summary": "Source #102 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Incidentes de agentes e uso ofensivo, type Fonte primária. Consulted as: Resumo de busca. Cited in report sections 5, 6. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-65",
+      "title": "SecurityWeek: Campanha do governo do México",
+      "url": "https://securityweek.com/hackers-weaponize-claude-code-in-mexican-government-cyberattack",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "C",
+      "kind": "incident",
+      "techniques": [
+        "LLMI-T015"
+      ],
+      "identifiers": [],
+      "summary": "Source #103 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Incidentes de agentes e uso ofensivo, type Imprensa especializada. Consulted as: Resumo de busca. Cited in report sections 5, 6. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-66",
+      "title": "SOCRadar: Campanha do governo do México",
+      "url": "https://socradar.io/blog/mexican-government-breach-claude-chatgpt/",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "B",
+      "kind": "incident",
+      "techniques": [
+        "LLMI-T015"
+      ],
+      "identifiers": [],
+      "summary": "Source #104 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Incidentes de agentes e uso ofensivo, type Pesquisa de fornecedor. Consulted as: Resumo de busca. Cited in report sections 5. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-67",
+      "title": "Hackread: Campanha do governo do México",
+      "url": "https://hackread.com/hacker-claude-code-gpt-4-1-mexican-records/",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "C",
+      "kind": "incident",
+      "techniques": [
+        "LLMI-T015"
+      ],
+      "identifiers": [],
+      "summary": "Source #105 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Incidentes de agentes e uso ofensivo, type Imprensa especializada. Consulted as: Resumo de busca. Cited in report sections 5. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-68",
+      "title": "The Hacker News: SharedRoot no Claude Cowork",
+      "url": "https://thehackernews.com/2026/07/claude-cowork-flaw-could-let-ai-agent.html",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "C",
+      "kind": "incident",
+      "techniques": [
+        "LLMI-T015"
+      ],
+      "identifiers": [],
+      "summary": "Source #106 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Incidentes de agentes e uso ofensivo, type Imprensa especializada. Consulted as: Resumo de busca. Cited in report sections 5, 11. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-69",
+      "title": "Cloud Security Alliance: SharedRoot no Claude Cowork",
+      "url": "https://labs.cloudsecurityalliance.org/research/csa-research-note-claude-cowork-sharedroot-sandbox-escape-20/",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "B",
+      "kind": "incident",
+      "techniques": [
+        "LLMI-T015"
+      ],
+      "identifiers": [],
+      "summary": "Source #107 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Incidentes de agentes e uso ofensivo, type Nota de pesquisa. Consulted as: Resumo de busca. Cited in report sections 5. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-70",
+      "title": "The Next Web: SharedRoot no Claude Cowork",
+      "url": "https://thenextweb.com/news/claude-cowork-sandbox-escape-mac-files-sharedroot",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "C",
+      "kind": "incident",
+      "techniques": [
+        "LLMI-T015"
+      ],
+      "identifiers": [],
+      "summary": "Source #108 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Incidentes de agentes e uso ofensivo, type Imprensa. Consulted as: Resumo de busca. Cited in report sections 5. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-71",
+      "title": "The New Stack: Agentjacking via Sentry MCP",
+      "url": "https://thenewstack.io/agentjacking-sentry-mcp-attack/",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "C",
+      "kind": "research",
+      "techniques": [
+        "LLMI-T002"
+      ],
+      "identifiers": [],
+      "summary": "Source #109 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Injeção de prompt, type Imprensa especializada. Consulted as: Resumo de busca. Cited in report sections 5, 7. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-72",
+      "title": "Cloud Security Alliance: Agentjacking via Sentry MCP",
+      "url": "https://labs.cloudsecurityalliance.org/research/csa-research-note-agentjacking-sentry-mcp-20260614-csa-style/",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "B",
+      "kind": "research",
+      "techniques": [
+        "LLMI-T002"
+      ],
+      "identifiers": [],
+      "summary": "Source #110 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Injeção de prompt, type Nota de pesquisa. Consulted as: Resumo de busca. Cited in report sections 5. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-73",
+      "title": "VentureBeat: Agentjacking: exposição em Datadog, PagerDuty e Jira",
+      "url": "https://venturebeat.com/security/the-attack-that-hijacked-claude-code-came-through-sentry-datadog-pagerduty-and-jira-have-the-same-exposure",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "C",
+      "kind": "research",
+      "techniques": [
+        "LLMI-T002"
+      ],
+      "identifiers": [],
+      "summary": "Source #111 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Injeção de prompt, type Imprensa especializada. Consulted as: Resumo de busca. Cited in report sections 10. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-74",
+      "title": "SecurityWeek: Comment and Control",
+      "url": "https://www.securityweek.com/claude-code-gemini-cli-github-copilot-agents-vulnerable-to-prompt-injection-via-comments/",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "C",
+      "kind": "research",
+      "techniques": [
+        "LLMI-T002"
+      ],
+      "identifiers": [],
+      "summary": "Source #112 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Injeção de prompt, type Imprensa especializada. Consulted as: Resumo de busca. Cited in report sections 5, 8. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-75",
+      "title": "Cloud Security Alliance: Comment and Control",
+      "url": "https://labs.cloudsecurityalliance.org/research/csa-research-note-comment-control-github-prompt-injection-20/",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "B",
+      "kind": "research",
+      "techniques": [
+        "LLMI-T002"
+      ],
+      "identifiers": [],
+      "summary": "Source #113 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Injeção de prompt, type Nota de pesquisa. Consulted as: Resumo de busca. Cited in report sections 5. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-76",
+      "title": "The Next Web: Comment and Control: sem CVE",
+      "url": "https://thenextweb.com/news/ai-agents-hijacked-prompt-injection-bug-bounties-no-cve",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "C",
+      "kind": "research",
+      "techniques": [
+        "LLMI-T002"
+      ],
+      "identifiers": [],
+      "summary": "Source #114 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Injeção de prompt, type Imprensa. Consulted as: Resumo de busca. Cited in report sections 5. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-77",
+      "title": "Composio: Incidente de maio de 2026",
+      "url": "https://composio.dev/blog/composio-may-2026-security-incident",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "A",
+      "kind": "incident",
+      "techniques": [
+        "LLMI-T011"
+      ],
+      "identifiers": [],
+      "summary": "Source #115 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Identidade e cadeia de suprimentos, type Fonte primária. Consulted as: Resumo de busca. Cited in report sections 5, 7. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-78",
+      "title": "Material Security: Composio: análise",
+      "url": "https://material.security/resources/the-composio-breach-one-token-10242-doors",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "B",
+      "kind": "incident",
+      "techniques": [
+        "LLMI-T011"
+      ],
+      "identifiers": [],
+      "summary": "Source #116 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Identidade e cadeia de suprimentos, type Pesquisa de fornecedor. Consulted as: Resumo de busca. Cited in report sections 5. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-79",
+      "title": "The Hacker News: Vercel via Context.ai",
+      "url": "https://thehackernews.com/2026/04/vercel-breach-tied-to-context-ai-hack.html",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "C",
+      "kind": "incident",
+      "techniques": [
+        "LLMI-T011"
+      ],
+      "identifiers": [],
+      "summary": "Source #117 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Identidade e cadeia de suprimentos, type Imprensa especializada. Consulted as: Resumo de busca. Cited in report sections 5, 8. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-80",
+      "title": "Trend Micro: Vercel via Context.ai",
+      "url": "https://trendmicro.com/en_us/research/26/d/vercel-breach-oauth-supply-chain.html",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "B",
+      "kind": "incident",
+      "techniques": [
+        "LLMI-T011"
+      ],
+      "identifiers": [],
+      "summary": "Source #118 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Identidade e cadeia de suprimentos, type Pesquisa de fornecedor. Consulted as: Resumo de busca. Cited in report sections 5. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-81",
+      "title": "Krebs on Security: Bot de suporte da Meta",
+      "url": "https://krebsonsecurity.com/2026/06/hackers-used-metas-ai-support-bot-to-seize-instagram-accounts/",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "C",
+      "kind": "incident",
+      "techniques": [
+        "LLMI-T011"
+      ],
+      "identifiers": [],
+      "summary": "Source #119 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Identidade e cadeia de suprimentos, type Imprensa especializada. Consulted as: Resumo de busca. Cited in report sections 5. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-82",
+      "title": "Malwarebytes: Bot de suporte da Meta",
+      "url": "https://www.malwarebytes.com/blog/ai/2026/06/metas-ai-support-bot-happily-handed-instagram-accounts-to-hackers",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "B",
+      "kind": "incident",
+      "techniques": [
+        "LLMI-T011"
+      ],
+      "identifiers": [],
+      "summary": "Source #120 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Identidade e cadeia de suprimentos, type Pesquisa de fornecedor. Consulted as: Resumo de busca. Cited in report sections 5. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-83",
+      "title": "AI Incident Database 1510: Bot de suporte da Meta",
+      "url": "https://incidentdatabase.ai/cite/1510",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "B",
+      "kind": "incident",
+      "techniques": [
+        "LLMI-T011"
+      ],
+      "identifiers": [],
+      "summary": "Source #121 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Identidade e cadeia de suprimentos, type Base de dados. Consulted as: Resumo de busca. Cited in report sections 5. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-84",
+      "title": "VentureBeat: Mini Shai-Hulud",
+      "url": "https://venturebeat.com/security/shai-hulud-worm-172-npm-pypi-packages-valid-provenance-ci-cd-audit",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "C",
+      "kind": "incident",
+      "techniques": [
+        "LLMI-T011"
+      ],
+      "identifiers": [],
+      "summary": "Source #122 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Identidade e cadeia de suprimentos, type Imprensa especializada. Consulted as: Resumo de busca. Cited in report sections 5, 8. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-85",
+      "title": "Cloud Security Alliance: Mini Shai-Hulud",
+      "url": "https://labs.cloudsecurityalliance.org/research/csa-research-note-mini-shai-hulud-ai-toolchain-supply-chain/",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "B",
+      "kind": "incident",
+      "techniques": [
+        "LLMI-T011"
+      ],
+      "identifiers": [],
+      "summary": "Source #123 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Identidade e cadeia de suprimentos, type Nota de pesquisa. Consulted as: Resumo de busca. Cited in report sections 5, 8. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-86",
+      "title": "Cloud Security Alliance: Shai-Hulud e Bitwarden CLI",
+      "url": "https://labs.cloudsecurityalliance.org/research/csa-research-note-shai-hulud-npm-worm-ai-developer-supply-ch/",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "B",
+      "kind": "incident",
+      "techniques": [
+        "LLMI-T011"
+      ],
+      "identifiers": [],
+      "summary": "Source #124 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Identidade e cadeia de suprimentos, type Nota de pesquisa. Consulted as: Resumo de busca. Cited in report sections 5. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-87",
+      "title": "Gen Digital: Infostealers e agentes de IA",
+      "url": "https://www.gendigital.com/blog/insights/research/infostealers-your-ai-agent",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "A",
+      "kind": "incident",
+      "techniques": [
+        "LLMI-T011"
+      ],
+      "identifiers": [],
+      "summary": "Source #125 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Identidade e cadeia de suprimentos, type Fonte primária. Consulted as: Resumo de busca. Cited in report sections 5, 6. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-88",
+      "title": "SpyCloud: Infostealers Warden e Aoki",
+      "url": "https://spycloud.com/blog/infostealers-now-target-ai-tokens-and-api-keys/",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "B",
+      "kind": "incident",
+      "techniques": [
+        "LLMI-T011"
+      ],
+      "identifiers": [],
+      "summary": "Source #126 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Identidade e cadeia de suprimentos, type Pesquisa de fornecedor. Consulted as: Resumo de busca. Cited in report sections 5, 6. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-89",
+      "title": "Infosecurity Magazine: Infostealer Aoki",
+      "url": "https://www.infosecurity-magazine.com/news/aoki-infostealer-ai-coding/",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "C",
+      "kind": "incident",
+      "techniques": [
+        "LLMI-T011"
+      ],
+      "identifiers": [],
+      "summary": "Source #127 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Identidade e cadeia de suprimentos, type Imprensa especializada. Consulted as: Resumo de busca. Cited in report sections 5. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-90",
+      "title": "The Hacker News: OpenClaw e ClawHavoc",
+      "url": "https://thehackernews.com/2026/02/researchers-find-341-malicious-clawhub.html",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "C",
+      "kind": "incident",
+      "techniques": [
+        "LLMI-T011"
+      ],
+      "identifiers": [],
+      "summary": "Source #128 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Identidade e cadeia de suprimentos, type Imprensa especializada. Consulted as: Resumo de busca. Cited in report sections 5. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-91",
+      "title": "Flare: OpenClaw: exploração",
+      "url": "https://flare.io/learn/resources/blog/widespread-openclaw-exploitation",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "B",
+      "kind": "incident",
+      "techniques": [
+        "LLMI-T011"
+      ],
+      "identifiers": [],
+      "summary": "Source #129 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Identidade e cadeia de suprimentos, type Pesquisa de fornecedor. Consulted as: Resumo de busca. Cited in report sections 5. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-92",
+      "title": "Securonix: OpenClaw: relatório de ameaças",
+      "url": "https://connect.securonix.com/threat-research-intelligence-62/openclaw-threat-intelligence-report-clawdbot-moltbot-and-openclaw-208",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "B",
+      "kind": "incident",
+      "techniques": [
+        "LLMI-T011"
+      ],
+      "identifiers": [],
+      "summary": "Source #130 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Identidade e cadeia de suprimentos, type Pesquisa de fornecedor. Consulted as: Resumo de busca. Cited in report sections 5. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-93",
+      "title": "Cloud Security Alliance: Lacunas agênticas do ATLAS e do ATT&CK",
+      "url": "https://labs.cloudsecurityalliance.org/research/csa-research-note-atlas-agentic-gap-analysis-20260327/",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "B",
+      "kind": "framework",
+      "techniques": [],
+      "identifiers": [],
+      "summary": "Source #133 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Frameworks de referência, type Nota de pesquisa. Consulted as: Resumo de busca. Cited in report sections 6. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-94",
+      "title": "OWASP GenAI Security Project: OWASP Top 10 for LLM Applications",
+      "url": "https://genai.owasp.org/llm-top-10/",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "A",
+      "kind": "framework",
+      "techniques": [],
+      "identifiers": [],
+      "summary": "Source #134 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Frameworks de referência, type Framework. Consulted as: Referência (página inicial). Cited in report sections 6. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-95",
+      "title": "OWASP GenAI Security Project: OWASP Top 10 for Agentic Applications (dez/2025)",
+      "url": "https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/",
+      "published": "2025-12-09",
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "A",
+      "kind": "framework",
+      "techniques": [],
+      "identifiers": [],
+      "summary": "Source #135 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Frameworks de referência, type Framework. Consulted as: Resumo de busca. Cited in report sections 6. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-96",
+      "title": "OWASP GenAI Security Project: OWASP Agentic AI — Threats and Mitigations v1.1",
+      "url": "https://genai.owasp.org/download/45674/",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "A",
+      "kind": "framework",
+      "techniques": [],
+      "identifiers": [],
+      "summary": "Source #136 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Frameworks de referência, type Framework. Consulted as: Resumo de busca. Cited in report sections 6, 7. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-97",
+      "title": "CISA: CISA Known Exploited Vulnerabilities Catalog",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "A",
+      "kind": "framework",
+      "techniques": [],
+      "identifiers": [],
+      "summary": "Source #137 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Frameworks de referência, type Catálogo oficial. Consulted as: Referência (página inicial). Cited in report sections 1, 4, 12. Access: 2026-11-20.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261120-98",
+      "title": "Coalition for Secure AI: CoSAI (segurança de MCP)",
+      "url": "https://www.coalitionforsecureai.org/",
+      "published": null,
+      "seal": "secondary",
+      "temporal": "backfill",
+      "source_grade": "A",
+      "kind": "framework",
+      "techniques": [],
+      "identifiers": [],
+      "summary": "Source #138 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Frameworks de referência, type Framework. Consulted as: Referência (página inicial). Cited in report sections 10. Access: 2026-11-20.",
+      "brazil_latam": false
+    }
+  ]
+}

@@ -13,9 +13,9 @@
 
 | Layer | Status |
 |---|---|
-| Evidence | 7 record(s), 7 publisher(s), best grade A, newest 2026 |
+| Evidence | 8 record(s), 8 publisher(s), best grade A, newest 2026 |
 | Safe tests | 1 |
-| Detections | 1 rule file(s), 1 specification(s) |
+| Detections | 3 rule file(s), 1 specification(s) |
 | Controls | 1 |
 | Benchmarks | 0 |
 
@@ -32,6 +32,7 @@ What the repository links to it:
 - 2024-05-06 · [LLM Jacking (AML.CS0030)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-ATLAS-CS0030) (atlas-incident, high)
 - 2024-12-01 · [Storm-2139 Azure OpenAI Guardrail Bypass (AML.CS0057)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-ATLAS-CS0057) (atlas-incident, high)
 - 2026-04-15 · [Exploitation attempts against LiteLLM's guardrail tester (CVE-2026-40217)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-LITELLM-GUARDRAIL-TESTER-EXPLOITATION) (exploitation, high)
+- 2025-12-05 · [Langflow CORS and refresh-cookie chain to account takeover and code execution](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-LANGFLOW-CVE-2025-34291) (cors-misconfiguration, confirmed)
 - 2026-05-08 · [LiteLLM proxy SQL injection via authorization header](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-LITELLM-CVE-2026-42208) (sql-injection, confirmed)
 - 2026-05-08 · [LiteLLM proxy command injection in two endpoints](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-LITELLM-CVE-2026-42271) (command-injection, confirmed)
 
@@ -74,6 +75,20 @@ The runner has plan and mock adapters only: it does not call your system. To run
 - **Telemetry:** `CloudTrail (eventSource, eventName, errorCode, userIdentity.arn, sourceIPAddress)`
 - **Implementation:** rule file(s): [sentinel](../../detections/sentinel/det-ai-047-denied-burst-then-success.kql), [splunk](../../detections/splunk/det-ai-047-denied-burst-then-success.spl). Experimental and not run against real telemetry.
 
+### DET-AI-053 · AI Service or Gateway Process Spawns a Shell or Network Utility
+
+- **Severity:** critical
+- **Hypothesis:** A self-hosted AI service (LiteLLM, Flowise, Langflow, MLflow, Ray, n8n, nginx-ui) or the Python/Node server hosting it (python, uvicorn, gunicorn, node) starts sh, bash, curl, wget, nc, npx or pip: post-exploitation of an exposed or vulnerable AI service. This widens the artex-detections web-service-spawns-shell rule, which lists Flowise only, to the AI infrastructure exploited in 2026 (KEV entries for LiteLLM, Langflow, MLflow, Ray, n8n).
+- **Telemetry:** `EDR or auditd process creation with parent command line`, `container runtime process events`
+- **Implementation:** rule file(s): [sentinel](../../detections/sentinel/det-ai-053-ai-service-spawns-shell.kql), [sigma](../../detections/sigma/det-ai-053-ai-service-spawns-shell.yml). Experimental and not run against real telemetry.
+
+### DET-AI-056 · Unauthenticated or Unexpected Call to an AI Platform Admin, Test or Code Endpoint
+
+- **Severity:** high
+- **Hypothesis:** A request without an authenticated session, or outside a change window, reaches an AI platform route that runs code or reaches tools: LiteLLM /mcp-rest/test/*, /guardrails/test_custom_code and key/role changes; Flowise customMCP node load; Langflow public flow build, /api/v1/validate/code, /api/v1/auto_login and /api/v1/responses; nginx-ui /mcp_message and /api/backup. These are the routes behind the 2026 KEV entries for these products.
+- **Telemetry:** `reverse proxy or WAF logs`, `AI gateway audit log`
+- **Implementation:** rule file(s): [sigma](../../detections/sigma/det-ai-056-ai-platform-sensitive-endpoint.yml). Experimental and not run against real telemetry.
+
 ## 4. Prevent it
 
 - **Secret Isolation** (`CTRL-SECRET-ISOLATION`): Keep model/provider credentials outside prompts and minimize which agents can access them.
@@ -88,7 +103,7 @@ The runner has plan and mock adapters only: it does not call your system. To run
 
 ## 6. Limits of this page
 
-- 1 of 2 detection(s) are specifications, not rules. They say what to look for, not how to query it. Nothing here has been run against real telemetry.
+- 1 of 4 detection(s) are specifications, not rules. They say what to look for, not how to query it. Nothing here has been run against real telemetry.
 - No benchmark maps to it, so there is no public yardstick for how well a defence performs.
 - The tests use benign markers and synthetic data. A pass in a lab is not a security rating for a production system.
 - Ecosystem tools and benchmarks help you test and measure. They never support a claim that an actor used the technique.

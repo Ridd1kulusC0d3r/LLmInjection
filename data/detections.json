@@ -879,5 +879,76 @@
       "EDR process and file events"
     ],
     "test_ids": []
+  },
+  {
+    "id": "DET-AI-053",
+    "type": "detection",
+    "name": "AI Service or Gateway Process Spawns a Shell or Network Utility",
+    "category": "endpoint",
+    "severity": "critical",
+    "status": "specification",
+    "hypothesis": "A self-hosted AI service (LiteLLM, Flowise, Langflow, MLflow, Ray, n8n, nginx-ui) or the Python/Node server hosting it (python, uvicorn, gunicorn, node) starts sh, bash, curl, wget, nc, npx or pip: post-exploitation of an exposed or vulnerable AI service. This widens the artex-detections web-service-spawns-shell rule, which lists Flowise only, to the AI infrastructure exploited in 2026 (KEV entries for LiteLLM, Langflow, MLflow, Ray, n8n).",
+    "telemetry": [
+      "EDR or auditd process creation with parent command line",
+      "container runtime process events"
+    ],
+    "test_ids": []
+  },
+  {
+    "id": "DET-AI-054",
+    "type": "detection",
+    "name": "Python Startup .pth File Created Outside a Known Package Install",
+    "category": "endpoint",
+    "severity": "critical",
+    "status": "specification",
+    "hypothesis": "A .pth file appears in site-packages without a matching package-manager transaction: Python runs code in .pth files at every interpreter start, which is how the trojanised LiteLLM 1.82.8 persisted (litellm_init.pth).",
+    "telemetry": [
+      "EDR file creation events",
+      "package manager logs (pip, uv, poetry)",
+      "image build logs"
+    ],
+    "test_ids": []
+  },
+  {
+    "id": "DET-AI-055",
+    "type": "detection",
+    "name": "Malformed Host Header Reaching a Starlette or FastAPI AI Service",
+    "category": "network",
+    "severity": "high",
+    "status": "specification",
+    "hypothesis": "A request to an AI service built on Starlette or FastAPI (LiteLLM, MCP servers, model APIs) carries a Host header containing /, ? or # or not matching the expected names: an attempt to desynchronise request.url from the routed path (CVE-2026-48710, BadHost) to bypass path-based authorisation.",
+    "telemetry": [
+      "reverse proxy or WAF logs with the raw Host header"
+    ],
+    "test_ids": []
+  },
+  {
+    "id": "DET-AI-056",
+    "type": "detection",
+    "name": "Unauthenticated or Unexpected Call to an AI Platform Admin, Test or Code Endpoint",
+    "category": "network",
+    "severity": "high",
+    "status": "specification",
+    "hypothesis": "A request without an authenticated session, or outside a change window, reaches an AI platform route that runs code or reaches tools: LiteLLM /mcp-rest/test/*, /guardrails/test_custom_code and key/role changes; Flowise customMCP node load; Langflow public flow build, /api/v1/validate/code, /api/v1/auto_login and /api/v1/responses; nginx-ui /mcp_message and /api/backup. These are the routes behind the 2026 KEV entries for these products.",
+    "telemetry": [
+      "reverse proxy or WAF logs",
+      "AI gateway audit log"
+    ],
+    "test_ids": []
+  },
+  {
+    "id": "DET-AI-057",
+    "type": "detection",
+    "name": "MLflow Webhook Test Followed by Egress to Metadata or Internal Address",
+    "category": "network",
+    "severity": "critical",
+    "status": "specification",
+    "hypothesis": "An MLflow webhook test call is followed within seconds by an outbound connection from the MLflow host to 169.254.169.254, an equivalent metadata address or an internal range: server-side request forgery through redirect following (CVE-2026-64849).",
+    "telemetry": [
+      "MLflow server logs",
+      "host or VPC flow logs",
+      "cloud audit logs for instance credential use"
+    ],
+    "test_ids": []
   }
 ]

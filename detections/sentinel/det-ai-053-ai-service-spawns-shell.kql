@@ -1,0 +1,17 @@
+// DET-AI-053 — AI Service or Gateway Process Spawns a Shell or Network Utility (LLMI-T024, LLMI-T016)
+// Status: experimental hunting query, not tested against live data.
+// Basis: 2026 CISA KEV entries for LiteLLM, Langflow, MLflow, Ray and n8n; artex-detections lists Flowise only.
+let lookback = 7d;
+let ai_terms = dynamic(["litellm", "flowise", "langflow", "mlflow", "ray start", "n8n", "nginx-ui"]);
+let servers = dynamic(["python", "python3", "uvicorn", "gunicorn", "node"]);
+let children = dynamic(["sh", "bash", "dash", "curl", "wget", "nc", "ncat", "socat", "npx", "pip", "pip3"]);
+DeviceProcessEvents
+| where Timestamp > ago(lookback)
+| where FileName in~ (children)
+| where InitiatingProcessCommandLine has_any (ai_terms)
+    and (InitiatingProcessFileName in~ (servers) or InitiatingProcessFileName has_any (ai_terms))
+| summarize Count = count(), FirstSeen = min(Timestamp), LastSeen = max(Timestamp),
+            Commands = make_set(ProcessCommandLine, 20)
+    by DeviceName, InitiatingProcessFileName, InitiatingProcessCommandLine, FileName
+| order by Count asc   // rare first
+// False positives: approved MCP servers over STDIO and entrypoint scripts; allowlist by full command line.

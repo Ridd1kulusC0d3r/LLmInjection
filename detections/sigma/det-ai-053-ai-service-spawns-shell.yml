@@ -1,0 +1,68 @@
+title: AI Service or Gateway Process Spawns a Shell or Network Utility
+id: 6e901327-3823-431a-8f35-0babd201b2a5
+status: experimental
+description: >
+  Detects a self-hosted AI service, or the Python or Node server that hosts it, starting a shell, a download
+  or network utility, or a package installer. Exploitation of LiteLLM, Langflow, Flowise, MLflow, Ray, n8n and
+  nginx-ui in 2026 (CISA KEV) ended in commands run by the service process. The ThreatDefence artex-detections
+  rule for web services spawning shells lists Flowise only; this rule adds the other AI services and the
+  generic server parents (python, uvicorn, gunicorn, node) when their command line names an AI service.
+references:
+  - https://www.cisa.gov/known-exploited-vulnerabilities-catalog
+  - https://github.com/ThreatDefence/artex-detections
+  - https://github.com/Ridd1kulusC0d3r/LLmInjection
+author: LLMInjection
+date: 2026-11-20
+tags:
+  - attack.execution
+  - attack.t1190
+  - attack.t1059.004
+  - llminjection.det-ai-053
+  - llminjection.llmi-t024
+logsource:
+  category: process_creation
+  product: linux
+detection:
+  selection_parent_service:
+    ParentImage|endswith:
+      - '/nginx-ui'
+      - '/flowise'
+      - '/langflow'
+      - '/mlflow'
+      - '/litellm'
+      - '/n8n'
+  selection_parent_server:
+    ParentImage|endswith:
+      - '/python'
+      - '/python3'
+      - '/uvicorn'
+      - '/gunicorn'
+      - '/node'
+  selection_parent_server_cmd:
+    ParentCommandLine|contains:
+      - 'litellm'
+      - 'flowise'
+      - 'langflow'
+      - 'mlflow'
+      - 'ray start'
+      - 'dashboard'
+      - 'n8n'
+      - 'nginx-ui'
+  selection_child:
+    Image|endswith:
+      - '/sh'
+      - '/bash'
+      - '/dash'
+      - '/curl'
+      - '/wget'
+      - '/nc'
+      - '/ncat'
+      - '/socat'
+      - '/npx'
+      - '/pip'
+      - '/pip3'
+  condition: selection_child and (selection_parent_service or (selection_parent_server and selection_parent_server_cmd))
+falsepositives:
+  - Approved MCP servers launched over STDIO by the gateway or agent builder; allowlist by full child command line.
+  - Health checks or entrypoint scripts that call curl or sh; allowlist by container image and command line.
+level: critical

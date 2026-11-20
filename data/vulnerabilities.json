@@ -43,9 +43,10 @@
     ],
     "published": "2026-06-30",
     "confidence": "confirmed",
-    "summary": "A fallback in LiteLLM MCP authentication could allow requests with an arbitrary Bearer token to reach configured MCP tooling without a valid LiteLLM key.",
+    "summary": "A fallback in LiteLLM MCP authentication could allow requests with an arbitrary Bearer token to reach configured MCP tooling without a valid LiteLLM key. CISA added it to KEV on 2026-09-02.",
     "source_ids": [
-      "SRC-GHSA-LITELLM-MCP-59822"
+      "SRC-GHSA-LITELLM-MCP-59822",
+      "SRC-CISA-KEV-CATALOG"
     ]
   },
   {
@@ -389,7 +390,7 @@
     ],
     "published": "2023-03-24",
     "confidence": "confirmed",
-    "summary": "A path traversal in MLflow before 2.2.1 allowed reading files outside the artifact store on the ML tracking server.",
+    "summary": "A path traversal in MLflow before 2.2.1 allowed reading files outside the artifact store on the ML tracking server. A public proof of concept and a high EPSS exist, but in-the-wild exploitation was not confirmed in the sources consulted.",
     "source_ids": [
       "SRC-NVD-CVE-2023-1177"
     ]
@@ -413,7 +414,7 @@
     ],
     "published": "2025-06-11",
     "confidence": "confirmed",
-    "summary": "Microsoft describes AI command injection in Microsoft 365 Copilot that let an unauthorized attacker disclose information over a network; fixed by Microsoft in the service.",
+    "summary": "Microsoft describes AI command injection in Microsoft 365 Copilot that let an unauthorized attacker disclose information over a network; fixed by Microsoft in the service (May 2025, before public disclosure in June 2025); no customer action required.",
     "source_ids": [
       "SRC-NVD-CVE-2025-32711"
     ]
@@ -484,7 +485,7 @@
     "patched": [],
     "published": "2024-06-05",
     "confidence": "confirmed",
-    "summary": "The EmailGPT service let a user inject a direct prompt that took over the service logic and could expose system instructions.",
+    "summary": "The EmailGPT service let a user inject a direct prompt that took over the service logic and could expose system instructions. Scores differ by source: Synopsys CyRC rated it 6.5, NVD 9.1.",
     "source_ids": [
       "SRC-NVD-CVE-2024-5184"
     ]
@@ -655,7 +656,7 @@
     "patched": [],
     "published": "2026-03-30",
     "confidence": "confirmed",
-    "summary": "The MCP integration in nginx-ui 2.3.5 and earlier exposed management tools without authentication, letting a client drive the web server's configuration.",
+    "summary": "The MCP integration in nginx-ui 2.3.5 and earlier exposed management tools without authentication, letting a client drive the web server's configuration. NVD and the GitHub advisory list 2.3.5 and earlier as affected; a secondary report that 2.3.4 fixed it contradicts that and was not adopted. Exploitation is reported by Rapid7 (secondary here, not in KEV as of 2026-11-18).",
     "source_ids": [
       "SRC-NVD-CVE-2026-33032"
     ]
@@ -778,6 +779,356 @@
       "SRC-GHSA-LITELLM-40217",
       "SRC-ZENITY-LITELLM-40217",
       "SRC-CISA-KEV-CATALOG"
+    ]
+  },
+  {
+    "id": "VULN-LANGFLOW-CVE-2025-3248",
+    "type": "vulnerability",
+    "name": "Langflow unauthenticated code injection in /api/v1/validate/code",
+    "kind": "code-injection",
+    "package": "langflow",
+    "ecosystem": "PyPI",
+    "identifiers": [
+      "CVE-2025-3248",
+      "GHSA-rvqx-wpfh-mfx7"
+    ],
+    "severity": "critical",
+    "affected": [
+      "<1.3.0"
+    ],
+    "patched": [
+      "1.3.0"
+    ],
+    "published": "2025-04-07",
+    "confidence": "confirmed",
+    "summary": "Langflow before 1.3.0 executed code sent to the /api/v1/validate/code endpoint without authentication (NVD 9.8, CWE-306/CWE-94). CISA added it to KEV on 2025-05-05 and marks it as known to be used in ransomware campaigns.",
+    "source_ids": [
+      "SRC-NVD-CVE-2025-3248",
+      "SRC-CISA-KEV-CATALOG"
+    ]
+  },
+  {
+    "id": "VULN-LANGFLOW-CVE-2025-34291",
+    "type": "vulnerability",
+    "name": "Langflow CORS and refresh-cookie chain to account takeover and code execution",
+    "kind": "cors-misconfiguration",
+    "package": "langflow",
+    "ecosystem": "PyPI",
+    "identifiers": [
+      "CVE-2025-34291",
+      "GHSA-577h-p2hh-v4mv"
+    ],
+    "severity": "high",
+    "affected": [
+      "<=1.6.9"
+    ],
+    "patched": [],
+    "published": "2025-12-05",
+    "confidence": "confirmed",
+    "summary": "Langflow up to 1.6.9 combined a wildcard CORS policy that allowed credentials with a SameSite=None refresh cookie, so a malicious web page could refresh a victim's session and reach code-running endpoints (NVD 8.8, CWE-346). CISA added it to KEV on 2026-05-21.",
+    "source_ids": [
+      "SRC-NVD-CVE-2025-34291",
+      "SRC-CISA-KEV-CATALOG"
+    ]
+  },
+  {
+    "id": "VULN-LANGFLOW-CVE-2026-33017",
+    "type": "vulnerability",
+    "name": "Langflow public flow build endpoint runs attacker-supplied flow data",
+    "kind": "code-injection",
+    "package": "langflow",
+    "ecosystem": "PyPI",
+    "identifiers": [
+      "CVE-2026-33017",
+      "GHSA-vwmf-pq79-vjvx"
+    ],
+    "severity": "critical",
+    "affected": [
+      "<1.9.0"
+    ],
+    "patched": [
+      "1.9.0"
+    ],
+    "published": "2026-03-20",
+    "confidence": "confirmed",
+    "summary": "Before 1.9.0, Langflow's public temporary build endpoint accepted flow data from the request instead of the stored flow, so unauthenticated callers could run Python placed in node definitions (NVD 9.8, CWE-94). CISA added it to KEV on 2026-03-25.",
+    "source_ids": [
+      "SRC-NVD-CVE-2026-33017",
+      "SRC-CISA-KEV-CATALOG"
+    ]
+  },
+  {
+    "id": "VULN-LANGFLOW-CVE-2026-0770",
+    "type": "vulnerability",
+    "name": "Langflow exec_globals inclusion leads to unauthenticated code execution",
+    "kind": "code-injection",
+    "package": "langflow",
+    "ecosystem": "PyPI",
+    "identifiers": [
+      "CVE-2026-0770",
+      "GHSA-g22f-v6f7-2hrh"
+    ],
+    "severity": "critical",
+    "affected": [
+      "see GHSA-g22f-v6f7-2hrh (OSV lists last affected commit only)"
+    ],
+    "patched": [],
+    "published": "2026-01-23",
+    "confidence": "confirmed",
+    "summary": "ZDI reported that the exec_globals parameter of Langflow's validate endpoint let unauthenticated callers run code (CVSS 9.8, CWE-829). CISA added it to KEV on 2026-07-21. OSV lists a last affected commit and no fixed release; check the advisory for the fixed version.",
+    "source_ids": [
+      "SRC-NVD-CVE-2026-0770",
+      "SRC-CISA-KEV-CATALOG"
+    ]
+  },
+  {
+    "id": "VULN-LANGFLOW-CVE-2026-55255",
+    "type": "vulnerability",
+    "name": "Langflow /api/v1/responses IDOR runs another user's flow",
+    "kind": "idor",
+    "package": "langflow",
+    "ecosystem": "PyPI",
+    "identifiers": [
+      "CVE-2026-55255",
+      "GHSA-qrpv-q767-xqq2"
+    ],
+    "severity": "high",
+    "affected": [
+      "<1.9.1"
+    ],
+    "patched": [
+      "1.9.1"
+    ],
+    "published": "2026-06-23",
+    "confidence": "confirmed",
+    "summary": "Before 1.9.1, an authenticated Langflow user could execute any other user's flow by passing its ID to /api/v1/responses (CVSS 8.4, CWE-639). CISA added it to KEV on 2026-07-07.",
+    "source_ids": [
+      "SRC-NVD-CVE-2026-55255",
+      "SRC-CISA-KEV-CATALOG"
+    ]
+  },
+  {
+    "id": "VULN-LANGFLOW-CVE-2026-9198",
+    "type": "vulnerability",
+    "name": "IBM Langflow OSS auto_login and validate/code chain to unauthenticated code execution",
+    "kind": "missing-authentication",
+    "package": "langflow",
+    "ecosystem": "PyPI",
+    "identifiers": [
+      "CVE-2026-9198"
+    ],
+    "severity": "critical",
+    "affected": [
+      ">=1.0.0 <=1.10.0"
+    ],
+    "patched": [],
+    "published": "2026-07-17",
+    "confidence": "confirmed",
+    "summary": "IBM's advisory says Langflow OSS 1.0.0 through 1.10.0 let any network caller mint a superuser token through /api/v1/auto_login and then run code through /api/v1/validate/code (CVSS 9.8, CWE-94). CISA added it to KEV on 2026-08-04.",
+    "source_ids": [
+      "SRC-NVD-CVE-2026-9198",
+      "SRC-CISA-KEV-CATALOG"
+    ]
+  },
+  {
+    "id": "VULN-MLFLOW-CVE-2026-64849",
+    "type": "vulnerability",
+    "name": "MLflow webhook test endpoint follows redirects past URL validation (SSRF)",
+    "kind": "ssrf",
+    "package": "mlflow",
+    "ecosystem": "PyPI",
+    "identifiers": [
+      "CVE-2026-64849",
+      "GHSA-7gwp-5pfp-969j"
+    ],
+    "severity": "critical",
+    "affected": [
+      ">=3.3.0 <3.15.0"
+    ],
+    "patched": [
+      "3.15.0"
+    ],
+    "published": "2026-08-17",
+    "confidence": "confirmed",
+    "summary": "From 3.3.0 to before 3.15.0, MLflow validated only the first URL of a webhook test and then followed redirects, so an unauthenticated caller (when server authentication is off) could reach internal addresses (CVSS 9.3, CWE-918). CISA added it to KEV on 2026-08-19.",
+    "source_ids": [
+      "SRC-NVD-CVE-2026-64849",
+      "SRC-CISA-KEV-CATALOG"
+    ]
+  },
+  {
+    "id": "VULN-RAY-CVE-2025-62593",
+    "type": "vulnerability",
+    "name": "Ray dashboard browser-origin guard bypass to code execution",
+    "kind": "csrf",
+    "package": "ray",
+    "ecosystem": "PyPI",
+    "identifiers": [
+      "CVE-2025-62593",
+      "GHSA-q279-jhrf-cc6v"
+    ],
+    "severity": "critical",
+    "affected": [
+      "<2.52.0"
+    ],
+    "patched": [
+      "2.52.0"
+    ],
+    "published": "2025-11-26",
+    "confidence": "confirmed",
+    "summary": "Before 2.52.0, Ray guarded its development API against browser requests only by checking whether the User-Agent began with Mozilla, so a web page opened in Firefox or Safari could submit jobs to a local Ray instance (CVSS 9.4 v4, CWE-94). CISA added it to KEV on 2026-08-17.",
+    "source_ids": [
+      "SRC-NVD-CVE-2025-62593",
+      "SRC-CISA-KEV-CATALOG"
+    ]
+  },
+  {
+    "id": "VULN-STARLETTE-CVE-2026-48710",
+    "type": "vulnerability",
+    "name": "Starlette Host header desynchronises request.url from the routed path (BadHost)",
+    "kind": "request-smuggling",
+    "package": "starlette",
+    "ecosystem": "PyPI",
+    "identifiers": [
+      "CVE-2026-48710",
+      "GHSA-86qp-5c8j-p5mr"
+    ],
+    "severity": "medium",
+    "affected": [
+      "<1.0.1"
+    ],
+    "patched": [
+      "1.0.1"
+    ],
+    "published": "2026-05-26",
+    "confidence": "confirmed",
+    "summary": "Before 1.0.1, Starlette rebuilt request.url from an unvalidated Host header while routing on the raw path, so middleware that authorises by request.url.path could be bypassed (CVSS 6.5, CWE-444). It matters for AI services built on FastAPI or Starlette, including MCP servers. CISA added it to KEV on 2026-09-02.",
+    "source_ids": [
+      "SRC-NVD-CVE-2026-48710",
+      "SRC-CISA-KEV-CATALOG"
+    ]
+  },
+  {
+    "id": "VULN-N8N-CVE-2025-68613",
+    "type": "vulnerability",
+    "name": "n8n workflow expression evaluation escapes to code execution",
+    "kind": "code-injection",
+    "package": "n8n",
+    "ecosystem": "npm",
+    "identifiers": [
+      "CVE-2025-68613",
+      "GHSA-v98v-ff95-f3cp"
+    ],
+    "severity": "critical",
+    "affected": [
+      ">=0.211.0 <1.120.4",
+      "1.121.x <1.121.1"
+    ],
+    "patched": [
+      "1.120.4",
+      "1.121.1",
+      "1.122.0"
+    ],
+    "published": "2025-12-19",
+    "confidence": "confirmed",
+    "summary": "From 0.211.0, expressions supplied by authenticated n8n users while configuring a workflow could run outside the intended isolation, giving code execution on the host (CVSS 9.9, CWE-913); fixed in 1.120.4, 1.121.1 and 1.122.0. n8n is widely used to host AI agent workflows. CISA added it to KEV on 2026-03-11.",
+    "source_ids": [
+      "SRC-NVD-CVE-2025-68613",
+      "SRC-CISA-KEV-CATALOG"
+    ]
+  },
+  {
+    "id": "VULN-MCP-SERVER-GIT-CVE-2025-68145",
+    "type": "vulnerability",
+    "name": "mcp-server-git --repository restriction not enforced on tool calls",
+    "kind": "path-traversal",
+    "package": "mcp-server-git",
+    "ecosystem": "PyPI",
+    "identifiers": [
+      "CVE-2025-68145",
+      "GHSA-j22h-9j4x-23w5"
+    ],
+    "severity": "high",
+    "affected": [
+      "<2025.12.17"
+    ],
+    "patched": [
+      "2025.12.17"
+    ],
+    "published": "2025-12-17",
+    "confidence": "confirmed",
+    "summary": "Before 2025.12.17, mcp-server-git started with --repository did not check that the repo_path in later tool calls stayed inside the configured path, so tool calls could act on other repositories the process could reach (NVD 9.1; GitHub CNA 6.4 v4; CWE-22).",
+    "source_ids": [
+      "SRC-NVD-CVE-2025-68145"
+    ]
+  },
+  {
+    "id": "VULN-CURSOR-CVE-2025-54135",
+    "type": "vulnerability",
+    "name": "Cursor creates new workspace dotfiles without approval (CurXecute)",
+    "kind": "prompt-injection-to-rce",
+    "package": "cursor",
+    "ecosystem": "Application",
+    "identifiers": [
+      "CVE-2025-54135",
+      "GHSA-4cxx-hrm3-49rm"
+    ],
+    "severity": "high",
+    "affected": [
+      "<1.3.9"
+    ],
+    "patched": [
+      "1.3.9"
+    ],
+    "published": "2025-08-05",
+    "confidence": "confirmed",
+    "summary": "Before 1.3.9, Cursor let the agent create a new .cursor/mcp.json without approval, so an indirect prompt injection could register an MCP server command that then ran (GitHub CNA 8.5, NVD 9.8, CWE-78).",
+    "source_ids": [
+      "SRC-NVD-CVE-2025-54135"
+    ]
+  },
+  {
+    "id": "VULN-CREWAI-CVE-2026-2275",
+    "type": "vulnerability",
+    "name": "CrewAI CodeInterpreter falls back to SandboxPython when Docker is unreachable",
+    "kind": "sandbox-escape",
+    "package": "crewai",
+    "ecosystem": "PyPI",
+    "identifiers": [
+      "CVE-2026-2275"
+    ],
+    "severity": "critical",
+    "affected": [
+      "see CERT/CC VU#221883"
+    ],
+    "patched": [],
+    "published": "2026-03-30",
+    "confidence": "confirmed",
+    "summary": "When it cannot reach Docker, the CrewAI CodeInterpreter tool falls back to SandboxPython, which permits arbitrary C function calls and so code execution (CVSS 9.6, CWE-749). Reported through CERT/CC VU#221883.",
+    "source_ids": [
+      "SRC-NVD-CVE-2026-2275"
+    ]
+  },
+  {
+    "id": "VULN-CREWAI-CVE-2026-2287",
+    "type": "vulnerability",
+    "name": "CrewAI does not re-check Docker at runtime before falling back to the sandbox",
+    "kind": "sandbox-escape",
+    "package": "crewai",
+    "ecosystem": "PyPI",
+    "identifiers": [
+      "CVE-2026-2287"
+    ],
+    "severity": "critical",
+    "affected": [
+      "see CERT/CC VU#221883"
+    ],
+    "patched": [],
+    "published": "2026-03-30",
+    "confidence": "confirmed",
+    "summary": "CrewAI does not check that Docker is still running during execution and falls back to a sandbox mode that allows code execution (CVSS 9.8, CWE-94). Reported through CERT/CC VU#221883.",
+    "source_ids": [
+      "SRC-NVD-CVE-2026-2287"
     ]
   }
 ]

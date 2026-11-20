@@ -15,7 +15,7 @@
 |---|---|
 | Evidence | 9 record(s), 9 publisher(s), best grade A, newest 2026 |
 | Safe tests | 2 |
-| Detections | 1 rule file(s), 5 specification(s) |
+| Detections | 2 rule file(s), 5 specification(s) |
 | Controls | 1 |
 | Benchmarks | 0 |
 
@@ -113,6 +113,13 @@ The runner has plan and mock adapters only: it does not call your system. To run
 - **Telemetry:** `network scans and listening ports`, `HTTP responses (console pages, auth realm)`, `container image inventory`, `EDR process and file events`
 - **Implementation:** specification only. Collect the telemetry above first; if you cannot, the detection cannot work yet.
 
+### DET-AI-054 · Python Startup .pth File Created Outside a Known Package Install
+
+- **Severity:** critical
+- **Hypothesis:** A .pth file appears in site-packages without a matching package-manager transaction: Python runs code in .pth files at every interpreter start, which is how the trojanised LiteLLM 1.82.8 persisted (litellm_init.pth).
+- **Telemetry:** `EDR file creation events`, `package manager logs (pip, uv, poetry)`, `image build logs`
+- **Implementation:** rule file(s): [sigma](../../detections/sigma/det-ai-054-python-pth-outside-install.yml). Experimental and not run against real telemetry.
+
 ## 4. Prevent it
 
 - **AI/ML Bill of Materials** (`CTRL-AIML-BOM`): Track models, datasets, configurations and dependencies using AI/ML-BOM-capable formats.
@@ -127,7 +134,7 @@ The runner has plan and mock adapters only: it does not call your system. To run
 
 ## 6. Limits of this page
 
-- 5 of 6 detection(s) are specifications, not rules. They say what to look for, not how to query it. Nothing here has been run against real telemetry.
+- 5 of 7 detection(s) are specifications, not rules. They say what to look for, not how to query it. Nothing here has been run against real telemetry.
 - No benchmark maps to it, so there is no public yardstick for how well a defence performs.
 - The tests use benign markers and synthetic data. A pass in a lab is not a security rating for a production system.
 - Ecosystem tools and benchmarks help you test and measure. They never support a claim that an actor used the technique.

@@ -1935,5 +1935,145 @@
     "url": "https://www.coalitionforsecureai.org/wp-content/uploads/2026/03/model-context-protocol-security-1.pdf",
     "published": "2026-01-08",
     "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-NVD-CVE-2025-3248",
+    "type": "source",
+    "name": "CVE-2025-3248: Langflow unauthenticated code injection in /api/v1/validate/code",
+    "publisher": "NIST National Vulnerability Database",
+    "grade": "A",
+    "role": "security-advisory",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-3248",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-NVD-CVE-2025-34291",
+    "type": "source",
+    "name": "CVE-2025-34291: Langflow CORS and refresh-cookie chain to account takeover and code execution",
+    "publisher": "NIST National Vulnerability Database",
+    "grade": "A",
+    "role": "security-advisory",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-34291",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-NVD-CVE-2026-33017",
+    "type": "source",
+    "name": "CVE-2026-33017: Langflow public flow build endpoint runs attacker-supplied flow data",
+    "publisher": "NIST National Vulnerability Database",
+    "grade": "A",
+    "role": "security-advisory",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33017",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-NVD-CVE-2026-0770",
+    "type": "source",
+    "name": "CVE-2026-0770: Langflow exec_globals inclusion leads to unauthenticated code execution",
+    "publisher": "NIST National Vulnerability Database",
+    "grade": "A",
+    "role": "security-advisory",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0770",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-NVD-CVE-2026-55255",
+    "type": "source",
+    "name": "CVE-2026-55255: Langflow /api/v1/responses IDOR runs another user's flow",
+    "publisher": "NIST National Vulnerability Database",
+    "grade": "A",
+    "role": "security-advisory",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55255",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-NVD-CVE-2026-9198",
+    "type": "source",
+    "name": "CVE-2026-9198: IBM Langflow OSS auto_login and validate/code chain to unauthenticated code execution",
+    "publisher": "NIST National Vulnerability Database",
+    "grade": "A",
+    "role": "security-advisory",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9198",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-NVD-CVE-2026-64849",
+    "type": "source",
+    "name": "CVE-2026-64849: MLflow webhook test endpoint follows redirects past URL validation (SSRF)",
+    "publisher": "NIST National Vulnerability Database",
+    "grade": "A",
+    "role": "security-advisory",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64849",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-NVD-CVE-2025-62593",
+    "type": "source",
+    "name": "CVE-2025-62593: Ray dashboard browser-origin guard bypass to code execution",
+    "publisher": "NIST National Vulnerability Database",
+    "grade": "A",
+    "role": "security-advisory",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-62593",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-NVD-CVE-2026-48710",
+    "type": "source",
+    "name": "CVE-2026-48710: Starlette Host header desynchronises request.url from the routed path (BadHost)",
+    "publisher": "NIST National Vulnerability Database",
+    "grade": "A",
+    "role": "security-advisory",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48710",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-NVD-CVE-2025-68613",
+    "type": "source",
+    "name": "CVE-2025-68613: n8n workflow expression evaluation escapes to code execution",
+    "publisher": "NIST National Vulnerability Database",
+    "grade": "A",
+    "role": "security-advisory",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-68613",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-NVD-CVE-2025-68145",
+    "type": "source",
+    "name": "CVE-2025-68145: mcp-server-git --repository restriction not enforced on tool calls",
+    "publisher": "NIST National Vulnerability Database",
+    "grade": "A",
+    "role": "security-advisory",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-68145",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-NVD-CVE-2025-54135",
+    "type": "source",
+    "name": "CVE-2025-54135: Cursor creates new workspace dotfiles without approval (CurXecute)",
+    "publisher": "NIST National Vulnerability Database",
+    "grade": "A",
+    "role": "security-advisory",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-54135",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-NVD-CVE-2026-2275",
+    "type": "source",
+    "name": "CVE-2026-2275: CrewAI CodeInterpreter falls back to SandboxPython when Docker is unreachable",
+    "publisher": "NIST National Vulnerability Database",
+    "grade": "A",
+    "role": "security-advisory",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2275",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-NVD-CVE-2026-2287",
+    "type": "source",
+    "name": "CVE-2026-2287: CrewAI does not re-check Docker at runtime before falling back to the sandbox",
+    "publisher": "NIST National Vulnerability Database",
+    "grade": "A",
+    "role": "security-advisory",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2287",
+    "last_verified": "2026-11-20"
   }
 ]
