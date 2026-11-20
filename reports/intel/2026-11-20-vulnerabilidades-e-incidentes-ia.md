@@ -1,5 +1,7 @@
 ---
 title: "Threat Intelligence: vulnerabilidades e incidentes em sistemas de IA, 2026"
+kpis: "13|vulnerabilidades de software de IA incluídas no CISA KEV em 2026 (conferido no feed);6 de 25|CVEs da tabela com exploração confirmada em campo;~36 h|do advisory à exploração do LiteLLM CVE-2026-42208;46|incidentes na cronologia de 2026, de janeiro a 18 de novembro"
+kev_chart: true
 ---
 
 ![Masthead](../../assets/reports/ia-2026-vulnerabilidades-incidentes.svg)

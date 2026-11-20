@@ -30,6 +30,7 @@ lint:
 
 audit:
 	python3 scripts/audit_graph.py --strict
+	python3 scripts/check_blocked_terms.py
 
 # everything CI runs, in one command
 check: lint test validate audit

@@ -16,6 +16,7 @@ on:
       - "detections/**"
       - "scripts/build_snapshot.py"
       - "scripts/build_site.py"
+      - "scripts/build_report_pages.py"
       - "scripts/diff_intelligence.py"
       - ".github/workflows/pages.yml"
   workflow_dispatch:

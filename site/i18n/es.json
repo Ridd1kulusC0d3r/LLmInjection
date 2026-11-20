@@ -542,5 +542,7 @@
  "srp.picked": "✓ En el informe",
  "srp.openone": "Informe de este",
  "srp.openwith": "Informe con la cesta",
- "srp.focusreport": "Informe de este foco"
+ "srp.focusreport": "Informe de este foco",
+ "rep.web": "Edición web completa ↗",
+ "rep.webtag": "edición web"
 }
