@@ -20,11 +20,11 @@ Inteligencia de amenazas abierta para sistemas de IA, LLM y agentes: actores, ca
 
 | Actores | Campañas | Incidentes | Vulnerabilidades | Técnicas | Fuentes |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| **75** | **99** | **69** | **32** | **28** | **182** |
+| **75** | **99** | **69** | **46** | **28** | **196** |
 
 | Casos de prueba | Detecciones | Controles | Marcos | Familias de modelos | Relaciones | Proyectos del ecosistema |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| **40** | **52** | **32** | **21** | **12** | **535** | **127** |
+| **40** | **57** | **32** | **21** | **12** | **563** | **127** |
 
 <!-- gen:stats-es:end -->
 

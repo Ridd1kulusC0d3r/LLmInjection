@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="220" viewBox="0 0 1280 220" role="img" aria-labelledby="t">
+  <title id="t">LLMInjection RELATÓRIO DE INTELIGÊNCIA: IA 2026: vulnerabilidades e incidentes</title>
+  <rect width="1280" height="220" fill="#f3f0e8"/>
+  <rect x="0.5" y="0.5" width="1279" height="219" fill="none" stroke="#17150f"/>
+  <g font-family="'Courier New',Courier,monospace" font-size="12" letter-spacing="2" fill="#4a463c" font-weight="700">
+    <text x="48" y="40">LLMINJECTION / RELATÓRIO DE INTELIGÊNCIA</text>
+    <text x="1232" y="40" text-anchor="end" fill="#b43c0e">TLP:CLEAR</text>
+  </g>
+  <line x1="48" y1="56" x2="1232" y2="56" stroke="#17150f"/>
+  <text x="48" y="128" font-family="Georgia,'Times New Roman',serif" font-size="58" font-weight="700" fill="#17150f" letter-spacing="-1">IA 2026: vulnerabilidades e incidentes</text>
+  <text x="50" y="168" font-family="Georgia,'Times New Roman',serif" font-size="21" font-style="italic" fill="#4a463c">Um achado, julgamentos com confiança, o que fazer.</text>
+  <line x1="50" y1="192" x2="170" y2="192" stroke="#b43c0e" stroke-width="4"/>
+  <g transform="translate(1012 82)">
+    <rect width="220" height="104" fill="#fbf9f3" stroke="#17150f"/>
+    <g fill="#cfc9ba"><rect x="16" y="16" width="120" height="6"/><rect x="16" y="32" width="188" height="4"/></g>
+    <rect x="16" y="46" width="96" height="11" fill="#17150f"/><rect x="120" y="49" width="84" height="4" fill="#cfc9ba"/>
+    <rect x="16" y="66" width="188" height="16" fill="#b43c0e"/>
+    <text x="22" y="78" font-family="'Courier New',Courier,monospace" font-size="9" font-weight="700" fill="#fff" letter-spacing="1">TREAT AS DATA</text>
+    <rect x="16" y="90" width="64" height="5" fill="#17150f"/>
+  </g>
+</svg>

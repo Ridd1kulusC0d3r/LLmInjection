@@ -62,7 +62,7 @@ Each row is a record in [`data/threat-landscape-2026.json`](data/threat-landscap
 
 <!-- gen:landscape-evidence:start -->
 
-Of the **28 techniques** tracked, **22** have activity observed in the wild, **2** are tied to a disclosed vulnerability, **4** are demonstrated in research and **0** have no linked evidence yet (a gap in this repository, not a claim that they are theoretical). On the defensive side, **8 of 52** detections exist as rule files; the rest are specifications.
+Of the **28 techniques** tracked, **22** have activity observed in the wild, **2** are tied to a disclosed vulnerability, **4** are demonstrated in research and **0** have no linked evidence yet (a gap in this repository, not a claim that they are theoretical). On the defensive side, **11 of 57** detections exist as rule files; the rest are specifications.
 
 <!-- gen:landscape-evidence:end -->
 
@@ -122,11 +122,11 @@ New [source registry and ingestion guidance](docs/AI-INTELLIGENCE-SOURCES.md), [
 
 | Actors | Campaigns | Incidents | Vulnerabilities | Techniques | Sources |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| **75** | **99** | **69** | **32** | **28** | **182** |
+| **75** | **99** | **69** | **46** | **28** | **196** |
 
 | Test cases | Detections | Controls | Frameworks | Model families | Relationships | Ecosystem repos |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| **40** | **52** | **32** | **21** | **12** | **535** | **127** |
+| **40** | **57** | **32** | **21** | **12** | **563** | **127** |
 
 <!-- gen:stats:end -->
 
@@ -929,6 +929,20 @@ An optional **MCP v2 read-only server** exposes search, object lookup, graph tra
 | CrewAI JSON loader arbitrary local file read | `CVE-2026-2285` | path-traversal | high | 2026-03-30 |
 | CrewAI RAG tool server-side request forgery | `CVE-2026-2286` | server-side-request-forgery | critical | 2026-03-30 |
 | LiteLLM guardrail tester sandbox escape to code execution | `CVE-2026-40217`<br>`GHSA-wxxx-gvqv-xp7p`<br>`PYSEC-2026-2601` | sandbox-escape | high | 2026-04-10 |
+| Langflow unauthenticated code injection in /api/v1/validate/code | `CVE-2025-3248`<br>`GHSA-rvqx-wpfh-mfx7` | code-injection | critical | 2025-04-07 |
+| Langflow CORS and refresh-cookie chain to account takeover and code… | `CVE-2025-34291`<br>`GHSA-577h-p2hh-v4mv` | cors-misconfiguration | high | 2025-12-05 |
+| Langflow public flow build endpoint runs attacker-supplied flow data | `CVE-2026-33017`<br>`GHSA-vwmf-pq79-vjvx` | code-injection | critical | 2026-03-20 |
+| Langflow exec_globals inclusion leads to unauthenticated code… | `CVE-2026-0770`<br>`GHSA-g22f-v6f7-2hrh` | code-injection | critical | 2026-01-23 |
+| Langflow /api/v1/responses IDOR runs another user's flow | `CVE-2026-55255`<br>`GHSA-qrpv-q767-xqq2` | idor | high | 2026-06-23 |
+| IBM Langflow OSS auto_login and validate/code chain to… | `CVE-2026-9198` | missing-authentication | critical | 2026-07-17 |
+| MLflow webhook test endpoint follows redirects past URL validation… | `CVE-2026-64849`<br>`GHSA-7gwp-5pfp-969j` | ssrf | critical | 2026-08-17 |
+| Ray dashboard browser-origin guard bypass to code execution | `CVE-2025-62593`<br>`GHSA-q279-jhrf-cc6v` | csrf | critical | 2025-11-26 |
+| Starlette Host header desynchronises request.url from the routed path… | `CVE-2026-48710`<br>`GHSA-86qp-5c8j-p5mr` | request-smuggling | medium | 2026-05-26 |
+| n8n workflow expression evaluation escapes to code execution | `CVE-2025-68613`<br>`GHSA-v98v-ff95-f3cp` | code-injection | critical | 2025-12-19 |
+| mcp-server-git --repository restriction not enforced on tool calls | `CVE-2025-68145`<br>`GHSA-j22h-9j4x-23w5` | path-traversal | high | 2025-12-17 |
+| Cursor creates new workspace dotfiles without approval (CurXecute) | `CVE-2025-54135`<br>`GHSA-4cxx-hrm3-49rm` | prompt-injection-to-rce | high | 2025-08-05 |
+| CrewAI CodeInterpreter falls back to SandboxPython when Docker is… | `CVE-2026-2275` | sandbox-escape | critical | 2026-03-30 |
+| CrewAI does not re-check Docker at runtime before falling back to the… | `CVE-2026-2287` | sandbox-escape | critical | 2026-03-30 |
 
 <!-- gen:vulnerabilities:end -->
 
@@ -1119,6 +1133,11 @@ telemetry + detection
 | `DET-AI-050` | **Service Principal Abuse After Agentic Access (Secret Guessing, Self-Granted Roles, Resource Fan-Out)** | cloud-identity | high | specification |
 | `DET-AI-051` | **Self-Service Sign-Up Abuse Followed by Discovery** | cloud-identity | medium | specification |
 | `DET-AI-052` | **Offensive Agent Console or Backdoored Agent Image Inside the Network** | endpoint | high | specification |
+| `DET-AI-053` | **AI Service or Gateway Process Spawns a Shell or Network Utility** | endpoint | critical | specification |
+| `DET-AI-054` | **Python Startup .pth File Created Outside a Known Package Install** | endpoint | critical | specification |
+| `DET-AI-055` | **Malformed Host Header Reaching a Starlette or FastAPI AI Service** | network | high | specification |
+| `DET-AI-056` | **Unauthenticated or Unexpected Call to an AI Platform Admin, Test or Code Endpoint** | network | high | specification |
+| `DET-AI-057` | **MLflow Webhook Test Followed by Egress to Metadata or Internal Address** | network | critical | specification |
 
 <!-- gen:detections:end -->
 
@@ -1219,7 +1238,7 @@ Every intelligence item should answer:
 
 | Grade | Class | Sources |
 |---|---|---|
-| **A** | Primary or authoritative | 158 |
+| **A** | Primary or authoritative | 172 |
 | **B** | Strong secondary | 10 |
 | **C** | Reputable press | 9 |
 | **D** | Community | 5 |

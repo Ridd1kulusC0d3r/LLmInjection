@@ -5920,5 +5920,314 @@
     "evidence_sources": [
       "SRC-THREATDEFENCE-ARTEX-DETECTIONS"
     ]
+  },
+  {
+    "id": "REL-536",
+    "type": "relationship",
+    "source": "VULN-LANGFLOW-CVE-2025-3248",
+    "relationship": "demonstrates",
+    "target": "LLMI-T024",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-NVD-CVE-2025-3248"
+    ]
+  },
+  {
+    "id": "REL-537",
+    "type": "relationship",
+    "source": "VULN-LANGFLOW-CVE-2025-34291",
+    "relationship": "demonstrates",
+    "target": "LLMI-T024",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-NVD-CVE-2025-34291"
+    ]
+  },
+  {
+    "id": "REL-538",
+    "type": "relationship",
+    "source": "VULN-LANGFLOW-CVE-2025-34291",
+    "relationship": "demonstrates",
+    "target": "LLMI-T016",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-NVD-CVE-2025-34291"
+    ]
+  },
+  {
+    "id": "REL-539",
+    "type": "relationship",
+    "source": "VULN-LANGFLOW-CVE-2026-33017",
+    "relationship": "demonstrates",
+    "target": "LLMI-T024",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-NVD-CVE-2026-33017"
+    ]
+  },
+  {
+    "id": "REL-540",
+    "type": "relationship",
+    "source": "VULN-LANGFLOW-CVE-2026-0770",
+    "relationship": "demonstrates",
+    "target": "LLMI-T024",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-NVD-CVE-2026-0770"
+    ]
+  },
+  {
+    "id": "REL-541",
+    "type": "relationship",
+    "source": "VULN-LANGFLOW-CVE-2026-55255",
+    "relationship": "demonstrates",
+    "target": "LLMI-T024",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-NVD-CVE-2026-55255"
+    ]
+  },
+  {
+    "id": "REL-542",
+    "type": "relationship",
+    "source": "VULN-LANGFLOW-CVE-2026-55255",
+    "relationship": "demonstrates",
+    "target": "LLMI-T008",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-NVD-CVE-2026-55255"
+    ]
+  },
+  {
+    "id": "REL-543",
+    "type": "relationship",
+    "source": "VULN-LANGFLOW-CVE-2026-9198",
+    "relationship": "demonstrates",
+    "target": "LLMI-T024",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-NVD-CVE-2026-9198"
+    ]
+  },
+  {
+    "id": "REL-544",
+    "type": "relationship",
+    "source": "VULN-MLFLOW-CVE-2026-64849",
+    "relationship": "demonstrates",
+    "target": "LLMI-T024",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-NVD-CVE-2026-64849"
+    ]
+  },
+  {
+    "id": "REL-545",
+    "type": "relationship",
+    "source": "VULN-RAY-CVE-2025-62593",
+    "relationship": "demonstrates",
+    "target": "LLMI-T024",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-NVD-CVE-2025-62593"
+    ]
+  },
+  {
+    "id": "REL-546",
+    "type": "relationship",
+    "source": "VULN-STARLETTE-CVE-2026-48710",
+    "relationship": "demonstrates",
+    "target": "LLMI-T024",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-NVD-CVE-2026-48710"
+    ]
+  },
+  {
+    "id": "REL-547",
+    "type": "relationship",
+    "source": "VULN-N8N-CVE-2025-68613",
+    "relationship": "demonstrates",
+    "target": "LLMI-T024",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-NVD-CVE-2025-68613"
+    ]
+  },
+  {
+    "id": "REL-548",
+    "type": "relationship",
+    "source": "VULN-N8N-CVE-2025-68613",
+    "relationship": "demonstrates",
+    "target": "LLMI-T008",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-NVD-CVE-2025-68613"
+    ]
+  },
+  {
+    "id": "REL-549",
+    "type": "relationship",
+    "source": "VULN-MCP-SERVER-GIT-CVE-2025-68145",
+    "relationship": "demonstrates",
+    "target": "LLMI-T008",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-NVD-CVE-2025-68145"
+    ]
+  },
+  {
+    "id": "REL-550",
+    "type": "relationship",
+    "source": "VULN-CURSOR-CVE-2025-54135",
+    "relationship": "demonstrates",
+    "target": "LLMI-T018",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-NVD-CVE-2025-54135"
+    ]
+  },
+  {
+    "id": "REL-551",
+    "type": "relationship",
+    "source": "VULN-CURSOR-CVE-2025-54135",
+    "relationship": "demonstrates",
+    "target": "LLMI-T002",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-NVD-CVE-2025-54135"
+    ]
+  },
+  {
+    "id": "REL-552",
+    "type": "relationship",
+    "source": "VULN-CREWAI-CVE-2026-2275",
+    "relationship": "demonstrates",
+    "target": "LLMI-T008",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-NVD-CVE-2026-2275"
+    ]
+  },
+  {
+    "id": "REL-553",
+    "type": "relationship",
+    "source": "VULN-CREWAI-CVE-2026-2275",
+    "relationship": "demonstrates",
+    "target": "LLMI-T013",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-NVD-CVE-2026-2275"
+    ]
+  },
+  {
+    "id": "REL-554",
+    "type": "relationship",
+    "source": "VULN-CREWAI-CVE-2026-2287",
+    "relationship": "demonstrates",
+    "target": "LLMI-T008",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-NVD-CVE-2026-2287"
+    ]
+  },
+  {
+    "id": "REL-555",
+    "type": "relationship",
+    "source": "VULN-CREWAI-CVE-2026-2287",
+    "relationship": "demonstrates",
+    "target": "LLMI-T013",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-NVD-CVE-2026-2287"
+    ]
+  },
+  {
+    "id": "REL-556",
+    "type": "relationship",
+    "source": "DET-AI-053",
+    "relationship": "detects",
+    "target": "LLMI-T024",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-CISA-KEV-CATALOG"
+    ]
+  },
+  {
+    "id": "REL-557",
+    "type": "relationship",
+    "source": "DET-AI-053",
+    "relationship": "detects",
+    "target": "LLMI-T016",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-CISA-KEV-CATALOG"
+    ]
+  },
+  {
+    "id": "REL-558",
+    "type": "relationship",
+    "source": "DET-AI-054",
+    "relationship": "detects",
+    "target": "LLMI-T011",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-GHSA-LITELLM-MALWARE",
+      "SRC-WIZ-TEAMPCP"
+    ]
+  },
+  {
+    "id": "REL-559",
+    "type": "relationship",
+    "source": "DET-AI-055",
+    "relationship": "detects",
+    "target": "LLMI-T024",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-CISA-KEV-CATALOG"
+    ]
+  },
+  {
+    "id": "REL-560",
+    "type": "relationship",
+    "source": "DET-AI-056",
+    "relationship": "detects",
+    "target": "LLMI-T024",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-CISA-KEV-CATALOG"
+    ]
+  },
+  {
+    "id": "REL-561",
+    "type": "relationship",
+    "source": "DET-AI-056",
+    "relationship": "detects",
+    "target": "LLMI-T016",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-CISA-KEV-CATALOG"
+    ]
+  },
+  {
+    "id": "REL-562",
+    "type": "relationship",
+    "source": "DET-AI-056",
+    "relationship": "detects",
+    "target": "LLMI-T008",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-CISA-KEV-CATALOG"
+    ]
+  },
+  {
+    "id": "REL-563",
+    "type": "relationship",
+    "source": "DET-AI-057",
+    "relationship": "detects",
+    "target": "LLMI-T024",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-CISA-KEV-CATALOG"
+    ]
   }
 ]

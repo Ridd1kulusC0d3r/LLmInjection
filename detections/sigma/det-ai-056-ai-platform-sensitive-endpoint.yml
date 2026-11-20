@@ -1,0 +1,48 @@
+title: Request to an AI Platform Admin, Test or Code Endpoint
+id: d583503a-e265-43d7-92c1-eb1f281c51a3
+status: experimental
+description: >
+  Detects requests to AI platform routes that run code, reach MCP tools or change keys and roles. These routes
+  were behind 2026 KEV entries for LiteLLM (CVE-2026-42271, CVE-2026-40217), Langflow (CVE-2025-3248,
+  CVE-2026-33017, CVE-2026-55255, CVE-2026-9198) and nginx-ui (CVE-2026-33032). Correlate with the
+  authentication state from the application log; any hit outside a change window deserves review.
+references:
+  - https://www.cisa.gov/known-exploited-vulnerabilities-catalog
+  - https://nvd.nist.gov/vuln/detail/CVE-2026-33032
+  - https://github.com/Ridd1kulusC0d3r/LLmInjection
+author: LLMInjection
+date: 2026-11-20
+tags:
+  - attack.initial-access
+  - attack.t1190
+  - llminjection.det-ai-056
+  - llminjection.llmi-t024
+  - llminjection.llmi-t016
+logsource:
+  category: webserver
+detection:
+  selection_litellm:
+    cs-method: 'POST'
+    cs-uri-stem|contains:
+      - '/mcp-rest/test/connection'
+      - '/mcp-rest/test/tools/list'
+      - '/guardrails/test_custom_code'
+      - '/key/service-account/generate'
+      - '/user/bulk_update'
+  selection_langflow:
+    cs-uri-stem|contains:
+      - '/api/v1/validate/code'
+      - '/api/v1/build_public_tmp/'
+      - '/api/v1/auto_login'
+  selection_flowise:
+    cs-uri-stem|contains: '/api/v1/node-load-method/customMCP'
+  selection_nginx_ui:
+    cs-uri-stem|contains:
+      - '/mcp_message'
+      - '/api/backup'
+  condition: 1 of selection_*
+falsepositives:
+  - Administrators testing MCP servers or guardrails during a recorded change window.
+  - Intentionally public Langflow flows; allowlist by flow ID.
+  - Route names differ between versions; check them against your deployed version.
+level: high

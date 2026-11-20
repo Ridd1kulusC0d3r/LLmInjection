@@ -6,20 +6,20 @@
 |---|---|
 | Category | agentic |
 | Maturity | **observed in the wild** |
-| Priority | 2 of 16 (maturity weight times the layers still missing) |
+| Priority | 0 of 16 (maturity weight times the layers still missing) |
 | Frameworks | [ASI02:2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/) OWASP Agentic Top 10 2026 (exact), [AML.T0053](https://atlas.mitre.org/techniques/AML.T0053) ATLAS (exact), [AML.T0086](https://atlas.mitre.org/techniques/AML.T0086) ATLAS (related), [AML.T0101](https://atlas.mitre.org/techniques/AML.T0101) ATLAS (related), [AML.T0100](https://atlas.mitre.org/techniques/AML.T0100) ATLAS (related), [AML.T0085.001](https://atlas.mitre.org/techniques/AML.T0085.001) ATLAS (related) |
 
 ## Where it stands
 
 | Layer | Status |
 |---|---|
-| Evidence | 13 record(s), 5 publisher(s), best grade A, newest 2026-07-08 |
+| Evidence | 18 record(s), 6 publisher(s), best grade A, newest 2026-07-08 |
 | Safe tests | 6 |
-| Detections | 0 rule file(s), 3 specification(s) |
+| Detections | 1 rule file(s), 3 specification(s) |
 | Controls | 2 |
 | Benchmarks | 3 |
 
-**Next step:** Turn DET-AI-003 (Agent Privilege Boundary Crossing) from a specification into a rule file, starting with the telemetry listed in section 3.
+**Next step:** All layers exist. Re-verify after any change to the model, prompt, tools or policy.
 
 ## 1. Understand it
 
@@ -32,11 +32,16 @@ What the repository links to it:
 - 2025-07-13 · [Code to Deploy Destructive AI Agent Discovered in Amazon Q VS Code Extension (AML.CS0047)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-ATLAS-CS0047) (atlas-incident, high)
 - 2025-05-24 · [AI ClickFix: Hijacking Computer-Use Agents Using ClickFix (AML.CS0055)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-ATLAS-CS0055) (atlas-exercise, confirmed)
 - 2026-07-08 · [Autonomous OpenAI Evaluation Agents Compromise Hugging Face Infrastructure (AML.CS0068)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-ATLAS-CS0068) (atlas-incident, high)
+- 2026-03-30 · [CrewAI CodeInterpreter falls back to SandboxPython when Docker is unreachable](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-CREWAI-CVE-2026-2275) (sandbox-escape, confirmed)
 - 2026-03-30 · [CrewAI JSON loader arbitrary local file read](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-CREWAI-CVE-2026-2285) (path-traversal, confirmed)
 - 2026-03-30 · [CrewAI RAG tool server-side request forgery](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-CREWAI-CVE-2026-2286) (server-side-request-forgery, confirmed)
+- 2026-03-30 · [CrewAI does not re-check Docker at runtime before falling back to the sandbox](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-CREWAI-CVE-2026-2287) (sandbox-escape, confirmed)
+- 2026-06-23 · [Langflow /api/v1/responses IDOR runs another user's flow](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-LANGFLOW-CVE-2026-55255) (idor, confirmed)
 - 2025-12-17 · [mcp-server-git path traversal in git_init](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-MCP-SERVER-GIT-CVE-2025-68143) (path-traversal, confirmed)
 - 2025-12-17 · [mcp-server-git argument injection in git_diff and git_checkout](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-MCP-SERVER-GIT-CVE-2025-68144) (argument-injection, confirmed)
+- 2025-12-17 · [mcp-server-git --repository restriction not enforced on tool calls](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-MCP-SERVER-GIT-CVE-2025-68145) (path-traversal, confirmed)
 - 2026-04-15 · [MCP STDIO configuration command injection across AI frameworks](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-MCP-STDIO-OX-2026) (command-injection, high)
+- 2025-12-19 · [n8n workflow expression evaluation escapes to code execution](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-N8N-CVE-2025-68613) (code-injection, confirmed)
 - 2026-05-07 · [Semantic Kernel SessionsPythonPlugin arbitrary file access](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-SK-CVE-2026-25592) (sandbox-escape, confirmed)
 - 2026-05-07 · [Semantic Kernel In-Memory Vector Store filter injection to RCE](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-SK-CVE-2026-26030) (remote-code-execution, confirmed)
 - 2026-01-12 · [Zen MCP Server path traversal](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-ZEN-MCP-CVE-2025-66689) (path-traversal, confirmed)
@@ -145,6 +150,13 @@ The runner has plan and mock adapters only: it does not call your system. To run
 - **Telemetry:** `agent session tool_use events with arguments (hashed or canaried)`, `file read events by agent with path classification`, `tool capability classification (network sink vs local)`, `argument length and padding anomalies`
 - **Implementation:** specification only. Collect the telemetry above first; if you cannot, the detection cannot work yet.
 
+### DET-AI-056 · Unauthenticated or Unexpected Call to an AI Platform Admin, Test or Code Endpoint
+
+- **Severity:** high
+- **Hypothesis:** A request without an authenticated session, or outside a change window, reaches an AI platform route that runs code or reaches tools: LiteLLM /mcp-rest/test/*, /guardrails/test_custom_code and key/role changes; Flowise customMCP node load; Langflow public flow build, /api/v1/validate/code, /api/v1/auto_login and /api/v1/responses; nginx-ui /mcp_message and /api/backup. These are the routes behind the 2026 KEV entries for these products.
+- **Telemetry:** `reverse proxy or WAF logs`, `AI gateway audit log`
+- **Implementation:** rule file(s): [sigma](../../detections/sigma/det-ai-056-ai-platform-sensitive-endpoint.yml). Experimental and not run against real telemetry.
+
 ## 4. Prevent it
 
 - **Contextual Tool Authorization** (`CTRL-CONTEXTUAL-AUTHZ`): Evaluate identity, requested capability, resource and context before each tool action.
@@ -160,7 +172,7 @@ The runner has plan and mock adapters only: it does not call your system. To run
 
 ## 6. Limits of this page
 
-- 3 of 3 detection(s) are specifications, not rules. They say what to look for, not how to query it. Nothing here has been run against real telemetry.
+- 3 of 4 detection(s) are specifications, not rules. They say what to look for, not how to query it. Nothing here has been run against real telemetry.
 - The tests use benign markers and synthetic data. A pass in a lab is not a security rating for a production system.
 - Ecosystem tools and benchmarks help you test and measure. They never support a claim that an actor used the technique.
 

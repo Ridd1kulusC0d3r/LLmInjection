@@ -13,7 +13,7 @@
 
 | Layer | Status |
 |---|---|
-| Evidence | 7 record(s), 4 publisher(s), best grade A, newest 2026 |
+| Evidence | 9 record(s), 5 publisher(s), best grade A, newest 2026 |
 | Safe tests | 1 |
 | Detections | 1 rule file(s), 0 specification(s) |
 | Controls | 0 |
@@ -34,6 +34,8 @@ What the repository links to it:
 - 2025-06 · [PROMPTFLUX: experimental VBScript dropper that rewrites itself via the Gemini API](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-PROMPTFLUX) (malware, confirmed)
 - 2026 · [PROMPTSPY Android backdoor with a Gemini UI agent](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-PROMPTSPY) (malware, confirmed)
 - 2025 · [QUIETVAULT: JavaScript credential stealer using on-host AI CLI tools to hunt secrets](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-QUIETVAULT) (malware, confirmed)
+- 2026-03-30 · [CrewAI CodeInterpreter falls back to SandboxPython when Docker is unreachable](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-CREWAI-CVE-2026-2275) (sandbox-escape, confirmed)
+- 2026-03-30 · [CrewAI does not re-check Docker at runtime before falling back to the sandbox](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-CREWAI-CVE-2026-2287) (sandbox-escape, confirmed)
 
 Actors whose campaigns use it: APT28, GTG-15001. Vendor labels are kept as published and never merged without evidence.
 

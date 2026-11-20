@@ -1,7 +1,7 @@
 {
   "meta": {
     "schema_version": "1.0",
-    "last_run": "2026-11-20T14:56:29Z",
+    "last_run": "2026-11-20T17:59:45Z",
     "policy": "candidate-only; no automatic promotion into official intelligence datasets",
     "statuses": [
       "candidate",
@@ -6570,6 +6570,1955 @@
       "review": {
         "decision": "promoted to INCIDENT-VIACONNECT-EDR-TELEMETRY-INJECTION (research, medium: sponsored press only)",
         "notes": "Read on 2026-11-20."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-08",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "D",
+      "kind": "digest-landscape",
+      "title": "awesome-ai-agent-attacks (GitHub): Cronologia e estatísticas de incidentes de agentes",
+      "url": "https://github.com/webpro255/awesome-ai-agent-attacks",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 45,
+      "matched_terms": [],
+      "summary": "[LLMI-20261120-08] seal: original; backfill. Source #1 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Panorama e cronologias, type Agregador. Consulted as: Lida na íntegra. Cited in report sections 1, 3, 5, 6, 11. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-09",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "D",
+      "kind": "digest-landscape",
+      "title": "host0 — State of AI agent security 2026: CVEs por trimestre, KEV de IA, medições de defesas",
+      "url": "https://host0.ai/blog/state-of-ai-agent-security-2026",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 45,
+      "matched_terms": [],
+      "summary": "[LLMI-20261120-09] seal: original; backfill. Source #2 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Panorama e cronologias, type Agregador. Consulted as: Lida na íntegra. Cited in report sections 1, 3, 5, 11. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-10",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "D",
+      "kind": "digest-landscape",
+      "title": "Aisty — The AI Incident Timeline: Linha do tempo de incidentes",
+      "url": "https://www.aisty.ai/papers/ai-incident-timeline/",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 45,
+      "matched_terms": [],
+      "summary": "[LLMI-20261120-10] seal: original; backfill. Source #3 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Panorama e cronologias, type Agregador. Consulted as: Lida na íntegra. Cited in report sections 5. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-11",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "D",
+      "kind": "digest-landscape",
+      "title": "CyberDesserts — AI Agent Security Risks 2026: Incidentes e framework de hardening",
+      "url": "https://blog.cyberdesserts.com/ai-agent-security-risks/",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 45,
+      "matched_terms": [],
+      "summary": "[LLMI-20261120-11] seal: original; backfill. Source #4 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Panorama e cronologias, type Agregador. Consulted as: Lida na íntegra. Cited in report sections 3, 5, 10. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-12",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "C",
+      "kind": "digest-landscape",
+      "title": "Help Net Security: Relatório OWASP de IA agêntica",
+      "url": "https://www.helpnetsecurity.com/2026/06/11/owasp-prompt-injection-ai-security-failures/",
+      "published": "2026-06-11",
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 60,
+      "matched_terms": [],
+      "summary": "[LLMI-20261120-12] seal: original; backfill. Source #5 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Panorama e cronologias, type Imprensa especializada. Consulted as: Lida na íntegra. Cited in report sections 3, 7, 11. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-13",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "D",
+      "kind": "digest-landscape",
+      "title": "PointGuard AI — AI Security Incident Tracker: Rastreador de incidentes",
+      "url": "https://www.pointguardai.com/ai-security-incident-tracker",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 25,
+      "matched_terms": [],
+      "summary": "[LLMI-20261120-13] seal: secondary; backfill. Source #6 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Panorama e cronologias, type Agregador. Consulted as: Resumo de busca. Cited in report sections 5. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-14",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "B",
+      "kind": "digest-landscape",
+      "title": "Check Point Research: Digest de ameaças de IA mar–abr 2026",
+      "url": "https://research.checkpoint.com/2026/ai-threat-landscape-digest-march-april-2026/",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 55,
+      "matched_terms": [],
+      "summary": "[LLMI-20261120-14] seal: secondary; backfill. Source #7 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Panorama e cronologias, type Pesquisa de fornecedor. Consulted as: Resumo de busca. Cited in report sections 5, 6. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-15",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "B",
+      "kind": "digest-vulnerability",
+      "title": "Cloud Security Alliance: CVE-2026-42271 análise",
+      "url": "https://labs.cloudsecurityalliance.org/research/csa-research-note-litellm-cve-2026-42271-ai-gateway-exploita/",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 75,
+      "matched_terms": [
+        "LLMI-T016",
+        "LLMI-T024"
+      ],
+      "summary": "[LLMI-20261120-15] seal: original; backfill. Source #9 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category LiteLLM, type Nota de pesquisa. Consulted as: Lida na íntegra. Cited in report sections 4, 5, 8, 10. Access: 2026-11-20.",
+      "identifiers": [
+        "CVE-2026-42271"
+      ],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-16",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "B",
+      "kind": "digest-research",
+      "title": "Penligent: Cadeia de vulnerabilidades e linha do tempo",
+      "url": "https://www.penligent.ai/hackinglabs/litellm-vulnerability-chain/",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 75,
+      "matched_terms": [
+        "LLMI-T016",
+        "LLMI-T024"
+      ],
+      "summary": "[LLMI-20261120-16] seal: original; backfill. Source #10 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category LiteLLM, type Pesquisa de fornecedor. Consulted as: Lida na íntegra. Cited in report sections 4, 5, 8, 10. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-17",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "D",
+      "kind": "digest-research",
+      "title": "infosec.ge: Duas entradas KEV em 60 dias",
+      "url": "https://www.infosec.ge/blog/litellm-ai-infrastructure-cve-pattern-2026/",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 25,
+      "matched_terms": [
+        "LLMI-T016",
+        "LLMI-T024"
+      ],
+      "summary": "[LLMI-20261120-17] seal: secondary; backfill. Source #11 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category LiteLLM, type Blog. Consulted as: Resumo de busca. Cited in report sections 4, 5, 8, 10. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-18",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "D",
+      "kind": "digest-research",
+      "title": "danilchenko.dev: Seis CVEs e correções",
+      "url": "https://www.danilchenko.dev/posts/litellm-vulnerability/",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 25,
+      "matched_terms": [
+        "LLMI-T016",
+        "LLMI-T024"
+      ],
+      "summary": "[LLMI-20261120-18] seal: secondary; backfill. Source #14 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category LiteLLM, type Blog. Consulted as: Resumo de busca. Cited in report sections 4, 5, 8, 10. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-19",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "A",
+      "kind": "digest-vulnerability",
+      "title": "NVD: CVE-2026-59822",
+      "url": "https://nvd.nist.gov/vuln/detail/cve-2026-59822",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "LLMI-T016",
+        "LLMI-T024"
+      ],
+      "summary": "[LLMI-20261120-19] seal: secondary; backfill. Source #16 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category LiteLLM, type Fonte primária. Consulted as: Resumo de busca. Cited in report sections 4, 5, 8, 10. Access: 2026-11-20.",
+      "identifiers": [
+        "CVE-2026-59822"
+      ],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-20",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "C",
+      "kind": "digest-research",
+      "title": "eSecurity Planet: Lote KEV de 02/09/2026",
+      "url": "https://www.esecurityplanet.com/news/news-cisa-exploited-ai-flaws/",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 40,
+      "matched_terms": [
+        "LLMI-T016",
+        "LLMI-T024"
+      ],
+      "summary": "[LLMI-20261120-20] seal: secondary; backfill. Source #17 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category LiteLLM, type Imprensa especializada. Consulted as: Resumo de busca. Cited in report sections 4, 5, 8, 10. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-21",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "B",
+      "kind": "digest-research",
+      "title": "Snyk: Pacote PyPI 1.82.7/1.82.8",
+      "url": "https://snyk.io/articles/poisoned-security-scanner-backdooring-litellm",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 55,
+      "matched_terms": [
+        "LLMI-T016",
+        "LLMI-T024"
+      ],
+      "summary": "[LLMI-20261120-21] seal: secondary; backfill. Source #18 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category LiteLLM, type Pesquisa de fornecedor. Consulted as: Resumo de busca. Cited in report sections 4, 5, 8, 10. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-22",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "B",
+      "kind": "digest-research",
+      "title": "Trend Micro: Pacote PyPI — análise TeamPCP",
+      "url": "https://www.trendmicro.com/en_gb/research/26/c/inside-litellm-supply-chain-compromise.html",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 55,
+      "matched_terms": [
+        "LLMI-T016",
+        "LLMI-T024"
+      ],
+      "summary": "[LLMI-20261120-22] seal: secondary; backfill. Source #19 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category LiteLLM, type Pesquisa de fornecedor. Consulted as: Resumo de busca. Cited in report sections 4, 5, 8, 10. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-23",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "A",
+      "kind": "digest-research",
+      "title": "BerriAI/litellm issue 24518: Pacote PyPI — IoCs",
+      "url": "https://github.com/BerriAI/litellm/issues/24518",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "LLMI-T016",
+        "LLMI-T024"
+      ],
+      "summary": "[LLMI-20261120-23] seal: secondary; backfill. Source #20 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category LiteLLM, type Fonte primária. Consulted as: Resumo de busca. Cited in report sections 4, 5, 8, 10. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-24",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "B",
+      "kind": "digest-research",
+      "title": "JFrog Security Research: Pacote PyPI",
+      "url": "https://research.jfrog.com/post/litellm-compromised-teampcp/",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 55,
+      "matched_terms": [
+        "LLMI-T016",
+        "LLMI-T024"
+      ],
+      "summary": "[LLMI-20261120-24] seal: secondary; backfill. Source #21 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category LiteLLM, type Pesquisa de fornecedor. Consulted as: Resumo de busca. Cited in report sections 4, 5, 8, 10. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-25",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "C",
+      "kind": "digest-research",
+      "title": "Security Affairs: Pacote PyPI",
+      "url": "https://securityaffairs.com/189948/hacking/malicious-litellm-versions-linked-to-teampcp-supply-chain-attack.html",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 40,
+      "matched_terms": [
+        "LLMI-T016",
+        "LLMI-T024"
+      ],
+      "summary": "[LLMI-20261120-25] seal: secondary; backfill. Source #22 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category LiteLLM, type Imprensa especializada. Consulted as: Resumo de busca. Cited in report sections 4, 5, 8, 10. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-26",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "A",
+      "kind": "digest-vulnerability",
+      "title": "CCB Bélgica: CVE-2026-48710 BadHost",
+      "url": "https://ccb.belgium.be/advisories/warning-vulnerability-starlette-framework-and-related-frameworks-fastapi-exposes",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "LLMI-T024"
+      ],
+      "summary": "[LLMI-20261120-26] seal: secondary; backfill. Source #23 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Starlette, type CERT. Consulted as: Resumo de busca. Cited in report sections 4, 10. Access: 2026-11-20.",
+      "identifiers": [
+        "CVE-2026-48710"
+      ],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-27",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "A",
+      "kind": "digest-vulnerability",
+      "title": "OSTIF: CVE-2026-48710 divulgação",
+      "url": "https://ostif.org/?p=4293",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "LLMI-T024"
+      ],
+      "summary": "[LLMI-20261120-27] seal: secondary; backfill. Source #24 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Starlette, type Fonte primária. Consulted as: Resumo de busca. Cited in report sections 4, 10. Access: 2026-11-20.",
+      "identifiers": [
+        "CVE-2026-48710"
+      ],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-28",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "B",
+      "kind": "digest-vulnerability",
+      "title": "SonicWall Capture Labs: CVE-2025-59528 análise técnica",
+      "url": "https://www.sonicwall.com/blog/flowiseai-custom-mcp-node-remote-code-execution-",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 55,
+      "matched_terms": [
+        "LLMI-T024"
+      ],
+      "summary": "[LLMI-20261120-28] seal: secondary; backfill. Source #29 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Flowise, type Pesquisa de fornecedor. Consulted as: Resumo de busca. Cited in report sections 4, 10. Access: 2026-11-20.",
+      "identifiers": [
+        "CVE-2025-59528"
+      ],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-29",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "B",
+      "kind": "digest-vulnerability",
+      "title": "Cloud Security Alliance: CVE-2025-59528",
+      "url": "https://labs.cloudsecurityalliance.org/research/csa-research-note-flowise-cve-2025-59528-active-exploitation/",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 55,
+      "matched_terms": [
+        "LLMI-T024"
+      ],
+      "summary": "[LLMI-20261120-29] seal: secondary; backfill. Source #30 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Flowise, type Nota de pesquisa. Consulted as: Resumo de busca. Cited in report sections 4, 10. Access: 2026-11-20.",
+      "identifiers": [
+        "CVE-2025-59528"
+      ],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-30",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "A",
+      "kind": "digest-vulnerability",
+      "title": "Tenable TRA-2024-33: CVE-2024-8181 advisory",
+      "url": "https://tenable.com/security/research/tra-2024-33",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "LLMI-T024"
+      ],
+      "summary": "[LLMI-20261120-30] seal: secondary; backfill. Source #33 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Flowise, type Fonte primária. Consulted as: Resumo de busca. Cited in report sections 4, 10. Access: 2026-11-20.",
+      "identifiers": [
+        "CVE-2024-8181"
+      ],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-31",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "B",
+      "kind": "digest-vulnerability",
+      "title": "Rapid7: CVE-2026-33032",
+      "url": "https://www.rapid7.com/blog/post/etr-cve-2026-33032-nginx-ui-missing-mcp-authentication",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 55,
+      "matched_terms": [
+        "LLMI-T024"
+      ],
+      "summary": "[LLMI-20261120-31] seal: secondary; backfill. Source #36 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category nginx-ui, type Pesquisa de fornecedor. Consulted as: Resumo de busca. Cited in report sections 4, 8, 10. Access: 2026-11-20.",
+      "identifiers": [
+        "CVE-2026-33032"
+      ],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-32",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "A",
+      "kind": "digest-vulnerability",
+      "title": "CSA Singapura AL-2026-039: CVE-2026-33032",
+      "url": "https://www.csa.gov.sg/alerts-and-advisories/alerts/al-2026-039/",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "LLMI-T024"
+      ],
+      "summary": "[LLMI-20261120-32] seal: secondary; backfill. Source #39 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category nginx-ui, type CERT. Consulted as: Resumo de busca. Cited in report sections 4, 8, 10. Access: 2026-11-20.",
+      "identifiers": [
+        "CVE-2026-33032"
+      ],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-33",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "B",
+      "kind": "digest-vulnerability",
+      "title": "Cloud Security Alliance: CVE-2026-33032",
+      "url": "https://labs.cloudsecurityalliance.org/research/csa-research-note-nginx-ui-mcp-cve-20260416-csa-styled/",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 55,
+      "matched_terms": [
+        "LLMI-T024"
+      ],
+      "summary": "[LLMI-20261120-33] seal: secondary; backfill. Source #40 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category nginx-ui, type Nota de pesquisa. Consulted as: Resumo de busca. Cited in report sections 4, 8, 10. Access: 2026-11-20.",
+      "identifiers": [
+        "CVE-2026-33032"
+      ],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-34",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "A",
+      "kind": "digest-vulnerability",
+      "title": "CERT/CC VU#221883: CVE-2026-2275/2285/2286/2287",
+      "url": "https://kb.cert.org/vuls/id/221883",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "LLMI-T008"
+      ],
+      "summary": "[LLMI-20261120-34] seal: secondary; backfill. Source #42 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category CrewAI, type CERT. Consulted as: Resumo de busca. Cited in report sections 4, 10. Access: 2026-11-20.",
+      "identifiers": [
+        "CVE-2026-2275"
+      ],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-35",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "A",
+      "kind": "digest-vulnerability",
+      "title": "JFrog: CVE-2025-6514 pesquisa original",
+      "url": "https://jfrog.com/blog/2025-6514-critical-mcp-remote-rce-vulnerability/",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "LLMI-T021"
+      ],
+      "summary": "[LLMI-20261120-35] seal: secondary; backfill. Source #50 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category mcp-remote, type Fonte primária. Consulted as: Resumo de busca. Cited in report sections 4, 13 (consultadas na revisão). Access: 2026-11-20.",
+      "identifiers": [
+        "CVE-2025-6514"
+      ],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-36",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "A",
+      "kind": "digest-vulnerability",
+      "title": "Oligo Security: CVE-2025-49596 pesquisa original",
+      "url": "https://www.oligo.security/blog/critical-rce-vulnerability-in-anthropic-mcp-inspector-cve-2025-49596",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "LLMI-T024"
+      ],
+      "summary": "[LLMI-20261120-36] seal: secondary; backfill. Source #53 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category MCP Inspector, type Fonte primária. Consulted as: Resumo de busca. Cited in report sections 4, 13 (consultadas na revisão). Access: 2026-11-20.",
+      "identifiers": [
+        "CVE-2025-49596"
+      ],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-37",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "B",
+      "kind": "digest-vulnerability",
+      "title": "Tenable Research: CVE-2025-49596",
+      "url": "https://www.tenable.com/blog/how-tenable-research-discovered-a-critical-remote-code-execution-vulnerability-on-anthropic",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 55,
+      "matched_terms": [
+        "LLMI-T024"
+      ],
+      "summary": "[LLMI-20261120-37] seal: secondary; backfill. Source #54 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category MCP Inspector, type Pesquisa de fornecedor. Consulted as: Resumo de busca. Cited in report sections 4, 13 (consultadas na revisão). Access: 2026-11-20.",
+      "identifiers": [
+        "CVE-2025-49596"
+      ],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-38",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "B",
+      "kind": "digest-vulnerability",
+      "title": "Recorded Future: CVE-2025-49596",
+      "url": "https://www.recordedfuture.com/blog/anthropic-mcp-inspector-cve-2025-49596",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 55,
+      "matched_terms": [
+        "LLMI-T024"
+      ],
+      "summary": "[LLMI-20261120-38] seal: secondary; backfill. Source #55 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category MCP Inspector, type Pesquisa de fornecedor. Consulted as: Resumo de busca. Cited in report sections 4, 13 (consultadas na revisão). Access: 2026-11-20.",
+      "identifiers": [
+        "CVE-2025-49596"
+      ],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-39",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "C",
+      "kind": "digest-research",
+      "title": "SecurityWeek: Correção 2025.12.18",
+      "url": "https://www.securityweek.com/anthropic-mcp-server-flaws-lead-to-code-execution-data-exposure/",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 40,
+      "matched_terms": [
+        "LLMI-T008"
+      ],
+      "summary": "[LLMI-20261120-39] seal: secondary; backfill. Source #60 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category mcp-server-git, type Imprensa especializada. Consulted as: Resumo de busca. Cited in report sections 4, 13 (consultadas na revisão). Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-40",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "A",
+      "kind": "digest-vulnerability",
+      "title": "Check Point Research: CVE-2025-54136 MCPoison pesquisa original",
+      "url": "https://research.checkpoint.com/2025/cursor-vulnerability-mcpoison/",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "LLMI-T018"
+      ],
+      "summary": "[LLMI-20261120-40] seal: secondary; backfill. Source #61 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Cursor, type Fonte primária. Consulted as: Resumo de busca. Cited in report sections 4, 13 (consultadas na revisão). Access: 2026-11-20.",
+      "identifiers": [
+        "CVE-2025-54136"
+      ],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-41",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "B",
+      "kind": "digest-vulnerability",
+      "title": "Tenable: CVE-2025-54135 e CVE-2025-54136 FAQ",
+      "url": "https://www.tenable.com/blog/faq-cve-2025-54135-cve-2025-54136-vulnerabilities-in-cursor-curxecute-mcpoison",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 55,
+      "matched_terms": [
+        "LLMI-T018"
+      ],
+      "summary": "[LLMI-20261120-41] seal: secondary; backfill. Source #63 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Cursor, type Pesquisa de fornecedor. Consulted as: Resumo de busca. Cited in report sections 4, 13 (consultadas na revisão). Access: 2026-11-20.",
+      "identifiers": [
+        "CVE-2025-54135",
+        "CVE-2025-54136"
+      ],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-42",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "A",
+      "kind": "digest-vulnerability",
+      "title": "Microsoft MSRC: CVE-2025-53773 advisory",
+      "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-53773",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "LLMI-T018"
+      ],
+      "summary": "[LLMI-20261120-42] seal: secondary; backfill. Source #64 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category GitHub Copilot, type Fonte primária. Consulted as: Resumo de busca. Cited in report sections 4, 13 (consultadas na revisão). Access: 2026-11-20.",
+      "identifiers": [
+        "CVE-2025-53773"
+      ],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-43",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "A",
+      "kind": "digest-vulnerability",
+      "title": "Embrace The Red: CVE-2025-53773 pesquisa original",
+      "url": "https://embracethered.com/blog/posts/2025/github-copilot-remote-code-execution-via-prompt-injection/",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "LLMI-T018"
+      ],
+      "summary": "[LLMI-20261120-43] seal: secondary; backfill. Source #65 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category GitHub Copilot, type Fonte primária. Consulted as: Resumo de busca. Cited in report sections 4, 13 (consultadas na revisão). Access: 2026-11-20.",
+      "identifiers": [
+        "CVE-2025-53773"
+      ],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-44",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "B",
+      "kind": "digest-vulnerability",
+      "title": "Field Effect: CVE-2025-32711 correção em maio de 2025",
+      "url": "https://fieldeffect.com/blog/critical-vulnerability-in-microsoft-365-copilot",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 55,
+      "matched_terms": [
+        "LLMI-T002",
+        "LLMI-T020"
+      ],
+      "summary": "[LLMI-20261120-44] seal: secondary; backfill. Source #68 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category M365 Copilot, type Pesquisa de fornecedor. Consulted as: Resumo de busca. Cited in report sections 4, 13 (consultadas na revisão). Access: 2026-11-20.",
+      "identifiers": [
+        "CVE-2025-32711"
+      ],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-45",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "A",
+      "kind": "digest-vulnerability",
+      "title": "Synopsys: CVE-2024-5184 advisory CyRC",
+      "url": "https://www.synopsys.com/blogs/software-security/cyrc-advisory-prompt-injection-emailgpt.html",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "LLMI-T002"
+      ],
+      "summary": "[LLMI-20261120-45] seal: secondary; backfill. Source #70 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category EmailGPT, type Fonte primária. Consulted as: Resumo de busca. Cited in report sections 4, 13 (consultadas na revisão). Access: 2026-11-20.",
+      "identifiers": [
+        "CVE-2024-5184"
+      ],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-46",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "A",
+      "kind": "digest-vulnerability",
+      "title": "huntr: CVE-2023-1177 relatório original",
+      "url": "https://huntr.dev/bounties/1fe8f21a-c438-4cba-9add-e8a5dab94e28",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "LLMI-T024"
+      ],
+      "summary": "[LLMI-20261120-46] seal: secondary; backfill. Source #72 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category MLflow, type Fonte primária. Consulted as: Resumo de busca. Cited in report sections 4, 13 (consultadas na revisão). Access: 2026-11-20.",
+      "identifiers": [
+        "CVE-2023-1177"
+      ],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-47",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "A",
+      "kind": "digest-research",
+      "title": "Anyscale: Resposta dos mantenedores aos CVEs de 2023",
+      "url": "https://www.anyscale.com/blog/update-on-ray-cves-cve-2023-6019-cve-2023-6020-cve-2023-6021-cve-2023-48022-cve-2023-48023",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "LLMI-T024"
+      ],
+      "summary": "[LLMI-20261120-47] seal: secondary; backfill. Source #75 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Ray, type Fonte primária. Consulted as: Resumo de busca. Cited in report sections 4, 13 (consultadas na revisão). Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-48",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "A",
+      "kind": "digest-vulnerability",
+      "title": "Check Point Research: CVE-2025-59536 e CVE-2026-21852",
+      "url": "https://research.checkpoint.com/2026/rce-and-api-token-exfiltration-through-claude-code-project-files-cve-2025-59536/",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "LLMI-T018"
+      ],
+      "summary": "[LLMI-20261120-48] seal: secondary; backfill. Source #76 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Claude Code, type Fonte primária. Consulted as: Resumo de busca. Cited in report sections 4, 10. Access: 2026-11-20.",
+      "identifiers": [
+        "CVE-2025-59536",
+        "CVE-2026-21852"
+      ],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-49",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "A",
+      "kind": "digest-research",
+      "title": "OX Security: Falha de projeto do STDIO",
+      "url": "https://www.ox.security/blog/the-mother-of-all-ai-supply-chains-critical-systemic-vulnerability-at-the-core-of-the-mcp",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "LLMI-T021",
+        "LLMI-T008"
+      ],
+      "summary": "[LLMI-20261120-49] seal: secondary; backfill. Source #79 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category MCP, type Fonte primária. Consulted as: Resumo de busca. Cited in report sections 4. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-50",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "C",
+      "kind": "digest-research",
+      "title": "VentureBeat: Falha de projeto do STDIO",
+      "url": "https://venturebeat.com/security/mcp-stdio-flaw-200000-ai-agent-servers-exposed-ox-security-audit",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 40,
+      "matched_terms": [
+        "LLMI-T021",
+        "LLMI-T008"
+      ],
+      "summary": "[LLMI-20261120-50] seal: secondary; backfill. Source #80 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category MCP, type Imprensa especializada. Consulted as: Resumo de busca. Cited in report sections 4. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-51",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "C",
+      "kind": "digest-research",
+      "title": "Infosecurity Magazine: Falha de projeto do STDIO",
+      "url": "https://www.infosecurity-magazine.com/news/systemic-flaw-mcp-expose-150/",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 40,
+      "matched_terms": [
+        "LLMI-T021",
+        "LLMI-T008"
+      ],
+      "summary": "[LLMI-20261120-51] seal: secondary; backfill. Source #81 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category MCP, type Imprensa especializada. Consulted as: Resumo de busca. Cited in report sections 4. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-52",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "B",
+      "kind": "digest-research",
+      "title": "Cloud Security Alliance: Falha de projeto do STDIO",
+      "url": "https://labs.cloudsecurityalliance.org/research/csa-research-note-mcp-by-design-rce-ox-security-20260420/",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 55,
+      "matched_terms": [
+        "LLMI-T021",
+        "LLMI-T008"
+      ],
+      "summary": "[LLMI-20261120-52] seal: secondary; backfill. Source #82 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category MCP, type Nota de pesquisa. Consulted as: Resumo de busca. Cited in report sections 4. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-53",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "B",
+      "kind": "digest-research",
+      "title": "Cloud Security Alliance: Exploração sustentada",
+      "url": "https://labs.cloudsecurityalliance.org/research/csa-research-note-langflow-sustained-exploitation-20260830-c/",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 55,
+      "matched_terms": [
+        "LLMI-T024"
+      ],
+      "summary": "[LLMI-20261120-53] seal: secondary; backfill. Source #87 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Langflow, type Nota de pesquisa. Consulted as: Resumo de busca. Cited in report sections 5. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-54",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "A",
+      "kind": "digest-incident",
+      "title": "Anthropic: Três incidentes em avaliações de cibersegurança",
+      "url": "https://www.anthropic.com/research/investigating-incidents-cybersecurity-evals",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "LLMI-T015"
+      ],
+      "summary": "[LLMI-20261120-54] seal: secondary; backfill. Source #91 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Incidentes de agentes e uso ofensivo, type Fonte primária. Consulted as: Resumo de busca. Cited in report sections 5, 11. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-55",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "C",
+      "kind": "digest-incident",
+      "title": "TechCrunch: Incidentes em avaliações da Anthropic",
+      "url": "https://techcrunch.com/2026/07/30/anthropic-says-its-own-ai-models-breached-three-companies-during-security-tests/",
+      "published": "2026-07-30",
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 40,
+      "matched_terms": [
+        "LLMI-T015"
+      ],
+      "summary": "[LLMI-20261120-55] seal: secondary; backfill. Source #92 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Incidentes de agentes e uso ofensivo, type Imprensa. Consulted as: Resumo de busca. Cited in report sections 5. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-56",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "C",
+      "kind": "digest-incident",
+      "title": "Fortune: Incidentes em avaliações da Anthropic",
+      "url": "https://fortune.com/2026/07/31/anthropic-claude-escaped-test-hacked-three-companies-openai/",
+      "published": "2026-07-31",
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 40,
+      "matched_terms": [
+        "LLMI-T015"
+      ],
+      "summary": "[LLMI-20261120-56] seal: secondary; backfill. Source #93 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Incidentes de agentes e uso ofensivo, type Imprensa. Consulted as: Resumo de busca. Cited in report sections 5. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-57",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "C",
+      "kind": "digest-incident",
+      "title": "The Hacker News: OpenAI–Hugging Face: detalhes técnicos",
+      "url": "https://thehackernews.com/2026/07/openai-agent-used-exposed-credentials.html",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 60,
+      "matched_terms": [
+        "LLMI-T015"
+      ],
+      "summary": "[LLMI-20261120-57] seal: original; backfill. Source #94 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Incidentes de agentes e uso ofensivo, type Imprensa especializada. Consulted as: Lida na íntegra. Cited in report sections 5, 6, 11. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-58",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "D",
+      "kind": "digest-incident",
+      "title": "Wikipedia — 2026 OpenAI agent cyberattacks: OpenAI–Hugging Face",
+      "url": "https://en.wikipedia.org/wiki/2026_OpenAI_agent_cyberattacks",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 45,
+      "matched_terms": [
+        "LLMI-T015"
+      ],
+      "summary": "[LLMI-20261120-58] seal: original; backfill. Source #95 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Incidentes de agentes e uso ofensivo, type Enciclopédia. Consulted as: Lida na íntegra. Cited in report sections 5, 11. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-59",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "C",
+      "kind": "digest-incident",
+      "title": "CNBC: OpenAI–Hugging Face",
+      "url": "https://www.cnbc.com/2026/07/22/open-ai-cyber-models-hack-hugging-face.html",
+      "published": "2026-07-22",
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 40,
+      "matched_terms": [
+        "LLMI-T015"
+      ],
+      "summary": "[LLMI-20261120-59] seal: secondary; backfill. Source #96 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Incidentes de agentes e uso ofensivo, type Imprensa. Consulted as: Resumo de busca. Cited in report sections 5. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-60",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "B",
+      "kind": "digest-incident",
+      "title": "MDPI Future Internet: OpenAI–Hugging Face: estudo de caso",
+      "url": "https://www.mdpi.com/1999-5903/18/11/642",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 55,
+      "matched_terms": [
+        "LLMI-T015"
+      ],
+      "summary": "[LLMI-20261120-60] seal: secondary; backfill. Source #97 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Incidentes de agentes e uso ofensivo, type Artigo acadêmico. Consulted as: Resumo de busca. Cited in report sections 5. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-61",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "D",
+      "kind": "digest-incident",
+      "title": "CASRAI: OpenAI–Hugging Face: linha do tempo",
+      "url": "https://casrai.org/news/openai-hugging-face-agent-hack-timeline-and-fallout",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 25,
+      "matched_terms": [
+        "LLMI-T015"
+      ],
+      "summary": "[LLMI-20261120-61] seal: secondary; backfill. Source #98 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Incidentes de agentes e uso ofensivo, type Agregador. Consulted as: Resumo de busca. Cited in report sections 5. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-62",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "C",
+      "kind": "digest-incident",
+      "title": "BleepingComputer: Enxame de agentes contra PaperCut",
+      "url": "https://bleepingcomputer.com/news/security/ai-powered-attack-exploited-papercut-flaws-to-hack-395-organizations",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 40,
+      "matched_terms": [
+        "LLMI-T015"
+      ],
+      "summary": "[LLMI-20261120-62] seal: secondary; backfill. Source #100 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Incidentes de agentes e uso ofensivo, type Imprensa especializada. Consulted as: Resumo de busca. Cited in report sections 5, 6. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-63",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "B",
+      "kind": "digest-incident",
+      "title": "Cloud Security Alliance: Enxame de agentes contra PaperCut",
+      "url": "https://labs.cloudsecurityalliance.org/research/csa-research-note-papercut-ai-agent-swarm-exploitation-20260/",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 55,
+      "matched_terms": [
+        "LLMI-T015"
+      ],
+      "summary": "[LLMI-20261120-63] seal: secondary; backfill. Source #101 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Incidentes de agentes e uso ofensivo, type Nota de pesquisa. Consulted as: Resumo de busca. Cited in report sections 5. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-64",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "A",
+      "kind": "digest-incident",
+      "title": "MITRE ATT&CK C0064: Campanha do governo do México",
+      "url": "https://attack.mitre.org/campaigns/C0064/",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "LLMI-T015"
+      ],
+      "summary": "[LLMI-20261120-64] seal: secondary; backfill. Source #102 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Incidentes de agentes e uso ofensivo, type Fonte primária. Consulted as: Resumo de busca. Cited in report sections 5, 6. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-65",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "C",
+      "kind": "digest-incident",
+      "title": "SecurityWeek: Campanha do governo do México",
+      "url": "https://securityweek.com/hackers-weaponize-claude-code-in-mexican-government-cyberattack",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 40,
+      "matched_terms": [
+        "LLMI-T015"
+      ],
+      "summary": "[LLMI-20261120-65] seal: secondary; backfill. Source #103 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Incidentes de agentes e uso ofensivo, type Imprensa especializada. Consulted as: Resumo de busca. Cited in report sections 5, 6. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-66",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "B",
+      "kind": "digest-incident",
+      "title": "SOCRadar: Campanha do governo do México",
+      "url": "https://socradar.io/blog/mexican-government-breach-claude-chatgpt/",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 55,
+      "matched_terms": [
+        "LLMI-T015"
+      ],
+      "summary": "[LLMI-20261120-66] seal: secondary; backfill. Source #104 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Incidentes de agentes e uso ofensivo, type Pesquisa de fornecedor. Consulted as: Resumo de busca. Cited in report sections 5. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-67",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "C",
+      "kind": "digest-incident",
+      "title": "Hackread: Campanha do governo do México",
+      "url": "https://hackread.com/hacker-claude-code-gpt-4-1-mexican-records/",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 40,
+      "matched_terms": [
+        "LLMI-T015"
+      ],
+      "summary": "[LLMI-20261120-67] seal: secondary; backfill. Source #105 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Incidentes de agentes e uso ofensivo, type Imprensa especializada. Consulted as: Resumo de busca. Cited in report sections 5. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-68",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "C",
+      "kind": "digest-incident",
+      "title": "The Hacker News: SharedRoot no Claude Cowork",
+      "url": "https://thehackernews.com/2026/07/claude-cowork-flaw-could-let-ai-agent.html",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 40,
+      "matched_terms": [
+        "LLMI-T015"
+      ],
+      "summary": "[LLMI-20261120-68] seal: secondary; backfill. Source #106 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Incidentes de agentes e uso ofensivo, type Imprensa especializada. Consulted as: Resumo de busca. Cited in report sections 5, 11. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-69",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "B",
+      "kind": "digest-incident",
+      "title": "Cloud Security Alliance: SharedRoot no Claude Cowork",
+      "url": "https://labs.cloudsecurityalliance.org/research/csa-research-note-claude-cowork-sharedroot-sandbox-escape-20/",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 55,
+      "matched_terms": [
+        "LLMI-T015"
+      ],
+      "summary": "[LLMI-20261120-69] seal: secondary; backfill. Source #107 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Incidentes de agentes e uso ofensivo, type Nota de pesquisa. Consulted as: Resumo de busca. Cited in report sections 5. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-70",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "C",
+      "kind": "digest-incident",
+      "title": "The Next Web: SharedRoot no Claude Cowork",
+      "url": "https://thenextweb.com/news/claude-cowork-sandbox-escape-mac-files-sharedroot",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 40,
+      "matched_terms": [
+        "LLMI-T015"
+      ],
+      "summary": "[LLMI-20261120-70] seal: secondary; backfill. Source #108 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Incidentes de agentes e uso ofensivo, type Imprensa. Consulted as: Resumo de busca. Cited in report sections 5. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-71",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "C",
+      "kind": "digest-research",
+      "title": "The New Stack: Agentjacking via Sentry MCP",
+      "url": "https://thenewstack.io/agentjacking-sentry-mcp-attack/",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 40,
+      "matched_terms": [
+        "LLMI-T002"
+      ],
+      "summary": "[LLMI-20261120-71] seal: secondary; backfill. Source #109 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Injeção de prompt, type Imprensa especializada. Consulted as: Resumo de busca. Cited in report sections 5, 7. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-72",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "B",
+      "kind": "digest-research",
+      "title": "Cloud Security Alliance: Agentjacking via Sentry MCP",
+      "url": "https://labs.cloudsecurityalliance.org/research/csa-research-note-agentjacking-sentry-mcp-20260614-csa-style/",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 55,
+      "matched_terms": [
+        "LLMI-T002"
+      ],
+      "summary": "[LLMI-20261120-72] seal: secondary; backfill. Source #110 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Injeção de prompt, type Nota de pesquisa. Consulted as: Resumo de busca. Cited in report sections 5. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-73",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "C",
+      "kind": "digest-research",
+      "title": "VentureBeat: Agentjacking: exposição em Datadog, PagerDuty e Jira",
+      "url": "https://venturebeat.com/security/the-attack-that-hijacked-claude-code-came-through-sentry-datadog-pagerduty-and-jira-have-the-same-exposure",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 40,
+      "matched_terms": [
+        "LLMI-T002"
+      ],
+      "summary": "[LLMI-20261120-73] seal: secondary; backfill. Source #111 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Injeção de prompt, type Imprensa especializada. Consulted as: Resumo de busca. Cited in report sections 10. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-74",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "C",
+      "kind": "digest-research",
+      "title": "SecurityWeek: Comment and Control",
+      "url": "https://www.securityweek.com/claude-code-gemini-cli-github-copilot-agents-vulnerable-to-prompt-injection-via-comments/",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 40,
+      "matched_terms": [
+        "LLMI-T002"
+      ],
+      "summary": "[LLMI-20261120-74] seal: secondary; backfill. Source #112 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Injeção de prompt, type Imprensa especializada. Consulted as: Resumo de busca. Cited in report sections 5, 8. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-75",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "B",
+      "kind": "digest-research",
+      "title": "Cloud Security Alliance: Comment and Control",
+      "url": "https://labs.cloudsecurityalliance.org/research/csa-research-note-comment-control-github-prompt-injection-20/",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 55,
+      "matched_terms": [
+        "LLMI-T002"
+      ],
+      "summary": "[LLMI-20261120-75] seal: secondary; backfill. Source #113 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Injeção de prompt, type Nota de pesquisa. Consulted as: Resumo de busca. Cited in report sections 5. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-76",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "C",
+      "kind": "digest-research",
+      "title": "The Next Web: Comment and Control: sem CVE",
+      "url": "https://thenextweb.com/news/ai-agents-hijacked-prompt-injection-bug-bounties-no-cve",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 40,
+      "matched_terms": [
+        "LLMI-T002"
+      ],
+      "summary": "[LLMI-20261120-76] seal: secondary; backfill. Source #114 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Injeção de prompt, type Imprensa. Consulted as: Resumo de busca. Cited in report sections 5. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-77",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "A",
+      "kind": "digest-incident",
+      "title": "Composio: Incidente de maio de 2026",
+      "url": "https://composio.dev/blog/composio-may-2026-security-incident",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "LLMI-T011"
+      ],
+      "summary": "[LLMI-20261120-77] seal: secondary; backfill. Source #115 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Identidade e cadeia de suprimentos, type Fonte primária. Consulted as: Resumo de busca. Cited in report sections 5, 7. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-78",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "B",
+      "kind": "digest-incident",
+      "title": "Material Security: Composio: análise",
+      "url": "https://material.security/resources/the-composio-breach-one-token-10242-doors",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 55,
+      "matched_terms": [
+        "LLMI-T011"
+      ],
+      "summary": "[LLMI-20261120-78] seal: secondary; backfill. Source #116 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Identidade e cadeia de suprimentos, type Pesquisa de fornecedor. Consulted as: Resumo de busca. Cited in report sections 5. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-79",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "C",
+      "kind": "digest-incident",
+      "title": "The Hacker News: Vercel via Context.ai",
+      "url": "https://thehackernews.com/2026/04/vercel-breach-tied-to-context-ai-hack.html",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 40,
+      "matched_terms": [
+        "LLMI-T011"
+      ],
+      "summary": "[LLMI-20261120-79] seal: secondary; backfill. Source #117 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Identidade e cadeia de suprimentos, type Imprensa especializada. Consulted as: Resumo de busca. Cited in report sections 5, 8. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-80",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "B",
+      "kind": "digest-incident",
+      "title": "Trend Micro: Vercel via Context.ai",
+      "url": "https://trendmicro.com/en_us/research/26/d/vercel-breach-oauth-supply-chain.html",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 55,
+      "matched_terms": [
+        "LLMI-T011"
+      ],
+      "summary": "[LLMI-20261120-80] seal: secondary; backfill. Source #118 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Identidade e cadeia de suprimentos, type Pesquisa de fornecedor. Consulted as: Resumo de busca. Cited in report sections 5. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-81",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "C",
+      "kind": "digest-incident",
+      "title": "Krebs on Security: Bot de suporte da Meta",
+      "url": "https://krebsonsecurity.com/2026/06/hackers-used-metas-ai-support-bot-to-seize-instagram-accounts/",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 40,
+      "matched_terms": [
+        "LLMI-T011"
+      ],
+      "summary": "[LLMI-20261120-81] seal: secondary; backfill. Source #119 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Identidade e cadeia de suprimentos, type Imprensa especializada. Consulted as: Resumo de busca. Cited in report sections 5. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-82",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "B",
+      "kind": "digest-incident",
+      "title": "Malwarebytes: Bot de suporte da Meta",
+      "url": "https://www.malwarebytes.com/blog/ai/2026/06/metas-ai-support-bot-happily-handed-instagram-accounts-to-hackers",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 55,
+      "matched_terms": [
+        "LLMI-T011"
+      ],
+      "summary": "[LLMI-20261120-82] seal: secondary; backfill. Source #120 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Identidade e cadeia de suprimentos, type Pesquisa de fornecedor. Consulted as: Resumo de busca. Cited in report sections 5. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-83",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "B",
+      "kind": "digest-incident",
+      "title": "AI Incident Database 1510: Bot de suporte da Meta",
+      "url": "https://incidentdatabase.ai/cite/1510",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 55,
+      "matched_terms": [
+        "LLMI-T011"
+      ],
+      "summary": "[LLMI-20261120-83] seal: secondary; backfill. Source #121 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Identidade e cadeia de suprimentos, type Base de dados. Consulted as: Resumo de busca. Cited in report sections 5. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-84",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "C",
+      "kind": "digest-incident",
+      "title": "VentureBeat: Mini Shai-Hulud",
+      "url": "https://venturebeat.com/security/shai-hulud-worm-172-npm-pypi-packages-valid-provenance-ci-cd-audit",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 40,
+      "matched_terms": [
+        "LLMI-T011"
+      ],
+      "summary": "[LLMI-20261120-84] seal: secondary; backfill. Source #122 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Identidade e cadeia de suprimentos, type Imprensa especializada. Consulted as: Resumo de busca. Cited in report sections 5, 8. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-85",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "B",
+      "kind": "digest-incident",
+      "title": "Cloud Security Alliance: Mini Shai-Hulud",
+      "url": "https://labs.cloudsecurityalliance.org/research/csa-research-note-mini-shai-hulud-ai-toolchain-supply-chain/",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 55,
+      "matched_terms": [
+        "LLMI-T011"
+      ],
+      "summary": "[LLMI-20261120-85] seal: secondary; backfill. Source #123 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Identidade e cadeia de suprimentos, type Nota de pesquisa. Consulted as: Resumo de busca. Cited in report sections 5, 8. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-86",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "B",
+      "kind": "digest-incident",
+      "title": "Cloud Security Alliance: Shai-Hulud e Bitwarden CLI",
+      "url": "https://labs.cloudsecurityalliance.org/research/csa-research-note-shai-hulud-npm-worm-ai-developer-supply-ch/",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 55,
+      "matched_terms": [
+        "LLMI-T011"
+      ],
+      "summary": "[LLMI-20261120-86] seal: secondary; backfill. Source #124 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Identidade e cadeia de suprimentos, type Nota de pesquisa. Consulted as: Resumo de busca. Cited in report sections 5. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-87",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "A",
+      "kind": "digest-incident",
+      "title": "Gen Digital: Infostealers e agentes de IA",
+      "url": "https://www.gendigital.com/blog/insights/research/infostealers-your-ai-agent",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "LLMI-T011"
+      ],
+      "summary": "[LLMI-20261120-87] seal: secondary; backfill. Source #125 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Identidade e cadeia de suprimentos, type Fonte primária. Consulted as: Resumo de busca. Cited in report sections 5, 6. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-88",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "B",
+      "kind": "digest-incident",
+      "title": "SpyCloud: Infostealers Warden e Aoki",
+      "url": "https://spycloud.com/blog/infostealers-now-target-ai-tokens-and-api-keys/",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 55,
+      "matched_terms": [
+        "LLMI-T011"
+      ],
+      "summary": "[LLMI-20261120-88] seal: secondary; backfill. Source #126 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Identidade e cadeia de suprimentos, type Pesquisa de fornecedor. Consulted as: Resumo de busca. Cited in report sections 5, 6. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-89",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "C",
+      "kind": "digest-incident",
+      "title": "Infosecurity Magazine: Infostealer Aoki",
+      "url": "https://www.infosecurity-magazine.com/news/aoki-infostealer-ai-coding/",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 40,
+      "matched_terms": [
+        "LLMI-T011"
+      ],
+      "summary": "[LLMI-20261120-89] seal: secondary; backfill. Source #127 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Identidade e cadeia de suprimentos, type Imprensa especializada. Consulted as: Resumo de busca. Cited in report sections 5. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-90",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "C",
+      "kind": "digest-incident",
+      "title": "The Hacker News: OpenClaw e ClawHavoc",
+      "url": "https://thehackernews.com/2026/02/researchers-find-341-malicious-clawhub.html",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 40,
+      "matched_terms": [
+        "LLMI-T011"
+      ],
+      "summary": "[LLMI-20261120-90] seal: secondary; backfill. Source #128 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Identidade e cadeia de suprimentos, type Imprensa especializada. Consulted as: Resumo de busca. Cited in report sections 5. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-91",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "B",
+      "kind": "digest-incident",
+      "title": "Flare: OpenClaw: exploração",
+      "url": "https://flare.io/learn/resources/blog/widespread-openclaw-exploitation",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 55,
+      "matched_terms": [
+        "LLMI-T011"
+      ],
+      "summary": "[LLMI-20261120-91] seal: secondary; backfill. Source #129 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Identidade e cadeia de suprimentos, type Pesquisa de fornecedor. Consulted as: Resumo de busca. Cited in report sections 5. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-92",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "B",
+      "kind": "digest-incident",
+      "title": "Securonix: OpenClaw: relatório de ameaças",
+      "url": "https://connect.securonix.com/threat-research-intelligence-62/openclaw-threat-intelligence-report-clawdbot-moltbot-and-openclaw-208",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 55,
+      "matched_terms": [
+        "LLMI-T011"
+      ],
+      "summary": "[LLMI-20261120-92] seal: secondary; backfill. Source #130 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Identidade e cadeia de suprimentos, type Pesquisa de fornecedor. Consulted as: Resumo de busca. Cited in report sections 5. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-93",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "B",
+      "kind": "digest-framework",
+      "title": "Cloud Security Alliance: Lacunas agênticas do ATLAS e do ATT&CK",
+      "url": "https://labs.cloudsecurityalliance.org/research/csa-research-note-atlas-agentic-gap-analysis-20260327/",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 55,
+      "matched_terms": [],
+      "summary": "[LLMI-20261120-93] seal: secondary; backfill. Source #133 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Frameworks de referência, type Nota de pesquisa. Consulted as: Resumo de busca. Cited in report sections 6. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-94",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "A",
+      "kind": "digest-framework",
+      "title": "OWASP GenAI Security Project: OWASP Top 10 for LLM Applications",
+      "url": "https://genai.owasp.org/llm-top-10/",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 70,
+      "matched_terms": [],
+      "summary": "[LLMI-20261120-94] seal: secondary; backfill. Source #134 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Frameworks de referência, type Framework. Consulted as: Referência (página inicial). Cited in report sections 6. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-95",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "A",
+      "kind": "digest-framework",
+      "title": "OWASP GenAI Security Project: OWASP Top 10 for Agentic Applications (dez/2025)",
+      "url": "https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/",
+      "published": "2025-12-09",
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 70,
+      "matched_terms": [],
+      "summary": "[LLMI-20261120-95] seal: secondary; backfill. Source #135 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Frameworks de referência, type Framework. Consulted as: Resumo de busca. Cited in report sections 6. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-96",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "A",
+      "kind": "digest-framework",
+      "title": "OWASP GenAI Security Project: OWASP Agentic AI — Threats and Mitigations v1.1",
+      "url": "https://genai.owasp.org/download/45674/",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 70,
+      "matched_terms": [],
+      "summary": "[LLMI-20261120-96] seal: secondary; backfill. Source #136 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Frameworks de referência, type Framework. Consulted as: Resumo de busca. Cited in report sections 6, 7. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-97",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "A",
+      "kind": "digest-framework",
+      "title": "CISA: CISA Known Exploited Vulnerabilities Catalog",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 70,
+      "matched_terms": [],
+      "summary": "[LLMI-20261120-97] seal: secondary; backfill. Source #137 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Frameworks de referência, type Catálogo oficial. Consulted as: Referência (página inicial). Cited in report sections 1, 4, 12. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-98",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "A",
+      "kind": "digest-framework",
+      "title": "Coalition for Secure AI: CoSAI (segurança de MCP)",
+      "url": "https://www.coalitionforsecureai.org/",
+      "published": null,
+      "observed_at": "2026-11-20T17:59:45Z",
+      "relevance_score": 70,
+      "matched_terms": [],
+      "summary": "[LLMI-20261120-98] seal: secondary; backfill. Source #138 of the authored report 'Threat Intelligence: Vulnerabilidades e Incidentes em Sistemas de IA 2026' (2026-11-20), category Frameworks de referência, type Framework. Consulted as: Referência (página inicial). Cited in report sections 10. Access: 2026-11-20.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120-REPORT. Read the primary source before promoting."
       }
     }
   ]

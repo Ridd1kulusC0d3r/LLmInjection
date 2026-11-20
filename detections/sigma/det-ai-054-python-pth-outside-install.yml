@@ -1,0 +1,47 @@
+title: Python Startup .pth File Created Outside a Known Package Install
+id: 3606650b-d4dd-45c0-b771-9451de87e776
+status: experimental
+description: >
+  Detects creation of a .pth file in site-packages or dist-packages by a process that is not a package
+  manager. Python runs import lines in .pth files at every interpreter start; the trojanised LiteLLM 1.82.8
+  persisted through litellm_init.pth.
+references:
+  - https://github.com/advisories/GHSA-92x9-889m-jgmw
+  - https://github.com/Ridd1kulusC0d3r/LLmInjection
+author: LLMInjection
+date: 2026-11-20
+tags:
+  - attack.persistence
+  - attack.t1546
+  - llminjection.det-ai-054
+  - llminjection.llmi-t011
+logsource:
+  category: file_event
+detection:
+  selection:
+    TargetFilename|endswith: '.pth'
+    TargetFilename|contains:
+      - '/site-packages/'
+      - '/dist-packages/'
+      - '\\site-packages\\'
+  filter_package_managers:
+    Image|endswith:
+      - '/pip'
+      - '/pip3'
+      - '/uv'
+      - '/poetry'
+      - '/conda'
+      - '/mamba'
+      - '/pipx'
+      - '\\pip.exe'
+      - '\\uv.exe'
+  filter_pip_module:
+    CommandLine|contains:
+      - '-m pip '
+      - '-m pip install'
+      - 'setup.py develop'
+  condition: selection and not filter_package_managers and not filter_pip_module
+falsepositives:
+  - Coverage tools and editable installs that write .pth files; allowlist by path after inventory.
+  - Image builds; scope the rule to running hosts or allowlist the build user.
+level: critical

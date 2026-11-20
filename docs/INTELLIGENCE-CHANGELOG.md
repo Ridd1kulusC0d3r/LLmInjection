@@ -2,6 +2,26 @@
 
 This changelog records material changes to attribution, confidence, external mappings and structured intelligence. Ordinary prose edits do not belong here.
 
+## 2026-11-20 — AI infrastructure KEV entries, report intake and AI-service detections
+
+### Added
+
+- 14 vulnerabilities, each from its NVD record (grade A) and, where listed, the CISA KEV feed (catalog 2026.11.18): Langflow CVE-2025-3248, CVE-2025-34291, CVE-2026-33017, CVE-2026-0770, CVE-2026-55255 and CVE-2026-9198; MLflow CVE-2026-64849; Ray CVE-2025-62593; Starlette CVE-2026-48710; n8n CVE-2025-68613; mcp-server-git CVE-2025-68145; Cursor CVE-2025-54135; CrewAI CVE-2026-2275 and CVE-2026-2287.
+- Detections `DET-AI-053` (AI service or gateway process spawns a shell, with Sigma and KQL), `DET-AI-054` (Python `.pth` created outside a package install, Sigma), `DET-AI-055` (malformed Host header to a Starlette/FastAPI AI service), `DET-AI-056` (AI platform admin, test or code endpoint, Sigma) and `DET-AI-057` (MLflow webhook test followed by metadata egress).
+- `reports/intel/2026-11-20-vulnerabilidades-e-incidentes-ia.md`: the authored 2026 report, with a provenance box.
+- `intake/digests/2026-11-20-report.json`: 91 sources from the report's workbook as research-queue candidates.
+
+### Changed
+
+- LiteLLM CVE-2026-59822 cites the KEV catalog (added 2026-09-02).
+- nginx-ui CVE-2026-33032 keeps 2.3.5 and earlier as affected (NVD, GHSA); a secondary claim of a fix in 2.3.4 was not adopted.
+- EmailGPT CVE-2024-5184 records both scores (Synopsys 6.5, NVD 9.1). M365 Copilot CVE-2025-32711 records the May 2025 service fix. MLflow CVE-2023-1177 states that in-the-wild exploitation was not confirmed.
+
+### Confidence notes
+
+- The report counts 13 AI-tool KEV entries added in 2026; the feed confirms 13 (LiteLLM 4, Langflow 5, MLflow, Ray, Starlette, n8n). Flowise and nginx-ui are not in KEV; their exploitation rests on vendor and press reports.
+- Sources the ARTEX repository cites but the report did not consult were not queued.
+
 ## 2026-11-20 — ARTEX detection map; reference frameworks and catalogs as sources
 
 ### Added
