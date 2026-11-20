@@ -106,6 +106,22 @@ ARTEX é descrito pelas fontes como plataforma open-source multiagente, guiada p
   - requisições duplicadas e quase simultâneas vindas de subagentes;
   - tráfego para gateways de LLM a partir de hosts de servidor.
 
+### 7.1 Mapa completo da ThreatDefence (2026-11-20)
+
+O repositório [ThreatDefence/artex-detections](https://github.com/ThreatDefence/artex-detections) (MIT) foi mapeado regra a regra em [ARTEX-DETECTION-MAP.md](../../docs/ARTEX-DETECTION-MAP.md): 209 arquivos de regra em 29 comportamentos e 184 indicadores.
+
+| Nossa detecção | O que cobre | Plataformas deles |
+|---|---|---|
+| DET-AI-046 | sondagem de permissões: DryRun no EC2, varredura de validate no ARM, logins no Kudu | Sigma, Sentinel, Splunk, Elastic |
+| DET-AI-047 | varredura de acesso negado, busca de segredos no CloudWatch, leitura em massa no Key Vault | Sigma, Sentinel, Splunk, Elastic |
+| DET-AI-048 (nova) | user agents, artefatos de sondagem, cabeçalho X-ARTX-KEY, JWT alg:none, callbacks para webhook e DNS log | Sigma, Sentinel, Splunk, Elastic, Zeek, Suricata |
+| DET-AI-049 (nova) | spray em ritmo de um segundo, rajada de família de user agent, spray que termina em sucesso | Sigma, Sentinel, Splunk, Elastic |
+| DET-AI-050 (nova) | service principal: adivinhação de segredo, credencial ou papel concedido a si mesmo, leque de recursos, rajadas no Graph | Sigma, Sentinel, Splunk |
+| DET-AI-051 (nova) | abuso de cadastro self-service no Cognito seguido de descoberta | Sigma, Sentinel, Splunk, Elastic |
+| DET-AI-052 (nova) | console ARTEX ou imagem com backdoor dentro da rede | Sentinel, YARA, osquery |
+
+Sete comportamentos são detecção genérica de intrusão (shell a partir de serviço web, web shells, Kerberoasting, mascaramento de binários) e ficam como link.
+
 ## 8. Mitigação priorizada
 
 | Ação | Esforço | Efeito |

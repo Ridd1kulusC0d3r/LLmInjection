@@ -13,7 +13,7 @@
 
 | Layer | Status |
 |---|---|
-| Evidence | 13 record(s), 5 publisher(s), best grade A, newest 2026 |
+| Evidence | 13 record(s), 6 publisher(s), best grade A, newest 2026 |
 | Safe tests | 1 |
 | Detections | 0 rule file(s), 1 specification(s) |
 | Controls | 2 |

@@ -474,5 +474,6 @@
  "rl.explode": "Desplegar todos los informes",
  "rl.focus": "Todos los informes de este enfoque",
  "rl.open": "abrir el informe",
- "rl.reports": "informes"
+ "rl.reports": "informes",
+ "det.external": "{p}: {n} reglas"
 }

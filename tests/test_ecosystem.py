@@ -10,8 +10,8 @@ class EcosystemTests(unittest.TestCase):
         self.entries = json.loads((ROOT / "data" / "ecosystem.json").read_text(encoding="utf-8"))
 
     def test_curated_set(self):
-        self.assertEqual(len(self.entries), 126)
-        self.assertEqual(sum(e["priority"] == "start-here" for e in self.entries), 11)
+        self.assertEqual(len(self.entries), 127)
+        self.assertEqual(sum(e["priority"] == "start-here" for e in self.entries), 12)
         self.assertEqual(len({e["url"].lower() for e in self.entries}), len(self.entries))
 
     def test_no_entry_supports_attribution(self):

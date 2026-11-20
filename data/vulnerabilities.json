@@ -241,7 +241,8 @@
     "confidence": "confirmed",
     "summary": "Two LiteLLM proxy endpoints passed caller input to an OS command, giving command execution on the AI gateway host; fixed in 1.83.7. In CISA KEV since 2026-06-08.",
     "source_ids": [
-      "SRC-NVD-CVE-2026-42271"
+      "SRC-NVD-CVE-2026-42271",
+      "SRC-CISA-KEV-CATALOG"
     ]
   },
   {
@@ -266,7 +267,8 @@
     "confidence": "confirmed",
     "summary": "A database query in the LiteLLM proxy was built from the authorization header, allowing SQL injection against the gateway's key store; fixed in 1.83.7. In CISA KEV since 2026-05-08.",
     "source_ids": [
-      "SRC-NVD-CVE-2026-42208"
+      "SRC-NVD-CVE-2026-42208",
+      "SRC-CISA-KEV-CATALOG"
     ]
   },
   {
@@ -774,7 +776,8 @@
     "summary": "Code submitted to LiteLLM's /guardrails/test_custom_code endpoint could escape the deny-list sandbox through bytecode rewriting and run arbitrary code on the proxy, as root in the official image; fixed in 1.83.10. CISA added it to KEV on 2026-11-18.",
     "source_ids": [
       "SRC-GHSA-LITELLM-40217",
-      "SRC-ZENITY-LITELLM-40217"
+      "SRC-ZENITY-LITELLM-40217",
+      "SRC-CISA-KEV-CATALOG"
     ]
   }
 ]

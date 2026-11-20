@@ -474,5 +474,6 @@
  "rl.explode": "Explodir todos os relatórios",
  "rl.focus": "Todos os relatórios deste foco",
  "rl.open": "abrir o relatório",
- "rl.reports": "relatórios"
+ "rl.reports": "relatórios",
+ "det.external": "{p}: {n} regras"
 }

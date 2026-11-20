@@ -62,7 +62,7 @@ Each row is a record in [`data/threat-landscape-2026.json`](data/threat-landscap
 
 <!-- gen:landscape-evidence:start -->
 
-Of the **28 techniques** tracked, **22** have activity observed in the wild, **2** are tied to a disclosed vulnerability, **4** are demonstrated in research and **0** have no linked evidence yet (a gap in this repository, not a claim that they are theoretical). On the defensive side, **8 of 47** detections exist as rule files; the rest are specifications.
+Of the **28 techniques** tracked, **22** have activity observed in the wild, **2** are tied to a disclosed vulnerability, **4** are demonstrated in research and **0** have no linked evidence yet (a gap in this repository, not a claim that they are theoretical). On the defensive side, **8 of 52** detections exist as rule files; the rest are specifications.
 
 <!-- gen:landscape-evidence:end -->
 
@@ -122,11 +122,11 @@ New [source registry and ingestion guidance](docs/AI-INTELLIGENCE-SOURCES.md), [
 
 | Actors | Campaigns | Incidents | Vulnerabilities | Techniques | Sources |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| **75** | **99** | **69** | **32** | **28** | **176** |
+| **75** | **99** | **69** | **32** | **28** | **182** |
 
 | Test cases | Detections | Controls | Frameworks | Model families | Relationships | Ecosystem repos |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| **40** | **47** | **32** | **19** | **12** | **521** | **126** |
+| **40** | **52** | **32** | **21** | **12** | **535** | **127** |
 
 <!-- gen:stats:end -->
 
@@ -978,6 +978,8 @@ MITRE ATLAS is essential, but it does not cover the whole AI system. LLMInjectio
 | [MCP Security Best Practices 2026-07-28](https://github.com/modelcontextprotocol/modelcontextprotocol/blob/main/docs/docs/2026-07-28/tutorials/security/security_best_practices.mdx) | protocol-security-guidance | MCP threat modeling and controls |
 | [CycloneDX AI/ML-BOM](https://www.cyclonedx.org/capabilities/mlbom/) | supply-chain-transparency | AI supply-chain inventory and provenance |
 | [OWASP GenAI Security Industry Framework Crosswalk](https://genai.owasp.org/resource-item/tools/) | framework-crosswalk | Cross-framework control mapping |
+| [CoSAI Model Context Protocol (MCP) Security](https://www.coalitionforsecureai.org/wp-content/uploads/2026/03/model-context-protocol-security-1.pdf) | protocol-security-guidance | MCP threat model and control reference for LLMI-T021, LLMI-T024 and the MCP controls |
+| [CISA Known Exploited Vulnerabilities Catalog](https://www.cisa.gov/known-exploited-vulnerabilities-catalog) | vulnerability-catalog | Exploited-in-the-wild signal for vulnerability records; read from the JSON feed |
 
 <!-- gen:frameworks:end -->
 
@@ -1112,6 +1114,11 @@ telemetry + detection
 | `DET-AI-045` | **Rapid Iterative Script Variants on One Host** | endpoint | medium | specification |
 | `DET-AI-046` | **Sub-Second Permission Probing With Cloud Credentials** | cloud-identity | high | specification |
 | `DET-AI-047` | **Denied-Call Burst Across Services Followed by a Success** | cloud-identity | high | specification |
+| `DET-AI-048` | **Agentic Offensive Framework Fingerprints (User Agents, Probe Artifacts, Callback Services)** | web-network | high | specification |
+| `DET-AI-049` | **Machine-Cadence Identity Attacks (Fixed-Rhythm Spray, User-Agent Family Burst)** | cloud-identity | high | specification |
+| `DET-AI-050` | **Service Principal Abuse After Agentic Access (Secret Guessing, Self-Granted Roles, Resource Fan-Out)** | cloud-identity | high | specification |
+| `DET-AI-051` | **Self-Service Sign-Up Abuse Followed by Discovery** | cloud-identity | medium | specification |
+| `DET-AI-052` | **Offensive Agent Console or Backdoored Agent Image Inside the Network** | endpoint | high | specification |
 
 <!-- gen:detections:end -->
 
@@ -1212,8 +1219,8 @@ Every intelligence item should answer:
 
 | Grade | Class | Sources |
 |---|---|---|
-| **A** | Primary or authoritative | 154 |
-| **B** | Strong secondary | 8 |
+| **A** | Primary or authoritative | 158 |
+| **B** | Strong secondary | 10 |
 | **C** | Reputable press | 9 |
 | **D** | Community | 5 |
 | **E** | Unsupported | 0 |
@@ -1250,7 +1257,7 @@ The [ecosystem map](docs/ECOSYSTEM.md) classifies related repositories by **what
 |---|---|---|---|---|
 | `framework-data` | Taxonomies and knowledge bases | Technique definitions and framework mappings | Observed activity | 7 |
 | `incident-data` | Incident databases | Incident references, citing the primary report | Actor attribution or cyber campaigns (scope is broader than cybersecurity) | 1 |
-| `detection-content` | Community detection rules | Detection ideas and telemetry requirements | Proof of in-the-wild behavior | 5 |
+| `detection-content` | Community detection rules | Detection ideas and telemetry requirements | Proof of in-the-wild behavior | 6 |
 | `curated-list` | Curated lists | Discovering sources and tools | Any claim on their own | 24 |
 | `assessment-tool` | Scanners and red-team tools | Test design and control evaluation | Effectiveness against current models | 33 |
 | `benchmark` | Benchmarks and environments | Reproducible tests and coverage measurement | Real-world prevalence | 13 |
@@ -1278,6 +1285,7 @@ The [ecosystem map](docs/ECOSYSTEM.md) classifies related repositories by **what
 | [microsoft/PyRIT](https://github.com/microsoft/PyRIT) | `assessment-tool` | `LLMI-T001`, `LLMI-T002`, `LLMI-T003`, `LLMI-T004`, `LLMI-T008`, `LLMI-T013`, `LLMI-T014` | 2026-11-20 · MIT | Framework for identifying risks in generative AI systems. · **start here** |
 | [ethz-spylab/agentdojo](https://github.com/ethz-spylab/agentdojo) | `benchmark` | `LLMI-T001`, `LLMI-T002`, `LLMI-T004`, `LLMI-T008` | 2026-06-02 · MIT | Environment for evaluating attacks and defences of LLM agents. · **start here** |
 | [OWASP/www-project-ai-testing-guide](https://github.com/OWASP/www-project-ai-testing-guide) | `framework-data` | none | 2026-06-01 · other | OWASP AI Testing Guide: 32 test procedures across application, data, infrastructure and model layers. · **start here** |
+| [ThreatDefence/artex-detections](https://github.com/ThreatDefence/artex-detections) | `detection-content` | `LLMI-T015`, `LLMI-T016`, `LLMI-T027`, `LLMI-T011` | 2026-11-20 · MIT | Detection rules, hunts and indicators for ARTEX and its forks (ScopeWeaver, LUCK, Guanlan SEC, AntiFox, ARTEX PRO): 31 Sigma rules and 5 correlations with SPL, KQL and ES\|QL conversions, 22 Sentinel hunts and 5 analytics, a Splunk app, Elastic rules, Zeek, Suricata, YARA, osquery and 184 indicators with confidence and review dates. Mapped behaviour by behaviour in references/crosswalks/artex-detections.json. · **start here** |
 
 <!-- gen:eco-start:end -->
 

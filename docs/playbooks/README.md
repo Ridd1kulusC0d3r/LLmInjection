@@ -20,10 +20,10 @@ Sorted by priority, the techniques with the most missing defence first. `E` evid
 | [LLMI-T026](LLMI-T026.md) Inter-Agent Instruction Propagation | observed in the wild | 6 | 2 | 1 | 0 | 1 | 3 | 0 |
 | [LLMI-T007](LLMI-T007.md) RAG Knowledge Poisoning | demonstrated in research | 5 | 1 | 1 | 0 | 1 | 0 | 0 |
 | [LLMI-T020](LLMI-T020.md) Improper Output Handling and Rendering Exfiltration | tied to a disclosed vulnerability | 4.5 | 4 | 3 | 0 | 2 | 3 | 0 |
-| [LLMI-T011](LLMI-T011.md) AI Software Supply Chain Compromise | observed in the wild | 4 | 9 | 2 | 1 | 4 | 1 | 0 |
+| [LLMI-T011](LLMI-T011.md) AI Software Supply Chain Compromise | observed in the wild | 4 | 9 | 2 | 1 | 5 | 1 | 0 |
 | [LLMI-T016](LLMI-T016.md) AI Gateway Credential Compromise | observed in the wild | 4 | 7 | 1 | 1 | 1 | 1 | 0 |
 | [LLMI-T018](LLMI-T018.md) AI Coding-Assistant Workspace Abuse | observed in the wild | 4 | 6 | 1 | 1 | 5 | 2 | 0 |
-| [LLMI-T027](LLMI-T027.md) Unsanctioned AI Runtime (Shadow AI) | observed in the wild | 4 | 1 | 2 | 2 | 0 | 2 | 0 |
+| [LLMI-T027](LLMI-T027.md) Unsanctioned AI Runtime (Shadow AI) | observed in the wild | 4 | 1 | 2 | 2 | 1 | 2 | 0 |
 | [LLMI-T028](LLMI-T028.md) AI-Assisted Tooling Development | observed in the wild | 4 | 71 | 1 | 1 | 0 | 1 | 0 |
 | [LLMI-T006](LLMI-T006.md) Data or Model Poisoning | demonstrated in research | 3 | 0 | 1 | 0 | 1 | 0 | 1 |
 | [LLMI-T025](LLMI-T025.md) Multimodal Instruction Triggers | demonstrated in research | 3 | 0 | 2 | 0 | 1 | 2 | 0 |
@@ -33,6 +33,6 @@ Sorted by priority, the techniques with the most missing defence first. `E` evid
 | [LLMI-T008](LLMI-T008.md) Agent Tool Misuse | observed in the wild | 2 | 13 | 6 | 0 | 3 | 2 | 3 |
 | [LLMI-T002](LLMI-T002.md) Indirect Prompt Injection | tied to a disclosed vulnerability | 1.5 | 6 | 1 | 0 | 2 | 3 | 6 |
 | [LLMI-T009](LLMI-T009.md) Memory / Context Poisoning | demonstrated in research | 1 | 2 | 1 | 0 | 2 | 1 | 1 |
-| [LLMI-T015](LLMI-T015.md) Agentic Attack Orchestration | observed in the wild | 0 | 53 | 1 | 3 | 1 | 2 | 1 |
+| [LLMI-T015](LLMI-T015.md) Agentic Attack Orchestration | observed in the wild | 0 | 53 | 1 | 3 | 5 | 2 | 1 |
 
 Pages with a worked example or hand-written notes: [LLMI-T008](LLMI-T008.md).

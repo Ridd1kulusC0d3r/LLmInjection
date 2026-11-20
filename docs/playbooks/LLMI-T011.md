@@ -15,7 +15,7 @@
 |---|---|
 | Evidence | 9 record(s), 9 publisher(s), best grade A, newest 2026 |
 | Safe tests | 2 |
-| Detections | 1 rule file(s), 4 specification(s) |
+| Detections | 1 rule file(s), 5 specification(s) |
 | Controls | 1 |
 | Benchmarks | 0 |
 
@@ -106,6 +106,13 @@ The runner has plan and mock adapters only: it does not call your system. To run
 - **Telemetry:** `package-install-process-tree`, `file-write-to-agent-config-dir`, `package-metadata`
 - **Implementation:** rule file(s): [sigma](../../detections/sigma/det-ai-029-package-install-writes-agent-config.yml). Experimental and not run against real telemetry.
 
+### DET-AI-052 · Offensive Agent Console or Backdoored Agent Image Inside the Network
+
+- **Severity:** high
+- **Hypothesis:** A host listens with an agentic offensive framework console, or runs a container image known to be a backdoored build of one, inside the estate: an unsanctioned offensive runtime or an implant.
+- **Telemetry:** `network scans and listening ports`, `HTTP responses (console pages, auth realm)`, `container image inventory`, `EDR process and file events`
+- **Implementation:** specification only. Collect the telemetry above first; if you cannot, the detection cannot work yet.
+
 ## 4. Prevent it
 
 - **AI/ML Bill of Materials** (`CTRL-AIML-BOM`): Track models, datasets, configurations and dependencies using AI/ML-BOM-capable formats.
@@ -120,13 +127,13 @@ The runner has plan and mock adapters only: it does not call your system. To run
 
 ## 6. Limits of this page
 
-- 4 of 5 detection(s) are specifications, not rules. They say what to look for, not how to query it. Nothing here has been run against real telemetry.
+- 5 of 6 detection(s) are specifications, not rules. They say what to look for, not how to query it. Nothing here has been run against real telemetry.
 - No benchmark maps to it, so there is no public yardstick for how well a defence performs.
 - The tests use benign markers and synthetic data. A pass in a lab is not a security rating for a production system.
 - Ecosystem tools and benchmarks help you test and measure. They never support a claim that an actor used the technique.
 
 ## 7. Go deeper (links only)
 
-- **Tools and projects:** [Agent-Threat-Rule/agent-threat-rules](https://github.com/Agent-Threat-Rule/agent-threat-rules), [LLMSecurity/awesome-agent-skills-security](https://github.com/LLMSecurity/awesome-agent-skills-security), [ShenaoW/awesome-llm-supply-chain-security](https://github.com/ShenaoW/awesome-llm-supply-chain-security), [Tencent/AI-Infra-Guard](https://github.com/Tencent/AI-Infra-Guard), [praetorian-inc/augustus](https://github.com/praetorian-inc/augustus), [protectai/modelscan](https://github.com/protectai/modelscan), [snyk/agent-scan](https://github.com/snyk/agent-scan), [cisco-ai-defense/mcp-scanner](https://github.com/cisco-ai-defense/mcp-scanner), and 10 more in the [Explorer](https://ridd1kulusc0d3r.github.io/LLmInjection/#tab=ecosystem)
+- **Tools and projects:** [Agent-Threat-Rule/agent-threat-rules](https://github.com/Agent-Threat-Rule/agent-threat-rules), [LLMSecurity/awesome-agent-skills-security](https://github.com/LLMSecurity/awesome-agent-skills-security), [ShenaoW/awesome-llm-supply-chain-security](https://github.com/ShenaoW/awesome-llm-supply-chain-security), [Tencent/AI-Infra-Guard](https://github.com/Tencent/AI-Infra-Guard), [praetorian-inc/augustus](https://github.com/praetorian-inc/augustus), [protectai/modelscan](https://github.com/protectai/modelscan), [snyk/agent-scan](https://github.com/snyk/agent-scan), [cisco-ai-defense/mcp-scanner](https://github.com/cisco-ai-defense/mcp-scanner), and 11 more in the [Explorer](https://ridd1kulusc0d3r.github.io/LLmInjection/#tab=ecosystem)
 - **Third-party procedures (not ours, link only):** [auditing-mcp-servers-for-tool-poisoning](https://github.com/mukul975/anthropic-cybersecurity-skills/tree/main/skills/auditing-mcp-servers-for-tool-poisoning) (audit: tool poisoning, shadowing and rug pulls with an MCP scanner). Independent community project, Apache-2.0, not affiliated with Anthropic; see the [knowledge strategy](../KNOWLEDGE-STRATEGY.md).
 - **Live record:** [this technique in the Explorer](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=LLMI-T011)

@@ -15,7 +15,7 @@
 |---|---|
 | Evidence | 53 record(s), 33 publisher(s), best grade A, newest 2026 |
 | Safe tests | 1 |
-| Detections | 3 rule file(s), 1 specification(s) |
+| Detections | 3 rule file(s), 5 specification(s) |
 | Controls | 2 |
 | Benchmarks | 1 |
 
@@ -134,6 +134,34 @@ The runner has plan and mock adapters only: it does not call your system. To run
 - **Telemetry:** `CloudTrail (eventSource, eventName, errorCode, userIdentity.arn, sourceIPAddress)`
 - **Implementation:** rule file(s): [sentinel](../../detections/sentinel/det-ai-047-denied-burst-then-success.kql), [splunk](../../detections/splunk/det-ai-047-denied-burst-then-success.spl). Experimental and not run against real telemetry.
 
+### DET-AI-048 · Agentic Offensive Framework Fingerprints (User Agents, Probe Artifacts, Callback Services)
+
+- **Severity:** high
+- **Hypothesis:** Requests or host artifacts carry the fingerprints an agentic pentest framework leaves while validating findings: user agents that name it, placeholder probe paths and files, a probe header, alg:none JWTs or OAuth callback probes on SSO routes, artifact names on disk, and servers calling webhook or DNS-log services to confirm a hit.
+- **Telemetry:** `web and WAF logs (path, user agent, headers)`, `proxy logs`, `sign-in logs (user agent)`, `CloudTrail and Okta user agent`, `DNS queries from servers`, `EDR file and process events`
+- **Implementation:** specification only. Collect the telemetry above first; if you cannot, the detection cannot work yet.
+
+### DET-AI-049 · Machine-Cadence Identity Attacks (Fixed-Rhythm Spray, User-Agent Family Burst)
+
+- **Severity:** high
+- **Hypothesis:** Password spraying at a near-constant one-second rhythm, or a burst of rotating user agents of one family from one source, followed by a successful sign-in, indicates an agent rather than a person or a classic spray tool.
+- **Telemetry:** `Entra ID and Okta sign-in logs with timestamps to the second`, `web and WAF logs (user agent per source)`
+- **Implementation:** specification only. Collect the telemetry above first; if you cannot, the detection cannot work yet.
+
+### DET-AI-050 · Service Principal Abuse After Agentic Access (Secret Guessing, Self-Granted Roles, Resource Fan-Out)
+
+- **Severity:** high
+- **Hypothesis:** A service principal fails then succeeds on secret authentication, adds credentials or assigns itself a role, then touches many resources or bursts Microsoft Graph calls: the persistence pattern reported for ARTEX-driven OAuth and application abuse.
+- **Telemetry:** `Entra ID service principal sign-ins`, `Entra ID audit logs (credential and role changes)`, `Microsoft Graph activity logs`
+- **Implementation:** specification only. Collect the telemetry above first; if you cannot, the detection cannot work yet.
+
+### DET-AI-051 · Self-Service Sign-Up Abuse Followed by Discovery
+
+- **Severity:** medium
+- **Hypothesis:** Bursts of Cognito (or similar) self-service sign-ups carrying agent probe artifacts, followed by discovery calls from the new identities, show an agent creating its own foothold.
+- **Telemetry:** `CloudTrail (cognito-idp SignUp and following calls)`
+- **Implementation:** specification only. Collect the telemetry above first; if you cannot, the detection cannot work yet.
+
 ## 4. Prevent it
 
 - **Agent Decision and Action Telemetry** (`CTRL-AGENT-TELEMETRY`): Log identity, plan step, capability request, authorization result and side effect for agent actions.
@@ -149,12 +177,12 @@ The runner has plan and mock adapters only: it does not call your system. To run
 
 ## 6. Limits of this page
 
-- 1 of 4 detection(s) are specifications, not rules. They say what to look for, not how to query it. Nothing here has been run against real telemetry.
+- 5 of 8 detection(s) are specifications, not rules. They say what to look for, not how to query it. Nothing here has been run against real telemetry.
 - The tests use benign markers and synthetic data. A pass in a lab is not a security rating for a production system.
 - Ecosystem tools and benchmarks help you test and measure. They never support a claim that an actor used the technique.
 
 ## 7. Go deeper (links only)
 
 - **Benchmarks:** [andyzorigin/cybench](https://github.com/andyzorigin/cybench)
-- **Tools and projects:** [promptfoo/promptfoo](https://github.com/promptfoo/promptfoo), [confident-ai/deepteam](https://github.com/confident-ai/deepteam), [praetorian-inc/augustus](https://github.com/praetorian-inc/augustus), [cisco-ai-defense/skill-scanner](https://github.com/cisco-ai-defense/skill-scanner), [scadastrangelove/agent-audit](https://github.com/scadastrangelove/agent-audit), [regaan/basilisk](https://github.com/regaan/basilisk), [perplext/LLMrecon](https://github.com/perplext/LLMrecon), [rakshanex/agenttrace](https://github.com/rakshanex/agenttrace), and 2 more in the [Explorer](https://ridd1kulusc0d3r.github.io/LLmInjection/#tab=ecosystem)
+- **Tools and projects:** [promptfoo/promptfoo](https://github.com/promptfoo/promptfoo), [confident-ai/deepteam](https://github.com/confident-ai/deepteam), [praetorian-inc/augustus](https://github.com/praetorian-inc/augustus), [cisco-ai-defense/skill-scanner](https://github.com/cisco-ai-defense/skill-scanner), [scadastrangelove/agent-audit](https://github.com/scadastrangelove/agent-audit), [regaan/basilisk](https://github.com/regaan/basilisk), [perplext/LLMrecon](https://github.com/perplext/LLMrecon), [rakshanex/agenttrace](https://github.com/rakshanex/agenttrace), and 3 more in the [Explorer](https://ridd1kulusc0d3r.github.io/LLmInjection/#tab=ecosystem)
 - **Live record:** [this technique in the Explorer](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=LLMI-T015)
