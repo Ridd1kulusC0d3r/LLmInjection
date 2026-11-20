@@ -553,5 +553,6 @@
  "tl.f.kev": "No CISA KEV",
  "tl.f.ai": "Encontradas por IA",
  "tl.b.ai": "encontrada por IA",
- "tl.b.agent": "usada por agente de IA"
+ "tl.b.agent": "usada por agente de IA",
+ "tabgrp.go": "Abrir a primeira seção deste grupo"
 }

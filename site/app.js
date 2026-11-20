@@ -72,6 +72,8 @@ function initControls(){
   $("#ecoSection").addEventListener("change",e=>{state.ecoSection=e.target.value;renderEcosystem();afterRender()});
   $("#lang").addEventListener("change",e=>switchLang(e.target.value));
   document.querySelectorAll(".tab").forEach(b=>{b.onclick=()=>showTab(b.dataset.tab,true);b.onkeydown=tabKeys});
+  /* group labels (Defense, Reference) open the first section of their group */
+  document.querySelectorAll(".tabgrp[data-goto]").forEach(b=>{b.onclick=()=>{showTab(b.dataset.goto,true);document.querySelector(`.tab[data-tab="${b.dataset.goto}"]`)?.focus()}});
   document.querySelectorAll("[data-export]").forEach(b=>b.onclick=()=>exportCsv(b.dataset.export));
   window.addEventListener("hashchange",applyHash);
   $("#closeDrawer").onclick=closeDrawer;
@@ -105,6 +107,8 @@ function showTab(name,push){
   const tab=document.querySelector(`.tab[data-tab="${name}"]`);if(!tab)return;
   document.querySelectorAll(".tab").forEach(x=>{const on=x===tab;x.classList.toggle("active",on);x.setAttribute("aria-selected",on);x.tabIndex=on?0:-1});
   document.querySelectorAll(".view").forEach(x=>x.classList.toggle("active",x.id===name));
+  document.querySelectorAll(".tabgrp[data-goto]").forEach(g=>{let n=g.nextElementSibling,on=false;while(n&&n.classList.contains("tab")){if(n===tab)on=true;n=n.nextElementSibling}g.classList.toggle("on",on)});
+  {const bar=tab.parentElement;if(bar&&bar.scrollWidth>bar.clientWidth){const l=tab.offsetLeft-bar.offsetLeft,r=l+tab.offsetWidth;if(l<bar.scrollLeft)bar.scrollLeft=l-24;else if(r>bar.scrollLeft+bar.clientWidth)bar.scrollLeft=r-bar.clientWidth+24}}
   if(push)patchHash({tab:name});
   /* the graph is laid out while hidden; size the first view once it has real dimensions */
   if(name==="graph"&&G.full&&!G.sized&&$("#graphSvg").clientWidth){G.sized=true;graphStart()}
