@@ -2,13 +2,20 @@
 title: "Threat Intelligence: vulnerabilidades e incidentes em sistemas de IA, 2026"
 kpis: "13|vulnerabilidades de software de IA incluídas no CISA KEV em 2026 (conferido no feed);6 de 25|CVEs da tabela com exploração confirmada em campo;~36 h|do advisory à exploração do LiteLLM CVE-2026-42208;65|entradas na cronologia de 2026, de janeiro a 19 de novembro, 19 novas (v1.1)"
 kev_chart: true
+hot_days: 30
+appendix: true
 ---
 
 ![Masthead](../../assets/reports/ia-2026-vulnerabilidades-incidentes.svg)
 
-<p class="rpt-head"><span>LLMI-RI-2026-11-20 · v1.1</span><span class="tlp">TLP:CLEAR</span><span>Corte 2026-11-20</span></p>
+<p class="rpt-head"><span>LLMI-RI-2026-11-20 · v1.2</span><span class="tlp">TLP:CLEAR</span><span>Corte 2026-11-20</span></p>
 
 <div class="injected" markdown="1">
+**v1.2 (2026-11-20).** Três partes agora são geradas dos datasets a cada build, para o relatório não envelhecer:
+- **O mais quente agora:** os últimos 30 dias.
+- **Apêndice A:** linha do tempo de incidentes e vazamentos de 2026, com sinais de vazamento e de agente de IA.
+- **Apêndice B:** todas as CVEs documentadas, com data de KEV e relação com IA.
+
 **v1.1 (2026-11-20, mesmo dia).** O texto original não tinha nenhum caso de ARTEX na cronologia. Entraram 19 linhas novas, todas conferidas em fonte primária ou em registro já lido do repositório:
 - **Casos de ARTEX:** Comissão Europeia, Barracuda, CERT-In/CRAFTY FALCON, imagem Docker com backdoor, WorkOS, VAPOR PANDA, Storm-0940, TAG-217, remoção do repositório, fork do ScopeSentry e o censo da Spectrum.
 - **CVEs encontrados ou explorados por agentes:** DIVD/Zammad e BeyondTrust.
