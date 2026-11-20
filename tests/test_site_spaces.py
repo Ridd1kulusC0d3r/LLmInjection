@@ -45,3 +45,23 @@ class SiteSpacesTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class SelectionReportTests(unittest.TestCase):
+    def test_report_page_loads_its_scripts_and_every_key_exists(self):
+        site = Path(__file__).resolve().parents[1] / "site"
+        html = (site / "report.html").read_text(encoding="utf-8")
+        self.assertIn('src="i18n.js"', html)
+        self.assertIn('src="report.js"', html)
+        en = json.loads((site / "i18n" / "en.json").read_text(encoding="utf-8"))
+        used = set()
+        for name in ("report.js", "app.js"):
+            used |= set(re.findall(r't\("(srp\.[\w.]+)"', (site / name).read_text(encoding="utf-8")))
+        used |= set(re.findall(r'data-i18n="(srp\.[\w.]+)"', html))
+        self.assertGreater(len(used), 30)
+        self.assertEqual(sorted(k for k in used if k not in en), [])
+
+    def test_graph_links_to_the_report_page(self):
+        app = (Path(__file__).resolve().parents[1] / "site" / "app.js").read_text(encoding="utf-8")
+        self.assertIn("report.html#ids=", app)
+        self.assertIn("data-pick", app)

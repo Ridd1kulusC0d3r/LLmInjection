@@ -85,6 +85,9 @@ jobs:
       - name: Audit graph for orphaned records
         run: python scripts/audit_graph.py --strict
 
+      - name: Block terms that must never be published
+        run: python scripts/check_blocked_terms.py
+
       - name: Exercise living-intelligence intake with fixtures
         run: |
           python scripts/intel_intake.py             --fixture tests/fixtures/intake-responses.json             --dry-run             --report /tmp/intake.md             --summary-json /tmp/intake-summary.json

@@ -64,7 +64,7 @@ function renderReports(){
   const rows=SP.reports?.reports||[];
   if(!rows.length){box.innerHTML=`<p class="empty">${esc(t("rep.none"))}</p>`;view.hidden=true;return}
   const groups=KIND_ORDER.map(k=>[k,rows.filter(r=>r.kind===k)]).filter(([,v])=>v.length);
-  box.innerHTML=groups.map(([k,v])=>`<h3 class="sect">${esc(t("rep.kind."+k))}</h3><div class="rcards">${v.map(r=>`<button type="button" class="rcard${SP.report===r.path?" on":""}" data-report="${esc(r.path)}"><span class="eyebrow">${esc(t("rep.kind."+r.kind))}</span><b>${esc(r.kind==="platform"?t("rep.platform"):r.title)}</b><span class="id">${esc(r.date||r.path)}</span></button>`).join("")}</div>`).join("");
+  box.innerHTML=groups.map(([k,v])=>`<h3 class="sect">${esc(t("rep.kind."+k))}</h3><div class="rcards">${v.map(r=>`<button type="button" class="rcard${SP.report===r.path?" on":""}" data-report="${esc(r.path)}"><span class="eyebrow">${esc(t("rep.kind."+r.kind))}</span><b>${esc(r.kind==="platform"?t("rep.platform"):r.title)}</b><span class="id">${esc(r.date||r.path)}${r.page?` · ${esc(t("rep.webtag"))}`:""}</span></button>`).join("")}</div>`).join("");
   box.querySelectorAll("[data-report]").forEach(b=>b.onclick=()=>openReport(b.dataset.report,true));
   if(SP.report)openReport(SP.report,false);else view.hidden=true;
 }
@@ -75,7 +75,7 @@ async function openReport(path,push){
   view.hidden=false;view.innerHTML=`<p class="note">${esc(t("rep.loading"))}</p>`;
   try{
     const text=await fetch(path).then(x=>{if(!x.ok)throw new Error(x.status);return x.text()});
-    view.innerHTML=`<div class="rbar"><span class="id">${esc(path)}</span><span><a class="out" href="${esc(r.github)}" rel="noopener">${esc(t("rep.github"))}</a> · <button type="button" class="export" data-close-report>${esc(t("rep.close"))}</button></span></div><article class="md-doc">${md(text,path)}</article>`;
+    view.innerHTML=`<div class="rbar"><span class="id">${esc(path)}</span><span>${r.page?`<a class="out" href="${esc(r.page)}" rel="noopener">${esc(t("rep.web"))}</a> · `:""}<a class="out" href="${esc(r.github)}" rel="noopener">${esc(t("rep.github"))}</a> · <button type="button" class="export" data-close-report>${esc(t("rep.close"))}</button></span></div><article class="md-doc">${md(text,path)}</article>`;
     view.querySelector("[data-close-report]").onclick=()=>{SP.report=null;patchHash({report:null});view.hidden=true;document.querySelectorAll(".rcard").forEach(b=>b.classList.remove("on"))};
     if(push)view.scrollIntoView({behavior:"smooth",block:"start"});
   }catch(e){view.innerHTML=`<p class="empty">${esc(t("rep.fail",{msg:e.message}))}</p>`}

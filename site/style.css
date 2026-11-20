@@ -212,6 +212,12 @@ main{padding:34px 0 64px}
 .gsel-go:hover,.gsel-go:focus-visible{background:var(--paper-2);color:var(--signal)}
 .gsel-type{display:inline-block;min-width:74px;margin-right:8px;font:600 9.5px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
 .gsel-actions{display:flex;gap:8px;flex-wrap:wrap}
+.gsel-report{margin:0 0 10px;padding:10px;border:1px dashed var(--signal);border-radius:var(--radius-sm);background:var(--signal-soft)}
+.gsel-report a.export{text-decoration:none}
+.export.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.gpick{align-items:center;padding:10px 12px;margin:8px 0;border:1px solid var(--signal);border-radius:var(--radius-sm);background:var(--signal-soft)}
+.gpick-h{font:600 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--signal);margin-right:6px}
+.gpick a.export{text-decoration:none;margin-left:auto}
 .export.primary{background:var(--signal);border-color:var(--signal);color:var(--signal-ink)}.export.primary:hover{color:var(--signal-ink);filter:brightness(1.06)}
 
 /* timeline */
