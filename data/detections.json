@@ -876,7 +876,8 @@
       "network scans and listening ports",
       "HTTP responses (console pages, auth realm)",
       "container image inventory",
-      "EDR process and file events"
+      "EDR process and file events",
+      "console fingerprints that survive renames: page markers from tool templates, shared TLS certificates, private build strings, the 'ARTEX' 401 realm on port 8787 (Spectrum, RST Cloud, Check Point)"
     ],
     "test_ids": []
   },
@@ -948,6 +949,21 @@
       "MLflow server logs",
       "host or VPC flow logs",
       "cloud audit logs for instance credential use"
+    ],
+    "test_ids": []
+  },
+  {
+    "id": "DET-AI-058",
+    "type": "detection",
+    "name": "Internal Scanner or Asset Platform Hands Targets to an Agentic Offensive Framework",
+    "category": "network",
+    "severity": "high",
+    "status": "specification",
+    "hypothesis": "A host inside the estate logs in to an agentic offensive framework's API and submits targets as tasks: for example a ScopeSentry server posting to /api/auth/login and then /api/tasks on port 8787 (the ARTEX API), or an AI client driving a recon platform through its MCP endpoint. Recon output feeding autonomous exploitation is either an unsanctioned red-team setup or an operator's staging host.",
+    "telemetry": [
+      "proxy or NGFW logs with method, path and destination port",
+      "netflow from scanner and inventory hosts",
+      "MCP endpoint access logs and API-key use on recon platforms"
     ],
     "test_ids": []
   }

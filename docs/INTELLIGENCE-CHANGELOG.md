@@ -2,6 +2,21 @@
 
 This changelog records material changes to attribution, confidence, external mappings and structured intelligence. Ordinary prose edits do not belong here.
 
+## 2026-11-20 — Spectrum census of offensive AI consoles; ScopeSentry fork wired to ARTEX
+
+### Added
+
+- `SRC-SPECTRUM-SWARM-CHASING` (Spectrum, 2026-11-18, grade B): 2,335 exposed offensive AI consoles, 47 ARTEX variants, 179 renamed ARTEX consoles, fleets by shared certificate and private build, three undocumented tools, and a fingerprint catalog. TOOL-ARTEX cites it.
+- `TOOL-SCOPESENTRY` and `SRC-GH-SCOPESENTRY-NIUDAII`: an asset-mapping platform by Autumn-27 (the handle that published ARTEX); the niudaii fork adds an ARTEX task client and an MCP server. `TOOL-SCOPESENTRY integrates-with TOOL-ARTEX`.
+- `DET-AI-058` (internal host submits tasks to an agentic offensive framework API) with a Sigma rule. `DET-AI-052` gains console fingerprints that survive renames and now also detects Cairn and CyberStrikeAI consoles.
+- 22 references cited by Spectrum and not yet read, as research-queue candidates (`intake/digests/2026-11-20-spectrum.json`).
+- ARTEX dossier v0.4 (§6.1 census, §6.2 ScopeSentry).
+
+### Confidence notes
+
+- Sharing a GitHub handle with ARTEX's author is not evidence that the author is behind any intrusion.
+- ThreatDefence/artex-detections is unchanged since the map at commit `3ad092e`.
+
 ## 2026-11-20 — AI infrastructure KEV entries, report intake and AI-service detections
 
 ### Added

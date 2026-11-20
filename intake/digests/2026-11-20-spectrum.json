@@ -1,0 +1,364 @@
+{
+ "digest_id": "LLMI-20261121-SPECTRUM",
+ "date": "2026-11-20",
+ "producer": "analyst: references cited by Spectrum, 'Swarm Chasing' (2026-11-18), not yet read here",
+ "window": "2026-09-29/2026-11-18",
+ "notes": "IDs use the 20261121 series because the 20261120 series is full (01-98). Each item is cited by SRC-SPECTRUM-SWARM-CHASING and was not opened here; seal secondary. Items already held as sources were skipped.",
+ "items": [
+  {
+   "id": "LLMI-20261121-01",
+   "title": "Houdin.io: Mapping 200 still undetected Chinese AI attack platforms in the wild",
+   "url": "https://houdin.io/blog/mapping-200-undetected-chinese-ai-attack-platforms",
+   "published": "2026-09-29",
+   "seal": "secondary",
+   "temporal": "new",
+   "source_grade": "B",
+   "kind": "research",
+   "techniques": [
+    "LLMI-T015"
+   ],
+   "identifiers": [],
+   "summary": "Cited by Spectrum's 'Swarm Chasing' (2026-11-18) in its fingerprint and reference catalog; not opened here. Read before promoting.",
+   "brazil_latam": false
+  },
+  {
+   "id": "LLMI-20261121-02",
+   "title": "AhnLab ASEC: The Threat of AI-Driven Autonomous Penetration Testing, as Examined by ARTEX",
+   "url": "https://asec.ahnlab.com/en/95845/",
+   "published": "2026-10-14",
+   "seal": "secondary",
+   "temporal": "new",
+   "source_grade": "B",
+   "kind": "research",
+   "techniques": [
+    "LLMI-T015"
+   ],
+   "identifiers": [],
+   "summary": "Cited by Spectrum's 'Swarm Chasing' (2026-11-18) in its fingerprint and reference catalog; not opened here. Read before promoting.",
+   "brazil_latam": false
+  },
+  {
+   "id": "LLMI-20261121-03",
+   "title": "AhnLab ASEC: Analysis of the Infrastructure of ARTEX #4: The Birth of Copy Cat",
+   "url": "https://asec.ahnlab.com/en/95875/",
+   "published": "2026-10-14",
+   "seal": "secondary",
+   "temporal": "new",
+   "source_grade": "B",
+   "kind": "research",
+   "techniques": [
+    "LLMI-T015"
+   ],
+   "identifiers": [],
+   "summary": "Cited by Spectrum's 'Swarm Chasing' (2026-11-18) in its fingerprint and reference catalog; not opened here. Read before promoting.",
+   "brazil_latam": false
+  },
+  {
+   "id": "LLMI-20261121-04",
+   "title": "swarmcha.se: We found a Tencent agent fleet",
+   "url": "https://swarmcha.se/posts/chinese-agent-fleet-full-report",
+   "published": "2026-10-14",
+   "seal": "secondary",
+   "temporal": "new",
+   "source_grade": "C",
+   "kind": "research",
+   "techniques": [
+    "LLMI-T015"
+   ],
+   "identifiers": [],
+   "summary": "Cited by Spectrum's 'Swarm Chasing' (2026-11-18) in its fingerprint and reference catalog; not opened here. Read before promoting.",
+   "brazil_latam": false
+  },
+  {
+   "id": "LLMI-20261121-05",
+   "title": "NorForge: Automated Subversion and Attempted Takeover of AI Pentesting Harnesses",
+   "url": "https://norforge.com/blog/automated-subversion-attempted-takeover",
+   "published": "2026-10-26",
+   "seal": "secondary",
+   "temporal": "new",
+   "source_grade": "C",
+   "kind": "research",
+   "techniques": [
+    "LLMI-T015",
+    "LLMI-T002"
+   ],
+   "identifiers": [],
+   "summary": "Cited by Spectrum's 'Swarm Chasing' (2026-11-18) in its fingerprint and reference catalog; not opened here. Read before promoting.",
+   "brazil_latam": false
+  },
+  {
+   "id": "LLMI-20261121-06",
+   "title": "Profero IRT: One Operator, Several AI Attack Agents: The Ultra Suite and ARTEX",
+   "url": "https://profero.io/blog/ultra-suite-artex-ai-attack-agents/",
+   "published": "2026-10-31",
+   "seal": "secondary",
+   "temporal": "new",
+   "source_grade": "B",
+   "kind": "research",
+   "techniques": [
+    "LLMI-T015"
+   ],
+   "identifiers": [],
+   "summary": "Cited by Spectrum's 'Swarm Chasing' (2026-11-18) in its fingerprint and reference catalog; not opened here. Read before promoting.",
+   "brazil_latam": false
+  },
+  {
+   "id": "LLMI-20261121-07",
+   "title": "RST Cloud: Tempo, not technique: hunting the AI harnesses behind today's intrusions",
+   "url": "https://www.rstcloud.com/hunting-ai-harnesses-cairn-artex-pentagi/",
+   "published": "2026-11-02",
+   "seal": "secondary",
+   "temporal": "new",
+   "source_grade": "B",
+   "kind": "research",
+   "techniques": [
+    "LLMI-T015"
+   ],
+   "identifiers": [],
+   "summary": "Cited by Spectrum's 'Swarm Chasing' (2026-11-18) in its fingerprint and reference catalog; not opened here. Read before promoting.",
+   "brazil_latam": false
+  },
+  {
+   "id": "LLMI-20261121-08",
+   "title": "Hunt.io: ARTEX Exposed: Mapping the Infrastructure Behind the South Korean Bank Breaches",
+   "url": "https://hunt.io/blog/artex-south-korea-bank-infrastructure",
+   "published": "2026-11-04",
+   "seal": "secondary",
+   "temporal": "new",
+   "source_grade": "B",
+   "kind": "research",
+   "techniques": [
+    "LLMI-T015"
+   ],
+   "identifiers": [],
+   "summary": "Cited by Spectrum's 'Swarm Chasing' (2026-11-18) in its fingerprint and reference catalog; not opened here. Read before promoting.",
+   "brazil_latam": false
+  },
+  {
+   "id": "LLMI-20261121-09",
+   "title": "Profero IRT: Inside the AI Operator",
+   "url": "https://profero.io/blog/inside-the-ai-operator/",
+   "published": "2026-11-04",
+   "seal": "secondary",
+   "temporal": "new",
+   "source_grade": "B",
+   "kind": "research",
+   "techniques": [
+    "LLMI-T015"
+   ],
+   "identifiers": [],
+   "summary": "Cited by Spectrum's 'Swarm Chasing' (2026-11-18) in its fingerprint and reference catalog; not opened here. Read before promoting.",
+   "brazil_latam": false
+  },
+  {
+   "id": "LLMI-20261121-10",
+   "title": "ScanMalware: Agentic Hacking in the Wild: How We Track ARTEX, CyberStrikeAI and Their Rebrands",
+   "url": "https://scanmalware.com/blog/agentic-hacking-frameworks",
+   "published": "2026-11-07",
+   "seal": "secondary",
+   "temporal": "new",
+   "source_grade": "C",
+   "kind": "research",
+   "techniques": [
+    "LLMI-T015"
+   ],
+   "identifiers": [],
+   "summary": "Cited by Spectrum's 'Swarm Chasing' (2026-11-18) in its fingerprint and reference catalog; not opened here. Read before promoting.",
+   "brazil_latam": false
+  },
+  {
+   "id": "LLMI-20261121-11",
+   "title": "Gcore: We found 1,698 Internet-visible AI offensive-security endpoints",
+   "url": "https://gcore.com/blog/ai-offensive-security-endpoints-artex-pentagi-cairn",
+   "published": "2026-11-09",
+   "seal": "secondary",
+   "temporal": "new",
+   "source_grade": "B",
+   "kind": "research",
+   "techniques": [
+    "LLMI-T015"
+   ],
+   "identifiers": [],
+   "summary": "Cited by Spectrum's 'Swarm Chasing' (2026-11-18) in its fingerprint and reference catalog; not opened here. Read before promoting.",
+   "brazil_latam": false
+  },
+  {
+   "id": "LLMI-20261121-12",
+   "title": "GitGuardian: Beyond ARTEX: 45 AI Pentesting Tools and How to Find Them",
+   "url": "https://blog.gitguardian.com/ai-pentesting-tools-beyond-artex/",
+   "published": "2026-11-09",
+   "seal": "secondary",
+   "temporal": "new",
+   "source_grade": "B",
+   "kind": "research",
+   "techniques": [
+    "LLMI-T015"
+   ],
+   "identifiers": [],
+   "summary": "Cited by Spectrum's 'Swarm Chasing' (2026-11-18) in its fingerprint and reference catalog; not opened here. Read before promoting.",
+   "brazil_latam": false
+  },
+  {
+   "id": "LLMI-20261121-13",
+   "title": "SOCRadar: ARTEX: 916 Exposed AI Pentest Consoles Mapped in the U.S.",
+   "url": "https://socradar.io/blog/artex-ai-pentest-consoles-us/",
+   "published": "2026-11-12",
+   "seal": "secondary",
+   "temporal": "new",
+   "source_grade": "B",
+   "kind": "research",
+   "techniques": [
+    "LLMI-T015"
+   ],
+   "identifiers": [],
+   "summary": "Cited by Spectrum's 'Swarm Chasing' (2026-11-18) in its fingerprint and reference catalog; not opened here. Read before promoting.",
+   "brazil_latam": false
+  },
+  {
+   "id": "LLMI-20261121-14",
+   "title": "Cloudflare: Adapting to AI penetration testing orchestrators",
+   "url": "https://blog.cloudflare.com/adapting-to-ai-penetration-testing-orchestrators",
+   "published": "2026-11-13",
+   "seal": "secondary",
+   "temporal": "new",
+   "source_grade": "B",
+   "kind": "research",
+   "techniques": [
+    "LLMI-T015"
+   ],
+   "identifiers": [],
+   "summary": "Cited by Spectrum's 'Swarm Chasing' (2026-11-18) in its fingerprint and reference catalog; not opened here. Read before promoting.",
+   "brazil_latam": false
+  },
+  {
+   "id": "LLMI-20261121-15",
+   "title": "Cisco Talos: ARTEX and beyond: AI-enabled penetration testing platforms",
+   "url": "https://blog.talosintelligence.com/artex-and-beyond/",
+   "published": "2026-11-13",
+   "seal": "secondary",
+   "temporal": "new",
+   "source_grade": "A",
+   "kind": "research",
+   "techniques": [
+    "LLMI-T015"
+   ],
+   "identifiers": [],
+   "summary": "Cited by Spectrum's 'Swarm Chasing' (2026-11-18) in its fingerprint and reference catalog; not opened here. Read before promoting.",
+   "brazil_latam": false
+  },
+  {
+   "id": "LLMI-20261121-16",
+   "title": "PenTestIT: AI Pentesting Frameworks: Abuse, Lineage, Fingerprints",
+   "url": "https://pentestit.com/ai-pentesting-frameworks-abuse-lineage-fingerprints/",
+   "published": "2026-11-14",
+   "seal": "secondary",
+   "temporal": "new",
+   "source_grade": "C",
+   "kind": "research",
+   "techniques": [
+    "LLMI-T015"
+   ],
+   "identifiers": [],
+   "summary": "Cited by Spectrum's 'Swarm Chasing' (2026-11-18) in its fingerprint and reference catalog; not opened here. Read before promoting.",
+   "brazil_latam": false
+  },
+  {
+   "id": "LLMI-20261121-17",
+   "title": "Securelist (Kaspersky): CyberStrikeAI in the wild: the use of AI in real-world attacks on organizations",
+   "url": "https://securelist.com/cyberstrikeai-attacks/121715/",
+   "published": "2026-11-02",
+   "seal": "secondary",
+   "temporal": "new",
+   "source_grade": "A",
+   "kind": "research",
+   "techniques": [
+    "LLMI-T015"
+   ],
+   "identifiers": [],
+   "summary": "Cited by Spectrum's 'Swarm Chasing' (2026-11-18) in its fingerprint and reference catalog; not opened here. Read before promoting.",
+   "brazil_latam": false
+  },
+  {
+   "id": "LLMI-20261121-18",
+   "title": "Okta Threat Intelligence: Agentic attack tools used to accelerate reconnaissance of identity flows",
+   "url": "https://www.okta.com/blog/threat-intelligence/agentic-attack-tools-used-to-accelerate-reconnaissance-of-identi/",
+   "published": "2026-11-06",
+   "seal": "secondary",
+   "temporal": "new",
+   "source_grade": "A",
+   "kind": "research",
+   "techniques": [
+    "LLMI-T015",
+    "LLMI-T014"
+   ],
+   "identifiers": [],
+   "summary": "Cited by Spectrum's 'Swarm Chasing' (2026-11-18) in its fingerprint and reference catalog; not opened here. Read before promoting.",
+   "brazil_latam": false
+  },
+  {
+   "id": "LLMI-20261121-19",
+   "title": "Unit 42: Attackers Use Autonomous AI to Target Semiconductor, Defense and Civil Society Sectors (Cairn)",
+   "url": "https://unit42.paloaltonetworks.com/cairn-framework-ai-autonomous-attacks/",
+   "published": "2026-11-12",
+   "seal": "secondary",
+   "temporal": "new",
+   "source_grade": "A",
+   "kind": "research",
+   "techniques": [
+    "LLMI-T015"
+   ],
+   "identifiers": [],
+   "summary": "Cited by Spectrum's 'Swarm Chasing' (2026-11-18) in its fingerprint and reference catalog; not opened here. Read before promoting.",
+   "brazil_latam": false
+  },
+  {
+   "id": "LLMI-20261121-20",
+   "title": "AlienVault OTX: ARTEX infrastructure indicators (pulse)",
+   "url": "https://otx.alienvault.com/pulse/6afa566f28ebebfb22046701",
+   "published": "2026-11-16",
+   "seal": "secondary",
+   "temporal": "new",
+   "source_grade": "C",
+   "kind": "research",
+   "techniques": [
+    "LLMI-T015"
+   ],
+   "identifiers": [],
+   "summary": "Cited by Spectrum's 'Swarm Chasing' (2026-11-18) in its fingerprint and reference catalog; not opened here. Read before promoting.",
+   "brazil_latam": false
+  },
+  {
+   "id": "LLMI-20261121-21",
+   "title": "MalwareMustDie: MMD-072-2026 ARTEX detection signature pack",
+   "url": "https://blog.malwaremustdie.org/2026/11/mmd-072-2026-artex-detection-signature.html",
+   "published": "2026-11-13",
+   "seal": "secondary",
+   "temporal": "new",
+   "source_grade": "C",
+   "kind": "research",
+   "techniques": [
+    "LLMI-T015"
+   ],
+   "identifiers": [],
+   "summary": "Cited by Spectrum's 'Swarm Chasing' (2026-11-18) in its fingerprint and reference catalog; not opened here. Read before promoting.",
+   "brazil_latam": false
+  },
+  {
+   "id": "LLMI-20261121-22",
+   "title": "Cloud Security Alliance: Trojanized Offensive AI Tooling: The ARTEX Docker Backdoor",
+   "url": "https://labs.cloudsecurityalliance.org/research/csa-research-note-trojanized-offensive-ai-tooling-20261106-c/",
+   "published": "2026-11-06",
+   "seal": "secondary",
+   "temporal": "new",
+   "source_grade": "B",
+   "kind": "research",
+   "techniques": [
+    "LLMI-T015",
+    "LLMI-T011"
+   ],
+   "identifiers": [],
+   "summary": "Cited by Spectrum's 'Swarm Chasing' (2026-11-18) in its fingerprint and reference catalog; not opened here. Read before promoting.",
+   "brazil_latam": false
+  }
+ ]
+}

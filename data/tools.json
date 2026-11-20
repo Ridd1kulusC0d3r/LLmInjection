@@ -7,12 +7,13 @@
     "origin": "Open-source, Go, published on GitHub by \"Autumn-27\" in July 2026; made unavailable on 2026-10-08, with forks, archived copies and a commercial ARTEX PRO still in circulation",
     "models": "External providers (Claude, GPT, DeepSeek, GLM, Grok, Kimi); DeepSeek Flash models dominate attacker instances per the FBI",
     "first_seen": "2026-07",
-    "summary": "Multi-agent, LLM-driven penetration-testing platform: an operator sets a target and objective, a planner agent chooses steps and worker agents run standard tools, sharing findings. Reported in use by state-aligned and financially motivated actors since August 2026; its own consoles are often exposed to the internet.",
+    "summary": "Multi-agent, LLM-driven penetration-testing platform: an operator sets a target and objective, a planner agent chooses steps and worker agents run standard tools, sharing findings. Reported in use by state-aligned and financially motivated actors since August 2026; its own consoles are often exposed to the internet. Spectrum's census (2026-11-18) counted 2,335 exposed offensive AI consoles, 47 distinct ARTEX variants (forks, private builds, renamed consoles such as ScopeWeaver) and 179 ARTEX consoles that a default-title search misses.",
     "source_ids": [
       "SRC-FBI-FLASH-20261113-ARTEX",
       "SRC-GTIG-ARTEX-2026-10",
       "SRC-WIZ-ARTEX-VENDORS",
-      "SRC-CENSYS-ARTEX-2026-11"
+      "SRC-CENSYS-ARTEX-2026-11",
+      "SRC-SPECTRUM-SWARM-CHASING"
     ]
   },
   {
@@ -84,6 +85,20 @@
     "source_ids": [
       "SRC-GTIG-AI-TRACKER-2026-05",
       "SRC-GAMBIT-AI-AGENTS-RETAILERS"
+    ]
+  },
+  {
+    "id": "TOOL-SCOPESENTRY",
+    "type": "tool",
+    "name": "ScopeSentry",
+    "kind": "other",
+    "origin": "Open-source asset-mapping and scanning platform (FastAPI server, Go scan nodes, Vue UI) by Autumn-27, the GitHub handle that also published ARTEX; AGPL-3.0 with separate commercial terms; upstream since June 2024. The niudaii fork (v1.9.4, 2026-08-26) adds an ARTEX task client and an MCP server",
+    "models": "None of its own. In the fork, an asset can be sent to an ARTEX instance as a scan task, and the MCP server lets an AI client (for example Cursor) list assets and create scans with an API key",
+    "first_seen": "2024-06",
+    "summary": "Distributed recon platform: subdomains, ports, fingerprints, directory and vulnerability scans, leaks, crawling and page monitoring across scan nodes. Not malicious in itself. It matters here because the fork wires reconnaissance to agentic exploitation: the asset view has a 'scan task' action that logs into an ARTEX API (default port 8787, user 'ARTEX') and posts the asset as the task goal, and the configuration ships a default ARTEX address on a public IP. Sharing a GitHub handle with ARTEX's author is not evidence that the author is behind any intrusion.",
+    "source_ids": [
+      "SRC-GH-SCOPESENTRY-NIUDAII",
+      "SRC-SPECTRUM-SWARM-CHASING"
     ]
   }
 ]

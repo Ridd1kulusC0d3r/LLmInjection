@@ -4,9 +4,11 @@ title: "Dossiê: ARTEX, framework ofensivo agêntico em uso por vários atores"
 
 ![Masthead](../../assets/reports/artex.svg)
 
-<p class="rpt-head"><span>LLMI-DS-ARTEX · v0.3</span><span class="tlp">TLP:CLEAR</span><span>Corte 2026-11-20</span></p>
+<p class="rpt-head"><span>LLMI-DS-ARTEX · v0.4</span><span class="tlp">TLP:CLEAR</span><span>Corte 2026-11-20</span></p>
 
 <div class="injected" markdown="1">
+v0.4 (2026-11-20): censo de consoles da Spectrum (§6.1) e o fork do ScopeSentry que entrega alvos ao ARTEX (§6.2, `TOOL-SCOPESENTRY`, `DET-AI-058`). O repositório artex-detections não mudou desde o mapa da §7.1 (commit `3ad092e`).
+
 v0.3 (2026-11-20): todas as fontes de outubro e novembro citadas foram lidas no original e estão em `data/` com ID `SRC-…`, exceto o boletim da Arctic Wolf sobre o AntiFox, conhecido aqui pela nota da Cloud Security Alliance (grau B). O ARTEX agora é um objeto do grafo: `TOOL-ARTEX`, com arestas `uses-tool` vindas de 14 campanhas e incidentes.
 </div>
 
@@ -95,6 +97,32 @@ ARTEX é descrito pelas fontes como plataforma open-source multiagente, guiada p
 - **Limite declarado pelas fontes:** a Recorded Future diz que a evidência não estabelece quanto a IA acelerou os ataques; o GTIG chama o uso de inicial e pouco sofisticado.
 - **Camada 8:** o operador deixa de executar e passa a supervisionar; o erro humano que sobra é de escolha de alvo e de higiene da própria infraestrutura (consoles expostos, imagens com backdoor). Do lado do defensor, o risco é o viés de novidade: tratar "IA" como causa quando a porta de entrada continua sendo credencial vazada.
 
+### 6.1 Censo de consoles expostos (Spectrum, 18/11)
+
+A Spectrum cruzou dados de varredura de terceiros (Shodan, InternetDB, urlquery, urlscan, GreyNoise, CT logs) com a leitura do código-fonte e não se conectou a nenhum console (`SRC-SPECTRUM-SWARM-CHASING`, grau B).
+
+| Medida | Valor | Leitura |
+|---|---|---|
+| Consoles ofensivos de IA expostos | 2.335 | limite inferior; parte é de pentesters, estudantes ou honeypots |
+| Variantes distintas de ARTEX | 47 | forks, builds privados e consoles renomeados (ScopeWeaver ×65, HekerAI, artex-mx…) |
+| Consoles ARTEX que a busca pelo título padrão não acha | 179 | título é impressão digital fraca |
+| Frota `sco-fix2` | 348 serviços em 254 IPs, um único AS | origem comum: alta; um único operador: baixa |
+| PentAGI clonado | 116 cópias com o mesmo certificado | imagem clonada |
+| Crescimento do título padrão no Shodan | +41% entre 6 e 18/11 | parte pode ser o Shodan rastreando mais |
+
+**Três ferramentas ofensivas não documentadas** apareceram em consoles únicos: 红刃 (Red Blade), RedTeam Platform e 鲸鱼 (Whale). Não entram no grafo até haver fonte que as descreva além da página do próprio console.
+
+**Impressões digitais que resistem a renomeação**, ligadas a `DET-AI-052`: marcadores de página do template (classes CSS, chaves de tema), certificado TLS compartilhado, string de build privado e o realm "ARTEX" no 401 da porta 8787. Título e favicon pegam só instalações padrão.
+
+### 6.2 ScopeSentry: reconhecimento ligado ao ARTEX
+
+ScopeSentry é uma plataforma open-source de mapeamento de ativos (subdomínios, portas, fingerprint, diretórios, vulnerabilidades, monitoramento de página) publicada desde junho de 2024 por Autumn-27, o mesmo handle que publicou o ARTEX. O fork `niudaii/ScopeSentry` (v1.9.4, 26/08/2026), lido no código, acrescenta duas coisas (`SRC-GH-SCOPESENTRY-NIUDAII`):
+
+- **Cliente de tarefas do ARTEX.** Na tela de ativos, a ação "scan task" faz login na API do ARTEX (`/api/auth/login`, usuário padrão "ARTEX", porta 8787) e envia o ativo como objetivo da tarefa (`/api/tasks`). A configuração traz um endereço padrão em IP público (`111.124.203[.]18:8787`); sem senha configurada, o login falha. É um padrão de código, não um ataque observado.
+- **Servidor MCP.** Um cliente de IA (o guia cita o Cursor) lista ativos e cria varreduras com uma chave `ssk_…`.
+
+O que isso significa: reconhecimento em escala alimentando exploração autônoma, no mesmo painel. Para o defensor, `DET-AI-058` procura hosts internos que fazem login ou enviam tarefas a uma API ARTEX. Compartilhar o handle com o autor do ARTEX não é evidência de envolvimento em intrusão.
+
 ## 7. Detecção
 
 - **No repositório:** detecções ligadas a `LLMI-T015` (ver [playbook](../../docs/playbooks/LLMI-T015.md)).
@@ -167,5 +195,7 @@ Impacto regional não demonstrado nas fontes consultadas. Hipótese a testar: co
 **Lidas em 2026-11-20 e registradas:** `SRC-FBI-FLASH-20261113-ARTEX` · `SRC-MSFT-ARTEX-SECRETS-2026-11` · `SRC-CHECKPOINT-ARTEX-2026-11` · `SRC-CENSYS-ARTEX-2026-11` · `SRC-EYE-ARTEX-IR-2026-11` · `SRC-DATADOG-ARTEX-AWS` · `SRC-UNIT42-ARTEX-2026-11` · `SRC-GTIG-AGENTIC-THRESHOLD-2026-11` · `SRC-JPCERT-AT-2026-0030` · `SRC-THN-CERTIN-CRAFTY-FALCON` (grau C).
 
 Também lidas: `SRC-MSFT-STORM-3358-ARTEX` · `SRC-WIZ-ARTEX-VENDORS` · `SRC-WORKOS-BULLETIN-2026-10-30` · `SRC-CSA-ANTIFOX` (B) · `SRC-BC-ANTIFOX` (C).
+
+**Lidas em v0.4:** `SRC-SPECTRUM-SWARM-CHASING` (B) · `SRC-GH-SCOPESENTRY-NIUDAII` (código, B). As 22 referências da Spectrum ainda não abertas aqui estão na fila de pesquisa (`intake/digests/2026-11-20-spectrum.json`).
 
 **Ainda a ler:** o boletim da Arctic Wolf (não localizado); a Huntress (403) e a SentinelOne (429) recusaram o acesso automático.

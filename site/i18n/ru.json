@@ -544,5 +544,6 @@
  "srp.openwith": "Отчёт с корзиной",
  "srp.focusreport": "Отчёт по этому фокусу",
  "rep.web": "Полная веб-версия ↗",
- "rep.webtag": "веб-версия"
+ "rep.webtag": "веб-версия",
+ "rel.integrates-with": "интегрируется с"
 }

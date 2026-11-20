@@ -544,5 +544,6 @@
  "srp.openwith": "Report with the basket",
  "srp.focusreport": "Report on this focus",
  "rep.web": "Full web edition ↗",
- "rep.webtag": "web edition"
+ "rep.webtag": "web edition",
+ "rel.integrates-with": "integrates with"
 }

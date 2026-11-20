@@ -544,5 +544,6 @@
  "srp.openwith": "连同报告篮生成报告",
  "srp.focusreport": "生成此聚焦报告",
  "rep.web": "完整网页版 ↗",
- "rep.webtag": "网页版"
+ "rep.webtag": "网页版",
+ "rel.integrates-with": "集成"
 }
