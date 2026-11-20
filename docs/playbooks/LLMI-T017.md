@@ -13,7 +13,7 @@
 
 | Layer | Status |
 |---|---|
-| Evidence | 2 record(s), 2 publisher(s), best grade A, newest 2026 |
+| Evidence | 3 record(s), 3 publisher(s), best grade A, newest 2026 |
 | Safe tests | 1 |
 | Detections | 0 rule file(s), 2 specification(s) |
 | Controls | 2 |
@@ -29,6 +29,7 @@ What the repository links to it:
 
 - 2025-06-25 · [Malware Prototype with Embedded Prompt Injection (AML.CS0043)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-ATLAS-CS0043) (atlas-incident, high)
 - 2026 · [DUSTMAKER credential stealer targeting AI coding-assistant workspaces](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-DUSTMAKER) (malware, confirmed)
+- 2026-11 · [Indirect prompt injection through EDR telemetry against AI-assisted SOCs (Viaconnect research)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-VIACONNECT-EDR-TELEMETRY-INJECTION) (research-artifact, medium)
 
 ## 2. Test it safely
 

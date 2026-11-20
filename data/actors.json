@@ -1765,5 +1765,37 @@
         "url": "https://www.withsecure.com/en/resources-hub/w-labs/greyvibe/"
       }
     ]
+  },
+  {
+    "id": "ACTOR-EXILWARE",
+    "type": "actor",
+    "name": "Exilware",
+    "aliases": [],
+    "nexus": "Not stated in report (Initial Access Broker selling Iberian and Latin American access)",
+    "ai_role": [
+      "tooling-development"
+    ],
+    "confidence": "medium",
+    "regions": [
+      "BR",
+      "LATAM",
+      "ES"
+    ],
+    "summary": "Group-IB assesses with high confidence that the BraZetsu malware framework supplies Exilware's Initial Access Broker operation and its 'Infected Marketplace' (Banco de Infects) of compromised Iberian and Latin American hosts. Group-IB reads emoji-heavy logging as a sign the code was written with generative AI and cites log strings referring to an AI engine on the C2 backend that triages stolen data; it says the extent of AI use across the lifecycle is unknown.",
+    "last_verified": "2026-11-20",
+    "sources": [
+      {
+        "title": "Anatomy of BraZetsu: How Cybercriminals Fuel the Underground Ecosystem",
+        "publisher": "Group-IB",
+        "grade": "A",
+        "url": "https://www.group-ib.com/blog/brazetsu-ai-enhanced-iab-marketplace/"
+      },
+      {
+        "title": "Brazilian Access Broker Targeting Latin America: Mapping BraZetsu Infrastructure Beyond the Published IOCs",
+        "publisher": "Hunt.io",
+        "grade": "A",
+        "url": "https://hunt.io/blog/brazetsu-access-broker-infrastructure"
+      }
+    ]
   }
 ]

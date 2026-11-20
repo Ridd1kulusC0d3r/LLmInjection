@@ -5256,5 +5256,150 @@
     "evidence_sources": [
       "SRC-NVD-CVE-2026-2286"
     ]
+  },
+  {
+    "id": "REL-477",
+    "type": "relationship",
+    "source": "ACTOR-EXILWARE",
+    "relationship": "conducts",
+    "target": "CAMPAIGN-BRAZETSU-INFECTED-MARKETPLACE",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-GROUPIB-BRAZETSU",
+      "SRC-HUNTIO-BRAZETSU"
+    ]
+  },
+  {
+    "id": "REL-478",
+    "type": "relationship",
+    "source": "CAMPAIGN-BRAZETSU-INFECTED-MARKETPLACE",
+    "relationship": "uses",
+    "target": "LLMI-T028",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-GROUPIB-BRAZETSU",
+      "SRC-HUNTIO-BRAZETSU"
+    ]
+  },
+  {
+    "id": "REL-479",
+    "type": "relationship",
+    "source": "CAMPAIGN-ARTEX-EXPOSED-SECRETS",
+    "relationship": "uses",
+    "target": "LLMI-T015",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-MSFT-ARTEX-SECRETS-2026-11"
+    ]
+  },
+  {
+    "id": "REL-480",
+    "type": "relationship",
+    "source": "CAMPAIGN-ARTEX-EXPOSED-SECRETS",
+    "relationship": "uses",
+    "target": "LLMI-T016",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-MSFT-ARTEX-SECRETS-2026-11"
+    ]
+  },
+  {
+    "id": "REL-481",
+    "type": "relationship",
+    "source": "CAMPAIGN-ARTEX-IDENTITY-WORKFLOWS",
+    "relationship": "uses",
+    "target": "LLMI-T015",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-UNIT42-ARTEX-2026-11"
+    ]
+  },
+  {
+    "id": "REL-482",
+    "type": "relationship",
+    "source": "CAMPAIGN-ARTEX-AWS",
+    "relationship": "uses",
+    "target": "LLMI-T015",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-DATADOG-ARTEX-AWS"
+    ]
+  },
+  {
+    "id": "REL-483",
+    "type": "relationship",
+    "source": "INCIDENT-EYE-ARTEX-IR",
+    "relationship": "demonstrates",
+    "target": "LLMI-T015",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-EYE-ARTEX-IR-2026-11"
+    ]
+  },
+  {
+    "id": "REL-484",
+    "type": "relationship",
+    "source": "INCIDENT-LITELLM-GUARDRAIL-TESTER-EXPLOITATION",
+    "relationship": "demonstrates",
+    "target": "LLMI-T024",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-ZENITY-LITELLM-40217"
+    ]
+  },
+  {
+    "id": "REL-485",
+    "type": "relationship",
+    "source": "INCIDENT-LITELLM-GUARDRAIL-TESTER-EXPLOITATION",
+    "relationship": "demonstrates",
+    "target": "LLMI-T016",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-ZENITY-LITELLM-40217"
+    ]
+  },
+  {
+    "id": "REL-486",
+    "type": "relationship",
+    "source": "INCIDENT-VIACONNECT-EDR-TELEMETRY-INJECTION",
+    "relationship": "demonstrates",
+    "target": "LLMI-T002",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-BAGUETE-VIACONNECT"
+    ]
+  },
+  {
+    "id": "REL-487",
+    "type": "relationship",
+    "source": "INCIDENT-VIACONNECT-EDR-TELEMETRY-INJECTION",
+    "relationship": "demonstrates",
+    "target": "LLMI-T017",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-BAGUETE-VIACONNECT"
+    ]
+  },
+  {
+    "id": "REL-488",
+    "type": "relationship",
+    "source": "VULN-LITELLM-CVE-2026-40217",
+    "relationship": "demonstrates",
+    "target": "LLMI-T024",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-GHSA-LITELLM-40217"
+    ]
+  },
+  {
+    "id": "REL-489",
+    "type": "relationship",
+    "source": "VULN-LITELLM-CVE-2026-40217",
+    "relationship": "observed-in",
+    "target": "INCIDENT-LITELLM-GUARDRAIL-TESTER-EXPLOITATION",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-ZENITY-LITELLM-40217"
+    ]
   }
 ]

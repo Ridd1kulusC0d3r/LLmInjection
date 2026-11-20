@@ -29,7 +29,7 @@ ROOT = Path(__file__).resolve().parents[1]
 ECO = ROOT / "data" / "ecosystem.json"
 
 LICENCES = [  # first match wins
-    ("GNU AFFERO", "AGPL-3.0"), ("GNU LESSER", "LGPL"), ("GNU GENERAL PUBLIC LICENSE", "GPL"),
+    ("Detection Rule License", "DRL-1.1"), ("GNU AFFERO", "AGPL-3.0"), ("GNU LESSER", "LGPL"), ("GNU GENERAL PUBLIC LICENSE", "GPL"),
     ("Apache License", "Apache-2.0"), ("Mozilla Public", "MPL-2.0"), ("MIT License", "MIT"),
     ("Permission is hereby granted", "MIT"), ("CC0", "CC0"), ("Attribution-NonCommercial", "CC-BY-NC"),
     ("Creative Commons", "CC"), ("Unlicense", "Unlicense"), ("BSD", "BSD"),
@@ -49,7 +49,11 @@ def check(entry: dict, timeout: int) -> dict:
     env = dict(os.environ, GIT_TERMINAL_PROMPT="0")
     with tempfile.TemporaryDirectory(prefix="llmi-eco-") as tmp:
         dest = Path(tmp) / "repo"
-        cmd = ["git", "clone", "-q", "--depth", "1", "--filter=blob:limit=1m", "--single-branch", url + ".git", str(dest)]
+        # an entry may point at a folder inside a repository (.../tree/<branch>/<path>): clone the repository, read that folder
+        repo, _, rest = url.partition("/tree/")
+        branch, _, sub = rest.partition("/")
+        cmd = ["git", "clone", "-q", "--depth", "1", "--filter=blob:limit=1m", "--single-branch", *(["--branch", branch] if branch else []),
+               repo + ".git", str(dest)]
         try:
             proc = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout, env=env)
         except subprocess.TimeoutExpired:
@@ -57,8 +61,12 @@ def check(entry: dict, timeout: int) -> dict:
         if proc.returncode != 0:
             # Public GitHub repos never prompt; an auth prompt means missing, renamed to private, or removed.
             return {"reachable": False, "error": proc.stderr.strip().splitlines()[-1][:160] if proc.stderr.strip() else "clone failed"}
-        last = subprocess.run(["git", "-C", str(dest), "log", "-1", "--format=%cs"], capture_output=True, text=True).stdout.strip()
-        return {"reachable": True, "last_commit": last, "license": licence_of(dest)}
+        folder = dest / sub if sub else dest
+        if not folder.is_dir():
+            return {"reachable": False, "error": f"folder {sub} not found"}
+        last = subprocess.run(["git", "-C", str(dest), "log", "-1", "--format=%cs", "--", sub or "."], capture_output=True, text=True).stdout.strip()
+        licence = licence_of(folder)
+        return {"reachable": True, "last_commit": last, "license": licence if licence != "none-found" or not sub else licence_of(dest)}
 
 
 def main() -> int:

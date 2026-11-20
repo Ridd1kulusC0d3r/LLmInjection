@@ -13,7 +13,7 @@
 
 | Layer | Status |
 |---|---|
-| Evidence | 45 record(s), 24 publisher(s), best grade A, newest 2026 |
+| Evidence | 49 record(s), 29 publisher(s), best grade A, newest 2026 |
 | Safe tests | 1 |
 | Detections | 1 rule file(s), 1 specification(s) |
 | Controls | 2 |
@@ -27,7 +27,10 @@ AI agents autonomously chain multiple cyber tasks with limited human interventio
 
 What the repository links to it:
 
+- 2026-11 · [ARTEX activity in AWS accounts with compromised IAM keys](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-ARTEX-AWS) (campaign, high)
+- 2026-11 · [ARTEX-driven search and abuse of secrets exposed on GitHub](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-ARTEX-EXPOSED-SECRETS) (campaign, high)
 - 2026-10 · [ARTEX agentic offensive framework use by extortion groups and suspected PRC-nexus clusters](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-ARTEX-EXTORTION-AND-PRC-CLUSTERS) (campaign, confirmed)
+- 2026-11 · [ARTEX abuse of password-reset pages and exposed APIs to reach cloud access](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-ARTEX-IDENTITY-WORKFLOWS) (campaign, high)
 - 2026-10 · [Chinese-speaking ARTEX multi-model operator targeting 19 markets](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-ARTEX-MULTI-MODEL-OPERATOR) (campaign, high)
 - 2026-05 · [Aurora ransomware intrusions driven through Cursor Agent](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-AURORA-CURSOR-AGENT) (campaign, confirmed)
 - 2026-04 · [bandcampro Gemini CLI-driven C2 botnet build and fraud operations](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-BANDCAMPRO-GEMINI-CLI-C2) (campaign, confirmed)
@@ -60,6 +63,7 @@ What the repository links to it:
 - 2026-07-01 · [Multi-Agent Framework Compromises Taiwanese Government Systems (AML.CS0071)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-ATLAS-CS0071) (atlas-incident, high)
 - 2026 · [CLOSEDQUORUM autonomous AI C2 research case](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-CLOSEDQUORUM) (research-artifact, confirmed)
 - 2026-07 · [Multi-agent AI framework (Hermes/OpenClaw) used to compromise Asian government entities](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-DREAM-MULTI-AGENT-ASIA-GOV) (intrusion, high)
+- 2026-11 · [Eye Security incident response to an ARTEX-driven intrusion](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-EYE-ARTEX-IR) (intrusion, confirmed)
 - 2026-09 · [Autonomous AI agents used to compromise online retailers and plant card skimmers](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-GAMBIT-AI-AGENT-RETAIL-SKIMMING) (intrusion, confirmed)
 - 2026 · [Multi-agent credential harvesting from compromised cloud in under six hours](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-GTIG-AGENTIC-CREDENTIAL-HARVESTING) (intrusion, confirmed)
 - 2026 · [Multi-agent mass credential harvesting in under six hours](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-GTIG-AUTONOMOUS-HARVEST) (intrusion, confirmed)
@@ -134,5 +138,5 @@ The runner has plan and mock adapters only: it does not call your system. To run
 ## 7. Go deeper (links only)
 
 - **Benchmarks:** [andyzorigin/cybench](https://github.com/andyzorigin/cybench)
-- **Tools and projects:** [promptfoo/promptfoo](https://github.com/promptfoo/promptfoo), [confident-ai/deepteam](https://github.com/confident-ai/deepteam), [praetorian-inc/augustus](https://github.com/praetorian-inc/augustus), [cisco-ai-defense/skill-scanner](https://github.com/cisco-ai-defense/skill-scanner), [scadastrangelove/agent-audit](https://github.com/scadastrangelove/agent-audit), [regaan/basilisk](https://github.com/regaan/basilisk), [perplext/LLMrecon](https://github.com/perplext/LLMrecon)
+- **Tools and projects:** [promptfoo/promptfoo](https://github.com/promptfoo/promptfoo), [confident-ai/deepteam](https://github.com/confident-ai/deepteam), [praetorian-inc/augustus](https://github.com/praetorian-inc/augustus), [cisco-ai-defense/skill-scanner](https://github.com/cisco-ai-defense/skill-scanner), [scadastrangelove/agent-audit](https://github.com/scadastrangelove/agent-audit), [regaan/basilisk](https://github.com/regaan/basilisk), [perplext/LLMrecon](https://github.com/perplext/LLMrecon), [rakshanex/agenttrace](https://github.com/rakshanex/agenttrace), and 2 more in the [Explorer](https://ridd1kulusc0d3r.github.io/LLmInjection/#tab=ecosystem)
 - **Live record:** [this technique in the Explorer](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=LLMI-T015)

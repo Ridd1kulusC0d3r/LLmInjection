@@ -13,7 +13,7 @@
 
 | Layer | Status |
 |---|---|
-| Evidence | 11 record(s), 4 publisher(s), best grade A, newest 2026 |
+| Evidence | 13 record(s), 5 publisher(s), best grade A, newest 2026 |
 | Safe tests | 1 |
 | Detections | 0 rule file(s), 1 specification(s) |
 | Controls | 2 |
@@ -30,9 +30,11 @@ What the repository links to it:
 - 2026 · [JADEPUFFER agentic database extortion](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-JADEPUFFER-AGENTIC-EXTORTION) (campaign, high)
 - 2026-07 · [knaithe autonomous exploitation with DeepSeek and Hermes Agent](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-KNAITHE-HERMES-AUTONOMOUS) (campaign, confirmed)
 - 2026-05-07 · [Threat Actor Uses a DeepSeek-Powered Hermes Agent in Langflow and n8n Exploitation Attempts (AML.CS0070)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-ATLAS-CS0070) (atlas-incident, high)
+- 2026-04-15 · [Exploitation attempts against LiteLLM's guardrail tester (CVE-2026-40217)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-LITELLM-GUARDRAIL-TESTER-EXPLOITATION) (exploitation, high)
 - 2024-08-27 · [Flowise 1.8.2 authentication bypass](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-FLOWISE-CVE-2024-8181) (authentication-bypass, confirmed)
 - 2025-09-22 · [Flowise CustomMCP remote code execution](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-FLOWISE-CVE-2025-59528) (remote-code-execution, confirmed)
 - 2025-08-14 · [Flowise Custom MCP OS command execution without authentication](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-FLOWISE-CVE-2025-8943) (remote-code-execution, confirmed)
+- 2026-04-10 · [LiteLLM guardrail tester sandbox escape to code execution](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-LITELLM-CVE-2026-40217) (sandbox-escape, confirmed)
 - 2026-05-08 · [LiteLLM proxy command injection in two endpoints](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-LITELLM-CVE-2026-42271) (command-injection, confirmed)
 - 2025-06-13 · [MCP Inspector unauthenticated proxy remote code execution](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-MCP-INSPECTOR-CVE-2025-49596) (remote-code-execution, confirmed)
 - 2023-03-24 · [MLflow path traversal](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-MLFLOW-CVE-2023-1177) (path-traversal, confirmed)
@@ -93,4 +95,5 @@ The runner has plan and mock adapters only: it does not call your system. To run
 
 ## 7. Go deeper (links only)
 
+- **Tools and projects:** [TiaMEOWS/mcp-sentinel](https://github.com/TiaMEOWS/mcp-sentinel), [BerkantACUN/guardmcp](https://github.com/BerkantACUN/guardmcp)
 - **Live record:** [this technique in the Explorer](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=LLMI-T024)

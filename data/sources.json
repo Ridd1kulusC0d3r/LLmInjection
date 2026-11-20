@@ -1635,5 +1635,167 @@
     "role": "security-advisory",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2286",
     "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-FBI-FLASH-20261113-ARTEX",
+    "type": "source",
+    "name": "FLASH-20261113-001: Threat Overview of ARTEX Autonomous Penetration Testing Framework",
+    "publisher": "FBI",
+    "grade": "A",
+    "role": "government-advisory",
+    "url": "https://www.ic3.gov/CSA/2026/261113.pdf",
+    "published": "2026-11-13",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-MSFT-ARTEX-SECRETS-2026-11",
+    "type": "source",
+    "name": "Threat actors use agentic AI tooling to find and abuse exposed secrets",
+    "publisher": "Microsoft Threat Intelligence",
+    "grade": "A",
+    "role": "threat-report",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/11/05/threat-actors-use-agentic-ai-tooling-to-find-and-abuse-exposed-secrets/",
+    "published": "2026-11-05",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-CHECKPOINT-ARTEX-2026-11",
+    "type": "source",
+    "name": "Hacking on Autopilot: Inside ARTEX Cybercrime Campaigns",
+    "publisher": "Check Point Research",
+    "grade": "A",
+    "role": "threat-report",
+    "url": "https://research.checkpoint.com/2026/hacking-on-autopilot-inside-artex-cybercrime-campaigns/",
+    "published": "2026-11-05",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-CENSYS-ARTEX-2026-11",
+    "type": "source",
+    "name": "ARTEX: Agentic Asbestos",
+    "publisher": "Censys",
+    "grade": "A",
+    "role": "threat-research",
+    "url": "https://censys.com/blog/artex-agentic-asbestos",
+    "published": "2026-11-05",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-EYE-ARTEX-IR-2026-11",
+    "type": "source",
+    "name": "How we defended against an AI-driven attack",
+    "publisher": "Eye Security",
+    "grade": "A",
+    "role": "threat-report",
+    "url": "https://labs.eye.security/how-we-defended-against-an-ai-driven-attack/",
+    "published": "2026-11-12",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-DATADOG-ARTEX-AWS",
+    "type": "source",
+    "name": "On the hunt for ARTEX: understanding agentic attacks in AWS environments",
+    "publisher": "Datadog Security Labs",
+    "grade": "A",
+    "role": "threat-report",
+    "url": "https://securitylabs.datadoghq.com/articles/artex-agentic-attacks-aws-environments/",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-UNIT42-ARTEX-2026-11",
+    "type": "source",
+    "name": "ARTEX and AI-Powered Red Teaming Tools: What Defenders Need to Know",
+    "publisher": "Palo Alto Networks Unit 42",
+    "grade": "A",
+    "role": "threat-report",
+    "url": "https://unit42.paloaltonetworks.com/artex-and-ai-powered-red-teaming-tools/",
+    "published": "2026-11-11",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-GTIG-AGENTIC-THRESHOLD-2026-11",
+    "type": "source",
+    "name": "GTIG AI Threat Tracker: Agentic Threat Activity Crosses a Significant Threshold",
+    "publisher": "Google Threat Intelligence Group",
+    "grade": "A",
+    "role": "threat-report",
+    "url": "https://cloud.google.com/blog/topics/threat-intelligence/agentic-threat-activity-crosses-a-significant-threshold",
+    "published": "2026-11-16",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-JPCERT-AT-2026-0030",
+    "type": "source",
+    "name": "JPCERT/CC alert on recent unauthorized access against Japanese organizations (AT-2026-0030)",
+    "publisher": "JPCERT/CC",
+    "grade": "A",
+    "role": "government-advisory",
+    "url": "https://www.jpcert.or.jp/at/2026/at260030.html",
+    "published": "2026-10-08",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-ZENITY-LITELLM-40217",
+    "type": "source",
+    "name": "Threat Actors Are Trying to use LiteLLM's Guardrail Tester to Run Code as Root",
+    "publisher": "Zenity Labs",
+    "grade": "A",
+    "role": "threat-research",
+    "url": "https://labs.zenity.io/p/threat-actors-are-trying-to-use-litellm-s-guardrail-tester-to-run-code-as-root",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-GROUPIB-BRAZETSU",
+    "type": "source",
+    "name": "Anatomy of BraZetsu: How Cybercriminals Fuel the Underground Ecosystem",
+    "publisher": "Group-IB",
+    "grade": "A",
+    "role": "threat-report",
+    "url": "https://www.group-ib.com/blog/brazetsu-ai-enhanced-iab-marketplace/",
+    "published": "2026-08-31",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-HUNTIO-BRAZETSU",
+    "type": "source",
+    "name": "Brazilian Access Broker Targeting Latin America: Mapping BraZetsu Infrastructure Beyond the Published IOCs",
+    "publisher": "Hunt.io",
+    "grade": "A",
+    "role": "threat-research",
+    "url": "https://hunt.io/blog/brazetsu-access-broker-infrastructure",
+    "published": "2026-10-06",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-THN-CERTIN-CRAFTY-FALCON",
+    "type": "source",
+    "name": "CERT-In Flags AI-Driven Attacks as Backdoored ARTEX Exposes 62 Consoles to Root Access",
+    "publisher": "The Hacker News",
+    "grade": "C",
+    "role": "journalism",
+    "url": "https://thehackernews.com/2026/11/backdoored-docker-image-for-artex-ai.html",
+    "published": "2026-11-05",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-BAGUETE-VIACONNECT",
+    "type": "source",
+    "name": "Viaconnect apresenta pesquisa sobre ataques a SOCs com IA em evento internacional",
+    "publisher": "Baguete",
+    "grade": "C",
+    "role": "journalism",
+    "url": "https://www.baguete.com.br/noticias/viaconnect-apresenta-pesquisa-sobre-ataques-a-socs-com-ia-em-evento-internacional",
+    "published": "2026-11-11",
+    "last_verified": "2026-11-20"
+  },
+  {
+    "id": "SRC-GHSA-LITELLM-40217",
+    "type": "source",
+    "name": "CVE-2026-40217: LiteLLM custom-code guardrail sandbox escape",
+    "publisher": "GitHub Advisory Database",
+    "grade": "A",
+    "role": "security-advisory",
+    "url": "https://github.com/advisories/GHSA-wxxx-gvqv-xp7p",
+    "last_verified": "2026-11-20"
   }
 ]

@@ -11,15 +11,15 @@ Sorted by priority, the techniques with the most missing defence first. `E` evid
 | [LLMI-T010](LLMI-T010.md) Model Source Tampering | observed in the wild | 6 | 1 | 1 | 0 | 3 | 2 | 0 |
 | [LLMI-T012](LLMI-T012.md) Coding-Agent Dependency Manipulation | observed in the wild | 6 | 1 | 2 | 0 | 2 | 1 | 0 |
 | [LLMI-T014](LLMI-T014.md) AI-Assisted Reconnaissance and Social Engineering | observed in the wild | 6 | 44 | 1 | 0 | 1 | 1 | 0 |
-| [LLMI-T016](LLMI-T016.md) AI Gateway Credential Compromise | observed in the wild | 6 | 5 | 1 | 0 | 1 | 1 | 0 |
-| [LLMI-T017](LLMI-T017.md) Prompt Injection Against AI Security Scanners | observed in the wild | 6 | 2 | 1 | 0 | 2 | 2 | 0 |
+| [LLMI-T016](LLMI-T016.md) AI Gateway Credential Compromise | observed in the wild | 6 | 7 | 1 | 0 | 1 | 1 | 0 |
+| [LLMI-T017](LLMI-T017.md) Prompt Injection Against AI Security Scanners | observed in the wild | 6 | 3 | 1 | 0 | 2 | 2 | 0 |
 | [LLMI-T019](LLMI-T019.md) Model Distillation Campaign | observed in the wild | 6 | 2 | 1 | 0 | 1 | 1 | 0 |
 | [LLMI-T021](LLMI-T021.md) Agent Tool Poisoning and Rug Pull | observed in the wild | 6 | 4 | 1 | 0 | 2 | 3 | 0 |
 | [LLMI-T022](LLMI-T022.md) Agentic Resource Consumption and Cost Harvesting | observed in the wild | 6 | 4 | 2 | 0 | 2 | 1 | 0 |
 | [LLMI-T023](LLMI-T023.md) Crafted AI Assistant Links and Recommendation Poisoning | observed in the wild | 6 | 1 | 1 | 0 | 1 | 2 | 0 |
-| [LLMI-T024](LLMI-T024.md) Exposed or Misconfigured AI Services | observed in the wild | 6 | 11 | 1 | 0 | 1 | 2 | 0 |
+| [LLMI-T024](LLMI-T024.md) Exposed or Misconfigured AI Services | observed in the wild | 6 | 13 | 1 | 0 | 1 | 2 | 0 |
 | [LLMI-T026](LLMI-T026.md) Inter-Agent Instruction Propagation | observed in the wild | 6 | 2 | 1 | 0 | 1 | 3 | 0 |
-| [LLMI-T028](LLMI-T028.md) AI-Assisted Tooling Development | observed in the wild | 6 | 69 | 1 | 0 | 1 | 1 | 0 |
+| [LLMI-T028](LLMI-T028.md) AI-Assisted Tooling Development | observed in the wild | 6 | 70 | 1 | 0 | 1 | 1 | 0 |
 | [LLMI-T007](LLMI-T007.md) RAG Knowledge Poisoning | demonstrated in research | 5 | 1 | 1 | 0 | 1 | 0 | 0 |
 | [LLMI-T020](LLMI-T020.md) Improper Output Handling and Rendering Exfiltration | tied to a disclosed vulnerability | 4.5 | 4 | 3 | 0 | 2 | 3 | 0 |
 | [LLMI-T011](LLMI-T011.md) AI Software Supply Chain Compromise | observed in the wild | 4 | 9 | 2 | 1 | 4 | 1 | 0 |
@@ -31,8 +31,8 @@ Sorted by priority, the techniques with the most missing defence first. `E` evid
 | [LLMI-T003](LLMI-T003.md) Jailbreak / Safety Boundary Manipulation | observed in the wild | 2 | 10 | 1 | 0 | 1 | 2 | 5 |
 | [LLMI-T004](LLMI-T004.md) Sensitive Information Disclosure | observed in the wild | 2 | 2 | 2 | 0 | 1 | 1 | 3 |
 | [LLMI-T008](LLMI-T008.md) Agent Tool Misuse | observed in the wild | 2 | 13 | 6 | 0 | 3 | 2 | 3 |
-| [LLMI-T002](LLMI-T002.md) Indirect Prompt Injection | tied to a disclosed vulnerability | 1.5 | 5 | 1 | 0 | 2 | 3 | 6 |
+| [LLMI-T002](LLMI-T002.md) Indirect Prompt Injection | tied to a disclosed vulnerability | 1.5 | 6 | 1 | 0 | 2 | 3 | 6 |
 | [LLMI-T009](LLMI-T009.md) Memory / Context Poisoning | demonstrated in research | 1 | 2 | 1 | 0 | 2 | 1 | 1 |
-| [LLMI-T015](LLMI-T015.md) Agentic Attack Orchestration | observed in the wild | 0 | 45 | 1 | 1 | 1 | 2 | 1 |
+| [LLMI-T015](LLMI-T015.md) Agentic Attack Orchestration | observed in the wild | 0 | 49 | 1 | 1 | 1 | 2 | 1 |
 
 Pages with a worked example or hand-written notes: [LLMI-T008](LLMI-T008.md).

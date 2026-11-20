@@ -6428,7 +6428,7 @@
     },
     {
       "id": "RQ-DIG-20261120-02",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
       "source_grade": "B",
       "kind": "digest-vulnerability",
@@ -6446,8 +6446,8 @@
         "CVE-2026-40217"
       ],
       "review": {
-        "decision": null,
-        "notes": "From digest LLMI-20261120. Read the primary source before promoting."
+        "decision": "promoted to VULN-LITELLM-CVE-2026-40217 and INCIDENT-LITELLM-GUARDRAIL-TESTER-EXPLOITATION; KEV date confirmed on the CISA catalog",
+        "notes": "Read on 2026-11-20."
       }
     },
     {
@@ -6501,7 +6501,7 @@
     },
     {
       "id": "RQ-DIG-20261120-05",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
       "source_grade": "A",
       "kind": "digest-threat-report",
@@ -6523,8 +6523,8 @@
         "PentAGI"
       ],
       "review": {
-        "decision": null,
-        "notes": "From digest LLMI-20261120. Read the primary source before promoting."
+        "decision": "added as SRC-GTIG-AGENTIC-THRESHOLD-2026-11 (second source for the PentAGI campaign)",
+        "notes": "Read on 2026-11-20."
       }
     },
     {
@@ -6551,7 +6551,7 @@
     },
     {
       "id": "RQ-DIG-20261120-07",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
       "source_grade": "C",
       "kind": "digest-research",
@@ -6568,8 +6568,8 @@
       "summary": "[LLMI-20261120-07] seal: secondary; retrospective. Brazilian research reported in sponsored press: text planted in EDR telemetry misled 14 of 23 models used in SOC assistants. The talk or paper was not read.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "From digest LLMI-20261120. Read the primary source before promoting."
+        "decision": "promoted to INCIDENT-VIACONNECT-EDR-TELEMETRY-INJECTION (research, medium: sponsored press only)",
+        "notes": "Read on 2026-11-20."
       }
     }
   ]

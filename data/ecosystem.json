@@ -16,9 +16,9 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
-      "last_commit": "2026-09-10",
+      "last_commit": "2026-10-28",
       "license": "Apache-2.0"
     }
   },
@@ -39,9 +39,9 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
-      "last_commit": "2026-09-15",
+      "last_commit": "2026-10-28",
       "license": "Apache-2.0"
     }
   },
@@ -62,7 +62,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2026-08-05",
       "license": "CC"
@@ -85,9 +85,9 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
-      "last_commit": "2026-10-07",
+      "last_commit": "2026-11-19",
       "license": "none-found"
     }
   },
@@ -108,7 +108,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2025-06-20",
       "license": "CC"
@@ -135,7 +135,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2026-06-29",
       "license": "CC"
@@ -158,9 +158,9 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
-      "last_commit": "2026-10-05",
+      "last_commit": "2026-11-08",
       "license": "Apache-2.0"
     }
   },
@@ -190,9 +190,9 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
-      "last_commit": "2026-10-07",
+      "last_commit": "2026-11-20",
       "license": "MIT"
     }
   },
@@ -213,7 +213,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2025-08-20",
       "license": "none-found"
@@ -239,10 +239,10 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2026-09-11",
-      "license": "CC"
+      "license": "CC0"
     }
   },
   {
@@ -265,7 +265,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2025-02-22",
       "license": "none-found"
@@ -288,7 +288,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2025-09-04",
       "license": "MIT"
@@ -313,9 +313,9 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
-      "last_commit": "2026-10-07",
+      "last_commit": "2026-11-08",
       "license": "MIT"
     }
   },
@@ -336,10 +336,10 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2026-07-24",
-      "license": "CC"
+      "license": "CC0"
     }
   },
   {
@@ -359,7 +359,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2026-09-02",
       "license": "Apache-2.0"
@@ -382,7 +382,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2026-09-27",
       "license": "none-found"
@@ -405,7 +405,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2026-07-11",
       "license": "other"
@@ -428,7 +428,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2026-06-23",
       "license": "none-found"
@@ -454,9 +454,9 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
-      "last_commit": "2026-10-08",
+      "last_commit": "2026-10-13",
       "license": "none-found"
     }
   },
@@ -479,9 +479,9 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
-      "last_commit": "2026-09-27",
+      "last_commit": "2026-11-16",
       "license": "CC0"
     }
   },
@@ -504,10 +504,10 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2025-01-20",
-      "license": "CC"
+      "license": "CC0"
     }
   },
   {
@@ -527,9 +527,9 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
-      "last_commit": "2026-10-05",
+      "last_commit": "2026-11-19",
       "license": "CC0"
     }
   },
@@ -550,7 +550,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2026-07-29",
       "license": "MIT"
@@ -573,7 +573,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2023-04-14",
       "license": "none-found"
@@ -608,9 +608,9 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
-      "last_commit": "2026-10-07",
+      "last_commit": "2026-11-18",
       "license": "Apache-2.0"
     }
   },
@@ -639,9 +639,9 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
-      "last_commit": "2026-10-07",
+      "last_commit": "2026-11-20",
       "license": "MIT"
     }
   },
@@ -679,9 +679,9 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
-      "last_commit": "2026-10-07",
+      "last_commit": "2026-11-20",
       "license": "MIT"
     }
   },
@@ -712,9 +712,9 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
-      "last_commit": "2026-10-01",
+      "last_commit": "2026-10-23",
       "license": "Apache-2.0"
     }
   },
@@ -738,7 +738,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2026-02-06",
       "license": "Apache-2.0"
@@ -767,9 +767,9 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
-      "last_commit": "2026-09-22",
+      "last_commit": "2026-11-19",
       "license": "Apache-2.0"
     }
   },
@@ -797,9 +797,9 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
-      "last_commit": "2026-09-11",
+      "last_commit": "2026-11-10",
       "license": "Apache-2.0"
     }
   },
@@ -833,9 +833,9 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
-      "last_commit": "2026-10-07",
+      "last_commit": "2026-11-20",
       "license": "Apache-2.0"
     }
   },
@@ -860,10 +860,10 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2026-01-15",
-      "license": "CC"
+      "license": "CC-BY-NC"
     }
   },
   {
@@ -885,7 +885,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2026-02-05",
       "license": "Apache-2.0"
@@ -911,7 +911,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2024-09-12",
       "license": "Apache-2.0"
@@ -947,9 +947,9 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
-      "last_commit": "2026-10-03",
+      "last_commit": "2026-11-19",
       "license": "Apache-2.0"
     }
   },
@@ -975,7 +975,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2026-06-02",
       "license": "MIT"
@@ -1001,7 +1001,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2024-04-15",
       "license": "MIT"
@@ -1027,7 +1027,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2026-09-27",
       "license": "MIT"
@@ -1052,7 +1052,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2025-03-31",
       "license": "MIT"
@@ -1078,7 +1078,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2024-08-05",
       "license": "MIT"
@@ -1107,7 +1107,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2026-09-29",
       "license": "MIT"
@@ -1134,7 +1134,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2026-04-02",
       "license": "MIT"
@@ -1159,7 +1159,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2024-12-24",
       "license": "MIT"
@@ -1185,7 +1185,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2022-11-18",
       "license": "MIT"
@@ -1211,7 +1211,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2025-07-17",
       "license": "MIT"
@@ -1236,7 +1236,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2024-08-01",
       "license": "MIT"
@@ -1261,7 +1261,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2024-12-01",
       "license": "MIT"
@@ -1286,7 +1286,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2024-03-08",
       "license": "MIT"
@@ -1311,7 +1311,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2025-10-08",
       "license": "MIT"
@@ -1336,7 +1336,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2025-01-23",
       "license": "MIT"
@@ -1361,7 +1361,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2025-10-17",
       "license": "Apache-2.0"
@@ -1386,7 +1386,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2025-08-14",
       "license": "MIT"
@@ -1411,7 +1411,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2024-02-20",
       "license": "MIT"
@@ -1438,9 +1438,9 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
-      "last_commit": "2026-10-06",
+      "last_commit": "2026-10-23",
       "license": "MIT"
     }
   },
@@ -1464,7 +1464,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2026-02-19",
       "license": "Apache-2.0"
@@ -1490,7 +1490,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2025-06-20",
       "license": "Apache-2.0"
@@ -1516,7 +1516,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2024-01-25",
       "license": "Apache-2.0"
@@ -1542,7 +1542,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2026-07-09",
       "license": "MIT"
@@ -1568,7 +1568,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2024-01-31",
       "license": "Apache-2.0"
@@ -1593,7 +1593,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2026-08-26",
       "license": "Apache-2.0"
@@ -1618,7 +1618,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2024-12-02",
       "license": "Apache-2.0"
@@ -1644,7 +1644,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2026-02-18",
       "license": "Apache-2.0"
@@ -1673,9 +1673,9 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
-      "last_commit": "2026-10-06",
+      "last_commit": "2026-11-19",
       "license": "Apache-2.0"
     }
   },
@@ -1702,9 +1702,9 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
-      "last_commit": "2026-10-07",
+      "last_commit": "2026-11-19",
       "license": "Apache-2.0"
     }
   },
@@ -1732,9 +1732,9 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
-      "last_commit": "2026-10-05",
+      "last_commit": "2026-11-06",
       "license": "Apache-2.0"
     }
   },
@@ -1764,9 +1764,9 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
-      "last_commit": "2026-10-07",
+      "last_commit": "2026-11-19",
       "license": "Apache-2.0"
     }
   },
@@ -1792,9 +1792,9 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
-      "last_commit": "2025-11-27",
+      "last_commit": "2026-11-13",
       "license": "Apache-2.0"
     }
   },
@@ -1822,7 +1822,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2026-07-16",
       "license": "MIT"
@@ -1853,9 +1853,9 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
-      "last_commit": "2026-09-10",
+      "last_commit": "2026-11-01",
       "license": "Apache-2.0"
     }
   },
@@ -1879,7 +1879,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2025-06-25",
       "license": "Apache-2.0"
@@ -1904,7 +1904,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2024-08-21",
       "license": "GPL"
@@ -1931,9 +1931,9 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
-      "last_commit": "2026-04-24",
+      "last_commit": "2026-10-10",
       "license": "Apache-2.0"
     }
   },
@@ -1957,7 +1957,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2023-08-25",
       "license": "none-found"
@@ -1982,9 +1982,9 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
-      "last_commit": "2026-09-30",
+      "last_commit": "2026-11-09",
       "license": "MIT"
     }
   },
@@ -2009,7 +2009,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2026-04-06",
       "license": "Apache-2.0"
@@ -2043,7 +2043,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2026-10-01",
       "license": "AGPL-3.0"
@@ -2082,9 +2082,9 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
-      "last_commit": "2026-09-15",
+      "last_commit": "2026-11-12",
       "license": "MIT"
     }
   },
@@ -2108,7 +2108,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2026-06-21",
       "license": "MIT"
@@ -2134,7 +2134,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2025-11-14",
       "license": "LGPL"
@@ -2160,7 +2160,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2025-12-25",
       "license": "MIT"
@@ -2186,7 +2186,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2026-03-05",
       "license": "MIT"
@@ -2212,9 +2212,9 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
-      "last_commit": "2026-05-11",
+      "last_commit": "2026-10-18",
       "license": "none-found"
     }
   },
@@ -2239,7 +2239,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2026-06-04",
       "license": "none-found"
@@ -2264,7 +2264,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2026-01-09",
       "license": "none-found"
@@ -2290,7 +2290,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2026-07-28",
       "license": "MIT"
@@ -2316,7 +2316,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2025-12-10",
       "license": "none-found"
@@ -2341,7 +2341,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2026-01-21",
       "license": "none-found"
@@ -2368,7 +2368,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2026-06-07",
       "license": "MIT"
@@ -2394,7 +2394,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2026-04-10",
       "license": "none-found"
@@ -2420,7 +2420,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2026-09-13",
       "license": "none-found"
@@ -2447,10 +2447,10 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
-      "last_commit": "2026-10-07",
-      "license": "Apache-2.0"
+      "last_commit": "2026-11-19",
+      "license": "MIT"
     }
   },
   {
@@ -2474,7 +2474,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2026-08-03",
       "license": "MIT"
@@ -2503,7 +2503,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2026-08-17",
       "license": "MIT"
@@ -2531,7 +2531,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2025-04-10",
       "license": "none-found"
@@ -2556,7 +2556,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2026-04-19",
       "license": "none-found"
@@ -2581,7 +2581,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2026-03-03",
       "license": "none-found"
@@ -2604,7 +2604,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2026-05-08",
       "license": "CC"
@@ -2627,7 +2627,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2026-07-12",
       "license": "none-found"
@@ -2653,9 +2653,9 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
-      "last_commit": "2026-08-27",
+      "last_commit": "2026-10-30",
       "license": "MIT"
     }
   },
@@ -2676,7 +2676,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2026-05-05",
       "license": "none-found"
@@ -2699,9 +2699,9 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
-      "last_commit": "2026-06-19",
+      "last_commit": "2026-10-29",
       "license": "MIT"
     }
   },
@@ -2722,9 +2722,9 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
-      "last_commit": "2026-10-06",
+      "last_commit": "2026-11-15",
       "license": "MIT"
     }
   },
@@ -2749,7 +2749,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2025-10-07",
       "license": "MIT"
@@ -2774,7 +2774,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2026-09-15",
       "license": "none-found"
@@ -2797,7 +2797,7 @@
     "added": "2026-10-07",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-07",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2026-06-01",
       "license": "other"
@@ -2823,7 +2823,7 @@
     "added": "2026-10-09",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-09",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2024-07-02",
       "license": "MIT"
@@ -2849,9 +2849,9 @@
     "added": "2026-10-09",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-09",
+      "checked": "2026-11-20",
       "reachable": true,
-      "last_commit": "2026-09-29",
+      "last_commit": "2026-11-12",
       "license": "other"
     }
   },
@@ -2872,9 +2872,9 @@
     "added": "2026-10-09",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-09",
+      "checked": "2026-11-20",
       "reachable": true,
-      "last_commit": "2026-10-09",
+      "last_commit": "2026-11-19",
       "license": "MIT"
     }
   },
@@ -2897,7 +2897,7 @@
     "added": "2026-10-09",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-09",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2025-03-01",
       "license": "MIT"
@@ -2922,7 +2922,7 @@
     "added": "2026-10-09",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-09",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2025-07-07",
       "license": "MIT"
@@ -2945,7 +2945,7 @@
     "added": "2026-10-09",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-09",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2026-05-07",
       "license": "CC-BY-NC"
@@ -2970,7 +2970,7 @@
     "added": "2026-10-09",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-09",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2026-09-24",
       "license": "Apache-2.0"
@@ -2995,7 +2995,7 @@
     "added": "2026-10-09",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-09",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2024-08-10",
       "license": "none-found"
@@ -3018,9 +3018,9 @@
     "added": "2026-10-10",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-10",
+      "checked": "2026-11-20",
       "reachable": true,
-      "last_commit": "2026-10-07",
+      "last_commit": "2026-11-12",
       "license": "MIT"
     }
   },
@@ -3055,7 +3055,7 @@
     "added": "2026-10-12",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-10-12",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2026-08-31",
       "license": "Apache-2.0"
@@ -3078,10 +3078,250 @@
     "added": "2026-11-09",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-11-09",
+      "checked": "2026-11-20",
       "reachable": true,
       "last_commit": "2026-11-09",
       "license": "none-found"
+    }
+  },
+  {
+    "id": "ECO-118",
+    "type": "ecosystem",
+    "name": "mcp-sentinel",
+    "owner": "TiaMEOWS",
+    "url": "https://github.com/TiaMEOWS/mcp-sentinel",
+    "section": "agent-security",
+    "evidence_class": "assessment-tool",
+    "priority": "standard",
+    "status": "listed",
+    "techniques": [
+      "LLMI-T021",
+      "LLMI-T008",
+      "LLMI-T024"
+    ],
+    "summary": "Scanner that audits an MCP server before it is trusted: tool poisoning, rug pulls, auth bypass and dangerous capabilities.",
+    "source_grade": "D",
+    "provenance": "read on 2026-11-20 from a shallow clone (README and LICENSE); lead from the author's llmsecure.io research session; archive flag not visible to git",
+    "added": "2026-11-20",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-11-20",
+      "reachable": true,
+      "last_commit": "2026-09-20",
+      "license": "MIT"
+    }
+  },
+  {
+    "id": "ECO-119",
+    "type": "ecosystem",
+    "name": "mcp-scrutiny",
+    "owner": "bryand410",
+    "url": "https://github.com/bryand410/mcp-scrutiny",
+    "section": "agent-security",
+    "evidence_class": "assessment-tool",
+    "priority": "standard",
+    "status": "listed",
+    "techniques": [
+      "LLMI-T021",
+      "LLMI-T008",
+      "LLMI-T011"
+    ],
+    "summary": "Static and semantic MCP server scanner (unpinned packages, rug pulls, tool poisoning, cross-server shadowing, toxic flows) with SARIF output and no third-party dependencies.",
+    "source_grade": "D",
+    "provenance": "read on 2026-11-20 from a shallow clone (README and LICENSE); lead from the author's llmsecure.io research session; archive flag not visible to git",
+    "added": "2026-11-20",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-11-20",
+      "reachable": true,
+      "last_commit": "2026-11-15",
+      "license": "Apache-2.0"
+    }
+  },
+  {
+    "id": "ECO-120",
+    "type": "ecosystem",
+    "name": "guardmcp",
+    "owner": "BerkantACUN",
+    "url": "https://github.com/BerkantACUN/guardmcp",
+    "section": "agent-security",
+    "evidence_class": "assessment-tool",
+    "priority": "standard",
+    "status": "listed",
+    "techniques": [
+      "LLMI-T021",
+      "LLMI-T024",
+      "LLMI-T004"
+    ],
+    "summary": "MCP server and config scanner: hardcoded secrets, tool poisoning, insecure transport, unrestricted permissions, live introspection and rug-pull pinning; ships a GitHub Action.",
+    "source_grade": "D",
+    "provenance": "read on 2026-11-20 from a shallow clone (README and LICENSE); lead from the author's llmsecure.io research session; archive flag not visible to git",
+    "added": "2026-11-20",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-11-20",
+      "reachable": true,
+      "last_commit": "2026-09-24",
+      "license": "Apache-2.0"
+    }
+  },
+  {
+    "id": "ECO-121",
+    "type": "ecosystem",
+    "name": "AIAgentFirewall",
+    "owner": "mmedabo",
+    "url": "https://github.com/mmedabo/AIAgentFirewall",
+    "section": "agent-security",
+    "evidence_class": "assessment-tool",
+    "priority": "standard",
+    "status": "listed",
+    "techniques": [
+      "LLMI-T021",
+      "LLMI-T018",
+      "LLMI-T012"
+    ],
+    "summary": "Pre-install inspection of agents, skills, plugins and MCP servers for secret reads, exfiltration, remote script execution and hidden instructions.",
+    "source_grade": "D",
+    "provenance": "read on 2026-11-20 from a shallow clone (README and LICENSE); lead from the author's llmsecure.io research session; archive flag not visible to git",
+    "added": "2026-11-20",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-11-20",
+      "reachable": true,
+      "last_commit": "2026-08-11",
+      "license": "MIT"
+    }
+  },
+  {
+    "id": "ECO-122",
+    "type": "ecosystem",
+    "name": "medusa",
+    "owner": "Pantheon-Security",
+    "url": "https://github.com/Pantheon-Security/medusa",
+    "section": "agent-security",
+    "evidence_class": "assessment-tool",
+    "priority": "standard",
+    "status": "listed",
+    "techniques": [
+      "LLMI-T011",
+      "LLMI-T021",
+      "LLMI-T001"
+    ],
+    "summary": "Pattern-based security scanner for AI/ML code, agents and LLM applications. AGPL-3.0: reference only.",
+    "source_grade": "D",
+    "provenance": "read on 2026-11-20 from a shallow clone (README and LICENSE); lead from the author's llmsecure.io research session; archive flag not visible to git",
+    "added": "2026-11-20",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-11-20",
+      "reachable": true,
+      "last_commit": "2026-06-24",
+      "license": "AGPL-3.0"
+    }
+  },
+  {
+    "id": "ECO-123",
+    "type": "ecosystem",
+    "name": "agenttrace",
+    "owner": "rakshanex",
+    "url": "https://github.com/rakshanex/agenttrace",
+    "section": "defence",
+    "evidence_class": "defence-tool",
+    "priority": "standard",
+    "status": "listed",
+    "techniques": [
+      "LLMI-T002",
+      "LLMI-T008",
+      "LLMI-T015"
+    ],
+    "summary": "DFIR for AI agents: ingests OpenTelemetry GenAI spans, MCP, vector-store, OAuth and egress logs, verifies chain of custody, reconstructs the attack chain and maps it to MITRE ATLAS.",
+    "source_grade": "D",
+    "provenance": "read on 2026-11-20 from a shallow clone (README and LICENSE); lead from the author's llmsecure.io research session; archive flag not visible to git",
+    "added": "2026-11-20",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-11-20",
+      "reachable": true,
+      "last_commit": "2026-10-03",
+      "license": "Apache-2.0"
+    }
+  },
+  {
+    "id": "ECO-124",
+    "type": "ecosystem",
+    "name": "AgentDFIR",
+    "owner": "efij",
+    "url": "https://github.com/efij/AgentDFIR",
+    "section": "defence",
+    "evidence_class": "defence-tool",
+    "priority": "standard",
+    "status": "listed",
+    "techniques": [
+      "LLMI-T018",
+      "LLMI-T008",
+      "LLMI-T015"
+    ],
+    "summary": "Collects, preserves and reconstructs activity of coding and desktop agents (Claude Code, Codex, Cursor, Gemini CLI, Copilot) from a live machine or an image, for incident response.",
+    "source_grade": "D",
+    "provenance": "read on 2026-11-20 from a shallow clone (README and LICENSE); lead from the author's llmsecure.io research session; archive flag not visible to git",
+    "added": "2026-11-20",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-11-20",
+      "reachable": true,
+      "last_commit": "2026-10-26",
+      "license": "MIT"
+    }
+  },
+  {
+    "id": "ECO-125",
+    "type": "ecosystem",
+    "name": "agentforensics",
+    "owner": "Carlos-Projects",
+    "url": "https://github.com/Carlos-Projects/agentforensics",
+    "section": "defence",
+    "evidence_class": "defence-tool",
+    "priority": "standard",
+    "status": "listed",
+    "techniques": [
+      "LLMI-T008",
+      "LLMI-T002"
+    ],
+    "summary": "Forensics library for agent sessions and tool calls, published on PyPI.",
+    "source_grade": "D",
+    "provenance": "read on 2026-11-20 from a shallow clone (README and LICENSE); lead from the author's llmsecure.io research session; archive flag not visible to git",
+    "added": "2026-11-20",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-11-20",
+      "reachable": true,
+      "last_commit": "2026-06-16",
+      "license": "MIT"
+    }
+  },
+  {
+    "id": "ECO-126",
+    "type": "ecosystem",
+    "name": "malwaremustdie (ARTEX detection pack)",
+    "owner": "unixfreaxjp",
+    "url": "https://github.com/unixfreaxjp/malwaremustdie/tree/master/etc/artex-stix-osquery-sigma-kql-snort-suricata-yara",
+    "section": "defence",
+    "evidence_class": "detection-content",
+    "priority": "standard",
+    "status": "listed",
+    "techniques": [
+      "LLMI-T015"
+    ],
+    "summary": "ARTEX misuse detection pack (MMD-072): STIX, osquery, Sigma, KQL, Snort 3, Suricata 7 and YARA with tiered indicators (T1 confirmed to T4 hunt-only) and expiry dates. Detection Rule License 1.1, attribution required.",
+    "source_grade": "D",
+    "provenance": "read on 2026-11-20 from a shallow clone (README and LICENSE); lead from the author's llmsecure.io research session; archive flag not visible to git",
+    "added": "2026-11-20",
+    "verification": {
+      "method": "git clone --depth 1",
+      "checked": "2026-11-20",
+      "reachable": true,
+      "last_commit": "2026-11-20",
+      "license": "DRL-1.1"
     }
   }
 ]

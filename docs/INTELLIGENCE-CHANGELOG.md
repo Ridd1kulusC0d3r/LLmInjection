@@ -2,6 +2,31 @@
 
 This changelog records material changes to attribution, confidence, external mappings and structured intelligence. Ordinary prose edits do not belong here.
 
+## 2026-11-20 — ARTEX November reporting, BraZetsu, LiteLLM KEV; ecosystem re-verified
+
+### Added
+
+- 15 sources read in the original on 2026-11-20: FBI FLASH-20261113-001, Microsoft (2026-11-05), Check Point Research, Censys, Eye Security, Datadog Security Labs, Unit 42, GTIG (2026-11-16), JPCERT/CC AT-2026-0030, Zenity Labs, Group-IB, Hunt.io and the CVE-2026-40217 GitHub advisory (grade A); The Hacker News on CERT-In and Baguete on Viaconnect (grade C).
+- Actor Exilware (medium) and campaign `CAMPAIGN-BRAZETSU-INFECTED-MARKETPLACE`: Group-IB's BraZetsu access-broker framework feeding a marketplace of Iberian and Latin American access, with Brazilian CNAB files and certificates among its targets.
+- Campaigns `CAMPAIGN-ARTEX-EXPOSED-SECRETS` (Microsoft), `CAMPAIGN-ARTEX-IDENTITY-WORKFLOWS` (Unit 42) and `CAMPAIGN-ARTEX-AWS` (Datadog), all unattributed.
+- Incidents `INCIDENT-EYE-ARTEX-IR`, `INCIDENT-LITELLM-GUARDRAIL-TESTER-EXPLOITATION` and `INCIDENT-VIACONNECT-EDR-TELEMETRY-INJECTION` (Brazilian research, medium).
+- `VULN-LITELLM-CVE-2026-40217`, in CISA KEV since 2026-11-18 (checked on the catalog; the daily digest had it unconfirmed).
+- 9 ecosystem entries, each cloned and read: mcp-sentinel, mcp-scrutiny, guardmcp, AIAgentFirewall, medusa (AGPL-3.0, reference only), agenttrace, AgentDFIR, agentforensics and the MalwareMustDie ARTEX detection pack (DRL 1.1).
+
+### Changed
+
+- The FBI FLASH and Censys become second publishers for the Storm-0940 ConnectWise campaign and the TAG-217 South Korea incident; Check Point for the GTIG ARTEX campaign; GTIG (2026-11-16) for the PentAGI campaign.
+- All 117 existing ecosystem entries re-verified by clone: none unreachable, 23 without a commit in 540 days, 39 with a new last commit or licence reading. `verify_ecosystem.py` now accepts a folder inside a repository and recognises the Detection Rule License.
+- Research queue: three digest items closed (LiteLLM, GTIG, Viaconnect).
+- The ARTEX dossier moves to v0.2 with these sources.
+
+### Confidence notes
+
+- The AI part of BraZetsu is Group-IB's reading of code style and log strings that name a server-side AI triage engine. Neither report saw that engine run, so Exilware is `medium` and the campaign uses LLMI-T028 at `medium`.
+- Viaconnect is known only through sponsored press; the talk or paper was not read.
+- Crafty Falcon stays out: The Hacker News quotes CERT-In calling the actor AI-assisted, but no CERT-In text naming the AI tools was read.
+- Huntress (HTTP 403) and SentinelOne (HTTP 429) refused automated reading; Wiz (2026-10-22), Microsoft on Storm-3358 (2026-11-06), Arctic Wolf and WorkOS are still unread.
+
 ## 2026-11-20 — ATR CVE candidates triaged: 22 AI vulnerabilities promoted
 
 ### Added
