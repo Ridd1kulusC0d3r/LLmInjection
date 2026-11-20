@@ -40,3 +40,14 @@ class SigmaRuleTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class QueryFileTests(unittest.TestCase):
+    def test_every_query_file_belongs_to_a_known_detection(self):
+        import json
+        known = {d["id"] for d in json.loads((ROOT / "data" / "detections.json").read_text(encoding="utf-8"))}
+        for path in (ROOT / "detections").glob("*/det-ai-*"):
+            if path.parent.name == "sigma":
+                continue
+            det = "-".join(path.name.split("-")[:3]).upper()
+            self.assertIn(det, known, path.name)

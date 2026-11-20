@@ -12,6 +12,8 @@ Preview with:  python -m http.server --directory _site
 from __future__ import annotations
 
 import argparse
+import json
+import re
 import shutil
 import subprocess
 import sys
@@ -25,6 +27,27 @@ def run(*args: str) -> None:
     subprocess.run([PY, *args], cwd=ROOT, check=True, stdout=subprocess.DEVNULL)
 
 
+REPO = "https://github.com/Ridd1kulusC0d3r/LLmInjection/blob/main/"
+KIND_BY_DIR = {"dossiers": "dossier", "intel": "intel", "trends": "trends", "templates": "template", "intake": "intake"}
+
+
+def report_index(platform: dict) -> list[dict]:
+    """Every Markdown report under reports/, newest first, plus the report the platform generates on each build."""
+    rows = [platform]
+    for path in sorted((ROOT / "reports").rglob("*.md")):
+        rel = path.relative_to(ROOT).as_posix()
+        if path.name == "README.md" and path.parent.name == "reports":
+            continue
+        text = path.read_text(encoding="utf-8")
+        title = re.search(r'^title:\s*"?(.+?)"?\s*$', text, re.M) or re.search(r"^#\s+(.+)$", text, re.M)
+        kind = KIND_BY_DIR.get(path.parent.name, "landscape" if re.fullmatch(r"\d{4}-\d{2}(-diff)?", path.stem) else "report")
+        date = re.search(r"\b(20\d\d-\d\d(?:-\d\d)?)\b", path.stem + " " + text[:600])
+        rows.append({"path": rel, "title": title.group(1) if title else path.stem, "kind": kind,
+                     "date": date.group(1) if date else "", "github": REPO + rel})
+    authored = sorted(rows[1:], key=lambda r: r["date"], reverse=True)
+    return [rows[0], *[r for r in authored if r["kind"] != "template"], *[r for r in authored if r["kind"] == "template"]]
+
+
 def build(out: Path) -> None:
     dist = ROOT / "dist"
     dist.mkdir(exist_ok=True)
@@ -36,6 +59,9 @@ def build(out: Path) -> None:
     run("scripts/build_api.py")
     run("scripts/build_navigator.py")
     run("scripts/coverage_model.py")
+    period = json.loads((dist / "current-snapshot.json").read_text(encoding="utf-8")).get("generated_at", "")[:7] or "current"
+    run("scripts/generate_landscape_report.py", "--snapshot", "dist/current-snapshot.json", "--diff", "dist/intelligence-diff.json",
+        "--output", "dist/platform-report.md", "--period", period)
     if out.exists():
         shutil.rmtree(out)
     shutil.copytree(ROOT / "site", out)
@@ -48,6 +74,22 @@ def build(out: Path) -> None:
     ]:
         shutil.copy(ROOT / src, out / name)
     shutil.copytree(dist / "api", out / "api")
+    shutil.copytree(ROOT / "reports", out / "reports")
+    shutil.copytree(ROOT / "assets" / "reports", out / "assets" / "reports")
+    shutil.copy(dist / "platform-report.md", out / "reports" / "platform-report.md")
+    platform = {"path": "reports/platform-report.md", "title": "Platform report", "kind": "platform", "date": period,
+                "github": REPO + "scripts/generate_landscape_report.py"}
+    sys.path.insert(0, str(ROOT / "scripts"))
+    from coverage_model import rule_files  # noqa: PLC0415
+    rules = {p.relative_to(ROOT).as_posix(): None for p in (ROOT / "detections").glob("*/*") if p.is_file()}
+    by_det: dict[str, list[str]] = {}
+    for rel in rules:
+        det = "-".join(Path(rel).name.split("-")[:3]).upper()
+        if det.startswith("DET-"):
+            by_det.setdefault(det, []).append(rel)
+    assert set(by_det) >= set(rule_files())
+    (out / "reports.json").write_text(json.dumps({"repo": REPO, "reports": report_index(platform), "rule_files": by_det},
+                                                 ensure_ascii=False, indent=1), encoding="utf-8")
     shutil.copytree(dist / "navigator", out / "navigator")
 
 

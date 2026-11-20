@@ -15,7 +15,7 @@
 |---|---|
 | Evidence | 53 record(s), 33 publisher(s), best grade A, newest 2026 |
 | Safe tests | 1 |
-| Detections | 1 rule file(s), 1 specification(s) |
+| Detections | 3 rule file(s), 1 specification(s) |
 | Controls | 2 |
 | Benchmarks | 1 |
 
@@ -120,6 +120,20 @@ The runner has plan and mock adapters only: it does not call your system. To run
 - **Telemetry:** `agent-runtime-command-line`, `approval-mode-config-change`, `edr-process-telemetry`
 - **Implementation:** rule file(s): [sigma](../../detections/sigma/det-ai-032-agent-approval-disabled.yml). Experimental and not run against real telemetry.
 
+### DET-AI-046 · Sub-Second Permission Probing With Cloud Credentials
+
+- **Severity:** high
+- **Hypothesis:** A principal that has just been used from a new address writes and deletes a test blob within a second, or fires bursts of ARM deployment validation (dry-run) calls, mapping what a stolen credential can do. The FBI describes this machine-speed capability check in ARTEX intrusions.
+- **Telemetry:** `StorageBlobLogs (PutBlob/DeleteBlob with caller and object id)`, `AzureActivity (deployments/validate)`, `sign-in logs for the same principal`
+- **Implementation:** rule file(s): [sentinel](../../detections/sentinel/det-ai-046-subsecond-cloud-permission-probe.kql). Experimental and not run against real telemetry.
+
+### DET-AI-047 · Denied-Call Burst Across Services Followed by a Success
+
+- **Severity:** high
+- **Hypothesis:** One cloud identity issues hundreds of API calls across many services in minutes, most of them denied, and one of them, often a secret read, succeeds. The Cloud Security Alliance's reading of the AntiFox intrusions describes this pattern; the value of the sweep is the few calls that succeed.
+- **Telemetry:** `CloudTrail (eventSource, eventName, errorCode, userIdentity.arn, sourceIPAddress)`
+- **Implementation:** rule file(s): [sentinel](../../detections/sentinel/det-ai-047-denied-burst-then-success.kql), [splunk](../../detections/splunk/det-ai-047-denied-burst-then-success.spl). Experimental and not run against real telemetry.
+
 ## 4. Prevent it
 
 - **Agent Decision and Action Telemetry** (`CTRL-AGENT-TELEMETRY`): Log identity, plan step, capability request, authorization result and side effect for agent actions.
@@ -135,7 +149,7 @@ The runner has plan and mock adapters only: it does not call your system. To run
 
 ## 6. Limits of this page
 
-- 1 of 2 detection(s) are specifications, not rules. They say what to look for, not how to query it. Nothing here has been run against real telemetry.
+- 1 of 4 detection(s) are specifications, not rules. They say what to look for, not how to query it. Nothing here has been run against real telemetry.
 - The tests use benign markers and synthetic data. A pass in a lab is not a security rating for a production system.
 - Ecosystem tools and benchmarks help you test and measure. They never support a claim that an actor used the technique.
 

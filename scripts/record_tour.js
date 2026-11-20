@@ -1,4 +1,4 @@
-// Records the frames for the README GIFs: node scripts/record_tour.js <base-url> <out-dir> [tour|graph|filters]
+// Records the frames for the README GIFs: node scripts/record_tour.js <base-url> <out-dir> [tour|graph|filters|orchestration|timeline|spaces]
 // Needs Playwright (npm i playwright) and a built site:
 //   python scripts/build_site.py --out _site && python -m http.server 8000 --directory _site
 // Then: python scripts/make_tour_gif.py <out-dir> assets/explorer-<name>.gif
@@ -20,8 +20,9 @@ fs.mkdirSync(out, { recursive: true });
     await page.screenshot({ path: `${out}/${file}` });
     steps.push([file, hold]);
   };
-  const scrollTo = async (y) => { await page.evaluate((v) => window.scrollTo(0, v), y); await pause(250); };
-  const into = async (sel) => { await page.evaluate((s) => document.querySelector(s).scrollIntoView({ block: "start" }), sel); await page.evaluate(() => window.scrollBy(0, -90)); await pause(300); };
+  const scrollTo = async (y) => { await page.evaluate((v) => window.scrollTo({ top: v, behavior: "instant" }), y); await pause(250); };
+  // instant scroll: the site's smooth scrolling would otherwise still be moving when the frame is taken
+  const into = async (sel) => { await page.evaluate((s) => window.scrollTo({ top: document.querySelector(s).getBoundingClientRect().top + window.scrollY - 90, behavior: "instant" }), sel); await pause(300); };
   const tab = async (t) => { await page.click(`.tab[data-tab="${t}"]`); await scrollTo(0); await pause(200); };
   const open = async (hash) => { await page.goto(`${base}#${hash}`); await page.waitForSelector(".tab"); await pause(800); };
 
@@ -72,6 +73,35 @@ fs.mkdirSync(out, { recursive: true });
     await page.click('#dashMaturity [data-filter="maturity:observed-in-the-wild"]'); await pause(500); await scrollTo(250); await snap(1900);   // maturity bar opens coverage
     await tab("overview"); await into("#dashGrades");
     await page.click('#dashGrades [data-filter="grade:A"]'); await pause(500); await snap(1800);   // grade bar opens sources
+  } else if (name === "orchestration") {
+    // the neighbourhood of LLMI-T015 Agentic Attack Orchestration: actors, campaigns, incidents and defences
+    await open("tab=graph&focus=LLMI-T015&lang=en"); await into("#graphFocus");
+    await page.click('#graphTools [data-zoom="all"]'); await pause(600); await snap(2200);   // whole focused graph
+    await page.click('#graphTools [data-zoom="fit"]'); await pause(500); await snap(1500);
+    const t15 = page.locator('.node[data-nid="LLMI-T015"]');
+    await t15.scrollIntoViewIfNeeded(); await t15.hover(); await pause(300); await snap(1300);
+    await t15.click(); await pause(500); await snap(2200);                                     // everything linked to the technique
+    await page.evaluate((s) => document.querySelector(s).click(), '#graphSel [data-go="CAMPAIGN-VAPOR-PANDA-ARTEX"]'); await pause(600); await snap(2000);   // one campaign
+    await page.evaluate((s) => document.querySelector(s).click(), '#graphSel [data-go="ACTOR-VAPOR-PANDA"]'); await pause(600); await snap(1800);         // its actor
+    await page.evaluate((s) => document.querySelector(s).click(), '#graphSel [data-focus]'); await pause(700);
+    await page.click('#graphTools [data-zoom="all"]'); await pause(500); await snap(2000);   // refocus on the actor
+    await open("tab=graph&focus=LLMI-T015&lang=pt"); await page.reload(); await page.waitForSelector(".tab"); await pause(700);
+    await into("#graphFocus"); await page.click('#graphTools [data-zoom="all"]'); await pause(500); await snap(1800);   // Portuguese
+  } else if (name === "timeline") {
+    await open("tab=timeline&lang=en"); await into("#timeline"); await snap(1600);                                  // all evidence, by month
+    await page.selectOption("#tlTech", "LLMI-T015"); await pause(500); await into("#timeline"); await snap(2000); // only Agentic Attack Orchestration
+    for (let k = 0; k < 3; k++) { await page.evaluate(() => window.scrollBy({ top: 380, behavior: "instant" })); await pause(250); await snap(900); }
+    await page.click('#timelineList .e[data-id="CAMPAIGN-STORM-0940-ARTEX-CONNECTWISE"]'); await pause(500); await snap(2200);   // a record
+    await page.keyboard.press("Escape"); await pause(300);
+    await page.selectOption("#tlTech", "LLMI-T028"); await pause(400); await into("#timeline"); await snap(1800);   // another technique
+  } else if (name === "spaces") {
+    await open("tab=reports&lang=en"); await into("#reports"); await snap(1500);
+    await open("tab=reports&report=reports/dossiers/artex.md&lang=en"); await into("#reportView"); await snap(2200);   // a report in the site's style
+    await tab("trends"); await into("#trends"); await snap(2000);
+    await tab("ttps"); await into("#ttps"); await snap(1600);
+    await tab("hunting"); await into("#hunting"); await snap(1800);
+    await tab("detection"); await into("#detection"); await snap(1600);
+    await tab("threatmodel"); await into("#threatmodel"); await snap(1800);
   }
   fs.writeFileSync(`${out}/steps.json`, JSON.stringify(steps));
   await browser.close();

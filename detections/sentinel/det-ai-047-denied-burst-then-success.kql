@@ -1,0 +1,18 @@
+// DET-AI-047 — Denied-Call Burst Across Services Followed by a Success (LLMI-T015, LLMI-T016)
+// Status: experimental hunting query, not tested against live data.
+// Basis: Cloud Security Alliance note on AntiFox (2026-11-12): hundreds of AWS API calls across more than a
+// dozen services in about 30 minutes, mostly AccessDenied, ending in a successful GetSecretValue.
+let lookback = 1d;
+let bucket = 30m;
+AWSCloudTrail
+| where TimeGenerated > ago(lookback)
+| extend Denied = ErrorCode in ("AccessDenied", "AccessDeniedException", "UnauthorizedOperation", "Client.UnauthorizedOperation")
+| summarize Calls = count(), DeniedCalls = countif(Denied), Services = dcount(EventSource),
+            Succeeded = make_set_if(strcat(EventSource, ":", EventName), not(Denied), 50),
+            SecretReads = countif(not(Denied) and EventName in ("GetSecretValue", "GetParameter", "GetParameters", "Decrypt"))
+    by UserIdentityArn, SourceIpAddress, bin(TimeGenerated, bucket)
+| where Calls >= 100 and Services >= 10 and DeniedCalls * 2 >= Calls
+| extend Priority = iff(SecretReads > 0, "review-now", "review")
+| order by SecretReads desc, DeniedCalls desc
+// False positives: security scanners and CSPM tools enumerate many services with partial permissions; IAM
+// changes that briefly break a workload. Allowlist scanner roles by ARN, not by address.

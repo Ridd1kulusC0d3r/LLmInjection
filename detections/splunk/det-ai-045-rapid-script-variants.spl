@@ -1,0 +1,11 @@
+`comment("DET-AI-045 Rapid Iterative Script Variants on One Host (LLMI-T028, LLMI-T015). Experimental hunting search on Sysmon process creation, not tested against live data.")`
+index=* sourcetype="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational" EventCode=1 earliest=-24h
+  (Image="*\\python.exe" OR Image="*\\powershell.exe" OR Image="*\\pwsh.exe" OR Image="*\\node.exe" OR Image="*\\cscript.exe" OR Image="*\\wscript.exe")
+  (CommandLine="*\\Users\\*" OR CommandLine="*\\AppData\\*" OR CommandLine="*\\Temp\\*")
+| rex field=CommandLine "(?<script>[^\\\\/\s\"']+\.(py|ps1|js|vbs))"
+| where isnotnull(script)
+| eval stem=replace(lower(script), "(_?v?\d+|_(new|fix|fixed|final|test|old))*\.(py|ps1|js|vbs)$", "")
+| bin _time span=30m
+| stats dc(script) AS variants count AS runs values(script) AS names BY _time, host, User, stem
+| where variants>=4
+| sort - variants

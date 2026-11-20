@@ -5260,6 +5260,39 @@
   {
     "id": "REL-477",
     "type": "relationship",
+    "source": "DET-AI-046",
+    "relationship": "detects",
+    "target": "LLMI-T015",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-FBI-FLASH-20261113-ARTEX"
+    ]
+  },
+  {
+    "id": "REL-478",
+    "type": "relationship",
+    "source": "DET-AI-047",
+    "relationship": "detects",
+    "target": "LLMI-T015",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-CSA-ANTIFOX"
+    ]
+  },
+  {
+    "id": "REL-479",
+    "type": "relationship",
+    "source": "DET-AI-047",
+    "relationship": "detects",
+    "target": "LLMI-T016",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-CSA-ANTIFOX"
+    ]
+  },
+  {
+    "id": "REL-480",
+    "type": "relationship",
     "source": "ACTOR-EXILWARE",
     "relationship": "conducts",
     "target": "CAMPAIGN-BRAZETSU-INFECTED-MARKETPLACE",
@@ -5270,7 +5303,7 @@
     ]
   },
   {
-    "id": "REL-478",
+    "id": "REL-481",
     "type": "relationship",
     "source": "CAMPAIGN-BRAZETSU-INFECTED-MARKETPLACE",
     "relationship": "uses",
@@ -5282,7 +5315,7 @@
     ]
   },
   {
-    "id": "REL-479",
+    "id": "REL-482",
     "type": "relationship",
     "source": "CAMPAIGN-ARTEX-EXPOSED-SECRETS",
     "relationship": "uses",
@@ -5293,7 +5326,7 @@
     ]
   },
   {
-    "id": "REL-480",
+    "id": "REL-483",
     "type": "relationship",
     "source": "CAMPAIGN-ARTEX-EXPOSED-SECRETS",
     "relationship": "uses",
@@ -5304,7 +5337,7 @@
     ]
   },
   {
-    "id": "REL-481",
+    "id": "REL-484",
     "type": "relationship",
     "source": "CAMPAIGN-ARTEX-IDENTITY-WORKFLOWS",
     "relationship": "uses",
@@ -5315,7 +5348,7 @@
     ]
   },
   {
-    "id": "REL-482",
+    "id": "REL-485",
     "type": "relationship",
     "source": "CAMPAIGN-ARTEX-AWS",
     "relationship": "uses",
@@ -5326,7 +5359,7 @@
     ]
   },
   {
-    "id": "REL-483",
+    "id": "REL-486",
     "type": "relationship",
     "source": "INCIDENT-EYE-ARTEX-IR",
     "relationship": "demonstrates",
@@ -5337,7 +5370,7 @@
     ]
   },
   {
-    "id": "REL-484",
+    "id": "REL-487",
     "type": "relationship",
     "source": "INCIDENT-LITELLM-GUARDRAIL-TESTER-EXPLOITATION",
     "relationship": "demonstrates",
@@ -5348,7 +5381,7 @@
     ]
   },
   {
-    "id": "REL-485",
+    "id": "REL-488",
     "type": "relationship",
     "source": "INCIDENT-LITELLM-GUARDRAIL-TESTER-EXPLOITATION",
     "relationship": "demonstrates",
@@ -5359,7 +5392,7 @@
     ]
   },
   {
-    "id": "REL-486",
+    "id": "REL-489",
     "type": "relationship",
     "source": "INCIDENT-VIACONNECT-EDR-TELEMETRY-INJECTION",
     "relationship": "demonstrates",
@@ -5370,7 +5403,7 @@
     ]
   },
   {
-    "id": "REL-487",
+    "id": "REL-490",
     "type": "relationship",
     "source": "INCIDENT-VIACONNECT-EDR-TELEMETRY-INJECTION",
     "relationship": "demonstrates",
@@ -5381,7 +5414,7 @@
     ]
   },
   {
-    "id": "REL-488",
+    "id": "REL-491",
     "type": "relationship",
     "source": "VULN-LITELLM-CVE-2026-40217",
     "relationship": "demonstrates",
@@ -5392,7 +5425,7 @@
     ]
   },
   {
-    "id": "REL-489",
+    "id": "REL-492",
     "type": "relationship",
     "source": "VULN-LITELLM-CVE-2026-40217",
     "relationship": "observed-in",
@@ -5403,7 +5436,7 @@
     ]
   },
   {
-    "id": "REL-490",
+    "id": "REL-493",
     "type": "relationship",
     "source": "ACTOR-STORM-3358",
     "relationship": "conducts",
@@ -5414,7 +5447,7 @@
     ]
   },
   {
-    "id": "REL-491",
+    "id": "REL-494",
     "type": "relationship",
     "source": "CAMPAIGN-STORM-3358-ARTEX-FINANCE",
     "relationship": "uses",
@@ -5425,7 +5458,7 @@
     ]
   },
   {
-    "id": "REL-492",
+    "id": "REL-495",
     "type": "relationship",
     "source": "CAMPAIGN-ARTEX-IT-SOFTWARE-VENDORS",
     "relationship": "uses",
@@ -5436,7 +5469,7 @@
     ]
   },
   {
-    "id": "REL-493",
+    "id": "REL-496",
     "type": "relationship",
     "source": "CAMPAIGN-ANTIFOX-AWS-IIS",
     "relationship": "uses",
@@ -5448,7 +5481,7 @@
     ]
   },
   {
-    "id": "REL-494",
+    "id": "REL-497",
     "type": "relationship",
     "source": "INCIDENT-WORKOS-ARTEX-SANDBOX-ESCAPE",
     "relationship": "demonstrates",
@@ -5459,7 +5492,7 @@
     ]
   },
   {
-    "id": "REL-495",
+    "id": "REL-498",
     "type": "relationship",
     "source": "CAMPAIGN-ONYX-SLEET-AI-LURES",
     "relationship": "uses-tool",
@@ -5470,7 +5503,7 @@
     ]
   },
   {
-    "id": "REL-496",
+    "id": "REL-499",
     "type": "relationship",
     "source": "CAMPAIGN-ARTEX-MULTI-MODEL-OPERATOR",
     "relationship": "uses-tool",
@@ -5482,7 +5515,7 @@
     ]
   },
   {
-    "id": "REL-497",
+    "id": "REL-500",
     "type": "relationship",
     "source": "CAMPAIGN-STORM-0940-ARTEX-CONNECTWISE",
     "relationship": "uses-tool",
@@ -5494,7 +5527,7 @@
     ]
   },
   {
-    "id": "REL-498",
+    "id": "REL-501",
     "type": "relationship",
     "source": "CAMPAIGN-ARTEX-EXTORTION-AND-PRC-CLUSTERS",
     "relationship": "uses-tool",
@@ -5506,7 +5539,7 @@
     ]
   },
   {
-    "id": "REL-499",
+    "id": "REL-502",
     "type": "relationship",
     "source": "CAMPAIGN-PEARL-SLEET-ARTEX",
     "relationship": "uses-tool",
@@ -5517,7 +5550,7 @@
     ]
   },
   {
-    "id": "REL-500",
+    "id": "REL-503",
     "type": "relationship",
     "source": "CAMPAIGN-VAPOR-PANDA-ARTEX",
     "relationship": "uses-tool",
@@ -5528,7 +5561,7 @@
     ]
   },
   {
-    "id": "REL-501",
+    "id": "REL-504",
     "type": "relationship",
     "source": "CAMPAIGN-ARTEX-EXPOSED-SECRETS",
     "relationship": "uses-tool",
@@ -5539,7 +5572,7 @@
     ]
   },
   {
-    "id": "REL-502",
+    "id": "REL-505",
     "type": "relationship",
     "source": "CAMPAIGN-ARTEX-IDENTITY-WORKFLOWS",
     "relationship": "uses-tool",
@@ -5550,7 +5583,7 @@
     ]
   },
   {
-    "id": "REL-503",
+    "id": "REL-506",
     "type": "relationship",
     "source": "CAMPAIGN-ARTEX-AWS",
     "relationship": "uses-tool",
@@ -5561,7 +5594,7 @@
     ]
   },
   {
-    "id": "REL-504",
+    "id": "REL-507",
     "type": "relationship",
     "source": "CAMPAIGN-STORM-3358-ARTEX-FINANCE",
     "relationship": "uses-tool",
@@ -5572,7 +5605,7 @@
     ]
   },
   {
-    "id": "REL-505",
+    "id": "REL-508",
     "type": "relationship",
     "source": "CAMPAIGN-ARTEX-IT-SOFTWARE-VENDORS",
     "relationship": "uses-tool",
@@ -5583,7 +5616,7 @@
     ]
   },
   {
-    "id": "REL-506",
+    "id": "REL-509",
     "type": "relationship",
     "source": "INCIDENT-TAG-217-SOUTH-KOREA-FINANCE",
     "relationship": "uses-tool",
@@ -5595,7 +5628,7 @@
     ]
   },
   {
-    "id": "REL-507",
+    "id": "REL-510",
     "type": "relationship",
     "source": "INCIDENT-EYE-ARTEX-IR",
     "relationship": "uses-tool",
@@ -5606,7 +5639,7 @@
     ]
   },
   {
-    "id": "REL-508",
+    "id": "REL-511",
     "type": "relationship",
     "source": "INCIDENT-WORKOS-ARTEX-SANDBOX-ESCAPE",
     "relationship": "uses-tool",
@@ -5617,7 +5650,7 @@
     ]
   },
   {
-    "id": "REL-509",
+    "id": "REL-512",
     "type": "relationship",
     "source": "CAMPAIGN-ANTIFOX-AWS-IIS",
     "relationship": "uses-tool",
@@ -5629,7 +5662,7 @@
     ]
   },
   {
-    "id": "REL-510",
+    "id": "REL-513",
     "type": "relationship",
     "source": "CAMPAIGN-PENTAGI-ASIA-TELECOM",
     "relationship": "uses-tool",
@@ -5641,7 +5674,7 @@
     ]
   },
   {
-    "id": "REL-511",
+    "id": "REL-514",
     "type": "relationship",
     "source": "CAMPAIGN-CYBERXERO-CLAUDE-AGENT-SWARM",
     "relationship": "uses-tool",
@@ -5652,7 +5685,7 @@
     ]
   },
   {
-    "id": "REL-512",
+    "id": "REL-515",
     "type": "relationship",
     "source": "INCIDENT-GAMBIT-AI-AGENT-RETAIL-SKIMMING",
     "relationship": "uses-tool",
@@ -5663,7 +5696,7 @@
     ]
   },
   {
-    "id": "REL-513",
+    "id": "REL-516",
     "type": "relationship",
     "source": "INCIDENT-HEXSTRIKE-STRIX-EAST-ASIA",
     "relationship": "uses-tool",
@@ -5674,7 +5707,7 @@
     ]
   },
   {
-    "id": "REL-514",
+    "id": "REL-517",
     "type": "relationship",
     "source": "INCIDENT-HEXSTRIKE-STRIX-EAST-ASIA",
     "relationship": "uses-tool",
@@ -5685,7 +5718,7 @@
     ]
   },
   {
-    "id": "REL-515",
+    "id": "REL-518",
     "type": "relationship",
     "source": "INCIDENT-GAMBIT-AI-AGENT-RETAIL-SKIMMING",
     "relationship": "uses-tool",
@@ -5696,7 +5729,7 @@
     ]
   },
   {
-    "id": "REL-516",
+    "id": "REL-519",
     "type": "relationship",
     "source": "TOOL-ANTIFOX",
     "relationship": "derived-from",
