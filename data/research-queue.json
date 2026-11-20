@@ -1,7 +1,7 @@
 {
   "meta": {
     "schema_version": "1.0",
-    "last_run": "2026-10-07T22:00:00Z",
+    "last_run": "2026-11-20T14:56:29Z",
     "policy": "candidate-only; no automatic promotion into official intelligence datasets",
     "statuses": [
       "candidate",
@@ -6402,6 +6402,174 @@
       "review": {
         "decision": "not promoted",
         "notes": "WeChat returned a verification wall ('环境异常'); no content readable."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-01",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "C",
+      "kind": "digest-research",
+      "title": "PISmith vs PIPETTE: repetitive automated prompt-injection red teaming weakens the trained defence",
+      "url": "https://www.helpnetsecurity.com/2026/11/20/ai-prompt-injection-red-team/",
+      "published": "2026-11-20",
+      "observed_at": "2026-11-20T14:56:29Z",
+      "relevance_score": 40,
+      "matched_terms": [
+        "LLMI-T001",
+        "LLMI-T002"
+      ],
+      "summary": "[LLMI-20261120-01] seal: secondary; new. Help Net Security reports a study in which automated red teaming repeats the same injection technique thousands of times and a defence trained on that volume became weaker. The paper (arXiv 2611.24362) was not read.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-02",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "B",
+      "kind": "digest-vulnerability",
+      "title": "LiteLLM CVE-2026-40217: guardrail tester sandbox escape to root, reported added to CISA KEV",
+      "url": "https://labs.zenity.io/p/threat-actors-are-trying-to-use-litellm-s-guardrail-tester-to-run-code-as-root",
+      "published": "2026-11-18",
+      "observed_at": "2026-11-20T14:56:29Z",
+      "relevance_score": 55,
+      "matched_terms": [
+        "LLMI-T016",
+        "LLMI-T024"
+      ],
+      "summary": "[LLMI-20261120-02] seal: secondary; update. Zenity Labs (read in the original) describes attempts to run code as root through LiteLLM's custom-code guardrail tester; fixed in 1.83.10. The KEV date came from an aggregator and was not confirmed on the CISA catalog; CVSS differs between sources (8.8 and 9.5).",
+      "identifiers": [
+        "CVE-2026-40217"
+      ],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-03",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "D",
+      "kind": "digest-vulnerability",
+      "title": "jupyter-mcp-server CVE-2026-77318: connect and stop endpoints without authentication",
+      "url": "https://radar.offseq.com/threat/cve-2026-77318-cwe-306-missing-authentication-for-critical-functionality-in-datalayer-jupyter-mcp-74ebe06170f4e8e7",
+      "published": "2026-11-19",
+      "observed_at": "2026-11-20T14:56:29Z",
+      "relevance_score": 25,
+      "matched_terms": [
+        "LLMI-T024"
+      ],
+      "summary": "[LLMI-20261120-03] seal: secondary; new. An aggregator reports missing authentication on two jupyter-mcp-server endpoints (CWE-306), fixed in 1.0.3. Read the GitHub advisory before promoting.",
+      "identifiers": [
+        "CVE-2026-77318",
+        "GHSA-24pw-rf5p-mgp7"
+      ],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-04",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "D",
+      "kind": "digest-vulnerability",
+      "title": "mssql-mcp SQL injection (CVE-2026-63129) and obsidian-sync-mcp DNS-rebinding write (CVE-2026-77283)",
+      "url": "https://cvebrief.com/archive/2026/11/19/",
+      "published": "2026-11-19",
+      "observed_at": "2026-11-20T14:56:29Z",
+      "relevance_score": 25,
+      "matched_terms": [
+        "LLMI-T008",
+        "LLMI-T024"
+      ],
+      "summary": "[LLMI-20261120-04] seal: secondary; new. A CVE digest lists two MCP server vulnerabilities rated 8.8: SQL injection in mssql-mcp and cross-origin writes through DNS rebinding in obsidian-sync-mcp. Read the advisories before promoting.",
+      "identifiers": [
+        "CVE-2026-63129",
+        "CVE-2026-77283"
+      ],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-05",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "A",
+      "kind": "digest-threat-report",
+      "title": "GTIG: agentic threat activity crosses a significant threshold",
+      "url": "https://cloud.google.com/blog/topics/threat-intelligence/agentic-threat-activity-crosses-a-significant-threshold",
+      "published": "2026-11-16",
+      "observed_at": "2026-11-20T14:56:29Z",
+      "relevance_score": 90,
+      "matched_terms": [
+        "LLMI-T015",
+        "LLMI-T018",
+        "LLMI-T022"
+      ],
+      "summary": "[LLMI-20261120-05] seal: original; recovered. Read in the original: GTIG reports CAIRN and a customised PentAGI in real operations, a first observed fully automated discover-and-exploit loop, MIDNIGHT NEPTUNE delivering SOMBERMEME by editing a coding agent's settings file in repositories, and LLMjacking at scale.",
+      "identifiers": [
+        "MIDNIGHT NEPTUNE",
+        "SOMBERMEME",
+        "CAIRN",
+        "PentAGI"
+      ],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-06",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "C",
+      "kind": "digest-threat-report",
+      "title": "Symantec: autonomous LLMjacking agent observed against a honeypot",
+      "url": "https://www.infosecurity-magazine.com/news/symantec-ai-agent-llmjacking/",
+      "published": null,
+      "observed_at": "2026-11-20T14:56:29Z",
+      "relevance_score": 40,
+      "matched_terms": [
+        "LLMI-T016",
+        "LLMI-T022"
+      ],
+      "summary": "[LLMI-20261120-06] seal: secondary; retrospective. Journalism on a Symantec finding: an autonomous agent with dozens of tools hitting a honeypot and mining Monero. The Symantec original was not located.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261120-07",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "C",
+      "kind": "digest-research",
+      "title": "Viaconnect: indirect prompt injection through EDR telemetry against AI-assisted SOCs",
+      "url": "https://www.baguete.com.br/noticias/viaconnect-apresenta-pesquisa-sobre-ataques-a-socs-com-ia-em-evento-internacional",
+      "published": "2026-11-11",
+      "observed_at": "2026-11-20T14:56:29Z",
+      "relevance_score": 50,
+      "matched_terms": [
+        "LLMI-T002",
+        "LLMI-T017",
+        "brazil-latam"
+      ],
+      "summary": "[LLMI-20261120-07] seal: secondary; retrospective. Brazilian research reported in sponsored press: text planted in EDR telemetry misled 14 of 23 models used in SOC assistants. The talk or paper was not read.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261120. Read the primary source before promoting."
       }
     }
   ]
