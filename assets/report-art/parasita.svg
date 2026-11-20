@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="t"><title id="t">O Parasita: cadeia de suprimentos de IA</title>
+<g fill="none" stroke="#6b4fbb" stroke-width="12" stroke-linecap="round"><path d="M150 250 q-60 40 -90 110"/><path d="M200 260 q0 60 -10 110"/><path d="M250 250 q60 40 100 100"/><path d="M130 220 q-80 -10 -110 40"/><path d="M270 220 q80 -20 110 30"/></g>
+<path d="M110 150 l90 -50 90 50 v100 l-90 50 -90 -50z" fill="#f3f0e8" stroke="#15140f" stroke-width="6" stroke-linejoin="round"/>
+<path d="M110 150 l90 50 90 -50 M200 200 v100" fill="none" stroke="#15140f" stroke-width="5"/>
+<circle cx="200" cy="150" r="40" fill="#6b4fbb" stroke="#15140f" stroke-width="5"/>
+<circle cx="186" cy="146" r="10" fill="#f3f0e8"/><circle cx="214" cy="146" r="10" fill="#f3f0e8"/><circle cx="188" cy="148" r="4" fill="#15140f"/><circle cx="216" cy="148" r="4" fill="#15140f"/>
+<text x="140" y="268" font-family="monospace" font-size="16" font-weight="700" fill="#15140f">pip</text><text x="222" y="268" font-family="monospace" font-size="16" font-weight="700" fill="#15140f">npm</text>
+</svg>

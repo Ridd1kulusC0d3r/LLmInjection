@@ -1,4 +1,4 @@
-.PHONY: test validate build charts readme lint audit check navigator coverage site osint
+.PHONY: print test validate build charts readme lint audit check navigator coverage site osint
 
 test:
 	python3 -m unittest discover -s tests -v
@@ -36,3 +36,8 @@ check: lint test validate audit
 
 navigator:
 	python3 scripts/build_navigator.py
+
+# Print edition of the 2026 AI threat report (needs Playwright/Chromium and poppler-utils)
+print:
+	python3 scripts/build_print_report.py --out dist/print
+	node scripts/render_print_report.js dist/print reports/pdf/LLMI-RI-2026-11-20-ameacas-sistemas-ia.pdf
