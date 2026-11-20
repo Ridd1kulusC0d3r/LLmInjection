@@ -6473,5 +6473,16 @@
     "evidence_sources": [
       "SRC-CERTIN-CIAD-2026-0058"
     ]
+  },
+  {
+    "id": "REL-586",
+    "type": "relationship",
+    "source": "VULN-FREEBSD-CVE-2026-4747",
+    "relationship": "demonstrates",
+    "target": "LLMI-T028",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-ANTHROPIC-MYTHOS-PREVIEW"
+    ]
   }
 ]

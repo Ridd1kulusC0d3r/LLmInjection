@@ -1273,5 +1273,31 @@
       "SRC-ZAMMAD-ADV-2026-102489",
       "SRC-CISA-KEV-CATALOG"
     ]
+  },
+  {
+    "id": "VULN-FREEBSD-CVE-2026-4747",
+    "type": "vulnerability",
+    "name": "FreeBSD NFS RPCSEC_GSS stack overflow leading to remote root",
+    "kind": "memory-corruption",
+    "package": "FreeBSD kernel (NFS server, RPCSEC_GSS)",
+    "ecosystem": "Operating system",
+    "identifiers": [
+      "CVE-2026-4747"
+    ],
+    "severity": "high",
+    "affected": [
+      "see FreeBSD advisory"
+    ],
+    "patched": [
+      "see FreeBSD advisory"
+    ],
+    "published": "2026-03-26",
+    "confidence": "confirmed",
+    "ai_relation": "ai-discovered",
+    "summary": "The RPCSEC_GSS signature check in the FreeBSD NFS server copies part of a packet into a stack buffer without checking its size, so a client can overflow the stack (NVD 8.8). Anthropic says Claude Mythos Preview found and exploited this 17-year-old flaw fully autonomously, reaching root on hosts running NFS. Not in CISA KEV as of 2026-11-18.",
+    "source_ids": [
+      "SRC-NVD-CVE-2026-4747",
+      "SRC-ANTHROPIC-MYTHOS-PREVIEW"
+    ]
   }
 ]

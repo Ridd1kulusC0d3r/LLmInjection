@@ -14,10 +14,14 @@ This changelog records material changes to attribution, confidence, external map
 - New optional `kev_added` field, filled from the KEV feed for every KEV record.
 - Sources: GTIG "Vulnerability discovery and exploitation trends in the AI era" (2026-09-30), Barracuda, DIVD, Zammad, Sysdig and NVD records.
 - Explorer chronology: filters for attacks run with AI agents, the ARTEX family, CISA KEV and flaws found by AI, plus badges on each record.
-- 2026 report v1.1: 16 new chronology rows (ARTEX cases, DIVD, BeyondTrust) and a new subsection on vulnerabilities found by AI.
+- `VULN-FREEBSD-CVE-2026-4747` (`ai-discovered`): FreeBSD NFS stack overflow that Anthropic says Claude Mythos Preview found and exploited autonomously.
+- Sources on AI-driven discovery: Anthropic's Project Glasswing and Mythos Preview write-ups (vendor claims), Mozilla, the curl maintainer, VulnCheck (two analyses) and depthfirst.
+- 2026 report v1.1: 19 new chronology rows (ARTEX cases, DIVD, BeyondTrust, Mozilla, Glasswing, depthfirst) and a new subsection on vulnerabilities found by AI, which sets vendor claims next to third-party checks.
 
 ### Confidence notes
 
+- Anthropic's figures for Mythos Preview are the vendor's own and mostly embargoed; VulnCheck found 1 CVE explicitly attributed to Glasswing as of 2026-04-15, and curl kept 1 of 5 reported findings.
+- The nine depthfirst FFmpeg CVEs are not yet in NVD; they stay in the report text, not in the datasets.
 - Whether the DIVD agent found the Zammad flaws or only used them is not established; Zammad had a report on CVE-2026-102489 in August.
 - The KEV chart in the report counts only `ai-software` records, so AI-discovered flaws in other products do not inflate it.
 
