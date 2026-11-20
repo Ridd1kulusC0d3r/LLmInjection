@@ -1048,7 +1048,7 @@
     },
     {
       "id": "RQ-ATR-CVE-2019-5418",
-      "status": "candidate",
+      "status": "rejected",
       "source_feed_id": "FEED-ATR-RULE-COMMITS",
       "source_grade": "D",
       "kind": "vulnerability-candidate",
@@ -1065,13 +1065,13 @@
         "CVE-2019-5418"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the NVD or vendor advisory. Add a vulnerability record only if the product is an AI framework, agent, MCP server or model tool, and link it to a technique from evidence in the advisory."
+        "decision": "not promoted",
+        "notes": "Ruby on Rails Action View file disclosure; not an AI system. ATR cites it only as an SSRF/LFI pattern reference."
       }
     },
     {
       "id": "RQ-ATR-CVE-2021-21311",
-      "status": "candidate",
+      "status": "rejected",
       "source_feed_id": "FEED-ATR-RULE-COMMITS",
       "source_grade": "D",
       "kind": "vulnerability-candidate",
@@ -1088,13 +1088,13 @@
         "CVE-2021-21311"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the NVD or vendor advisory. Add a vulnerability record only if the product is an AI framework, agent, MCP server or model tool, and link it to a technique from evidence in the advisory."
+        "decision": "not promoted",
+        "notes": "Adminer SSRF; not an AI system. ATR cites it only as an SSRF pattern reference."
       }
     },
     {
       "id": "RQ-ATR-CVE-2026-42271",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-ATR-RULE-COMMITS",
       "source_grade": "D",
       "kind": "vulnerability-candidate",
@@ -1112,13 +1112,13 @@
         "GHSA-v4p8-mg3p-g94g"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the NVD or vendor advisory. Add a vulnerability record only if the product is an AI framework, agent, MCP server or model tool, and link it to a technique from evidence in the advisory."
+        "decision": "promoted to VULN-LITELLM-CVE-2026-42271",
+        "notes": "NVD record and vendor advisory read on 2026-11-20; KEV and EPSS checked the same day. Technique links are an analyst mapping (medium)."
       }
     },
     {
       "id": "RQ-ATR-CVE-2025-6514",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-ATR-RULE-COMMITS",
       "source_grade": "D",
       "kind": "vulnerability-candidate",
@@ -1135,13 +1135,13 @@
         "CVE-2025-6514"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the NVD or vendor advisory. Add a vulnerability record only if the product is an AI framework, agent, MCP server or model tool, and link it to a technique from evidence in the advisory."
+        "decision": "promoted to VULN-MCP-REMOTE-CVE-2025-6514",
+        "notes": "NVD record and vendor advisory read on 2026-11-20; KEV and EPSS checked the same day. Technique links are an analyst mapping (medium)."
       }
     },
     {
       "id": "RQ-ATR-CVE-2025-59528",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-ATR-RULE-COMMITS",
       "source_grade": "D",
       "kind": "vulnerability-candidate",
@@ -1158,13 +1158,13 @@
         "CVE-2025-59528"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the NVD or vendor advisory. Add a vulnerability record only if the product is an AI framework, agent, MCP server or model tool, and link it to a technique from evidence in the advisory."
+        "decision": "promoted to VULN-FLOWISE-CVE-2025-59528",
+        "notes": "NVD record and vendor advisory read on 2026-11-20; KEV and EPSS checked the same day. Technique links are an analyst mapping (medium)."
       }
     },
     {
       "id": "RQ-ATR-CVE-2026-42208",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-ATR-RULE-COMMITS",
       "source_grade": "D",
       "kind": "vulnerability-candidate",
@@ -1181,13 +1181,13 @@
         "CVE-2026-42208"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the NVD or vendor advisory. Add a vulnerability record only if the product is an AI framework, agent, MCP server or model tool, and link it to a technique from evidence in the advisory."
+        "decision": "promoted to VULN-LITELLM-CVE-2026-42208",
+        "notes": "NVD record and vendor advisory read on 2026-11-20; KEV and EPSS checked the same day. Technique links are an analyst mapping (medium)."
       }
     },
     {
       "id": "RQ-ATR-CVE-2025-59536",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-ATR-RULE-COMMITS",
       "source_grade": "D",
       "kind": "vulnerability-candidate",
@@ -1205,13 +1205,13 @@
         "CVE-2025-59536"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the NVD or vendor advisory. Add a vulnerability record only if the product is an AI framework, agent, MCP server or model tool, and link it to a technique from evidence in the advisory."
+        "decision": "promoted to VULN-CLAUDE-CODE-CVE-2025-59536",
+        "notes": "NVD record and vendor advisory read on 2026-11-20; KEV and EPSS checked the same day. Technique links are an analyst mapping (medium)."
       }
     },
     {
       "id": "RQ-ATR-CVE-2025-8943",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-ATR-RULE-COMMITS",
       "source_grade": "D",
       "kind": "vulnerability-candidate",
@@ -1228,13 +1228,13 @@
         "CVE-2025-8943"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the NVD or vendor advisory. Add a vulnerability record only if the product is an AI framework, agent, MCP server or model tool, and link it to a technique from evidence in the advisory."
+        "decision": "promoted to VULN-FLOWISE-CVE-2025-8943",
+        "notes": "NVD record and vendor advisory read on 2026-11-20; KEV and EPSS checked the same day. Technique links are an analyst mapping (medium)."
       }
     },
     {
       "id": "RQ-ATR-CVE-2023-1177",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-ATR-RULE-COMMITS",
       "source_grade": "D",
       "kind": "vulnerability-candidate",
@@ -1251,13 +1251,13 @@
         "CVE-2023-1177"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the NVD or vendor advisory. Add a vulnerability record only if the product is an AI framework, agent, MCP server or model tool, and link it to a technique from evidence in the advisory."
+        "decision": "promoted to VULN-MLFLOW-CVE-2023-1177",
+        "notes": "NVD record and vendor advisory read on 2026-11-20; KEV and EPSS checked the same day. Technique links are an analyst mapping (medium)."
       }
     },
     {
       "id": "RQ-ATR-CVE-2025-32711",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-ATR-RULE-COMMITS",
       "source_grade": "D",
       "kind": "vulnerability-candidate",
@@ -1276,13 +1276,13 @@
         "CVE-2025-32711"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the NVD or vendor advisory. Add a vulnerability record only if the product is an AI framework, agent, MCP server or model tool, and link it to a technique from evidence in the advisory."
+        "decision": "promoted to VULN-M365-COPILOT-CVE-2025-32711",
+        "notes": "NVD record and vendor advisory read on 2026-11-20; KEV and EPSS checked the same day. Technique links are an analyst mapping (medium)."
       }
     },
     {
       "id": "RQ-ATR-CVE-2025-53773",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-ATR-RULE-COMMITS",
       "source_grade": "D",
       "kind": "vulnerability-candidate",
@@ -1300,13 +1300,13 @@
         "CVE-2025-53773"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the NVD or vendor advisory. Add a vulnerability record only if the product is an AI framework, agent, MCP server or model tool, and link it to a technique from evidence in the advisory."
+        "decision": "promoted to VULN-GITHUB-COPILOT-CVE-2025-53773",
+        "notes": "NVD record and vendor advisory read on 2026-11-20; KEV and EPSS checked the same day. Technique links are an analyst mapping (medium)."
       }
     },
     {
       "id": "RQ-ATR-CVE-2026-21852",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-ATR-RULE-COMMITS",
       "source_grade": "D",
       "kind": "vulnerability-candidate",
@@ -1324,13 +1324,13 @@
         "CVE-2026-21852"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the NVD or vendor advisory. Add a vulnerability record only if the product is an AI framework, agent, MCP server or model tool, and link it to a technique from evidence in the advisory."
+        "decision": "promoted to VULN-CLAUDE-CODE-CVE-2026-21852",
+        "notes": "NVD record and vendor advisory read on 2026-11-20; KEV and EPSS checked the same day. Technique links are an analyst mapping (medium)."
       }
     },
     {
       "id": "RQ-ATR-CVE-2024-5184",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-ATR-RULE-COMMITS",
       "source_grade": "D",
       "kind": "vulnerability-candidate",
@@ -1347,13 +1347,13 @@
         "CVE-2024-5184"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the NVD or vendor advisory. Add a vulnerability record only if the product is an AI framework, agent, MCP server or model tool, and link it to a technique from evidence in the advisory."
+        "decision": "promoted to VULN-EMAILGPT-CVE-2024-5184",
+        "notes": "NVD record and vendor advisory read on 2026-11-20; KEV and EPSS checked the same day. Technique links are an analyst mapping (medium)."
       }
     },
     {
       "id": "RQ-ATR-CVE-2024-8181",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-ATR-RULE-COMMITS",
       "source_grade": "D",
       "kind": "vulnerability-candidate",
@@ -1370,13 +1370,13 @@
         "CVE-2024-8181"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the NVD or vendor advisory. Add a vulnerability record only if the product is an AI framework, agent, MCP server or model tool, and link it to a technique from evidence in the advisory."
+        "decision": "promoted to VULN-FLOWISE-CVE-2024-8181",
+        "notes": "NVD record and vendor advisory read on 2026-11-20; KEV and EPSS checked the same day. Technique links are an analyst mapping (medium)."
       }
     },
     {
       "id": "RQ-ATR-CVE-2025-49596",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-ATR-RULE-COMMITS",
       "source_grade": "D",
       "kind": "vulnerability-candidate",
@@ -1393,13 +1393,13 @@
         "CVE-2025-49596"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the NVD or vendor advisory. Add a vulnerability record only if the product is an AI framework, agent, MCP server or model tool, and link it to a technique from evidence in the advisory."
+        "decision": "promoted to VULN-MCP-INSPECTOR-CVE-2025-49596",
+        "notes": "NVD record and vendor advisory read on 2026-11-20; KEV and EPSS checked the same day. Technique links are an analyst mapping (medium)."
       }
     },
     {
       "id": "RQ-ATR-CVE-2023-6021",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-ATR-RULE-COMMITS",
       "source_grade": "D",
       "kind": "vulnerability-candidate",
@@ -1416,13 +1416,13 @@
         "CVE-2023-6021"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the NVD or vendor advisory. Add a vulnerability record only if the product is an AI framework, agent, MCP server or model tool, and link it to a technique from evidence in the advisory."
+        "decision": "promoted to VULN-RAY-CVE-2023-6021",
+        "notes": "NVD record and vendor advisory read on 2026-11-20; KEV and EPSS checked the same day. Technique links are an analyst mapping (medium)."
       }
     },
     {
       "id": "RQ-ATR-CVE-2025-68143",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-ATR-RULE-COMMITS",
       "source_grade": "D",
       "kind": "vulnerability-candidate",
@@ -1440,13 +1440,13 @@
         "CVE-2025-68143"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the NVD or vendor advisory. Add a vulnerability record only if the product is an AI framework, agent, MCP server or model tool, and link it to a technique from evidence in the advisory."
+        "decision": "promoted to VULN-MCP-SERVER-GIT-CVE-2025-68143",
+        "notes": "NVD record and vendor advisory read on 2026-11-20; KEV and EPSS checked the same day. Technique links are an analyst mapping (medium)."
       }
     },
     {
       "id": "RQ-ATR-CVE-2025-68144",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-ATR-RULE-COMMITS",
       "source_grade": "D",
       "kind": "vulnerability-candidate",
@@ -1464,13 +1464,13 @@
         "CVE-2025-68144"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the NVD or vendor advisory. Add a vulnerability record only if the product is an AI framework, agent, MCP server or model tool, and link it to a technique from evidence in the advisory."
+        "decision": "promoted to VULN-MCP-SERVER-GIT-CVE-2025-68144",
+        "notes": "NVD record and vendor advisory read on 2026-11-20; KEV and EPSS checked the same day. Technique links are an analyst mapping (medium)."
       }
     },
     {
       "id": "RQ-ATR-CVE-2008-2742",
-      "status": "candidate",
+      "status": "rejected",
       "source_feed_id": "FEED-ATR-RULE-COMMITS",
       "source_grade": "D",
       "kind": "vulnerability-candidate",
@@ -1487,13 +1487,13 @@
         "CVE-2008-2742"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the NVD or vendor advisory. Add a vulnerability record only if the product is an AI framework, agent, MCP server or model tool, and link it to a technique from evidence in the advisory."
+        "decision": "not promoted",
+        "notes": "Achievo file upload (2008); the 'mcpuk' in the path is a file-manager name, not MCP. Not an AI system."
       }
     },
     {
       "id": "RQ-ATR-CVE-2025-54136",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-ATR-RULE-COMMITS",
       "source_grade": "D",
       "kind": "vulnerability-candidate",
@@ -1510,13 +1510,13 @@
         "CVE-2025-54136"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the NVD or vendor advisory. Add a vulnerability record only if the product is an AI framework, agent, MCP server or model tool, and link it to a technique from evidence in the advisory."
+        "decision": "promoted to VULN-CURSOR-CVE-2025-54136",
+        "notes": "NVD record and vendor advisory read on 2026-11-20; KEV and EPSS checked the same day. Technique links are an analyst mapping (medium)."
       }
     },
     {
       "id": "RQ-ATR-CVE-2026-33032",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-ATR-RULE-COMMITS",
       "source_grade": "D",
       "kind": "vulnerability-candidate",
@@ -1533,13 +1533,13 @@
         "CVE-2026-33032"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the NVD or vendor advisory. Add a vulnerability record only if the product is an AI framework, agent, MCP server or model tool, and link it to a technique from evidence in the advisory."
+        "decision": "promoted to VULN-NGINX-UI-CVE-2026-33032",
+        "notes": "NVD record and vendor advisory read on 2026-11-20; KEV and EPSS checked the same day. Technique links are an analyst mapping (medium)."
       }
     },
     {
       "id": "RQ-ATR-CVE-2024-3402",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-ATR-RULE-COMMITS",
       "source_grade": "D",
       "kind": "vulnerability-candidate",
@@ -1556,13 +1556,13 @@
         "CVE-2024-3402"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the NVD or vendor advisory. Add a vulnerability record only if the product is an AI framework, agent, MCP server or model tool, and link it to a technique from evidence in the advisory."
+        "decision": "promoted to VULN-CHUANHUCHATGPT-CVE-2024-3402",
+        "notes": "NVD record and vendor advisory read on 2026-11-20; KEV and EPSS checked the same day. Technique links are an analyst mapping (medium)."
       }
     },
     {
       "id": "RQ-ATR-CVE-2025-66689",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-ATR-RULE-COMMITS",
       "source_grade": "D",
       "kind": "vulnerability-candidate",
@@ -1580,13 +1580,13 @@
         "CVE-2025-66689"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the NVD or vendor advisory. Add a vulnerability record only if the product is an AI framework, agent, MCP server or model tool, and link it to a technique from evidence in the advisory."
+        "decision": "promoted to VULN-ZEN-MCP-CVE-2025-66689",
+        "notes": "NVD record and vendor advisory read on 2026-11-20; KEV and EPSS checked the same day. Technique links are an analyst mapping (medium)."
       }
     },
     {
       "id": "RQ-ATR-CVE-2026-2285",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-ATR-RULE-COMMITS",
       "source_grade": "D",
       "kind": "vulnerability-candidate",
@@ -1603,13 +1603,13 @@
         "CVE-2026-2285"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the NVD or vendor advisory. Add a vulnerability record only if the product is an AI framework, agent, MCP server or model tool, and link it to a technique from evidence in the advisory."
+        "decision": "promoted to VULN-CREWAI-CVE-2026-2285",
+        "notes": "NVD record and vendor advisory read on 2026-11-20; KEV and EPSS checked the same day. Technique links are an analyst mapping (medium)."
       }
     },
     {
       "id": "RQ-ATR-CVE-2026-2286",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-ATR-RULE-COMMITS",
       "source_grade": "D",
       "kind": "vulnerability-candidate",
@@ -1626,8 +1626,8 @@
         "CVE-2026-2286"
       ],
       "review": {
-        "decision": null,
-        "notes": "Read the NVD or vendor advisory. Add a vulnerability record only if the product is an AI framework, agent, MCP server or model tool, and link it to a technique from evidence in the advisory."
+        "decision": "promoted to VULN-CREWAI-CVE-2026-2286",
+        "notes": "NVD record and vendor advisory read on 2026-11-20; KEV and EPSS checked the same day. Technique links are an analyst mapping (medium)."
       }
     },
     {

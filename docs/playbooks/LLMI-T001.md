@@ -13,7 +13,7 @@
 
 | Layer | Status |
 |---|---|
-| Evidence | 1 record(s), 1 publisher(s), best grade A, newest 2026-06 |
+| Evidence | 2 record(s), 2 publisher(s), best grade A, newest 2026-06 |
 | Safe tests | 2 |
 | Detections | 0 rule file(s), 2 specification(s) |
 | Controls | 2 |
@@ -28,6 +28,7 @@ Untrusted user input attempts to alter instruction priority or application behav
 What the repository links to it:
 
 - 2026-06 · [GTG-50020 AI vendor sandbox injection and AI-company targeting](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-GTG-50020) (campaign, confirmed)
+- 2024-06-05 · [EmailGPT direct prompt injection](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-EMAILGPT-CVE-2024-5184) (prompt-injection, confirmed)
 
 Actors whose campaigns use it: GTG-50020. Vendor labels are kept as published and never merged without evidence.
 
@@ -92,7 +93,6 @@ The runner has plan and mock adapters only: it does not call your system. To run
 
 ## 6. Limits of this page
 
-- All the evidence comes from one publisher (Anthropic Threat Intelligence). Treat it as one voice until a second source confirms it.
 - 2 of 2 detection(s) are specifications, not rules. They say what to look for, not how to query it. Nothing here has been run against real telemetry.
 - The tests use benign markers and synthetic data. A pass in a lab is not a security rating for a production system.
 - Ecosystem tools and benchmarks help you test and measure. They never support a claim that an actor used the technique.

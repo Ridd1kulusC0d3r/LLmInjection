@@ -5,15 +5,15 @@
 | | |
 |---|---|
 | Category | prompt-context |
-| Maturity | **demonstrated in research** |
-| Priority | 1 of 16 (maturity weight times the layers still missing) |
+| Maturity | **tied to a disclosed vulnerability** |
+| Priority | 1.5 of 16 (maturity weight times the layers still missing) |
 | Frameworks | [LLM01:2026](https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/) OWASP LLM Top 10 2026 (exact), [AML.T0051.001](https://atlas.mitre.org/techniques/AML.T0051.001) ATLAS (exact), [AML.T0051.002](https://atlas.mitre.org/techniques/AML.T0051.002) ATLAS (related), [AML.T0066](https://atlas.mitre.org/techniques/AML.T0066) ATLAS (related) |
 
 ## Where it stands
 
 | Layer | Status |
 |---|---|
-| Evidence | 4 record(s), 1 publisher(s), best grade A, newest 2025-08-06 |
+| Evidence | 5 record(s), 2 publisher(s), best grade A, newest 2025-08-06 |
 | Safe tests | 1 |
 | Detections | 0 rule file(s), 2 specification(s) |
 | Controls | 3 |
@@ -31,6 +31,7 @@ What the repository links to it:
 - 2025-05-24 · [AI ClickFix: Hijacking Computer-Use Agents Using ClickFix (AML.CS0055)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-ATLAS-CS0055) (atlas-exercise, confirmed)
 - 2025-05-25 · [EchoLeak: Zero-Click Prompt Injection Targeting M365 Copilot for Data Exfiltration (AML.CS0059)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-ATLAS-CS0059) (atlas-exercise, confirmed)
 - 2025-08-06 · [Prompt-Based Attacks Against Gemini via Calendar Invitations (AML.CS0063)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-ATLAS-CS0063) (atlas-exercise, confirmed)
+- 2025-06-11 · [Microsoft 365 Copilot AI command injection (information disclosure)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-M365-COPILOT-CVE-2025-32711) (prompt-injection, confirmed)
 
 ## 2. Test it safely
 
@@ -86,8 +87,7 @@ The runner has plan and mock adapters only: it does not call your system. To run
 
 ## 6. Limits of this page
 
-- The evidence is demonstrated in research. Do not read it as activity seen against real organisations.
-- All the evidence comes from one publisher (MITRE). Treat it as one voice until a second source confirms it.
+- The evidence is tied to a disclosed vulnerability. Do not read it as activity seen against real organisations.
 - 2 of 2 detection(s) are specifications, not rules. They say what to look for, not how to query it. Nothing here has been run against real telemetry.
 - The tests use benign markers and synthetic data. A pass in a lab is not a security rating for a production system.
 - Ecosystem tools and benchmarks help you test and measure. They never support a claim that an actor used the technique.

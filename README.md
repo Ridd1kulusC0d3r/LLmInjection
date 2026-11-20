@@ -62,7 +62,7 @@ Each row is a record in [`data/threat-landscape-2026.json`](data/threat-landscap
 
 <!-- gen:landscape-evidence:start -->
 
-Of the **28 techniques** tracked, **22** have activity observed in the wild, **0** are tied to a disclosed vulnerability, **6** are demonstrated in research and **0** have no linked evidence yet (a gap in this repository, not a claim that they are theoretical). On the defensive side, **5 of 45** detections exist as rule files; the rest are specifications.
+Of the **28 techniques** tracked, **22** have activity observed in the wild, **2** are tied to a disclosed vulnerability, **4** are demonstrated in research and **0** have no linked evidence yet (a gap in this repository, not a claim that they are theoretical). On the defensive side, **5 of 45** detections exist as rule files; the rest are specifications.
 
 <!-- gen:landscape-evidence:end -->
 
@@ -107,11 +107,11 @@ New [source registry and ingestion guidance](docs/AI-INTELLIGENCE-SOURCES.md), [
 
 | Actors | Campaigns | Incidents | Vulnerabilities | Techniques | Sources |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| **73** | **91** | **65** | **9** | **28** | **132** |
+| **73** | **91** | **65** | **31** | **28** | **154** |
 
 | Test cases | Detections | Controls | Frameworks | Model families | Relationships | Ecosystem repos |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| **40** | **45** | **32** | **19** | **12** | **451** | **117** |
+| **40** | **45** | **32** | **19** | **12** | **476** | **117** |
 
 <!-- gen:stats:end -->
 
@@ -243,8 +243,8 @@ Maturity is **derived, not asserted**: `scripts/maturity.py` computes it from th
 | Maturity | Derived from | Techniques | IDs |
 |---|---|---|---|
 | `observed-in-the-wild` | Linked to a campaign, or to an incident whose status is observed | 22 | T001, T003, T004, T005, T008, T010, T011, T012, T013, T014, T015, T016, T017, T018, T019, T021, T022, T023, T024, T026, T027, T028 |
-| `disclosed-vulnerability` | Linked to a vulnerability record (CVE, GHSA or malicious package) | 0 |  |
-| `research-demonstrated` | Linked to a research or lab incident, or mapped by a research or benchmark project | 6 | T002, T006, T007, T009, T020, T025 |
+| `disclosed-vulnerability` | Linked to a vulnerability record (CVE, GHSA or malicious package) | 2 | T002, T020 |
+| `research-demonstrated` | Linked to a research or lab incident, or mapped by a research or benchmark project | 4 | T006, T007, T009, T025 |
 | `no-linked-evidence` | Nothing in this repository links to it yet. Not a claim that it is theoretical | 0 |  |
 
 <!-- gen:maturity:end -->
@@ -788,7 +788,7 @@ Read the full model: [AI-THREAT-MODEL.md](docs/AI-THREAT-MODEL.md).
 | ID | Technique | Category | Maturity | Mapped to |
 |---|---|---|---|---|
 | `LLMI-T001` | **Direct Prompt Injection** | prompt-context | observed-in-the-wild | OWASP LLM, MITRE ATLAS, Google SAIF |
-| `LLMI-T002` | **Indirect Prompt Injection** | prompt-context | research-demonstrated | OWASP LLM, MITRE ATLAS, Google SAIF, CSA MAESTRO |
+| `LLMI-T002` | **Indirect Prompt Injection** | prompt-context | disclosed-vulnerability | OWASP LLM, MITRE ATLAS, Google SAIF, CSA MAESTRO |
 | `LLMI-T003` | **Jailbreak / Safety Boundary Manipulation** | model-behavior | observed-in-the-wild | OWASP LLM, NIST AI 100-2e2025 |
 | `LLMI-T004` | **Sensitive Information Disclosure** | confidentiality | observed-in-the-wild | OWASP LLM, Google SAIF, MITRE ATLAS |
 | `LLMI-T005` | **Model Extraction / Theft** | model | observed-in-the-wild | MITRE ATLAS, NIST AI 100-2e2025, Google SAIF |
@@ -806,7 +806,7 @@ Read the full model: [AI-THREAT-MODEL.md](docs/AI-THREAT-MODEL.md).
 | `LLMI-T017` | **Prompt Injection Against AI Security Scanners** | defense-evasion | observed-in-the-wild | OWASP LLM, MITRE ATLAS |
 | `LLMI-T018` | **AI Coding-Assistant Workspace Abuse** | agentic-supply-chain | observed-in-the-wild | OWASP LLM, CSA MAESTRO, MITRE ATLAS |
 | `LLMI-T019` | **Model Distillation Campaign** | model-theft | observed-in-the-wild | OWASP LLM, MITRE ATLAS |
-| `LLMI-T020` | **Improper Output Handling and Rendering Exfiltration** | application | research-demonstrated | MITRE ATLAS |
+| `LLMI-T020` | **Improper Output Handling and Rendering Exfiltration** | application | disclosed-vulnerability | MITRE ATLAS |
 | `LLMI-T021` | **Agent Tool Poisoning and Rug Pull** | agentic-supply-chain | observed-in-the-wild | MITRE ATLAS |
 | `LLMI-T022` | **Agentic Resource Consumption and Cost Harvesting** | availability | observed-in-the-wild | MITRE ATLAS |
 | `LLMI-T023` | **Crafted AI Assistant Links and Recommendation Poisoning** | prompt-context | observed-in-the-wild | MITRE ATLAS |
@@ -877,6 +877,28 @@ An optional **MCP v2 read-only server** exposes search, object lookup, graph tra
 | Semantic Kernel In-Memory Vector Store filter injection to RCE | `CVE-2026-26030` | remote-code-execution | unrated | 2026-05-07 |
 | Semantic Kernel SessionsPythonPlugin arbitrary file access | `CVE-2026-25592` | sandbox-escape | unrated | 2026-05-07 |
 | MCP STDIO configuration command injection across AI frameworks | `CVE-2026-30623`<br>`CVE-2026-30615` | command-injection | unrated | 2026-04-15 |
+| LiteLLM proxy command injection in two endpoints | `CVE-2026-42271`<br>`GHSA-v4p8-mg3p-g94g` | command-injection | high | 2026-05-08 |
+| LiteLLM proxy SQL injection via authorization header | `CVE-2026-42208`<br>`GHSA-r75f-5x8p-qvmc` | sql-injection | critical | 2026-05-08 |
+| mcp-remote OS command injection from a malicious MCP server | `CVE-2025-6514`<br>`GHSA-6xpm-ggf7-wc3p` | command-injection | critical | 2025-07-09 |
+| Flowise CustomMCP remote code execution | `CVE-2025-59528`<br>`GHSA-3gcm-f6qx-ff7p` | remote-code-execution | critical | 2025-09-22 |
+| Claude Code code execution before the startup trust dialog | `CVE-2025-59536`<br>`GHSA-4fgq-fpq9-mr3g` | code-injection | high | 2025-10-03 |
+| Flowise Custom MCP OS command execution without authentication | `CVE-2025-8943`<br>`GHSA-2vv2-3x8x-4gv7` | remote-code-execution | critical | 2025-08-14 |
+| MLflow path traversal | `CVE-2023-1177`<br>`GHSA-xg73-94fp-g449` | path-traversal | critical | 2023-03-24 |
+| Microsoft 365 Copilot AI command injection (information disclosure) | `CVE-2025-32711` | prompt-injection | critical | 2025-06-11 |
+| GitHub Copilot and Visual Studio command injection | `CVE-2025-53773` | command-injection | high | 2025-08-12 |
+| Claude Code project-load flow credential exfiltration | `CVE-2026-21852`<br>`GHSA-jh7p-qr78-84p7` | credential-exposure | high | 2026-01-21 |
+| EmailGPT direct prompt injection | `CVE-2024-5184` | prompt-injection | moderate | 2024-06-05 |
+| Flowise 1.8.2 authentication bypass | `CVE-2024-8181`<br>`GHSA-2q4w-x8h2-2fvh` | authentication-bypass | critical | 2024-08-27 |
+| MCP Inspector unauthenticated proxy remote code execution | `CVE-2025-49596`<br>`GHSA-7f8r-222p-6f5g` | remote-code-execution | critical | 2025-06-13 |
+| Ray log API local file inclusion | `CVE-2023-6021`<br>`GHSA-3pww-qvr8-6mhp` | path-traversal | high | 2023-11-16 |
+| mcp-server-git path traversal in git_init | `CVE-2025-68143`<br>`GHSA-5cgr-j3jf-jw3v` | path-traversal | high | 2025-12-17 |
+| mcp-server-git argument injection in git_diff and git_checkout | `CVE-2025-68144`<br>`GHSA-9xwc-hfwc-8w59` | argument-injection | high | 2025-12-17 |
+| Cursor MCP configuration persistent code execution | `CVE-2025-54136`<br>`GHSA-24mc-g4xr-4395` | remote-code-execution | high | 2025-08-02 |
+| nginx-ui MCP integration exposed without authentication | `CVE-2026-33032`<br>`GHSA-h6c2-x2m2-mwhf` | missing-authentication | critical | 2026-03-30 |
+| ChuanhuChatGPT stored cross-site scripting | `CVE-2024-3402` | improper-output-handling | moderate | 2024-06-06 |
+| Zen MCP Server path traversal | `CVE-2025-66689` | path-traversal | moderate | 2026-01-12 |
+| CrewAI JSON loader arbitrary local file read | `CVE-2026-2285` | path-traversal | high | 2026-03-30 |
+| CrewAI RAG tool server-side request forgery | `CVE-2026-2286` | server-side-request-forgery | critical | 2026-03-30 |
 
 <!-- gen:vulnerabilities:end -->
 
@@ -1158,7 +1180,7 @@ Every intelligence item should answer:
 
 | Grade | Class | Sources |
 |---|---|---|
-| **A** | Primary or authoritative | 114 |
+| **A** | Primary or authoritative | 136 |
 | **B** | Strong secondary | 7 |
 | **C** | Reputable press | 6 |
 | **D** | Community | 5 |

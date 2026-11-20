@@ -91,7 +91,7 @@
         "url": "https://atlas.mitre.org/techniques/AML.T0066"
       }
     ],
-    "maturity": "research-demonstrated"
+    "maturity": "disclosed-vulnerability"
   },
   {
     "id": "LLMI-T003",
@@ -853,7 +853,7 @@
         "url": "https://atlas.mitre.org/techniques/AML.T0067"
       }
     ],
-    "maturity": "research-demonstrated"
+    "maturity": "disclosed-vulnerability"
   },
   {
     "id": "LLMI-T021",

@@ -13,7 +13,7 @@
 
 | Layer | Status |
 |---|---|
-| Evidence | 8 record(s), 3 publisher(s), best grade A, newest 2026-07-08 |
+| Evidence | 13 record(s), 5 publisher(s), best grade A, newest 2026-07-08 |
 | Safe tests | 6 |
 | Detections | 0 rule file(s), 3 specification(s) |
 | Controls | 2 |
@@ -32,9 +32,14 @@ What the repository links to it:
 - 2025-07-13 · [Code to Deploy Destructive AI Agent Discovered in Amazon Q VS Code Extension (AML.CS0047)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-ATLAS-CS0047) (atlas-incident, high)
 - 2025-05-24 · [AI ClickFix: Hijacking Computer-Use Agents Using ClickFix (AML.CS0055)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-ATLAS-CS0055) (atlas-exercise, confirmed)
 - 2026-07-08 · [Autonomous OpenAI Evaluation Agents Compromise Hugging Face Infrastructure (AML.CS0068)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-ATLAS-CS0068) (atlas-incident, high)
+- 2026-03-30 · [CrewAI JSON loader arbitrary local file read](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-CREWAI-CVE-2026-2285) (path-traversal, confirmed)
+- 2026-03-30 · [CrewAI RAG tool server-side request forgery](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-CREWAI-CVE-2026-2286) (server-side-request-forgery, confirmed)
+- 2025-12-17 · [mcp-server-git path traversal in git_init](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-MCP-SERVER-GIT-CVE-2025-68143) (path-traversal, confirmed)
+- 2025-12-17 · [mcp-server-git argument injection in git_diff and git_checkout](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-MCP-SERVER-GIT-CVE-2025-68144) (argument-injection, confirmed)
 - 2026-04-15 · [MCP STDIO configuration command injection across AI frameworks](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-MCP-STDIO-OX-2026) (command-injection, high)
 - 2026-05-07 · [Semantic Kernel SessionsPythonPlugin arbitrary file access](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-SK-CVE-2026-25592) (sandbox-escape, confirmed)
 - 2026-05-07 · [Semantic Kernel In-Memory Vector Store filter injection to RCE](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-SK-CVE-2026-26030) (remote-code-execution, confirmed)
+- 2026-01-12 · [Zen MCP Server path traversal](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-ZEN-MCP-CVE-2025-66689) (path-traversal, confirmed)
 
 ## 2. Test it safely
 
