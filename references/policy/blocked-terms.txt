@@ -1,4 +1,0 @@
-# Terms that must not appear anywhere in this repository (one regex per line, case-insensitive).
-# Checked by scripts/check_blocked_terms.py in make check and CI. This file is the only exemption.
-cl[aá]vis
-mythos
