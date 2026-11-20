@@ -1,4 +1,4 @@
-const state={grade:"",graph:null,landscape:null,diff:null,eco:[],cov:null,translations:null,search:"",type:"",confidence:"",region:"",ecoClass:"",ecoSection:""};
+const state={tech:"",grade:"",graph:null,landscape:null,diff:null,eco:[],cov:null,translations:null,search:"",type:"",confidence:"",region:"",ecoClass:"",ecoSection:""};
 const TYPE_ORDER=["actor","campaign","incident","vulnerability","technique","test-case","detection","control","framework","model","source"];
 const CONF_ORDER=["confirmed","high","medium","low","unverified"];
 const MATURITY_ORDER=["observed-in-the-wild","disclosed-vulnerability","research-demonstrated","no-linked-evidence"];
@@ -33,6 +33,7 @@ async function load(){
     fetch("coverage.json").then(r=>r.ok?r.json():null).catch(()=>null)
   ]);
   Object.assign(state,{graph:g,landscape:l,diff:d,eco:e,translations:tr,cov:cv});
+  await loadReports();
   await setLang(detectLang(),{persist:false});
   initControls();buildFilters();renderAll();applyHash();
 }
@@ -123,6 +124,9 @@ function applyHash(){
   const p=new URLSearchParams(location.hash.slice(1));
   const l=p.get("lang");if(l&&l!==I18N.lang&&LANGS.some(x=>x.code===l)){switchLang(l);return}
   applyCoverageHash(p);
+  if(p.has("focus")||G.focus){const f=p.get("focus")||null;if(f!==G.focus){G.focus=f;G.view=null;renderGraph();if(f)requestAnimationFrame(()=>graphSelect(f))}}
+  if(p.has("tech")||state.tech){const x=p.get("tech")||"";if(x!==state.tech){state.tech=x;const s=$("#tlTech");if(s)s.value=x;renderTimeline()}}
+  if(p.get("report")&&p.get("report")!==SP.report){SP.report=p.get("report");renderReports()}
   if(p.get("tab"))showTab(p.get("tab"),false);
   if(p.get("node")){const tb=nodeTab(p.get("node"));if(tb&&!p.get("tab"))showTab(tb,false);openNode(p.get("node"),false)}
 }
@@ -172,7 +176,16 @@ function renderLandscape(){
   $("#leads").innerHTML=(L.research_queue||[]).map(q=>`<div class="dom"><header><h3 style="font-weight:500">${esc(q.claim)}</h3></header><p>${esc(q.reason)}</p><div class="tags"><span>${esc(q.status)}</span></div></div>`).join("");
 }
 /* ---------- graph: curved edges, pan and zoom on the viewBox, a pinned selection, type toggles */
-const G={hidden:new Set(),sel:null,view:null,full:null,anim:0};
+const G={hidden:new Set(),sel:null,view:null,full:null,anim:0,focus:null};
+/* focus: the record, its direct links, and what those evidence and actor records link to (sources left out) */
+function egoIds(id){
+  const nodes=new Map(state.graph.nodes.map(n=>[n.id,n])),adj=new Map();
+  state.graph.edges.forEach(e=>{(adj.get(e.source)||adj.set(e.source,[]).get(e.source)).push(e.target);(adj.get(e.target)||adj.set(e.target,[]).get(e.target)).push(e.source)});
+  const keep=new Set([id]),hop=x=>(adj.get(x)||[]).filter(y=>nodes.get(y)?.type!=="source"||nodes.get(id)?.type==="source");
+  const first=hop(id);first.forEach(x=>keep.add(x));
+  first.filter(x=>["campaign","incident","vulnerability","actor"].includes(nodes.get(x)?.type)).forEach(x=>hop(x).forEach(y=>keep.add(y)));
+  return keep;
+}
 function setView(v,animate=true){
   const svg=$("#graphSvg"),from=G.view||v;cancelAnimationFrame(G.anim);
   const apply=b=>{G.view=b;svg.setAttribute("viewBox",`${b.x.toFixed(1)} ${b.y.toFixed(1)} ${b.w.toFixed(1)} ${b.h.toFixed(1)}`)};
@@ -207,11 +220,15 @@ function graphSelect(id,{center=false}={}){
   card.innerHTML=`<div class="gsel-head"><span class="eyebrow">${esc(t("graph.selected"))} · ${esc(typeLabel(n.type))}</span><h3>${esc(n.label)}</h3><div class="gsel-meta">${n.data.confidence?conf(n.data.confidence):""}<span class="id">${esc(n.id)}</span></div></div>
     <p class="note">${esc(t("graph.linked",{n:nf(links.length)}))}</p>
     <ul class="gsel-list">${links.slice(0,40).map(x=>`<li><button type="button" class="gsel-go" data-go="${esc(x.id)}"><span class="gsel-type">${esc(typeLabel(x.type))}</span>${esc(x.label)}</button></li>`).join("")}</ul>
-    <div class="gsel-actions"><button type="button" class="export primary" data-open="${esc(id)}">${esc(t("graph.open"))}</button><button type="button" class="export" data-clear>${esc(t("graph.clear"))}</button></div>`;
+    <div class="gsel-actions"><button type="button" class="export primary" data-open="${esc(id)}">${esc(t("graph.open"))}</button>${G.focus===id?"":`<button type="button" class="export" data-focus="${esc(id)}">${esc(t("graph.focus"))}</button>`}<button type="button" class="export" data-clear>${esc(t("graph.clear"))}</button></div>`;
   if(center){const g=svg.querySelector(`.node[data-nid="${CSS.escape(id)}"]`);if(g&&G.view){const m=g.transform.baseVal.consolidate()?.matrix;if(m){const v=G.view;setView(clampView({x:m.e-v.w/2+80,y:m.f-v.h/2,w:v.w,h:v.h}))}}}
 }
 function renderGraph(){
-  const all=visibleNodes().slice(0,1200);
+  const ego=G.focus&&state.graph.nodes.some(n=>n.id===G.focus)?egoIds(G.focus):null;
+  const all=visibleNodes().filter(n=>!ego||ego.has(n.id)).slice(0,1200);
+  const fn=ego&&state.graph.nodes.find(n=>n.id===G.focus);
+  $("#graphFocus").innerHTML=fn?`<button type="button" class="chip on" data-unfocus title="${esc(t("graph.unfocus"))}">${esc(t("graph.focused",{name:fn.label}))}<span aria-hidden="true">×</span></button>`:"";
+  $("#graphFocus").hidden=!fn;
   const present=[...TYPE_ORDER.filter(x=>all.some(n=>n.type===x)),...[...new Set(all.map(n=>n.type))].filter(x=>!TYPE_ORDER.includes(x))];
   $("#graphTypes").innerHTML=present.map(x=>{const on=!G.hidden.has(x),c=all.filter(n=>n.type===x).length;return`<button type="button" class="chip${on?" on":""}" data-gtype="${esc(x)}" aria-pressed="${on}" title="${esc(t("graph.legend.toggle"))}">${esc(typeLabel(x))}<b>${c}</b></button>`}).join("");
   const nodes=all.filter(n=>!G.hidden.has(n.type)),ids=new Set(nodes.map(n=>n.id));
@@ -277,8 +294,10 @@ function renderGraph(){
 function initGraphControls(){
   $("#graphTools").onclick=e=>{const b=e.target.closest("button");if(!b)return;({in:()=>zoomAt(1/1.3),out:()=>zoomAt(1.3),fit:graphFit,all:graphOverview})[b.dataset.zoom]?.()};
   $("#graphTypes").onclick=e=>{const b=e.target.closest("[data-gtype]");if(!b)return;const x=b.dataset.gtype;G.hidden.has(x)?G.hidden.delete(x):G.hidden.add(x);G.view=null;renderGraph()};
-  $("#graphSel").onclick=e=>{const go=e.target.closest("[data-go]"),op=e.target.closest("[data-open]");
-    if(go)graphSelect(go.dataset.go,{center:true});else if(op)openNode(op.dataset.open);else if(e.target.closest("[data-clear]"))graphSelect(null)};
+  const setFocus=id=>{G.focus=id;G.view=null;patchHash({focus:id});renderGraph();if(id)requestAnimationFrame(()=>graphSelect(id))};
+  $("#graphFocus").onclick=e=>{if(e.target.closest("[data-unfocus]"))setFocus(null)};
+  $("#graphSel").onclick=e=>{const go=e.target.closest("[data-go]"),op=e.target.closest("[data-open]"),fo=e.target.closest("[data-focus]");
+    if(fo)setFocus(fo.dataset.focus);else if(go)graphSelect(go.dataset.go,{center:true});else if(op)openNode(op.dataset.open);else if(e.target.closest("[data-clear]"))graphSelect(null)};
   window.addEventListener("resize",()=>{if(G.view)setView(clampView(G.view),false)});
 }
 function techStats(){
@@ -292,8 +311,16 @@ function techStats(){
   });
 }
 const nodeDate=n=>String(n.data.reported||n.data.first_seen||n.data.date||n.data.published||"");
-function timelineItems(){return visibleNodes().filter(n=>["campaign","incident","vulnerability"].includes(n.type)).map(n=>({n,date:nodeDate(n)||t("common.undated")})).sort((a,b)=>b.date.localeCompare(a.date))}
+function timelineItems(){
+  const linked=state.tech?new Set(state.graph.edges.filter(e=>e.source===state.tech||e.target===state.tech).map(e=>e.source===state.tech?e.target:e.source)):null;
+  return visibleNodes().filter(n=>["campaign","incident","vulnerability"].includes(n.type)&&(!linked||linked.has(n.id))).map(n=>({n,date:nodeDate(n)||t("common.undated")})).sort((a,b)=>b.date.localeCompare(a.date))}
 function renderTimeline(){
+  const sel=$("#tlTech");
+  if(sel){const techs=state.graph.nodes.filter(n=>n.type==="technique");sel.innerHTML=`<option value="">${esc(t("tl.tech.all"))}</option>`+techs.map(n=>`<option value="${esc(n.id)}">${esc(n.id.slice(5))} · ${esc(n.label)}</option>`).join("");sel.value=state.tech||"";
+    sel.onchange=e=>{state.tech=e.target.value;patchHash({tech:state.tech||null});renderTimeline();afterRender()}}
+  const items=timelineItems(),byM={};items.forEach(({date})=>{const m=/^\d{4}-\d{2}/.test(date)?date.slice(0,7):"";if(m)byM[m]=(byM[m]||0)+1});
+  const ms=Object.keys(byM).sort(),mx=Math.max(1,...Object.values(byM));
+  $("#tlHist").innerHTML=ms.length?`<div class="mchart sm" role="img" aria-label="${esc(t("tl.hist.aria"))}">${ms.map(m=>`<div class="mcol"><div class="mstack"><i style="height:${(100*byM[m]/mx).toFixed(1)}%;background:var(--seq-3)"></i></div><b>${byM[m]}</b><span>${esc(m.slice(2))}</span></div>`).join("")}</div><p class="note">${esc(t("tl.count",{n:nf(items.length)}))}</p>`:"";
   $("#timelineList").innerHTML=timelineItems().map(({n,date})=>`<div class="d">${esc(date)}</div><div class="e" data-id="${esc(n.id)}"><div class="kind">${esc(typeLabel(n.type))}${(n.data.regions||[]).length?" · "+esc(n.data.regions.join(", ")):""}</div><h3>${esc(n.label)}</h3><p>${esc(n.data.summary||"")}</p><div style="margin-top:6px">${conf(n.data.confidence)}</div></div>`).join("")||`<p class="empty">${esc(t("common.nothing"))}</p>`;
 }
 function renderSources(){
@@ -411,6 +438,6 @@ function openNode(id,push=true){
 }
 function renderAll(){
   if(!state.graph)return;
-  renderMetrics();renderDashboard();renderEcosystem();renderActors();renderDomains();renderLandscape();renderWhatsNew();renderGraph();renderCoverage();renderTimeline();renderSources();renderLanguages();afterRender();
+  renderMetrics();renderDashboard();renderEcosystem();renderActors();renderDomains();renderLandscape();renderWhatsNew();renderGraph();renderCoverage();renderTimeline();renderSources();renderLanguages();renderSpaces();afterRender();
 }
 load().catch(e=>{document.body.insertAdjacentHTML("afterbegin",`<p role="alert" style="padding:12px 28px;background:var(--signal);color:var(--signal-ink);margin:0">${esc(t("err.load",{msg:e.message}))}</p>`)});

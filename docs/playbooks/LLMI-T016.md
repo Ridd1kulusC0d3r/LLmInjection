@@ -6,7 +6,7 @@
 |---|---|
 | Category | supply-chain |
 | Maturity | **observed in the wild** |
-| Priority | 6 of 16 (maturity weight times the layers still missing) |
+| Priority | 4 of 16 (maturity weight times the layers still missing) |
 | Frameworks | [ASI03:2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/) OWASP Agentic Top 10 2026 (related), [AML.T0083](https://atlas.mitre.org/techniques/AML.T0083) ATLAS (related), [T1552](https://attack.mitre.org/techniques/T1552/) ATT&CK (related), [AML.T0098](https://atlas.mitre.org/techniques/AML.T0098) ATLAS (related), [AML.T0040](https://atlas.mitre.org/techniques/AML.T0040) ATLAS (related), [AML.T0055](https://atlas.mitre.org/techniques/AML.T0055) ATLAS (related) |
 
 ## Where it stands
@@ -15,11 +15,11 @@
 |---|---|
 | Evidence | 5 record(s), 4 publisher(s), best grade A, newest 2026 |
 | Safe tests | 1 |
-| Detections | 0 rule file(s), 1 specification(s) |
+| Detections | 1 rule file(s), 1 specification(s) |
 | Controls | 1 |
 | Benchmarks | 0 |
 
-**Next step:** Turn DET-AI-006 (AI Gateway Credential Anomaly) from a specification into a rule file, starting with the telemetry listed in section 3.
+**Next step:** No public benchmark maps to this technique. Check the ecosystem for one, or measure it with your own regression tests.
 
 ## 1. Understand it
 
@@ -65,6 +65,13 @@ The runner has plan and mock adapters only: it does not call your system. To run
 - **Telemetry:** `secret-access`, `gateway-admin`, `cloud-audit`, `provider-auth`
 - **Implementation:** specification only. Collect the telemetry above first; if you cannot, the detection cannot work yet.
 
+### DET-AI-047 · Denied-Call Burst Across Services Followed by a Success
+
+- **Severity:** high
+- **Hypothesis:** One cloud identity issues hundreds of API calls across many services in minutes, most of them denied, and one of them, often a secret read, succeeds. The Cloud Security Alliance's reading of the AntiFox intrusions describes this pattern; the value of the sweep is the few calls that succeed.
+- **Telemetry:** `CloudTrail (eventSource, eventName, errorCode, userIdentity.arn, sourceIPAddress)`
+- **Implementation:** rule file(s): [sentinel](../../detections/sentinel/det-ai-047-denied-burst-then-success.kql), [splunk](../../detections/splunk/det-ai-047-denied-burst-then-success.spl). Experimental and not run against real telemetry.
+
 ## 4. Prevent it
 
 - **Secret Isolation** (`CTRL-SECRET-ISOLATION`): Keep model/provider credentials outside prompts and minimize which agents can access them.
@@ -79,7 +86,7 @@ The runner has plan and mock adapters only: it does not call your system. To run
 
 ## 6. Limits of this page
 
-- 1 of 1 detection(s) are specifications, not rules. They say what to look for, not how to query it. Nothing here has been run against real telemetry.
+- 1 of 2 detection(s) are specifications, not rules. They say what to look for, not how to query it. Nothing here has been run against real telemetry.
 - No benchmark maps to it, so there is no public yardstick for how well a defence performs.
 - The tests use benign markers and synthetic data. A pass in a lab is not a security rating for a production system.
 - Ecosystem tools and benchmarks help you test and measure. They never support a claim that an actor used the technique.

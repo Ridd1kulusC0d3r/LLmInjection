@@ -5260,6 +5260,39 @@
   {
     "id": "REL-477",
     "type": "relationship",
+    "source": "DET-AI-046",
+    "relationship": "detects",
+    "target": "LLMI-T015",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-MSFT-STORM-0940-ARTEX"
+    ]
+  },
+  {
+    "id": "REL-478",
+    "type": "relationship",
+    "source": "DET-AI-047",
+    "relationship": "detects",
+    "target": "LLMI-T015",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-MSFT-STORM-0940-ARTEX"
+    ]
+  },
+  {
+    "id": "REL-479",
+    "type": "relationship",
+    "source": "DET-AI-047",
+    "relationship": "detects",
+    "target": "LLMI-T016",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-MSFT-STORM-0940-ARTEX"
+    ]
+  },
+  {
+    "id": "REL-480",
+    "type": "relationship",
     "source": "CAMPAIGN-BR-GOV-GENAI-PIX-PHISHING",
     "relationship": "uses",
     "target": "LLMI-T014",
@@ -5269,7 +5302,7 @@
     ]
   },
   {
-    "id": "REL-478",
+    "id": "REL-481",
     "type": "relationship",
     "source": "CAMPAIGN-BR-GOV-GENAI-PIX-PHISHING",
     "relationship": "uses",
