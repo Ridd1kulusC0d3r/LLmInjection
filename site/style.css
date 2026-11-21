@@ -450,3 +450,10 @@ th[aria-sort="ascending"] .sortbtn,th[aria-sort="descending"] .sortbtn{color:var
 .tlf .chip:not(.on){opacity:1;text-decoration:none}
 .tlf .chip.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
 .tlf .chip b{font-weight:700;color:inherit;opacity:.75}
+
+/* subscribe box in the Reports space */
+.subbox{display:grid;grid-template-columns:1.2fr 1fr;gap:18px;align-items:center;margin:14px 0 22px;padding:18px 20px;border:1px solid var(--signal);border-radius:var(--radius);background:var(--signal-soft)}
+.subbox h3{margin:4px 0 4px}.subacts{display:grid;gap:10px}.subform{display:flex;gap:8px}
+.subform input{flex:1;min-width:0;padding:9px 14px;border:1px solid var(--rule);border-radius:var(--pill);background:var(--card);color:var(--ink);font:14px var(--sans)}
+.subfeeds{display:flex;gap:8px;flex-wrap:wrap}.subfeeds a{text-decoration:none}
+@media (max-width:720px){.subbox{grid-template-columns:1fr}}

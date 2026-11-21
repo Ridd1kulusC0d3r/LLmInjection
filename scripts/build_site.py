@@ -104,6 +104,8 @@ def build(out: Path) -> None:
                                                   "external_rules": {k: {"publisher": "ThreatDefence", "urls": v} for k, v in external.items()}},
                                                  ensure_ascii=False, indent=1), encoding="utf-8")
     shutil.copytree(dist / "navigator", out / "navigator")
+    from build_feed import build as build_feed  # noqa: PLC0415
+    build_feed(out, index)
 
 
 def main() -> int:

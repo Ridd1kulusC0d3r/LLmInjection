@@ -56,10 +56,17 @@ function md(text,base){
 /* ---------- reports */
 async function loadReports(){
   try{SP.reports=await fetch("reports.json").then(r=>r.ok?r.json():null)}catch(_){SP.reports=null}
+  try{SP.sub=await fetch("subscribe.json").then(r=>r.ok?r.json():null)}catch(_){SP.sub=null}
   try{SP.vault=await fetch("payload-vault.json").then(r=>r.ok?r.json():null)}catch(_){SP.vault=null}
 }
 const KIND_ORDER=["platform","landscape","trends","intel","dossier","intake","report","template"];
+function renderSubscribe(){
+  const b=$("#subscribe");if(!b)return;const c=SP.sub||{};
+  const form=c.email_form_action?`<form class="subform" action="${esc(c.email_form_action)}" method="post" target="_blank" rel="noopener"><input type="email" name="${esc(c.email_field||"email")}" required placeholder="${esc(t("sub.placeholder"))}" aria-label="${esc(t("sub.placeholder"))}"><button type="submit" class="export primary">${esc(t("sub.cta"))}</button></form>`:`<p class="note">${esc(t("sub.soon"))}</p>`;
+  b.innerHTML=`<div><span class="eyebrow">${esc(t("sub.eyebrow"))}</span><h3>${esc(t("sub.title"))}</h3><p class="note">${esc(t("sub.body",{when:c.cadence||""}))}</p></div><div class="subacts">${form}<div class="subfeeds"><a class="export" href="feed.xml">RSS / Atom</a><a class="export" href="feed.json">JSON Feed</a></div></div>`;
+}
 function renderReports(){
+  renderSubscribe();
   const box=$("#reportList"),view=$("#reportView");if(!box)return;
   const rows=SP.reports?.reports||[];
   if(!rows.length){box.innerHTML=`<p class="empty">${esc(t("rep.none"))}</p>`;view.hidden=true;return}
