@@ -15,7 +15,7 @@
 |---|---|
 | Evidence | 59 record(s), 42 publisher(s), best grade A, newest 2026 |
 | Safe tests | 1 |
-| Detections | 4 rule file(s), 5 specification(s) |
+| Detections | 5 rule file(s), 5 specification(s) |
 | Controls | 2 |
 | Benchmarks | 1 |
 
@@ -175,6 +175,13 @@ The runner has plan and mock adapters only: it does not call your system. To run
 - **Telemetry:** `proxy or NGFW logs with method, path and destination port`, `netflow from scanner and inventory hosts`, `MCP endpoint access logs and API-key use on recon platforms`
 - **Implementation:** rule file(s): [sigma](../../detections/sigma/det-ai-058-scanner-hands-targets-to-agent-framework.yml). Experimental and not run against real telemetry.
 
+### DET-AI-059 · Python sitecustomize or usercustomize Written Outside a Package Install
+
+- **Severity:** high
+- **Hypothesis:** An AI service with an arbitrary file write (path traversal in an upload endpoint) is turned into code execution by writing sitecustomize.py or usercustomize.py, which Python imports at every interpreter start; the next service restart or training job runs the attacker's code. Seen with MONAI Label <= 0.8.5 (GHSA-qc22-rmgc-vg94) exploited by autonomous Cairn agents.
+- **Telemetry:** `EDR file creation events`, `auditd watches on Python site directories`, `package manager logs (pip, uv, conda)`
+- **Implementation:** rule file(s): [sigma](../../detections/sigma/det-ai-059-python-startup-hook-written-by-ai-service.yml). Experimental and not run against real telemetry.
+
 ## 4. Prevent it
 
 - **Agent Decision and Action Telemetry** (`CTRL-AGENT-TELEMETRY`): Log identity, plan step, capability request, authorization result and side effect for agent actions.
@@ -190,7 +197,7 @@ The runner has plan and mock adapters only: it does not call your system. To run
 
 ## 6. Limits of this page
 
-- 5 of 9 detection(s) are specifications, not rules. They say what to look for, not how to query it. Nothing here has been run against real telemetry.
+- 5 of 10 detection(s) are specifications, not rules. They say what to look for, not how to query it. Nothing here has been run against real telemetry.
 - The tests use benign markers and synthetic data. A pass in a lab is not a security rating for a production system.
 - Ecosystem tools and benchmarks help you test and measure. They never support a claim that an actor used the technique.
 

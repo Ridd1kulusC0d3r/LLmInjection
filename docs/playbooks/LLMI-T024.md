@@ -15,7 +15,7 @@
 |---|---|
 | Evidence | 23 record(s), 7 publisher(s), best grade A, newest 2026 |
 | Safe tests | 1 |
-| Detections | 2 rule file(s), 3 specification(s) |
+| Detections | 3 rule file(s), 3 specification(s) |
 | Controls | 2 |
 | Benchmarks | 0 |
 
@@ -111,6 +111,13 @@ The runner has plan and mock adapters only: it does not call your system. To run
 - **Telemetry:** `MLflow server logs`, `host or VPC flow logs`, `cloud audit logs for instance credential use`
 - **Implementation:** specification only. Collect the telemetry above first; if you cannot, the detection cannot work yet.
 
+### DET-AI-059 · Python sitecustomize or usercustomize Written Outside a Package Install
+
+- **Severity:** high
+- **Hypothesis:** An AI service with an arbitrary file write (path traversal in an upload endpoint) is turned into code execution by writing sitecustomize.py or usercustomize.py, which Python imports at every interpreter start; the next service restart or training job runs the attacker's code. Seen with MONAI Label <= 0.8.5 (GHSA-qc22-rmgc-vg94) exploited by autonomous Cairn agents.
+- **Telemetry:** `EDR file creation events`, `auditd watches on Python site directories`, `package manager logs (pip, uv, conda)`
+- **Implementation:** rule file(s): [sigma](../../detections/sigma/det-ai-059-python-startup-hook-written-by-ai-service.yml). Experimental and not run against real telemetry.
+
 ## 4. Prevent it
 
 - **AI Asset and Service Inventory** (`CTRL-AI-INVENTORY`): Maintain inventory of models, runtimes, agents, gateways, MCP servers and external providers.
@@ -126,7 +133,7 @@ The runner has plan and mock adapters only: it does not call your system. To run
 
 ## 6. Limits of this page
 
-- 3 of 5 detection(s) are specifications, not rules. They say what to look for, not how to query it. Nothing here has been run against real telemetry.
+- 3 of 6 detection(s) are specifications, not rules. They say what to look for, not how to query it. Nothing here has been run against real telemetry.
 - No benchmark maps to it, so there is no public yardstick for how well a defence performs.
 - The tests use benign markers and synthetic data. A pass in a lab is not a security rating for a production system.
 - Ecosystem tools and benchmarks help you test and measure. They never support a claim that an actor used the technique.
