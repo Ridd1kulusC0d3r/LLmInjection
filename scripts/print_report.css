@@ -169,3 +169,6 @@ td.m-observed-in-the-wild{color:var(--sig)!important}
 .opener.inline .onum{font-size:30pt;display:inline-block;margin-right:3mm;vertical-align:middle}
 .opener.inline h1{display:inline-block;font-size:20pt;vertical-align:middle;margin:0}
 .opener.inline .lead,.opener.inline .orule{display:none}
+
+.concl p{font-size:11pt;line-height:1.65;color:var(--ink);max-width:150mm}
+.concl p:first-child:first-letter{font:800 34pt/0.9 "Inter Display";float:left;margin:1.5mm 2mm 0 0;color:var(--sig)}

@@ -14,7 +14,7 @@ Todo número desta página sai de `scripts/build_snapshot.py`, `scripts/diff_int
 Três a cinco julgamentos do mês, cada um com probabilidade, confiança e IDs.
 </div>
 
-## 1. Resumo para diretoria
+## 1. Resumo gerencial
 
 | Pergunta | Resposta em uma linha |
 |---|---|
@@ -98,13 +98,11 @@ Evidência regional, ou: *impacto regional não demonstrado nas fontes consultad
 ## 12. Padrões e regulação
 OWASP, MITRE ATLAS, NIST, CISA, CoSAI, EU AI Act, ANPD, PL 2338.
 
-## 13. Recomendações por público
+## 13. Recomendações de segurança do mês
 
-| Público | Prioridade do mês |
-|---|---|
-| CISO e diretoria | … |
-| SOC e detecção | … |
-| Desenvolvimento e plataforma | … |
+| # | Recomendação | Efeito | Quem conduz |
+|---|---|---|---|
+| R1 | … | … | … |
 
 ## 14. Previsões verificáveis
 
@@ -120,14 +118,17 @@ No mês seguinte, preencha a última coluna das previsões anteriores. O placar 
 | Candidato | Por que importa | Dono | Prazo |
 |---|---|---|---|
 
-## 16. Método, limites e fontes
+## 16. Conclusão do mês
+O que o mês mostrou e o que muda na prioridade do defensor.
+
+## 17. Método, limites e fontes
 
 | Grau | Fontes novas no mês | Lidas no original |
 |---|---|---|
 
 O que foi lido no original, o que veio de busca, o que falhou.
 
-## 17. Retroalimentação
+## 18. Retroalimentação
 Registros criados, digests que originaram, próxima edição.
 
 ---

@@ -31,7 +31,7 @@ Os achados que orientam o restante do relatório (de cinco a sete):
 
 **Prioridades imediatas:** três a cinco ações, com versão mínima ou controle nomeado.
 
-### Resumo para diretoria
+### Resumo gerencial
 
 | Pergunta | Resposta em uma linha |
 |---|---|
@@ -172,14 +172,13 @@ Ordem de rotação de credenciais e de contenção.
 
 Camadas do harness, padrões de projeto, como testar os guardrails e critérios mínimos antes de produção.
 
-## 12. Recomendações por público
+## 12. Recomendações de segurança
 
-| Público | Faça agora | Faça em 30 dias | Pergunte ao fornecedor |
-|---|---|---|---|
-| CISO e diretoria | … | … | … |
-| SOC e detecção | … | … | … |
-| Desenvolvimento e plataforma | … | … | … |
-| Compras e fornecedores | … | … | … |
+Lista única, por ordem de efeito. A coluna "Quem conduz" é discreta: indica o time que costuma liderar, sem separar o texto por público.
+
+| # | Recomendação | Efeito | Quem conduz | Detalhe |
+|---|---|---|---|---|
+| R1 | … | … | Plataforma / SOC / Desenvolvimento / Segurança / Compras | Seção N |
 
 ## 13. Plano de ação priorizado
 
@@ -200,10 +199,14 @@ Camadas do harness, padrões de projeto, como testar os guardrails e critérios 
 ## 15. Brasil e América Latina
 Evidência regional, ou: *impacto regional não demonstrado nas fontes consultadas*.
 
-## 16. Hipóteses concorrentes e previsões
+## 16. Perspectivas
+
+### Hipóteses concorrentes
 
 | Hipótese | A favor | Contra | Situação |
 |---|---|---|---|
+
+### Previsões verificáveis
 
 | Previsão | Probabilidade | Como verificar | Resultado |
 |---|---|---|---|
@@ -213,7 +216,10 @@ Evidência regional, ou: *impacto regional não demonstrado nas fontes consultad
 | Tipo | Valor (desarmado) | Tier | Válido até | Fonte |
 |---|---|---|---|---|
 
-## 18. Fontes e referências
+## 18. Conclusão
+Três parágrafos: o que o período mostrou, o que decide o resultado para o defensor e o que ainda não se sabe. Sem fato novo.
+
+## 19. Fontes e referências
 
 ### Qualidade das fontes
 
@@ -225,7 +231,7 @@ Evidência regional, ou: *impacto regional não demonstrado nas fontes consultad
 | ID | Publicador | Título | Grau | Data |
 |---|---|---|---|---|
 
-## 19. Retroalimentação
+## 20. Retroalimentação
 - Registros criados ou alterados: `ACTOR-…`, `CAMPAIGN-…`, `VULN-…`, `DET-AI-…`, `SRC-…`
 - Itens de digest que originaram: `[LLMI-AAAAMMDD-NN]`
 - Próxima revisão: AAAA-MM-DD · gatilhos de revisão: …
