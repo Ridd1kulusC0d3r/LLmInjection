@@ -20,6 +20,8 @@ from __future__ import annotations
 import ast
 import ipaddress
 import json
+import re
+import unicodedata
 from collections.abc import Callable
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -107,6 +109,28 @@ def inside(base: Path) -> Callable[[dict], None]:
         target = (base / str(params.get("path", ""))).resolve()
         if base.resolve() not in (target, *target.parents):
             raise ValueError("path leaves the allowed directory")
+    return check
+
+
+# Files an interpreter or a coding agent runs or trusts on start-up: an arbitrary file write that lands on one of
+# these becomes code execution later (MONAI Label GHSA-qc22-rmgc-vg94 -> sitecustomize.py; the trailing-dot
+# ".mcp.json." check bypass in CVE-2026-103572). Heuristic layer, not a complete control.
+STARTUP_FILES = re.compile(
+    r"(^|/)(sitecustomize|usercustomize)\.py$|\.pth$|(^|/)\.claude/settings(\.local)?\.json$"
+    r"|(^|/)\.mcp\.json$|(^|/)\.vscode/(tasks|settings)\.json$", re.I)
+
+
+def no_startup_hook(param: str = "path") -> Callable[[dict], None]:
+    """Validator factory for write/upload tools: refuse start-up hook files, encoded separators and trailing dots."""
+    def check(params: dict) -> None:
+        raw = str(params.get(param, ""))
+        name = unicodedata.normalize("NFKC", raw).replace("\\", "/")
+        if "\x00" in name or re.search(r"%2e|%2f|%5c", raw, re.I):
+            raise ValueError("encoded or NUL characters in the file name")
+        if name != name.rstrip(". "):
+            raise ValueError("trailing dot or space in the file name")
+        if STARTUP_FILES.search(name):
+            raise ValueError("write to an interpreter or agent start-up file")
     return check
 
 
