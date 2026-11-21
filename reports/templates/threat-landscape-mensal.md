@@ -7,62 +7,106 @@ title: "Threat Landscape de IA, LLMs e agentes · Mês AAAA"
 <p class="rpt-head"><span>LLMI-TL-AAAA-MM</span><span class="tlp">TLP:CLEAR</span><span>Snapshot data/snapshots/AAAA-MM.json · Corte AAAA-MM-DD</span></p>
 
 <div class="injected" markdown="1">
-Todo número desta página sai de `scripts/build_snapshot.py`, `scripts/diff_intelligence.py` ou `scripts/readme_stats.py`. Número digitado à mão não entra.
+Todo número desta página sai de `scripts/build_snapshot.py`, `scripts/diff_intelligence.py`, `scripts/readme_stats.py` ou `scripts/coverage_model.py`. Número digitado à mão não entra. O snapshot leva o nome do mês que cobre.
 </div>
 
 <div class="bluf" markdown="1">
-Três a cinco julgamentos do mês, cada um com selo de confiança e IDs.
+Três a cinco julgamentos do mês, cada um com probabilidade, confiança e IDs.
 </div>
 
-## 1. Placar
+## 1. Resumo para diretoria
 
-| Atores | Campanhas | Incidentes | Técnicas | Vulnerabilidades | Fontes |
-|---|---|---|---|---|---|
-| n (Δ) | n (Δ) | n (Δ) | n (Δ) | n (Δ) | n (Δ) |
+| Pergunta | Resposta em uma linha |
+|---|---|
+| O que mudou no risco neste mês? | … |
+| O que exige decisão? | … |
+| O que melhorou? | … |
 
-## 2. O que mudou
+## 2. Placar
+
+| Atores | Campanhas | Incidentes | Técnicas | Vulnerabilidades | Detecções | Fontes |
+|---|---|---|---|---|---|---|
+| n (Δ) | n (Δ) | n (Δ) | n (Δ) | n (Δ) | n (Δ) | n (Δ) |
+
+## 3. O que mudou
 
 | Tipo | Novos | Alterados | Rebaixados ou removidos | Destaque |
 |---|---|---|---|---|
 
-Fonte: `reports/AAAA-MM-diff.md`.
+Fonte: `reports/monthly/AAAA-MM-diff.md`.
 
-## 3. Uso adversário de IA
+## 4. O mais quente do mês
 
-### 3.1 Por nexo
+| Data | Registro | Tipo | Confiança | Sinais | Ferramentas | Fonte principal |
+|---|---|---|---|---|---|---|
 
-| Nexo | Atores | Papel da IA | Confiança |
-|---|---|---|---|
+## 5. Uso adversário de IA
 
-### 3.2 Por papel da IA (três meses)
+### 5.1 Mapeamento de atores por nexo
+
+| Nexo | Atores | Papel da IA | Ferramentas agênticas | Confiança |
+|---|---|---|---|---|
+
+### 5.2 Por papel da IA (três meses)
 `tooling-development` → `offensive-enabler` → `autonomous-operator`: quantos registros em cada degrau, mês a mês.
 
-### 3.3 Frameworks ofensivos agênticos
-ARTEX, PentAGI e outros: quem usa, para quê, o que está comprovado. Link para o dossiê de cada um.
+### 5.3 Frameworks ofensivos agênticos
+ARTEX, PentAGI, Cairn, CyberStrikeAI e outros: quem usa, para quê, o que está comprovado. Link para o dossiê de cada um.
 
-## 4. Ataques contra sistemas de IA
+### 5.4 Modelos de IA citados
+
+| Família | Casos no mês | Observação |
+|---|---|---|
+
+## 6. Ataques contra sistemas de IA
 
 | Técnica | Sinal no mês | Maturidade |
 |---|---|---|
-| LLMI-T001 … T028 | sinal novo / sem sinal público novo | observed-in-the-wild / disclosed-vulnerability / research-demonstrated |
+| LLMI-T001 … T028 | sinal novo / sem sinal público novo | em campo / falha divulgada / pesquisa |
 
-## 5. Vulnerabilidades e supply chain de IA
+## 7. Vulnerabilidades e supply chain de IA
 
-| CVE | Produto | KEV | EPSS | Explorada em campo (fonte) | Correção |
-|---|---|---|---|---|---|
+| CVE | Produto | KEV (data) | EPSS | Explorada em campo (fonte) | Correção | Relação com IA |
+|---|---|---|---|---|---|---|
 
-Blocos fixos: gateways de IA, servidores e clientes MCP, runtimes locais, frameworks de agente, modelos e pacotes.
+Blocos fixos: gateways de IA, servidores e clientes MCP, runtimes locais, frameworks de agente, modelos e pacotes. Em separado: falhas encontradas por IA e falhas usadas por agente atacante.
 
-## 6. Cobertura defensiva
-Matriz técnica × detecção × teste (`scripts/coverage_model.py`): projetado, rascunho, testado. A maior lacuna do mês e o que a fecha.
+## 8. Linha do tempo do mês
 
-## 7. Setores e regiões
-Brasil e América Latina em seção própria, com a regra de evidência regional.
+| Data | Caso | Cat. | O que aconteceu |
+|---|---|---|---|
 
-## 8. Padrões e regulação
-OWASP, MITRE ATLAS, NIST, CISA, EU AI Act, ANPD, PL 2338.
+## 9. Cobertura defensiva
 
-## 9. Previsões verificáveis
+Matriz técnica × detecção × regra × teste × controle (`scripts/coverage_model.py`). A maior lacuna do mês e o que a fecha.
+
+| Medida | Mês anterior | Este mês |
+|---|---|---|
+| Detecções com arquivo de regra | n | n |
+| Técnicas sem guardrail | n | n |
+| Técnicas sem hardening | n | n |
+| Testes executados em laboratório | n | n |
+
+## 10. Hunting do mês
+Uma a três hipóteses novas, com janela, telemetria e o que confirma.
+
+## 11. Setores e regiões
+
+### Brasil e América Latina
+Evidência regional, ou: *impacto regional não demonstrado nas fontes consultadas*.
+
+## 12. Padrões e regulação
+OWASP, MITRE ATLAS, NIST, CISA, CoSAI, EU AI Act, ANPD, PL 2338.
+
+## 13. Recomendações por público
+
+| Público | Prioridade do mês |
+|---|---|
+| CISO e diretoria | … |
+| SOC e detecção | … |
+| Desenvolvimento e plataforma | … |
+
+## 14. Previsões verificáveis
 
 | Previsão para o próximo mês | Probabilidade | Como verificar | Resultado (mês seguinte) |
 |---|---|---|---|
@@ -71,10 +115,22 @@ OWASP, MITRE ATLAS, NIST, CISA, EU AI Act, ANPD, PL 2338.
 No mês seguinte, preencha a última coluna das previsões anteriores. O placar de acertos é o que dá credibilidade à série.
 </div>
 
-## 10. Fila de pesquisa
+## 15. Fila de pesquisa
 
 | Candidato | Por que importa | Dono | Prazo |
 |---|---|---|---|
 
-## 11. Método, limites e fontes
+## 16. Método, limites e fontes
+
+| Grau | Fontes novas no mês | Lidas no original |
+|---|---|---|
+
 O que foi lido no original, o que veio de busca, o que falhou.
+
+## 17. Retroalimentação
+Registros criados, digests que originaram, próxima edição.
+
+---
+
+## Versão curta (LinkedIn) e carrossel
+Gancho · três números do placar · uma previsão · link. Cinco quadros: capa, placar, destaque, o que fazer, fonte.
