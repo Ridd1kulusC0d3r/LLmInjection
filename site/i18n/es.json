@@ -562,5 +562,6 @@
  "sub.body": "Una edición semanal nueva cada {when}, más cada informe nuevo y los incidentes, campañas y entradas KEV que entran en los datasets. Síguelo por feed o correo.",
  "sub.placeholder": "tu@correo",
  "sub.cta": "Suscribirse",
- "sub.soon": "El envío por correo se está configurando. Mientras tanto, cualquier servicio de RSS a correo puede enviarte feed.xml."
+ "sub.soon": "El envío por correo se está configurando. Mientras tanto, cualquier servicio de RSS a correo puede enviarte feed.xml.",
+ "sub.archive": "Archivo de ediciones"
 }
