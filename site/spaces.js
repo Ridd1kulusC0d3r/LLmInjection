@@ -63,7 +63,7 @@ const KIND_ORDER=["platform","landscape","trends","intel","dossier","intake","re
 function renderSubscribe(){
   const b=$("#subscribe");if(!b)return;const c=SP.sub||{};
   const form=c.email_form_action?`<form class="subform" action="${esc(c.email_form_action)}" method="post" target="_blank" rel="noopener"><input type="email" name="${esc(c.email_field||"email")}" required placeholder="${esc(t("sub.placeholder"))}" aria-label="${esc(t("sub.placeholder"))}"><button type="submit" class="export primary">${esc(t("sub.cta"))}</button></form>`:`<p class="note">${esc(t("sub.soon"))}</p>`;
-  b.innerHTML=`<div><span class="eyebrow">${esc(t("sub.eyebrow"))}</span><h3>${esc(t("sub.title"))}</h3><p class="note">${esc(t("sub.body",{when:c.cadence||""}))}</p></div><div class="subacts">${form}<div class="subfeeds"><a class="export" href="feed.xml">RSS / Atom</a><a class="export" href="feed.json">JSON Feed</a></div></div>`;
+  b.innerHTML=`<div><span class="eyebrow">${esc(t("sub.eyebrow"))}</span><h3>${esc(t("sub.title"))}</h3><p class="note">${esc(t("sub.body",{when:c.cadence||""}))}</p></div><div class="subacts">${form}<div class="subfeeds">${c.archive?`<a class="export" href="${esc(c.archive)}" target="_blank" rel="noopener">${esc(t("sub.archive"))}</a>`:""}<a class="export" href="feed.xml">RSS / Atom</a><a class="export" href="feed.json">JSON Feed</a></div></div>`;
 }
 function renderReports(){
   renderSubscribe();
