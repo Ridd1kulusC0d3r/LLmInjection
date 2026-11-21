@@ -759,7 +759,7 @@
     "status": "observed",
     "confidence": "confirmed",
     "date": "2026-09",
-    "summary": "Gambit Security's interim report describes an unnamed financially motivated operator (Chinese-language prompts, no attribution) who used Strix, Cairn and Hermes agents via OpenRouter (GLM, DeepSeek and Claude Opus models) to find and exploit flaws in online retailers at about $25 per scan; at least 27 companies were compromised, skimmers confirmed on 19, and over 600,000 card records stolen. Gambit cautions that some AI-generated claims may be inaccurate and that impact is likely larger than reported.",
+    "summary": "Gambit Security's interim report describes an unnamed financially motivated operator (Chinese-language prompts, no attribution) running Strix, Cairn and Hermes agents through OpenRouter. Strix ran 146 times in deep mode against 138 hosts between 23 and 31 August 2026 (633 hours of scanner time in 195 hours of clock time), first on GLM 5.2 and later on DeepSeek v4 Pro, handing some findings to Cairn; Cairn used DeepSeek v4.1 Flash, and 105 attack projects were launched between 10 and 15 September (48 still available for analysis). Hermes orchestrated the campaign on Claude Opus 4.6 after newer models refused, with 1,951 human prompts over 260 sessions. Scans cost a mean of $25.46 (101 completed scans); at least 27 companies were compromised, skimmers confirmed on 19, and over 600,000 card records stolen. Gambit cautions that some AI-generated claims may be inaccurate and that impact is likely larger than reported.",
     "source_ids": [
       "SRC-GAMBIT-AI-AGENTS-RETAILERS"
     ],

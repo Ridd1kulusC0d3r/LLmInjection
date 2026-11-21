@@ -1332,5 +1332,18 @@
       "SRC-THN-CERTIN-CRAFTY-FALCON"
     ],
     "reported": "2026-11-04"
+  },
+  {
+    "id": "CAMPAIGN-CAIRN-EAST-ASIA-UNIVERSITIES",
+    "type": "campaign",
+    "name": "Cairn autonomous agents against East Asian universities (MONAI Label zero-day)",
+    "confidence": "high",
+    "first_seen": "2026-09",
+    "last_seen": "2026-09",
+    "reported": "2026-11-20",
+    "summary": "Amazon Threat Intelligence found, on 10 September 2026, an unauthenticated public Cairn instance exposing an operator's projects, prompts and AI output. Over about 48 hours from 8 September the operator gave Cairn agents university IP addresses in East Asia outside mainland China and the goal 'obtain shell access'. A 16-hour, 148-action attempt on an open Redis server and a 6-hour credential campaign (about 80 researched usernames, more than 30,000 combinations) against a GPU cluster and campus services failed; against a MONAI Label server the agents found a path traversal zero-day and reached a root reverse shell. The operator then gave the agents a proxy into a second university, apparently through a server compromised with the same flaw. AWS assesses with moderate confidence that the actor is Chinese-nexus (Simplified Chinese prompts, China Standard Time timestamps, targeting); no actor is linked here.",
+    "source_ids": [
+      "SRC-AWS-CAIRN-MONAI"
+    ]
   }
 ]

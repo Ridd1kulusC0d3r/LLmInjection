@@ -13,7 +13,7 @@
 
 | Layer | Status |
 |---|---|
-| Evidence | 23 record(s), 7 publisher(s), best grade A, newest 2026 |
+| Evidence | 25 record(s), 9 publisher(s), best grade A, newest 2026 |
 | Safe tests | 1 |
 | Detections | 3 rule file(s), 3 specification(s) |
 | Controls | 2 |
@@ -27,6 +27,7 @@ Model-serving endpoints, agent builders, vector stores or MCP servers are reacha
 
 What the repository links to it:
 
+- 2026-09 · [Cairn autonomous agents against East Asian universities (MONAI Label zero-day)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-CAIRN-EAST-ASIA-UNIVERSITIES) (campaign, high)
 - 2026 · [JADEPUFFER agentic database extortion](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-JADEPUFFER-AGENTIC-EXTORTION) (campaign, high)
 - 2026-07 · [knaithe autonomous exploitation with DeepSeek and Hermes Agent](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-KNAITHE-HERMES-AUTONOMOUS) (campaign, confirmed)
 - 2026-05-07 · [Threat Actor Uses a DeepSeek-Powered Hermes Agent in Langflow and n8n Exploitation Attempts (AML.CS0070)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-ATLAS-CS0070) (atlas-incident, high)
@@ -45,6 +46,7 @@ What the repository links to it:
 - 2025-06-13 · [MCP Inspector unauthenticated proxy remote code execution](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-MCP-INSPECTOR-CVE-2025-49596) (remote-code-execution, confirmed)
 - 2023-03-24 · [MLflow path traversal](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-MLFLOW-CVE-2023-1177) (path-traversal, confirmed)
 - 2026-08-17 · [MLflow webhook test endpoint follows redirects past URL validation (SSRF)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-MLFLOW-CVE-2026-64849) (ssrf, confirmed)
+- 2026-11-18 · [MONAI Label path traversal in datastore upload endpoints (arbitrary file write), found and exploited by attacker AI agents](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-MONAILABEL-GHSA-QC22-RMGC-VG94) (path-traversal, confirmed)
 - 2025-12-19 · [n8n workflow expression evaluation escapes to code execution](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-N8N-CVE-2025-68613) (code-injection, confirmed)
 - 2026-03-30 · [nginx-ui MCP integration exposed without authentication](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-NGINX-UI-CVE-2026-33032) (missing-authentication, confirmed)
 - 2023-11-16 · [Ray log API local file inclusion](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-RAY-CVE-2023-6021) (path-traversal, confirmed)
