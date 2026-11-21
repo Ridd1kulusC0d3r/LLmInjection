@@ -8988,7 +8988,7 @@
     },
     {
       "id": "RQ-DIG-20261121-23",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
       "source_grade": "A",
       "kind": "digest-threat-report",
@@ -9006,13 +9006,13 @@
         "GHSA-qc22-rmgc-vg94"
       ],
       "review": {
-        "decision": null,
-        "notes": "From digest LLMI-20261121. Read the primary source before promoting."
+        "decision": "promoted",
+        "notes": "Read in the original (AWS Security Blog, CJ Moses, 2026-11-20). Recorded as CAMPAIGN-CAIRN-EAST-ASIA-UNIVERSITIES (no actor linked: AWS attribution is moderate confidence and unnamed) and VULN-MONAILABEL-GHSA-QC22-RMGC-VG94."
       }
     },
     {
       "id": "RQ-DIG-20261121-24",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
       "source_grade": "A",
       "kind": "digest-vulnerability",
@@ -9029,8 +9029,8 @@
         "GHSA-qc22-rmgc-vg94"
       ],
       "review": {
-        "decision": null,
-        "notes": "From digest LLMI-20261121. Read the primary source before promoting."
+        "decision": "promoted",
+        "notes": "Read in the original (GHSA-qc22-rmgc-vg94, 2026-11-18). Recorded as VULN-MONAILABEL-GHSA-QC22-RMGC-VG94."
       }
     },
     {

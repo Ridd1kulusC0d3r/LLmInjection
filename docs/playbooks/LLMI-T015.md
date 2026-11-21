@@ -13,7 +13,7 @@
 
 | Layer | Status |
 |---|---|
-| Evidence | 59 record(s), 42 publisher(s), best grade A, newest 2026 |
+| Evidence | 60 record(s), 43 publisher(s), best grade A, newest 2026 |
 | Safe tests | 1 |
 | Detections | 5 rule file(s), 5 specification(s) |
 | Controls | 2 |
@@ -36,6 +36,7 @@ What the repository links to it:
 - 2026-10 · [Chinese-speaking ARTEX multi-model operator targeting 19 markets](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-ARTEX-MULTI-MODEL-OPERATOR) (campaign, high)
 - 2026-05 · [Aurora ransomware intrusions driven through Cursor Agent](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-AURORA-CURSOR-AGENT) (campaign, confirmed)
 - 2026-04 · [bandcampro Gemini CLI-driven C2 botnet build and fraud operations](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-BANDCAMPRO-GEMINI-CLI-C2) (campaign, confirmed)
+- 2026-09 · [Cairn autonomous agents against East Asian universities (MONAI Label zero-day)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-CAIRN-EAST-ASIA-UNIVERSITIES) (campaign, high)
 - 2026-11 · [CRAFTY FALCON AI-driven attacks on Indian banking, fintech and payment entities](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-CRAFTY-FALCON-BFSI-INDIA) (campaign, confirmed)
 - 2026-08 · [CrowdStrike Threat Actor 1: Claude Code dual-agent harness against Argentine healthcare](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-CROWDSTRIKE-TA1-ARGENTINA-HEALTHCARE) (campaign, confirmed)
 - 2026-08 · [CrowdStrike Threat Actor 2: Chinese-speaking operator's Claude pentesting harnesses](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-CROWDSTRIKE-TA2-CHINESE-SPEAKING-HARNESS) (campaign, confirmed)

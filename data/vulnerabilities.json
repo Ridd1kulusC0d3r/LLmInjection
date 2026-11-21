@@ -1299,5 +1299,31 @@
       "SRC-NVD-CVE-2026-4747",
       "SRC-ANTHROPIC-MYTHOS-PREVIEW"
     ]
+  },
+  {
+    "id": "VULN-MONAILABEL-GHSA-QC22-RMGC-VG94",
+    "type": "vulnerability",
+    "name": "MONAI Label path traversal in datastore upload endpoints (arbitrary file write), found and exploited by attacker AI agents",
+    "kind": "path-traversal",
+    "package": "monailabel",
+    "ecosystem": "PyPI",
+    "identifiers": [
+      "GHSA-qc22-rmgc-vg94"
+    ],
+    "severity": "critical",
+    "affected": [
+      "<= 0.8.5"
+    ],
+    "patched": [
+      "fix in PR #1915, slated for the next release (no patched version named in the advisory as of 2026-11-21)"
+    ],
+    "published": "2026-11-18",
+    "confidence": "confirmed",
+    "ai_relation": "ai-discovered",
+    "summary": "Path traversal (CWE-22) in the PUT /datastore/image and /datastore/label endpoints of MONAI Label, an open-source medical imaging AI application, allows arbitrary file write; authentication is off by default and, when on, the annotator role suffices. No CVE yet. Amazon Threat Intelligence found that a Chinese-nexus actor's Cairn agents discovered it on their own in September 2026, went from mapping the API to arbitrary file write in about 11 minutes, and later turned it into a root reverse shell by writing a Python startup file; AWS assesses with high confidence that it was a zero-day and reported it through its VDP. Workarounds: enable authentication, keep the server off untrusted networks, run it unprivileged.",
+    "source_ids": [
+      "SRC-GHSA-MONAILABEL-TRAVERSAL",
+      "SRC-AWS-CAIRN-MONAI"
+    ]
   }
 ]

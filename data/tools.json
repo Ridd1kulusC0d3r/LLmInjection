@@ -47,8 +47,10 @@
     "name": "CAIRN",
     "kind": "agentic-offensive-framework",
     "origin": "Open-source",
-    "summary": "Multi-agent pentest framework built on an observe-orient-decide-act loop in which specialised agents share a blackboard; GTIG has seen it deployed in the wild.",
+    "summary": "Open-source multi-agent pentest framework built on an observe-orient-decide-act loop in which specialised agents share a blackboard; given a target and a plain-language goal it runs for hours on its own. Seen in the wild by GTIG, by Gambit (financially motivated retail-skimming operator) and by Amazon Threat Intelligence (Chinese-nexus operator whose Cairn agents found and exploited a MONAI Label zero-day).",
     "source_ids": [
+      "SRC-AWS-CAIRN-MONAI",
+      "SRC-GAMBIT-AI-AGENTS-RETAILERS",
       "SRC-GTIG-AGENTIC-THRESHOLD-2026-11"
     ]
   },

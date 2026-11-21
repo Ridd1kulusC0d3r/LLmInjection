@@ -122,11 +122,11 @@ New [source registry and ingestion guidance](docs/AI-INTELLIGENCE-SOURCES.md), [
 
 | Actors | Campaigns | Incidents | Vulnerabilities | Techniques | Sources |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| **75** | **100** | **72** | **50** | **28** | **218** |
+| **75** | **101** | **72** | **51** | **28** | **218** |
 
 | Test cases | Detections | Controls | Frameworks | Model families | Relationships | Ecosystem repos |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| **40** | **59** | **32** | **21** | **12** | **588** | **127** |
+| **40** | **59** | **32** | **21** | **12** | **596** | **127** |
 
 <!-- gen:stats:end -->
 
@@ -612,6 +612,7 @@ Real-world reporting is intentionally placed on the front page because AI securi
 | **AntiFox (ARTEX fork) intrusions against IIS applications and AWS** | 2026-11 | 2026-11-10 |  | medium | Per the Cloud Security Alliance's reading of Arctic Wolf Labs (2026-11-10), self-hosted, Chinese-language AntiFox instances on Alibaba… |
 | **AI-built clones of Brazilian government sites collecting Pix payments** | 2025 | 2025-08-05 | BR | high | Zscaler ThreatLabz found phishing replicas of a Brazilian State Department of Traffic and the Ministry of Education built with the… |
 | **CRAFTY FALCON AI-driven attacks on Indian banking, fintech and payment entities** | 2026-10 | 2026-11-04 |  | confirmed | CERT-In (CIAD-2026-0058, critical, 2026-11-04) describes an active campaign by a threat actor it tracks as CRAFTY FALCON against NBFCs… |
+| **Cairn autonomous agents against East Asian universities (MONAI Label zero-day)** | 2026-09 | 2026-11-20 |  | high | Amazon Threat Intelligence found, on 10 September 2026, an unauthenticated public Cairn instance exposing an operator's projects, prompts… |
 
 <!-- gen:campaigns:end -->
 
@@ -951,6 +952,7 @@ An optional **MCP v2 read-only server** exposes search, object lookup, graph tra
 | Zammad session hijack leading to code execution | `CVE-2026-102489` | session-hijack | critical | 2026-09-30 |
 | Zammad packaged builds allow local escalation to root | `CVE-2026-102490` | privilege-escalation | high | 2026-09-30 |
 | FreeBSD NFS RPCSEC_GSS stack overflow leading to remote root | `CVE-2026-4747` | memory-corruption | high | 2026-03-26 |
+| MONAI Label path traversal in datastore upload endpoints (arbitrary… | `GHSA-qc22-rmgc-vg94` | path-traversal | critical | 2026-11-18 |
 
 <!-- gen:vulnerabilities:end -->
 
