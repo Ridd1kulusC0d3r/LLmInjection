@@ -1,7 +1,7 @@
 {
   "meta": {
     "schema_version": "1.0",
-    "last_run": "2026-11-21T09:51:14Z",
+    "last_run": "2026-11-21T10:10:31Z",
     "policy": "candidate-only; no automatic promotion into official intelligence datasets",
     "statuses": [
       "candidate",
@@ -9097,6 +9097,186 @@
       ],
       "summary": "[LLMI-20261121-27] seal: secondary; recovered. Brazilian regional outlet Correio warns of AI-made fake stores, cloned sites and fake Pix payments ahead of Black Friday, citing a Reclame AQUI survey and the 20th Anuario Brasileiro de Seguranca Publica on fear of fraud. Consumer advice only; no specific incident data or primary threat-intelligence source.",
       "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261121. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261121-28",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "C",
+      "kind": "digest-vulnerability",
+      "title": "Langflow 1.0.0-1.12.8: unauthenticated auth bypass and code execution (CVE-2026-93680, CVE-2026-110186) plus two authenticated flaws; fixed in 1.13.0",
+      "url": "https://thehackernews.com/2026/11/critical-langflow-flaws-could-let.html",
+      "published": "2026-11-02",
+      "observed_at": "2026-11-21T10:10:31Z",
+      "relevance_score": 40,
+      "matched_terms": [
+        "LLMI-T024"
+      ],
+      "summary": "[LLMI-20261121-28] seal: secondary; retrospective. Per The Hacker News, citing an IBM security bulletin of 28 Oct 2026, Langflow 1.0.0 through 1.12.8 is affected by CVE-2026-93680 (CVSS 9.8 auth bypass) and CVE-2026-110186 (CVSS 9.8 code execution) without an account, plus CVE-2026-110193 (8.8, OS commands via the Agentic Assistant) and CVE-2026-110192 (6.5). The only fix is 1.13.0, which also disables default auto-login; a public Metasploit auxiliary module references CVE-2026-93680, and no in-the-wild exploitation or KEV listing is reported. Primary IBM bulletin not read in this run.",
+      "identifiers": [
+        "CVE-2026-93680",
+        "CVE-2026-110186",
+        "CVE-2026-110193",
+        "CVE-2026-110192"
+      ],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261121. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261121-29",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "A",
+      "kind": "digest-research",
+      "title": "Scaling Adaptive Prompt Injection Attacks with Agent Swarms (arXiv 2611.11861)",
+      "url": "https://arxiv.org/abs/2611.11861",
+      "published": "2026-11-10",
+      "observed_at": "2026-11-21T10:10:31Z",
+      "relevance_score": 90,
+      "matched_terms": [
+        "LLMI-T002"
+      ],
+      "summary": "[LLMI-20261121-29] seal: original; retrospective. Kurakin et al. argue prompt injection remains feasible even as human red teaming saturates; a synthetic dataset uses benign random actions as attacker goals to measure instruction-hierarchy adherence. A more capable agentic attacker reliably makes models follow instructions in tool output, including models considered robust on public benchmarks such as GraySwan Arena. The abstract gives no numeric results.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261121. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261121-30",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "A",
+      "kind": "digest-research",
+      "title": "SearchInject: retrieval exposure control for indirect prompt injection in LLM search (arXiv 2611.02643)",
+      "url": "https://arxiv.org/abs/2611.02643",
+      "published": "2026-11-03",
+      "observed_at": "2026-11-21T10:10:31Z",
+      "relevance_score": 90,
+      "matched_terms": [
+        "LLMI-T002",
+        "LLMI-T007"
+      ],
+      "summary": "[LLMI-20261121-30] seal: original; retrospective. Defense that scores candidate pages for relevance, search-abuse cues and instruction likelihood and quarantines them before they reach a search-augmented LLM. On 300 SciFact queries it cuts top-10 exposure of injected pages by about 83% across BM25, hybrid and LSA retrievers with negligible nDCG change, but clean false-quarantine (0.59-0.65%) exceeded the 0.5% target and no attack-success reduction was estimated.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261121. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261121-31",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "A",
+      "kind": "digest-research",
+      "title": "INFUSE: unified surface benchmark for indirect prompt injection in agentic systems (arXiv 2610.20776)",
+      "url": "https://arxiv.org/abs/2610.20776",
+      "published": "2026-10-14",
+      "observed_at": "2026-11-21T10:10:31Z",
+      "relevance_score": 90,
+      "matched_terms": [
+        "LLMI-T002",
+        "LLMI-T008"
+      ],
+      "summary": "[LLMI-20261121-31] seal: original; retrospective. Benchmark of 40 long-horizon tasks and 56 attack scenarios injected through interaction surfaces, evaluated on 19 LLMs (GPT, Claude, Gemini, Llama, Gemma, Qwen) over 41,824 adversarial trajectories. Mean attack success is 15.4-19.6% depending on the judge, ranging 3.2-41.9% per model; guard models helped little, while prompt-level instructional hardening cut mean success from 58.2% to 14.3%.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261121. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261121-32",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "D",
+      "kind": "digest-research",
+      "title": "Zenity Labs AgentCorruption: single prompt to an exposed AWS Bedrock AgentCore agent pulled metadata-service credentials",
+      "url": "https://labs.zenity.io/post/agentcorruption-how-a-single-prompt-collapsed-the-entire-cloud-security-model",
+      "published": "2026-11-05",
+      "observed_at": "2026-11-21T10:10:31Z",
+      "relevance_score": 25,
+      "matched_terms": [
+        "LLMI-T002",
+        "LLMI-T004",
+        "LLMI-T024"
+      ],
+      "summary": "[LLMI-20261121-32] seal: secondary; retrospective. Per the Adversa AI November 2026 roundup, Zenity Labs showed that one prompt to an exposed Bedrock AgentCore agent could retrieve cloud metadata-service credentials, and AWS has patched it. The Zenity original was not read in this run; date is the roundup's.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261121. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261121-33",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "D",
+      "kind": "digest-research",
+      "title": "EMBRACE: embedded browsers in AI coding assistants break core browser isolation (Cursor, Copilot, Codex, VS Code, Claude Desktop)",
+      "url": "https://forever.security/blog/embrace-hacking-5-ai-assistants-embedded-browsers-technical",
+      "published": "2026-11-05",
+      "observed_at": "2026-11-21T10:10:31Z",
+      "relevance_score": 25,
+      "matched_terms": [
+        "LLMI-T018"
+      ],
+      "summary": "[LLMI-20261121-33] seal: secondary; retrospective. Per the Adversa AI November 2026 roundup, forever.security found embedded browsers in five AI assistants that violate a core browser security rule, exposing a path to developer secrets; Cursor and Copilot are reported fixed, Codex and VS Code unpatched, and no fix stated for Claude Desktop. Original not read in this run.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261121. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261121-34",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "D",
+      "kind": "digest-research",
+      "title": "Datadog Security Labs: counterfeit policy steers an LLM-as-judge prompt-injection classifier (recall 83% to under 4%)",
+      "url": "https://securitylabs.datadoghq.com/articles/jev-as-a-judge-how-counterfeit-policy-steers-jev/",
+      "published": "2026-11-05",
+      "observed_at": "2026-11-21T10:10:31Z",
+      "relevance_score": 25,
+      "matched_terms": [
+        "LLMI-T017"
+      ],
+      "summary": "[LLMI-20261121-34] seal: secondary; retrospective. Per the Adversa AI November 2026 roundup, Datadog showed that injecting a counterfeit policy reduced the Jev classifier's prompt-injection recall from 83% to under 4%. Original not read in this run.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261121. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261121-35",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "D",
+      "kind": "digest-vulnerability",
+      "title": "Visual Studio Copilot and SSMS remote code execution via trailing-dot .mcp.json filename check bypass (CVE-2026-103572)",
+      "url": "https://embracethered.com/blog/posts/2026/visual-studio-copilot-remote-code-execution/",
+      "published": "2026-11-02",
+      "observed_at": "2026-11-21T10:10:31Z",
+      "relevance_score": 25,
+      "matched_terms": [
+        "LLMI-T018",
+        "LLMI-T021"
+      ],
+      "summary": "[LLMI-20261121-35] seal: secondary; retrospective. Per the Adversa AI coding-agent roundup of 2 Nov 2026, Johann Rehberger found that a trailing dot in a filename bypassed a protection check on MCP configuration in a shared Copilot DLL, enabling command execution in Visual Studio (including 2022) and SQL Server Management Studio; Microsoft rated it Important and patched it. Original not read in this run.",
+      "identifiers": [
+        "CVE-2026-103572"
+      ],
       "review": {
         "decision": null,
         "notes": "From digest LLMI-20261121. Read the primary source before promoting."
