@@ -556,5 +556,11 @@
  "tl.b.agent": "used by an AI agent",
  "tabgrp.go": "Open the first section of this group",
  "rep.pdf": "Download PDF",
- "rep.print": "Print to PDF"
+ "rep.print": "Print to PDF",
+ "sub.eyebrow": "Subscribe",
+ "sub.title": "Weekly trends and new reports, delivered",
+ "sub.body": "A new weekly edition every {when}, plus each new report and the incidents, campaigns and KEV entries added to the datasets. Follow by feed or e-mail.",
+ "sub.placeholder": "your@email",
+ "sub.cta": "Subscribe",
+ "sub.soon": "E-mail delivery is being set up. Until then, any RSS-to-e-mail service can send you feed.xml."
 }

@@ -23,7 +23,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 REPO = "https://github.com/Ridd1kulusC0d3r/LLmInjection/blob/main/"
-DIRS = ("intel", "dossiers")
+DIRS = ("intel", "dossiers", "trends")
 TAGS = {"EXP": "exploração", "SC": "cadeia de suprimentos", "PI": "injeção de prompt", "OFF": "uso ofensivo",
         "AUT": "agente sem adversário", "ID": "identidade", "EXPO": "exposição"}
 CVE = re.compile(r"\bCVE-\d{4}-\d{4,7}\b")
@@ -323,14 +323,14 @@ def page(path: Path, vulns: list[dict], index: list[dict]) -> tuple[str, dict]:
         body = body.replace(marker, "\n" + hot + "\n" + marker, 1) if marker in body else hot + body
     content, toc = render(body + app, link)
     rel = path.relative_to(ROOT).as_posix()
-    kind = "Dossiê" if path.parent.name == "dossiers" else "Relatório de inteligência"
+    kind = {"dossiers": "Dossiê", "trends": "Tendências da semana"}.get(path.parent.name, "Relatório de inteligência")
     head = re.search(r'<p class="rpt-head">(.*?)</p>', body)
     meta = re.findall(r"<span[^>]*>(.*?)</span>", head.group(1)) if head else []
     date = re.search(r"\b(20\d\d-\d\d-\d\d)\b", path.stem + " " + body[:800])
     kpis = [k.split("|", 1) for k in fm.get("kpis", "").split(";") if "|" in k]
     toc_html = "".join(f'<a href="#{sid}" class="l{lvl}">{esc(re.sub(r"[*`]", "", text))}</a>' for lvl, sid, text in toc)
     ids = sorted(link.seen)
-    graph = f'<a class="btn" href="../report.html#ids={",".join(ids[:40])}&depth=1&lang=pt">Relatório sob demanda dos {len(ids)} CVEs no grafo ↗</a>' if ids else ""
+    graph = f'<a class="btn" href="../report.html#ids={",".join(ids[:40])}&depth=1&lang=pt">{"Relatório sob demanda do CVE no grafo" if len(ids) == 1 else f"Relatório sob demanda dos {len(ids)} CVEs no grafo"} ↗</a>' if ids else ""
     hero_kpis = "".join(f'<div class="kpi"><b>{esc(v.strip())}</b><span>{esc(lbl.strip())}</span></div>' for v, lbl in kpis)
     chart = kev_chart(vulns) if fm.get("kev_chart") == "true" else ""
     words = len(re.sub(r"<[^>]+>", " ", content).split())

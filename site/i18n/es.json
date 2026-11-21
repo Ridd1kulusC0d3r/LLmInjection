@@ -556,5 +556,11 @@
  "tl.b.agent": "usada por agente de IA",
  "tabgrp.go": "Abrir la primera sección de este grupo",
  "rep.pdf": "Descargar PDF",
- "rep.print": "Imprimir en PDF"
+ "rep.print": "Imprimir en PDF",
+ "sub.eyebrow": "Suscribirse",
+ "sub.title": "Tendencias de la semana y nuevos informes, donde lees",
+ "sub.body": "Una edición semanal nueva cada {when}, más cada informe nuevo y los incidentes, campañas y entradas KEV que entran en los datasets. Síguelo por feed o correo.",
+ "sub.placeholder": "tu@correo",
+ "sub.cta": "Suscribirse",
+ "sub.soon": "El envío por correo se está configurando. Mientras tanto, cualquier servicio de RSS a correo puede enviarte feed.xml."
 }
