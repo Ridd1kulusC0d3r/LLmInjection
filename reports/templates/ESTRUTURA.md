@@ -4,7 +4,7 @@ title: Estrutura dos produtos de inteligência
 
 <p class="rpt-kicker">reports / templates / estrutura</p>
 
-Mapa de quais blocos cada produto leva. **O** = obrigatório, **R** = recomendado, **–** = não se aplica. A ordem das linhas é a ordem de leitura. Os seis modelos desta pasta seguem esta tabela, e a edição impressa (`make print`) segue a mesma ordem.
+Mapa de quais blocos cada produto leva. São seis produtos: relatório de inteligência, dossiê, threat landscape mensal, tendências da semana, perfil de ator e alerta rápido. **O** = obrigatório, **R** = recomendado, **–** = não se aplica. A ordem das linhas é a ordem de leitura. Os seis modelos desta pasta seguem esta tabela, e a edição impressa (`make print`) segue a mesma ordem.
 
 | # | Bloco | O que responde | Relatório | Dossiê | Mensal | Semanal | Perfil de ator | Alerta |
 |---|---|---|---|---|---|---|---|---|
@@ -12,7 +12,7 @@ Mapa de quais blocos cada produto leva. **O** = obrigatório, **R** = recomendad
 | 2 | Ficha e como ler | Base de dados, graus, confiança, selos, escopo | O | O | R | – | R | – |
 | 3 | Notas de versão e verificação | O que mudou e o que foi conferido em fonte primária | O | O | R | R | R | – |
 | 4 | BLUF | A conclusão em até cinco linhas | O | O | O | O | O | O |
-| 5 | Resumo para diretoria (uma página) | Risco, impacto no negócio, três decisões | O | R | O | – | – | – |
+| 5 | Resumo gerencial | Risco, impacto no negócio, três decisões | O | R | O | – | – | – |
 | 6 | Julgamentos-chave | Julgamento, probabilidade, confiança, base | O | O | O | – | O | – |
 | 7 | O mais quente agora (30 dias) | O que é novo desde a última edição | O | R | O | O | – | – |
 | 8 | Perguntas de inteligência (PIR) | O que o leitor pediu e o que ficou em aberto | O | R | R | – | R | – |
@@ -28,12 +28,13 @@ Mapa de quais blocos cada produto leva. **O** = obrigatório, **R** = recomendad
 | 18 | Matriz de detecção | Técnica × detecção × regra × teste × controle | O | O | O | – | R | – |
 | 19 | Threat hunting | Hipótese, janela, onde procurar, o que confirma, consulta | O | O | R | R | R | O |
 | 20 | Harness, guardrails e hardening | Controles por camada, versões mínimas | O | O | R | R | – | O |
-| 21 | Recomendações por público | CISO, SOC, desenvolvimento, compras e fornecedores | O | R | R | R | – | R |
+| 21 | Recomendações de segurança | Lista única por ordem de efeito, com uma coluna discreta de quem conduz | O | R | R | R | – | R |
 | 22 | Plano de ação 30/60/90 | Conter, estruturar, sustentar, indicadores | O | R | – | – | – | – |
 | 23 | Camada 8: fator humano | Decisão do operador, gatilho da vítima, viés do analista | O | O | R | O | O | – |
 | 24 | Brasil e América Latina | Evidência regional ou a frase padrão de ausência | O | O | O | R | R | R |
 | 25 | Hipóteses concorrentes e o que não se afirma | O que derrubaria a tese | O | O | R | O | O | – |
-| 26 | Previsões verificáveis | O que esperar e como conferir depois | R | R | O | O | – | – |
+| 26 | Perspectivas: previsões verificáveis | O que esperar e como conferir depois | O | R | O | O | – | – |
+| 26b | Conclusão | O que o período mostrou, o que decide o resultado, o que não se sabe | O | O | O | – | R | – |
 | 27 | Indicadores | Tipo, valor desarmado, tier, validade, fonte | R | O | – | – | R | O |
 | 28 | Qualidade das fontes | Quantas A, B, C; lidas no original ou por busca | O | O | O | R | R | – |
 | 29 | Glossário | Termos em uma linha | O | O | R | – | – | – |

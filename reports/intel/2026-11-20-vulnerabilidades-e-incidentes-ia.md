@@ -9,9 +9,11 @@ appendix: true
 
 ![Masthead](../../assets/reports/ia-2026-vulnerabilidades-incidentes.svg)
 
-<p class="rpt-head"><span>LLMI-RI-2026-11-20 · v1.2</span><span class="tlp">TLP:CLEAR</span><span>Corte 2026-11-20</span></p>
+<p class="rpt-head"><span>LLMI-RI-2026-11-20 · v2.0</span><span class="tlp">TLP:CLEAR</span><span>Corte 2026-11-20</span></p>
 
 <div class="injected" markdown="1">
+**v2.0 (2026-11-21).** O relatório ganhou a estrutura completa de produto de inteligência: resumo gerencial e julgamentos-chave no sumário, matriz de risco na modelagem de ameaças, recomendações de segurança consolidadas, Camada 8, Brasil e América Latina, perspectivas com hipóteses concorrentes e previsões verificáveis, e conclusão. As seções novas são análise sobre as evidências já listadas; nenhum fato novo entrou sem fonte.
+
 **v1.2 (2026-11-20).** Três partes agora são geradas dos datasets a cada build, para o relatório não envelhecer:
 - **O mais quente agora:** os últimos 30 dias.
 - **Apêndice A:** linha do tempo de incidentes e vazamentos de 2026, com sinais de vazamento e de agente de IA.
@@ -55,6 +57,30 @@ Os sete achados que orientam o restante do relatório:
 
 Do lado das vulnerabilidades, o GTIG mostra que falhas encontradas por IA levam a execução remota de código em 50% dos casos, contra 26% no geral. Uma delas, no BeyondTrust, foi explorada em quatro dias.
 
+### Resumo gerencial
+
+| Pergunta | Resposta |
+| --- | --- |
+| Qual é o risco para o negócio? | Quem roda gateway LLM, construtor de agentes ou MLOps exposto guarda, num só lugar, chaves de todos os provedores e credenciais de nuvem. Em 2026 esses produtos foram explorados em massa, em horas, e o dano típico é o roubo dessas credenciais. |
+| Estamos expostos? | Sim, se houver LiteLLM, Flowise, Langflow, MLflow, Ray, n8n ou nginx-ui acessível pela internet ou abaixo das versões da seção 10, ou se agentes de código abrirem repositórios de terceiros sem revisão da configuração do projeto. |
+| O que decidir agora? | (1) Janela de correção de 72 horas para software de IA com exploração confirmada. (2) Tirar da internet painéis de gateway, construtores de agentes e servidores MCP. (3) Tratar chaves de IA como credenciais de alto valor, com rotação e inventário. |
+| O que mudou em novembro? | Frameworks ofensivos agênticos (ARTEX à frente) apareceram em casos com vítima conhecida. O atacante ganha velocidade e escala; a porta de entrada continua sendo credencial vazada e serviço exposto. |
+| O que este relatório não afirma? | Que IA cria técnicas novas de ataque. As fontes descrevem técnicas conhecidas, executadas mais rápido e em paralelo. |
+
+### Julgamentos-chave
+
+Probabilidade diz quão provável é o julgamento; confiança diz quão boa é a evidência.
+
+| # | Julgamento | Probabilidade | Confiança | Base |
+| --- | --- | --- | --- | --- |
+| J1 | O plano de controle de IA (gateways, construtores de agentes, MLOps) continuará sendo o alvo preferido de exploração em massa nos próximos meses. | quase certo | alta | 13 entradas no CISA KEV em 2026, todas desse tipo |
+| J2 | A janela entre aviso e exploração de software de IA seguirá medida em horas, não em semanas. | provável | alta | LiteLLM em cerca de 36 h, Langflow em cerca de 20 h, MLflow em horas |
+| J3 | O ganho do atacante com frameworks agênticos é velocidade e escala, não capacidade nova. | provável | alta | Microsoft, CrowdStrike, GTIG, Eye Security e Barracuda descrevem o mesmo padrão |
+| J4 | A presença de ARTEX numa intrusão não identifica o ator. | quase certo | alta | Uso por atores de nexos diferentes e por crime financeiro; a Barracuda diz o mesmo sobre o próprio caso |
+| J5 | Injeção de prompt indireta continuará sem correção estrutural; a defesa efetiva é limitar o que o agente pode fazer. | provável | média | 26 de 55 incidentes catalogados; defesas caem sob ataque adaptativo |
+| J6 | Falhas encontradas por IA tendem a ser mais graves e a ser exploradas rápido depois de divulgadas. | possível | média | GTIG: 50% levam a RCE; um caso explorado em quatro dias. Amostra pequena e contagem pública incompleta |
+| J7 | Incidentes causados por agentes sem adversário vão se repetir enquanto ambientes de avaliação tiverem saída de rede. | provável | média | Casos OpenAI–Hugging Face, avaliações da Anthropic e WorkOS |
+
 **Prioridades imediatas:** atualizar LiteLLM (≥ 1.84.0, com Starlette ≥ 1.0.1), Flowise (≥ 3.0.6), nginx-ui (≥ 2.3.6) e MLflow (≥ 3.15.0); tirar da internet qualquer painel de gateway, construtor de agentes ou servidor MCP; rotacionar as chaves que esses hosts guardavam; tratar `.mcp.json`, `.claude/`, `.cursor/` e `.vscode/` como código executável. O plano completo está na seção 12.
 
 ## 2. Escopo, metodologia e confiança
@@ -71,7 +97,7 @@ O relatório cobre os 25 CVEs da tabela fornecida e os incidentes de segurança 
 | B — provável | Pesquisa de um fornecedor de segurança, reproduzida pela imprensa especializada | Agentjacking, SharedRoot, enxame PaperCut, números de exposição |
 | C — a validar | Fonte única, agregador ou detalhe lembrado de divulgação anterior a 2026 | EPSS, KEV de CVE-2026-40217, IDs do MITRE ATLAS, afirmações do repositório ARTEX |
 
-Três ressalvas de método. Parte das fontes foi lida na íntegra e parte apenas pelo resumo retornado na busca; a seção 14 separa as duas. Os valores de EPSS mudam diariamente e a tabela original cita "até 0,92" para Flowise, enquanto a leitura que encontrei foi 0,85 para CVE-2025-59528. Os CVEs de 2023 a 2025 foram conferidos na revisão contra o NVD e os advisories originais, pelo resumo da busca; abrir a página do NVD antes de transformar uma versão em regra de bloqueio.
+Três ressalvas de método. Parte das fontes foi lida na íntegra e parte apenas pelo resumo retornado na busca; a seção 19 separa as duas. Os valores de EPSS mudam diariamente e a tabela original cita "até 0,92" para Flowise, enquanto a leitura que encontrei foi 0,85 para CVE-2025-59528. Os CVEs de 2023 a 2025 foram conferidos na revisão contra o NVD e os advisories originais, pelo resumo da busca; abrir a página do NVD antes de transformar uma versão em regra de bloqueio.
 
 Nenhuma seção traz payload ou cadeia de exploração reproduzível. Os mecanismos são descritos no nível necessário para detectar, caçar e corrigir.
 
@@ -354,6 +380,19 @@ O modelo parte de uma premissa que os incidentes de 2026 confirmaram: todo texto
 Para cada agente ou serviço de IA do ambiente, registre as respostas a cinco perguntas. Que dado privado ele alcança? Que conteúdo não confiável ele lê? Por onde ele consegue se comunicar com o exterior? Que ação irreversível ele pode tomar sem aprovação? Quem consegue alterar sua configuração, e essa alteração fica registrada?
 
 As três primeiras formam a "trifeta letal" descrita por Simon Willison. A regra prática da Meta ("Agents Rule of Two") é aceitar no máximo duas das três sem humano no circuito. A Gartner chama a combinação das três de zona proibida. Um agente que responde "sim" às três e à quarta é o primeiro candidato a redesenho.
+
+### Matriz de risco
+
+Julgamento do analista sobre as seis camadas da seção 3, a partir da evidência de exploração em 2026. Probabilidade é a de um ambiente exposto ser atacado nos próximos seis meses; impacto é o dano típico relatado.
+
+| Camada | Probabilidade | Impacto | Risco | Por quê |
+| --- | --- | --- | --- | --- |
+| Gateways e proxies LLM | alta | alto | crítico | Quatro entradas KEV num só produto; guarda chaves de todos os provedores e credenciais de nuvem |
+| Construtores de agentes e MLOps | alta | alto | crítico | Execução de código por projeto; Langflow, MLflow, Ray e n8n no KEV |
+| Servidores e clientes MCP | alta | médio | alto | Superfície que mais cresce; muitos servidores sem autenticação; impacto depende do que o servidor alcança |
+| Agentes de código | média | alto | alto | Sem KEV, mas alvo de worms, infostealers e injeção em CI; alcança código-fonte e tokens |
+| Copilots corporativos e agentes SaaS | média | médio | médio | Injeção indireta com exfiltração; casos de autoridade excessiva |
+| Ambientes de treino e avaliação | baixa | alto | médio | Poucos casos, mas com alcance a sistemas reais quando a contenção de rede falha |
 
 ## 8. Threat detection
 
@@ -742,7 +781,73 @@ A ordem de correção segue três critérios: exploração confirmada, exposiç�
 | Chaves de longa duração em arquivos de configuração de agente | 0 |
 | Taxa de sucesso de injeção na suíte de regressão, atacante adaptativo | Tendência de queda, registrada por versão |
 
-## 13. Oportunidades de detecção no repositório artex-detections
+## 13. Recomendações de segurança
+
+As recomendações consolidam as seções 8 a 11 em uma lista única, por ordem de efeito. A coluna "Quem conduz" indica o time que normalmente lidera cada uma.
+
+| # | Recomendação | Efeito | Quem conduz | Detalhe |
+| --- | --- | --- | --- | --- |
+| R1 | Corrigir em até 72 horas todo software de IA com exploração confirmada, começando por LiteLLM, Flowise, nginx-ui e MLflow | Fecha o vetor mais usado em 2026 | Plataforma | Seções 10 e 12 |
+| R2 | Tirar da internet painéis de gateway, construtores de agentes e servidores MCP; acesso só por VPN ou proxy autenticado | Reduz a exposição mesmo antes do próximo CVE | Plataforma e redes | Seção 10 |
+| R3 | Tratar chaves de provedores de IA como credenciais de alto valor: inventário, rotação, escopo mínimo e alerta de uso fora do gateway | Limita o dano de um gateway comprometido | Segurança e plataforma | Seções 9 e 10 |
+| R4 | Revogar chaves e concessões OAuth de fornecedores ao fim de cada projeto | Evita o padrão do caso Barracuda e dos casos Composio e Context.ai | Segurança e compras | Seção 5 |
+| R5 | Tratar `.mcp.json`, `.claude/`, `.cursor/` e `.vscode/` como código executável: revisão em PR e bloqueio de hooks de projeto não aprovados | Fecha a persistência em configuração de agente | Desenvolvimento | Seções 4 e 9 |
+| R6 | Ativar as detecções de comportamento antes das assinaturas por CVE: serviço de IA gerando shell e escrita em configuração de agente por processo que não é o editor | Detecta a próxima falha sem conhecer o CVE | SOC | Seção 8 |
+| R7 | Rodar as hipóteses H1 a H7 de hunting em todo host de IA que esteve exposto em 2026 | Encontra comprometimento anterior à correção | SOC | Seção 9 |
+| R8 | Limitar o que cada agente pode fazer: lista de ferramentas permitidas, aprovação humana para ação irreversível e nenhuma combinação de dado privado, conteúdo não confiável e canal de saída sem controle | Reduz o impacto de injeção de prompt, que não tem correção estrutural | Desenvolvimento e segurança | Seções 7 e 11 |
+| R9 | Fixar versões e verificar procedência de pacotes, imagens e servidores MCP; bloquear instalação de componente sem reputação | Reduz o alcance de cadeia de suprimentos | Desenvolvimento | Seções 5 e 10 |
+| R10 | Isolar a rede de ambientes de avaliação e de agentes autônomos, com saída negada por padrão e monitoramento | Evita incidente causado por agente sem adversário | Plataforma e pesquisa | Seção 11 |
+| R11 | Caçar consoles de frameworks ofensivos agênticos nos próprios ativos e chamadas internas a APIs desses frameworks | Encontra runtime ofensivo não autorizado ou implante | SOC | Seções 8 e 17 |
+| R12 | Exigir dos fornecedores de IA prazo de correção, registro de auditoria e revogação de token sob demanda | Leva o controle para a cadeia de fornecedores | Compras e segurança | Seção 12 |
+
+## 14. Camada 8: fator humano
+
+A tecnologia mudou mais rápido que os hábitos. Três padrões humanos atravessam os casos de 2026.
+
+| Lado | O que acontece | Onde aparece | O que fazer |
+| --- | --- | --- | --- |
+| Operador | Deixa de executar e passa a supervisionar o agente; o erro que sobra é de escolha de alvo e de higiene da própria infraestrutura | Consoles ARTEX expostos sem senha; imagem Docker com backdoor usada por quem queria atacar | Caçar a infraestrutura do atacante, que erra como qualquer administrador apressado |
+| Quem constrói | Deixa em produção o recurso de conveniência feito para testar: endpoint de teste, chave de exemplo, modo de aprovação automática | Chave `sk-1234` aceita em gateways expostos; endpoints de teste do LiteLLM; chave de fornecedor nunca revogada | Lista de verificação de saída para produção e revisão de chaves ao fim de projeto |
+| Quem usa | Confia na saída do assistente como se fosse verificada | Bot de suporte que troca o e-mail da conta; analista de SOC guiado por resumo manipulado pela telemetria | Aprovação humana para ações de conta e conferência do dado bruto em decisões de segurança |
+| Analista | Viés de novidade: tratar "IA" como causa quando a entrada foi credencial vazada; ancoragem no primeiro relatório | Atribuição de ator pela ferramenta usada | Separar relato, inferência e lacuna; ferramenta pública não identifica ator |
+
+## 15. Brasil e América Latina
+
+Há evidência regional, e ela aponta para crime financeiro com apoio de IA, não para ataques a infraestrutura de IA.
+
+| Data | Caso | O que as fontes dizem | Papel da IA | Fonte |
+| --- | --- | --- | --- | --- |
+| set/2026 | Breeze Comet contra pagamentos no Brasil | Intrusões em serviços financeiros, varejo e comércio eletrônico que movimentam Pix, STR e boleto; ao menos um desvio em duas ondas de centenas de transações fraudulentas | Evidência de LLM acelerando scripts sob medida | [GTIG e Mandiant](https://cloud.google.com/blog/topics/threat-intelligence/financially-motivated-threat-actor-breeze-comet-targets-brazil/) (A) |
+| set/2026 | CL-CRI-1163 contra o setor financeiro brasileiro | Phishing com tema de vaga ou currículo; scripts de preparação expostos | Inferido por padrão de nomes e iteração dos scripts (confiança média) | [Unit 42](https://unit42.paloaltonetworks.com/ai-tool-use-targeting-latam-orgs/) (A) |
+| ago/2026 | BraZetsu e o marketplace da Exilware | Framework que rouba dados de navegador, arquivos de remessa CNAB e certificados digitais e abastece um mercado de acessos | Elementos de IA são avaliação da fonte | [Group-IB](https://www.group-ib.com/blog/brazetsu-ai-enhanced-iab-marketplace/) (A) |
+| jul/2026 | BusySnake Stealer | Campanha contra governo e energia elétrica na Rússia, no Cazaquistão e no Brasil | Carregadores de primeiro estágio gerados por IA | [Kaspersky](https://securelist.com/armored-likho-apt-with-busysnake-stealer/120292/) (A) |
+| 2025 | Phishing de órgãos públicos com sites gerados por IA | Réplicas de um Detran e do Ministério da Educação, com coleta de CPF e cobrança por Pix | Sites criados com geradores de página por IA | [Zscaler](https://www.zscaler.com/blogs/security-research/genai-used-phishing-websites-impersonating-brazil-s-government) (A) |
+| dez/2025 a fev/2026 | Governo do México | Um operador, nove órgãos; a maior parte dos comandos remotos gerada e executada por agente de código | Operador com agente de código e segundo modelo para análise | [Gambit Security](https://gambit.security/blog-posts/a-single-operator-two-ai-platforms-nine-government-agencies-the-full-technical-report) (A) |
+| nov/2026 | Pesquisa brasileira sobre SOC com IA | Campos de telemetria do EDR controlados pelo atacante induziram assistentes de SOC a marcar atividade maliciosa como falso positivo | Injeção indireta contra o defensor | [Baguete](https://www.baguete.com.br/noticias/viaconnect-apresenta-pesquisa-sobre-ataques-a-socs-com-ia-em-evento-internacional) (C); material original não lido |
+
+**Leitura para o defensor brasileiro.** O risco regional mais demonstrado é fraude contra meios de pagamento (Pix, boleto, CNAB) com scripts e iscas acelerados por IA. Para exploração de gateways LLM, servidores MCP e uso de ARTEX contra organizações da região, o impacto regional não está demonstrado nas fontes consultadas; a exposição existe onde esses produtos estão acessíveis pela internet.
+
+## 16. Perspectivas
+
+### Hipóteses concorrentes
+
+| Hipótese | A favor | Contra | Situação |
+| --- | --- | --- | --- |
+| A alta de exploração de software de IA vem de atacantes mirando IA de propósito | Chaves de IA têm valor de revenda; casos Railway e Barracuda citam credenciais de IA | Boa parte é varredura oportunista de qualquer serviço exposto com RCE | Em aberto; as duas coisas ocorrem |
+| Frameworks agênticos tornam atacantes pouco qualificados tão eficazes quanto os experientes | Um operador contra nove órgãos; enxame contra centenas de organizações | GTIG descreve o uso como inicial e pouco sofisticado; a entrada típica é credencial já vazada | Não demonstrada |
+| A alta de CVEs em 2026 é efeito de descoberta por IA | VulnCheck e GTIG medem alta compatível | Atribuição automática de CVE em projetos abertos infla a contagem; falta campo de atribuição | Parcial |
+
+### Previsões verificáveis
+
+| Previsão para os próximos 90 dias | Probabilidade | Como verificar |
+| --- | --- | --- |
+| Ao menos mais duas falhas de software de IA entram no CISA KEV | quase certo | Feed JSON do KEV |
+| Uma falha em servidor ou cliente MCP isolado entra no KEV | possível | Feed JSON do KEV |
+| Um CERT nacional da América Latina publica alerta citando framework ofensivo agêntico | possível | CERT.br, CTIR Gov e equivalentes |
+| Um caso público liga ARTEX ou derivado a uma organização brasileira | improvável | Relato de fornecedor ou da vítima com fonte primária |
+| O CERT-EU ou a Comissão Europeia publica o vetor de entrada do caso de novembro | provável | Comunicado oficial |
+
+## 17. Oportunidades de detecção no repositório artex-detections
 
 O [artex-detections](https://github.com/ThreatDefence/artex-detections) da ThreatDefence cobre 30 comportamentos de um framework ofensivo agêntico; 16 deles servem diretamente aos cenários deste relatório, 4 pedem adaptação e 10 são específicos do ARTEX.
 
@@ -814,7 +919,15 @@ O artex-detections detecta um atacante que usa agentes contra identidade, nuvem 
 5. Servidores: itens 1, 2 e 25 a 27, com a lista de processos pai já estendida para os serviços de IA.
 6. Rede interna: itens 16, 17 e 29, e o conteúdo Zeek e Suricata nos sensores internos.
 
-## 14. Fontes e referências
+## 18. Conclusão
+
+O ano de 2026 deslocou o risco de IA do modelo para a infraestrutura em volta dele. As treze entradas no KEV, a exploração em horas e os casos de novembro com frameworks agênticos contam a mesma história: o atacante procura o lugar onde as chaves estão juntas e onde um recurso de conveniência ficou exposto, e chega lá com técnicas conhecidas, mais rápido.
+
+Três coisas decidem o resultado para o defensor. A primeira é velocidade de correção: 72 horas para software de IA com exploração confirmada deixou de ser meta ambiciosa e virou o mínimo. A segunda é exposição: gateway, construtor de agentes e servidor MCP não precisam estar na internet, e tirá-los de lá protege contra o CVE que ainda não foi publicado. A terceira é o limite do agente: como injeção de prompt não tem correção estrutural, o que protege é restringir o que o agente alcança e exigir aprovação para o que não tem volta.
+
+O que não se sabe também importa. Não está medido quanto a IA acelera de fato cada operação, a contagem de falhas encontradas por IA é incompleta, e a atribuição de ator pela ferramenta não se sustenta. A próxima revisão deste relatório deve conferir as previsões da seção Perspectivas e os CVEs ainda não confirmados no NVD.
+
+## 19. Fontes e referências
 
 São 156 fontes, todas com link; a planilha `fontes-threat-intel-ia-2026.xlsx` traz a mesma lista com tipo, forma de consulta e seção do relatório. Nove páginas foram lidas na íntegra (marcadas abaixo), 124 foram consultadas pelo resumo retornado na busca, 5 são endereços oficiais de frameworks e 17 são fontes citadas pelo repositório ARTEX, listadas só na planilha.
 

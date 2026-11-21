@@ -95,9 +95,9 @@ def art(name: str, cls: str = "art") -> str:
     return f'<div class="{cls}">{svg}</div>'
 
 
-def md_section(md: str, number: str) -> str:
-    """The body of '## {number}. …' without its heading, up to the next '## '."""
-    m = re.search(rf"^## {re.escape(number)}\.\s.*$", md, re.M)
+def md_section(md: str, key: str) -> str:
+    """The body of the '## N. <title>' section whose title starts with key (or whose number is key), without the heading."""
+    m = re.search(rf"^## (?:{re.escape(key)}\.\s.*|\d+\.\s+{re.escape(key)}.*)$", md, re.M)
     if not m:
         return ""
     rest = md[m.end():]
@@ -303,7 +303,7 @@ def build(out: Path, toc_pages: dict[str, int] | None = None) -> None:
 <header class="cv-top"><span>LLMINJECTION · INTELIGÊNCIA DE AMEAÇAS</span><span class="tlp">TLP:CLEAR</span></header>
 <div class="cv-title"><div class="cv-kicker">Relatório de inteligência de ameaças · 2026</div><h1>{TITLE}</h1><p>{SUB}</p></div>
 {art("enxame", "cv-monster")}
-<footer class="cv-foot"><div><b>{CODE}</b> · v2.0</div><div>Corte {CUT}</div><div>Mapa: atores com campanhas em 2026 e as ferramentas agênticas que usaram</div></footer>
+<footer class="cv-foot"><div><b>{CODE}</b> · v2.1</div><div>Corte {CUT}</div><div>Mapa: atores com campanhas em 2026 e as ferramentas agênticas que usaram</div></footer>
 </body></html>"""
     (out / "cover.html").write_text(cover, encoding="utf-8")
 
@@ -312,7 +312,7 @@ def build(out: Path, toc_pages: dict[str, int] | None = None) -> None:
     B.append(f"""<section class="page front">
 <div class="fm-head"><span class="eyebrow">Ficha do relatório</span><h2>{TITLE}</h2><p class="lead">{SUB}</p></div>
 <dl class="fm">
-<dt>Código</dt><dd>{CODE} · versão 2.0</dd><dt>Data de corte</dt><dd>{CUT}</dd><dt>Classificação</dt><dd><span class="tlpb">TLP:CLEAR</span> distribuição pública</dd>
+<dt>Código</dt><dd>{CODE} · versão 2.1</dd><dt>Data de corte</dt><dd>{CUT}</dd><dt>Classificação</dt><dd><span class="tlpb">TLP:CLEAR</span> distribuição pública</dd>
 <dt>Produzido por</dt><dd>LLMInjection, inteligência aberta de ameaças a sistemas de IA, LLM e agentes</dd>
 <dt>Base</dt><dd>Relatório autoral de 20/11/2026 (156 fontes) somado aos datasets do repositório: {len(vul)} vulnerabilidades, {len(inc)} incidentes, {len(cam)} campanhas, {len(actors)} atores, {len(det)} detecções, {len(ctr)} controles</dd>
 <dt>Edição web</dt><dd>ridd1kulusc0d3r.github.io/LLmInjection</dd></dl>
@@ -325,10 +325,10 @@ def build(out: Path, toc_pages: dict[str, int] | None = None) -> None:
     B.append('<section class="page toc"><span class="mk">@@toc@@</span><span class="eyebrow">Sumário</span><h2 class="toc-h">O que está neste relatório</h2><ol class="tocl">@@TOCLIST@@</ol></section>')
 
     # 01 summary
-    s1 = md_section(md, "1")
+    s1 = md_section(md, "Sumário executivo")
     finds = re.findall(r"^\d+\.\s+\*\*(.+?)\*\*\s*(.+)$", s1, re.M)
     prio = re.search(r"\*\*Prioridades imediatas:\*\*\s*(.+)", s1)
-    upd = re.search(r"\*\*Atualização v1\.1:\*\*([\s\S]+?)\n\n\*\*Prioridades", s1)
+    upd = re.search(r"\*\*Atualização v1\.1:\*\*([\s\S]+?)(?=\n\n(?:### |\*\*Prioridades))", s1)
     B.append(doc.opener("s01", "01", "Sumário executivo", "O que mudou em 2026, em sete julgamentos, e o que fazer primeiro.", "devorador"))
     B.append('<div class="kpis">' + "".join(f'<div class="kpi"><b>{esc(v)}</b><span>{esc(lbl)}</span></div>' for v, lbl in K) + "</div>")
     B.append('<div class="bluf"><span>BLUF</span>' + esc(re.sub(r"\s+", " ", s1.strip().split("\n\n")[0])) + "</div>")
@@ -337,6 +337,10 @@ def build(out: Path, toc_pages: dict[str, int] | None = None) -> None:
         B.append('<div class="callout">' + doc.render(upd.group(1).strip()) + "</div>")
     if prio:
         B.append('<div class="prio"><h4>Prioridades imediatas</h4>' + doc.render(prio.group(1)) + "</div>")
+    for sub in ("Resumo gerencial", "Julgamentos-chave"):
+        body = md_sub(md, sub)
+        if body:
+            B.append(doc.render(f"### {sub}\n{body.split(chr(10) + '**Prioridades imediatas:**')[0]}"))
 
     # hot: last 30 days
     evs = events(inc, cam, rel, src, tools)
@@ -350,7 +354,7 @@ def build(out: Path, toc_pages: dict[str, int] | None = None) -> None:
 
     # scope, method and verification notes
     B.append(doc.opener("sscope", "03", "Escopo, metodologia e confiança", "O que entra, o que fica de fora, como cada afirmação foi conferida e o que mudou entre as versões."))
-    B.append(doc.render(md_section(md, "2")))
+    B.append(doc.render(md_section(md, "Escopo")))
     inj = re.search(r'<div class="injected" markdown="1">([\s\S]+?)</div>', md)
     if inj:
         B.append(doc.render("### Notas de versão e verificação\n\n" + inj.group(1).strip()))
@@ -358,7 +362,7 @@ def build(out: Path, toc_pages: dict[str, int] | None = None) -> None:
     # 02 landscape
     B.append(doc.opener("s02", "02", "Panorama de ameaças", "Onde a exploração de 2026 se concentrou, e a velocidade com que aconteceu.", "parasita"))
     B.append(brp.kev_chart(vul).replace('href="../#node=', 'href="https://ridd1kulusc0d3r.github.io/LLmInjection/#node='))
-    B.append(doc.render(md_section(md, "3")))
+    B.append(doc.render(md_section(md, "Panorama")))
 
     # 03 actor map
     B.append(doc.opener("s03", "03", "Mapeamento de atores de ameaças", "Quem usou IA contra quem em 2026, e com quais ferramentas agênticas.", "rastreador"))
@@ -372,11 +376,11 @@ def build(out: Path, toc_pages: dict[str, int] | None = None) -> None:
     for a, n, ts in act_nodes:
         rows.append(f"| {esc(a['name'])} | {esc(nexus_pt(a.get('nexus')))} | {esc(', '.join(roles_pt.get(x, x) for x in a.get('ai_role', [])))} | {n} | {esc(', '.join(tools.get(t, t) for t in sorted(ts)) or '—')} | {CONF.get(a.get('confidence'), a.get('confidence', ''))} |")
     B.append(doc.render("| Ator | Nexo | Papel da IA | Campanhas 2026 | Ferramentas agênticas | Confiança |\n| --- | --- | --- | --- | --- | --- |\n" + "\n".join(rows)))
-    B.append(doc.render(md_section(md, "6")))
+    B.append(doc.render(md_section(md, "Atores")))
 
     # 04 timeline
     B.append(doc.opener("s04", "04", "Linha do tempo de incidentes e vazamentos", "Os casos de 2026 com impacto confirmado, exploração ativa ou técnica nova.", "enxame"))
-    tl = md_section(md, "5")
+    tl = md_section(md, "Cronologia")
     intro = tl.strip().split("\n\n")[0]
     B.append(doc.render(intro))
     trows = re.findall(r"^\| (?!Data|---)(.+?) \| (.+?) \| (\w+) \| (.+?) \|$", tl, re.M)
@@ -392,7 +396,7 @@ def build(out: Path, toc_pages: dict[str, int] | None = None) -> None:
 
     # 05 vulnerabilities
     B.append(doc.opener("s05", "05", "Vulnerabilidades documentadas", "Os CVEs que importam, o que o KEV confirma e o que agentes de IA já encontram.", "devorador"))
-    s4 = md_section(md, "4")
+    s4 = md_section(md, "Análise dos CVEs")
     B.append(doc.render(s4.split("### LiteLLM")[0]))
     B.append(doc.render("### Vulnerabilidades encontradas por IA\n" + md_sub(md, "Vulnerabilidades encontradas por IA")))
     for sub in ("LiteLLM: o caso mais grave da tabela", "Flowise", "Família MCP", "Agentes de código e copilots", "CrewAI", "Rejeitados: Rails, Adminer e Achievo"):
@@ -424,7 +428,7 @@ def build(out: Path, toc_pages: dict[str, int] | None = None) -> None:
 
     # 07 threat modeling
     B.append(doc.opener("s07", "07", "Modelagem de ameaças", "Ativos, fronteiras de confiança e os cenários de abuso que mais se repetem em stacks de IA.", "mimico"))
-    B.append(doc.render(md_section(md, "7")))
+    B.append(doc.render(md_section(md, "Threat modeling")))
 
     # 08 detection matrix
     B.append(doc.opener("s08", "08", "Matriz de detecção", "Cada técnica, o que a detecta, o que já tem regra pronta e o que a testa.", "rastreador"))
@@ -465,17 +469,17 @@ def build(out: Path, toc_pages: dict[str, int] | None = None) -> None:
             covers = sorted(r["target"] for r in rel if r["source"] == d["id"] and r["relationship"] == "detects")
             drows.append(f"| {d['id']} | {esc(d['name'])} | {esc(', '.join(sorted(set(rule[d['id']]))))} | {esc(', '.join(c.replace('LLMI-', '') for c in covers))} |")
     B.append(doc.render("### Detecções com regra pronta\n\n| ID | Detecção | Formatos | Cobre |\n| --- | --- | --- | --- |\n" + "\n".join(drows)))
-    B.append(doc.render(md_section(md, "8")))
-    B.append(doc.render("### Oportunidades no repositório artex-detections\n" + md_section(md, "13")))
+    B.append(doc.render(md_section(md, "Threat detection")))
+    B.append(doc.render("### Oportunidades no repositório artex-detections\n" + md_section(md, "Oportunidades")))
 
     # 09 hunting
     B.append(doc.opener("s09", "09", "Threat hunting", "Doze hipóteses, as consultas de partida e o que fazer quando uma delas confirma.", "enxame"))
-    B.append(doc.render(md_section(md, "9")))
+    B.append(doc.render(md_section(md, "Threat hunting")))
 
     # 10 harness/guardrails/hardening
     B.append(doc.opener("s10", "10", "Harness, guardrails e hardening", "Corrigir resolve o CVE da semana; reduzir exposição e privilégio resolve o próximo.", "parasita"))
-    B.append(doc.render(md_section(md, "11")))
-    B.append(doc.render(md_section(md, "10")))
+    B.append(doc.render(md_section(md, "Harness")))
+    B.append(doc.render(md_section(md, "Hardening")))
     lay_pt = {"guardrail": "Guardrail", "hardening": "Hardening", "monitoring": "Monitoramento"}
     crow = []
     for c in sorted(ctr, key=lambda c: (c.get("layer", ""), c["name"])):
@@ -483,9 +487,23 @@ def build(out: Path, toc_pages: dict[str, int] | None = None) -> None:
         crow.append(f"| {lay_pt.get(c.get('layer'), c.get('layer'))} | {esc(c['name'])} | {esc((c.get('description') or '')[:170])} | {esc(', '.join(t.replace('LLMI-', '') for t in ts))} |")
     B.append(doc.render("### Controles do repositório por camada\n\n| Camada | Controle | O que faz | Técnicas |\n| --- | --- | --- | --- |\n" + "\n".join(crow)))
 
+    # recommendations
+    B.append(doc.opener("srec", "11", "Recomendações de segurança", "Doze recomendações em ordem de efeito, com quem costuma conduzir cada uma."))
+    B.append(doc.render(md_section(md, "Recomendações de segurança")))
+
     # 11 plan
     B.append(doc.opener("s11", "11", "Plano de ação 30/60/90", "Conter, estruturar e sustentar, com indicadores para acompanhar.", "devorador"))
-    B.append(doc.render(md_section(md, "12")))
+    B.append(doc.render(md_section(md, "Plano de ação")))
+
+    # human factor, region, outlook, conclusion
+    B.append(doc.opener("sc8", "11", "Camada 8: fator humano", "Os hábitos de quem opera, constrói, usa e analisa, e o que fazer com cada um."))
+    B.append(doc.render(md_section(md, "Camada 8")))
+    B.append(doc.opener("sbr", "11", "Brasil e América Latina", "O que as fontes mostram na região e o que ainda não está demonstrado."))
+    B.append(doc.render(md_section(md, "Brasil e América Latina")))
+    B.append(doc.opener("sout", "11", "Perspectivas", "Hipóteses concorrentes e previsões que podem ser conferidas em 90 dias."))
+    B.append(doc.render(md_section(md, "Perspectivas")))
+    B.append(doc.opener("sconc", "11", "Conclusão", "O que o ano mostrou, o que decide o resultado e o que ainda não se sabe."))
+    B.append('<div class="concl">' + doc.render(md_section(md, "Conclusão")) + "</div>")
 
     # glossary
     B.append(doc.opener("s12", "12", "Glossário", "Os termos deste relatório, em uma linha cada.", "mimico"))
@@ -500,7 +518,7 @@ def build(out: Path, toc_pages: dict[str, int] | None = None) -> None:
     refs = sorted((src[s] for s in used_src if s in src and src[s].get("url", "").startswith("https://")), key=lambda s: (s.get("grade", "Z"), s.get("publisher", ""), s["name"]))
     B.append('<p class="note">Fontes que sustentam os registros de 2026 citados neste relatório, ordenadas por grau. A lista completa do relatório autoral segue depois.</p>')
     B.append('<ol class="refs">' + "".join(f'<li><span class="g {esc(s.get("grade", ""))}">{esc(s.get("grade", ""))}</span> <b>{esc(s.get("publisher", ""))}.</b> {esc(s["name"])}. <a href="{esc(s["url"])}">{esc(s["url"])}</a></li>' for s in refs) + "</ol>")
-    B.append(doc.render("### Fontes do relatório autoral\n" + md_section(md, "14")))
+    B.append(doc.render("### Fontes do relatório autoral\n" + md_section(md, "Fontes")))
 
     # appendices
     B.append(doc.opener("sappA", "A", "Apêndice A: linha do tempo de incidentes e vazamentos de 2026", f"Todos os incidentes e campanhas de 2026 nos datasets ({len(evs)} registros), sem exercícios e artefatos de pesquisa."))
@@ -519,7 +537,7 @@ def build(out: Path, toc_pages: dict[str, int] | None = None) -> None:
     (out / "toc-keys.json").write_text(json.dumps([k for k, _, _ in doc.toc]), encoding="utf-8")
 
     # ---------- back cover ----------
-    (out / "back.html").write_text(back_cover(css, K, CODE, "v2.0"), encoding="utf-8")
+    (out / "back.html").write_text(back_cover(css, K, CODE, "v2.1"), encoding="utf-8")
 
 
 def build_dossier(md_path: Path, out: Path, toc_pages: dict[str, int] | None = None) -> None:

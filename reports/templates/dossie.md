@@ -90,10 +90,13 @@ Evidência regional, ou: *impacto regional não demonstrado nas fontes consultad
 ## 15. Para acompanhar
 O que confirmaria e o que derrubaria os julgamentos; data da próxima revisão.
 
-## 16. Mudanças no repositório
+## 16. Conclusão
+O que o caso ensina e o que fazer primeiro, em dois parágrafos.
+
+## 17. Mudanças no repositório
 Registros criados ou alterados e o que ficou na fila de pesquisa.
 
-## 17. Fontes
+## 18. Fontes
 
 | ID | Publicador | Grau | Lido no original | Data |
 |---|---|---|---|---|
