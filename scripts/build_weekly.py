@@ -68,7 +68,7 @@ def draft(end: dt.date) -> tuple[Path, str]:
         elif in_window(v.get("published", ""), s, e):
             link, g = best(v)
             signals.append((v["published"], "vulnerabilidade", f"{v['identifiers'][0]} · {v['package']}", link, f"`{v['id']}`", "NVD / aviso", v["id"], g))
-    digests = []
+    digests, seen_items = [], set()
     for p in sorted((ROOT / "intake" / "digests").glob("*.json")):
         try:
             d = json.loads(p.read_text(encoding="utf-8"))
@@ -78,6 +78,10 @@ def draft(end: dt.date) -> tuple[Path, str]:
             continue
         digests.append(d["date"])
         for it in d.get("items", []):
+            # An expanded edition (e.g. YYYY-MM-DD-ampliado.json) repeats the daily items: count each item once.
+            if it.get("id") in seen_items:
+                continue
+            seen_items.add(it.get("id"))
             signals.append((d["date"], "digest", it["title"], f"[fonte]({it['url']})", f"`{it['id']}`", SEAL.get(it.get("seal"), it.get("seal", "")), None, it.get("source_grade", "")))
     signals.sort(key=lambda x: (x[0], x[7] or "Z"), reverse=True)
 

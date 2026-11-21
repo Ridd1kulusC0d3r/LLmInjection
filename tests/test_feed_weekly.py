@@ -40,6 +40,12 @@ class WeeklyTests(unittest.TestCase):
         self.assertIn("CVE-2026-40217", text)
         self.assertIn(build_weekly.TODO, text)
 
+    def test_expanded_digest_does_not_double_count_daily_items(self):
+        # 2026-11-21.json and 2026-11-21-ampliado.json share items 23-27; each must appear once.
+        _, text = build_weekly.draft(dt.date(2026, 11, 21))
+        for n in range(23, 36):
+            self.assertEqual(text.count(f"`LLMI-20261121-{n}`"), 1, n)
+
     def test_published_editions_have_no_unfilled_sections(self):
         for p in (ROOT / "reports" / "trends").glob("*.md"):
             self.assertNotIn("A PREENCHER", p.read_text(encoding="utf-8"), p.name)
