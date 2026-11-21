@@ -116,8 +116,8 @@ def draft(end: dt.date) -> tuple[Path, str]:
         L.append("\n**Ferramentas agênticas citadas:** " + ", ".join(f"{k} ({n})" for k, n in used.most_common()) + ".")
     if kev:
         L.append("\n**Novas no KEV:** " + "; ".join(f"{cell(x[2])} ({x[0]})" for x in kev) + ".")
-    L += ["\n## O contraponto\n" + TODO, "\n## Segunda-feira do defensor\n" + TODO + "\n- Uma detecção:\n- Um controle:",
-          "\n## Camada 8\n" + TODO, "\n## Para acompanhar\n" + TODO, "\n---\n", "## Versão curta (LinkedIn)\n"]
+    L += ["\n## O contraponto\n" + TODO, "\n## Segunda-feira do defensor\n" + TODO + "\n- **Uma detecção:**\n- **Um controle:**\n- **Uma hipótese de hunting:**",
+          "\n## Camada 8\n" + TODO, "\n## Brasil e América Latina\n" + TODO, "\n## Para acompanhar\n" + TODO, "\n---\n", "## Versão curta (LinkedIn)\n"]
     bullets = "\n".join(f"- {cell(x[2])[:140]}" for x in signals[:3]) or "- Semana sem sinais novos nos datasets."
     L.append(f"{len(signals)} sinais de ameaça a sistemas de IA na semana de {start:%d/%m} a {end:%d/%m}.\n\n{bullets}\n\n"
              f"Relatório completo, fontes e grau de cada uma: {SITE}#tab=reports\n\n#CTI #SegurançaDeIA #ThreatIntel")
