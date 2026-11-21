@@ -6484,5 +6484,28 @@
     "evidence_sources": [
       "SRC-ANTHROPIC-MYTHOS-PREVIEW"
     ]
+  },
+  {
+    "id": "REL-587",
+    "type": "relationship",
+    "source": "DET-AI-059",
+    "relationship": "detects",
+    "target": "LLMI-T024",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-GHSA-MONAILABEL-TRAVERSAL",
+      "SRC-AWS-CAIRN-MONAI"
+    ]
+  },
+  {
+    "id": "REL-588",
+    "type": "relationship",
+    "source": "DET-AI-059",
+    "relationship": "detects",
+    "target": "LLMI-T015",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-AWS-CAIRN-MONAI"
+    ]
   }
 ]

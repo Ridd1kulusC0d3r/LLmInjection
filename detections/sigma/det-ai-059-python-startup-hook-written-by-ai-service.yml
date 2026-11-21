@@ -1,0 +1,53 @@
+title: Python sitecustomize or usercustomize Written Outside a Package Install
+id: 6afd257d-be8e-462a-ad5b-974b4cf76611
+status: experimental
+description: >
+  Detects creation or modification of sitecustomize.py or usercustomize.py by a process that is not a package
+  manager. Python imports these modules at every interpreter start, so an arbitrary file write in an AI
+  service (for example the MONAI Label datastore upload path traversal, GHSA-qc22-rmgc-vg94, exploited by
+  autonomous Cairn agents per Amazon Threat Intelligence) can be turned into code execution the next time the
+  service or a training job starts. Complements DET-AI-054, which covers .pth files.
+references:
+  - https://aws.amazon.com/blogs/security/chinese-nexus-actors-cairn-ai-agents-found-a-zero-day-on-their-own/
+  - https://github.com/Project-MONAI/MONAILabel/security/advisories/GHSA-qc22-rmgc-vg94
+  - https://attack.mitre.org/techniques/T1546/018/
+  - https://github.com/Ridd1kulusC0d3r/LLmInjection
+author: LLMInjection
+date: 2026-11-21
+tags:
+  - attack.persistence
+  - attack.t1546.018
+  - llminjection.det-ai-059
+  - llminjection.llmi-t024
+  - llminjection.llmi-t015
+logsource:
+  category: file_event
+detection:
+  selection:
+    TargetFilename|endswith:
+      - '/sitecustomize.py'
+      - '/usercustomize.py'
+      - '\\sitecustomize.py'
+      - '\\usercustomize.py'
+  filter_package_managers:
+    Image|endswith:
+      - '/pip'
+      - '/pip3'
+      - '/uv'
+      - '/poetry'
+      - '/conda'
+      - '/mamba'
+      - '/dpkg'
+      - '/rpm'
+      - '/apt'
+      - '\\pip.exe'
+      - '\\uv.exe'
+  filter_pip_module:
+    CommandLine|contains:
+      - '-m pip '
+      - '-m pip install'
+  condition: selection and not filter_package_managers and not filter_pip_module
+falsepositives:
+  - Distribution or image builds that ship a sitecustomize.py; scope to running hosts or allowlist the build user.
+  - Research environments that use sitecustomize for coverage or path setup; inventory and allowlist by path.
+level: high

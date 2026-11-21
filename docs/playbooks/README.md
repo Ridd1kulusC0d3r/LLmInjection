@@ -22,7 +22,7 @@ Sorted by priority, the techniques with the most missing defence first. `E` evid
 | [LLMI-T011](LLMI-T011.md) AI Software Supply Chain Compromise | observed in the wild | 4 | 9 | 2 | 2 | 5 | 1 | 0 |
 | [LLMI-T016](LLMI-T016.md) AI Gateway Credential Compromise | observed in the wild | 4 | 9 | 1 | 3 | 1 | 1 | 0 |
 | [LLMI-T018](LLMI-T018.md) AI Coding-Assistant Workspace Abuse | observed in the wild | 4 | 7 | 1 | 1 | 5 | 2 | 0 |
-| [LLMI-T024](LLMI-T024.md) Exposed or Misconfigured AI Services | observed in the wild | 4 | 23 | 1 | 2 | 3 | 2 | 0 |
+| [LLMI-T024](LLMI-T024.md) Exposed or Misconfigured AI Services | observed in the wild | 4 | 23 | 1 | 3 | 3 | 2 | 0 |
 | [LLMI-T027](LLMI-T027.md) Unsanctioned AI Runtime (Shadow AI) | observed in the wild | 4 | 1 | 2 | 2 | 1 | 2 | 0 |
 | [LLMI-T028](LLMI-T028.md) AI-Assisted Tooling Development | observed in the wild | 4 | 73 | 1 | 1 | 0 | 1 | 0 |
 | [LLMI-T006](LLMI-T006.md) Data or Model Poisoning | demonstrated in research | 3 | 0 | 1 | 0 | 1 | 0 | 1 |
@@ -33,6 +33,6 @@ Sorted by priority, the techniques with the most missing defence first. `E` evid
 | [LLMI-T002](LLMI-T002.md) Indirect Prompt Injection | tied to a disclosed vulnerability | 1.5 | 7 | 1 | 0 | 2 | 3 | 6 |
 | [LLMI-T009](LLMI-T009.md) Memory / Context Poisoning | demonstrated in research | 1 | 2 | 1 | 0 | 2 | 1 | 1 |
 | [LLMI-T008](LLMI-T008.md) Agent Tool Misuse | observed in the wild | 0 | 18 | 6 | 1 | 3 | 2 | 3 |
-| [LLMI-T015](LLMI-T015.md) Agentic Attack Orchestration | observed in the wild | 0 | 59 | 1 | 4 | 5 | 2 | 1 |
+| [LLMI-T015](LLMI-T015.md) Agentic Attack Orchestration | observed in the wild | 0 | 59 | 1 | 5 | 5 | 2 | 1 |
 
 Pages with a worked example or hand-written notes: [LLMI-T008](LLMI-T008.md).

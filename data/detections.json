@@ -966,5 +966,20 @@
       "MCP endpoint access logs and API-key use on recon platforms"
     ],
     "test_ids": []
+  },
+  {
+    "id": "DET-AI-059",
+    "type": "detection",
+    "name": "Python sitecustomize or usercustomize Written Outside a Package Install",
+    "category": "endpoint",
+    "severity": "high",
+    "status": "specification",
+    "hypothesis": "An AI service with an arbitrary file write (path traversal in an upload endpoint) is turned into code execution by writing sitecustomize.py or usercustomize.py, which Python imports at every interpreter start; the next service restart or training job runs the attacker's code. Seen with MONAI Label <= 0.8.5 (GHSA-qc22-rmgc-vg94) exploited by autonomous Cairn agents.",
+    "telemetry": [
+      "EDR file creation events",
+      "auditd watches on Python site directories",
+      "package manager logs (pip, uv, conda)"
+    ],
+    "test_ids": []
   }
 ]

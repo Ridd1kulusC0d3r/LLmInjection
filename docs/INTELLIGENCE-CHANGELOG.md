@@ -2,6 +2,18 @@
 
 This changelog records material changes to attribution, confidence, external mappings and structured intelligence. Ordinary prose edits do not belong here.
 
+## 2026-11-21 — Python startup-hook persistence after AI-service file writes; digest backfill
+
+### Added
+
+- Detection `DET-AI-059` (Sigma, experimental): `sitecustomize.py` / `usercustomize.py` written outside a package install. It complements `DET-AI-054` (`.pth`) and is linked to `LLMI-T024` and `LLMI-T015` with medium confidence.
+- Sources: `SRC-AWS-CAIRN-MONAI` (Amazon Threat Intelligence, 2026-11-20, grade A) and `SRC-GHSA-MONAILABEL-TRAVERSAL` (GHSA-qc22-rmgc-vg94, 2026-11-18, grade A).
+- Research queue: 13 candidates from digest `LLMI-20261121` (IDs 23–35; 01–22 were already taken by another batch). The MONAI Label flaw is not yet a `VULN-` record; promote it with `ai_relation` after an analyst review.
+
+### Changed
+
+- `scripts/import_digest.py` refuses an item whose `RQ-DIG-` id is already queued instead of writing a duplicate that fails validation.
+
 ## 2026-11-20 — ARTEX incidents with named victims; vulnerabilities found or exploited by AI agents
 
 ### Added

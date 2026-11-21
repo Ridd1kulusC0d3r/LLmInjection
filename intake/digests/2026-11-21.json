@@ -1,0 +1,98 @@
+{
+  "digest_id": "LLMI-20261121",
+  "date": "2026-11-21",
+  "producer": "scheduled task: LLmInjection Threat Landscape IA (daily)",
+  "window": "2026-11-20T06:46-03:00/2026-11-21T06:46-03:00 (recovery back to 2026-11-14; one retrospective item flagged)",
+  "items": [
+    {
+      "id": "LLMI-20261121-23",
+      "title": "Amazon Threat Intelligence: Chinese-nexus actor's Cairn AI agents found and exploited a MONAI Label zero-day",
+      "url": "https://aws.amazon.com/blogs/security/chinese-nexus-actors-cairn-ai-agents-found-a-zero-day-on-their-own/",
+      "published": "2026-11-20",
+      "seal": "original",
+      "temporal": "new",
+      "source_grade": "A",
+      "kind": "threat-report",
+      "techniques": [
+        "LLMI-T015",
+        "LLMI-T024"
+      ],
+      "identifiers": [
+        "GHSA-qc22-rmgc-vg94"
+      ],
+      "summary": "Amazon Threat Intelligence assesses with moderate confidence that a Chinese-nexus actor gave autonomous agents built on the open-source Cairn framework the goal of obtaining shell access against East Asian university IPs over about 48 hours from 8 Sept 2026. AWS found the actor's unauthenticated Cairn instance exposing prompts and outputs; the agents independently found a path traversal arbitrary-file-write flaw in MONAI Label, assessed with high confidence as a zero-day, and used it to obtain a root reverse shell. Other agent operations against Redis and a GPU server failed.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261121-24",
+      "title": "MONAI Label GHSA-qc22-rmgc-vg94: path traversal in datastore upload endpoints allows arbitrary file write (<= 0.8.5)",
+      "url": "https://github.com/Project-MONAI/MONAILabel/security/advisories/GHSA-qc22-rmgc-vg94",
+      "published": "2026-11-18",
+      "seal": "original",
+      "temporal": "recovered",
+      "source_grade": "A",
+      "kind": "vulnerability",
+      "techniques": [
+        "LLMI-T024"
+      ],
+      "identifiers": [
+        "GHSA-qc22-rmgc-vg94"
+      ],
+      "summary": "Critical advisory for the monailabel pip package, versions <= 0.8.5, with no CVE assigned: path traversal in datastore upload endpoints allows arbitrary file write. The fix is in PR #1915 and is slated for the next release; workarounds are enabling authentication, restricting network exposure and running as an unprivileged user. Reported via the AWS security VDP.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261121-25",
+      "title": "GAO-27-108458: AI and Cybersecurity - technologies can magnify cyberattacks and enhance cyber defense",
+      "url": "https://www.gao.gov/products/gao-27-108458",
+      "published": "2026-11-20",
+      "seal": "original",
+      "temporal": "new",
+      "source_grade": "A",
+      "kind": "regulation",
+      "techniques": [
+        "LLMI-T014",
+        "LLMI-T015"
+      ],
+      "identifiers": [
+        "GAO-27-108458"
+      ],
+      "summary": "US GAO technology assessment finding that AI magnifies traditional attacks such as phishing, deepfakes and agentic AI executing multiple attack stages with minimal human input, while defenders face missing evaluation criteria, new attack surface, fragmented regulation and poor data sharing. It sets out 16 policy options under four goals: guidance and practices, research gaps, lifecycle governance of AI tools, and workforce.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261121-26",
+      "title": "Cursor incident: stolen Fireworks AI key and coding-agent traces led to trojanized Claude Code extension copies in Cursor's marketplace cache",
+      "url": "https://cursor.com/blog/security-incident-update",
+      "published": "2026-11-13",
+      "seal": "original",
+      "temporal": "retrospective",
+      "source_grade": "A",
+      "kind": "threat-report",
+      "techniques": [
+        "LLMI-T011",
+        "LLMI-T018",
+        "LLMI-T004"
+      ],
+      "identifiers": [],
+      "summary": "Cursor says an attacker used an access key issued to Fireworks to copy a read-only bucket of mostly 2025 non-Privacy-Mode coding-agent traces, then pivoted via credentials to SaaS tools and on 29 Oct 2026 placed malicious copies of the Anthropic.claude-code extension (2.1.312/2.1.313) in the cache serving its VS Code marketplace. At most 5,000 users may have received the build, live about 11 hours; secondary reporting says it attempted to install a persistent SSH backdoor. Cursor rotated credentials, rebuilt the marketplace and says uninstalling alone may not be enough.",
+      "brazil_latam": false
+    },
+    {
+      "id": "LLMI-20261121-27",
+      "title": "Brazil: AI-generated fake stores and fake Pix payments flagged as Black Friday fraud vectors",
+      "url": "https://www.correio24horas.com.br/economia/golpes-com-inteligencia-artificial-e-pix-falso-ameacam-compras-da-black-friday-veja-como-se-proteger-1126",
+      "published": "2026-11-18",
+      "seal": "secondary",
+      "temporal": "recovered",
+      "source_grade": "C",
+      "kind": "threat-report",
+      "techniques": [
+        "LLMI-T014"
+      ],
+      "identifiers": [],
+      "summary": "Brazilian regional outlet Correio warns of AI-made fake stores, cloned sites and fake Pix payments ahead of Black Friday, citing a Reclame AQUI survey and the 20th Anuario Brasileiro de Seguranca Publica on fear of fraud. Consumer advice only; no specific incident data or primary threat-intelligence source.",
+      "brazil_latam": true
+    }
+  ]
+}

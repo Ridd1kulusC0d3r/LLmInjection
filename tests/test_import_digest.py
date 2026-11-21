@@ -35,6 +35,22 @@ class ImportDigestTests(unittest.TestCase):
                 self.assertIn(item["source_grade"], import_digest.GRADES, item["id"])
                 self.assertTrue(item["url"].startswith("https://"), item["id"])
 
+    def test_colliding_queue_id_is_refused_not_duplicated(self):
+        import json
+        import tempfile
+        from unittest import mock
+
+        queue = {"meta": {}, "items": [{"id": "RQ-DIG-20990101-01", "url": "https://example.org/other"}]}
+        digest = {**DIGEST, "items": [ITEM, {**ITEM, "id": "LLMI-20990101-02", "url": "https://example.org/b"}]}
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "d.json"
+            path.write_text(json.dumps(digest), encoding="utf-8")
+            data = {"research-queue": queue, "sources": [], "techniques": [{"id": "LLMI-T001"}]}
+            with mock.patch.object(import_digest, "load_data", side_effect=lambda name: data[name]):
+                report = import_digest.run([path], dry_run=True)
+        self.assertEqual(report["added"], ["LLMI-20990101-02"])
+        self.assertTrue(any("already in the queue" in r for r in report["refused"]))
+
 
 if __name__ == "__main__":
     unittest.main()

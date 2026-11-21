@@ -8,7 +8,8 @@ FEED-LLMI-DAILY-DIGEST, carrying the grade the analyst gave the source (not a fe
 dataset: promotion stays with scripts/merge_promotions.py after a primary source is read.
 
 Refused or skipped, and reported: items whose URL is already queued or held as a source, unconfirmed items,
-unknown technique IDs (dropped from the item), invalid grades or seals.
+unknown technique IDs (dropped from the item), invalid grades or seals, and item IDs whose RQ-DIG id is already
+taken by another queued item (which would otherwise fail validation as a duplicate).
 
     python scripts/import_digest.py intake/digests/2026-11-20.json --dry-run
     python scripts/import_digest.py intake/digests/*.json
@@ -63,6 +64,7 @@ def to_queue(item: dict[str, Any], digest: dict[str, Any], techniques: set[str],
 def run(paths: list[Path], dry_run: bool) -> dict[str, list[str]]:
     queue = load_data("research-queue")
     held = {i["url"] for i in queue["items"]} | {s["url"] for s in load_data("sources")}
+    taken = {i["id"] for i in queue["items"]}
     techniques = {t["id"] for t in load_data("techniques")}
     now = datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ")
     report: dict[str, list[str]] = {"added": [], "skipped": [], "refused": []}
@@ -82,11 +84,16 @@ def run(paths: list[Path], dry_run: bool) -> dict[str, list[str]]:
             if item["url"] in held:
                 report["skipped"].append(f"{iid}: URL already queued or held")
                 continue
+            rq_id = f"RQ-DIG-{iid.removeprefix('LLMI-')}"
+            if rq_id in taken:
+                report["refused"].append(f"{iid}: {rq_id} is already in the queue for another item; renumber the digest item")
+                continue
             dropped = [t for t in item.get("techniques", []) if t not in techniques]
             if dropped:
                 report["refused"].append(f"{iid}: dropped unknown techniques {', '.join(dropped)}")
             queue["items"].append(to_queue(item, digest, techniques, now))
             held.add(item["url"])
+            taken.add(rq_id)
             report["added"].append(iid)
     if not dry_run and report["added"]:
         queue["meta"]["last_run"] = now

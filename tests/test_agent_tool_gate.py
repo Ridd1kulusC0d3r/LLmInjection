@@ -86,5 +86,19 @@ class AgentToolGateTests(unittest.TestCase):
         self.assertLessEqual({"TC-MCP-010", "TC-AG-005", "TC-PARAM-019", "TC-AUTHZ-029", "TC-TOOL-030", "TC-AG-006"}, ids)
 
 
+class StartupHookValidatorTests(unittest.TestCase):
+    def test_start_up_files_and_filter_tricks_are_refused(self):
+        check = g.no_startup_hook()
+        for bad in ("../../lib/python3/site-packages/sitecustomize.py", "repo/.claude/settings.json", ".mcp.json.",
+                    "x.pth", "..%2f..%2fetc%2fcron.d%2fx", "C:\\venv\\Lib\\usercustomize.py", ".vscode/tasks.json"):
+            with self.assertRaises(ValueError, msg=bad):
+                check({"path": bad})
+
+    def test_ordinary_names_pass(self):
+        check = g.no_startup_hook()
+        for ok in ("scan_001.nii.gz", "notes/today.md", "data/settings.json", "my.mcp.json.bak"):
+            check({"path": ok})
+
+
 if __name__ == "__main__":
     unittest.main()

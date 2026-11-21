@@ -1,0 +1,519 @@
+{
+  "digest_id": "LLMI-20261121-AMPLIADO",
+  "date": "2026-11-21",
+  "producer": "scheduled task: LLmInjection Threat Landscape IA (daily) + analyst-requested expansion",
+  "window": "2026-11-20T06:46-03:00/2026-11-21T06:46-03:00 (recovery back to 2026-11-14; one retrospective item flagged); items 28-35 are retrospective backfill of uncovered material from 2026-10-14..2026-11-10, added on analyst request",
+  "notes": "Expanded edition of intake/digests/2026-11-21.json, kept side by side with it. Items 23-27 are the scheduled run's candidates (same IDs and URLs); items 28-35 are retrospective backfill of uncovered material from 2026-10-14..2026-11-10. All 13 are already in data/research-queue.json, so import_digest.py skips them; build_weekly.py counts each item ID once. Extra fields (analyst_context, companion, agent_reports, sources_consulted) are for readers and are ignored by the importer.",
+  "companion_of": "LLMI-20261121",
+  "items": [
+    {
+      "id": "LLMI-20261121-23",
+      "title": "Amazon Threat Intelligence: Chinese-nexus actor's Cairn AI agents found and exploited a MONAI Label zero-day",
+      "url": "https://aws.amazon.com/blogs/security/chinese-nexus-actors-cairn-ai-agents-found-a-zero-day-on-their-own/",
+      "published": "2026-11-20",
+      "seal": "original",
+      "temporal": "new",
+      "source_grade": "A",
+      "kind": "threat-report",
+      "techniques": [
+        "LLMI-T015",
+        "LLMI-T024"
+      ],
+      "identifiers": [
+        "GHSA-qc22-rmgc-vg94"
+      ],
+      "summary": "Amazon Threat Intelligence assesses with moderate confidence that a Chinese-nexus actor gave autonomous agents built on the open-source Cairn framework the goal of obtaining shell access against East Asian university IPs over about 48 hours from 8 Sept 2026. AWS found the actor's unauthenticated Cairn instance exposing prompts and outputs; the agents independently found a path traversal arbitrary-file-write flaw in MONAI Label, assessed with high confidence as a zero-day, and used it to obtain a root reverse shell. Other agent operations against Redis and a GPU server failed.",
+      "brazil_latam": false,
+      "analyst_context": {
+        "category_pt": "Uso adversário de IA · Agentes e uso de ferramentas",
+        "atlas": [
+          "AML.T0049"
+        ],
+        "attack": [
+          "T1190",
+          "T1546.018"
+        ],
+        "owasp": [],
+        "iocs": [
+          "142[.]4.98.145",
+          "142[.]4.107.34"
+        ],
+        "source_vs_inference": "Attribution to a Chinese-nexus actor is a moderate-confidence assessment (Simplified Chinese prompts, CST timestamps, strategic target). Zero-day status is high confidence. Pivot to a second university via the same flaw is an AWS inference. sitecustomize.py persistence comes from CASRAI coverage, not the AWS post.",
+        "defensive_action": "Inventory exposed MONAI Label and research AI interfaces; bind to localhost behind VPN or zero trust; run unprivileged; hunt exposed Cairn/ARTEX/PentAGI consoles passively.",
+        "brazil_latam_note": "Not shown in sources. Inference: Brazilian universities and teaching hospitals with exposed MONAI or GPU services fit the same profile.",
+        "repo_links": [
+          "DET-AI-059",
+          "DET-AI-054",
+          "DET-AI-053",
+          "proposed LLMI-T029"
+        ]
+      }
+    },
+    {
+      "id": "LLMI-20261121-24",
+      "title": "MONAI Label GHSA-qc22-rmgc-vg94: path traversal in datastore upload endpoints allows arbitrary file write (<= 0.8.5)",
+      "url": "https://github.com/Project-MONAI/MONAILabel/security/advisories/GHSA-qc22-rmgc-vg94",
+      "published": "2026-11-18",
+      "seal": "original",
+      "temporal": "recovered",
+      "source_grade": "A",
+      "kind": "vulnerability",
+      "techniques": [
+        "LLMI-T024"
+      ],
+      "identifiers": [
+        "GHSA-qc22-rmgc-vg94"
+      ],
+      "summary": "Critical advisory for the monailabel pip package, versions <= 0.8.5, with no CVE assigned: path traversal in datastore upload endpoints allows arbitrary file write. The fix is in PR #1915 and is slated for the next release; workarounds are enabling authentication, restricting network exposure and running as an unprivileged user. Reported via the AWS security VDP.",
+      "brazil_latam": false,
+      "analyst_context": {
+        "category_pt": "Vulnerabilidades em frameworks e infraestrutura de IA",
+        "atlas": [
+          "AML.T0049"
+        ],
+        "cwe": [
+          "CWE-22"
+        ],
+        "owasp": [],
+        "gaps": [
+          "Advisory lists no patched version while the AWS post says a fix was released; confirm the version before declaring environments fixed."
+        ],
+        "defensive_action": "Apply PR #1915 or the next release; enable auth; restrict network; unprivileged user; run services with python -I or -s.",
+        "repo_links": [
+          "DET-AI-059",
+          "examples/agent_tool_gate.py:no_startup_hook"
+        ]
+      }
+    },
+    {
+      "id": "LLMI-20261121-25",
+      "title": "GAO-27-108458: AI and Cybersecurity - technologies can magnify cyberattacks and enhance cyber defense",
+      "url": "https://www.gao.gov/products/gao-27-108458",
+      "published": "2026-11-20",
+      "seal": "original",
+      "temporal": "new",
+      "source_grade": "A",
+      "kind": "regulation",
+      "techniques": [
+        "LLMI-T014",
+        "LLMI-T015"
+      ],
+      "identifiers": [
+        "GAO-27-108458"
+      ],
+      "summary": "US GAO technology assessment finding that AI magnifies traditional attacks such as phishing, deepfakes and agentic AI executing multiple attack stages with minimal human input, while defenders face missing evaluation criteria, new attack surface, fragmented regulation and poor data sharing. It sets out 16 policy options under four goals: guidance and practices, research gaps, lifecycle governance of AI tools, and workforce.",
+      "brazil_latam": false,
+      "analyst_context": {
+        "category_pt": "Regulação e padrões",
+        "frameworks": [
+          "NIST AI RMF"
+        ],
+        "defensive_action": "Use the four GAO goals as a governance checklist for AI tools in the SOC.",
+        "brazil_latam_note": "Comparative reference for the PL 2338 debate."
+      }
+    },
+    {
+      "id": "LLMI-20261121-26",
+      "title": "Cursor incident: stolen Fireworks AI key and coding-agent traces led to trojanized Claude Code extension copies in Cursor's marketplace cache",
+      "url": "https://cursor.com/blog/security-incident-update",
+      "published": "2026-11-13",
+      "seal": "original",
+      "temporal": "retrospective",
+      "source_grade": "A",
+      "kind": "threat-report",
+      "techniques": [
+        "LLMI-T011",
+        "LLMI-T018",
+        "LLMI-T004"
+      ],
+      "identifiers": [],
+      "summary": "Cursor says an attacker used an access key issued to Fireworks to copy a read-only bucket of mostly 2025 non-Privacy-Mode coding-agent traces, then pivoted via credentials to SaaS tools and on 29 Oct 2026 placed malicious copies of the Anthropic.claude-code extension (2.1.312/2.1.313) in the cache serving its VS Code marketplace. At most 5,000 users may have received the build, live about 11 hours; secondary reporting says it attempted to install a persistent SSH backdoor. Cursor rotated credentials, rebuilt the marketplace and says uninstalling alone may not be enough.",
+      "brazil_latam": false,
+      "analyst_context": {
+        "category_pt": "Supply chain de modelos e pacotes · Exfiltração de dados",
+        "atlas": [
+          "AML.T0010"
+        ],
+        "owasp": [
+          "LLM03",
+          "LLM02",
+          "ASI04"
+        ],
+        "iocs": [
+          "Anthropic.claude-code 2.1.312",
+          "Anthropic.claude-code 2.1.313"
+        ],
+        "source_vs_inference": "SSH backdoor attempt comes from BleepingComputer and The Hacker News (secondary, C), not the Cursor post.",
+        "defensive_action": "Look for the two extension versions on workstations (uninstalling may not be enough); audit ~/.ssh/authorized_keys and recently enabled SSH services; secret-scan agent traces before storing them.",
+        "repo_links": [
+          "proposed LLMI-T030"
+        ]
+      }
+    },
+    {
+      "id": "LLMI-20261121-27",
+      "title": "Brazil: AI-generated fake stores and fake Pix payments flagged as Black Friday fraud vectors",
+      "url": "https://www.correio24horas.com.br/economia/golpes-com-inteligencia-artificial-e-pix-falso-ameacam-compras-da-black-friday-veja-como-se-proteger-1126",
+      "published": "2026-11-18",
+      "seal": "secondary",
+      "temporal": "recovered",
+      "source_grade": "C",
+      "kind": "threat-report",
+      "techniques": [
+        "LLMI-T014"
+      ],
+      "identifiers": [],
+      "summary": "Brazilian regional outlet Correio warns of AI-made fake stores, cloned sites and fake Pix payments ahead of Black Friday, citing a Reclame AQUI survey and the 20th Anuario Brasileiro de Seguranca Publica on fear of fraud. Consumer advice only; no specific incident data or primary threat-intelligence source.",
+      "brazil_latam": true,
+      "analyst_context": {
+        "category_pt": "Uso adversário de IA (fraude)",
+        "gaps": [
+          "Consumer-advice article with a garbled figure ('2.261.055 milhões'), not used."
+        ],
+        "defensive_action": "Awareness on checking the Pix payee name; monitor newly registered domains with retail brands."
+      }
+    },
+    {
+      "id": "LLMI-20261121-28",
+      "title": "Langflow 1.0.0-1.12.8: unauthenticated auth bypass and code execution (CVE-2026-93680, CVE-2026-110186) plus two authenticated flaws; fixed in 1.13.0",
+      "url": "https://thehackernews.com/2026/11/critical-langflow-flaws-could-let.html",
+      "published": "2026-11-02",
+      "seal": "secondary",
+      "temporal": "retrospective",
+      "source_grade": "C",
+      "kind": "vulnerability",
+      "techniques": [
+        "LLMI-T024"
+      ],
+      "identifiers": [
+        "CVE-2026-93680",
+        "CVE-2026-110186",
+        "CVE-2026-110193",
+        "CVE-2026-110192"
+      ],
+      "summary": "Per The Hacker News, citing an IBM security bulletin of 28 Oct 2026, Langflow 1.0.0 through 1.12.8 is affected by CVE-2026-93680 (CVSS 9.8 auth bypass) and CVE-2026-110186 (CVSS 9.8 code execution) without an account, plus CVE-2026-110193 (8.8, OS commands via the Agentic Assistant) and CVE-2026-110192 (6.5). The only fix is 1.13.0, which also disables default auto-login; a public Metasploit auxiliary module references CVE-2026-93680, and no in-the-wild exploitation or KEV listing is reported. Primary IBM bulletin not read in this run.",
+      "brazil_latam": false,
+      "analyst_context": {
+        "category_pt": "Vulnerabilidades em frameworks e infraestrutura de IA",
+        "gaps": [
+          "IBM bulletin not read; recheck KEV status (public Metasploit auxiliary module)."
+        ],
+        "defensive_action": "Upgrade Langflow to 1.13.0; disable auto-login; do not expose Langflow to the internet."
+      }
+    },
+    {
+      "id": "LLMI-20261121-29",
+      "title": "Scaling Adaptive Prompt Injection Attacks with Agent Swarms (arXiv 2611.11861)",
+      "url": "https://arxiv.org/abs/2611.11861",
+      "published": "2026-11-10",
+      "seal": "original",
+      "temporal": "retrospective",
+      "source_grade": "A",
+      "kind": "research",
+      "techniques": [
+        "LLMI-T002"
+      ],
+      "identifiers": [],
+      "summary": "Kurakin et al. argue prompt injection remains feasible even as human red teaming saturates; a synthetic dataset uses benign random actions as attacker goals to measure instruction-hierarchy adherence. A more capable agentic attacker reliably makes models follow instructions in tool output, including models considered robust on public benchmarks such as GraySwan Arena. The abstract gives no numeric results.",
+      "brazil_latam": false,
+      "analyst_context": {
+        "category_pt": "Pesquisa acadêmica e benchmarks",
+        "gaps": [
+          "Abstract gives no numeric results."
+        ]
+      }
+    },
+    {
+      "id": "LLMI-20261121-30",
+      "title": "SearchInject: retrieval exposure control for indirect prompt injection in LLM search (arXiv 2611.02643)",
+      "url": "https://arxiv.org/abs/2611.02643",
+      "published": "2026-11-03",
+      "seal": "original",
+      "temporal": "retrospective",
+      "source_grade": "A",
+      "kind": "research",
+      "techniques": [
+        "LLMI-T002",
+        "LLMI-T007"
+      ],
+      "identifiers": [],
+      "summary": "Defense that scores candidate pages for relevance, search-abuse cues and instruction likelihood and quarantines them before they reach a search-augmented LLM. On 300 SciFact queries it cuts top-10 exposure of injected pages by about 83% across BM25, hybrid and LSA retrievers with negligible nDCG change, but clean false-quarantine (0.59-0.65%) exceeded the 0.5% target and no attack-success reduction was estimated.",
+      "brazil_latam": false,
+      "analyst_context": {
+        "category_pt": "Defesas, guardrails e detecção",
+        "owasp": [
+          "LLM01",
+          "LLM08"
+        ]
+      }
+    },
+    {
+      "id": "LLMI-20261121-31",
+      "title": "INFUSE: unified surface benchmark for indirect prompt injection in agentic systems (arXiv 2610.20776)",
+      "url": "https://arxiv.org/abs/2610.20776",
+      "published": "2026-10-14",
+      "seal": "original",
+      "temporal": "retrospective",
+      "source_grade": "A",
+      "kind": "research",
+      "techniques": [
+        "LLMI-T002",
+        "LLMI-T008"
+      ],
+      "identifiers": [],
+      "summary": "Benchmark of 40 long-horizon tasks and 56 attack scenarios injected through interaction surfaces, evaluated on 19 LLMs (GPT, Claude, Gemini, Llama, Gemma, Qwen) over 41,824 adversarial trajectories. Mean attack success is 15.4-19.6% depending on the judge, ranging 3.2-41.9% per model; guard models helped little, while prompt-level instructional hardening cut mean success from 58.2% to 14.3%.",
+      "brazil_latam": false,
+      "analyst_context": {
+        "category_pt": "Pesquisa acadêmica e benchmarks",
+        "owasp": [
+          "LLM01"
+        ]
+      }
+    },
+    {
+      "id": "LLMI-20261121-32",
+      "title": "Zenity Labs AgentCorruption: single prompt to an exposed AWS Bedrock AgentCore agent pulled metadata-service credentials",
+      "url": "https://labs.zenity.io/post/agentcorruption-how-a-single-prompt-collapsed-the-entire-cloud-security-model",
+      "published": "2026-11-05",
+      "seal": "secondary",
+      "temporal": "retrospective",
+      "source_grade": "D",
+      "kind": "research",
+      "techniques": [
+        "LLMI-T002",
+        "LLMI-T004",
+        "LLMI-T024"
+      ],
+      "identifiers": [],
+      "summary": "Per the Adversa AI November 2026 roundup, Zenity Labs showed that one prompt to an exposed Bedrock AgentCore agent could retrieve cloud metadata-service credentials, and AWS has patched it. The Zenity original was not read in this run; date is the roundup's.",
+      "brazil_latam": false,
+      "analyst_context": {
+        "category_pt": "Agentes e uso de ferramentas · Exfiltração",
+        "gaps": [
+          "Zenity original not read; date is the Adversa roundup's."
+        ]
+      }
+    },
+    {
+      "id": "LLMI-20261121-33",
+      "title": "EMBRACE: embedded browsers in AI coding assistants break core browser isolation (Cursor, Copilot, Codex, VS Code, Claude Desktop)",
+      "url": "https://forever.security/blog/embrace-hacking-5-ai-assistants-embedded-browsers-technical",
+      "published": "2026-11-05",
+      "seal": "secondary",
+      "temporal": "retrospective",
+      "source_grade": "D",
+      "kind": "research",
+      "techniques": [
+        "LLMI-T018"
+      ],
+      "identifiers": [],
+      "summary": "Per the Adversa AI November 2026 roundup, forever.security found embedded browsers in five AI assistants that violate a core browser security rule, exposing a path to developer secrets; Cursor and Copilot are reported fixed, Codex and VS Code unpatched, and no fix stated for Claude Desktop. Original not read in this run.",
+      "brazil_latam": false,
+      "analyst_context": {
+        "category_pt": "Agentes e uso de ferramentas (coding agents)",
+        "gaps": [
+          "forever.security original not read."
+        ]
+      }
+    },
+    {
+      "id": "LLMI-20261121-34",
+      "title": "Datadog Security Labs: counterfeit policy steers an LLM-as-judge prompt-injection classifier (recall 83% to under 4%)",
+      "url": "https://securitylabs.datadoghq.com/articles/jev-as-a-judge-how-counterfeit-policy-steers-jev/",
+      "published": "2026-11-05",
+      "seal": "secondary",
+      "temporal": "retrospective",
+      "source_grade": "D",
+      "kind": "research",
+      "techniques": [
+        "LLMI-T017"
+      ],
+      "identifiers": [],
+      "summary": "Per the Adversa AI November 2026 roundup, Datadog showed that injecting a counterfeit policy reduced the Jev classifier's prompt-injection recall from 83% to under 4%. Original not read in this run.",
+      "brazil_latam": false,
+      "analyst_context": {
+        "category_pt": "Defesas, guardrails e detecção",
+        "gaps": [
+          "Datadog original not read."
+        ]
+      }
+    },
+    {
+      "id": "LLMI-20261121-35",
+      "title": "Visual Studio Copilot and SSMS remote code execution via trailing-dot .mcp.json filename check bypass (CVE-2026-103572)",
+      "url": "https://embracethered.com/blog/posts/2026/visual-studio-copilot-remote-code-execution/",
+      "published": "2026-11-02",
+      "seal": "secondary",
+      "temporal": "retrospective",
+      "source_grade": "D",
+      "kind": "vulnerability",
+      "techniques": [
+        "LLMI-T018",
+        "LLMI-T021"
+      ],
+      "identifiers": [
+        "CVE-2026-103572"
+      ],
+      "summary": "Per the Adversa AI coding-agent roundup of 2 Nov 2026, Johann Rehberger found that a trailing dot in a filename bypassed a protection check on MCP configuration in a shared Copilot DLL, enabling command execution in Visual Studio (including 2022) and SQL Server Management Studio; Microsoft rated it Important and patched it. Original not read in this run.",
+      "brazil_latam": false,
+      "analyst_context": {
+        "category_pt": "Agentes e uso de ferramentas (coding agents)",
+        "owasp": [
+          "ASI04"
+        ],
+        "gaps": [
+          "Embrace The Red original not read."
+        ]
+      }
+    }
+  ],
+  "companion": {
+    "detections": [
+      {
+        "id": "DET-AI-059",
+        "path": "detections/sigma/",
+        "what": "sitecustomize.py or usercustomize.py written outside a package install (MONAI persistence); complements DET-AI-054 (.pth)",
+        "status": "experimental, not tested"
+      }
+    ],
+    "validators": [
+      {
+        "id": "no_startup_hook",
+        "path": "examples/agent_tool_gate.py",
+        "what": "refuses start-up hook files, encoded separators and trailing dots in write/upload tool calls (repo version of path_guard.py)",
+        "tests": "tests/test_agent_tool_gate.py"
+      }
+    ],
+    "tooling_fixes": [
+      {
+        "path": "scripts/import_digest.py",
+        "what": "refuses items whose RQ-DIG id is already taken instead of writing a duplicate",
+        "tests": "tests/test_import_digest.py"
+      }
+    ],
+    "proposals": "intake/proposals/2026-11-21.md",
+    "taxonomy_proposals": [
+      {
+        "id": "LLMI-T029",
+        "status": "proposed",
+        "name": "Autonomous Vulnerability Discovery and Weaponization by Offensive Agents",
+        "evidence": [
+          "LLMI-20261121-23"
+        ]
+      },
+      {
+        "id": "LLMI-T030",
+        "status": "proposed",
+        "name": "Agent Trace and Transcript Credential Harvesting",
+        "evidence": [
+          "LLMI-20261121-26"
+        ]
+      }
+    ],
+    "defense_of_the_day": {
+      "name": "path_guard.py",
+      "kind": "stdlib heuristic filter",
+      "linked_items": [
+        "LLMI-20261121-23",
+        "LLMI-20261121-24",
+        "LLMI-20261121-26"
+      ],
+      "status": "sandbox-tested with synthetic inputs; not tested in production"
+    },
+    "hunting_hypothesis": {
+      "title": "Offensive agent exploiting an exposed AI research service",
+      "telemetry": [
+        "HTTP/reverse-proxy logs of AI services",
+        "EDR/auditd file creation",
+        "NetFlow/egress",
+        "upload and train endpoint logs"
+      ],
+      "behaviour": [
+        "machine-cadence API mapping from one IP",
+        "upload with .., %2e%2e or absolute path",
+        "sitecustomize.py/usercustomize.py/*.pth outside deploy windows",
+        "train or run call right after upload",
+        "new egress from the service's Python process"
+      ],
+      "false_positives": [
+        "pip/conda .pth installs",
+        "legitimate research sitecustomize",
+        "authorised scanners"
+      ],
+      "status": "not tested"
+    },
+    "osint_innovation": {
+      "title": "Exposed offensive-agent consoles (Cairn, PentAGI, ARTEX) as a CTI source",
+      "method": "passive favicon/title fingerprinting in internet search engines without touching the instance",
+      "python": [
+        "mmh3",
+        "httpx",
+        "ipaddress (stdlib)"
+      ],
+      "caveat": "Reading third-party prompts on an open console is access to someone else's system; report via CERT.br or abuse contacts and do not interact."
+    },
+    "content_idea": "Camada 8: 'O atacante também esquece a porta aberta' — the AWS case was seen only because the operator left the agent console unauthenticated."
+  },
+  "agent_reports": [
+    {
+      "n": 1,
+      "scope": "Repo taxonomy and docs",
+      "finding": "README says 16 techniques; techniques.json has 28 (T001-T028)."
+    },
+    {
+      "n": 2,
+      "scope": "News (THN, Help Net, Adversa, Correio)",
+      "finding": "GTIG agentic frameworks, Langflow CVEs, PIPETTE vs PISmith, Adversa roundup leads, Black Friday Pix fraud."
+    },
+    {
+      "n": 3,
+      "scope": "arXiv and vLLM advisories",
+      "finding": "2611.11861, 2611.24362, 2611.02643, 2610.20776 read; no new vLLM advisory in window (latest Sept 2026, DoS)."
+    },
+    {
+      "n": 4,
+      "scope": "GTIG primary (2026-11-16)",
+      "finding": "Already queued on 2026-11-20; not repeated."
+    },
+    {
+      "n": 5,
+      "scope": "Cursor, MONAI, GAO, Adversa coding",
+      "finding": "Cursor incident read in original; CASRAI dates inconsistent."
+    },
+    {
+      "n": 6,
+      "scope": "AWS, MONAI advisory, GAO primaries",
+      "finding": "Moderate-confidence attribution, high-confidence zero-day, IOCs, 16 policy options in 4 goals."
+    },
+    {
+      "n": 7,
+      "scope": "Final edition",
+      "finding": "Sections A-H consolidated in llminjection-landscape-2026-11-21.md."
+    }
+  ],
+  "not_included": [
+    "arXiv 2611.03555 MCP Tool Poisoning and 2611.09721 MemoryDojo (seen only in search results, not read)",
+    "GTIG and PIPETTE (already queued on 2026-11-20)"
+  ],
+  "sources_consulted": [
+    "https://aws.amazon.com/blogs/security/chinese-nexus-actors-cairn-ai-agents-found-a-zero-day-on-their-own/",
+    "https://github.com/Project-MONAI/MONAILabel/security/advisories/GHSA-qc22-rmgc-vg94",
+    "https://www.gao.gov/products/gao-27-108458",
+    "https://cursor.com/blog/security-incident-update",
+    "https://www.bleepingcomputer.com/news/security/cursor-confirms-security-breach-led-to-malicious-claude-code-extension/",
+    "https://thehackernews.com/2026/11/stolen-fireworks-ai-key-led-to-cursor.html",
+    "https://casrai.org/news/amazon-cairn-ai-agents-monai-label-zero-day-university-server-2026",
+    "https://casrai.org/news/gao-report-ai-cybersecurity-cyberattacks-defense-2026",
+    "https://www.correio24horas.com.br/economia/golpes-com-inteligencia-artificial-e-pix-falso-ameacam-compras-da-black-friday-veja-como-se-proteger-1126",
+    "https://cloud.google.com/blog/topics/threat-intelligence/agentic-threat-activity-crosses-a-significant-threshold",
+    "https://thehackernews.com/2026/11/critical-langflow-flaws-could-let.html",
+    "https://www.helpnetsecurity.com/2026/11/20/ai-prompt-injection-red-team/",
+    "https://adversa.ai/blog/top-ai-agent-security-resources-november-2026/",
+    "https://adversa.ai/blog/top-ai-coding-agent-security-resources-november-2026/",
+    "https://arxiv.org/abs/2611.11861",
+    "https://arxiv.org/abs/2611.24362",
+    "https://arxiv.org/abs/2611.02643",
+    "https://arxiv.org/abs/2610.20776",
+    "https://github.com/vllm-project/vllm/security/advisories"
+  ]
+}
