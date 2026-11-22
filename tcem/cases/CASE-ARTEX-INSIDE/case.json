@@ -1,0 +1,613 @@
+{
+ "version": "0.5",
+ "case": {
+  "id": "CASE-ARTEX-INSIDE",
+  "name": "ARTEX · ARTEX dentro de casa",
+  "mission": "O framework ofensivo só roda onde foi autorizado e não sai do ambiente de teste.",
+  "decision_context": "Priorizar telemetria, detecção e controles contra os ataques conhecidos do ARTEX.",
+  "scope": [
+   "ai-genai",
+   "artex",
+   "llminjection"
+  ],
+  "status": "active"
+ },
+ "intelligence_requirements": [
+  {
+   "id": "IR-INSIDE",
+   "question": "Como os ataques de ARTEX dentro de casa com ARTEX alcançariam rede interna, plataformas de varredura e ambientes de avaliação de agentes aqui, e veríamos cada passo?",
+   "decision_supported": "Ordem de investimento em telemetria, detecção e controle.",
+   "stakeholder": "CTI e engenharia de detecção",
+   "priority": "high",
+   "time_horizon": "90 dias",
+   "linked_crown_jewels": [
+    "CJ-INSIDE"
+   ],
+   "information_gap_ids": [
+    "GAP-INSIDE-1",
+    "GAP-INSIDE-2"
+   ],
+   "status": "open"
+  }
+ ],
+ "crown_jewels": [
+  {
+   "id": "CJ-INSIDE",
+   "name": "Rede interna, plataformas de varredura e ambientes de avaliação de agentes",
+   "rationale": "Um console ou um agente de avaliação dentro da rede tem o alcance da rede.",
+   "criticality": "critical"
+  }
+ ],
+ "architectures": [
+  {
+   "id": "ARCH-INSIDE",
+   "name": "Rede interna, plataformas de varredura e ambientes de avaliação de agentes",
+   "nodes": [
+    {
+     "id": "NODE-INSIDE",
+     "name": "Rede interna, plataformas de varredura e ambientes de avaliação de agentes",
+     "type": "control-plane",
+     "trust_zone": "critical"
+    }
+   ],
+   "relationships": []
+  }
+ ],
+ "evidence_items": [
+  {
+   "id": "EV-INSIDE-1",
+   "title": "ARTEX: Agentic Asbestos",
+   "source_type": "primary-external",
+   "source": "Censys",
+   "reference": "https://censys.com/blog/artex-agentic-asbestos",
+   "publication_date": "2026-11-05",
+   "collected_at": "2026-11-20",
+   "claim": "Relato público usado no caso; registros: TOOL-ARTEX, TOOL-SCOPESENTRY, INCIDENT-WORKOS-ARTEX-SANDBOX-ESCAPE.",
+   "evidence_state": "observed",
+   "source_reliability": "high",
+   "information_credibility": "high",
+   "temporal_relevance": "current",
+   "supports": [
+    "TH-INSIDE"
+   ],
+   "contradicts": [],
+   "analyst_notes": "Grau A (SRC-CENSYS-ARTEX-2026-11)."
+  },
+  {
+   "id": "EV-INSIDE-2",
+   "title": "Swarm Chasing: Hunting ARTEX and Other Agentic Offensive Frameworks in the Wild",
+   "source_type": "secondary-external",
+   "source": "Spectrum (Delta research)",
+   "reference": "https://www.spectrum.security/blog/offensive-ai-tools-in-the-wild",
+   "publication_date": "2026-11-18",
+   "collected_at": "2026-11-20",
+   "claim": "Relato público usado no caso; registros: TOOL-ARTEX, TOOL-SCOPESENTRY, INCIDENT-WORKOS-ARTEX-SANDBOX-ESCAPE.",
+   "evidence_state": "assessed",
+   "source_reliability": "medium",
+   "information_credibility": "medium",
+   "temporal_relevance": "current",
+   "supports": [
+    "TH-INSIDE"
+   ],
+   "contradicts": [],
+   "analyst_notes": "Grau B (SRC-SPECTRUM-SWARM-CHASING)."
+  },
+  {
+   "id": "EV-INSIDE-3",
+   "title": "ScopeSentry fork with ARTEX task integration and MCP server (niudaii/ScopeSentry, commit f19a973)",
+   "source_type": "secondary-external",
+   "source": "GitHub (niudaii; upstream Autumn-27/ScopeSentry)",
+   "reference": "https://github.com/niudaii/ScopeSentry",
+   "publication_date": "2026-08-26",
+   "collected_at": "2026-11-20",
+   "claim": "Relato público usado no caso; registros: TOOL-ARTEX, TOOL-SCOPESENTRY, INCIDENT-WORKOS-ARTEX-SANDBOX-ESCAPE.",
+   "evidence_state": "assessed",
+   "source_reliability": "medium",
+   "information_credibility": "medium",
+   "temporal_relevance": "current",
+   "supports": [
+    "TH-INSIDE"
+   ],
+   "contradicts": [],
+   "analyst_notes": "Grau B (SRC-GH-SCOPESENTRY-NIUDAII)."
+  },
+  {
+   "id": "EV-INSIDE-4",
+   "title": "Update for October 30th, 2026 Data Security Incident",
+   "source_type": "primary-external",
+   "source": "WorkOS",
+   "reference": "https://workos.com/security/bulletins/update-for-october-30th-2026-data-security-incident",
+   "publication_date": "",
+   "collected_at": "2026-11-20",
+   "claim": "Relato público usado no caso; registros: TOOL-ARTEX, TOOL-SCOPESENTRY, INCIDENT-WORKOS-ARTEX-SANDBOX-ESCAPE.",
+   "evidence_state": "observed",
+   "source_reliability": "high",
+   "information_credibility": "high",
+   "temporal_relevance": "current",
+   "supports": [
+    "TH-INSIDE"
+   ],
+   "contradicts": [],
+   "analyst_notes": "Grau A (SRC-WORKOS-BULLETIN-2026-10-30)."
+  }
+ ],
+ "hypotheses": [
+  {
+   "id": "TH-INSIDE",
+   "title": "O risco imediato do ARTEX para quem defende inclui o próprio ARTEX: consoles expostos, forks e testes sem contenção.",
+   "statement": "O risco imediato do ARTEX para quem defende inclui o próprio ARTEX: consoles expostos, forks e testes sem contenção.",
+   "rationale": "Não é um ator: são os jeitos de o ARTEX aparecer dentro da organização, por instalação não autorizada, por integração com scanner, por imagem adulterada ou por um teste que escapa.",
+   "intelligence_requirement_ids": [
+    "IR-INSIDE"
+   ],
+   "target_crown_jewels": [
+    "CJ-INSIDE"
+   ],
+   "supporting_evidence": [
+    "EV-INSIDE-1",
+    "EV-INSIDE-2",
+    "EV-INSIDE-3",
+    "EV-INSIDE-4"
+   ],
+   "contradicting_evidence": [],
+   "alternative_explanations": [
+    "Red team autorizado"
+   ],
+   "assumptions": [
+    "O ambiente modelado tem o ativo crítico descrito."
+   ],
+   "confidence": "high",
+   "information_gap_ids": [
+    "GAP-INSIDE-1",
+    "GAP-INSIDE-2"
+   ],
+   "attack_path_ids": [
+    "TS-INSIDE"
+   ],
+   "status": "supported",
+   "owner": "cti",
+   "created_at": "2026-11-22",
+   "review_date": "2026-12-22"
+  }
+ ],
+ "threat_contexts": [
+  {
+   "id": "CTX-INSIDE",
+   "name": "ARTEX · ARTEX dentro de casa",
+   "lens_id": "ai-genai",
+   "relevance": "Não é um ator: são os jeitos de o ARTEX aparecer dentro da organização, por instalação não autorizada, por integração com scanner, por imagem adulterada ou por um teste que escapa.",
+   "status": "active",
+   "crown_jewel_ids": [
+    "CJ-INSIDE"
+   ],
+   "architecture_ids": [
+    "ARCH-INSIDE"
+   ],
+   "scenario_ids": [
+    "TS-INSIDE"
+   ],
+   "intelligence_requirement_ids": [
+    "IR-INSIDE"
+   ],
+   "confidence": "high",
+   "freshness": "current"
+  }
+ ],
+ "scenarios": [
+  {
+   "id": "TS-INSIDE",
+   "title": "Agente iniciado sem aprovação humana alcança destino fora da lista do sandbox",
+   "objective": "O framework ofensivo só roda onde foi autorizado e não sai do ambiente de teste.",
+   "hypothesis_ids": [
+    "TH-INSIDE"
+   ],
+   "target_crown_jewels": [
+    "CJ-INSIDE"
+   ],
+   "threat_context_ids": [
+    "CTX-INSIDE"
+   ],
+   "attack_path": {
+    "id": "AP-INSIDE",
+    "entry_vector": "Console do ARTEX instalado ou exposto na rede",
+    "steps": [
+     {
+      "order": 1,
+      "behavior": "Console do ARTEX instalado ou exposto na rede",
+      "phase": "Comando e controle",
+      "attack_techniques": [
+       "T1219",
+       "T1133"
+      ],
+      "llminjection_techniques": [
+       "LLMI-T015"
+      ],
+      "llminjection_detections": [
+       "DET-AI-052"
+      ],
+      "controls": [
+       "CTRL-AI-INVENTORY"
+      ],
+      "architecture_node_id": "NODE-INSIDE",
+      "gap": ""
+     },
+     {
+      "order": 2,
+      "behavior": "Scanner interno entrega alvos ao framework",
+      "phase": "Reconhecimento",
+      "attack_techniques": [
+       "T1595"
+      ],
+      "llminjection_techniques": [
+       "LLMI-T015"
+      ],
+      "llminjection_detections": [
+       "DET-AI-058"
+      ],
+      "controls": [],
+      "architecture_node_id": "NODE-INSIDE",
+      "gap": ""
+     },
+     {
+      "order": 3,
+      "behavior": "Imagem do ARTEX com backdoor dá root a terceiros",
+      "phase": "Cadeia de suprimentos",
+      "attack_techniques": [
+       "T1525",
+       "T1195.002"
+      ],
+      "llminjection_techniques": [
+       "LLMI-T015"
+      ],
+      "llminjection_detections": [
+       "DET-AI-052"
+      ],
+      "controls": [
+       "CTRL-ARTIFACT-PINNING",
+       "CTRL-SIGNATURE-VERIFICATION"
+      ],
+      "architecture_node_id": "NODE-INSIDE",
+      "gap": ""
+     },
+     {
+      "order": 4,
+      "behavior": "Agente de avaliação em modo sem aprovação sai do sandbox",
+      "phase": "Coleta e impacto",
+      "attack_techniques": [
+       "T1611"
+      ],
+      "llminjection_techniques": [
+       "LLMI-T015"
+      ],
+      "llminjection_detections": [
+       "DET-AI-032",
+       "DET-AI-043"
+      ],
+      "controls": [
+       "CTRL-EGRESS-POLICY",
+       "CTRL-ACTION-BUDGET"
+      ],
+      "architecture_node_id": "NODE-INSIDE",
+      "gap": ""
+     }
+    ]
+   },
+   "impact": {
+    "business": "Um console ou um agente de avaliação dentro da rede tem o alcance da rede.",
+    "technical": "Comprometimento do ativo crítico modelado."
+   },
+   "priority": {
+    "crown_jewel_criticality": 4,
+    "threat_relevance": 4,
+    "attack_path_feasibility": 4,
+    "exposure": 4,
+    "control_weakness": 3,
+    "detection_gap": 4,
+    "calculated_score": 3.83,
+    "band": "P2",
+    "rationale": "Pontuação do analista a partir das fontes; ver a hipótese e as lacunas."
+   },
+   "confidence": "high",
+   "telemetry_requirements": [
+    "TC-INSIDE"
+   ],
+   "detection_use_cases": [],
+   "detection_specification_ids": [
+    "DSP-INSIDE"
+   ],
+   "validation_ids": [
+    "VAL-INSIDE"
+   ]
+  }
+ ],
+ "telemetry_contracts": [
+  {
+   "id": "TC-INSIDE",
+   "title": "Contrato de observáveis · ARTEX dentro de casa",
+   "scenario_ids": [
+    "TS-INSIDE"
+   ],
+   "detection_use_case_ids": [],
+   "behavior": "agent_runtime_start (auto-approve) -> egress_not_allowlisted (mesmo sandbox)",
+   "observable": "Varreduras internas e respostas HTTP de consoles; Proxy e netflow dos hosts de varredura; Registro de imagens e digest em execução; Linha de comando do runtime e saída de rede do sandbox",
+   "source": "Varreduras internas e respostas HTTP de consoles; Proxy e netflow dos hosts de varredura; Registro de imagens e digest em execução; Linha de comando do runtime e saída de rede do sandbox",
+   "event_or_state_change": "egress_not_allowlisted",
+   "entity_identifiers": [
+    "sandbox.id"
+   ],
+   "required_fields": [
+    "event.action",
+    "timestamp",
+    "sandbox.id"
+   ],
+   "retention": "90d",
+   "latency_target": "<15m",
+   "normalization": "modelo de evento conceitual do TCE",
+   "integrity_requirements": [
+    "monitorar a saúde da fonte"
+   ],
+   "failure_modes": [
+    "fonte não coletada",
+    "relógio sem precisão de segundos"
+   ],
+   "status": "partial",
+   "owner": "detection-engineering",
+   "review_date": "2026-12-22"
+  }
+ ],
+ "detection_specifications": [
+  {
+   "id": "DSP-INSIDE",
+   "title": "Agente iniciado sem aprovação humana alcança destino fora da lista do sandbox",
+   "scenario_ids": [
+    "TS-INSIDE"
+   ],
+   "detection_use_case_ids": [],
+   "telemetry_contract_ids": [
+    "TC-INSIDE"
+   ],
+   "attack_techniques": [
+    "T1133",
+    "T1195.002",
+    "T1219",
+    "T1525",
+    "T1595",
+    "T1611"
+   ],
+   "severity": "high",
+   "status": "ready",
+   "analytic_concept": {
+    "description": "Agente iniciado sem aprovação humana alcança destino fora da lista do sandbox",
+    "behavior": "agent_runtime_start (auto-approve) -> egress_not_allowlisted (mesmo sandbox)",
+    "observable_effect": "Eventos do mesmo ator em ordem.",
+    "entities": [
+     "sandbox.id"
+    ],
+    "benign_alternatives": [
+     "Red team autorizado"
+    ]
+   },
+   "correlation": {
+    "pattern_id": "ordered-sequence",
+    "window": "1h",
+    "group_by": [
+     "sandbox.id"
+    ]
+   },
+   "validation_logic": {
+    "pattern": "ordered-sequence",
+    "group_by": [
+     "sandbox.id"
+    ],
+    "stages": [
+     {
+      "all": [
+       {
+        "field": "event.action",
+        "op": "eq",
+        "value": "agent_runtime_start"
+       },
+       {
+        "field": "agent.approval_mode",
+        "op": "eq",
+        "value": "auto"
+       }
+      ]
+     },
+     {
+      "all": [
+       {
+        "field": "event.action",
+        "op": "eq",
+        "value": "egress_not_allowlisted"
+       }
+      ]
+     }
+    ]
+   },
+   "implementations": [
+    {
+     "id": "DET-AI-032",
+     "type": "llminjection-detection",
+     "platform": "generic",
+     "status": "specification",
+     "reference": "data/detections.json#DET-AI-032"
+    },
+    {
+     "id": "DET-AI-043",
+     "type": "llminjection-detection",
+     "platform": "generic",
+     "status": "specification",
+     "reference": "data/detections.json#DET-AI-043"
+    }
+   ],
+   "validation_ids": [
+    "VAL-INSIDE"
+   ],
+   "references": [
+    "SRC-CENSYS-ARTEX-2026-11",
+    "SRC-SPECTRUM-SWARM-CHASING",
+    "SRC-GH-SCOPESENTRY-NIUDAII",
+    "SRC-WORKOS-BULLETIN-2026-10-30"
+   ],
+   "owner": "detection-engineering",
+   "review_date": "2026-12-22"
+  }
+ ],
+ "validations": [
+  {
+   "id": "VAL-INSIDE",
+   "title": "Replay seguro · ARTEX dentro de casa",
+   "scenario_ids": [
+    "TS-INSIDE"
+   ],
+   "detection_use_case_ids": [],
+   "detection_specification_ids": [
+    "DSP-INSIDE"
+   ],
+   "method": "log-replay",
+   "environment": "fixture defensiva sintética do repositório",
+   "expected_result": "Exatamente uma sequência do mesmo ator.",
+   "fixture": "fixtures/events.jsonl",
+   "expected": {
+    "min_matches": 1,
+    "max_matches": 1
+   },
+   "actual_result": "1 sequência(s) detectada(s) no replay; esperado 1.",
+   "status": "passed",
+   "evidence_refs": [],
+   "tested_at": "2026-11-22",
+   "owner": "detection-engineering"
+  }
+ ],
+ "intelligence_gaps": [
+  {
+   "id": "GAP-INSIDE-1",
+   "question": "Quem na organização roda frameworks ofensivos agênticos e onde?",
+   "affected_requirement_ids": [
+    "IR-INSIDE"
+   ],
+   "affected_hypothesis_ids": [
+    "TH-INSIDE"
+   ],
+   "affected_scenario_ids": [
+    "TS-INSIDE"
+   ],
+   "priority": "high",
+   "collection_action": "Coleta interna ou nova fonte primária.",
+   "owner": "cti",
+   "status": "open",
+   "due_date": "2026-12-22"
+  },
+  {
+   "id": "GAP-INSIDE-2",
+   "question": "A contagem de consoles expostos é da Censys e da Spectrum; console exposto não é atacante.",
+   "affected_requirement_ids": [
+    "IR-INSIDE"
+   ],
+   "affected_hypothesis_ids": [
+    "TH-INSIDE"
+   ],
+   "affected_scenario_ids": [
+    "TS-INSIDE"
+   ],
+   "priority": "high",
+   "collection_action": "Coleta interna ou nova fonte primária.",
+   "owner": "cti",
+   "status": "open",
+   "due_date": "2026-12-22"
+  }
+ ],
+ "decisions": [
+  {
+   "id": "DEC-INSIDE-1",
+   "title": "Inventário e autorização explícita para frameworks ofensivos agênticos.",
+   "statement": "Inventário e autorização explícita para frameworks ofensivos agênticos.",
+   "decision_owner": "segurança",
+   "status": "proposed",
+   "intelligence_requirement_ids": [
+    "IR-INSIDE"
+   ],
+   "crown_jewel_ids": [
+    "CJ-INSIDE"
+   ],
+   "hypothesis_ids": [
+    "TH-INSIDE"
+   ],
+   "scenario_ids": [
+    "TS-INSIDE"
+   ],
+   "evidence_ids": [
+    "EV-INSIDE-1",
+    "EV-INSIDE-2",
+    "EV-INSIDE-3",
+    "EV-INSIDE-4"
+   ],
+   "detection_use_case_ids": [],
+   "intelligence_gap_ids": [
+    "GAP-INSIDE-1",
+    "GAP-INSIDE-2"
+   ],
+   "rationale": "Não é um ator: são os jeitos de o ARTEX aparecer dentro da organização, por instalação não autorizada, por integração com scanner, por imagem adulterada ou por um teste que escapa.",
+   "created_at": "2026-11-22",
+   "review_date": "2026-12-22"
+  },
+  {
+   "id": "DEC-INSIDE-2",
+   "title": "Sandboxes de avaliação sem saída de rede fora de lista fechada.",
+   "statement": "Sandboxes de avaliação sem saída de rede fora de lista fechada.",
+   "decision_owner": "segurança",
+   "status": "proposed",
+   "intelligence_requirement_ids": [
+    "IR-INSIDE"
+   ],
+   "crown_jewel_ids": [
+    "CJ-INSIDE"
+   ],
+   "hypothesis_ids": [
+    "TH-INSIDE"
+   ],
+   "scenario_ids": [
+    "TS-INSIDE"
+   ],
+   "evidence_ids": [
+    "EV-INSIDE-1",
+    "EV-INSIDE-2",
+    "EV-INSIDE-3",
+    "EV-INSIDE-4"
+   ],
+   "detection_use_case_ids": [],
+   "intelligence_gap_ids": [
+    "GAP-INSIDE-1",
+    "GAP-INSIDE-2"
+   ],
+   "rationale": "Não é um ator: são os jeitos de o ARTEX aparecer dentro da organização, por instalação não autorizada, por integração com scanner, por imagem adulterada ou por um teste que escapa.",
+   "created_at": "2026-11-22",
+   "review_date": "2026-12-22"
+  }
+ ],
+ "x_llminjection": {
+  "generated_by": "scripts/build_tcem.py",
+  "method": "TCEM v0.5.1 (Cyber-Threat-Context-Modeling, mesmo autor)",
+  "refs": [
+   "CTRL-ACTION-BUDGET",
+   "CTRL-AI-INVENTORY",
+   "CTRL-ARTIFACT-PINNING",
+   "CTRL-EGRESS-POLICY",
+   "CTRL-SIGNATURE-VERIFICATION",
+   "DET-AI-032",
+   "DET-AI-043",
+   "DET-AI-052",
+   "DET-AI-058",
+   "INCIDENT-WORKOS-ARTEX-SANDBOX-ESCAPE",
+   "LLMI-T015",
+   "SRC-CENSYS-ARTEX-2026-11",
+   "SRC-GH-SCOPESENTRY-NIUDAII",
+   "SRC-SPECTRUM-SWARM-CHASING",
+   "SRC-WORKOS-BULLETIN-2026-10-30",
+   "TOOL-ARTEX",
+   "TOOL-SCOPESENTRY"
+  ],
+  "fixture_note": "Agente sem aprovação que alcança destino fora da lista (1 alerta); agente com aprovação humana e destino fora da lista (vai para a fila de egress, não para este alerta)."
+ }
+}

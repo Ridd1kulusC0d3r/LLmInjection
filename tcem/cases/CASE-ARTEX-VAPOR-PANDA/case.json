@@ -1,0 +1,535 @@
+{
+ "version": "0.5",
+ "case": {
+  "id": "CASE-ARTEX-VAPOR-PANDA",
+  "name": "ARTEX · VAPOR PANDA",
+  "mission": "Impedir que um acesso web exposto vire domínio comprometido.",
+  "decision_context": "Priorizar telemetria, detecção e controles contra os ataques conhecidos do ARTEX.",
+  "scope": [
+   "ai-genai",
+   "artex",
+   "llminjection"
+  ],
+  "status": "active"
+ },
+ "intelligence_requirements": [
+  {
+   "id": "IR-VAPOR-PANDA",
+   "question": "Como os ataques de VAPOR PANDA com ARTEX alcançariam controladores de domínio e credenciais de administrador de domínio aqui, e veríamos cada passo?",
+   "decision_supported": "Ordem de investimento em telemetria, detecção e controle.",
+   "stakeholder": "CTI e engenharia de detecção",
+   "priority": "high",
+   "time_horizon": "90 dias",
+   "linked_crown_jewels": [
+    "CJ-VAPOR-PANDA"
+   ],
+   "information_gap_ids": [
+    "GAP-VAPOR-PANDA-1",
+    "GAP-VAPOR-PANDA-2"
+   ],
+   "status": "open"
+  }
+ ],
+ "crown_jewels": [
+  {
+   "id": "CJ-VAPOR-PANDA",
+   "name": "Controladores de domínio e credenciais de administrador de domínio",
+   "rationale": "Com elas o operador alcança qualquer servidor da organização.",
+   "criticality": "critical"
+  }
+ ],
+ "architectures": [
+  {
+   "id": "ARCH-VAPOR-PANDA",
+   "name": "Controladores de domínio e credenciais de administrador de domínio",
+   "nodes": [
+    {
+     "id": "NODE-VAPOR-PANDA",
+     "name": "Controladores de domínio e credenciais de administrador de domínio",
+     "type": "control-plane",
+     "trust_zone": "critical"
+    }
+   ],
+   "relationships": []
+  }
+ ],
+ "evidence_items": [
+  {
+   "id": "EV-VAPOR-PANDA-1",
+   "title": "VAPOR PANDA Uses AI-Driven ARTEX to Scale a Global Espionage Campaign",
+   "source_type": "primary-external",
+   "source": "CrowdStrike Counter Adversary Operations",
+   "reference": "https://www.crowdstrike.com/en-us/blog/vapor-panda-uses-artex-to-scale-global-campaign/",
+   "publication_date": "2026-10-29",
+   "collected_at": "2026-11-10",
+   "claim": "Relato público usado no caso; registros: ACTOR-VAPOR-PANDA, CAMPAIGN-VAPOR-PANDA-ARTEX.",
+   "evidence_state": "observed",
+   "source_reliability": "high",
+   "information_credibility": "high",
+   "temporal_relevance": "current",
+   "supports": [
+    "TH-VAPOR-PANDA"
+   ],
+   "contradicts": [],
+   "analyst_notes": "Grau A (SRC-CROWDSTRIKE-VAPOR-PANDA-2026-10)."
+  }
+ ],
+ "hypotheses": [
+  {
+   "id": "TH-VAPOR-PANDA",
+   "title": "A parte específica de IA desta campanha aparece no reconhecimento e na saída para APIs de LLM; o resto é pós-exploração clássica.",
+   "statement": "A parte específica de IA desta campanha aparece no reconhecimento e na saída para APIs de LLM; o resto é pós-exploração clássica.",
+   "rationale": "Agentes planejador e executores do ARTEX, sobretudo com DeepSeek, em 14 países em 11 dias; pós-exploração confirmada em 9 organizações.",
+   "intelligence_requirement_ids": [
+    "IR-VAPOR-PANDA"
+   ],
+   "target_crown_jewels": [
+    "CJ-VAPOR-PANDA"
+   ],
+   "supporting_evidence": [
+    "EV-VAPOR-PANDA-1"
+   ],
+   "contradicting_evidence": [],
+   "alternative_explanations": [
+    "Ferramenta legítima de IA instalada no servidor"
+   ],
+   "assumptions": [
+    "O ambiente modelado tem o ativo crítico descrito."
+   ],
+   "confidence": "high",
+   "information_gap_ids": [
+    "GAP-VAPOR-PANDA-1",
+    "GAP-VAPOR-PANDA-2"
+   ],
+   "attack_path_ids": [
+    "TS-VAPOR-PANDA"
+   ],
+   "status": "supported",
+   "owner": "cti",
+   "created_at": "2026-11-22",
+   "review_date": "2026-12-22"
+  }
+ ],
+ "threat_contexts": [
+  {
+   "id": "CTX-VAPOR-PANDA",
+   "name": "ARTEX · VAPOR PANDA",
+   "lens_id": "ai-genai",
+   "relevance": "Agentes planejador e executores do ARTEX, sobretudo com DeepSeek, em 14 países em 11 dias; pós-exploração confirmada em 9 organizações.",
+   "status": "active",
+   "crown_jewel_ids": [
+    "CJ-VAPOR-PANDA"
+   ],
+   "architecture_ids": [
+    "ARCH-VAPOR-PANDA"
+   ],
+   "scenario_ids": [
+    "TS-VAPOR-PANDA"
+   ],
+   "intelligence_requirement_ids": [
+    "IR-VAPOR-PANDA"
+   ],
+   "confidence": "high",
+   "freshness": "current"
+  }
+ ],
+ "scenarios": [
+  {
+   "id": "TS-VAPOR-PANDA",
+   "title": "Web shell seguido de acesso a credenciais e de saída para API de LLM no mesmo servidor",
+   "objective": "Impedir que um acesso web exposto vire domínio comprometido.",
+   "hypothesis_ids": [
+    "TH-VAPOR-PANDA"
+   ],
+   "target_crown_jewels": [
+    "CJ-VAPOR-PANDA"
+   ],
+   "threat_context_ids": [
+    "CTX-VAPOR-PANDA"
+   ],
+   "attack_path": {
+    "id": "AP-VAPOR-PANDA",
+    "entry_vector": "Agentes executores exploram aplicação exposta",
+    "steps": [
+     {
+      "order": 1,
+      "behavior": "Agentes executores exploram aplicação exposta",
+      "phase": "Acesso inicial",
+      "attack_techniques": [
+       "T1190"
+      ],
+      "llminjection_techniques": [
+       "LLMI-T015"
+      ],
+      "llminjection_detections": [
+       "DET-AI-048"
+      ],
+      "controls": [
+       "Gestão de exposição e correção"
+      ],
+      "architecture_node_id": "NODE-VAPOR-PANDA",
+      "gap": ""
+     },
+     {
+      "order": 2,
+      "behavior": "Agente escreve web shell",
+      "phase": "Persistência e escalada",
+      "attack_techniques": [
+       "T1505.003"
+      ],
+      "llminjection_techniques": [
+       "LLMI-T015"
+      ],
+      "llminjection_detections": [],
+      "controls": [],
+      "architecture_node_id": "NODE-VAPOR-PANDA",
+      "gap": "Sem DET-AI: regras genéricas de web shell (o artex-detections tem versões ligadas ao ARTEX)."
+     },
+     {
+      "order": 3,
+      "behavior": "Extração de senhas de administrador de domínio",
+      "phase": "Credenciais",
+      "attack_techniques": [
+       "T1003"
+      ],
+      "llminjection_techniques": [
+       "LLMI-T015"
+      ],
+      "llminjection_detections": [],
+      "controls": [],
+      "architecture_node_id": "NODE-VAPOR-PANDA",
+      "gap": "Coberto por regras clássicas de EDR, não por detecção de IA."
+     },
+     {
+      "order": 4,
+      "behavior": "Movimento lateral com a credencial de domínio",
+      "phase": "Movimento lateral",
+      "attack_techniques": [
+       "T1021.002"
+      ],
+      "llminjection_techniques": [
+       "LLMI-T015"
+      ],
+      "llminjection_detections": [],
+      "controls": [],
+      "architecture_node_id": "NODE-VAPOR-PANDA",
+      "gap": "Coberto por regras clássicas."
+     },
+     {
+      "order": 5,
+      "behavior": "Servidor comprometido fala com API de LLM e com o console",
+      "phase": "Comando e controle",
+      "attack_techniques": [
+       "T1071.001"
+      ],
+      "llminjection_techniques": [
+       "LLMI-T015"
+      ],
+      "llminjection_detections": [
+       "DET-AI-001",
+       "DET-AI-048"
+      ],
+      "controls": [
+       "CTRL-EGRESS-POLICY"
+      ],
+      "architecture_node_id": "NODE-VAPOR-PANDA",
+      "gap": ""
+     }
+    ]
+   },
+   "impact": {
+    "business": "Com elas o operador alcança qualquer servidor da organização.",
+    "technical": "Comprometimento do ativo crítico modelado."
+   },
+   "priority": {
+    "crown_jewel_criticality": 5,
+    "threat_relevance": 4,
+    "attack_path_feasibility": 4,
+    "exposure": 4,
+    "control_weakness": 3,
+    "detection_gap": 3,
+    "calculated_score": 3.83,
+    "band": "P2",
+    "rationale": "Pontuação do analista a partir das fontes; ver a hipótese e as lacunas."
+   },
+   "confidence": "high",
+   "telemetry_requirements": [
+    "TC-VAPOR-PANDA"
+   ],
+   "detection_use_cases": [],
+   "detection_specification_ids": [
+    "DSP-VAPOR-PANDA"
+   ],
+   "validation_ids": [
+    "VAL-VAPOR-PANDA"
+   ]
+  }
+ ],
+ "telemetry_contracts": [
+  {
+   "id": "TC-VAPOR-PANDA",
+   "title": "Contrato de observáveis · VAPOR PANDA",
+   "scenario_ids": [
+    "TS-VAPOR-PANDA"
+   ],
+   "detection_use_case_ids": [],
+   "behavior": "webroot_file_written_by_server -> credential_store_access -> llm_provider_egress (mesmo host)",
+   "observable": "Logs de WAF e do servidor web; EDR: arquivo criado no diretório web pelo processo do servidor; EDR: acesso à memória do LSASS e ao NTDS; Logs de autenticação do Windows (4624 tipo 3) e SMB; DNS e proxy: destinos de provedores de LLM a partir de servidores",
+   "source": "Logs de WAF e do servidor web; EDR; Logs de autenticação do Windows (4624 tipo 3) e SMB; DNS e proxy",
+   "event_or_state_change": "llm_provider_egress",
+   "entity_identifiers": [
+    "host.name"
+   ],
+   "required_fields": [
+    "event.action",
+    "timestamp",
+    "host.name"
+   ],
+   "retention": "90d",
+   "latency_target": "<15m",
+   "normalization": "modelo de evento conceitual do TCE",
+   "integrity_requirements": [
+    "monitorar a saúde da fonte"
+   ],
+   "failure_modes": [
+    "fonte não coletada",
+    "relógio sem precisão de segundos"
+   ],
+   "status": "partial",
+   "owner": "detection-engineering",
+   "review_date": "2026-12-22"
+  }
+ ],
+ "detection_specifications": [
+  {
+   "id": "DSP-VAPOR-PANDA",
+   "title": "Web shell seguido de acesso a credenciais e de saída para API de LLM no mesmo servidor",
+   "scenario_ids": [
+    "TS-VAPOR-PANDA"
+   ],
+   "detection_use_case_ids": [],
+   "telemetry_contract_ids": [
+    "TC-VAPOR-PANDA"
+   ],
+   "attack_techniques": [
+    "T1003",
+    "T1021.002",
+    "T1071.001",
+    "T1190",
+    "T1505.003"
+   ],
+   "severity": "high",
+   "status": "ready",
+   "analytic_concept": {
+    "description": "Web shell seguido de acesso a credenciais e de saída para API de LLM no mesmo servidor",
+    "behavior": "webroot_file_written_by_server -> credential_store_access -> llm_provider_egress (mesmo host)",
+    "observable_effect": "Eventos do mesmo ator em ordem.",
+    "entities": [
+     "host.name"
+    ],
+    "benign_alternatives": [
+     "Ferramenta legítima de IA instalada no servidor"
+    ]
+   },
+   "correlation": {
+    "pattern_id": "ordered-sequence",
+    "window": "24h",
+    "group_by": [
+     "host.name"
+    ]
+   },
+   "validation_logic": {
+    "pattern": "ordered-sequence",
+    "group_by": [
+     "host.name"
+    ],
+    "stages": [
+     {
+      "all": [
+       {
+        "field": "event.action",
+        "op": "eq",
+        "value": "webroot_file_written_by_server"
+       }
+      ]
+     },
+     {
+      "all": [
+       {
+        "field": "event.action",
+        "op": "eq",
+        "value": "credential_store_access"
+       }
+      ]
+     },
+     {
+      "all": [
+       {
+        "field": "event.action",
+        "op": "eq",
+        "value": "llm_provider_egress"
+       }
+      ]
+     }
+    ]
+   },
+   "implementations": [
+    {
+     "id": "DET-AI-001",
+     "type": "llminjection-detection",
+     "platform": "generic",
+     "status": "specification",
+     "reference": "data/detections.json#DET-AI-001"
+    }
+   ],
+   "validation_ids": [
+    "VAL-VAPOR-PANDA"
+   ],
+   "references": [
+    "SRC-CROWDSTRIKE-VAPOR-PANDA-2026-10"
+   ],
+   "owner": "detection-engineering",
+   "review_date": "2026-12-22"
+  }
+ ],
+ "validations": [
+  {
+   "id": "VAL-VAPOR-PANDA",
+   "title": "Replay seguro · VAPOR PANDA",
+   "scenario_ids": [
+    "TS-VAPOR-PANDA"
+   ],
+   "detection_use_case_ids": [],
+   "detection_specification_ids": [
+    "DSP-VAPOR-PANDA"
+   ],
+   "method": "log-replay",
+   "environment": "fixture defensiva sintética do repositório",
+   "expected_result": "Exatamente uma sequência do mesmo ator.",
+   "fixture": "fixtures/events.jsonl",
+   "expected": {
+    "min_matches": 1,
+    "max_matches": 1
+   },
+   "actual_result": "1 sequência(s) detectada(s) no replay; esperado 1.",
+   "status": "passed",
+   "evidence_refs": [],
+   "tested_at": "2026-11-22",
+   "owner": "detection-engineering"
+  }
+ ],
+ "intelligence_gaps": [
+  {
+   "id": "GAP-VAPOR-PANDA-1",
+   "question": "Quais servidores podem falar com APIs de LLM e quais não deveriam?",
+   "affected_requirement_ids": [
+    "IR-VAPOR-PANDA"
+   ],
+   "affected_hypothesis_ids": [
+    "TH-VAPOR-PANDA"
+   ],
+   "affected_scenario_ids": [
+    "TS-VAPOR-PANDA"
+   ],
+   "priority": "high",
+   "collection_action": "Coleta interna ou nova fonte primária.",
+   "owner": "cti",
+   "status": "open",
+   "due_date": "2026-12-22"
+  },
+  {
+   "id": "GAP-VAPOR-PANDA-2",
+   "question": "A CrowdStrike não publica os indicadores do console usado.",
+   "affected_requirement_ids": [
+    "IR-VAPOR-PANDA"
+   ],
+   "affected_hypothesis_ids": [
+    "TH-VAPOR-PANDA"
+   ],
+   "affected_scenario_ids": [
+    "TS-VAPOR-PANDA"
+   ],
+   "priority": "high",
+   "collection_action": "Coleta interna ou nova fonte primária.",
+   "owner": "cti",
+   "status": "open",
+   "due_date": "2026-12-22"
+  }
+ ],
+ "decisions": [
+  {
+   "id": "DEC-VAPOR-PANDA-1",
+   "title": "Bloquear saída de servidores para provedores de LLM fora de uma lista aprovada.",
+   "statement": "Bloquear saída de servidores para provedores de LLM fora de uma lista aprovada.",
+   "decision_owner": "segurança",
+   "status": "proposed",
+   "intelligence_requirement_ids": [
+    "IR-VAPOR-PANDA"
+   ],
+   "crown_jewel_ids": [
+    "CJ-VAPOR-PANDA"
+   ],
+   "hypothesis_ids": [
+    "TH-VAPOR-PANDA"
+   ],
+   "scenario_ids": [
+    "TS-VAPOR-PANDA"
+   ],
+   "evidence_ids": [
+    "EV-VAPOR-PANDA-1"
+   ],
+   "detection_use_case_ids": [],
+   "intelligence_gap_ids": [
+    "GAP-VAPOR-PANDA-1",
+    "GAP-VAPOR-PANDA-2"
+   ],
+   "rationale": "Agentes planejador e executores do ARTEX, sobretudo com DeepSeek, em 14 países em 11 dias; pós-exploração confirmada em 9 organizações.",
+   "created_at": "2026-11-22",
+   "review_date": "2026-12-22"
+  },
+  {
+   "id": "DEC-VAPOR-PANDA-2",
+   "title": "Tratar web shell em servidor exposto como incidente de domínio até prova em contrário.",
+   "statement": "Tratar web shell em servidor exposto como incidente de domínio até prova em contrário.",
+   "decision_owner": "segurança",
+   "status": "proposed",
+   "intelligence_requirement_ids": [
+    "IR-VAPOR-PANDA"
+   ],
+   "crown_jewel_ids": [
+    "CJ-VAPOR-PANDA"
+   ],
+   "hypothesis_ids": [
+    "TH-VAPOR-PANDA"
+   ],
+   "scenario_ids": [
+    "TS-VAPOR-PANDA"
+   ],
+   "evidence_ids": [
+    "EV-VAPOR-PANDA-1"
+   ],
+   "detection_use_case_ids": [],
+   "intelligence_gap_ids": [
+    "GAP-VAPOR-PANDA-1",
+    "GAP-VAPOR-PANDA-2"
+   ],
+   "rationale": "Agentes planejador e executores do ARTEX, sobretudo com DeepSeek, em 14 países em 11 dias; pós-exploração confirmada em 9 organizações.",
+   "created_at": "2026-11-22",
+   "review_date": "2026-12-22"
+  }
+ ],
+ "x_llminjection": {
+  "generated_by": "scripts/build_tcem.py",
+  "method": "TCEM v0.5.1 (Cyber-Threat-Context-Modeling, mesmo autor)",
+  "refs": [
+   "ACTOR-VAPOR-PANDA",
+   "CAMPAIGN-VAPOR-PANDA-ARTEX",
+   "CTRL-EGRESS-POLICY",
+   "DET-AI-001",
+   "DET-AI-048",
+   "LLMI-T015",
+   "SRC-CROWDSTRIKE-VAPOR-PANDA-2026-10"
+  ],
+  "fixture_note": "Um servidor web com arquivo novo, acesso a credenciais e saída para API de LLM (1 alerta); um cache gravado pelo servidor (sem alerta); um desenvolvedor usando API de LLM (sem alerta)."
+ }
+}

@@ -1,0 +1,6 @@
+{"timestamp": "2026-11-01T14:00:00Z", "event": {"action": "payment_api_call"}, "beneficiary": {"account": "BEN-77"}, "client": {"first_seen": "true"}}
+{"timestamp": "2026-11-01T14:02:00Z", "event": {"action": "micro_transfer"}, "beneficiary": {"account": "BEN-77"}, "amount": {"value": 1}}
+{"timestamp": "2026-11-01T14:30:00Z", "event": {"action": "large_transfer"}, "beneficiary": {"account": "BEN-77"}, "amount": {"value": 250000}}
+{"timestamp": "2026-11-01T15:00:00Z", "event": {"action": "payment_api_call"}, "beneficiary": {"account": "BEN-12"}, "client": {"first_seen": "false"}}
+{"timestamp": "2026-11-01T15:01:00Z", "event": {"action": "micro_transfer"}, "beneficiary": {"account": "BEN-12"}, "amount": {"value": 1}}
+{"timestamp": "2026-11-01T15:20:00Z", "event": {"action": "large_transfer"}, "beneficiary": {"account": "BEN-12"}, "amount": {"value": 90000}}

@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="530" viewBox="0 0 1200 530" role="img" aria-label="Caminho de ataque TCEM: VAPOR PANDA">
+<rect width="1200" height="530" fill="#f6f5f1"/>
+<rect width="1200" height="64" fill="#15140f"/>
+<text x="24" y="26" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="11" font-weight="700" fill="#e8a07f" text-anchor="start">TCEM · ARTEX · VAPOR PANDA</text>
+<text x="24" y="50" font-family="Inter, Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#f6f5f1" text-anchor="start">VAPOR PANDA (CrowdStrike; espionagem)</text>
+<text x="1176" y="26" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="11" font-weight="400" fill="#b9b5aa" text-anchor="end">CASE-ARTEX-VAPOR-PANDA · confiança alta</text>
+<text x="1176" y="50" font-family="Inter, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#e6e2d8" text-anchor="end">Ativo crítico: Controladores de domínio e credenciais de administrador de domínio</text>
+<text x="20" y="106" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10.5" font-weight="700" fill="#6b675d" text-anchor="start">CAMINHO</text>
+<line x1="20" y1="240" x2="1180" y2="240" stroke="#d9d5ca"/>
+<text x="20" y="272" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10.5" font-weight="700" fill="#6b675d" text-anchor="start">TELEMETRIA</text>
+<line x1="20" y1="340" x2="1180" y2="340" stroke="#d9d5ca"/>
+<text x="20" y="366" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10.5" font-weight="700" fill="#6b675d" text-anchor="start">DETECÇÃO</text>
+<line x1="20" y1="432" x2="1180" y2="432" stroke="#d9d5ca"/>
+<text x="20" y="460" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10.5" font-weight="700" fill="#6b675d" text-anchor="start">CONTROLE</text>
+<line x1="20" y1="504" x2="1180" y2="504" stroke="#d9d5ca"/>
+<rect x="150.0" y="84" width="192.0" height="150" rx="6" fill="#ffffff" stroke="#15140f" stroke-width="1.2"/>
+<rect x="150.0" y="84" width="192.0" height="22" rx="6" fill="#b43c0e"/>
+<rect x="150.0" y="98" width="192.0" height="8" fill="#b43c0e"/>
+<text x="158.0" y="99" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="9.5" font-weight="700" fill="#ffffff" text-anchor="start">1 · ACESSO INICIAL</text>
+<text x="158.0" y="124" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#15140f" text-anchor="start">Agentes executores exploram</text>
+<text x="158.0" y="139" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#15140f" text-anchor="start">aplicação exposta</text>
+<text x="158.0" y="226" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="9.5" font-weight="600" fill="#1f6f8b" text-anchor="start">T1190</text>
+<path d="M344.0 159 L353.0 159 M348.0 154 L353.0 159 L348.0 164" stroke="#15140f" stroke-width="1.5" fill="none"/>
+<text x="154.0" y="266" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#15140f" text-anchor="start">Logs de WAF e do servidor web</text>
+<rect x="150.0" y="350" width="192.0" height="34" rx="6" fill="#b43c0e"/>
+<text x="158.0" y="363" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10" font-weight="700" fill="#ffffff" text-anchor="start">DET-AI-048</text>
+<text x="158.0" y="377" font-family="Inter, Helvetica, Arial, sans-serif" font-size="9" font-weight="400" fill="#fbe9df" text-anchor="start">Agentic Offensive Framework</text>
+<rect x="150.0" y="444" width="192.0" height="21" rx="4" fill="#f7e6dc"/>
+<text x="158.0" y="458" font-family="Inter, Helvetica, Arial, sans-serif" font-size="9" font-weight="600" fill="#15140f" text-anchor="start">Gestão de exposição e correção</text>
+<rect x="356.0" y="84" width="192.0" height="150" rx="6" fill="#ffffff" stroke="#15140f" stroke-width="1.2"/>
+<rect x="356.0" y="84" width="192.0" height="22" rx="6" fill="#15140f"/>
+<rect x="356.0" y="98" width="192.0" height="8" fill="#15140f"/>
+<text x="364.0" y="99" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="9.5" font-weight="700" fill="#ffffff" text-anchor="start">2 · PERSISTÊNCIA E ESCALADA</text>
+<text x="364.0" y="124" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#15140f" text-anchor="start">Agente escreve web shell</text>
+<text x="364.0" y="226" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="9.5" font-weight="600" fill="#1f6f8b" text-anchor="start">T1505.003</text>
+<path d="M550.0 159 L559.0 159 M554.0 154 L559.0 159 L554.0 164" stroke="#15140f" stroke-width="1.5" fill="none"/>
+<text x="360.0" y="266" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#15140f" text-anchor="start">EDR: arquivo criado no diretório</text>
+<text x="360.0" y="280" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#15140f" text-anchor="start">web pelo processo do servidor</text>
+<rect x="356.0" y="350" width="192.0" height="72" rx="6" fill="none" stroke="#b43c0e" stroke-dasharray="5 4" stroke-width="1.4"/>
+<text x="364.0" y="366" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10" font-weight="700" fill="#b43c0e" text-anchor="start">LACUNA</text>
+<text x="364.0" y="381" font-family="Inter, Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#15140f" text-anchor="start">Sem DET-AI: regras genéricas de</text>
+<text x="364.0" y="394" font-family="Inter, Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#15140f" text-anchor="start">web shell (o artex-detections tem</text>
+<text x="364.0" y="407" font-family="Inter, Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#15140f" text-anchor="start">versões ligadas ao ARTEX).</text>
+<rect x="562.0" y="84" width="192.0" height="150" rx="6" fill="#ffffff" stroke="#15140f" stroke-width="1.2"/>
+<rect x="562.0" y="84" width="192.0" height="22" rx="6" fill="#15140f"/>
+<rect x="562.0" y="98" width="192.0" height="8" fill="#15140f"/>
+<text x="570.0" y="99" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="9.5" font-weight="700" fill="#ffffff" text-anchor="start">3 · CREDENCIAIS</text>
+<text x="570.0" y="124" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#15140f" text-anchor="start">Extração de senhas de</text>
+<text x="570.0" y="139" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#15140f" text-anchor="start">administrador de domínio</text>
+<text x="570.0" y="226" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="9.5" font-weight="600" fill="#1f6f8b" text-anchor="start">T1003</text>
+<path d="M756.0 159 L765.0 159 M760.0 154 L765.0 159 L760.0 164" stroke="#15140f" stroke-width="1.5" fill="none"/>
+<text x="566.0" y="266" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#15140f" text-anchor="start">EDR: acesso à memória do LSASS e</text>
+<text x="566.0" y="280" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#15140f" text-anchor="start">ao NTDS</text>
+<rect x="562.0" y="350" width="192.0" height="72" rx="6" fill="none" stroke="#b43c0e" stroke-dasharray="5 4" stroke-width="1.4"/>
+<text x="570.0" y="366" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10" font-weight="700" fill="#b43c0e" text-anchor="start">LACUNA</text>
+<text x="570.0" y="381" font-family="Inter, Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#15140f" text-anchor="start">Coberto por regras clássicas de</text>
+<text x="570.0" y="394" font-family="Inter, Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#15140f" text-anchor="start">EDR, não por detecção de IA.</text>
+<rect x="768.0" y="84" width="192.0" height="150" rx="6" fill="#ffffff" stroke="#15140f" stroke-width="1.2"/>
+<rect x="768.0" y="84" width="192.0" height="22" rx="6" fill="#15140f"/>
+<rect x="768.0" y="98" width="192.0" height="8" fill="#15140f"/>
+<text x="776.0" y="99" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="9.5" font-weight="700" fill="#ffffff" text-anchor="start">4 · MOVIMENTO LATERAL</text>
+<text x="776.0" y="124" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#15140f" text-anchor="start">Movimento lateral com a</text>
+<text x="776.0" y="139" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#15140f" text-anchor="start">credencial de domínio</text>
+<text x="776.0" y="226" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="9.5" font-weight="600" fill="#1f6f8b" text-anchor="start">T1021.002</text>
+<path d="M962.0 159 L971.0 159 M966.0 154 L971.0 159 L966.0 164" stroke="#15140f" stroke-width="1.5" fill="none"/>
+<text x="772.0" y="266" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#15140f" text-anchor="start">Logs de autenticação do Windows</text>
+<text x="772.0" y="280" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#15140f" text-anchor="start">(4624 tipo 3) e SMB</text>
+<rect x="768.0" y="350" width="192.0" height="72" rx="6" fill="none" stroke="#b43c0e" stroke-dasharray="5 4" stroke-width="1.4"/>
+<text x="776.0" y="366" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10" font-weight="700" fill="#b43c0e" text-anchor="start">LACUNA</text>
+<text x="776.0" y="381" font-family="Inter, Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#15140f" text-anchor="start">Coberto por regras clássicas.</text>
+<rect x="974.0" y="84" width="192.0" height="150" rx="6" fill="#ffffff" stroke="#15140f" stroke-width="1.2"/>
+<rect x="974.0" y="84" width="192.0" height="22" rx="6" fill="#b43c0e"/>
+<rect x="974.0" y="98" width="192.0" height="8" fill="#b43c0e"/>
+<text x="982.0" y="99" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="9.5" font-weight="700" fill="#ffffff" text-anchor="start">5 · COMANDO E CONTROLE</text>
+<text x="982.0" y="124" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#15140f" text-anchor="start">Servidor comprometido fala</text>
+<text x="982.0" y="139" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#15140f" text-anchor="start">com API de LLM e com o</text>
+<text x="982.0" y="154" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#15140f" text-anchor="start">console</text>
+<text x="982.0" y="226" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="9.5" font-weight="600" fill="#1f6f8b" text-anchor="start">T1071.001</text>
+<text x="978.0" y="266" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#15140f" text-anchor="start">DNS e proxy: destinos de</text>
+<text x="978.0" y="280" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#15140f" text-anchor="start">provedores de LLM a partir de</text>
+<text x="978.0" y="294" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#15140f" text-anchor="start">servidores</text>
+<rect x="974.0" y="350" width="192.0" height="34" rx="6" fill="#b43c0e"/>
+<text x="982.0" y="363" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10" font-weight="700" fill="#ffffff" text-anchor="start">DET-AI-001</text>
+<text x="982.0" y="377" font-family="Inter, Helvetica, Arial, sans-serif" font-size="9" font-weight="400" fill="#fbe9df" text-anchor="start">Unexpected LLM Provider Egress</text>
+<rect x="974.0" y="388" width="192.0" height="34" rx="6" fill="#b43c0e"/>
+<text x="982.0" y="401" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10" font-weight="700" fill="#ffffff" text-anchor="start">DET-AI-048</text>
+<text x="982.0" y="415" font-family="Inter, Helvetica, Arial, sans-serif" font-size="9" font-weight="400" fill="#fbe9df" text-anchor="start">Agentic Offensive Framework</text>
+<rect x="974.0" y="444" width="192.0" height="21" rx="4" fill="#f7e6dc"/>
+<text x="982.0" y="458" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="9" font-weight="600" fill="#15140f" text-anchor="start">CTRL-EGRESS-POLICY</text>
+<text x="20" y="518" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10" font-weight="400" fill="#6b675d" text-anchor="start">Validação por replay: passou (1 alerta) · fixture sintética · webroot_file_written_by_server -&gt; credential_store_access -&gt; llm_provider_egress (mesmo host)</text>
+</svg>

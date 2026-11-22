@@ -1,0 +1,5 @@
+{"timestamp": "2026-11-01T02:10:00Z", "event": {"action": "webroot_file_written_by_server"}, "host": {"name": "web-01"}, "file": {"path": "/var/www/app/up.aspx"}}
+{"timestamp": "2026-11-01T02:14:00Z", "event": {"action": "credential_store_access"}, "host": {"name": "web-01"}, "process": {"name": "w3wp"}}
+{"timestamp": "2026-11-01T02:20:00Z", "event": {"action": "llm_provider_egress"}, "host": {"name": "web-01"}, "destination": {"domain": "api.llm.example"}}
+{"timestamp": "2026-11-01T08:00:00Z", "event": {"action": "webroot_file_written_by_server"}, "host": {"name": "web-02"}, "file": {"path": "/var/www/app/cache.tmp"}}
+{"timestamp": "2026-11-01T09:00:00Z", "event": {"action": "llm_provider_egress"}, "host": {"name": "dev-07"}, "destination": {"domain": "api.llm.example"}}

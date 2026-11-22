@@ -1021,13 +1021,13 @@
       "LLMI-T001",
       "LLMI-T002"
     ],
-    "summary": "Benchmark of prompt injection attacks and defences.",
+    "summary": "Toolkit and benchmark of prompt injection attacks and defences (USENIX Security 2024), with the DataSentinel detector (IEEE S&P 2025) and PromptLocate localisation (IEEE S&P 2026). Mapped in references/crosswalks/open-prompt-injection.json.",
     "source_grade": "D",
     "provenance": "user-supplied research, cross-checked by shallow clone on 2026-10-07; last commit and license read from the repository; archive flag not visible to git",
     "added": "2026-10-07",
     "verification": {
-      "method": "git clone --depth 1",
-      "checked": "2026-11-20",
+      "method": "git clone --depth 1, read as text (not executed)",
+      "checked": "2026-11-22",
       "reachable": true,
       "last_commit": "2026-09-27",
       "license": "MIT"

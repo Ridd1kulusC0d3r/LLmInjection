@@ -1,0 +1,6 @@
+{"timestamp": "2026-11-01T09:00:02Z", "event": {"action": "spray_rhythm_burst"}, "source": {"ip": "203.0.113.10"}, "accounts": {"count": 327}, "interval": {"seconds": 1}}
+{"timestamp": "2026-11-01T09:00:03Z", "event": {"action": "signin_success"}, "source": {"ip": "203.0.113.10"}, "user": {"name": "carla"}}
+{"timestamp": "2026-11-01T09:02:00Z", "event": {"action": "signin_failure"}, "source": {"ip": "198.51.100.7"}, "user": {"name": "diego"}}
+{"timestamp": "2026-11-01T09:02:30Z", "event": {"action": "signin_success"}, "source": {"ip": "198.51.100.7"}, "user": {"name": "diego"}}
+{"timestamp": "2026-11-01T09:40:00Z", "event": {"action": "app_credential_added"}, "source": {"ip": "203.0.113.10"}, "app": {"id": "app-relatorios"}}
+{"timestamp": "2026-11-01T10:15:00Z", "event": {"action": "app_credential_added"}, "source": {"ip": "192.0.2.44"}, "app": {"id": "app-rh"}}

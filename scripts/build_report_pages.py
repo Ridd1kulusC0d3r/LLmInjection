@@ -24,6 +24,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 REPO = "https://github.com/Ridd1kulusC0d3r/LLmInjection/blob/main/"
 DIRS = ("intel", "dossiers", "trends")
+# Where report figures (assets/tcem) are served from; the print edition points it at the files on disk.
+IMG_BASE = "../assets/"
 TAGS = {"EXP": "exploração", "SC": "cadeia de suprimentos", "PI": "injeção de prompt", "OFF": "uso ofensivo",
         "AUT": "agente sem adversário", "ID": "identidade", "EXPO": "exposição"}
 CVE = re.compile(r"\bCVE-\d{4}-\d{4,7}\b")
@@ -79,6 +81,8 @@ def inline(s: str, link: Linker) -> str:
 
     s = re.sub(r"`([^`]+)`", keep, s)
     s = esc(s).replace("&quot;", '"').replace("&#x27;", "'")
+    s = re.sub(r"!\[([^\]]*)\]\(\.\./\.\./assets/(tcem/[\w.-]+\.svg)\)",
+               lambda m: f'<img class="fig" src="{IMG_BASE}{m.group(2)}" alt="{m.group(1)}" loading="lazy">', s)
     s = re.sub(r"!\[([^\]]*)\]\(([^)]+)\)", "", s)
     s = re.sub(r"\[([^\]]+)\]\((https?://[^)\s]+)\)", lambda m: f'<a class="out" href="{m.group(2)}" rel="noopener">{m.group(1)}</a>', s)
     s = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", s)
@@ -400,6 +404,7 @@ article code{{font:13.5px var(--mono);background:var(--paper-2);padding:1px 6px;
 .injected{{font-family:var(--sans)!important;border:1px solid var(--signal);background:var(--signal-soft);border-radius:12px;padding:6px 22px;margin:0 0 32px;font-size:15px}}
 .injected *{{font-family:inherit}}.injected code,.injected a.cve{{font-family:var(--mono)}}.injected:before{{content:"PROVENIÊNCIA E VERIFICAÇÃO";display:block;font:700 11px var(--mono);letter-spacing:.14em;color:var(--signal);margin:12px 0 -4px}}
 .bluf{{border-left:4px solid var(--signal);padding:4px 20px;margin:0 0 28px;font-size:18px}}
+img.fig{{display:block;width:100%;height:auto;margin:18px 0 22px;border:1px solid var(--rule);border-radius:10px;background:#f6f5f1}}
 blockquote{{margin:20px 0;padding:14px 20px;border-left:4px solid var(--signal);background:var(--card);border-radius:0 10px 10px 0}}
 .wtbl{{margin:20px 0 28px}}
 .tscroll{{overflow:auto;max-height:78vh;border:1px solid var(--rule-2);border-radius:12px;background:var(--card);box-shadow:var(--shadow-1)}}

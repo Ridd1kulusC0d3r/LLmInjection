@@ -1,0 +1,276 @@
+{
+ "meta": {
+  "source": "https://github.com/liu00222/Open-Prompt-Injection",
+  "commit": "fbed5cc",
+  "commit_date": "2026-09-27",
+  "read": "2026-11-22",
+  "licence": "MIT",
+  "papers": [
+   {
+    "key": "liu2024promptinjection",
+    "title": "Formalizing and Benchmarking Prompt Injection Attacks and Defenses",
+    "venue": "USENIX Security 2024"
+   },
+   {
+    "key": "liu2025datasentinel",
+    "title": "DataSentinel: A Game-Theoretic Detection of Prompt Injection Attacks",
+    "venue": "IEEE S&P 2025"
+   },
+   {
+    "key": "jia2026promptlocate",
+    "title": "PromptLocate: Localizing Prompt Injection Attacks",
+    "venue": "IEEE S&P 2026"
+   }
+  ],
+  "policy": "code and prompts are linked, not copied; the toolkit was read as text and not executed",
+  "mapping": "attack to technique and defence to control is an analyst mapping (scripts/open_prompt_injection_check.py)"
+ },
+ "summary": {
+  "attacks": 5,
+  "defences": 11,
+  "detectors": 2,
+  "models": 15,
+  "tasks": 9,
+  "unmapped_attacks": [],
+  "unmapped_defences": []
+ },
+ "attacks": [
+  {
+   "name": "naive",
+   "description": "Appends the injected instruction and data to the target data.",
+   "techniques": [
+    "LLMI-T002",
+    "LLMI-T001"
+   ],
+   "source": "https://github.com/liu00222/Open-Prompt-Injection/blob/main/OpenPromptInjection/attackers/__init__.py"
+  },
+  {
+   "name": "escape",
+   "description": "Adds escape characters (such as a newline) so the injected instruction reads as a new segment.",
+   "techniques": [
+    "LLMI-T002",
+    "LLMI-T001"
+   ],
+   "source": "https://github.com/liu00222/Open-Prompt-Injection/blob/main/OpenPromptInjection/attackers/__init__.py"
+  },
+  {
+   "name": "ignore",
+   "description": "Adds a context-ignoring sentence that tells the model to disregard previous instructions.",
+   "techniques": [
+    "LLMI-T002",
+    "LLMI-T001"
+   ],
+   "source": "https://github.com/liu00222/Open-Prompt-Injection/blob/main/OpenPromptInjection/attackers/__init__.py"
+  },
+  {
+   "name": "fake_comp",
+   "description": "Adds a fake response so the model treats the target task as already completed.",
+   "techniques": [
+    "LLMI-T002",
+    "LLMI-T001"
+   ],
+   "source": "https://github.com/liu00222/Open-Prompt-Injection/blob/main/OpenPromptInjection/attackers/__init__.py"
+  },
+  {
+   "name": "combine",
+   "description": "Combines escape characters, a fake completion and a context-ignoring sentence; the strongest strategy in the paper.",
+   "techniques": [
+    "LLMI-T002",
+    "LLMI-T001"
+   ],
+   "source": "https://github.com/liu00222/Open-Prompt-Injection/blob/main/OpenPromptInjection/attackers/__init__.py"
+  }
+ ],
+ "defences": [
+  {
+   "name": "instructional",
+   "class": "prevention",
+   "layer": "in-band (probabilistic)",
+   "description": "Warns the model in the instruction that the data may try to change it.",
+   "controls": [
+    "CTRL-INSTRUCTION-DATA-SEPARATION"
+   ],
+   "source": "https://github.com/liu00222/Open-Prompt-Injection/blob/main/OpenPromptInjection/apps/defenses.py"
+  },
+  {
+   "name": "sandwich",
+   "class": "prevention",
+   "layer": "in-band (probabilistic)",
+   "description": "Repeats the task after the data.",
+   "controls": [
+    "CTRL-INSTRUCTION-DATA-SEPARATION"
+   ],
+   "source": "https://github.com/liu00222/Open-Prompt-Injection/blob/main/OpenPromptInjection/apps/defenses.py"
+  },
+  {
+   "name": "random_seq",
+   "class": "prevention",
+   "layer": "in-band (probabilistic)",
+   "description": "Encloses the data between random strings.",
+   "controls": [
+    "CTRL-INPUT-TRANSFORM",
+    "CTRL-INSTRUCTION-DATA-SEPARATION"
+   ],
+   "source": "https://github.com/liu00222/Open-Prompt-Injection/blob/main/OpenPromptInjection/apps/defenses.py"
+  },
+  {
+   "name": "delimiters",
+   "class": "prevention",
+   "layer": "in-band (probabilistic)",
+   "description": "Encloses the data in delimiters.",
+   "controls": [
+    "CTRL-INPUT-TRANSFORM",
+    "CTRL-INSTRUCTION-DATA-SEPARATION"
+   ],
+   "source": "https://github.com/liu00222/Open-Prompt-Injection/blob/main/OpenPromptInjection/apps/defenses.py"
+  },
+  {
+   "name": "xml",
+   "class": "prevention",
+   "layer": "in-band (probabilistic)",
+   "description": "Encloses the data in XML tags.",
+   "controls": [
+    "CTRL-INPUT-TRANSFORM",
+    "CTRL-INSTRUCTION-DATA-SEPARATION"
+   ],
+   "source": "https://github.com/liu00222/Open-Prompt-Injection/blob/main/OpenPromptInjection/apps/defenses.py"
+  },
+  {
+   "name": "response-based",
+   "class": "response filtering",
+   "layer": "in-band (probabilistic)",
+   "description": "Drops answers that do not fit the target task's label set.",
+   "controls": [
+    "CTRL-STRUCTURED-OUTPUT",
+    "CTRL-OUTPUT-SANITIZATION"
+   ],
+   "source": "https://github.com/liu00222/Open-Prompt-Injection/blob/main/OpenPromptInjection/apps/defenses.py"
+  },
+  {
+   "name": "ppl",
+   "class": "detection",
+   "layer": "in-band (probabilistic)",
+   "description": "Flags data whose perplexity under a surrogate model passes a threshold.",
+   "controls": [
+    "CTRL-IO-GUARDRAIL"
+   ],
+   "source": "https://github.com/liu00222/Open-Prompt-Injection/blob/main/OpenPromptInjection/apps/defenses.py"
+  },
+  {
+   "name": "retokenization",
+   "class": "prevention",
+   "layer": "in-band (probabilistic)",
+   "description": "Retokenizes the data with BPE dropout to break crafted sequences.",
+   "controls": [
+    "CTRL-INPUT-TRANSFORM"
+   ],
+   "source": "https://github.com/liu00222/Open-Prompt-Injection/blob/main/OpenPromptInjection/apps/defenses.py"
+  },
+  {
+   "name": "llm-based",
+   "class": "detection",
+   "layer": "in-band (probabilistic)",
+   "description": "Asks a model whether the data contains instructions.",
+   "controls": [
+    "CTRL-IO-GUARDRAIL"
+   ],
+   "source": "https://github.com/liu00222/Open-Prompt-Injection/blob/main/OpenPromptInjection/apps/defenses.py"
+  },
+  {
+   "name": "known-answer",
+   "class": "detection",
+   "layer": "in-band (probabilistic)",
+   "description": "Asks the model to repeat a known secret while ignoring the data; a different answer flags injection.",
+   "controls": [
+    "CTRL-IO-GUARDRAIL",
+    "CTRL-CONTEXT-CANARY"
+   ],
+   "source": "https://github.com/liu00222/Open-Prompt-Injection/blob/main/OpenPromptInjection/apps/defenses.py"
+  },
+  {
+   "name": "paraphrasing",
+   "class": "prevention",
+   "layer": "in-band (probabilistic)",
+   "description": "Has the model paraphrase the data before the task runs.",
+   "controls": [
+    "CTRL-INPUT-TRANSFORM"
+   ],
+   "source": "https://github.com/liu00222/Open-Prompt-Injection/blob/main/OpenPromptInjection/apps/defenses.py"
+  }
+ ],
+ "detectors": [
+  {
+   "name": "DataSentinel",
+   "class": "detection",
+   "layer": "in-band (probabilistic)",
+   "description": "Fine-tuned known-answer detector trained against adaptive attacks (game-theoretic).",
+   "controls": [
+    "CTRL-IO-GUARDRAIL",
+    "CTRL-CONTEXT-CANARY"
+   ],
+   "source": "https://github.com/liu00222/Open-Prompt-Injection/blob/main/OpenPromptInjection/apps/DataSentinelDetector.py"
+  },
+  {
+   "name": "PromptLocate",
+   "class": "localisation and recovery",
+   "layer": "in-band (probabilistic)",
+   "description": "Finds the injected segment inside contaminated data and recovers the clean data.",
+   "controls": [
+    "CTRL-IO-GUARDRAIL",
+    "CTRL-INPUT-TRANSFORM"
+   ],
+   "source": "https://github.com/liu00222/Open-Prompt-Injection/blob/main/OpenPromptInjection/apps/PromptLocate.py"
+  }
+ ],
+ "metrics": {
+  "PNA": "Performance under no attack: how well the model does the task (target or injected) on clean data.",
+  "ASV": "Attack success value: how well the model does the injected task when the attack is applied.",
+  "MR": "Matching rate: how often answers under attack match the answers to the injected task alone."
+ },
+ "models": [
+  "deepseek-llm-7b-chat",
+  "deepseek-r1-distill-llama-8b",
+  "deepseek-r1-distill-qwen-1.5b",
+  "flan",
+  "gemma4-12b",
+  "gpt",
+  "internlm",
+  "llama",
+  "llama3",
+  "mistral",
+  "palm2",
+  "qwen3-8b",
+  "qwen3.5-9b",
+  "qwen3.8-27b",
+  "vicuna"
+ ],
+ "tasks": [
+  "compromise",
+  "gigaword",
+  "hsol",
+  "jfleg",
+  "math500",
+  "mrpc",
+  "rte",
+  "sms_spam",
+  "sst2"
+ ],
+ "lab_mapping": {
+  "test_case": "TC-PI-002 (indirect, data prompt) or TC-PI-001 (direct)",
+  "adapter": "open-prompt-injection@<commit>",
+  "result": "ASV and MR under attack, PNA without attack, per attack strategy and defence",
+  "context": "model and its config, target task, injected task, number of samples, defence specification",
+  "caveat": "A low ASV against a fixed strategy is not robustness: adaptive attacks are outside this matrix."
+ },
+ "limits": [
+  "The applications are single-turn text tasks (sentiment, spam, grammar, summarisation and others). There are no tools, agents, retrieval or memory, so results do not carry over to agent systems.",
+  "Attack strategies are fixed templates. They measure baseline exposure, not robustness against an adaptive attacker.",
+  "Every defence in the toolkit is in-band: it changes the prompt, the data or the answer, or asks a model to judge. None limits what a hijacked model can do; out-of-band controls (CTRL-POLICY-OUTSIDE-MODEL, CTRL-PRIVILEGE-SEPARATED-LLM, CTRL-DATAFLOW-TAINT) are outside its scope."
+ ],
+ "before_running": [
+  "API keys are read from JSON files under configs/model_configs: keep real keys out of the clone and out of version control.",
+  "DataSentinel and PromptLocate checkpoints are downloaded from Google Drive links with no published hash or signature: treat them as unverified model artifacts (CTRL-ARTIFACT-PINNING, CTRL-SIGNATURE-VERIFICATION).",
+  "One model loader passes trust_remote_code=True to Hugging Face, which runs code shipped with that model: pin the revision or skip that model.",
+  "The conda environment pins Python 3.9 and 2024-era libraries: run it in an isolated environment, not next to production tooling."
+ ]
+}

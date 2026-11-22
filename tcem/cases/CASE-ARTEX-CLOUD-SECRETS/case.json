@@ -1,0 +1,658 @@
+{
+ "version": "0.5",
+ "case": {
+  "id": "CASE-ARTEX-CLOUD-SECRETS",
+  "name": "ARTEX · Segredos de nuvem",
+  "mission": "Uma chave vazada não pode virar acesso aos cofres de segredos nem a contas de nuvem novas.",
+  "decision_context": "Priorizar telemetria, detecção e controles contra os ataques conhecidos do ARTEX.",
+  "scope": [
+   "ai-genai",
+   "artex",
+   "llminjection"
+  ],
+  "status": "active"
+ },
+ "intelligence_requirements": [
+  {
+   "id": "IR-CLOUD-SECRETS",
+   "question": "Como os ataques de Segredos de nuvem com ARTEX alcançariam cofres de segredos (key vault, secrets manager), chaves de longo prazo e chaves de api de ia aqui, e veríamos cada passo?",
+   "decision_supported": "Ordem de investimento em telemetria, detecção e controle.",
+   "stakeholder": "CTI e engenharia de detecção",
+   "priority": "high",
+   "time_horizon": "90 dias",
+   "linked_crown_jewels": [
+    "CJ-CLOUD-SECRETS"
+   ],
+   "information_gap_ids": [
+    "GAP-CLOUD-SECRETS-1",
+    "GAP-CLOUD-SECRETS-2"
+   ],
+   "status": "open"
+  }
+ ],
+ "crown_jewels": [
+  {
+   "id": "CJ-CLOUD-SECRETS",
+   "name": "Cofres de segredos (Key Vault, Secrets Manager), chaves de longo prazo e chaves de API de IA",
+   "rationale": "Cada segredo encontrado abre a próxima conta: a Barracuda viu cerca de 10 contas em 44 horas.",
+   "criticality": "critical"
+  }
+ ],
+ "architectures": [
+  {
+   "id": "ARCH-CLOUD-SECRETS",
+   "name": "Cofres de segredos (Key Vault, Secrets Manager), chaves de longo prazo e chaves de API de IA",
+   "nodes": [
+    {
+     "id": "NODE-CLOUD-SECRETS",
+     "name": "Cofres de segredos (Key Vault, Secrets Manager), chaves de longo prazo e chaves de API de IA",
+     "type": "control-plane",
+     "trust_zone": "critical"
+    }
+   ],
+   "relationships": []
+  }
+ ],
+ "evidence_items": [
+  {
+   "id": "EV-CLOUD-SECRETS-1",
+   "title": "Threat actors use agentic AI tooling to find and abuse exposed secrets",
+   "source_type": "primary-external",
+   "source": "Microsoft Threat Intelligence",
+   "reference": "https://www.microsoft.com/en-us/security/blog/2026/11/05/threat-actors-use-agentic-ai-tooling-to-find-and-abuse-exposed-secrets/",
+   "publication_date": "2026-11-05",
+   "collected_at": "2026-11-20",
+   "claim": "Relato público usado no caso; registros: CAMPAIGN-ARTEX-EXPOSED-SECRETS, CAMPAIGN-ARTEX-AWS, INCIDENT-BARRACUDA-ARTEX-CLOUD-2026-11, CAMPAIGN-ANTIFOX-AWS-IIS, CAMPAIGN-ARTEX-IDENTITY-WORKFLOWS.",
+   "evidence_state": "observed",
+   "source_reliability": "high",
+   "information_credibility": "high",
+   "temporal_relevance": "current",
+   "supports": [
+    "TH-CLOUD-SECRETS"
+   ],
+   "contradicts": [],
+   "analyst_notes": "Grau A (SRC-MSFT-ARTEX-SECRETS-2026-11)."
+  },
+  {
+   "id": "EV-CLOUD-SECRETS-2",
+   "title": "On the hunt for ARTEX: understanding agentic attacks in AWS environments",
+   "source_type": "primary-external",
+   "source": "Datadog Security Labs",
+   "reference": "https://securitylabs.datadoghq.com/articles/artex-agentic-attacks-aws-environments/",
+   "publication_date": "",
+   "collected_at": "2026-11-20",
+   "claim": "Relato público usado no caso; registros: CAMPAIGN-ARTEX-EXPOSED-SECRETS, CAMPAIGN-ARTEX-AWS, INCIDENT-BARRACUDA-ARTEX-CLOUD-2026-11, CAMPAIGN-ANTIFOX-AWS-IIS, CAMPAIGN-ARTEX-IDENTITY-WORKFLOWS.",
+   "evidence_state": "observed",
+   "source_reliability": "high",
+   "information_credibility": "high",
+   "temporal_relevance": "current",
+   "supports": [
+    "TH-CLOUD-SECRETS"
+   ],
+   "contradicts": [],
+   "analyst_notes": "Grau A (SRC-DATADOG-ARTEX-AWS)."
+  },
+  {
+   "id": "EV-CLOUD-SECRETS-3",
+   "title": "Forty-four hours: Anatomy of a machine-speed intrusion",
+   "source_type": "primary-external",
+   "source": "Barracuda Networks",
+   "reference": "https://blog.barracuda.com/2026/11/11/anatomy-of-a-machine-speed-intrusion",
+   "publication_date": "2026-11-11",
+   "collected_at": "2026-11-20",
+   "claim": "Relato público usado no caso; registros: CAMPAIGN-ARTEX-EXPOSED-SECRETS, CAMPAIGN-ARTEX-AWS, INCIDENT-BARRACUDA-ARTEX-CLOUD-2026-11, CAMPAIGN-ANTIFOX-AWS-IIS, CAMPAIGN-ARTEX-IDENTITY-WORKFLOWS.",
+   "evidence_state": "observed",
+   "source_reliability": "high",
+   "information_credibility": "high",
+   "temporal_relevance": "current",
+   "supports": [
+    "TH-CLOUD-SECRETS"
+   ],
+   "contradicts": [],
+   "analyst_notes": "Grau A (SRC-BARRACUDA-ARTEX-2026-11)."
+  },
+  {
+   "id": "EV-CLOUD-SECRETS-4",
+   "title": "ARTEX and AI-Powered Red Teaming Tools: What Defenders Need to Know",
+   "source_type": "primary-external",
+   "source": "Palo Alto Networks Unit 42",
+   "reference": "https://unit42.paloaltonetworks.com/artex-and-ai-powered-red-teaming-tools/",
+   "publication_date": "2026-11-11",
+   "collected_at": "2026-11-20",
+   "claim": "Relato público usado no caso; registros: CAMPAIGN-ARTEX-EXPOSED-SECRETS, CAMPAIGN-ARTEX-AWS, INCIDENT-BARRACUDA-ARTEX-CLOUD-2026-11, CAMPAIGN-ANTIFOX-AWS-IIS, CAMPAIGN-ARTEX-IDENTITY-WORKFLOWS.",
+   "evidence_state": "observed",
+   "source_reliability": "high",
+   "information_credibility": "high",
+   "temporal_relevance": "current",
+   "supports": [
+    "TH-CLOUD-SECRETS"
+   ],
+   "contradicts": [],
+   "analyst_notes": "Grau A (SRC-UNIT42-ARTEX-2026-11)."
+  }
+ ],
+ "hypotheses": [
+  {
+   "id": "TH-CLOUD-SECRETS",
+   "title": "Contra o ARTEX, o sinal mais confiável é o ritmo: muitas negações em segundos com a mesma chave, seguidas de sucesso.",
+   "statement": "Contra o ARTEX, o sinal mais confiável é o ritmo: muitas negações em segundos com a mesma chave, seguidas de sucesso.",
+   "rationale": "O padrão mais documentado do ARTEX: o agente procura segredos, prova o que cada chave pode fazer em segundos e encadeia o próximo acesso.",
+   "intelligence_requirement_ids": [
+    "IR-CLOUD-SECRETS"
+   ],
+   "target_crown_jewels": [
+    "CJ-CLOUD-SECRETS"
+   ],
+   "supporting_evidence": [
+    "EV-CLOUD-SECRETS-1",
+    "EV-CLOUD-SECRETS-2",
+    "EV-CLOUD-SECRETS-3",
+    "EV-CLOUD-SECRETS-4"
+   ],
+   "contradicting_evidence": [],
+   "alternative_explanations": [
+    "Ferramenta de inventário que testa permissões",
+    "Pipeline de deploy recém-configurado"
+   ],
+   "assumptions": [
+    "O ambiente modelado tem o ativo crítico descrito."
+   ],
+   "confidence": "high",
+   "information_gap_ids": [
+    "GAP-CLOUD-SECRETS-1",
+    "GAP-CLOUD-SECRETS-2"
+   ],
+   "attack_path_ids": [
+    "TS-CLOUD-SECRETS"
+   ],
+   "status": "supported",
+   "owner": "cti",
+   "created_at": "2026-11-22",
+   "review_date": "2026-12-22"
+  }
+ ],
+ "threat_contexts": [
+  {
+   "id": "CTX-CLOUD-SECRETS",
+   "name": "ARTEX · Segredos de nuvem",
+   "lens_id": "ai-genai",
+   "relevance": "O padrão mais documentado do ARTEX: o agente procura segredos, prova o que cada chave pode fazer em segundos e encadeia o próximo acesso.",
+   "status": "active",
+   "crown_jewel_ids": [
+    "CJ-CLOUD-SECRETS"
+   ],
+   "architecture_ids": [
+    "ARCH-CLOUD-SECRETS"
+   ],
+   "scenario_ids": [
+    "TS-CLOUD-SECRETS"
+   ],
+   "intelligence_requirement_ids": [
+    "IR-CLOUD-SECRETS"
+   ],
+   "confidence": "high",
+   "freshness": "current"
+  }
+ ],
+ "scenarios": [
+  {
+   "id": "TS-CLOUD-SECRETS",
+   "title": "Rajada de chamadas negadas seguida de leitura de segredo com a mesma chave",
+   "objective": "Uma chave vazada não pode virar acesso aos cofres de segredos nem a contas de nuvem novas.",
+   "hypothesis_ids": [
+    "TH-CLOUD-SECRETS"
+   ],
+   "target_crown_jewels": [
+    "CJ-CLOUD-SECRETS"
+   ],
+   "threat_context_ids": [
+    "CTX-CLOUD-SECRETS"
+   ],
+   "attack_path": {
+    "id": "AP-CLOUD-SECRETS",
+    "entry_vector": "Busca de segredos e chaves de API de IA em repositórios públicos",
+    "steps": [
+     {
+      "order": 1,
+      "behavior": "Busca de segredos e chaves de API de IA em repositórios públicos",
+      "phase": "Credenciais",
+      "attack_techniques": [
+       "T1593.003",
+       "T1552.001"
+      ],
+      "llminjection_techniques": [
+       "LLMI-T015",
+       "LLMI-T016"
+      ],
+      "llminjection_detections": [
+       "DET-AI-006"
+      ],
+      "controls": [
+       "CTRL-SECRET-ISOLATION"
+      ],
+      "architecture_node_id": "NODE-CLOUD-SECRETS",
+      "gap": ""
+     },
+     {
+      "order": 2,
+      "behavior": "Uso de chave de longo prazo, inclusive de fornecedor nunca revogada",
+      "phase": "Acesso inicial",
+      "attack_techniques": [
+       "T1078.004"
+      ],
+      "llminjection_techniques": [
+       "LLMI-T015"
+      ],
+      "llminjection_detections": [
+       "DET-AI-046"
+      ],
+      "controls": [
+       "Revogar chaves de fornecedores"
+      ],
+      "architecture_node_id": "NODE-CLOUD-SECRETS",
+      "gap": ""
+     },
+     {
+      "order": 3,
+      "behavior": "Prova de permissões em segundos: DryRun, validate, rajada de negações",
+      "phase": "Descoberta",
+      "attack_techniques": [
+       "T1580",
+       "T1526"
+      ],
+      "llminjection_techniques": [
+       "LLMI-T015"
+      ],
+      "llminjection_detections": [
+       "DET-AI-046",
+       "DET-AI-047"
+      ],
+      "controls": [],
+      "architecture_node_id": "NODE-CLOUD-SECRETS",
+      "gap": ""
+     },
+     {
+      "order": 4,
+      "behavior": "Leitura em massa de cofres e busca de segredos em logs",
+      "phase": "Credenciais",
+      "attack_techniques": [
+       "T1555.006",
+       "T1552"
+      ],
+      "llminjection_techniques": [
+       "LLMI-T015",
+       "LLMI-T016"
+      ],
+      "llminjection_detections": [
+       "DET-AI-047"
+      ],
+      "controls": [],
+      "architecture_node_id": "NODE-CLOUD-SECRETS",
+      "gap": ""
+     },
+     {
+      "order": 5,
+      "behavior": "Identidade administrativa nova ou service principal de aplicação multitenant",
+      "phase": "Persistência e escalada",
+      "attack_techniques": [
+       "T1098"
+      ],
+      "llminjection_techniques": [
+       "LLMI-T015"
+      ],
+      "llminjection_detections": [
+       "DET-AI-050"
+      ],
+      "controls": [],
+      "architecture_node_id": "NODE-CLOUD-SECRETS",
+      "gap": ""
+     },
+     {
+      "order": 6,
+      "behavior": "Segredos de CI impressos em logs de build e contêiner montando o host",
+      "phase": "Coleta e impacto",
+      "attack_techniques": [
+       "T1552",
+       "T1611"
+      ],
+      "llminjection_techniques": [
+       "LLMI-T015"
+      ],
+      "llminjection_detections": [],
+      "controls": [
+       "CTRL-EXEC-POLICY"
+      ],
+      "architecture_node_id": "NODE-CLOUD-SECRETS",
+      "gap": "Sem DET-AI para segredo em log de build nem para contêiner com o host montado."
+     }
+    ]
+   },
+   "impact": {
+    "business": "Cada segredo encontrado abre a próxima conta: a Barracuda viu cerca de 10 contas em 44 horas.",
+    "technical": "Comprometimento do ativo crítico modelado."
+   },
+   "priority": {
+    "crown_jewel_criticality": 5,
+    "threat_relevance": 5,
+    "attack_path_feasibility": 5,
+    "exposure": 4,
+    "control_weakness": 3,
+    "detection_gap": 3,
+    "calculated_score": 4.17,
+    "band": "P1",
+    "rationale": "Pontuação do analista a partir das fontes; ver a hipótese e as lacunas."
+   },
+   "confidence": "high",
+   "telemetry_requirements": [
+    "TC-CLOUD-SECRETS"
+   ],
+   "detection_use_cases": [],
+   "detection_specification_ids": [
+    "DSP-CLOUD-SECRETS"
+   ],
+   "validation_ids": [
+    "VAL-CLOUD-SECRETS"
+   ]
+  }
+ ],
+ "telemetry_contracts": [
+  {
+   "id": "TC-CLOUD-SECRETS",
+   "title": "Contrato de observáveis · Segredos de nuvem",
+   "scenario_ids": [
+    "TS-CLOUD-SECRETS"
+   ],
+   "detection_use_case_ids": [],
+   "behavior": "api_call_denied x3 -> get_secret_value (mesma chave)",
+   "observable": "Alertas de varredura de segredos e uso de chaves de IA; CloudTrail, Azure Activity e sign-ins da credencial; CloudTrail com errorCode por serviço; Eventos GetSecretValue, Key Vault e FilterLogEvents; Auditoria de IAM e do Entra ID; Logs de CI e eventos do runtime de contêineres",
+   "source": "Alertas de varredura de segredos e uso de chaves de IA; CloudTrail, Azure Activity e sign-ins da credencial; CloudTrail com errorCode por serviço; Eventos GetSecretValue, Key Vault e FilterLogEvents; Auditoria de IAM e do Entra ID; Logs de CI e eventos do runtime de contêineres",
+   "event_or_state_change": "get_secret_value",
+   "entity_identifiers": [
+    "user.access_key"
+   ],
+   "required_fields": [
+    "event.action",
+    "timestamp",
+    "user.access_key"
+   ],
+   "retention": "90d",
+   "latency_target": "<15m",
+   "normalization": "modelo de evento conceitual do TCE",
+   "integrity_requirements": [
+    "monitorar a saúde da fonte"
+   ],
+   "failure_modes": [
+    "fonte não coletada",
+    "relógio sem precisão de segundos"
+   ],
+   "status": "partial",
+   "owner": "detection-engineering",
+   "review_date": "2026-12-22"
+  }
+ ],
+ "detection_specifications": [
+  {
+   "id": "DSP-CLOUD-SECRETS",
+   "title": "Rajada de chamadas negadas seguida de leitura de segredo com a mesma chave",
+   "scenario_ids": [
+    "TS-CLOUD-SECRETS"
+   ],
+   "detection_use_case_ids": [],
+   "telemetry_contract_ids": [
+    "TC-CLOUD-SECRETS"
+   ],
+   "attack_techniques": [
+    "T1078.004",
+    "T1098",
+    "T1526",
+    "T1552",
+    "T1552.001",
+    "T1555.006",
+    "T1580",
+    "T1593.003",
+    "T1611"
+   ],
+   "severity": "high",
+   "status": "ready",
+   "analytic_concept": {
+    "description": "Rajada de chamadas negadas seguida de leitura de segredo com a mesma chave",
+    "behavior": "api_call_denied x3 -> get_secret_value (mesma chave)",
+    "observable_effect": "Eventos do mesmo ator em ordem.",
+    "entities": [
+     "user.access_key"
+    ],
+    "benign_alternatives": [
+     "Ferramenta de inventário que testa permissões",
+     "Pipeline de deploy recém-configurado"
+    ]
+   },
+   "correlation": {
+    "pattern_id": "ordered-sequence",
+    "window": "30m",
+    "group_by": [
+     "user.access_key"
+    ]
+   },
+   "validation_logic": {
+    "pattern": "ordered-sequence",
+    "group_by": [
+     "user.access_key"
+    ],
+    "stages": [
+     {
+      "all": [
+       {
+        "field": "event.action",
+        "op": "eq",
+        "value": "api_call_denied"
+       }
+      ]
+     },
+     {
+      "all": [
+       {
+        "field": "event.action",
+        "op": "eq",
+        "value": "api_call_denied"
+       }
+      ]
+     },
+     {
+      "all": [
+       {
+        "field": "event.action",
+        "op": "eq",
+        "value": "api_call_denied"
+       }
+      ]
+     },
+     {
+      "all": [
+       {
+        "field": "event.action",
+        "op": "eq",
+        "value": "get_secret_value"
+       }
+      ]
+     }
+    ]
+   },
+   "implementations": [
+    {
+     "id": "DET-AI-047",
+     "type": "llminjection-detection",
+     "platform": "generic",
+     "status": "specification",
+     "reference": "data/detections.json#DET-AI-047"
+    }
+   ],
+   "validation_ids": [
+    "VAL-CLOUD-SECRETS"
+   ],
+   "references": [
+    "SRC-MSFT-ARTEX-SECRETS-2026-11",
+    "SRC-DATADOG-ARTEX-AWS",
+    "SRC-BARRACUDA-ARTEX-2026-11",
+    "SRC-UNIT42-ARTEX-2026-11"
+   ],
+   "owner": "detection-engineering",
+   "review_date": "2026-12-22"
+  }
+ ],
+ "validations": [
+  {
+   "id": "VAL-CLOUD-SECRETS",
+   "title": "Replay seguro · Segredos de nuvem",
+   "scenario_ids": [
+    "TS-CLOUD-SECRETS"
+   ],
+   "detection_use_case_ids": [],
+   "detection_specification_ids": [
+    "DSP-CLOUD-SECRETS"
+   ],
+   "method": "log-replay",
+   "environment": "fixture defensiva sintética do repositório",
+   "expected_result": "Exatamente uma sequência do mesmo ator.",
+   "fixture": "fixtures/events.jsonl",
+   "expected": {
+    "min_matches": 1,
+    "max_matches": 1
+   },
+   "actual_result": "1 sequência(s) detectada(s) no replay; esperado 1.",
+   "status": "passed",
+   "evidence_refs": [],
+   "tested_at": "2026-11-22",
+   "owner": "detection-engineering"
+  }
+ ],
+ "intelligence_gaps": [
+  {
+   "id": "GAP-CLOUD-SECRETS-1",
+   "question": "Quais chaves de longo prazo e de fornecedores existem e quando foram usadas pela última vez?",
+   "affected_requirement_ids": [
+    "IR-CLOUD-SECRETS"
+   ],
+   "affected_hypothesis_ids": [
+    "TH-CLOUD-SECRETS"
+   ],
+   "affected_scenario_ids": [
+    "TS-CLOUD-SECRETS"
+   ],
+   "priority": "high",
+   "collection_action": "Coleta interna ou nova fonte primária.",
+   "owner": "cti",
+   "status": "open",
+   "due_date": "2026-12-22"
+  },
+  {
+   "id": "GAP-CLOUD-SECRETS-2",
+   "question": "A leitura do AntiFox é da CSA sobre o original da Arctic Wolf, não lido.",
+   "affected_requirement_ids": [
+    "IR-CLOUD-SECRETS"
+   ],
+   "affected_hypothesis_ids": [
+    "TH-CLOUD-SECRETS"
+   ],
+   "affected_scenario_ids": [
+    "TS-CLOUD-SECRETS"
+   ],
+   "priority": "high",
+   "collection_action": "Coleta interna ou nova fonte primária.",
+   "owner": "cti",
+   "status": "open",
+   "due_date": "2026-12-22"
+  }
+ ],
+ "decisions": [
+  {
+   "id": "DEC-CLOUD-SECRETS-1",
+   "title": "Revogar chaves de longo prazo sem uso e todas as entregues a fornecedores encerrados.",
+   "statement": "Revogar chaves de longo prazo sem uso e todas as entregues a fornecedores encerrados.",
+   "decision_owner": "segurança",
+   "status": "proposed",
+   "intelligence_requirement_ids": [
+    "IR-CLOUD-SECRETS"
+   ],
+   "crown_jewel_ids": [
+    "CJ-CLOUD-SECRETS"
+   ],
+   "hypothesis_ids": [
+    "TH-CLOUD-SECRETS"
+   ],
+   "scenario_ids": [
+    "TS-CLOUD-SECRETS"
+   ],
+   "evidence_ids": [
+    "EV-CLOUD-SECRETS-1",
+    "EV-CLOUD-SECRETS-2",
+    "EV-CLOUD-SECRETS-3",
+    "EV-CLOUD-SECRETS-4"
+   ],
+   "detection_use_case_ids": [],
+   "intelligence_gap_ids": [
+    "GAP-CLOUD-SECRETS-1",
+    "GAP-CLOUD-SECRETS-2"
+   ],
+   "rationale": "O padrão mais documentado do ARTEX: o agente procura segredos, prova o que cada chave pode fazer em segundos e encadeia o próximo acesso.",
+   "created_at": "2026-11-22",
+   "review_date": "2026-12-22"
+  },
+  {
+   "id": "DEC-CLOUD-SECRETS-2",
+   "title": "Alertar a sequência negações, sucesso e leitura de segredo por chave.",
+   "statement": "Alertar a sequência negações, sucesso e leitura de segredo por chave.",
+   "decision_owner": "segurança",
+   "status": "proposed",
+   "intelligence_requirement_ids": [
+    "IR-CLOUD-SECRETS"
+   ],
+   "crown_jewel_ids": [
+    "CJ-CLOUD-SECRETS"
+   ],
+   "hypothesis_ids": [
+    "TH-CLOUD-SECRETS"
+   ],
+   "scenario_ids": [
+    "TS-CLOUD-SECRETS"
+   ],
+   "evidence_ids": [
+    "EV-CLOUD-SECRETS-1",
+    "EV-CLOUD-SECRETS-2",
+    "EV-CLOUD-SECRETS-3",
+    "EV-CLOUD-SECRETS-4"
+   ],
+   "detection_use_case_ids": [],
+   "intelligence_gap_ids": [
+    "GAP-CLOUD-SECRETS-1",
+    "GAP-CLOUD-SECRETS-2"
+   ],
+   "rationale": "O padrão mais documentado do ARTEX: o agente procura segredos, prova o que cada chave pode fazer em segundos e encadeia o próximo acesso.",
+   "created_at": "2026-11-22",
+   "review_date": "2026-12-22"
+  }
+ ],
+ "x_llminjection": {
+  "generated_by": "scripts/build_tcem.py",
+  "method": "TCEM v0.5.1 (Cyber-Threat-Context-Modeling, mesmo autor)",
+  "refs": [
+   "CAMPAIGN-ANTIFOX-AWS-IIS",
+   "CAMPAIGN-ARTEX-AWS",
+   "CAMPAIGN-ARTEX-EXPOSED-SECRETS",
+   "CAMPAIGN-ARTEX-IDENTITY-WORKFLOWS",
+   "CTRL-EXEC-POLICY",
+   "CTRL-SECRET-ISOLATION",
+   "DET-AI-006",
+   "DET-AI-046",
+   "DET-AI-047",
+   "DET-AI-050",
+   "INCIDENT-BARRACUDA-ARTEX-CLOUD-2026-11",
+   "LLMI-T015",
+   "LLMI-T016",
+   "SRC-BARRACUDA-ARTEX-2026-11",
+   "SRC-DATADOG-ARTEX-AWS",
+   "SRC-MSFT-ARTEX-SECRETS-2026-11",
+   "SRC-UNIT42-ARTEX-2026-11"
+  ],
+  "fixture_note": "Três negações em serviços diferentes e uma leitura de segredo com a mesma chave (1 alerta); uma negação isolada antes de leitura legítima (sem alerta)."
+ }
+}

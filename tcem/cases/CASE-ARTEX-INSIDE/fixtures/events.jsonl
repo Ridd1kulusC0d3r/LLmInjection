@@ -1,0 +1,4 @@
+{"timestamp": "2026-11-01T16:00:00Z", "event": {"action": "agent_runtime_start"}, "sandbox": {"id": "eval-3"}, "agent": {"approval_mode": "auto"}}
+{"timestamp": "2026-11-01T16:20:00Z", "event": {"action": "egress_not_allowlisted"}, "sandbox": {"id": "eval-3"}, "destination": {"domain": "internal.vendor.example"}}
+{"timestamp": "2026-11-01T17:00:00Z", "event": {"action": "agent_runtime_start"}, "sandbox": {"id": "eval-4"}, "agent": {"approval_mode": "manual"}}
+{"timestamp": "2026-11-01T17:10:00Z", "event": {"action": "egress_not_allowlisted"}, "sandbox": {"id": "eval-4"}, "destination": {"domain": "pypi.example"}}
