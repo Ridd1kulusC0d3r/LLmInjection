@@ -1887,13 +1887,13 @@
   {
     "id": "SRC-THREATDEFENCE-ARTEX-DETECTIONS",
     "type": "source",
-    "name": "ARTEX Detections (Sigma, Sentinel, Splunk, Elastic, Zeek, Suricata, YARA, osquery)",
+    "name": "Agentic Attack Detections, formerly ARTEX Detections (Sigma, KQL, Suricata, Zeek, YARA, STIX; 8 frameworks)",
     "publisher": "ThreatDefence",
     "grade": "B",
     "role": "community-detection-rules",
-    "url": "https://github.com/ThreatDefence/artex-detections",
+    "url": "https://github.com/ThreatDefence/agentic-attack-detections",
     "published": "2026-11-20",
-    "last_verified": "2026-11-20"
+    "last_verified": "2026-11-22"
   },
   {
     "id": "SRC-MITRE-ATTACK",

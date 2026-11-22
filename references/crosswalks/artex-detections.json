@@ -1,15 +1,15 @@
 {
  "meta": {
-  "source": "https://github.com/ThreatDefence/artex-detections",
-  "commit": "3ad092e",
-  "read": "2026-11-20",
+  "source": "https://github.com/ThreatDefence/agentic-attack-detections",
+  "commit": "7a29e16",
+  "read": "2026-11-22",
   "licence": "MIT",
   "attribution": "ThreatDefence Pty Ltd, ARTEX Detections",
   "policy": "rules are linked, not copied; indicators are counted, not imported",
   "mapping": "behaviour to detection, technique and ATT&CK is an analyst mapping (scripts/artex_detections_check.py)"
  },
  "summary": {
-  "rule_files": 209,
+  "rule_files": 228,
   "behaviours": 29,
   "to_existing_detections": [
    "DET-AI-046",
@@ -33,27 +33,27 @@
   ],
   "unassigned_files": [],
   "indicators": {
-   "total": 184,
+   "total": 242,
    "by_type": {
-    "user_agent": 24,
+    "user_agent": 28,
     "uri_string": 5,
-    "string": 19,
-    "http_header": 1,
-    "file_name": 6,
+    "string": 49,
+    "http_header": 2,
+    "file_name": 9,
     "account_name": 1,
-    "file_path": 1,
+    "file_path": 2,
     "sha256": 8,
-    "docker_image": 2,
-    "favicon_mmh3": 3,
-    "port": 1,
-    "ipv4": 84,
-    "domain": 23,
-    "url": 6
+    "docker_image": 3,
+    "favicon_mmh3": 4,
+    "port": 2,
+    "ipv4": 98,
+    "domain": 24,
+    "url": 7
    },
    "by_confidence": {
-    "high": 55,
-    "medium": 115,
-    "low": 14
+    "high": 75,
+    "medium": 134,
+    "low": 33
    }
   }
  },
@@ -69,144 +69,154 @@
    ],
    "rules": [
     {
-     "path": "elastic/esql/01-artex-user-agent.esql",
+     "path": "frameworks/artex/elastic/esql/01-artex-user-agent.esql",
      "platform": "Elastic",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/elastic/esql/01-artex-user-agent.esql"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/elastic/esql/01-artex-user-agent.esql"
     },
     {
-     "path": "elastic/rules/artex_user_agent.toml",
+     "path": "frameworks/artex/elastic/rules/artex_user_agent.toml",
      "platform": "Elastic",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/elastic/rules/artex_user_agent.toml"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/elastic/rules/artex_user_agent.toml"
     },
     {
-     "path": "generated/elastic_esql/cloud/aws/aws_cloudtrail_artex_user_agent.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_esql/cloud/aws/aws_cloudtrail_artex_user_agent.txt"
-    },
-    {
-     "path": "generated/elastic_esql/cloud/azure/azure_signin_artex_user_agent.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_esql/cloud/azure/azure_signin_artex_user_agent.txt"
-    },
-    {
-     "path": "generated/elastic_esql/cloud/okta/okta_artex_user_agent.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_esql/cloud/okta/okta_artex_user_agent.txt"
-    },
-    {
-     "path": "generated/elastic_esql/proxy/proxy_artex_user_agent.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_esql/proxy/proxy_artex_user_agent.txt"
-    },
-    {
-     "path": "generated/elastic_esql/web/web_artex_user_agent.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_esql/web/web_artex_user_agent.txt"
-    },
-    {
-     "path": "generated/elastic_lucene/cloud/aws/aws_cloudtrail_artex_user_agent.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_lucene/cloud/aws/aws_cloudtrail_artex_user_agent.txt"
-    },
-    {
-     "path": "generated/elastic_lucene/cloud/azure/azure_signin_artex_user_agent.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_lucene/cloud/azure/azure_signin_artex_user_agent.txt"
-    },
-    {
-     "path": "generated/elastic_lucene/cloud/okta/okta_artex_user_agent.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_lucene/cloud/okta/okta_artex_user_agent.txt"
-    },
-    {
-     "path": "generated/elastic_lucene/proxy/proxy_artex_user_agent.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_lucene/proxy/proxy_artex_user_agent.txt"
-    },
-    {
-     "path": "generated/elastic_lucene/web/web_artex_user_agent.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_lucene/web/web_artex_user_agent.txt"
-    },
-    {
-     "path": "generated/sentinel_asim/proxy/proxy_artex_user_agent.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/sentinel_asim/proxy/proxy_artex_user_agent.txt"
-    },
-    {
-     "path": "generated/splunk/cloud/aws/aws_cloudtrail_artex_user_agent.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/splunk/cloud/aws/aws_cloudtrail_artex_user_agent.txt"
-    },
-    {
-     "path": "generated/splunk/cloud/azure/azure_signin_artex_user_agent.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/splunk/cloud/azure/azure_signin_artex_user_agent.txt"
-    },
-    {
-     "path": "generated/splunk/cloud/okta/okta_artex_user_agent.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/splunk/cloud/okta/okta_artex_user_agent.txt"
-    },
-    {
-     "path": "generated/splunk/proxy/proxy_artex_user_agent.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/splunk/proxy/proxy_artex_user_agent.txt"
-    },
-    {
-     "path": "generated/splunk/web/web_artex_user_agent.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/splunk/web/web_artex_user_agent.txt"
-    },
-    {
-     "path": "sentinel/analytics/artex-user-agent-any-source.yaml",
+     "path": "frameworks/artex/sentinel/analytics/artex-norma-or-update-check-user-agent.yaml",
      "platform": "Sentinel / Defender",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sentinel/analytics/artex-user-agent-any-source.yaml"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/analytics/artex-norma-or-update-check-user-agent.yaml"
     },
     {
-     "path": "sentinel/hunting/01-indicator-sweep.kql",
+     "path": "frameworks/artex/sentinel/analytics/artex-user-agent-any-source.yaml",
      "platform": "Sentinel / Defender",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sentinel/hunting/01-indicator-sweep.kql"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/analytics/artex-user-agent-any-source.yaml"
     },
     {
-     "path": "sentinel/hunting/21-watchlist-indicator-sweep.kql",
+     "path": "frameworks/artex/sentinel/hunting/01-indicator-sweep.kql",
      "platform": "Sentinel / Defender",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sentinel/hunting/21-watchlist-indicator-sweep.kql"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/hunting/01-indicator-sweep.kql"
     },
     {
-     "path": "sigma/cloud/aws/aws_cloudtrail_artex_user_agent.yml",
-     "platform": "Sigma",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sigma/cloud/aws/aws_cloudtrail_artex_user_agent.yml"
+     "path": "frameworks/artex/sentinel/hunting/21-watchlist-indicator-sweep.kql",
+     "platform": "Sentinel / Defender",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/hunting/21-watchlist-indicator-sweep.kql"
     },
     {
-     "path": "sigma/cloud/azure/azure_signin_artex_user_agent.yml",
-     "platform": "Sigma",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sigma/cloud/azure/azure_signin_artex_user_agent.yml"
+     "path": "frameworks/artex/sentinel/hunting/23-norma-page-reads-and-the-enrichment-probe.kql",
+     "platform": "Sentinel / Defender",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/hunting/23-norma-page-reads-and-the-enrichment-probe.kql"
     },
     {
-     "path": "sigma/cloud/okta/okta_artex_user_agent.yml",
+     "path": "frameworks/artex/sigma/cloud/aws/aws_cloudtrail_artex_user_agent.yml",
      "platform": "Sigma",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sigma/cloud/okta/okta_artex_user_agent.yml"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sigma/cloud/aws/aws_cloudtrail_artex_user_agent.yml"
     },
     {
-     "path": "sigma/proxy/proxy_artex_user_agent.yml",
+     "path": "frameworks/artex/sigma/cloud/azure/azure_signin_artex_user_agent.yml",
      "platform": "Sigma",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sigma/proxy/proxy_artex_user_agent.yml"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sigma/cloud/azure/azure_signin_artex_user_agent.yml"
     },
     {
-     "path": "sigma/web/web_artex_user_agent.yml",
+     "path": "frameworks/artex/sigma/cloud/okta/okta_artex_user_agent.yml",
      "platform": "Sigma",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sigma/web/web_artex_user_agent.yml"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sigma/cloud/okta/okta_artex_user_agent.yml"
+    },
+    {
+     "path": "frameworks/artex/sigma/proxy/proxy_artex_user_agent.yml",
+     "platform": "Sigma",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sigma/proxy/proxy_artex_user_agent.yml"
+    },
+    {
+     "path": "frameworks/artex/sigma/web/web_artex_user_agent.yml",
+     "platform": "Sigma",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sigma/web/web_artex_user_agent.yml"
+    },
+    {
+     "path": "generated/elastic_esql/artex/cloud/aws/aws_cloudtrail_artex_user_agent.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_esql/artex/cloud/aws/aws_cloudtrail_artex_user_agent.txt"
+    },
+    {
+     "path": "generated/elastic_esql/artex/cloud/azure/azure_signin_artex_user_agent.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_esql/artex/cloud/azure/azure_signin_artex_user_agent.txt"
+    },
+    {
+     "path": "generated/elastic_esql/artex/cloud/okta/okta_artex_user_agent.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_esql/artex/cloud/okta/okta_artex_user_agent.txt"
+    },
+    {
+     "path": "generated/elastic_esql/artex/proxy/proxy_artex_user_agent.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_esql/artex/proxy/proxy_artex_user_agent.txt"
+    },
+    {
+     "path": "generated/elastic_esql/artex/web/web_artex_user_agent.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_esql/artex/web/web_artex_user_agent.txt"
+    },
+    {
+     "path": "generated/elastic_lucene/artex/cloud/aws/aws_cloudtrail_artex_user_agent.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_lucene/artex/cloud/aws/aws_cloudtrail_artex_user_agent.txt"
+    },
+    {
+     "path": "generated/elastic_lucene/artex/cloud/azure/azure_signin_artex_user_agent.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_lucene/artex/cloud/azure/azure_signin_artex_user_agent.txt"
+    },
+    {
+     "path": "generated/elastic_lucene/artex/cloud/okta/okta_artex_user_agent.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_lucene/artex/cloud/okta/okta_artex_user_agent.txt"
+    },
+    {
+     "path": "generated/elastic_lucene/artex/proxy/proxy_artex_user_agent.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_lucene/artex/proxy/proxy_artex_user_agent.txt"
+    },
+    {
+     "path": "generated/elastic_lucene/artex/web/web_artex_user_agent.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_lucene/artex/web/web_artex_user_agent.txt"
+    },
+    {
+     "path": "generated/sentinel_asim/artex/proxy/proxy_artex_user_agent.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/sentinel_asim/artex/proxy/proxy_artex_user_agent.txt"
+    },
+    {
+     "path": "generated/splunk/artex/cloud/aws/aws_cloudtrail_artex_user_agent.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/splunk/artex/cloud/aws/aws_cloudtrail_artex_user_agent.txt"
+    },
+    {
+     "path": "generated/splunk/artex/cloud/azure/azure_signin_artex_user_agent.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/splunk/artex/cloud/azure/azure_signin_artex_user_agent.txt"
+    },
+    {
+     "path": "generated/splunk/artex/cloud/okta/okta_artex_user_agent.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/splunk/artex/cloud/okta/okta_artex_user_agent.txt"
+    },
+    {
+     "path": "generated/splunk/artex/proxy/proxy_artex_user_agent.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/splunk/artex/proxy/proxy_artex_user_agent.txt"
+    },
+    {
+     "path": "generated/splunk/artex/web/web_artex_user_agent.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/splunk/artex/web/web_artex_user_agent.txt"
     },
     {
      "path": "splunk/default/savedsearches.conf [ARTEX - User agent naming ARTEX in any source]",
      "platform": "Splunk",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/splunk/default/savedsearches.conf"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/splunk/default/savedsearches.conf"
     },
     {
      "path": "splunk/default/savedsearches.conf [ARTEX - Indicator sweep]",
      "platform": "Splunk",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/splunk/default/savedsearches.conf"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/splunk/default/savedsearches.conf"
     }
    ],
    "platforms": [
@@ -230,14 +240,14 @@
    ],
    "rules": [
     {
-     "path": "suricata/artex.rules",
+     "path": "frameworks/artex/suricata/artex.rules",
      "platform": "Suricata",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/suricata/artex.rules"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/suricata/artex.rules"
     },
     {
-     "path": "zeek/artex/main.zeek",
+     "path": "frameworks/artex/zeek/artex/main.zeek",
      "platform": "Zeek",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/zeek/artex/main.zeek"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/zeek/artex/main.zeek"
     }
    ],
    "platforms": [
@@ -258,69 +268,79 @@
    ],
    "rules": [
     {
-     "path": "elastic/esql/06-web-probe-artifacts.esql",
+     "path": "frameworks/artex/elastic/esql/06-web-probe-artifacts.esql",
      "platform": "Elastic",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/elastic/esql/06-web-probe-artifacts.esql"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/elastic/esql/06-web-probe-artifacts.esql"
     },
     {
-     "path": "elastic/rules/artex_web_probe_artifacts.toml",
+     "path": "frameworks/artex/elastic/rules/artex_web_probe_artifacts.toml",
      "platform": "Elastic",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/elastic/rules/artex_web_probe_artifacts.toml"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/elastic/rules/artex_web_probe_artifacts.toml"
     },
     {
-     "path": "generated/elastic_esql/file_event/file_event_artex_probe_artifacts.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_esql/file_event/file_event_artex_probe_artifacts.txt"
-    },
-    {
-     "path": "generated/elastic_esql/web/web_artex_placeholder_probe_paths.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_esql/web/web_artex_placeholder_probe_paths.txt"
-    },
-    {
-     "path": "generated/elastic_lucene/file_event/file_event_artex_probe_artifacts.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_lucene/file_event/file_event_artex_probe_artifacts.txt"
-    },
-    {
-     "path": "generated/elastic_lucene/web/web_artex_placeholder_probe_paths.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_lucene/web/web_artex_placeholder_probe_paths.txt"
-    },
-    {
-     "path": "generated/sentinel_asim/file_event/file_event_artex_probe_artifacts.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/sentinel_asim/file_event/file_event_artex_probe_artifacts.txt"
-    },
-    {
-     "path": "generated/splunk/file_event/file_event_artex_probe_artifacts.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/splunk/file_event/file_event_artex_probe_artifacts.txt"
-    },
-    {
-     "path": "generated/splunk/web/web_artex_placeholder_probe_paths.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/splunk/web/web_artex_placeholder_probe_paths.txt"
-    },
-    {
-     "path": "sentinel/hunting/04-application-reconnaissance-in-web-logs.kql",
+     "path": "frameworks/artex/sentinel/hunting/04-application-reconnaissance-in-web-logs.kql",
      "platform": "Sentinel / Defender",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sentinel/hunting/04-application-reconnaissance-in-web-logs.kql"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/hunting/04-application-reconnaissance-in-web-logs.kql"
     },
     {
-     "path": "sigma/file_event/file_event_artex_probe_artifacts.yml",
+     "path": "frameworks/artex/sigma/file_event/file_event_artex_probe_artifacts.yml",
      "platform": "Sigma",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sigma/file_event/file_event_artex_probe_artifacts.yml"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sigma/file_event/file_event_artex_probe_artifacts.yml"
     },
     {
-     "path": "sigma/web/web_artex_placeholder_probe_paths.yml",
+     "path": "frameworks/artex/sigma/web/web_artex_placeholder_probe_paths.yml",
      "platform": "Sigma",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sigma/web/web_artex_placeholder_probe_paths.yml"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sigma/web/web_artex_placeholder_probe_paths.yml"
+    },
+    {
+     "path": "generated/azure_monitor/artex/file_event/file_event_artex_probe_artifacts.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/azure_monitor/artex/file_event/file_event_artex_probe_artifacts.txt"
+    },
+    {
+     "path": "generated/defender_xdr/artex/file_event/file_event_artex_probe_artifacts.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/defender_xdr/artex/file_event/file_event_artex_probe_artifacts.txt"
+    },
+    {
+     "path": "generated/elastic_esql/artex/file_event/file_event_artex_probe_artifacts.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_esql/artex/file_event/file_event_artex_probe_artifacts.txt"
+    },
+    {
+     "path": "generated/elastic_esql/artex/web/web_artex_placeholder_probe_paths.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_esql/artex/web/web_artex_placeholder_probe_paths.txt"
+    },
+    {
+     "path": "generated/elastic_lucene/artex/file_event/file_event_artex_probe_artifacts.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_lucene/artex/file_event/file_event_artex_probe_artifacts.txt"
+    },
+    {
+     "path": "generated/elastic_lucene/artex/web/web_artex_placeholder_probe_paths.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_lucene/artex/web/web_artex_placeholder_probe_paths.txt"
+    },
+    {
+     "path": "generated/sentinel_asim/artex/file_event/file_event_artex_probe_artifacts.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/sentinel_asim/artex/file_event/file_event_artex_probe_artifacts.txt"
+    },
+    {
+     "path": "generated/splunk/artex/file_event/file_event_artex_probe_artifacts.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/splunk/artex/file_event/file_event_artex_probe_artifacts.txt"
+    },
+    {
+     "path": "generated/splunk/artex/web/web_artex_placeholder_probe_paths.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/splunk/artex/web/web_artex_placeholder_probe_paths.txt"
     },
     {
      "path": "splunk/default/savedsearches.conf [ARTEX - Web probe artifacts]",
      "platform": "Splunk",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/splunk/default/savedsearches.conf"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/splunk/default/savedsearches.conf"
     }
    ],
    "platforms": [
@@ -344,24 +364,24 @@
    ],
    "rules": [
     {
-     "path": "generated/elastic_esql/web/web_jwt_alg_none_probe.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_esql/web/web_jwt_alg_none_probe.txt"
-    },
-    {
-     "path": "generated/elastic_lucene/web/web_jwt_alg_none_probe.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_lucene/web/web_jwt_alg_none_probe.txt"
-    },
-    {
-     "path": "generated/splunk/web/web_jwt_alg_none_probe.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/splunk/web/web_jwt_alg_none_probe.txt"
-    },
-    {
-     "path": "sigma/web/web_jwt_alg_none_probe.yml",
+     "path": "frameworks/artex/sigma/web/web_jwt_alg_none_probe.yml",
      "platform": "Sigma",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sigma/web/web_jwt_alg_none_probe.yml"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sigma/web/web_jwt_alg_none_probe.yml"
+    },
+    {
+     "path": "generated/elastic_esql/artex/web/web_jwt_alg_none_probe.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_esql/artex/web/web_jwt_alg_none_probe.txt"
+    },
+    {
+     "path": "generated/elastic_lucene/artex/web/web_jwt_alg_none_probe.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_lucene/artex/web/web_jwt_alg_none_probe.txt"
+    },
+    {
+     "path": "generated/splunk/artex/web/web_jwt_alg_none_probe.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/splunk/artex/web/web_jwt_alg_none_probe.txt"
     }
    ],
    "platforms": [
@@ -381,24 +401,24 @@
    ],
    "rules": [
     {
-     "path": "generated/elastic_esql/web/web_oauth_callback_probe.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_esql/web/web_oauth_callback_probe.txt"
-    },
-    {
-     "path": "generated/elastic_lucene/web/web_oauth_callback_probe.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_lucene/web/web_oauth_callback_probe.txt"
-    },
-    {
-     "path": "generated/splunk/web/web_oauth_callback_probe.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/splunk/web/web_oauth_callback_probe.txt"
-    },
-    {
-     "path": "sigma/web/web_oauth_callback_probe.yml",
+     "path": "frameworks/artex/sigma/web/web_oauth_callback_probe.yml",
      "platform": "Sigma",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sigma/web/web_oauth_callback_probe.yml"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sigma/web/web_oauth_callback_probe.yml"
+    },
+    {
+     "path": "generated/elastic_esql/artex/web/web_oauth_callback_probe.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_esql/artex/web/web_oauth_callback_probe.txt"
+    },
+    {
+     "path": "generated/elastic_lucene/artex/web/web_oauth_callback_probe.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_lucene/artex/web/web_oauth_callback_probe.txt"
+    },
+    {
+     "path": "generated/splunk/artex/web/web_oauth_callback_probe.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/splunk/artex/web/web_oauth_callback_probe.txt"
     }
    ],
    "platforms": [
@@ -418,24 +438,24 @@
    ],
    "rules": [
     {
-     "path": "generated/elastic_esql/web/web_artex_probe_header.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_esql/web/web_artex_probe_header.txt"
-    },
-    {
-     "path": "generated/elastic_lucene/web/web_artex_probe_header.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_lucene/web/web_artex_probe_header.txt"
-    },
-    {
-     "path": "generated/splunk/web/web_artex_probe_header.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/splunk/web/web_artex_probe_header.txt"
-    },
-    {
-     "path": "sigma/web/web_artex_probe_header.yml",
+     "path": "frameworks/artex/sigma/web/web_artex_probe_header.yml",
      "platform": "Sigma",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sigma/web/web_artex_probe_header.yml"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sigma/web/web_artex_probe_header.yml"
+    },
+    {
+     "path": "generated/elastic_esql/artex/web/web_artex_probe_header.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_esql/artex/web/web_artex_probe_header.txt"
+    },
+    {
+     "path": "generated/elastic_lucene/artex/web/web_artex_probe_header.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_lucene/artex/web/web_artex_probe_header.txt"
+    },
+    {
+     "path": "generated/splunk/artex/web/web_artex_probe_header.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/splunk/artex/web/web_artex_probe_header.txt"
     }
    ],
    "platforms": [
@@ -455,49 +475,59 @@
    ],
    "rules": [
     {
-     "path": "elastic/esql/05-artex-artifact-names.esql",
+     "path": "frameworks/artex/elastic/esql/05-artex-artifact-names.esql",
      "platform": "Elastic",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/elastic/esql/05-artex-artifact-names.esql"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/elastic/esql/05-artex-artifact-names.esql"
     },
     {
-     "path": "elastic/rules/artex_artifact_names.toml",
+     "path": "frameworks/artex/elastic/rules/artex_artifact_names.toml",
      "platform": "Elastic",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/elastic/rules/artex_artifact_names.toml"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/elastic/rules/artex_artifact_names.toml"
     },
     {
-     "path": "generated/elastic_esql/process_creation/proc_creation_artex_artifact_names.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_esql/process_creation/proc_creation_artex_artifact_names.txt"
-    },
-    {
-     "path": "generated/elastic_lucene/process_creation/proc_creation_artex_artifact_names.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_lucene/process_creation/proc_creation_artex_artifact_names.txt"
-    },
-    {
-     "path": "generated/sentinel_asim/process_creation/proc_creation_artex_artifact_names.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/sentinel_asim/process_creation/proc_creation_artex_artifact_names.txt"
-    },
-    {
-     "path": "generated/splunk/process_creation/proc_creation_artex_artifact_names.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/splunk/process_creation/proc_creation_artex_artifact_names.txt"
-    },
-    {
-     "path": "sentinel/hunting/10-artex-names-in-files-folders-and-command-lines.kql",
+     "path": "frameworks/artex/sentinel/hunting/10-artex-names-in-files-folders-and-command-lines.kql",
      "platform": "Sentinel / Defender",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sentinel/hunting/10-artex-names-in-files-folders-and-command-lines.kql"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/hunting/10-artex-names-in-files-folders-and-command-lines.kql"
     },
     {
-     "path": "sigma/process_creation/proc_creation_artex_artifact_names.yml",
+     "path": "frameworks/artex/sigma/process_creation/proc_creation_artex_artifact_names.yml",
      "platform": "Sigma",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sigma/process_creation/proc_creation_artex_artifact_names.yml"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sigma/process_creation/proc_creation_artex_artifact_names.yml"
+    },
+    {
+     "path": "generated/azure_monitor/artex/process_creation/proc_creation_artex_artifact_names.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/azure_monitor/artex/process_creation/proc_creation_artex_artifact_names.txt"
+    },
+    {
+     "path": "generated/defender_xdr/artex/process_creation/proc_creation_artex_artifact_names.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/defender_xdr/artex/process_creation/proc_creation_artex_artifact_names.txt"
+    },
+    {
+     "path": "generated/elastic_esql/artex/process_creation/proc_creation_artex_artifact_names.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_esql/artex/process_creation/proc_creation_artex_artifact_names.txt"
+    },
+    {
+     "path": "generated/elastic_lucene/artex/process_creation/proc_creation_artex_artifact_names.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_lucene/artex/process_creation/proc_creation_artex_artifact_names.txt"
+    },
+    {
+     "path": "generated/sentinel_asim/artex/process_creation/proc_creation_artex_artifact_names.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/sentinel_asim/artex/process_creation/proc_creation_artex_artifact_names.txt"
+    },
+    {
+     "path": "generated/splunk/artex/process_creation/proc_creation_artex_artifact_names.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/splunk/artex/process_creation/proc_creation_artex_artifact_names.txt"
     },
     {
      "path": "splunk/default/savedsearches.conf [ARTEX - Artifact names in processes and files]",
      "platform": "Splunk",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/splunk/default/savedsearches.conf"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/splunk/default/savedsearches.conf"
     }
    ],
    "platforms": [
@@ -521,29 +551,29 @@
    ],
    "rules": [
     {
-     "path": "generated/elastic_esql/dns_query/dns_query_callback_services_from_servers.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_esql/dns_query/dns_query_callback_services_from_servers.txt"
-    },
-    {
-     "path": "generated/elastic_lucene/dns_query/dns_query_callback_services_from_servers.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_lucene/dns_query/dns_query_callback_services_from_servers.txt"
-    },
-    {
-     "path": "generated/splunk/dns_query/dns_query_callback_services_from_servers.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/splunk/dns_query/dns_query_callback_services_from_servers.txt"
-    },
-    {
-     "path": "sentinel/hunting/12-servers-calling-webhook-and-tunnel-services-or-downloading-f.kql",
+     "path": "frameworks/artex/sentinel/hunting/12-servers-calling-webhook-and-tunnel-services-or-downloading-f.kql",
      "platform": "Sentinel / Defender",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sentinel/hunting/12-servers-calling-webhook-and-tunnel-services-or-downloading-f.kql"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/hunting/12-servers-calling-webhook-and-tunnel-services-or-downloading-f.kql"
     },
     {
-     "path": "sigma/dns_query/dns_query_callback_services_from_servers.yml",
+     "path": "frameworks/artex/sigma/dns_query/dns_query_callback_services_from_servers.yml",
      "platform": "Sigma",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sigma/dns_query/dns_query_callback_services_from_servers.yml"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sigma/dns_query/dns_query_callback_services_from_servers.yml"
+    },
+    {
+     "path": "generated/elastic_esql/artex/dns_query/dns_query_callback_services_from_servers.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_esql/artex/dns_query/dns_query_callback_services_from_servers.txt"
+    },
+    {
+     "path": "generated/elastic_lucene/artex/dns_query/dns_query_callback_services_from_servers.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_lucene/artex/dns_query/dns_query_callback_services_from_servers.txt"
+    },
+    {
+     "path": "generated/splunk/artex/dns_query/dns_query_callback_services_from_servers.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/splunk/artex/dns_query/dns_query_callback_services_from_servers.txt"
     }
    ],
    "platforms": [
@@ -564,19 +594,29 @@
    ],
    "rules": [
     {
-     "path": "elastic/esql/03-user-agent-family-burst.esql",
+     "path": "frameworks/artex/elastic/esql/03-user-agent-family-burst.esql",
      "platform": "Elastic",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/elastic/esql/03-user-agent-family-burst.esql"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/elastic/esql/03-user-agent-family-burst.esql"
     },
     {
-     "path": "sentinel/hunting/17-user-agent-family-burst-from-one-source.kql",
+     "path": "frameworks/artex/sentinel/hunting/17-user-agent-family-burst-from-one-source.kql",
      "platform": "Sentinel / Defender",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sentinel/hunting/17-user-agent-family-burst-from-one-source.kql"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/hunting/17-user-agent-family-burst-from-one-source.kql"
+    },
+    {
+     "path": "frameworks/artex/sentinel/hunting/25-metronomic-request-rate-at-artex-noise-profile-rates.kql",
+     "platform": "Sentinel / Defender",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/hunting/25-metronomic-request-rate-at-artex-noise-profile-rates.kql"
+    },
+    {
+     "path": "frameworks/artex/sentinel/hunting/26-headless-browser-and-agent-clients-signing-in.kql",
+     "platform": "Sentinel / Defender",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/hunting/26-headless-browser-and-agent-clients-signing-in.kql"
     },
     {
      "path": "splunk/default/savedsearches.conf [ARTEX - User agent family burst from one source]",
      "platform": "Splunk",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/splunk/default/savedsearches.conf"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/splunk/default/savedsearches.conf"
     }
    ],
    "platforms": [
@@ -597,39 +637,39 @@
    ],
    "rules": [
     {
-     "path": "elastic/esql/02-password-spray-fixed-rhythm.esql",
+     "path": "frameworks/artex/elastic/esql/02-password-spray-fixed-rhythm.esql",
      "platform": "Elastic",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/elastic/esql/02-password-spray-fixed-rhythm.esql"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/elastic/esql/02-password-spray-fixed-rhythm.esql"
     },
     {
-     "path": "generated/elastic_esql/correlations/azure_password_spray_one_source.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_esql/correlations/azure_password_spray_one_source.txt"
-    },
-    {
-     "path": "generated/splunk/correlations/azure_password_spray_one_source.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/splunk/correlations/azure_password_spray_one_source.txt"
-    },
-    {
-     "path": "sentinel/analytics/artex-fixed-rhythm-password-spray.yaml",
+     "path": "frameworks/artex/sentinel/analytics/artex-fixed-rhythm-password-spray.yaml",
      "platform": "Sentinel / Defender",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sentinel/analytics/artex-fixed-rhythm-password-spray.yaml"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/analytics/artex-fixed-rhythm-password-spray.yaml"
     },
     {
-     "path": "sentinel/hunting/02-password-spray-at-a-fixed-rhythm.kql",
+     "path": "frameworks/artex/sentinel/hunting/02-password-spray-at-a-fixed-rhythm.kql",
      "platform": "Sentinel / Defender",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sentinel/hunting/02-password-spray-at-a-fixed-rhythm.kql"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/hunting/02-password-spray-at-a-fixed-rhythm.kql"
     },
     {
-     "path": "sigma/correlations/azure_password_spray_one_source.yml",
+     "path": "frameworks/artex/sigma/correlations/azure_password_spray_one_source.yml",
      "platform": "Sigma",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sigma/correlations/azure_password_spray_one_source.yml"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sigma/correlations/azure_password_spray_one_source.yml"
+    },
+    {
+     "path": "generated/elastic_esql/artex/correlations/azure_password_spray_one_source.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_esql/artex/correlations/azure_password_spray_one_source.txt"
+    },
+    {
+     "path": "generated/splunk/artex/correlations/azure_password_spray_one_source.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/splunk/artex/correlations/azure_password_spray_one_source.txt"
     },
     {
      "path": "splunk/default/savedsearches.conf [ARTEX - Password spray at a fixed rhythm]",
      "platform": "Splunk",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/splunk/default/savedsearches.conf"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/splunk/default/savedsearches.conf"
     }
    ],
    "platforms": [
@@ -653,40 +693,24 @@
    ],
    "rules": [
     {
-     "path": "generated/elastic_esql/cloud/azure/azure_signin_failure.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_esql/cloud/azure/azure_signin_failure.txt"
-    },
-    {
-     "path": "generated/elastic_lucene/cloud/azure/azure_signin_failure.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_lucene/cloud/azure/azure_signin_failure.txt"
-    },
-    {
-     "path": "generated/splunk/cloud/azure/azure_signin_failure.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/splunk/cloud/azure/azure_signin_failure.txt"
-    },
-    {
-     "path": "sentinel/hunting/03-a-spray-that-ends-in-a-successful-sign-in.kql",
+     "path": "frameworks/artex/sentinel/hunting/03-a-spray-that-ends-in-a-successful-sign-in.kql",
      "platform": "Sentinel / Defender",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sentinel/hunting/03-a-spray-that-ends-in-a-successful-sign-in.kql"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/hunting/03-a-spray-that-ends-in-a-successful-sign-in.kql"
     },
     {
-     "path": "sigma/cloud/azure/azure_signin_failure.yml",
+     "path": "frameworks/artex/sigma/cloud/azure/azure_signin_failure.yml",
      "platform": "Sigma",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sigma/cloud/azure/azure_signin_failure.yml"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sigma/cloud/azure/azure_signin_failure.yml"
     },
     {
      "path": "splunk/default/savedsearches.conf [ARTEX - Spray that ends in a successful sign-in]",
      "platform": "Splunk",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/splunk/default/savedsearches.conf"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/splunk/default/savedsearches.conf"
     }
    ],
    "platforms": [
     "Sentinel / Defender",
     "Sigma",
-    "Sigma conversions",
     "Splunk"
    ],
    "status": "new"
@@ -703,9 +727,9 @@
    ],
    "rules": [
     {
-     "path": "sentinel/hunting/18-service-principal-secret-failures-then-success.kql",
+     "path": "frameworks/artex/sentinel/hunting/18-service-principal-secret-failures-then-success.kql",
      "platform": "Sentinel / Defender",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sentinel/hunting/18-service-principal-secret-failures-then-success.kql"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/hunting/18-service-principal-secret-failures-then-success.kql"
     }
    ],
    "platforms": [
@@ -724,9 +748,9 @@
    ],
    "rules": [
     {
-     "path": "sentinel/hunting/19-one-application-hitting-many-resources.kql",
+     "path": "frameworks/artex/sentinel/hunting/19-one-application-hitting-many-resources.kql",
      "platform": "Sentinel / Defender",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sentinel/hunting/19-one-application-hitting-many-resources.kql"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/hunting/19-one-application-hitting-many-resources.kql"
     }
    ],
    "platforms": [
@@ -746,59 +770,59 @@
    ],
    "rules": [
     {
-     "path": "generated/elastic_esql/cloud/azure/azure_audit_app_credential_added.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_esql/cloud/azure/azure_audit_app_credential_added.txt"
-    },
-    {
-     "path": "generated/elastic_esql/cloud/azure/azure_audit_app_role_assignment_to_sp.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_esql/cloud/azure/azure_audit_app_role_assignment_to_sp.txt"
-    },
-    {
-     "path": "generated/elastic_lucene/cloud/azure/azure_audit_app_credential_added.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_lucene/cloud/azure/azure_audit_app_credential_added.txt"
-    },
-    {
-     "path": "generated/elastic_lucene/cloud/azure/azure_audit_app_role_assignment_to_sp.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_lucene/cloud/azure/azure_audit_app_role_assignment_to_sp.txt"
-    },
-    {
-     "path": "generated/splunk/cloud/azure/azure_audit_app_credential_added.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/splunk/cloud/azure/azure_audit_app_credential_added.txt"
-    },
-    {
-     "path": "generated/splunk/cloud/azure/azure_audit_app_role_assignment_to_sp.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/splunk/cloud/azure/azure_audit_app_role_assignment_to_sp.txt"
-    },
-    {
-     "path": "sentinel/analytics/artex-service-principal-self-role-assignment.yaml",
+     "path": "frameworks/artex/sentinel/analytics/artex-service-principal-self-role-assignment.yaml",
      "platform": "Sentinel / Defender",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sentinel/analytics/artex-service-principal-self-role-assignment.yaml"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/analytics/artex-service-principal-self-role-assignment.yaml"
     },
     {
-     "path": "sentinel/hunting/05-applications-changing-their-own-access.kql",
+     "path": "frameworks/artex/sentinel/hunting/05-applications-changing-their-own-access.kql",
      "platform": "Sentinel / Defender",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sentinel/hunting/05-applications-changing-their-own-access.kql"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/hunting/05-applications-changing-their-own-access.kql"
     },
     {
-     "path": "sigma/cloud/azure/azure_audit_app_credential_added.yml",
+     "path": "frameworks/artex/sigma/cloud/azure/azure_audit_app_credential_added.yml",
      "platform": "Sigma",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sigma/cloud/azure/azure_audit_app_credential_added.yml"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sigma/cloud/azure/azure_audit_app_credential_added.yml"
     },
     {
-     "path": "sigma/cloud/azure/azure_audit_app_role_assignment_to_sp.yml",
+     "path": "frameworks/artex/sigma/cloud/azure/azure_audit_app_role_assignment_to_sp.yml",
      "platform": "Sigma",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sigma/cloud/azure/azure_audit_app_role_assignment_to_sp.yml"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sigma/cloud/azure/azure_audit_app_role_assignment_to_sp.yml"
+    },
+    {
+     "path": "generated/elastic_esql/artex/cloud/azure/azure_audit_app_credential_added.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_esql/artex/cloud/azure/azure_audit_app_credential_added.txt"
+    },
+    {
+     "path": "generated/elastic_esql/artex/cloud/azure/azure_audit_app_role_assignment_to_sp.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_esql/artex/cloud/azure/azure_audit_app_role_assignment_to_sp.txt"
+    },
+    {
+     "path": "generated/elastic_lucene/artex/cloud/azure/azure_audit_app_credential_added.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_lucene/artex/cloud/azure/azure_audit_app_credential_added.txt"
+    },
+    {
+     "path": "generated/elastic_lucene/artex/cloud/azure/azure_audit_app_role_assignment_to_sp.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_lucene/artex/cloud/azure/azure_audit_app_role_assignment_to_sp.txt"
+    },
+    {
+     "path": "generated/splunk/artex/cloud/azure/azure_audit_app_credential_added.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/splunk/artex/cloud/azure/azure_audit_app_credential_added.txt"
+    },
+    {
+     "path": "generated/splunk/artex/cloud/azure/azure_audit_app_role_assignment_to_sp.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/splunk/artex/cloud/azure/azure_audit_app_role_assignment_to_sp.txt"
     },
     {
      "path": "splunk/default/savedsearches.conf [ARTEX - Service principal assigns a role to itself]",
      "platform": "Splunk",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/splunk/default/savedsearches.conf"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/splunk/default/savedsearches.conf"
     }
    ],
    "platforms": [
@@ -820,9 +844,9 @@
    ],
    "rules": [
     {
-     "path": "sentinel/hunting/06-scripted-microsoft-graph-bursts-by-an-application.kql",
+     "path": "frameworks/artex/sentinel/hunting/06-scripted-microsoft-graph-bursts-by-an-application.kql",
      "platform": "Sentinel / Defender",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sentinel/hunting/06-scripted-microsoft-graph-bursts-by-an-application.kql"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/hunting/06-scripted-microsoft-graph-bursts-by-an-application.kql"
     }
    ],
    "platforms": [
@@ -842,14 +866,14 @@
    ],
    "rules": [
     {
-     "path": "sentinel/hunting/07-bulk-key-vault-secret-reads.kql",
+     "path": "frameworks/artex/sentinel/hunting/07-bulk-key-vault-secret-reads.kql",
      "platform": "Sentinel / Defender",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sentinel/hunting/07-bulk-key-vault-secret-reads.kql"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/hunting/07-bulk-key-vault-secret-reads.kql"
     },
     {
      "path": "splunk/default/savedsearches.conf [ARTEX - Bulk Key Vault secret reads]",
      "platform": "Splunk",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/splunk/default/savedsearches.conf"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/splunk/default/savedsearches.conf"
     }
    ],
    "platforms": [
@@ -870,44 +894,44 @@
    ],
    "rules": [
     {
-     "path": "elastic/esql/07-aws-cloudwatch-secret-search.esql",
+     "path": "frameworks/artex/elastic/esql/07-aws-cloudwatch-secret-search.esql",
      "platform": "Elastic",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/elastic/esql/07-aws-cloudwatch-secret-search.esql"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/elastic/esql/07-aws-cloudwatch-secret-search.esql"
     },
     {
-     "path": "generated/elastic_esql/cloud/aws/aws_cloudtrail_filterlogevents_secret_search.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_esql/cloud/aws/aws_cloudtrail_filterlogevents_secret_search.txt"
-    },
-    {
-     "path": "generated/elastic_lucene/cloud/aws/aws_cloudtrail_filterlogevents_secret_search.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_lucene/cloud/aws/aws_cloudtrail_filterlogevents_secret_search.txt"
-    },
-    {
-     "path": "generated/splunk/cloud/aws/aws_cloudtrail_filterlogevents_secret_search.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/splunk/cloud/aws/aws_cloudtrail_filterlogevents_secret_search.txt"
-    },
-    {
-     "path": "sentinel/analytics/artex-cloudwatch-secret-search.yaml",
+     "path": "frameworks/artex/sentinel/analytics/artex-cloudwatch-secret-search.yaml",
      "platform": "Sentinel / Defender",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sentinel/analytics/artex-cloudwatch-secret-search.yaml"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/analytics/artex-cloudwatch-secret-search.yaml"
     },
     {
-     "path": "sentinel/hunting/08-cloudwatch-log-searches-with-a-stolen-aws-key.kql",
+     "path": "frameworks/artex/sentinel/hunting/08-cloudwatch-log-searches-with-a-stolen-aws-key.kql",
      "platform": "Sentinel / Defender",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sentinel/hunting/08-cloudwatch-log-searches-with-a-stolen-aws-key.kql"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/hunting/08-cloudwatch-log-searches-with-a-stolen-aws-key.kql"
     },
     {
-     "path": "sigma/cloud/aws/aws_cloudtrail_filterlogevents_secret_search.yml",
+     "path": "frameworks/artex/sigma/cloud/aws/aws_cloudtrail_filterlogevents_secret_search.yml",
      "platform": "Sigma",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sigma/cloud/aws/aws_cloudtrail_filterlogevents_secret_search.yml"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sigma/cloud/aws/aws_cloudtrail_filterlogevents_secret_search.yml"
+    },
+    {
+     "path": "generated/elastic_esql/artex/cloud/aws/aws_cloudtrail_filterlogevents_secret_search.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_esql/artex/cloud/aws/aws_cloudtrail_filterlogevents_secret_search.txt"
+    },
+    {
+     "path": "generated/elastic_lucene/artex/cloud/aws/aws_cloudtrail_filterlogevents_secret_search.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_lucene/artex/cloud/aws/aws_cloudtrail_filterlogevents_secret_search.txt"
+    },
+    {
+     "path": "generated/splunk/artex/cloud/aws/aws_cloudtrail_filterlogevents_secret_search.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/splunk/artex/cloud/aws/aws_cloudtrail_filterlogevents_secret_search.txt"
     },
     {
      "path": "splunk/default/savedsearches.conf [ARTEX - CloudWatch logs searched for secrets]",
      "platform": "Splunk",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/splunk/default/savedsearches.conf"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/splunk/default/savedsearches.conf"
     }
    ],
    "platforms": [
@@ -930,53 +954,44 @@
    ],
    "rules": [
     {
-     "path": "elastic/esql/08-aws-dryrun-and-access-denied-bursts.esql",
+     "path": "frameworks/artex/elastic/esql/08-aws-dryrun-and-access-denied-bursts.esql",
      "platform": "Elastic",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/elastic/esql/08-aws-dryrun-and-access-denied-bursts.esql"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/elastic/esql/08-aws-dryrun-and-access-denied-bursts.esql"
     },
     {
-     "path": "generated/elastic_esql/cloud/aws/aws_cloudtrail_access_denied.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_esql/cloud/aws/aws_cloudtrail_access_denied.txt"
+     "path": "frameworks/artex/sentinel/hunting/31-antifox-iis-web-shell-then-aws-enumeration.kql",
+     "platform": "Sentinel / Defender",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/hunting/31-antifox-iis-web-shell-then-aws-enumeration.kql"
     },
     {
-     "path": "generated/elastic_esql/correlations/aws_access_denied_sweep.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_esql/correlations/aws_access_denied_sweep.txt"
-    },
-    {
-     "path": "generated/elastic_lucene/cloud/aws/aws_cloudtrail_access_denied.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_lucene/cloud/aws/aws_cloudtrail_access_denied.txt"
-    },
-    {
-     "path": "generated/splunk/cloud/aws/aws_cloudtrail_access_denied.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/splunk/cloud/aws/aws_cloudtrail_access_denied.txt"
-    },
-    {
-     "path": "generated/splunk/correlations/aws_access_denied_sweep.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/splunk/correlations/aws_access_denied_sweep.txt"
-    },
-    {
-     "path": "sigma/cloud/aws/aws_cloudtrail_access_denied.yml",
+     "path": "frameworks/artex/sigma/cloud/aws/aws_cloudtrail_access_denied.yml",
      "platform": "Sigma",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sigma/cloud/aws/aws_cloudtrail_access_denied.yml"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sigma/cloud/aws/aws_cloudtrail_access_denied.yml"
     },
     {
-     "path": "sigma/correlations/aws_access_denied_sweep.yml",
+     "path": "frameworks/artex/sigma/correlations/aws_access_denied_sweep.yml",
      "platform": "Sigma",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sigma/correlations/aws_access_denied_sweep.yml"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sigma/correlations/aws_access_denied_sweep.yml"
+    },
+    {
+     "path": "generated/elastic_esql/artex/correlations/aws_access_denied_sweep.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_esql/artex/correlations/aws_access_denied_sweep.txt"
+    },
+    {
+     "path": "generated/splunk/artex/correlations/aws_access_denied_sweep.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/splunk/artex/correlations/aws_access_denied_sweep.txt"
     },
     {
      "path": "splunk/default/savedsearches.conf [ARTEX - AWS access denied sweep]",
      "platform": "Splunk",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/splunk/default/savedsearches.conf"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/splunk/default/savedsearches.conf"
     }
    ],
    "platforms": [
     "Elastic",
+    "Sentinel / Defender",
     "Sigma",
     "Sigma conversions",
     "Splunk"
@@ -994,59 +1009,44 @@
    ],
    "rules": [
     {
-     "path": "elastic/rules/aws_dryrun_burst.toml",
+     "path": "frameworks/artex/elastic/rules/aws_dryrun_burst.toml",
      "platform": "Elastic",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/elastic/rules/aws_dryrun_burst.toml"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/elastic/rules/aws_dryrun_burst.toml"
     },
     {
-     "path": "generated/elastic_esql/cloud/aws/aws_cloudtrail_dryrun_events.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_esql/cloud/aws/aws_cloudtrail_dryrun_events.txt"
-    },
-    {
-     "path": "generated/elastic_esql/correlations/aws_dryrun_burst.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_esql/correlations/aws_dryrun_burst.txt"
-    },
-    {
-     "path": "generated/elastic_lucene/cloud/aws/aws_cloudtrail_dryrun_events.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_lucene/cloud/aws/aws_cloudtrail_dryrun_events.txt"
-    },
-    {
-     "path": "generated/splunk/cloud/aws/aws_cloudtrail_dryrun_events.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/splunk/cloud/aws/aws_cloudtrail_dryrun_events.txt"
-    },
-    {
-     "path": "generated/splunk/correlations/aws_dryrun_burst.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/splunk/correlations/aws_dryrun_burst.txt"
-    },
-    {
-     "path": "sentinel/analytics/artex-ec2-dryrun-burst.yaml",
+     "path": "frameworks/artex/sentinel/analytics/artex-ec2-dryrun-burst.yaml",
      "platform": "Sentinel / Defender",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sentinel/analytics/artex-ec2-dryrun-burst.yaml"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/analytics/artex-ec2-dryrun-burst.yaml"
     },
     {
-     "path": "sentinel/hunting/14-aws-permission-testing-and-the-foothold-that-follows.kql",
+     "path": "frameworks/artex/sentinel/hunting/14-aws-permission-testing-and-the-foothold-that-follows.kql",
      "platform": "Sentinel / Defender",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sentinel/hunting/14-aws-permission-testing-and-the-foothold-that-follows.kql"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/hunting/14-aws-permission-testing-and-the-foothold-that-follows.kql"
     },
     {
-     "path": "sigma/cloud/aws/aws_cloudtrail_dryrun_events.yml",
+     "path": "frameworks/artex/sigma/cloud/aws/aws_cloudtrail_dryrun_events.yml",
      "platform": "Sigma",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sigma/cloud/aws/aws_cloudtrail_dryrun_events.yml"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sigma/cloud/aws/aws_cloudtrail_dryrun_events.yml"
     },
     {
-     "path": "sigma/correlations/aws_dryrun_burst.yml",
+     "path": "frameworks/artex/sigma/correlations/aws_dryrun_burst.yml",
      "platform": "Sigma",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sigma/correlations/aws_dryrun_burst.yml"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sigma/correlations/aws_dryrun_burst.yml"
+    },
+    {
+     "path": "generated/elastic_esql/artex/correlations/aws_dryrun_burst.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_esql/artex/correlations/aws_dryrun_burst.txt"
+    },
+    {
+     "path": "generated/splunk/artex/correlations/aws_dryrun_burst.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/splunk/artex/correlations/aws_dryrun_burst.txt"
     },
     {
      "path": "splunk/default/savedsearches.conf [ARTEX - EC2 DryRun burst]",
      "platform": "Splunk",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/splunk/default/savedsearches.conf"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/splunk/default/savedsearches.conf"
     }
    ],
    "platforms": [
@@ -1070,49 +1070,34 @@
    ],
    "rules": [
     {
-     "path": "generated/elastic_esql/cloud/azure/azure_activity_arm_validate.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_esql/cloud/azure/azure_activity_arm_validate.txt"
-    },
-    {
-     "path": "generated/elastic_esql/correlations/azure_arm_validate_sweep.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_esql/correlations/azure_arm_validate_sweep.txt"
-    },
-    {
-     "path": "generated/elastic_lucene/cloud/azure/azure_activity_arm_validate.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_lucene/cloud/azure/azure_activity_arm_validate.txt"
-    },
-    {
-     "path": "generated/splunk/cloud/azure/azure_activity_arm_validate.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/splunk/cloud/azure/azure_activity_arm_validate.txt"
-    },
-    {
-     "path": "generated/splunk/correlations/azure_arm_validate_sweep.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/splunk/correlations/azure_arm_validate_sweep.txt"
-    },
-    {
-     "path": "sentinel/hunting/15-azure-capability-checks-validate-sweeps-and-kudu-sign-ins.kql",
+     "path": "frameworks/artex/sentinel/hunting/15-azure-capability-checks-validate-sweeps-and-kudu-sign-ins.kql",
      "platform": "Sentinel / Defender",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sentinel/hunting/15-azure-capability-checks-validate-sweeps-and-kudu-sign-ins.kql"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/hunting/15-azure-capability-checks-validate-sweeps-and-kudu-sign-ins.kql"
     },
     {
-     "path": "sigma/cloud/azure/azure_activity_arm_validate.yml",
+     "path": "frameworks/artex/sigma/cloud/azure/azure_activity_arm_validate.yml",
      "platform": "Sigma",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sigma/cloud/azure/azure_activity_arm_validate.yml"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sigma/cloud/azure/azure_activity_arm_validate.yml"
     },
     {
-     "path": "sigma/correlations/azure_arm_validate_sweep.yml",
+     "path": "frameworks/artex/sigma/correlations/azure_arm_validate_sweep.yml",
      "platform": "Sigma",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sigma/correlations/azure_arm_validate_sweep.yml"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sigma/correlations/azure_arm_validate_sweep.yml"
+    },
+    {
+     "path": "generated/elastic_esql/artex/correlations/azure_arm_validate_sweep.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_esql/artex/correlations/azure_arm_validate_sweep.txt"
+    },
+    {
+     "path": "generated/splunk/artex/correlations/azure_arm_validate_sweep.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/splunk/artex/correlations/azure_arm_validate_sweep.txt"
     },
     {
      "path": "splunk/default/savedsearches.conf [ARTEX - Azure Resource Manager validate sweep]",
      "platform": "Splunk",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/splunk/default/savedsearches.conf"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/splunk/default/savedsearches.conf"
     }
    ],
    "platforms": [
@@ -1134,39 +1119,44 @@
    ],
    "rules": [
     {
-     "path": "elastic/esql/09-aws-cognito-signup-burst.esql",
+     "path": "frameworks/artex/elastic/esql/09-aws-cognito-signup-burst.esql",
      "platform": "Elastic",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/elastic/esql/09-aws-cognito-signup-burst.esql"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/elastic/esql/09-aws-cognito-signup-burst.esql"
     },
     {
-     "path": "generated/elastic_esql/cloud/aws/aws_cognito_signup_artex_artifacts.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_esql/cloud/aws/aws_cognito_signup_artex_artifacts.txt"
-    },
-    {
-     "path": "generated/elastic_lucene/cloud/aws/aws_cognito_signup_artex_artifacts.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_lucene/cloud/aws/aws_cognito_signup_artex_artifacts.txt"
-    },
-    {
-     "path": "generated/splunk/cloud/aws/aws_cognito_signup_artex_artifacts.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/splunk/cloud/aws/aws_cognito_signup_artex_artifacts.txt"
-    },
-    {
-     "path": "sentinel/hunting/09-cognito-sign-up-abuse-and-the-discovery-sweep-after-it.kql",
+     "path": "frameworks/artex/sentinel/hunting/09-cognito-sign-up-abuse-and-the-discovery-sweep-after-it.kql",
      "platform": "Sentinel / Defender",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sentinel/hunting/09-cognito-sign-up-abuse-and-the-discovery-sweep-after-it.kql"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/hunting/09-cognito-sign-up-abuse-and-the-discovery-sweep-after-it.kql"
     },
     {
-     "path": "sigma/cloud/aws/aws_cognito_signup_artex_artifacts.yml",
+     "path": "frameworks/artex/sentinel/hunting/27-accounts-registered-by-a-probing-source.kql",
+     "platform": "Sentinel / Defender",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/hunting/27-accounts-registered-by-a-probing-source.kql"
+    },
+    {
+     "path": "frameworks/artex/sigma/cloud/aws/aws_cognito_signup_artex_artifacts.yml",
      "platform": "Sigma",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sigma/cloud/aws/aws_cognito_signup_artex_artifacts.yml"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sigma/cloud/aws/aws_cognito_signup_artex_artifacts.yml"
+    },
+    {
+     "path": "generated/elastic_esql/artex/cloud/aws/aws_cognito_signup_artex_artifacts.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_esql/artex/cloud/aws/aws_cognito_signup_artex_artifacts.txt"
+    },
+    {
+     "path": "generated/elastic_lucene/artex/cloud/aws/aws_cognito_signup_artex_artifacts.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_lucene/artex/cloud/aws/aws_cognito_signup_artex_artifacts.txt"
+    },
+    {
+     "path": "generated/splunk/artex/cloud/aws/aws_cognito_signup_artex_artifacts.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/splunk/artex/cloud/aws/aws_cognito_signup_artex_artifacts.txt"
     },
     {
      "path": "splunk/default/savedsearches.conf [ARTEX - Cognito sign-up burst]",
      "platform": "Splunk",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/splunk/default/savedsearches.conf"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/splunk/default/savedsearches.conf"
     }
    ],
    "platforms": [
@@ -1191,19 +1181,44 @@
    ],
    "rules": [
     {
-     "path": "osquery/artex.conf",
+     "path": "frameworks/artex/osquery/artex.conf",
      "platform": "osquery",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/osquery/artex.conf"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/osquery/artex.conf"
     },
     {
-     "path": "sentinel/hunting/20-artex-console-or-backdoored-image-inside-your-network.kql",
+     "path": "frameworks/artex/sentinel/analytics/artex-agent-shell-on-host.yaml",
      "platform": "Sentinel / Defender",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sentinel/hunting/20-artex-console-or-backdoored-image-inside-your-network.kql"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/analytics/artex-agent-shell-on-host.yaml"
     },
     {
-     "path": "yara/artex.yar",
+     "path": "frameworks/artex/sentinel/hunting/20-artex-console-or-backdoored-image-inside-your-network.kql",
+     "platform": "Sentinel / Defender",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/hunting/20-artex-console-or-backdoored-image-inside-your-network.kql"
+    },
+    {
+     "path": "frameworks/artex/sentinel/hunting/24-artex-container-toolchain-from-one-source.kql",
+     "platform": "Sentinel / Defender",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/hunting/24-artex-container-toolchain-from-one-source.kql"
+    },
+    {
+     "path": "frameworks/artex/sentinel/hunting/28-artex-running-on-a-monitored-host.kql",
+     "platform": "Sentinel / Defender",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/hunting/28-artex-running-on-a-monitored-host.kql"
+    },
+    {
+     "path": "frameworks/artex/sentinel/hunting/29-artex-console-traffic-in-proxy-logs.kql",
+     "platform": "Sentinel / Defender",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/hunting/29-artex-console-traffic-in-proxy-logs.kql"
+    },
+    {
+     "path": "frameworks/artex/sentinel/hunting/30-bracketed-paste-bytes-in-shell-input.kql",
+     "platform": "Sentinel / Defender",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/hunting/30-bracketed-paste-bytes-in-shell-input.kql"
+    },
+    {
+     "path": "frameworks/artex/yara/artex.yar",
      "platform": "YARA",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/yara/artex.yar"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/yara/artex.yar"
     }
    ],
    "platforms": [
@@ -1225,99 +1240,129 @@
    ],
    "rules": [
     {
-     "path": "elastic/esql/04-web-service-spawns-shell.esql",
+     "path": "frameworks/artex/elastic/esql/04-web-service-spawns-shell.esql",
      "platform": "Elastic",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/elastic/esql/04-web-service-spawns-shell.esql"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/elastic/esql/04-web-service-spawns-shell.esql"
     },
     {
-     "path": "elastic/rules/web_service_spawns_shell.toml",
+     "path": "frameworks/artex/elastic/rules/web_service_spawns_shell.toml",
      "platform": "Elastic",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/elastic/rules/web_service_spawns_shell.toml"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/elastic/rules/web_service_spawns_shell.toml"
     },
     {
-     "path": "generated/elastic_esql/process_creation/proc_creation_lnx_web_service_spawns_shell_or_downloader.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_esql/process_creation/proc_creation_lnx_web_service_spawns_shell_or_downloader.txt"
-    },
-    {
-     "path": "generated/elastic_esql/process_creation/proc_creation_win_sqlserver_spawns_shell.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_esql/process_creation/proc_creation_win_sqlserver_spawns_shell.txt"
-    },
-    {
-     "path": "generated/elastic_esql/process_creation/proc_creation_win_web_service_spawns_shell.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_esql/process_creation/proc_creation_win_web_service_spawns_shell.txt"
-    },
-    {
-     "path": "generated/elastic_lucene/process_creation/proc_creation_lnx_web_service_spawns_shell_or_downloader.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_lucene/process_creation/proc_creation_lnx_web_service_spawns_shell_or_downloader.txt"
-    },
-    {
-     "path": "generated/elastic_lucene/process_creation/proc_creation_win_sqlserver_spawns_shell.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_lucene/process_creation/proc_creation_win_sqlserver_spawns_shell.txt"
-    },
-    {
-     "path": "generated/elastic_lucene/process_creation/proc_creation_win_web_service_spawns_shell.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_lucene/process_creation/proc_creation_win_web_service_spawns_shell.txt"
-    },
-    {
-     "path": "generated/sentinel_asim/process_creation/proc_creation_lnx_web_service_spawns_shell_or_downloader.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/sentinel_asim/process_creation/proc_creation_lnx_web_service_spawns_shell_or_downloader.txt"
-    },
-    {
-     "path": "generated/sentinel_asim/process_creation/proc_creation_win_sqlserver_spawns_shell.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/sentinel_asim/process_creation/proc_creation_win_sqlserver_spawns_shell.txt"
-    },
-    {
-     "path": "generated/sentinel_asim/process_creation/proc_creation_win_web_service_spawns_shell.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/sentinel_asim/process_creation/proc_creation_win_web_service_spawns_shell.txt"
-    },
-    {
-     "path": "generated/splunk/process_creation/proc_creation_lnx_web_service_spawns_shell_or_downloader.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/splunk/process_creation/proc_creation_lnx_web_service_spawns_shell_or_downloader.txt"
-    },
-    {
-     "path": "generated/splunk/process_creation/proc_creation_win_sqlserver_spawns_shell.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/splunk/process_creation/proc_creation_win_sqlserver_spawns_shell.txt"
-    },
-    {
-     "path": "generated/splunk/process_creation/proc_creation_win_web_service_spawns_shell.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/splunk/process_creation/proc_creation_win_web_service_spawns_shell.txt"
-    },
-    {
-     "path": "sentinel/hunting/11-web-and-database-services-starting-shells-and-download-tools.kql",
+     "path": "frameworks/artex/sentinel/hunting/11-web-and-database-services-starting-shells-and-download-tools.kql",
      "platform": "Sentinel / Defender",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sentinel/hunting/11-web-and-database-services-starting-shells-and-download-tools.kql"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/hunting/11-web-and-database-services-starting-shells-and-download-tools.kql"
     },
     {
-     "path": "sigma/process_creation/proc_creation_lnx_web_service_spawns_shell_or_downloader.yml",
+     "path": "frameworks/artex/sigma/process_creation/proc_creation_lnx_web_service_spawns_shell_or_downloader.yml",
      "platform": "Sigma",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sigma/process_creation/proc_creation_lnx_web_service_spawns_shell_or_downloader.yml"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sigma/process_creation/proc_creation_lnx_web_service_spawns_shell_or_downloader.yml"
     },
     {
-     "path": "sigma/process_creation/proc_creation_win_sqlserver_spawns_shell.yml",
+     "path": "frameworks/artex/sigma/process_creation/proc_creation_win_sqlserver_spawns_shell.yml",
      "platform": "Sigma",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sigma/process_creation/proc_creation_win_sqlserver_spawns_shell.yml"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sigma/process_creation/proc_creation_win_sqlserver_spawns_shell.yml"
     },
     {
-     "path": "sigma/process_creation/proc_creation_win_web_service_spawns_shell.yml",
+     "path": "frameworks/artex/sigma/process_creation/proc_creation_win_web_service_spawns_shell.yml",
      "platform": "Sigma",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sigma/process_creation/proc_creation_win_web_service_spawns_shell.yml"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sigma/process_creation/proc_creation_win_web_service_spawns_shell.yml"
+    },
+    {
+     "path": "generated/azure_monitor/artex/process_creation/proc_creation_lnx_web_service_spawns_shell_or_downloader.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/azure_monitor/artex/process_creation/proc_creation_lnx_web_service_spawns_shell_or_downloader.txt"
+    },
+    {
+     "path": "generated/azure_monitor/artex/process_creation/proc_creation_win_sqlserver_spawns_shell.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/azure_monitor/artex/process_creation/proc_creation_win_sqlserver_spawns_shell.txt"
+    },
+    {
+     "path": "generated/azure_monitor/artex/process_creation/proc_creation_win_web_service_spawns_shell.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/azure_monitor/artex/process_creation/proc_creation_win_web_service_spawns_shell.txt"
+    },
+    {
+     "path": "generated/defender_xdr/artex/process_creation/proc_creation_lnx_web_service_spawns_shell_or_downloader.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/defender_xdr/artex/process_creation/proc_creation_lnx_web_service_spawns_shell_or_downloader.txt"
+    },
+    {
+     "path": "generated/defender_xdr/artex/process_creation/proc_creation_win_sqlserver_spawns_shell.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/defender_xdr/artex/process_creation/proc_creation_win_sqlserver_spawns_shell.txt"
+    },
+    {
+     "path": "generated/defender_xdr/artex/process_creation/proc_creation_win_web_service_spawns_shell.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/defender_xdr/artex/process_creation/proc_creation_win_web_service_spawns_shell.txt"
+    },
+    {
+     "path": "generated/elastic_esql/artex/process_creation/proc_creation_lnx_web_service_spawns_shell_or_downloader.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_esql/artex/process_creation/proc_creation_lnx_web_service_spawns_shell_or_downloader.txt"
+    },
+    {
+     "path": "generated/elastic_esql/artex/process_creation/proc_creation_win_sqlserver_spawns_shell.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_esql/artex/process_creation/proc_creation_win_sqlserver_spawns_shell.txt"
+    },
+    {
+     "path": "generated/elastic_esql/artex/process_creation/proc_creation_win_web_service_spawns_shell.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_esql/artex/process_creation/proc_creation_win_web_service_spawns_shell.txt"
+    },
+    {
+     "path": "generated/elastic_lucene/artex/process_creation/proc_creation_lnx_web_service_spawns_shell_or_downloader.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_lucene/artex/process_creation/proc_creation_lnx_web_service_spawns_shell_or_downloader.txt"
+    },
+    {
+     "path": "generated/elastic_lucene/artex/process_creation/proc_creation_win_sqlserver_spawns_shell.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_lucene/artex/process_creation/proc_creation_win_sqlserver_spawns_shell.txt"
+    },
+    {
+     "path": "generated/elastic_lucene/artex/process_creation/proc_creation_win_web_service_spawns_shell.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_lucene/artex/process_creation/proc_creation_win_web_service_spawns_shell.txt"
+    },
+    {
+     "path": "generated/sentinel_asim/artex/process_creation/proc_creation_lnx_web_service_spawns_shell_or_downloader.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/sentinel_asim/artex/process_creation/proc_creation_lnx_web_service_spawns_shell_or_downloader.txt"
+    },
+    {
+     "path": "generated/sentinel_asim/artex/process_creation/proc_creation_win_sqlserver_spawns_shell.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/sentinel_asim/artex/process_creation/proc_creation_win_sqlserver_spawns_shell.txt"
+    },
+    {
+     "path": "generated/sentinel_asim/artex/process_creation/proc_creation_win_web_service_spawns_shell.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/sentinel_asim/artex/process_creation/proc_creation_win_web_service_spawns_shell.txt"
+    },
+    {
+     "path": "generated/splunk/artex/process_creation/proc_creation_lnx_web_service_spawns_shell_or_downloader.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/splunk/artex/process_creation/proc_creation_lnx_web_service_spawns_shell_or_downloader.txt"
+    },
+    {
+     "path": "generated/splunk/artex/process_creation/proc_creation_win_sqlserver_spawns_shell.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/splunk/artex/process_creation/proc_creation_win_sqlserver_spawns_shell.txt"
+    },
+    {
+     "path": "generated/splunk/artex/process_creation/proc_creation_win_web_service_spawns_shell.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/splunk/artex/process_creation/proc_creation_win_web_service_spawns_shell.txt"
     },
     {
      "path": "splunk/default/savedsearches.conf [ARTEX - Web or database service spawns a shell or download tool]",
      "platform": "Splunk",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/splunk/default/savedsearches.conf"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/splunk/default/savedsearches.conf"
     }
    ],
    "platforms": [
@@ -1340,34 +1385,44 @@
    ],
    "rules": [
     {
-     "path": "generated/elastic_esql/file_event/file_event_artex_jsp_webshell_names.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_esql/file_event/file_event_artex_jsp_webshell_names.txt"
-    },
-    {
-     "path": "generated/elastic_lucene/file_event/file_event_artex_jsp_webshell_names.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_lucene/file_event/file_event_artex_jsp_webshell_names.txt"
-    },
-    {
-     "path": "generated/sentinel_asim/file_event/file_event_artex_jsp_webshell_names.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/sentinel_asim/file_event/file_event_artex_jsp_webshell_names.txt"
-    },
-    {
-     "path": "generated/splunk/file_event/file_event_artex_jsp_webshell_names.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/splunk/file_event/file_event_artex_jsp_webshell_names.txt"
-    },
-    {
-     "path": "sentinel/hunting/13-scripts-written-into-web-directories.kql",
+     "path": "frameworks/artex/sentinel/hunting/13-scripts-written-into-web-directories.kql",
      "platform": "Sentinel / Defender",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sentinel/hunting/13-scripts-written-into-web-directories.kql"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/hunting/13-scripts-written-into-web-directories.kql"
     },
     {
-     "path": "sigma/file_event/file_event_artex_jsp_webshell_names.yml",
+     "path": "frameworks/artex/sigma/file_event/file_event_artex_jsp_webshell_names.yml",
      "platform": "Sigma",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sigma/file_event/file_event_artex_jsp_webshell_names.yml"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sigma/file_event/file_event_artex_jsp_webshell_names.yml"
+    },
+    {
+     "path": "generated/azure_monitor/artex/file_event/file_event_artex_jsp_webshell_names.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/azure_monitor/artex/file_event/file_event_artex_jsp_webshell_names.txt"
+    },
+    {
+     "path": "generated/defender_xdr/artex/file_event/file_event_artex_jsp_webshell_names.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/defender_xdr/artex/file_event/file_event_artex_jsp_webshell_names.txt"
+    },
+    {
+     "path": "generated/elastic_esql/artex/file_event/file_event_artex_jsp_webshell_names.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_esql/artex/file_event/file_event_artex_jsp_webshell_names.txt"
+    },
+    {
+     "path": "generated/elastic_lucene/artex/file_event/file_event_artex_jsp_webshell_names.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_lucene/artex/file_event/file_event_artex_jsp_webshell_names.txt"
+    },
+    {
+     "path": "generated/sentinel_asim/artex/file_event/file_event_artex_jsp_webshell_names.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/sentinel_asim/artex/file_event/file_event_artex_jsp_webshell_names.txt"
+    },
+    {
+     "path": "generated/splunk/artex/file_event/file_event_artex_jsp_webshell_names.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/splunk/artex/file_event/file_event_artex_jsp_webshell_names.txt"
     }
    ],
    "platforms": [
@@ -1387,104 +1442,144 @@
    ],
    "rules": [
     {
-     "path": "generated/elastic_esql/file_event/file_event_win_bloodalchemy_files.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_esql/file_event/file_event_win_bloodalchemy_files.txt"
-    },
-    {
-     "path": "generated/elastic_esql/process_creation/proc_creation_win_fake_edge_update_task.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_esql/process_creation/proc_creation_win_fake_edge_update_task.txt"
-    },
-    {
-     "path": "generated/elastic_esql/process_creation/proc_creation_win_svchost_unusual_location.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_esql/process_creation/proc_creation_win_svchost_unusual_location.txt"
-    },
-    {
-     "path": "generated/elastic_esql/process_creation/proc_creation_win_system_binary_masquerade.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_esql/process_creation/proc_creation_win_system_binary_masquerade.txt"
-    },
-    {
-     "path": "generated/elastic_lucene/file_event/file_event_win_bloodalchemy_files.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_lucene/file_event/file_event_win_bloodalchemy_files.txt"
-    },
-    {
-     "path": "generated/elastic_lucene/process_creation/proc_creation_win_fake_edge_update_task.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_lucene/process_creation/proc_creation_win_fake_edge_update_task.txt"
-    },
-    {
-     "path": "generated/elastic_lucene/process_creation/proc_creation_win_svchost_unusual_location.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_lucene/process_creation/proc_creation_win_svchost_unusual_location.txt"
-    },
-    {
-     "path": "generated/elastic_lucene/process_creation/proc_creation_win_system_binary_masquerade.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_lucene/process_creation/proc_creation_win_system_binary_masquerade.txt"
-    },
-    {
-     "path": "generated/sentinel_asim/file_event/file_event_win_bloodalchemy_files.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/sentinel_asim/file_event/file_event_win_bloodalchemy_files.txt"
-    },
-    {
-     "path": "generated/sentinel_asim/process_creation/proc_creation_win_fake_edge_update_task.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/sentinel_asim/process_creation/proc_creation_win_fake_edge_update_task.txt"
-    },
-    {
-     "path": "generated/sentinel_asim/process_creation/proc_creation_win_svchost_unusual_location.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/sentinel_asim/process_creation/proc_creation_win_svchost_unusual_location.txt"
-    },
-    {
-     "path": "generated/sentinel_asim/process_creation/proc_creation_win_system_binary_masquerade.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/sentinel_asim/process_creation/proc_creation_win_system_binary_masquerade.txt"
-    },
-    {
-     "path": "generated/splunk/file_event/file_event_win_bloodalchemy_files.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/splunk/file_event/file_event_win_bloodalchemy_files.txt"
-    },
-    {
-     "path": "generated/splunk/process_creation/proc_creation_win_fake_edge_update_task.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/splunk/process_creation/proc_creation_win_fake_edge_update_task.txt"
-    },
-    {
-     "path": "generated/splunk/process_creation/proc_creation_win_svchost_unusual_location.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/splunk/process_creation/proc_creation_win_svchost_unusual_location.txt"
-    },
-    {
-     "path": "generated/splunk/process_creation/proc_creation_win_system_binary_masquerade.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/splunk/process_creation/proc_creation_win_system_binary_masquerade.txt"
-    },
-    {
-     "path": "sigma/file_event/file_event_win_bloodalchemy_files.yml",
+     "path": "frameworks/artex/sigma/file_event/file_event_win_bloodalchemy_files.yml",
      "platform": "Sigma",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sigma/file_event/file_event_win_bloodalchemy_files.yml"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sigma/file_event/file_event_win_bloodalchemy_files.yml"
     },
     {
-     "path": "sigma/process_creation/proc_creation_win_fake_edge_update_task.yml",
+     "path": "frameworks/artex/sigma/process_creation/proc_creation_win_fake_edge_update_task.yml",
      "platform": "Sigma",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sigma/process_creation/proc_creation_win_fake_edge_update_task.yml"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sigma/process_creation/proc_creation_win_fake_edge_update_task.yml"
     },
     {
-     "path": "sigma/process_creation/proc_creation_win_svchost_unusual_location.yml",
+     "path": "frameworks/artex/sigma/process_creation/proc_creation_win_svchost_unusual_location.yml",
      "platform": "Sigma",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sigma/process_creation/proc_creation_win_svchost_unusual_location.yml"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sigma/process_creation/proc_creation_win_svchost_unusual_location.yml"
     },
     {
-     "path": "sigma/process_creation/proc_creation_win_system_binary_masquerade.yml",
+     "path": "frameworks/artex/sigma/process_creation/proc_creation_win_system_binary_masquerade.yml",
      "platform": "Sigma",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sigma/process_creation/proc_creation_win_system_binary_masquerade.yml"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sigma/process_creation/proc_creation_win_system_binary_masquerade.yml"
+    },
+    {
+     "path": "generated/azure_monitor/artex/file_event/file_event_win_bloodalchemy_files.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/azure_monitor/artex/file_event/file_event_win_bloodalchemy_files.txt"
+    },
+    {
+     "path": "generated/azure_monitor/artex/process_creation/proc_creation_win_fake_edge_update_task.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/azure_monitor/artex/process_creation/proc_creation_win_fake_edge_update_task.txt"
+    },
+    {
+     "path": "generated/azure_monitor/artex/process_creation/proc_creation_win_svchost_unusual_location.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/azure_monitor/artex/process_creation/proc_creation_win_svchost_unusual_location.txt"
+    },
+    {
+     "path": "generated/azure_monitor/artex/process_creation/proc_creation_win_system_binary_masquerade.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/azure_monitor/artex/process_creation/proc_creation_win_system_binary_masquerade.txt"
+    },
+    {
+     "path": "generated/defender_xdr/artex/file_event/file_event_win_bloodalchemy_files.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/defender_xdr/artex/file_event/file_event_win_bloodalchemy_files.txt"
+    },
+    {
+     "path": "generated/defender_xdr/artex/process_creation/proc_creation_win_fake_edge_update_task.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/defender_xdr/artex/process_creation/proc_creation_win_fake_edge_update_task.txt"
+    },
+    {
+     "path": "generated/defender_xdr/artex/process_creation/proc_creation_win_svchost_unusual_location.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/defender_xdr/artex/process_creation/proc_creation_win_svchost_unusual_location.txt"
+    },
+    {
+     "path": "generated/defender_xdr/artex/process_creation/proc_creation_win_system_binary_masquerade.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/defender_xdr/artex/process_creation/proc_creation_win_system_binary_masquerade.txt"
+    },
+    {
+     "path": "generated/elastic_esql/artex/file_event/file_event_win_bloodalchemy_files.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_esql/artex/file_event/file_event_win_bloodalchemy_files.txt"
+    },
+    {
+     "path": "generated/elastic_esql/artex/process_creation/proc_creation_win_fake_edge_update_task.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_esql/artex/process_creation/proc_creation_win_fake_edge_update_task.txt"
+    },
+    {
+     "path": "generated/elastic_esql/artex/process_creation/proc_creation_win_svchost_unusual_location.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_esql/artex/process_creation/proc_creation_win_svchost_unusual_location.txt"
+    },
+    {
+     "path": "generated/elastic_esql/artex/process_creation/proc_creation_win_system_binary_masquerade.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_esql/artex/process_creation/proc_creation_win_system_binary_masquerade.txt"
+    },
+    {
+     "path": "generated/elastic_lucene/artex/file_event/file_event_win_bloodalchemy_files.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_lucene/artex/file_event/file_event_win_bloodalchemy_files.txt"
+    },
+    {
+     "path": "generated/elastic_lucene/artex/process_creation/proc_creation_win_fake_edge_update_task.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_lucene/artex/process_creation/proc_creation_win_fake_edge_update_task.txt"
+    },
+    {
+     "path": "generated/elastic_lucene/artex/process_creation/proc_creation_win_svchost_unusual_location.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_lucene/artex/process_creation/proc_creation_win_svchost_unusual_location.txt"
+    },
+    {
+     "path": "generated/elastic_lucene/artex/process_creation/proc_creation_win_system_binary_masquerade.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_lucene/artex/process_creation/proc_creation_win_system_binary_masquerade.txt"
+    },
+    {
+     "path": "generated/sentinel_asim/artex/file_event/file_event_win_bloodalchemy_files.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/sentinel_asim/artex/file_event/file_event_win_bloodalchemy_files.txt"
+    },
+    {
+     "path": "generated/sentinel_asim/artex/process_creation/proc_creation_win_fake_edge_update_task.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/sentinel_asim/artex/process_creation/proc_creation_win_fake_edge_update_task.txt"
+    },
+    {
+     "path": "generated/sentinel_asim/artex/process_creation/proc_creation_win_svchost_unusual_location.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/sentinel_asim/artex/process_creation/proc_creation_win_svchost_unusual_location.txt"
+    },
+    {
+     "path": "generated/sentinel_asim/artex/process_creation/proc_creation_win_system_binary_masquerade.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/sentinel_asim/artex/process_creation/proc_creation_win_system_binary_masquerade.txt"
+    },
+    {
+     "path": "generated/splunk/artex/file_event/file_event_win_bloodalchemy_files.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/splunk/artex/file_event/file_event_win_bloodalchemy_files.txt"
+    },
+    {
+     "path": "generated/splunk/artex/process_creation/proc_creation_win_fake_edge_update_task.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/splunk/artex/process_creation/proc_creation_win_fake_edge_update_task.txt"
+    },
+    {
+     "path": "generated/splunk/artex/process_creation/proc_creation_win_svchost_unusual_location.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/splunk/artex/process_creation/proc_creation_win_svchost_unusual_location.txt"
+    },
+    {
+     "path": "generated/splunk/artex/process_creation/proc_creation_win_system_binary_masquerade.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/splunk/artex/process_creation/proc_creation_win_system_binary_masquerade.txt"
     }
    ],
    "platforms": [
@@ -1502,24 +1597,24 @@
    ],
    "rules": [
     {
-     "path": "generated/elastic_esql/correlations/remote_tasklist_fanout.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_esql/correlations/remote_tasklist_fanout.txt"
-    },
-    {
-     "path": "generated/splunk/correlations/remote_tasklist_fanout.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/splunk/correlations/remote_tasklist_fanout.txt"
-    },
-    {
-     "path": "sigma/correlations/remote_tasklist_fanout.yml",
+     "path": "frameworks/artex/sigma/correlations/remote_tasklist_fanout.yml",
      "platform": "Sigma",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sigma/correlations/remote_tasklist_fanout.yml"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sigma/correlations/remote_tasklist_fanout.yml"
     },
     {
-     "path": "sigma/process_creation/proc_creation_win_remote_tasklist.yml",
+     "path": "frameworks/artex/sigma/process_creation/proc_creation_win_remote_tasklist.yml",
      "platform": "Sigma",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sigma/process_creation/proc_creation_win_remote_tasklist.yml"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sigma/process_creation/proc_creation_win_remote_tasklist.yml"
+    },
+    {
+     "path": "generated/elastic_esql/artex/correlations/remote_tasklist_fanout.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_esql/artex/correlations/remote_tasklist_fanout.txt"
+    },
+    {
+     "path": "generated/splunk/artex/correlations/remote_tasklist_fanout.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/splunk/artex/correlations/remote_tasklist_fanout.txt"
     }
    ],
    "platforms": [
@@ -1539,9 +1634,9 @@
    ],
    "rules": [
     {
-     "path": "sentinel/hunting/16-kerberoasting-dcsync-and-winrm-fan-out.kql",
+     "path": "frameworks/artex/sentinel/hunting/16-kerberoasting-dcsync-and-winrm-fan-out.kql",
      "platform": "Sentinel / Defender",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sentinel/hunting/16-kerberoasting-dcsync-and-winrm-fan-out.kql"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/hunting/16-kerberoasting-dcsync-and-winrm-fan-out.kql"
     }
    ],
    "platforms": [
@@ -1558,29 +1653,29 @@
    ],
    "rules": [
     {
-     "path": "generated/elastic_esql/dns_query/dns_query_artex_toolkit_payload_hosts.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_esql/dns_query/dns_query_artex_toolkit_payload_hosts.txt"
-    },
-    {
-     "path": "generated/elastic_lucene/dns_query/dns_query_artex_toolkit_payload_hosts.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_lucene/dns_query/dns_query_artex_toolkit_payload_hosts.txt"
-    },
-    {
-     "path": "generated/splunk/dns_query/dns_query_artex_toolkit_payload_hosts.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/splunk/dns_query/dns_query_artex_toolkit_payload_hosts.txt"
-    },
-    {
-     "path": "sentinel/hunting/22-sql-server-toolkit-payloads.kql",
+     "path": "frameworks/artex/sentinel/hunting/22-sql-server-toolkit-payloads.kql",
      "platform": "Sentinel / Defender",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sentinel/hunting/22-sql-server-toolkit-payloads.kql"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/hunting/22-sql-server-toolkit-payloads.kql"
     },
     {
-     "path": "sigma/dns_query/dns_query_artex_toolkit_payload_hosts.yml",
+     "path": "frameworks/artex/sigma/dns_query/dns_query_artex_toolkit_payload_hosts.yml",
      "platform": "Sigma",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sigma/dns_query/dns_query_artex_toolkit_payload_hosts.yml"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sigma/dns_query/dns_query_artex_toolkit_payload_hosts.yml"
+    },
+    {
+     "path": "generated/elastic_esql/artex/dns_query/dns_query_artex_toolkit_payload_hosts.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_esql/artex/dns_query/dns_query_artex_toolkit_payload_hosts.txt"
+    },
+    {
+     "path": "generated/elastic_lucene/artex/dns_query/dns_query_artex_toolkit_payload_hosts.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_lucene/artex/dns_query/dns_query_artex_toolkit_payload_hosts.txt"
+    },
+    {
+     "path": "generated/splunk/artex/dns_query/dns_query_artex_toolkit_payload_hosts.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/splunk/artex/dns_query/dns_query_artex_toolkit_payload_hosts.txt"
     }
    ],
    "platforms": [
@@ -1601,34 +1696,34 @@
    ],
    "rules": [
     {
-     "path": "generated/elastic_esql/dns_query/dns_query_artex_infrastructure.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_esql/dns_query/dns_query_artex_infrastructure.txt"
-    },
-    {
-     "path": "generated/elastic_lucene/dns_query/dns_query_artex_infrastructure.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_lucene/dns_query/dns_query_artex_infrastructure.txt"
-    },
-    {
-     "path": "generated/splunk/dns_query/dns_query_artex_infrastructure.txt",
-     "platform": "Sigma conversions",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/generated/splunk/dns_query/dns_query_artex_infrastructure.txt"
-    },
-    {
-     "path": "sigma/dns_query/dns_query_artex_infrastructure.yml",
+     "path": "frameworks/artex/sigma/dns_query/dns_query_artex_infrastructure.yml",
      "platform": "Sigma",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/sigma/dns_query/dns_query_artex_infrastructure.yml"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sigma/dns_query/dns_query_artex_infrastructure.yml"
     },
     {
-     "path": "suricata/artex-ip.rules",
+     "path": "frameworks/artex/suricata/artex-ip.rules",
      "platform": "Suricata",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/suricata/artex-ip.rules"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/suricata/artex-ip.rules"
     },
     {
-     "path": "zeek/intel/artex.intel",
+     "path": "frameworks/artex/zeek/intel/artex.intel",
      "platform": "Zeek",
-     "url": "https://github.com/ThreatDefence/artex-detections/blob/main/zeek/intel/artex.intel"
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/zeek/intel/artex.intel"
+    },
+    {
+     "path": "generated/elastic_esql/artex/dns_query/dns_query_artex_infrastructure.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_esql/artex/dns_query/dns_query_artex_infrastructure.txt"
+    },
+    {
+     "path": "generated/elastic_lucene/artex/dns_query/dns_query_artex_infrastructure.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_lucene/artex/dns_query/dns_query_artex_infrastructure.txt"
+    },
+    {
+     "path": "generated/splunk/artex/dns_query/dns_query_artex_infrastructure.txt",
+     "platform": "Sigma conversions",
+     "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/splunk/artex/dns_query/dns_query_artex_infrastructure.txt"
     }
    ],
    "platforms": [
@@ -1642,158 +1737,161 @@
  ],
  "detection_links": {
   "DET-AI-046": [
-   "https://github.com/ThreatDefence/artex-detections/blob/main/elastic/rules/aws_dryrun_burst.toml",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_esql/cloud/aws/aws_cloudtrail_dryrun_events.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_esql/cloud/azure/azure_activity_arm_validate.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_esql/correlations/aws_dryrun_burst.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_esql/correlations/azure_arm_validate_sweep.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_lucene/cloud/aws/aws_cloudtrail_dryrun_events.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_lucene/cloud/azure/azure_activity_arm_validate.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/splunk/cloud/aws/aws_cloudtrail_dryrun_events.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/splunk/cloud/azure/azure_activity_arm_validate.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/splunk/correlations/aws_dryrun_burst.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/splunk/correlations/azure_arm_validate_sweep.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/sentinel/analytics/artex-ec2-dryrun-burst.yaml",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/sentinel/hunting/14-aws-permission-testing-and-the-foothold-that-follows.kql",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/sentinel/hunting/15-azure-capability-checks-validate-sweeps-and-kudu-sign-ins.kql",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/sigma/cloud/aws/aws_cloudtrail_dryrun_events.yml",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/sigma/cloud/azure/azure_activity_arm_validate.yml",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/sigma/correlations/aws_dryrun_burst.yml",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/sigma/correlations/azure_arm_validate_sweep.yml",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/splunk/default/savedsearches.conf"
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/elastic/rules/aws_dryrun_burst.toml",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/analytics/artex-ec2-dryrun-burst.yaml",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/hunting/14-aws-permission-testing-and-the-foothold-that-follows.kql",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/hunting/15-azure-capability-checks-validate-sweeps-and-kudu-sign-ins.kql",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sigma/cloud/aws/aws_cloudtrail_dryrun_events.yml",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sigma/cloud/azure/azure_activity_arm_validate.yml",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sigma/correlations/aws_dryrun_burst.yml",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sigma/correlations/azure_arm_validate_sweep.yml",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/splunk/default/savedsearches.conf",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_esql/artex/correlations/aws_dryrun_burst.txt",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_esql/artex/correlations/azure_arm_validate_sweep.txt",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/splunk/artex/correlations/aws_dryrun_burst.txt",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/splunk/artex/correlations/azure_arm_validate_sweep.txt"
   ],
   "DET-AI-047": [
-   "https://github.com/ThreatDefence/artex-detections/blob/main/elastic/esql/07-aws-cloudwatch-secret-search.esql",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/elastic/esql/08-aws-dryrun-and-access-denied-bursts.esql",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_esql/cloud/aws/aws_cloudtrail_access_denied.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_esql/cloud/aws/aws_cloudtrail_filterlogevents_secret_search.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_esql/correlations/aws_access_denied_sweep.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_lucene/cloud/aws/aws_cloudtrail_access_denied.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_lucene/cloud/aws/aws_cloudtrail_filterlogevents_secret_search.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/splunk/cloud/aws/aws_cloudtrail_access_denied.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/splunk/cloud/aws/aws_cloudtrail_filterlogevents_secret_search.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/splunk/correlations/aws_access_denied_sweep.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/sentinel/analytics/artex-cloudwatch-secret-search.yaml",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/sentinel/hunting/07-bulk-key-vault-secret-reads.kql",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/sentinel/hunting/08-cloudwatch-log-searches-with-a-stolen-aws-key.kql",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/sigma/cloud/aws/aws_cloudtrail_access_denied.yml",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/sigma/cloud/aws/aws_cloudtrail_filterlogevents_secret_search.yml",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/sigma/correlations/aws_access_denied_sweep.yml",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/splunk/default/savedsearches.conf"
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/elastic/esql/07-aws-cloudwatch-secret-search.esql",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/elastic/esql/08-aws-dryrun-and-access-denied-bursts.esql",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/analytics/artex-cloudwatch-secret-search.yaml",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/hunting/07-bulk-key-vault-secret-reads.kql",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/hunting/08-cloudwatch-log-searches-with-a-stolen-aws-key.kql",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/hunting/31-antifox-iis-web-shell-then-aws-enumeration.kql",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sigma/cloud/aws/aws_cloudtrail_access_denied.yml",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sigma/cloud/aws/aws_cloudtrail_filterlogevents_secret_search.yml",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sigma/correlations/aws_access_denied_sweep.yml",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/splunk/default/savedsearches.conf",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_esql/artex/cloud/aws/aws_cloudtrail_filterlogevents_secret_search.txt",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_esql/artex/correlations/aws_access_denied_sweep.txt",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_lucene/artex/cloud/aws/aws_cloudtrail_filterlogevents_secret_search.txt",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/splunk/artex/cloud/aws/aws_cloudtrail_filterlogevents_secret_search.txt",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/splunk/artex/correlations/aws_access_denied_sweep.txt"
   ],
   "DET-AI-048": [
-   "https://github.com/ThreatDefence/artex-detections/blob/main/elastic/esql/01-artex-user-agent.esql",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/elastic/esql/05-artex-artifact-names.esql",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/elastic/esql/06-web-probe-artifacts.esql",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/elastic/rules/artex_artifact_names.toml",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/elastic/rules/artex_user_agent.toml",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/elastic/rules/artex_web_probe_artifacts.toml",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_esql/cloud/aws/aws_cloudtrail_artex_user_agent.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_esql/cloud/azure/azure_signin_artex_user_agent.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_esql/cloud/okta/okta_artex_user_agent.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_esql/dns_query/dns_query_callback_services_from_servers.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_esql/file_event/file_event_artex_probe_artifacts.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_esql/process_creation/proc_creation_artex_artifact_names.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_esql/proxy/proxy_artex_user_agent.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_esql/web/web_artex_placeholder_probe_paths.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_esql/web/web_artex_probe_header.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_esql/web/web_artex_user_agent.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_esql/web/web_jwt_alg_none_probe.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_esql/web/web_oauth_callback_probe.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_lucene/cloud/aws/aws_cloudtrail_artex_user_agent.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_lucene/cloud/azure/azure_signin_artex_user_agent.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_lucene/cloud/okta/okta_artex_user_agent.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_lucene/dns_query/dns_query_callback_services_from_servers.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_lucene/file_event/file_event_artex_probe_artifacts.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_lucene/process_creation/proc_creation_artex_artifact_names.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_lucene/proxy/proxy_artex_user_agent.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_lucene/web/web_artex_placeholder_probe_paths.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_lucene/web/web_artex_probe_header.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_lucene/web/web_artex_user_agent.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_lucene/web/web_jwt_alg_none_probe.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_lucene/web/web_oauth_callback_probe.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/sentinel_asim/file_event/file_event_artex_probe_artifacts.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/sentinel_asim/process_creation/proc_creation_artex_artifact_names.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/sentinel_asim/proxy/proxy_artex_user_agent.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/splunk/cloud/aws/aws_cloudtrail_artex_user_agent.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/splunk/cloud/azure/azure_signin_artex_user_agent.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/splunk/cloud/okta/okta_artex_user_agent.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/splunk/dns_query/dns_query_callback_services_from_servers.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/splunk/file_event/file_event_artex_probe_artifacts.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/splunk/process_creation/proc_creation_artex_artifact_names.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/splunk/proxy/proxy_artex_user_agent.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/splunk/web/web_artex_placeholder_probe_paths.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/splunk/web/web_artex_probe_header.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/splunk/web/web_artex_user_agent.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/splunk/web/web_jwt_alg_none_probe.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/splunk/web/web_oauth_callback_probe.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/sentinel/analytics/artex-user-agent-any-source.yaml",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/sentinel/hunting/01-indicator-sweep.kql",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/sentinel/hunting/04-application-reconnaissance-in-web-logs.kql",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/sentinel/hunting/10-artex-names-in-files-folders-and-command-lines.kql",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/sentinel/hunting/12-servers-calling-webhook-and-tunnel-services-or-downloading-f.kql",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/sentinel/hunting/21-watchlist-indicator-sweep.kql",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/sigma/cloud/aws/aws_cloudtrail_artex_user_agent.yml",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/sigma/cloud/azure/azure_signin_artex_user_agent.yml",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/sigma/cloud/okta/okta_artex_user_agent.yml",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/sigma/dns_query/dns_query_callback_services_from_servers.yml",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/sigma/file_event/file_event_artex_probe_artifacts.yml",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/sigma/process_creation/proc_creation_artex_artifact_names.yml",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/sigma/proxy/proxy_artex_user_agent.yml",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/sigma/web/web_artex_placeholder_probe_paths.yml",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/sigma/web/web_artex_probe_header.yml",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/sigma/web/web_artex_user_agent.yml",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/sigma/web/web_jwt_alg_none_probe.yml",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/sigma/web/web_oauth_callback_probe.yml",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/splunk/default/savedsearches.conf",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/suricata/artex.rules",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/zeek/artex/main.zeek"
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/elastic/esql/01-artex-user-agent.esql",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/elastic/esql/05-artex-artifact-names.esql",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/elastic/esql/06-web-probe-artifacts.esql",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/elastic/rules/artex_artifact_names.toml",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/elastic/rules/artex_user_agent.toml",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/elastic/rules/artex_web_probe_artifacts.toml",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/analytics/artex-norma-or-update-check-user-agent.yaml",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/analytics/artex-user-agent-any-source.yaml",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/hunting/01-indicator-sweep.kql",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/hunting/04-application-reconnaissance-in-web-logs.kql",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/hunting/10-artex-names-in-files-folders-and-command-lines.kql",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/hunting/12-servers-calling-webhook-and-tunnel-services-or-downloading-f.kql",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/hunting/21-watchlist-indicator-sweep.kql",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/hunting/23-norma-page-reads-and-the-enrichment-probe.kql",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sigma/cloud/aws/aws_cloudtrail_artex_user_agent.yml",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sigma/cloud/azure/azure_signin_artex_user_agent.yml",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sigma/cloud/okta/okta_artex_user_agent.yml",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sigma/dns_query/dns_query_callback_services_from_servers.yml",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sigma/file_event/file_event_artex_probe_artifacts.yml",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sigma/process_creation/proc_creation_artex_artifact_names.yml",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sigma/proxy/proxy_artex_user_agent.yml",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sigma/web/web_artex_placeholder_probe_paths.yml",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sigma/web/web_artex_probe_header.yml",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sigma/web/web_artex_user_agent.yml",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sigma/web/web_jwt_alg_none_probe.yml",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sigma/web/web_oauth_callback_probe.yml",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/splunk/default/savedsearches.conf",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/suricata/artex.rules",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/zeek/artex/main.zeek",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/azure_monitor/artex/file_event/file_event_artex_probe_artifacts.txt",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/azure_monitor/artex/process_creation/proc_creation_artex_artifact_names.txt",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/defender_xdr/artex/file_event/file_event_artex_probe_artifacts.txt",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/defender_xdr/artex/process_creation/proc_creation_artex_artifact_names.txt",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_esql/artex/cloud/aws/aws_cloudtrail_artex_user_agent.txt",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_esql/artex/cloud/azure/azure_signin_artex_user_agent.txt",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_esql/artex/cloud/okta/okta_artex_user_agent.txt",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_esql/artex/dns_query/dns_query_callback_services_from_servers.txt",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_esql/artex/file_event/file_event_artex_probe_artifacts.txt",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_esql/artex/process_creation/proc_creation_artex_artifact_names.txt",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_esql/artex/proxy/proxy_artex_user_agent.txt",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_esql/artex/web/web_artex_placeholder_probe_paths.txt",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_esql/artex/web/web_artex_probe_header.txt",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_esql/artex/web/web_artex_user_agent.txt",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_esql/artex/web/web_jwt_alg_none_probe.txt",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_esql/artex/web/web_oauth_callback_probe.txt",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_lucene/artex/cloud/aws/aws_cloudtrail_artex_user_agent.txt",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_lucene/artex/cloud/azure/azure_signin_artex_user_agent.txt",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_lucene/artex/cloud/okta/okta_artex_user_agent.txt",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_lucene/artex/dns_query/dns_query_callback_services_from_servers.txt",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_lucene/artex/file_event/file_event_artex_probe_artifacts.txt",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_lucene/artex/process_creation/proc_creation_artex_artifact_names.txt",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_lucene/artex/proxy/proxy_artex_user_agent.txt",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_lucene/artex/web/web_artex_placeholder_probe_paths.txt",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_lucene/artex/web/web_artex_probe_header.txt",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_lucene/artex/web/web_artex_user_agent.txt",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_lucene/artex/web/web_jwt_alg_none_probe.txt",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_lucene/artex/web/web_oauth_callback_probe.txt",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/sentinel_asim/artex/file_event/file_event_artex_probe_artifacts.txt",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/sentinel_asim/artex/process_creation/proc_creation_artex_artifact_names.txt",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/sentinel_asim/artex/proxy/proxy_artex_user_agent.txt",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/splunk/artex/cloud/aws/aws_cloudtrail_artex_user_agent.txt",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/splunk/artex/cloud/azure/azure_signin_artex_user_agent.txt",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/splunk/artex/cloud/okta/okta_artex_user_agent.txt",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/splunk/artex/dns_query/dns_query_callback_services_from_servers.txt",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/splunk/artex/file_event/file_event_artex_probe_artifacts.txt",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/splunk/artex/process_creation/proc_creation_artex_artifact_names.txt",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/splunk/artex/proxy/proxy_artex_user_agent.txt",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/splunk/artex/web/web_artex_placeholder_probe_paths.txt",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/splunk/artex/web/web_artex_probe_header.txt",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/splunk/artex/web/web_artex_user_agent.txt",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/splunk/artex/web/web_jwt_alg_none_probe.txt",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/splunk/artex/web/web_oauth_callback_probe.txt"
   ],
   "DET-AI-049": [
-   "https://github.com/ThreatDefence/artex-detections/blob/main/elastic/esql/02-password-spray-fixed-rhythm.esql",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/elastic/esql/03-user-agent-family-burst.esql",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_esql/cloud/azure/azure_signin_failure.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_esql/correlations/azure_password_spray_one_source.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_lucene/cloud/azure/azure_signin_failure.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/splunk/cloud/azure/azure_signin_failure.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/splunk/correlations/azure_password_spray_one_source.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/sentinel/analytics/artex-fixed-rhythm-password-spray.yaml",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/sentinel/hunting/02-password-spray-at-a-fixed-rhythm.kql",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/sentinel/hunting/03-a-spray-that-ends-in-a-successful-sign-in.kql",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/sentinel/hunting/17-user-agent-family-burst-from-one-source.kql",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/sigma/cloud/azure/azure_signin_failure.yml",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/sigma/correlations/azure_password_spray_one_source.yml",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/splunk/default/savedsearches.conf"
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/elastic/esql/02-password-spray-fixed-rhythm.esql",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/elastic/esql/03-user-agent-family-burst.esql",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/analytics/artex-fixed-rhythm-password-spray.yaml",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/hunting/02-password-spray-at-a-fixed-rhythm.kql",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/hunting/03-a-spray-that-ends-in-a-successful-sign-in.kql",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/hunting/17-user-agent-family-burst-from-one-source.kql",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/hunting/25-metronomic-request-rate-at-artex-noise-profile-rates.kql",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/hunting/26-headless-browser-and-agent-clients-signing-in.kql",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sigma/cloud/azure/azure_signin_failure.yml",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sigma/correlations/azure_password_spray_one_source.yml",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/splunk/default/savedsearches.conf",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_esql/artex/correlations/azure_password_spray_one_source.txt",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/splunk/artex/correlations/azure_password_spray_one_source.txt"
   ],
   "DET-AI-050": [
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_esql/cloud/azure/azure_audit_app_credential_added.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_esql/cloud/azure/azure_audit_app_role_assignment_to_sp.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_lucene/cloud/azure/azure_audit_app_credential_added.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_lucene/cloud/azure/azure_audit_app_role_assignment_to_sp.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/splunk/cloud/azure/azure_audit_app_credential_added.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/splunk/cloud/azure/azure_audit_app_role_assignment_to_sp.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/sentinel/analytics/artex-service-principal-self-role-assignment.yaml",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/sentinel/hunting/05-applications-changing-their-own-access.kql",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/sentinel/hunting/06-scripted-microsoft-graph-bursts-by-an-application.kql",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/sentinel/hunting/18-service-principal-secret-failures-then-success.kql",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/sentinel/hunting/19-one-application-hitting-many-resources.kql",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/sigma/cloud/azure/azure_audit_app_credential_added.yml",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/sigma/cloud/azure/azure_audit_app_role_assignment_to_sp.yml",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/splunk/default/savedsearches.conf"
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/analytics/artex-service-principal-self-role-assignment.yaml",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/hunting/05-applications-changing-their-own-access.kql",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/hunting/06-scripted-microsoft-graph-bursts-by-an-application.kql",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/hunting/18-service-principal-secret-failures-then-success.kql",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/hunting/19-one-application-hitting-many-resources.kql",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sigma/cloud/azure/azure_audit_app_credential_added.yml",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sigma/cloud/azure/azure_audit_app_role_assignment_to_sp.yml",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/splunk/default/savedsearches.conf",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_esql/artex/cloud/azure/azure_audit_app_credential_added.txt",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_esql/artex/cloud/azure/azure_audit_app_role_assignment_to_sp.txt",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_lucene/artex/cloud/azure/azure_audit_app_credential_added.txt",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_lucene/artex/cloud/azure/azure_audit_app_role_assignment_to_sp.txt",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/splunk/artex/cloud/azure/azure_audit_app_credential_added.txt",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/splunk/artex/cloud/azure/azure_audit_app_role_assignment_to_sp.txt"
   ],
   "DET-AI-051": [
-   "https://github.com/ThreatDefence/artex-detections/blob/main/elastic/esql/09-aws-cognito-signup-burst.esql",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_esql/cloud/aws/aws_cognito_signup_artex_artifacts.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/elastic_lucene/cloud/aws/aws_cognito_signup_artex_artifacts.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/generated/splunk/cloud/aws/aws_cognito_signup_artex_artifacts.txt",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/sentinel/hunting/09-cognito-sign-up-abuse-and-the-discovery-sweep-after-it.kql",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/sigma/cloud/aws/aws_cognito_signup_artex_artifacts.yml",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/splunk/default/savedsearches.conf"
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/elastic/esql/09-aws-cognito-signup-burst.esql",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/hunting/09-cognito-sign-up-abuse-and-the-discovery-sweep-after-it.kql",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/hunting/27-accounts-registered-by-a-probing-source.kql",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sigma/cloud/aws/aws_cognito_signup_artex_artifacts.yml",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/splunk/default/savedsearches.conf",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_esql/artex/cloud/aws/aws_cognito_signup_artex_artifacts.txt",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/elastic_lucene/artex/cloud/aws/aws_cognito_signup_artex_artifacts.txt",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/generated/splunk/artex/cloud/aws/aws_cognito_signup_artex_artifacts.txt"
   ],
   "DET-AI-052": [
-   "https://github.com/ThreatDefence/artex-detections/blob/main/osquery/artex.conf",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/sentinel/hunting/20-artex-console-or-backdoored-image-inside-your-network.kql",
-   "https://github.com/ThreatDefence/artex-detections/blob/main/yara/artex.yar"
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/osquery/artex.conf",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/analytics/artex-agent-shell-on-host.yaml",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/hunting/20-artex-console-or-backdoored-image-inside-your-network.kql",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/hunting/24-artex-container-toolchain-from-one-source.kql",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/hunting/28-artex-running-on-a-monitored-host.kql",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/hunting/29-artex-console-traffic-in-proxy-logs.kql",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/sentinel/hunting/30-bracketed-paste-bytes-in-shell-input.kql",
+   "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex/yara/artex.yar"
   ]
  }
 }

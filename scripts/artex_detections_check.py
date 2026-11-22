@@ -33,12 +33,12 @@ from common import load_data  # noqa: E402
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "references" / "crosswalks" / "artex-detections.json"
 DOC = ROOT / "docs" / "ARTEX-DETECTION-MAP.md"
-REPO = "https://github.com/ThreatDefence/artex-detections"
+REPO = "https://github.com/ThreatDefence/agentic-attack-detections"  # formerly ThreatDefence/artex-detections
 BLOB = REPO + "/blob/main/"
 
 # behaviour -> (file-name keywords, LLMInjection detection or None, techniques, ATT&CK). Analyst mapping.
 BEHAVIOURS = [
-    ("ARTEX user agents", ["user_agent", "user-agent-any", "user-agent-naming", "indicator-sweep", "01-artex-user-agent"], "DET-AI-048", ["LLMI-T015"], ["T1595.002"]),
+    ("ARTEX user agents", ["user_agent", "user-agent-any", "norma", "update-check-user-agent", "user-agent-naming", "indicator-sweep", "01-artex-user-agent"], "DET-AI-048", ["LLMI-T015"], ["T1595.002"]),
     ("Network signatures: user agents, probe artifacts, console pages and C2 (Zeek, Suricata)", ["artex.rules", "main.zeek"], "DET-AI-048", ["LLMI-T015"], ["T1595.002", "T1071.001"]),
     ("Placeholder probe paths and probe artifacts", ["placeholder_probe", "probe_artifacts", "web_probe", "web-probe", "06-web-probe", "application-reconnaissance"], "DET-AI-048", ["LLMI-T015"], ["T1595.003", "T1190"]),
     ("alg:none JWT spray on SSO routes", ["jwt_alg_none"], "DET-AI-048", ["LLMI-T015"], ["T1606.001", "T1190"]),
@@ -46,7 +46,7 @@ BEHAVIOURS = [
     ("X-ARTX-KEY header and probe markers", ["probe_header"], "DET-AI-048", ["LLMI-T015"], ["T1595.002"]),
     ("ARTEX artifact names on hosts and in files", ["artifact_names", "artifact-names", "artex-names", "05-artex-artifact"], "DET-AI-048", ["LLMI-T015"], ["T1105"]),
     ("Callbacks to webhook and DNS log services", ["callback_services", "webhook-and-tunnel"], "DET-AI-048", ["LLMI-T015"], ["T1071.001", "T1567.004"]),
-    ("User agent family burst from one source", ["user-agent-family-burst", "03-user-agent-family"], "DET-AI-049", ["LLMI-T015"], ["T1595.002"]),
+    ("User agent family burst from one source", ["user-agent-family-burst", "03-user-agent-family", "metronomic", "headless-browser"], "DET-AI-049", ["LLMI-T015"], ["T1595.002"]),
     ("Password spray at a one-second rhythm", ["password-spray", "password_spray", "02-password-spray", "fixed-rhythm"], "DET-AI-049", ["LLMI-T015"], ["T1110.003"]),
     ("Spray that ends in a success", ["ends-in-a-successful", "signin_failure"], "DET-AI-049", ["LLMI-T015"], ["T1110.003", "T1078.004"]),
     ("Service principal secret guessing then success", ["service-principal-secret"], "DET-AI-050", ["LLMI-T015"], ["T1110.001", "T1078.004"]),
@@ -55,11 +55,11 @@ BEHAVIOURS = [
     ("Scripted Microsoft Graph bursts", ["graph-bursts"], "DET-AI-050", ["LLMI-T015"], ["T1087.004"]),
     ("Bulk Key Vault secret reads", ["key-vault"], "DET-AI-047", ["LLMI-T015", "LLMI-T016"], ["T1555.006"]),
     ("CloudWatch secret search with a stolen key", ["cloudwatch", "filterlogevents"], "DET-AI-047", ["LLMI-T015", "LLMI-T016"], ["T1552"]),
-    ("Access denied sweep", ["access_denied", "access-denied"], "DET-AI-047", ["LLMI-T015"], ["T1580"]),
+    ("Access denied sweep", ["access_denied", "access-denied", "antifox-iis-web-shell-then-aws"], "DET-AI-047", ["LLMI-T015"], ["T1580"]),
     ("EC2 DryRun burst", ["dryrun", "aws-permission-testing"], "DET-AI-046", ["LLMI-T015"], ["T1580"]),
     ("Azure validate sweep and Kudu sign-ins", ["arm_validate", "validate-sweep", "azure-capability-checks"], "DET-AI-046", ["LLMI-T015"], ["T1580", "T1526"]),
-    ("Cognito sign-up abuse and the discovery after it", ["cognito"], "DET-AI-051", ["LLMI-T015"], ["T1136.003"]),
-    ("ARTEX console or backdoored image inside your network", ["console-or-backdoored", "artex.conf", "artex.yar"], "DET-AI-052", ["LLMI-T027", "LLMI-T011"], ["T1610", "T1195.002"]),
+    ("Cognito sign-up abuse and the discovery after it", ["cognito", "accounts-registered"], "DET-AI-051", ["LLMI-T015"], ["T1136.003"]),
+    ("ARTEX console or backdoored image inside your network", ["console-or-backdoored", "artex.conf", "artex.yar", "agent-shell-on-host", "artex-running-on", "container-toolchain", "console-traffic", "bracketed-paste"], "DET-AI-052", ["LLMI-T027", "LLMI-T011"], ["T1610", "T1195.002"]),
     ("Web or database service spawning shells", ["spawns_shell", "spawns-a-shell", "starting-shells", "04-web-service-spawns", "sqlserver_spawns"], None, ["LLMI-T015"], ["T1505.003", "T1059"]),
     ("Scripts written into web directories, JSP web shell names", ["webshell", "web-directories"], None, ["LLMI-T015"], ["T1505.003"]),
     ("BLOODALCHEMY files, svchost outside System32, system binary masquerade, fake Edge update task", ["bloodalchemy", "svchost", "masquerade", "fake_edge"], None, [], ["T1036.005", "T1053.005"]),
@@ -74,18 +74,29 @@ NEW_DETECTIONS = {  # proposed in data/detections.json with this crosswalk
     "DET-AI-048", "DET-AI-049", "DET-AI-050", "DET-AI-051", "DET-AI-052"}
 
 
+def _platform(rel: str) -> str | None:
+    """Platform key of an ARTEX rule file: frameworks/artex/<platform>/... or generated/<conversion>/artex/..."""
+    parts = rel.split("/")
+    if parts[:2] == ["frameworks", "artex"] and len(parts) > 3:
+        return parts[2] if parts[2] in PLATFORMS else None
+    if parts[0] == "generated" and len(parts) > 3 and parts[2] == "artex":
+        return "generated"
+    return None
+
+
 def rule_files(repo: Path) -> list[Path]:
     keep = []
+    skip = ("README.md", "SUMMARY.md", "app.conf", "default.meta", "macros.conf", "transforms.conf", "savedsearches.conf", "__load__.zeek", ".csv",
+            "coverage.md", "hunting-order.md", "source-code-signals.md")
     for path in repo.rglob("*"):
         rel = path.relative_to(repo).as_posix()
-        skip = ("README.md", "SUMMARY.md", "app.conf", "default.meta", "macros.conf", "transforms.conf", "savedsearches.conf", "__load__.zeek", ".csv")
-        if path.is_file() and rel.split("/")[0] in PLATFORMS and not rel.endswith(skip):
+        if path.is_file() and _platform(rel) and "/tests/" not in rel and not rel.endswith(skip):
             keep.append(path)
     return sorted(keep)
 
 
 def splunk_searches(repo: Path) -> list[str]:
-    conf = repo / "splunk" / "default" / "savedsearches.conf"
+    conf = repo / "frameworks" / "artex" / "splunk" / "default" / "savedsearches.conf"
     return re.findall(r"^\[([^\]]+)\]", conf.read_text(encoding="utf-8", errors="replace"), re.M) if conf.is_file() else []
 
 
@@ -103,19 +114,19 @@ def build(repo: Path) -> dict:
     unassigned = []
     for path in rule_files(repo):
         rel = path.relative_to(repo).as_posix()
-        i = behaviour_of(path.name) if rel.split("/")[0] != "generated" else behaviour_of(path.name)
-        entry = {"path": rel, "platform": PLATFORMS[rel.split("/")[0]], "url": BLOB + rel}
+        i = behaviour_of(path.name)
+        entry = {"path": rel, "platform": PLATFORMS[_platform(rel)], "url": BLOB + rel}
         (rows[i]["rules"] if i is not None else unassigned).append(entry)
     for name in splunk_searches(repo):
         i = behaviour_of(re.sub(r"[^a-z0-9]+", "-", name.lower()))
-        entry = {"path": f"splunk/default/savedsearches.conf [{name}]", "platform": "Splunk", "url": BLOB + "splunk/default/savedsearches.conf"}
+        entry = {"path": f"splunk/default/savedsearches.conf [{name}]", "platform": "Splunk", "url": BLOB + "frameworks/artex/splunk/default/savedsearches.conf"}
         (rows[i]["rules"] if i is not None else unassigned).append(entry)
     for r in rows:
         r["platforms"] = sorted({x["platform"] for x in r["rules"]})
         r["status"] = ("existing" if r["detection"] in known and r["detection"] not in NEW_DETECTIONS else
                        "new" if r["detection"] else "generic-link-only")
     ioc_path = repo / "iocs" / "indicators.csv"
-    iocs = list(csv.DictReader(ioc_path.open(encoding="utf-8"))) if ioc_path.is_file() else []
+    iocs = [x for x in csv.DictReader(ioc_path.open(encoding="utf-8")) if x.get("framework", "artex") == "artex"] if ioc_path.is_file() else []
     commit = subprocess.run(["git", "-C", str(repo), "rev-parse", "--short", "HEAD"], capture_output=True, text=True).stdout.strip()
     return {
         "meta": {"source": REPO, "commit": commit, "read": datetime.now(UTC).strftime("%Y-%m-%d"), "licence": "MIT",
@@ -139,7 +150,7 @@ def markdown(data: dict) -> str:
     lines = [
         "# ARTEX detection map",
         "",
-        f"Every rule in [ThreatDefence/artex-detections]({m['source']}) (MIT, commit `{m['commit']}`, read {m['read']}), grouped by the "
+        f"Every ARTEX rule in [ThreatDefence/agentic-attack-detections]({m['source']}) (MIT, commit `{m['commit']}`, read {m['read']}), grouped by the "
         "behaviour it detects and mapped to an LLMInjection detection, technique and ATT&CK IDs. Generated by "
         "`scripts/artex_detections_check.py`; the rules are linked, not copied.",
         "",

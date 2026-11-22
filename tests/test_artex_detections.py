@@ -21,7 +21,7 @@ class ArtexDetectionMapTests(unittest.TestCase):
     def test_rules_are_links_to_the_upstream_repository(self):
         for b in self.data["behaviours"]:
             for r in b["rules"]:
-                self.assertTrue(r["url"].startswith("https://github.com/ThreatDefence/artex-detections/"), r["path"])
+                self.assertTrue(r["url"].startswith("https://github.com/ThreatDefence/agentic-attack-detections/"), r["path"])
 
 
 if __name__ == "__main__":
