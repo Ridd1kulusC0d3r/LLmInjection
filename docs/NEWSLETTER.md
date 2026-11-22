@@ -18,7 +18,7 @@ O site é estático, então a lista de e-mails fica num serviço de RSS-para-e-m
 2. Aponte o serviço para `https://ridd1kulusc0d3r.github.io/LLmInjection/feed.xml` e escolha envio semanal às quartas, 8h (America/Sao_Paulo).
 3. Copie o endereço público do formulário de inscrição e coloque em `site/subscribe.json` (`email_form_action` e, se o serviço exigir outro nome, `email_field`). A área "Assinar" da aba Relatórios passa a mostrar o campo de e-mail.
 
-Enquanto isso não estiver configurado, a área "Assinar" mostra os links dos feeds e avisa que o e-mail está sendo configurado.
+**Configurado (2026-11-21):** Buttondown, conta `LLminjection`. O formulário do site envia para `https://buttondown.com/api/emails/embed-subscribe/LLminjection` (campo `email`), e o arquivo público das edições fica em <https://buttondown.com/LLminjection>, linkado ao lado dos feeds. Para o envio automático, ative no Buttondown a automação RSS-to-email com o `feed.xml` acima. Modelo de e-mail em `reports/templates/email/relatorio.html`: HTML em tabelas, com cores em `bgcolor` e estilos em linha, que o Gmail preserva. O ícone vem de `assets/brand/icon-email.png`, publicado no Pages. Para usar no Buttondown, cole o HTML no editor em modo HTML. Sem `email_form_action`, a área "Assinar" volta a mostrar só os feeds.
 
 ## Comandos
 

@@ -1,7 +1,8 @@
 {
  "_doc": "Set email_form_action to the provider's public subscribe URL (Buttondown, follow.it, Mailchimp) to show the e-mail form in the Reports space. See docs/NEWSLETTER.md.",
- "email_form_action": null,
+ "email_form_action": "https://buttondown.com/api/emails/embed-subscribe/LLminjection",
  "email_field": "email",
- "provider": null,
- "cadence": "quarta-feira, 8h (Brasília)"
+ "provider": "Buttondown",
+ "cadence": "quarta-feira, 8h (Brasília)",
+ "archive": "https://buttondown.com/LLminjection"
 }

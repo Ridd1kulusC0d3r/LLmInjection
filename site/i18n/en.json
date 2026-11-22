@@ -562,5 +562,6 @@
  "sub.body": "A new weekly edition every {when}, plus each new report and the incidents, campaigns and KEV entries added to the datasets. Follow by feed or e-mail.",
  "sub.placeholder": "your@email",
  "sub.cta": "Subscribe",
- "sub.soon": "E-mail delivery is being set up. Until then, any RSS-to-e-mail service can send you feed.xml."
+ "sub.soon": "E-mail delivery is being set up. Until then, any RSS-to-e-mail service can send you feed.xml.",
+ "sub.archive": "Archive"
 }
