@@ -106,5 +106,5 @@ The runner has plan and mock adapters only: it does not call your system. To run
 
 ## 7. Go deeper (links only)
 
-- **Tools and projects:** [ThreatDefence/artex-detections](https://github.com/ThreatDefence/artex-detections)
+- **Tools and projects:** [ThreatDefence/agentic-attack-detections](https://github.com/ThreatDefence/agentic-attack-detections)
 - **Live record:** [this technique in the Explorer](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=LLMI-T027)

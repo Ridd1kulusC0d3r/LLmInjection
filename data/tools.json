@@ -51,7 +51,9 @@
     "source_ids": [
       "SRC-AWS-CAIRN-MONAI",
       "SRC-GAMBIT-AI-AGENTS-RETAILERS",
-      "SRC-GTIG-AGENTIC-THRESHOLD-2026-11"
+      "SRC-GTIG-AGENTIC-THRESHOLD-2026-11",
+      "SRC-JPCERT-AT-2026-0030",
+      "SRC-NORFORGE-INSIDE-CAIRN"
     ]
   },
   {
@@ -60,9 +62,12 @@
     "name": "CyberStrikeAI",
     "kind": "agentic-offensive-framework",
     "origin": "Open-source, Go backend acting as C2 and orchestration server",
-    "summary": "LLM-native offensive framework presented as a single pane of glass for operations; GTIG has seen threat-actor experimentation with it, not deployment.",
+    "summary": "Open-source Go platform whose control server uses an LLM to pick tools while a plain implant executes them; besides GTIG's experimentation reporting, it is now documented in intrusions at education organisations in Africa and Latin America (Kaspersky), an AWS intrusion (Elastic) and attempts against Japanese organisations (JPCERT/CC).",
     "source_ids": [
-      "SRC-GTIG-AGENTIC-THRESHOLD-2026-11"
+      "SRC-ELASTIC-CYBERSTRIKEAI-AWS",
+      "SRC-GTIG-AGENTIC-THRESHOLD-2026-11",
+      "SRC-JPCERT-AT-2026-0030",
+      "SRC-KASPERSKY-CYBERSTRIKEAI-2026-11"
     ]
   },
   {
@@ -73,6 +78,8 @@
     "origin": "Open-source",
     "summary": "MCP-integrated harness that lets LLM clients drive a large set of pre-installed offensive security tools; GTIG reports experimentation by threat actors and one PRC-nexus intrusion using it with a memory system.",
     "source_ids": [
+      "SRC-CHECKPOINT-HEXSTRIKE-2025",
+      "SRC-ELASTIC-AGENTIC-FRAMEWORKS",
       "SRC-GTIG-AGENTIC-THRESHOLD-2026-11",
       "SRC-GTIG-AI-TRACKER-2026-05"
     ]
@@ -101,6 +108,19 @@
     "source_ids": [
       "SRC-GH-SCOPESENTRY-NIUDAII",
       "SRC-SPECTRUM-SWARM-CHASING"
+    ]
+  },
+  {
+    "id": "TOOL-HERMES-AGENT",
+    "type": "tool",
+    "name": "Hermes Agent",
+    "kind": "other",
+    "origin": "Open-source (MIT) general-purpose persistent agent by Nous Research, with an unattended (YOLO) mode",
+    "summary": "Legitimate agent with ordinary users, abused in intrusions: run with approvals off against Thailand's Ministry of Finance (Hunt.io), installed by the Carbonato botnet as a Telegram-controlled interface that hunts AI API keys (ThreatDown), and found on a retail card-theft operator's staging server (Gambit). Hunt the abuse signature, not the agent.",
+    "source_ids": [
+      "SRC-HUNTIO-HERMES-THAILAND-MOF",
+      "SRC-THREATDOWN-CARBONATO",
+      "SRC-GAMBIT-AI-AGENTS-RETAILERS"
     ]
   }
 ]

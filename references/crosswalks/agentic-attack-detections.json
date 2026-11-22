@@ -1,0 +1,581 @@
+{
+ "meta": {
+  "source": "https://github.com/ThreatDefence/agentic-attack-detections",
+  "formerly": "https://github.com/ThreatDefence/artex-detections",
+  "commit": "7a29e16",
+  "commit_date": "2026-11-22",
+  "read": "2026-11-22",
+  "licence": "MIT",
+  "attribution": "ThreatDefence Pty Ltd and contributors, Agentic Attack Detections",
+  "policy": "rules are linked, not copied; indicators are counted, not imported; nothing in the repository was executed",
+  "maintainers_caveat": "No rule has been tested against a captured intrusion. Treat every rule as experimental until it has run on your own data.",
+  "mapping": "signal class to detection is an analyst mapping (scripts/agentic_attack_detections_check.py)"
+ },
+ "summary": {
+  "frameworks": 8,
+  "rule_files": 208,
+  "shared_behaviour_files": 24,
+  "indicators": 479,
+  "tool_records_missing": [
+   "Agent Zero"
+  ],
+  "detections_used": [
+   "DET-AI-001",
+   "DET-AI-032",
+   "DET-AI-046",
+   "DET-AI-047",
+   "DET-AI-048",
+   "DET-AI-049",
+   "DET-AI-050",
+   "DET-AI-051",
+   "DET-AI-052"
+  ],
+  "unknown_detections": [],
+  "intrusion_sets": 17,
+  "intrusion_sets_not_in_graph": 1,
+  "unassigned_files": []
+ },
+ "frameworks": [
+  {
+   "framework": "ARTEX and AntiFox",
+   "folder": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/artex",
+   "tools": [
+    "TOOL-ARTEX",
+    "TOOL-ANTIFOX"
+   ],
+   "tool_record_missing": false,
+   "formats": {
+    "Elastic": 14,
+    "KQL hunts": 31,
+    "Sentinel analytics": 7,
+    "Sigma": 36,
+    "Suricata": 2,
+    "YARA": 1,
+    "Zeek": 1,
+    "osquery": 1
+   },
+   "indicators": 242,
+   "detections": {
+    "DET-AI-046": 8,
+    "DET-AI-047": 9,
+    "DET-AI-048": 27,
+    "DET-AI-049": 10,
+    "DET-AI-050": 7,
+    "DET-AI-051": 4,
+    "DET-AI-052": 8
+   }
+  },
+  {
+   "framework": "Cairn",
+   "folder": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/cairn",
+   "tools": [
+    "TOOL-CAIRN"
+   ],
+   "tool_record_missing": false,
+   "formats": {
+    "KQL hunts": 6,
+    "Sentinel analytics": 2,
+    "Sigma": 3,
+    "Suricata": 2,
+    "YARA": 1,
+    "Zeek": 1
+   },
+   "indicators": 40,
+   "detections": {
+    "DET-AI-048": 2,
+    "DET-AI-052": 5
+   }
+  },
+  {
+   "framework": "PentAGI",
+   "folder": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/pentagi",
+   "tools": [
+    "TOOL-PENTAGI"
+   ],
+   "tool_record_missing": false,
+   "formats": {
+    "KQL hunts": 5,
+    "Sentinel analytics": 2,
+    "Sigma": 3,
+    "Suricata": 2,
+    "YARA": 1,
+    "Zeek": 1
+   },
+   "indicators": 36,
+   "detections": {
+    "DET-AI-048": 3,
+    "DET-AI-052": 7
+   }
+  },
+  {
+   "framework": "HexStrike",
+   "folder": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/hexstrike",
+   "tools": [
+    "TOOL-HEXSTRIKE-AI"
+   ],
+   "tool_record_missing": false,
+   "formats": {
+    "KQL hunts": 4,
+    "Sentinel analytics": 2,
+    "Sigma": 3,
+    "Suricata": 2,
+    "YARA": 1,
+    "Zeek": 1
+   },
+   "indicators": 22,
+   "detections": {
+    "DET-AI-048": 5,
+    "DET-AI-052": 5
+   }
+  },
+  {
+   "framework": "CyberStrikeAI",
+   "folder": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/cyberstrikeai",
+   "tools": [
+    "TOOL-CYBERSTRIKEAI"
+   ],
+   "tool_record_missing": false,
+   "formats": {
+    "KQL hunts": 5,
+    "Sentinel analytics": 2,
+    "Sigma": 7,
+    "Suricata": 2,
+    "YARA": 1,
+    "Zeek": 1
+   },
+   "indicators": 73,
+   "detections": {
+    "DET-AI-048": 6,
+    "DET-AI-052": 1
+   }
+  },
+  {
+   "framework": "Strix",
+   "folder": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/strix",
+   "tools": [
+    "TOOL-STRIX"
+   ],
+   "tool_record_missing": false,
+   "formats": {
+    "KQL hunts": 3,
+    "Sentinel analytics": 1,
+    "Sigma": 3,
+    "Suricata": 2,
+    "YARA": 1,
+    "Zeek": 1
+   },
+   "indicators": 16,
+   "detections": {
+    "DET-AI-048": 5,
+    "DET-AI-052": 3
+   }
+  },
+  {
+   "framework": "Hermes Agent",
+   "folder": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/hermes",
+   "tools": [
+    "TOOL-HERMES-AGENT"
+   ],
+   "tool_record_missing": false,
+   "formats": {
+    "KQL hunts": 4,
+    "Sentinel analytics": 2,
+    "Sigma": 3,
+    "Suricata": 2,
+    "YARA": 1,
+    "Zeek": 1
+   },
+   "indicators": 42,
+   "detections": {
+    "DET-AI-032": 3,
+    "DET-AI-048": 3,
+    "DET-AI-052": 1
+   }
+  },
+  {
+   "framework": "Agent Zero",
+   "folder": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/agent-zero",
+   "tools": [],
+   "tool_record_missing": true,
+   "formats": {
+    "KQL hunts": 2,
+    "Sigma": 1,
+    "Suricata": 2,
+    "YARA": 1,
+    "Zeek": 1
+   },
+   "indicators": 8,
+   "detections": {
+    "DET-AI-048": 2,
+    "DET-AI-052": 2
+   }
+  }
+ ],
+ "classes": [
+  {
+   "class": "Agent in auto-approve, jailbreak or attack mode",
+   "detection": "DET-AI-032",
+   "what": "A coding or general agent runs without human approval, with a jailbreak persona, and drives attack tools.",
+   "rules": 6,
+   "frameworks": {
+    "Hermes Agent": 3,
+    "shared behaviours": 3
+   }
+  },
+  {
+   "class": "Model API traffic from servers",
+   "detection": "DET-AI-001",
+   "what": "Servers that should not talk to LLM providers do. Context, not proof: legitimate AI services look the same.",
+   "rules": 3,
+   "frameworks": {
+    "shared behaviours": 3
+   }
+  },
+  {
+   "class": "Cloud credentials used at machine speed",
+   "detection": "DET-AI-047",
+   "what": "A stolen cloud key tried across services faster than a person would.",
+   "rules": 1,
+   "frameworks": {
+    "shared behaviours": 1
+   }
+  },
+  {
+   "class": "Probes, callbacks and out-of-band lookups",
+   "detection": "DET-AI-048",
+   "what": "Agent-driven probing: out-of-band test domains, a server calling back to the address that probed it, an agent page reader beside attack traffic, rotating proxies on one site.",
+   "rules": 10,
+   "frameworks": {
+    "PentAGI": 1,
+    "shared behaviours": 9
+   }
+  },
+  {
+   "class": "Indicator sweeps",
+   "detection": null,
+   "what": "Reported addresses, domains and hashes. Counted, not imported; addresses expire 180 days after report.",
+   "rules": 25,
+   "frameworks": {
+    "Cairn": 6,
+    "PentAGI": 4,
+    "HexStrike": 3,
+    "CyberStrikeAI": 3,
+    "Strix": 3,
+    "Hermes Agent": 3,
+    "Agent Zero": 3
+   }
+  },
+  {
+   "class": "Framework running on a host or console on the network",
+   "detection": "DET-AI-052",
+   "what": "The framework itself: its server, workers, CLI, console API, update check or files on a host you own.",
+   "rules": 24,
+   "frameworks": {
+    "Cairn": 5,
+    "PentAGI": 7,
+    "HexStrike": 5,
+    "CyberStrikeAI": 1,
+    "Strix": 3,
+    "Hermes Agent": 1,
+    "Agent Zero": 2
+   }
+  },
+  {
+   "class": "Framework fingerprints in traffic",
+   "detection": "DET-AI-048",
+   "what": "User agents, probe markers, telemetry and signatures that name the framework.",
+   "rules": 28,
+   "frameworks": {
+    "Cairn": 2,
+    "PentAGI": 2,
+    "HexStrike": 5,
+    "CyberStrikeAI": 6,
+    "Strix": 5,
+    "Hermes Agent": 3,
+    "Agent Zero": 2,
+    "shared behaviours": 3
+   }
+  },
+  {
+   "class": "Post-exploitation seen with the framework",
+   "detection": null,
+   "what": "Web shells, implants, persistence, container escape and AD enumeration. Classic detections; kept as links.",
+   "rules": 18,
+   "frameworks": {
+    "Cairn": 2,
+    "CyberStrikeAI": 8,
+    "Hermes Agent": 3,
+    "shared behaviours": 5
+   }
+  }
+ ],
+ "shared_behaviours": [
+  {
+   "path": "behaviors/sentinel/analytics/coding-agent-bypass-mode-spawns-attack-tools.yaml",
+   "class": "Agent in auto-approve, jailbreak or attack mode",
+   "detection": "DET-AI-032",
+   "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/behaviors/sentinel/analytics/coding-agent-bypass-mode-spawns-attack-tools.yaml"
+  },
+  {
+   "path": "behaviors/sentinel/analytics/config-backup-file-served.yaml",
+   "class": "Post-exploitation seen with the framework",
+   "detection": null,
+   "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/behaviors/sentinel/analytics/config-backup-file-served.yaml"
+  },
+  {
+   "path": "behaviors/sentinel/hunting/01-ai-agent-in-auto-approve-mode-driving-attack-tools.kql",
+   "class": "Agent in auto-approve, jailbreak or attack mode",
+   "detection": "DET-AI-032",
+   "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/behaviors/sentinel/hunting/01-ai-agent-in-auto-approve-mode-driving-attack-tools.kql"
+  },
+  {
+   "path": "behaviors/sentinel/hunting/02-ai-model-api-traffic-from-servers.kql",
+   "class": "Model API traffic from servers",
+   "detection": "DET-AI-001",
+   "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/behaviors/sentinel/hunting/02-ai-model-api-traffic-from-servers.kql"
+  },
+  {
+   "path": "behaviors/sentinel/hunting/03-ai-agent-page-reader-next-to-attack-traffic.kql",
+   "class": "Probes, callbacks and out-of-band lookups",
+   "detection": "DET-AI-048",
+   "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/behaviors/sentinel/hunting/03-ai-agent-page-reader-next-to-attack-traffic.kql"
+  },
+  {
+   "path": "behaviors/sentinel/hunting/04-one-site-probed-through-rotating-proxies.kql",
+   "class": "Probes, callbacks and out-of-band lookups",
+   "detection": "DET-AI-048",
+   "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/behaviors/sentinel/hunting/04-one-site-probed-through-rotating-proxies.kql"
+  },
+  {
+   "path": "behaviors/sentinel/hunting/05-config-backup-theft-and-wsus-probes.kql",
+   "class": "Framework fingerprints in traffic",
+   "detection": "DET-AI-048",
+   "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/behaviors/sentinel/hunting/05-config-backup-theft-and-wsus-probes.kql"
+  },
+  {
+   "path": "behaviors/sentinel/hunting/06-kerbrute-enumeration-and-netexec-fan-out.kql",
+   "class": "Post-exploitation seen with the framework",
+   "detection": null,
+   "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/behaviors/sentinel/hunting/06-kerbrute-enumeration-and-netexec-fan-out.kql"
+  },
+  {
+   "path": "behaviors/sentinel/hunting/07-server-calls-back-to-the-address-that-probed-it.kql",
+   "class": "Framework fingerprints in traffic",
+   "detection": "DET-AI-048",
+   "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/behaviors/sentinel/hunting/07-server-calls-back-to-the-address-that-probed-it.kql"
+  },
+  {
+   "path": "behaviors/sentinel/hunting/08-aws-credentials-used-at-machine-speed.kql",
+   "class": "Cloud credentials used at machine speed",
+   "detection": "DET-AI-047",
+   "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/behaviors/sentinel/hunting/08-aws-credentials-used-at-machine-speed.kql"
+  },
+  {
+   "path": "behaviors/sentinel/hunting/09-servers-resolving-out-of-band-testing-domains.kql",
+   "class": "Probes, callbacks and out-of-band lookups",
+   "detection": "DET-AI-048",
+   "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/behaviors/sentinel/hunting/09-servers-resolving-out-of-band-testing-domains.kql"
+  },
+  {
+   "path": "behaviors/sigma/dns_query/dns_query_out_of_band_testing_domain.yml",
+   "class": "Probes, callbacks and out-of-band lookups",
+   "detection": "DET-AI-048",
+   "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/behaviors/sigma/dns_query/dns_query_out_of_band_testing_domain.yml"
+  },
+  {
+   "path": "behaviors/sigma/process_creation/proc_creation_lnx_coding_agent_bypass_spawns_attack_tool.yml",
+   "class": "Agent in auto-approve, jailbreak or attack mode",
+   "detection": "DET-AI-032",
+   "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/behaviors/sigma/process_creation/proc_creation_lnx_coding_agent_bypass_spawns_attack_tool.yml"
+  },
+  {
+   "path": "behaviors/sigma/proxy/proxy_coding_agent_cli_model_api.yml",
+   "class": "Model API traffic from servers",
+   "detection": "DET-AI-001",
+   "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/behaviors/sigma/proxy/proxy_coding_agent_cli_model_api.yml"
+  },
+  {
+   "path": "behaviors/sigma/web/web_claude_code_webfetch_user_agent.yml",
+   "class": "Probes, callbacks and out-of-band lookups",
+   "detection": "DET-AI-048",
+   "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/behaviors/sigma/web/web_claude_code_webfetch_user_agent.yml"
+  },
+  {
+   "path": "behaviors/sigma/web/web_wsus_admin_api_from_internet.yml",
+   "class": "Post-exploitation seen with the framework",
+   "detection": null,
+   "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/behaviors/sigma/web/web_wsus_admin_api_from_internet.yml"
+  },
+  {
+   "path": "behaviors/suricata/behaviors.rules",
+   "class": "Framework fingerprints in traffic",
+   "detection": "DET-AI-048",
+   "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/behaviors/suricata/behaviors.rules"
+  },
+  {
+   "path": "behaviors/zeek/agentic-behaviors/callback-to-prober.zeek",
+   "class": "Probes, callbacks and out-of-band lookups",
+   "detection": "DET-AI-048",
+   "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/behaviors/zeek/agentic-behaviors/callback-to-prober.zeek"
+  },
+  {
+   "path": "behaviors/zeek/agentic-behaviors/config-backup-and-wsus.zeek",
+   "class": "Post-exploitation seen with the framework",
+   "detection": null,
+   "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/behaviors/zeek/agentic-behaviors/config-backup-and-wsus.zeek"
+  },
+  {
+   "path": "behaviors/zeek/agentic-behaviors/kerberos-enum-and-fan-out.zeek",
+   "class": "Post-exploitation seen with the framework",
+   "detection": null,
+   "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/behaviors/zeek/agentic-behaviors/kerberos-enum-and-fan-out.zeek"
+  },
+  {
+   "path": "behaviors/zeek/agentic-behaviors/model-api-from-servers.zeek",
+   "class": "Model API traffic from servers",
+   "detection": "DET-AI-001",
+   "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/behaviors/zeek/agentic-behaviors/model-api-from-servers.zeek"
+  },
+  {
+   "path": "behaviors/zeek/agentic-behaviors/out-of-band-lookups.zeek",
+   "class": "Probes, callbacks and out-of-band lookups",
+   "detection": "DET-AI-048",
+   "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/behaviors/zeek/agentic-behaviors/out-of-band-lookups.zeek"
+  },
+  {
+   "path": "behaviors/zeek/agentic-behaviors/page-reader-with-attack-traffic.zeek",
+   "class": "Probes, callbacks and out-of-band lookups",
+   "detection": "DET-AI-048",
+   "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/behaviors/zeek/agentic-behaviors/page-reader-with-attack-traffic.zeek"
+  },
+  {
+   "path": "behaviors/zeek/agentic-behaviors/rotating-proxy-probing.zeek",
+   "class": "Probes, callbacks and out-of-band lookups",
+   "detection": "DET-AI-048",
+   "url": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/behaviors/zeek/agentic-behaviors/rotating-proxy-probing.zeek"
+  }
+ ],
+ "intrusion_sets": [
+  {
+   "name": "VAPOR PANDA",
+   "llminjection": [
+    "ACTOR-VAPOR-PANDA",
+    "CAMPAIGN-VAPOR-PANDA-ARTEX"
+   ],
+   "status": "in the graph"
+  },
+  {
+   "name": "Storm-0940",
+   "llminjection": [
+    "ACTOR-STORM-0940",
+    "CAMPAIGN-ARTEX-IT-SOFTWARE-VENDORS",
+    "CAMPAIGN-STORM-0940-ARTEX-CONNECTWISE"
+   ],
+   "status": "in the graph"
+  },
+  {
+   "name": "Storm-3358",
+   "llminjection": [
+    "ACTOR-STORM-3358",
+    "CAMPAIGN-STORM-3358-ARTEX-FINANCE"
+   ],
+   "status": "in the graph"
+  },
+  {
+   "name": "NorForge AIA0001 (Chinese-language, e-commerce access)",
+   "llminjection": [
+    "CAMPAIGN-NORFORGE-AIA0001-CAIRN"
+   ],
+   "status": "in the graph"
+  },
+  {
+   "name": "NorForge AIA0002 (English-language, card and crypto theft)",
+   "llminjection": [
+    "CAMPAIGN-NORFORGE-AIA0002-CAIRN"
+   ],
+   "status": "in the graph"
+  },
+  {
+   "name": "Japanese breach wave AI-agent operators",
+   "llminjection": [
+    "INCIDENT-JAPAN-BREACH-WAVE-2026"
+   ],
+   "status": "in the graph"
+  },
+  {
+   "name": "Gambit retail card-theft operator (Hermes, Strix and Cairn)",
+   "llminjection": [
+    "INCIDENT-GAMBIT-AI-AGENT-RETAIL-SKIMMING"
+   ],
+   "status": "in the graph"
+  },
+  {
+   "name": "PaperCut exploitation operator (Hunt.io)",
+   "llminjection": [
+    "INCIDENT-PAPERCUT-AI-AGENT-EXPLOITATION"
+   ],
+   "status": "in the graph"
+  },
+  {
+   "name": "Dark web actors discussing HexStrike",
+   "llminjection": [],
+   "status": "not promoted: underground discussion, no confirmed intrusion (RQ-AAD-20261122-07)"
+  },
+  {
+   "name": "CyberStrikeAI attacks on education organizations (Africa, Latin America)",
+   "llminjection": [
+    "CAMPAIGN-CYBERSTRIKEAI-EDUCATION-AFRICA-LATAM"
+   ],
+   "status": "in the graph"
+  },
+  {
+   "name": "AI-run AWS intrusion from a CyberStrikeAI server",
+   "llminjection": [
+    "INCIDENT-CYBERSTRIKEAI-AWS-2026-10"
+   ],
+   "status": "in the graph"
+  },
+  {
+   "name": "FortiGate mass-exploitation actor",
+   "llminjection": [
+    "INCIDENT-FORTIGATE-AI-AUGMENTED-ACCESS"
+   ],
+   "status": "in the graph"
+  },
+  {
+   "name": "AntiFox operators (IIS web shells and AWS secret theft)",
+   "llminjection": [
+    "CAMPAIGN-ANTIFOX-AWS-IIS"
+   ],
+   "status": "in the graph"
+  },
+  {
+   "name": "AntiFox console operators",
+   "llminjection": [
+    "CAMPAIGN-ANTIFOX-AWS-IIS"
+   ],
+   "status": "in the graph"
+  },
+  {
+   "name": "knaithe / KnYuan (Chinese-speaking, Zhuhai)",
+   "llminjection": [
+    "ACTOR-KNAITHE"
+   ],
+   "status": "in the graph"
+  },
+  {
+   "name": "Hermes operator against Thailand's Ministry of Finance (Hades, VShell)",
+   "llminjection": [
+    "INCIDENT-HERMES-THAILAND-MOF"
+   ],
+   "status": "in the graph"
+  },
+  {
+   "name": "Carbonato Docker botnet (Costa Rica, assessed)",
+   "llminjection": [
+    "CAMPAIGN-CARBONATO-DOCKER-HERMES"
+   ],
+   "status": "in the graph"
+  }
+ ]
+}

@@ -3336,9 +3336,9 @@
   {
     "id": "ECO-127",
     "type": "ecosystem",
-    "name": "artex-detections",
+    "name": "agentic-attack-detections",
     "owner": "ThreatDefence",
-    "url": "https://github.com/ThreatDefence/artex-detections",
+    "url": "https://github.com/ThreatDefence/agentic-attack-detections",
     "section": "defence",
     "evidence_class": "detection-content",
     "priority": "start-here",
@@ -3349,15 +3349,15 @@
       "LLMI-T027",
       "LLMI-T011"
     ],
-    "summary": "Detection rules, hunts and indicators for ARTEX and its forks (ScopeWeaver, LUCK, Guanlan SEC, AntiFox, ARTEX PRO): 31 Sigma rules and 5 correlations with SPL, KQL and ES|QL conversions, 22 Sentinel hunts and 5 analytics, a Splunk app, Elastic rules, Zeek, Suricata, YARA, osquery and 184 indicators with confidence and review dates. Mapped behaviour by behaviour in references/crosswalks/artex-detections.json.",
+    "summary": "Detection content for eight agentic offensive frameworks (ARTEX/AntiFox, Cairn, PentAGI, HexStrike, CyberStrikeAI, Strix, Hermes Agent, Agent Zero) and shared behaviours: Sigma, KQL, Suricata, Zeek, YARA, WAF and a STIX 2.1 bundle. Formerly artex-detections. Mapped in references/crosswalks/agentic-attack-detections.json.",
     "source_grade": "B",
     "provenance": "read on 2026-11-20 from a shallow clone at the user's request; files read as text, nothing executed; archive flag not visible to git",
     "added": "2026-11-20",
     "verification": {
       "method": "git clone --depth 1",
-      "checked": "2026-11-20",
+      "checked": "2026-11-22",
       "reachable": true,
-      "last_commit": "2026-11-20",
+      "last_commit": "2026-11-22",
       "license": "MIT"
     }
   }

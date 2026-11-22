@@ -1345,5 +1345,69 @@
     "source_ids": [
       "SRC-AWS-CAIRN-MONAI"
     ]
+  },
+  {
+    "id": "CAMPAIGN-NORFORGE-AIA0001-CAIRN",
+    "type": "campaign",
+    "name": "NorForge AIA0001: Chinese-language Cairn operator seeking e-commerce access",
+    "confidence": "high",
+    "first_seen": "2026-10",
+    "last_seen": "2026-10",
+    "reported": "2026-10-19",
+    "regions": [
+      "United States",
+      "Japan",
+      "Australia"
+    ],
+    "summary": "NorForge found 14 exposed Cairn panels with more than 1,100 attack projects, Chinese-language tasks and workers named for a Claude Code harness on DeepSeek 4.1 Flash (NorForge's reading of the name), aiming at persistent access to e-commerce and payment sites in the US, Japan and Australia, ranked by traffic. Successful projects took just under 23 hours on average; across clusters about 10% of projects met their goal, some with web shells on victim sites. NorForge assesses the cluster malicious with high confidence and financially motivated, with no sign of state sponsorship.",
+    "source_ids": [
+      "SRC-NORFORGE-INSIDE-CAIRN"
+    ]
+  },
+  {
+    "id": "CAMPAIGN-NORFORGE-AIA0002-CAIRN",
+    "type": "campaign",
+    "name": "NorForge AIA0002: English-language Cairn operator after card and crypto theft",
+    "confidence": "high",
+    "first_seen": "2026-10",
+    "last_seen": "2026-10",
+    "reported": "2026-10-19",
+    "regions": [
+      "Africa"
+    ],
+    "summary": "NorForge links 10 Cairn panels, mainly on Vultr, to an English-language operator whose workers ran DeepSeek through OpenRouter, targeting merchant payment services, gray-market payment and pharmacy sites, a carding site and several African commerce sites for carding and crypto theft; NorForge sees indications some were breached and infers an African base. A third cluster, AIA0003 (one panel, 59 projects), is assessed only with low confidence and not recorded.",
+    "source_ids": [
+      "SRC-NORFORGE-INSIDE-CAIRN"
+    ]
+  },
+  {
+    "id": "CAMPAIGN-CYBERSTRIKEAI-EDUCATION-AFRICA-LATAM",
+    "type": "campaign",
+    "name": "CyberStrikeAI intrusions at education organisations in Africa and Latin America",
+    "confidence": "high",
+    "first_seen": "2026",
+    "last_seen": "2026-11",
+    "reported": "2026-11-02",
+    "regions": [
+      "Africa",
+      "Latin America"
+    ],
+    "summary": "Kaspersky describes intrusions at education-sector organisations in several countries across Africa and Latin America (none named) run through CyberStrikeAI, whose control server uses an LLM to choose tools while a plain implant executes them: entry through a compromised SQL Server, then persistence, domain reconnaissance, credential dumping, DCSync and lateral movement up to domain admin and data export. Chinese comments in scripts suggest a Chinese-speaking operator; Kaspersky cannot link it to a known group and says the novelty is speed and ease, not new techniques.",
+    "source_ids": [
+      "SRC-KASPERSKY-CYBERSTRIKEAI-2026-11"
+    ]
+  },
+  {
+    "id": "CAMPAIGN-CARBONATO-DOCKER-HERMES",
+    "type": "campaign",
+    "name": "Carbonato Docker botnet deploying Hermes Agent to hunt AI API keys",
+    "confidence": "high",
+    "first_seen": "2024-10",
+    "last_seen": "2026-09",
+    "reported": "2026-09-22",
+    "summary": "ThreatDown describes a botnet that abuses unauthenticated Docker APIs (port 2375), escapes to the host through a privileged container, holds it with a reverse SSH tunnel and spreads to neighbouring /24 networks, then installs the open-source Hermes Agent with its persona rewritten to put AI provider API keys ahead of SSH credentials and tokens, controlled over Telegram; it also mines Monero and runs fake crypto wallets. Three signals support ThreatDown's assessment of a Costa Rica-based, Spanish-speaking crew; no victims are named.",
+    "source_ids": [
+      "SRC-THREATDOWN-CARBONATO"
+    ]
   }
 ]

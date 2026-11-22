@@ -6595,5 +6595,236 @@
     "evidence_sources": [
       "SRC-GAMBIT-AI-AGENTS-RETAILERS"
     ]
+  },
+  {
+    "id": "REL-597",
+    "type": "relationship",
+    "source": "CAMPAIGN-NORFORGE-AIA0001-CAIRN",
+    "relationship": "uses",
+    "target": "LLMI-T015",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-NORFORGE-INSIDE-CAIRN"
+    ]
+  },
+  {
+    "id": "REL-598",
+    "type": "relationship",
+    "source": "CAMPAIGN-NORFORGE-AIA0001-CAIRN",
+    "relationship": "uses-tool",
+    "target": "TOOL-CAIRN",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-NORFORGE-INSIDE-CAIRN"
+    ]
+  },
+  {
+    "id": "REL-599",
+    "type": "relationship",
+    "source": "CAMPAIGN-NORFORGE-AIA0002-CAIRN",
+    "relationship": "uses",
+    "target": "LLMI-T015",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-NORFORGE-INSIDE-CAIRN"
+    ]
+  },
+  {
+    "id": "REL-600",
+    "type": "relationship",
+    "source": "CAMPAIGN-NORFORGE-AIA0002-CAIRN",
+    "relationship": "uses-tool",
+    "target": "TOOL-CAIRN",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-NORFORGE-INSIDE-CAIRN"
+    ]
+  },
+  {
+    "id": "REL-601",
+    "type": "relationship",
+    "source": "CAMPAIGN-CYBERSTRIKEAI-EDUCATION-AFRICA-LATAM",
+    "relationship": "uses",
+    "target": "LLMI-T015",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-KASPERSKY-CYBERSTRIKEAI-2026-11"
+    ]
+  },
+  {
+    "id": "REL-602",
+    "type": "relationship",
+    "source": "CAMPAIGN-CYBERSTRIKEAI-EDUCATION-AFRICA-LATAM",
+    "relationship": "uses-tool",
+    "target": "TOOL-CYBERSTRIKEAI",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-KASPERSKY-CYBERSTRIKEAI-2026-11"
+    ]
+  },
+  {
+    "id": "REL-603",
+    "type": "relationship",
+    "source": "CAMPAIGN-CARBONATO-DOCKER-HERMES",
+    "relationship": "uses",
+    "target": "LLMI-T015",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-THREATDOWN-CARBONATO"
+    ]
+  },
+  {
+    "id": "REL-604",
+    "type": "relationship",
+    "source": "CAMPAIGN-CARBONATO-DOCKER-HERMES",
+    "relationship": "uses-tool",
+    "target": "TOOL-HERMES-AGENT",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-THREATDOWN-CARBONATO"
+    ]
+  },
+  {
+    "id": "REL-605",
+    "type": "relationship",
+    "source": "CAMPAIGN-CARBONATO-DOCKER-HERMES",
+    "relationship": "uses",
+    "target": "LLMI-T016",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-THREATDOWN-CARBONATO"
+    ]
+  },
+  {
+    "id": "REL-606",
+    "type": "relationship",
+    "source": "CAMPAIGN-NORFORGE-AIA0001-CAIRN",
+    "relationship": "uses-model-family",
+    "target": "MODEL-FAMILY-DEEPSEEK",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-NORFORGE-INSIDE-CAIRN"
+    ]
+  },
+  {
+    "id": "REL-607",
+    "type": "relationship",
+    "source": "CAMPAIGN-NORFORGE-AIA0002-CAIRN",
+    "relationship": "uses-model-family",
+    "target": "MODEL-FAMILY-DEEPSEEK",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-NORFORGE-INSIDE-CAIRN"
+    ]
+  },
+  {
+    "id": "REL-608",
+    "type": "relationship",
+    "source": "INCIDENT-JAPAN-BREACH-WAVE-2026",
+    "relationship": "demonstrates",
+    "target": "LLMI-T015",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-JPCERT-AT-2026-0030"
+    ]
+  },
+  {
+    "id": "REL-609",
+    "type": "relationship",
+    "source": "INCIDENT-JAPAN-BREACH-WAVE-2026",
+    "relationship": "uses-tool",
+    "target": "TOOL-CAIRN",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-JPCERT-AT-2026-0030"
+    ]
+  },
+  {
+    "id": "REL-610",
+    "type": "relationship",
+    "source": "INCIDENT-JAPAN-BREACH-WAVE-2026",
+    "relationship": "uses-tool",
+    "target": "TOOL-CYBERSTRIKEAI",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-JPCERT-AT-2026-0030"
+    ]
+  },
+  {
+    "id": "REL-611",
+    "type": "relationship",
+    "source": "INCIDENT-JAPAN-BREACH-WAVE-2026",
+    "relationship": "uses-tool",
+    "target": "TOOL-ARTEX",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-JPCERT-AT-2026-0030"
+    ]
+  },
+  {
+    "id": "REL-612",
+    "type": "relationship",
+    "source": "INCIDENT-CYBERSTRIKEAI-AWS-2026-10",
+    "relationship": "demonstrates",
+    "target": "LLMI-T015",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-ELASTIC-CYBERSTRIKEAI-AWS"
+    ]
+  },
+  {
+    "id": "REL-613",
+    "type": "relationship",
+    "source": "INCIDENT-CYBERSTRIKEAI-AWS-2026-10",
+    "relationship": "uses-tool",
+    "target": "TOOL-CYBERSTRIKEAI",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-ELASTIC-CYBERSTRIKEAI-AWS"
+    ]
+  },
+  {
+    "id": "REL-614",
+    "type": "relationship",
+    "source": "INCIDENT-HERMES-THAILAND-MOF",
+    "relationship": "demonstrates",
+    "target": "LLMI-T015",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-HUNTIO-HERMES-THAILAND-MOF"
+    ]
+  },
+  {
+    "id": "REL-615",
+    "type": "relationship",
+    "source": "INCIDENT-HERMES-THAILAND-MOF",
+    "relationship": "uses-tool",
+    "target": "TOOL-HERMES-AGENT",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-HUNTIO-HERMES-THAILAND-MOF"
+    ]
+  },
+  {
+    "id": "REL-616",
+    "type": "relationship",
+    "source": "INCIDENT-GAMBIT-AI-AGENT-RETAIL-SKIMMING",
+    "relationship": "uses-tool",
+    "target": "TOOL-HERMES-AGENT",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GAMBIT-AI-AGENTS-RETAILERS"
+    ]
+  },
+  {
+    "id": "REL-617",
+    "type": "relationship",
+    "source": "CAMPAIGN-BUGSTER-HERMES-DEEPSEEK-CYBERCRIME",
+    "relationship": "uses-tool",
+    "target": "TOOL-HERMES-AGENT",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-UNIT42-BUGSTER"
+    ]
   }
 ]

@@ -13,7 +13,7 @@
 
 | Layer | Status |
 |---|---|
-| Evidence | 9 record(s), 9 publisher(s), best grade A, newest 2026 |
+| Evidence | 10 record(s), 10 publisher(s), best grade A, newest 2026 |
 | Safe tests | 1 |
 | Detections | 3 rule file(s), 1 specification(s) |
 | Controls | 1 |
@@ -28,6 +28,7 @@ An AI gateway or proxy is compromised to access concentrated upstream model-prov
 What the repository links to it:
 
 - 2026-11 · [ARTEX-driven search and abuse of secrets exposed on GitHub](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-ARTEX-EXPOSED-SECRETS) (campaign, high)
+- 2026-09 · [Carbonato Docker botnet deploying Hermes Agent to hunt AI API keys](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-CARBONATO-DOCKER-HERMES) (campaign, high)
 - 2026 · [TeamPCP LiteLLM supply-chain compromise](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-TEAMPCP-LITELLM) (campaign, confirmed)
 - 2024-05-06 · [LLM Jacking (AML.CS0030)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-ATLAS-CS0030) (atlas-incident, high)
 - 2024-12-01 · [Storm-2139 Azure OpenAI Guardrail Bypass (AML.CS0057)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-ATLAS-CS0057) (atlas-incident, high)
@@ -111,5 +112,5 @@ The runner has plan and mock adapters only: it does not call your system. To run
 
 ## 7. Go deeper (links only)
 
-- **Tools and projects:** [NVIDIA/garak](https://github.com/NVIDIA/garak), [Tencent/AI-Infra-Guard](https://github.com/Tencent/AI-Infra-Guard), [praetorian-inc/augustus](https://github.com/praetorian-inc/augustus), [NVIDIA/SkillSpector](https://github.com/NVIDIA/SkillSpector), [garagon/aguara](https://github.com/garagon/aguara), [ThreatDefence/artex-detections](https://github.com/ThreatDefence/artex-detections)
+- **Tools and projects:** [NVIDIA/garak](https://github.com/NVIDIA/garak), [Tencent/AI-Infra-Guard](https://github.com/Tencent/AI-Infra-Guard), [praetorian-inc/augustus](https://github.com/praetorian-inc/augustus), [NVIDIA/SkillSpector](https://github.com/NVIDIA/SkillSpector), [garagon/aguara](https://github.com/garagon/aguara), [ThreatDefence/agentic-attack-detections](https://github.com/ThreatDefence/agentic-attack-detections)
 - **Live record:** [this technique in the Explorer](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=LLMI-T016)

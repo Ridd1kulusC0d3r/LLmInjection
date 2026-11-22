@@ -122,11 +122,11 @@ New [source registry and ingestion guidance](docs/AI-INTELLIGENCE-SOURCES.md), [
 
 | Actors | Campaigns | Incidents | Vulnerabilities | Techniques | Sources |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| **75** | **101** | **72** | **51** | **28** | **218** |
+| **75** | **105** | **75** | **51** | **28** | **227** |
 
 | Test cases | Detections | Controls | Frameworks | Model families | Relationships | Ecosystem repos |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| **40** | **59** | **32** | **21** | **12** | **596** | **127** |
+| **40** | **59** | **32** | **21** | **12** | **617** | **127** |
 
 <!-- gen:stats:end -->
 
@@ -613,6 +613,10 @@ Real-world reporting is intentionally placed on the front page because AI securi
 | **AI-built clones of Brazilian government sites collecting Pix payments** | 2025 | 2025-08-05 | BR | high | Zscaler ThreatLabz found phishing replicas of a Brazilian State Department of Traffic and the Ministry of Education built with the… |
 | **CRAFTY FALCON AI-driven attacks on Indian banking, fintech and payment entities** | 2026-10 | 2026-11-04 |  | confirmed | CERT-In (CIAD-2026-0058, critical, 2026-11-04) describes an active campaign by a threat actor it tracks as CRAFTY FALCON against NBFCs… |
 | **Cairn autonomous agents against East Asian universities (MONAI Label zero-day)** | 2026-09 | 2026-11-20 |  | high | Amazon Threat Intelligence found, on 10 September 2026, an unauthenticated public Cairn instance exposing an operator's projects, prompts… |
+| **NorForge AIA0001: Chinese-language Cairn operator seeking e-commerce access** | 2026-10 | 2026-10-19 | United States, Japan, Australia | high | NorForge found 14 exposed Cairn panels with more than 1,100 attack projects, Chinese-language tasks and workers named for a Claude Code… |
+| **NorForge AIA0002: English-language Cairn operator after card and crypto theft** | 2026-10 | 2026-10-19 | Africa | high | NorForge links 10 Cairn panels, mainly on Vultr, to an English-language operator whose workers ran DeepSeek through OpenRouter, targeting… |
+| **CyberStrikeAI intrusions at education organisations in Africa and Latin America** | 2026 | 2026-11-02 | Africa, Latin America | high | Kaspersky describes intrusions at education-sector organisations in several countries across Africa and Latin America (none named) run… |
+| **Carbonato Docker botnet deploying Hermes Agent to hunt AI API keys** | 2024-10 | 2026-09-22 |  | high | ThreatDown describes a botnet that abuses unauthenticated Docker APIs (port 2375), escapes to the host through a privileged container… |
 
 <!-- gen:campaigns:end -->
 
@@ -694,6 +698,9 @@ Real-world reporting is intentionally placed on the front page because AI securi
 | **Barracuda cloud intrusion through a vendor's unretired access key, run with ARTEX** | intrusion | observed | confirmed |
 | **European Commission staff systems disrupted; CERT-EU found ARTEX in use** | intrusion | reported | medium |
 | **Agentic attacker breaches DIVD through a Zammad zero-day chain** | intrusion | observed | confirmed |
+| **Wave of intrusions at Japanese organisations, including AI pentest platforms** | intrusion | observed | medium |
+| **AWS intrusion run from a CyberStrikeAI server** | intrusion | observed | high |
+| **Hermes Agent in unattended mode against Thailand's Ministry of Finance** | intrusion | observed | high |
 
 <!-- gen:incidents:end -->
 
@@ -1250,8 +1257,8 @@ Every intelligence item should answer:
 
 | Grade | Class | Sources |
 |---|---|---|
-| **A** | Primary or authoritative | 187 |
-| **B** | Strong secondary | 16 |
+| **A** | Primary or authoritative | 192 |
+| **B** | Strong secondary | 20 |
 | **C** | Reputable press | 10 |
 | **D** | Community | 5 |
 | **E** | Unsupported | 0 |
@@ -1316,7 +1323,7 @@ The [ecosystem map](docs/ECOSYSTEM.md) classifies related repositories by **what
 | [microsoft/PyRIT](https://github.com/microsoft/PyRIT) | `assessment-tool` | `LLMI-T001`, `LLMI-T002`, `LLMI-T003`, `LLMI-T004`, `LLMI-T008`, `LLMI-T013`, `LLMI-T014` | 2026-11-20 · MIT | Framework for identifying risks in generative AI systems. · **start here** |
 | [ethz-spylab/agentdojo](https://github.com/ethz-spylab/agentdojo) | `benchmark` | `LLMI-T001`, `LLMI-T002`, `LLMI-T004`, `LLMI-T008` | 2026-06-02 · MIT | Environment for evaluating attacks and defences of LLM agents. · **start here** |
 | [OWASP/www-project-ai-testing-guide](https://github.com/OWASP/www-project-ai-testing-guide) | `framework-data` | none | 2026-06-01 · other | OWASP AI Testing Guide: 32 test procedures across application, data, infrastructure and model layers. · **start here** |
-| [ThreatDefence/artex-detections](https://github.com/ThreatDefence/artex-detections) | `detection-content` | `LLMI-T015`, `LLMI-T016`, `LLMI-T027`, `LLMI-T011` | 2026-11-20 · MIT | Detection rules, hunts and indicators for ARTEX and its forks (ScopeWeaver, LUCK, Guanlan SEC, AntiFox, ARTEX PRO): 31 Sigma rules and 5 correlations with SPL, KQL and ES\|QL conversions, 22 Sentinel hunts and 5 analytics, a Splunk app, Elastic rules, Zeek, Suricata, YARA, osquery and 184 indicators with confidence and review dates. Mapped behaviour by behaviour in references/crosswalks/artex-detections.json. · **start here** |
+| [ThreatDefence/agentic-attack-detections](https://github.com/ThreatDefence/agentic-attack-detections) | `detection-content` | `LLMI-T015`, `LLMI-T016`, `LLMI-T027`, `LLMI-T011` | 2026-11-22 · MIT | Detection content for eight agentic offensive frameworks (ARTEX/AntiFox, Cairn, PentAGI, HexStrike, CyberStrikeAI, Strix, Hermes Agent, Agent Zero) and shared behaviours: Sigma, KQL, Suricata, Zeek, YARA, WAF and a STIX 2.1 bundle. Formerly artex-detections. Mapped in references/crosswalks/agentic-attack-detections.json. · **start here** |
 
 <!-- gen:eco-start:end -->
 

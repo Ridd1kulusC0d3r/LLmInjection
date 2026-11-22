@@ -211,6 +211,16 @@
       "relevance_mode": "all"
     },
     {
+      "id": "FEED-AGENTIC-ATTACK-DETECTIONS-COMMITS",
+      "name": "ThreatDefence agentic-attack-detections: new frameworks, rules and indicators (mapped by scripts/agentic_attack_detections_check.py)",
+      "kind": "github-commits",
+      "url": "https://api.github.com/repos/ThreatDefence/agentic-attack-detections/commits?per_page=10",
+      "source_grade": "B",
+      "enabled": true,
+      "max_items": 5,
+      "relevance_mode": "all"
+    },
+    {
       "id": "FEED-LLMI-DAILY-DIGEST",
       "name": "LLMInjection daily AI threat-landscape digest (intake/digests/*.json, read by scripts/import_digest.py)",
       "kind": "local-digest",
