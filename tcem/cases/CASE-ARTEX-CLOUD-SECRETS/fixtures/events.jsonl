@@ -1,0 +1,6 @@
+{"timestamp": "2026-11-01T10:00:00Z", "event": {"action": "api_call_denied", "source": "ec2"}, "user": {"access_key": "AKIAEXAMPLE1"}}
+{"timestamp": "2026-11-01T10:00:01Z", "event": {"action": "api_call_denied", "source": "s3"}, "user": {"access_key": "AKIAEXAMPLE1"}}
+{"timestamp": "2026-11-01T10:00:02Z", "event": {"action": "api_call_denied", "source": "iam"}, "user": {"access_key": "AKIAEXAMPLE1"}}
+{"timestamp": "2026-11-01T10:00:30Z", "event": {"action": "get_secret_value"}, "user": {"access_key": "AKIAEXAMPLE1"}, "secret": {"name": "prod/db"}}
+{"timestamp": "2026-11-01T11:00:00Z", "event": {"action": "api_call_denied", "source": "s3"}, "user": {"access_key": "AKIAEXAMPLE2"}}
+{"timestamp": "2026-11-01T11:05:00Z", "event": {"action": "get_secret_value"}, "user": {"access_key": "AKIAEXAMPLE2"}, "secret": {"name": "app/config"}}

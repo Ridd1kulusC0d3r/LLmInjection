@@ -1,0 +1,5 @@
+{"timestamp": "2026-11-01T03:00:00Z", "event": {"action": "anonymous_upload"}, "host": {"name": "pay-web-01"}, "url": {"path": "/upload"}}
+{"timestamp": "2026-11-01T03:01:30Z", "event": {"action": "server_spawns_downloader"}, "host": {"name": "pay-web-01"}, "process": {"name": "curl"}}
+{"timestamp": "2026-11-01T03:02:00Z", "event": {"action": "new_outbound_destination"}, "host": {"name": "pay-web-01"}, "destination": {"ip": "198.51.100.200"}}
+{"timestamp": "2026-11-01T11:00:00Z", "event": {"action": "anonymous_upload"}, "host": {"name": "pay-web-02"}, "url": {"path": "/upload"}}
+{"timestamp": "2026-11-01T11:30:00Z", "event": {"action": "new_outbound_destination"}, "host": {"name": "pay-web-02"}, "destination": {"ip": "192.0.2.9"}}

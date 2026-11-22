@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="530" viewBox="0 0 1200 530" role="img" aria-label="Caminho de ataque TCEM: ARTEX dentro de casa">
+<rect width="1200" height="530" fill="#f6f5f1"/>
+<rect width="1200" height="64" fill="#15140f"/>
+<text x="24" y="26" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="11" font-weight="700" fill="#e8a07f" text-anchor="start">TCEM · ARTEX · ARTEX DENTRO DE CASA</text>
+<text x="24" y="50" font-family="Inter, Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#f6f5f1" text-anchor="start">Consoles expostos, fork do ScopeSentry, imagem com backdoor e avaliação que escapou (WorkOS)</text>
+<text x="1176" y="26" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="11" font-weight="400" fill="#b9b5aa" text-anchor="end">CASE-ARTEX-INSIDE · confiança alta</text>
+<text x="1176" y="50" font-family="Inter, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#e6e2d8" text-anchor="end">Ativo crítico: Rede interna, plataformas de varredura e ambientes de avaliação de agentes</text>
+<text x="20" y="106" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10.5" font-weight="700" fill="#6b675d" text-anchor="start">CAMINHO</text>
+<line x1="20" y1="240" x2="1180" y2="240" stroke="#d9d5ca"/>
+<text x="20" y="272" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10.5" font-weight="700" fill="#6b675d" text-anchor="start">TELEMETRIA</text>
+<line x1="20" y1="340" x2="1180" y2="340" stroke="#d9d5ca"/>
+<text x="20" y="366" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10.5" font-weight="700" fill="#6b675d" text-anchor="start">DETECÇÃO</text>
+<line x1="20" y1="432" x2="1180" y2="432" stroke="#d9d5ca"/>
+<text x="20" y="460" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10.5" font-weight="700" fill="#6b675d" text-anchor="start">CONTROLE</text>
+<line x1="20" y1="504" x2="1180" y2="504" stroke="#d9d5ca"/>
+<rect x="150.0" y="84" width="243.5" height="150" rx="6" fill="#ffffff" stroke="#15140f" stroke-width="1.2"/>
+<rect x="150.0" y="84" width="243.5" height="22" rx="6" fill="#b43c0e"/>
+<rect x="150.0" y="98" width="243.5" height="8" fill="#b43c0e"/>
+<text x="158.0" y="99" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="9.5" font-weight="700" fill="#ffffff" text-anchor="start">1 · COMANDO E CONTROLE</text>
+<text x="158.0" y="124" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#15140f" text-anchor="start">Console do ARTEX instalado ou</text>
+<text x="158.0" y="139" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#15140f" text-anchor="start">exposto na rede</text>
+<text x="158.0" y="226" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="9.5" font-weight="600" fill="#1f6f8b" text-anchor="start">T1219 T1133</text>
+<path d="M395.5 159 L404.5 159 M399.5 154 L404.5 159 L399.5 164" stroke="#15140f" stroke-width="1.5" fill="none"/>
+<text x="154.0" y="266" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#15140f" text-anchor="start">Varreduras internas e respostas HTTP de</text>
+<text x="154.0" y="280" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#15140f" text-anchor="start">consoles</text>
+<rect x="150.0" y="350" width="243.5" height="34" rx="6" fill="#b43c0e"/>
+<text x="158.0" y="363" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10" font-weight="700" fill="#ffffff" text-anchor="start">DET-AI-052</text>
+<text x="158.0" y="377" font-family="Inter, Helvetica, Arial, sans-serif" font-size="9" font-weight="400" fill="#fbe9df" text-anchor="start">Offensive Agent Console or Backdoored Agent</text>
+<rect x="150.0" y="444" width="243.5" height="21" rx="4" fill="#f7e6dc"/>
+<text x="158.0" y="458" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="9" font-weight="600" fill="#15140f" text-anchor="start">CTRL-AI-INVENTORY</text>
+<rect x="407.5" y="84" width="243.5" height="150" rx="6" fill="#ffffff" stroke="#15140f" stroke-width="1.2"/>
+<rect x="407.5" y="84" width="243.5" height="22" rx="6" fill="#b43c0e"/>
+<rect x="407.5" y="98" width="243.5" height="8" fill="#b43c0e"/>
+<text x="415.5" y="99" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="9.5" font-weight="700" fill="#ffffff" text-anchor="start">2 · RECONHECIMENTO</text>
+<text x="415.5" y="124" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#15140f" text-anchor="start">Scanner interno entrega alvos ao</text>
+<text x="415.5" y="139" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#15140f" text-anchor="start">framework</text>
+<text x="415.5" y="226" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="9.5" font-weight="600" fill="#1f6f8b" text-anchor="start">T1595</text>
+<path d="M653.0 159 L662.0 159 M657.0 154 L662.0 159 L657.0 164" stroke="#15140f" stroke-width="1.5" fill="none"/>
+<text x="411.5" y="266" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#15140f" text-anchor="start">Proxy e netflow dos hosts de varredura</text>
+<rect x="407.5" y="350" width="243.5" height="34" rx="6" fill="#b43c0e"/>
+<text x="415.5" y="363" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10" font-weight="700" fill="#ffffff" text-anchor="start">DET-AI-058</text>
+<text x="415.5" y="377" font-family="Inter, Helvetica, Arial, sans-serif" font-size="9" font-weight="400" fill="#fbe9df" text-anchor="start">Internal Scanner or Asset Platform Hands</text>
+<rect x="665.0" y="84" width="243.5" height="150" rx="6" fill="#ffffff" stroke="#15140f" stroke-width="1.2"/>
+<rect x="665.0" y="84" width="243.5" height="22" rx="6" fill="#b43c0e"/>
+<rect x="665.0" y="98" width="243.5" height="8" fill="#b43c0e"/>
+<text x="673.0" y="99" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="9.5" font-weight="700" fill="#ffffff" text-anchor="start">3 · CADEIA DE SUPRIMENTOS</text>
+<text x="673.0" y="124" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#15140f" text-anchor="start">Imagem do ARTEX com backdoor dá</text>
+<text x="673.0" y="139" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#15140f" text-anchor="start">root a terceiros</text>
+<text x="673.0" y="226" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="9.5" font-weight="600" fill="#1f6f8b" text-anchor="start">T1525 T1195.002</text>
+<path d="M910.5 159 L919.5 159 M914.5 154 L919.5 159 L914.5 164" stroke="#15140f" stroke-width="1.5" fill="none"/>
+<text x="669.0" y="266" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#15140f" text-anchor="start">Registro de imagens e digest em execução</text>
+<rect x="665.0" y="350" width="243.5" height="34" rx="6" fill="#b43c0e"/>
+<text x="673.0" y="363" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10" font-weight="700" fill="#ffffff" text-anchor="start">DET-AI-052</text>
+<text x="673.0" y="377" font-family="Inter, Helvetica, Arial, sans-serif" font-size="9" font-weight="400" fill="#fbe9df" text-anchor="start">Offensive Agent Console or Backdoored Agent</text>
+<rect x="665.0" y="444" width="243.5" height="21" rx="4" fill="#f7e6dc"/>
+<text x="673.0" y="458" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="9" font-weight="600" fill="#15140f" text-anchor="start">CTRL-ARTIFACT-PINNING</text>
+<rect x="665.0" y="470" width="243.5" height="21" rx="4" fill="#f7e6dc"/>
+<text x="673.0" y="484" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="9" font-weight="600" fill="#15140f" text-anchor="start">CTRL-SIGNATURE-VERIFICATION</text>
+<rect x="922.5" y="84" width="243.5" height="150" rx="6" fill="#ffffff" stroke="#15140f" stroke-width="1.2"/>
+<rect x="922.5" y="84" width="243.5" height="22" rx="6" fill="#b43c0e"/>
+<rect x="922.5" y="98" width="243.5" height="8" fill="#b43c0e"/>
+<text x="930.5" y="99" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="9.5" font-weight="700" fill="#ffffff" text-anchor="start">4 · COLETA E IMPACTO</text>
+<text x="930.5" y="124" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#15140f" text-anchor="start">Agente de avaliação em modo sem</text>
+<text x="930.5" y="139" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#15140f" text-anchor="start">aprovação sai do sandbox</text>
+<text x="930.5" y="226" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="9.5" font-weight="600" fill="#1f6f8b" text-anchor="start">T1611</text>
+<text x="926.5" y="266" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#15140f" text-anchor="start">Linha de comando do runtime e saída de</text>
+<text x="926.5" y="280" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#15140f" text-anchor="start">rede do sandbox</text>
+<rect x="922.5" y="350" width="243.5" height="34" rx="6" fill="#b43c0e"/>
+<text x="930.5" y="363" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10" font-weight="700" fill="#ffffff" text-anchor="start">DET-AI-032</text>
+<text x="930.5" y="377" font-family="Inter, Helvetica, Arial, sans-serif" font-size="9" font-weight="400" fill="#fbe9df" text-anchor="start">Agent Runtime Launched in Unattended</text>
+<rect x="922.5" y="388" width="243.5" height="34" rx="6" fill="#b43c0e"/>
+<text x="930.5" y="401" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10" font-weight="700" fill="#ffffff" text-anchor="start">DET-AI-043</text>
+<text x="930.5" y="415" font-family="Inter, Helvetica, Arial, sans-serif" font-size="9" font-weight="400" fill="#fbe9df" text-anchor="start">Agent Outbound Communication Anomaly</text>
+<rect x="922.5" y="444" width="243.5" height="21" rx="4" fill="#f7e6dc"/>
+<text x="930.5" y="458" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="9" font-weight="600" fill="#15140f" text-anchor="start">CTRL-EGRESS-POLICY</text>
+<rect x="922.5" y="470" width="243.5" height="21" rx="4" fill="#f7e6dc"/>
+<text x="930.5" y="484" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="9" font-weight="600" fill="#15140f" text-anchor="start">CTRL-ACTION-BUDGET</text>
+<text x="20" y="518" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10" font-weight="400" fill="#6b675d" text-anchor="start">Validação por replay: passou (1 alerta) · fixture sintética · agent_runtime_start (auto-approve) -&gt; egress_not_allowlisted (mesmo sandbox)</text>
+</svg>

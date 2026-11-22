@@ -1,0 +1,492 @@
+{
+ "version": "0.5",
+ "case": {
+  "id": "CASE-ARTEX-STORM-3358",
+  "name": "ARTEX · Storm-3358",
+  "mission": "Manter os servidores web de serviços financeiros sem execução de código de terceiros.",
+  "decision_context": "Priorizar telemetria, detecção e controles contra os ataques conhecidos do ARTEX.",
+  "scope": [
+   "ai-genai",
+   "artex",
+   "llminjection"
+  ],
+  "status": "active"
+ },
+ "intelligence_requirements": [
+  {
+   "id": "IR-STORM-3358",
+   "question": "Como os ataques de Storm-3358 com ARTEX alcançariam servidores web expostos de serviços financeiros e a rede interna atrás deles aqui, e veríamos cada passo?",
+   "decision_supported": "Ordem de investimento em telemetria, detecção e controle.",
+   "stakeholder": "CTI e engenharia de detecção",
+   "priority": "high",
+   "time_horizon": "90 dias",
+   "linked_crown_jewels": [
+    "CJ-STORM-3358"
+   ],
+   "information_gap_ids": [
+    "GAP-STORM-3358-1"
+   ],
+   "status": "open"
+  }
+ ],
+ "crown_jewels": [
+  {
+   "id": "CJ-STORM-3358",
+   "name": "Servidores web expostos de serviços financeiros e a rede interna atrás deles",
+   "rationale": "São a porta de entrada que o ator procura em escala.",
+   "criticality": "critical"
+  }
+ ],
+ "architectures": [
+  {
+   "id": "ARCH-STORM-3358",
+   "name": "Servidores web expostos de serviços financeiros e a rede interna atrás deles",
+   "nodes": [
+    {
+     "id": "NODE-STORM-3358",
+     "name": "Servidores web expostos de serviços financeiros e a rede interna atrás deles",
+     "type": "control-plane",
+     "trust_zone": "critical"
+    }
+   ],
+   "relationships": []
+  }
+ ],
+ "evidence_items": [
+  {
+   "id": "EV-STORM-3358-1",
+   "title": "ARTEX abuse expands as cybercriminals target financial sector",
+   "source_type": "primary-external",
+   "source": "Microsoft Threat Intelligence",
+   "reference": "https://www.microsoft.com/en-us/security/blog/2026/11/06/artex-abuse-expands-as-cybercriminals-target-financial-sector/",
+   "publication_date": "2026-11-06",
+   "collected_at": "2026-11-20",
+   "claim": "Relato público usado no caso; registros: ACTOR-STORM-3358, CAMPAIGN-STORM-3358-ARTEX-FINANCE.",
+   "evidence_state": "observed",
+   "source_reliability": "high",
+   "information_credibility": "high",
+   "temporal_relevance": "current",
+   "supports": [
+    "TH-STORM-3358"
+   ],
+   "contradicts": [],
+   "analyst_notes": "Grau A (SRC-MSFT-STORM-3358-ARTEX)."
+  }
+ ],
+ "hypotheses": [
+  {
+   "id": "TH-STORM-3358",
+   "title": "O valor do agente para este ator é a escala da varredura; a intrusão em si segue o padrão clássico de servidor web.",
+   "statement": "O valor do agente para este ator é a escala da varredura; a intrusão em si segue o padrão clássico de servidor web.",
+   "rationale": "ARTEX somado a ferramentas automáticas: varredura, upload anônimo e SSRF, e RATs abertos (WISP, vshell, AdaptixC2) baixados com netcat e curl.",
+   "intelligence_requirement_ids": [
+    "IR-STORM-3358"
+   ],
+   "target_crown_jewels": [
+    "CJ-STORM-3358"
+   ],
+   "supporting_evidence": [
+    "EV-STORM-3358-1"
+   ],
+   "contradicting_evidence": [],
+   "alternative_explanations": [
+    "Automação legítima que baixa atualizações"
+   ],
+   "assumptions": [
+    "O ambiente modelado tem o ativo crítico descrito."
+   ],
+   "confidence": "high",
+   "information_gap_ids": [
+    "GAP-STORM-3358-1"
+   ],
+   "attack_path_ids": [
+    "TS-STORM-3358"
+   ],
+   "status": "supported",
+   "owner": "cti",
+   "created_at": "2026-11-22",
+   "review_date": "2026-12-22"
+  }
+ ],
+ "threat_contexts": [
+  {
+   "id": "CTX-STORM-3358",
+   "name": "ARTEX · Storm-3358",
+   "lens_id": "ai-genai",
+   "relevance": "ARTEX somado a ferramentas automáticas: varredura, upload anônimo e SSRF, e RATs abertos (WISP, vshell, AdaptixC2) baixados com netcat e curl.",
+   "status": "active",
+   "crown_jewel_ids": [
+    "CJ-STORM-3358"
+   ],
+   "architecture_ids": [
+    "ARCH-STORM-3358"
+   ],
+   "scenario_ids": [
+    "TS-STORM-3358"
+   ],
+   "intelligence_requirement_ids": [
+    "IR-STORM-3358"
+   ],
+   "confidence": "high",
+   "freshness": "current"
+  }
+ ],
+ "scenarios": [
+  {
+   "id": "TS-STORM-3358",
+   "title": "Upload anônimo seguido de download por processo do servidor e conexão nova de saída",
+   "objective": "Manter os servidores web de serviços financeiros sem execução de código de terceiros.",
+   "hypothesis_ids": [
+    "TH-STORM-3358"
+   ],
+   "target_crown_jewels": [
+    "CJ-STORM-3358"
+   ],
+   "threat_context_ids": [
+    "CTX-STORM-3358"
+   ],
+   "attack_path": {
+    "id": "AP-STORM-3358",
+    "entry_vector": "Varredura de sistemas expostos com agentes e scanners",
+    "steps": [
+     {
+      "order": 1,
+      "behavior": "Varredura de sistemas expostos com agentes e scanners",
+      "phase": "Reconhecimento",
+      "attack_techniques": [
+       "T1595.002"
+      ],
+      "llminjection_techniques": [
+       "LLMI-T015"
+      ],
+      "llminjection_detections": [
+       "DET-AI-048"
+      ],
+      "controls": [],
+      "architecture_node_id": "NODE-STORM-3358",
+      "gap": ""
+     },
+     {
+      "order": 2,
+      "behavior": "Exploração de upload anônimo e SSRF",
+      "phase": "Acesso inicial",
+      "attack_techniques": [
+       "T1190"
+      ],
+      "llminjection_techniques": [
+       "LLMI-T015"
+      ],
+      "llminjection_detections": [],
+      "controls": [
+       "Desligar upload anônimo"
+      ],
+      "architecture_node_id": "NODE-STORM-3358",
+      "gap": "Sem DET-AI; depende de regra de aplicação."
+     },
+     {
+      "order": 3,
+      "behavior": "Servidor baixa ferramentas com curl ou netcat",
+      "phase": "Comando e controle",
+      "attack_techniques": [
+       "T1105"
+      ],
+      "llminjection_techniques": [
+       "LLMI-T015"
+      ],
+      "llminjection_detections": [],
+      "controls": [],
+      "architecture_node_id": "NODE-STORM-3358",
+      "gap": "Sem DET-AI; padrão clássico de pós-exploração."
+     },
+     {
+      "order": 4,
+      "behavior": "RAT aberto instalado (WISP, vshell, AdaptixC2)",
+      "phase": "Comando e controle",
+      "attack_techniques": [
+       "T1219",
+       "T1071.001"
+      ],
+      "llminjection_techniques": [
+       "LLMI-T015"
+      ],
+      "llminjection_detections": [],
+      "controls": [],
+      "architecture_node_id": "NODE-STORM-3358",
+      "gap": "Coberto por regras genéricas (o artex-detections mantém versões)."
+     }
+    ]
+   },
+   "impact": {
+    "business": "São a porta de entrada que o ator procura em escala.",
+    "technical": "Comprometimento do ativo crítico modelado."
+   },
+   "priority": {
+    "crown_jewel_criticality": 4,
+    "threat_relevance": 4,
+    "attack_path_feasibility": 4,
+    "exposure": 5,
+    "control_weakness": 3,
+    "detection_gap": 4,
+    "calculated_score": 4.0,
+    "band": "P1",
+    "rationale": "Pontuação do analista a partir das fontes; ver a hipótese e as lacunas."
+   },
+   "confidence": "high",
+   "telemetry_requirements": [
+    "TC-STORM-3358"
+   ],
+   "detection_use_cases": [],
+   "detection_specification_ids": [
+    "DSP-STORM-3358"
+   ],
+   "validation_ids": [
+    "VAL-STORM-3358"
+   ]
+  }
+ ],
+ "telemetry_contracts": [
+  {
+   "id": "TC-STORM-3358",
+   "title": "Contrato de observáveis · Storm-3358",
+   "scenario_ids": [
+    "TS-STORM-3358"
+   ],
+   "detection_use_case_ids": [],
+   "behavior": "anonymous_upload -> server_spawns_downloader -> new_outbound_destination (mesmo host)",
+   "observable": "Logs de WAF e proxy; Logs da aplicação: uploads sem sessão; EDR: processo do servidor web inicia curl, wget ou nc; EDR e fluxo de rede para destinos novos",
+   "source": "Logs de WAF e proxy; Logs da aplicação; EDR; EDR e fluxo de rede para destinos novos",
+   "event_or_state_change": "new_outbound_destination",
+   "entity_identifiers": [
+    "host.name"
+   ],
+   "required_fields": [
+    "event.action",
+    "timestamp",
+    "host.name"
+   ],
+   "retention": "90d",
+   "latency_target": "<15m",
+   "normalization": "modelo de evento conceitual do TCE",
+   "integrity_requirements": [
+    "monitorar a saúde da fonte"
+   ],
+   "failure_modes": [
+    "fonte não coletada",
+    "relógio sem precisão de segundos"
+   ],
+   "status": "partial",
+   "owner": "detection-engineering",
+   "review_date": "2026-12-22"
+  }
+ ],
+ "detection_specifications": [
+  {
+   "id": "DSP-STORM-3358",
+   "title": "Upload anônimo seguido de download por processo do servidor e conexão nova de saída",
+   "scenario_ids": [
+    "TS-STORM-3358"
+   ],
+   "detection_use_case_ids": [],
+   "telemetry_contract_ids": [
+    "TC-STORM-3358"
+   ],
+   "attack_techniques": [
+    "T1071.001",
+    "T1105",
+    "T1190",
+    "T1219",
+    "T1595.002"
+   ],
+   "severity": "high",
+   "status": "ready",
+   "analytic_concept": {
+    "description": "Upload anônimo seguido de download por processo do servidor e conexão nova de saída",
+    "behavior": "anonymous_upload -> server_spawns_downloader -> new_outbound_destination (mesmo host)",
+    "observable_effect": "Eventos do mesmo ator em ordem.",
+    "entities": [
+     "host.name"
+    ],
+    "benign_alternatives": [
+     "Automação legítima que baixa atualizações"
+    ]
+   },
+   "correlation": {
+    "pattern_id": "ordered-sequence",
+    "window": "2h",
+    "group_by": [
+     "host.name"
+    ]
+   },
+   "validation_logic": {
+    "pattern": "ordered-sequence",
+    "group_by": [
+     "host.name"
+    ],
+    "stages": [
+     {
+      "all": [
+       {
+        "field": "event.action",
+        "op": "eq",
+        "value": "anonymous_upload"
+       }
+      ]
+     },
+     {
+      "all": [
+       {
+        "field": "event.action",
+        "op": "eq",
+        "value": "server_spawns_downloader"
+       }
+      ]
+     },
+     {
+      "all": [
+       {
+        "field": "event.action",
+        "op": "eq",
+        "value": "new_outbound_destination"
+       }
+      ]
+     }
+    ]
+   },
+   "implementations": [
+    {
+     "id": "tcem-DSP-STORM-3358",
+     "type": "tcem-spec",
+     "platform": "generic",
+     "status": "specified",
+     "reference": "este caso"
+    }
+   ],
+   "validation_ids": [
+    "VAL-STORM-3358"
+   ],
+   "references": [
+    "SRC-MSFT-STORM-3358-ARTEX"
+   ],
+   "owner": "detection-engineering",
+   "review_date": "2026-12-22"
+  }
+ ],
+ "validations": [
+  {
+   "id": "VAL-STORM-3358",
+   "title": "Replay seguro · Storm-3358",
+   "scenario_ids": [
+    "TS-STORM-3358"
+   ],
+   "detection_use_case_ids": [],
+   "detection_specification_ids": [
+    "DSP-STORM-3358"
+   ],
+   "method": "log-replay",
+   "environment": "fixture defensiva sintética do repositório",
+   "expected_result": "Exatamente uma sequência do mesmo ator.",
+   "fixture": "fixtures/events.jsonl",
+   "expected": {
+    "min_matches": 1,
+    "max_matches": 1
+   },
+   "actual_result": "1 sequência(s) detectada(s) no replay; esperado 1.",
+   "status": "passed",
+   "evidence_refs": [],
+   "tested_at": "2026-11-22",
+   "owner": "detection-engineering"
+  }
+ ],
+ "intelligence_gaps": [
+  {
+   "id": "GAP-STORM-3358-1",
+   "question": "A Microsoft não diz em que etapas exatamente o ARTEX substituiu as ferramentas convencionais.",
+   "affected_requirement_ids": [
+    "IR-STORM-3358"
+   ],
+   "affected_hypothesis_ids": [
+    "TH-STORM-3358"
+   ],
+   "affected_scenario_ids": [
+    "TS-STORM-3358"
+   ],
+   "priority": "high",
+   "collection_action": "Coleta interna ou nova fonte primária.",
+   "owner": "cti",
+   "status": "open",
+   "due_date": "2026-12-22"
+  }
+ ],
+ "decisions": [
+  {
+   "id": "DEC-STORM-3358-1",
+   "title": "Contrato de telemetria: processo do servidor web iniciando downloaders é coletado e alertado.",
+   "statement": "Contrato de telemetria: processo do servidor web iniciando downloaders é coletado e alertado.",
+   "decision_owner": "segurança",
+   "status": "proposed",
+   "intelligence_requirement_ids": [
+    "IR-STORM-3358"
+   ],
+   "crown_jewel_ids": [
+    "CJ-STORM-3358"
+   ],
+   "hypothesis_ids": [
+    "TH-STORM-3358"
+   ],
+   "scenario_ids": [
+    "TS-STORM-3358"
+   ],
+   "evidence_ids": [
+    "EV-STORM-3358-1"
+   ],
+   "detection_use_case_ids": [],
+   "intelligence_gap_ids": [
+    "GAP-STORM-3358-1"
+   ],
+   "rationale": "ARTEX somado a ferramentas automáticas: varredura, upload anônimo e SSRF, e RATs abertos (WISP, vshell, AdaptixC2) baixados com netcat e curl.",
+   "created_at": "2026-11-22",
+   "review_date": "2026-12-22"
+  },
+  {
+   "id": "DEC-STORM-3358-2",
+   "title": "Desligar upload anônimo onde não houver necessidade de negócio.",
+   "statement": "Desligar upload anônimo onde não houver necessidade de negócio.",
+   "decision_owner": "segurança",
+   "status": "proposed",
+   "intelligence_requirement_ids": [
+    "IR-STORM-3358"
+   ],
+   "crown_jewel_ids": [
+    "CJ-STORM-3358"
+   ],
+   "hypothesis_ids": [
+    "TH-STORM-3358"
+   ],
+   "scenario_ids": [
+    "TS-STORM-3358"
+   ],
+   "evidence_ids": [
+    "EV-STORM-3358-1"
+   ],
+   "detection_use_case_ids": [],
+   "intelligence_gap_ids": [
+    "GAP-STORM-3358-1"
+   ],
+   "rationale": "ARTEX somado a ferramentas automáticas: varredura, upload anônimo e SSRF, e RATs abertos (WISP, vshell, AdaptixC2) baixados com netcat e curl.",
+   "created_at": "2026-11-22",
+   "review_date": "2026-12-22"
+  }
+ ],
+ "x_llminjection": {
+  "generated_by": "scripts/build_tcem.py",
+  "method": "TCEM v0.5.1 (Cyber-Threat-Context-Modeling, mesmo autor)",
+  "refs": [
+   "ACTOR-STORM-3358",
+   "CAMPAIGN-STORM-3358-ARTEX-FINANCE",
+   "DET-AI-048",
+   "LLMI-T015",
+   "SRC-MSFT-STORM-3358-ARTEX"
+  ],
+  "fixture_note": "Upload anônimo, curl iniciado pelo servidor e destino novo no mesmo host (1 alerta); upload seguido de destino novo sem downloader (sem alerta)."
+ }
+}

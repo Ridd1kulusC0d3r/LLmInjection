@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="530" viewBox="0 0 1200 530" role="img" aria-label="Caminho de ataque TCEM: Storm-0940">
+<rect width="1200" height="530" fill="#f6f5f1"/>
+<rect width="1200" height="64" fill="#15140f"/>
+<text x="24" y="26" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="11" font-weight="700" fill="#e8a07f" text-anchor="start">TCEM · ARTEX · STORM-0940</text>
+<text x="24" y="50" font-family="Inter, Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#f6f5f1" text-anchor="start">Storm-0940 (Microsoft; nexo China, alinhado ao Estado)</text>
+<text x="1176" y="26" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="11" font-weight="400" fill="#b9b5aa" text-anchor="end">CASE-ARTEX-STORM-0940 · confiança alta</text>
+<text x="1176" y="50" font-family="Inter, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#e6e2d8" text-anchor="end">Ativo crítico: Tenant Entra ID e aplicações OAuth com acesso a dados de clientes</text>
+<text x="20" y="106" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10.5" font-weight="700" fill="#6b675d" text-anchor="start">CAMINHO</text>
+<line x1="20" y1="240" x2="1180" y2="240" stroke="#d9d5ca"/>
+<text x="20" y="272" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10.5" font-weight="700" fill="#6b675d" text-anchor="start">TELEMETRIA</text>
+<line x1="20" y1="340" x2="1180" y2="340" stroke="#d9d5ca"/>
+<text x="20" y="366" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10.5" font-weight="700" fill="#6b675d" text-anchor="start">DETECÇÃO</text>
+<line x1="20" y1="432" x2="1180" y2="432" stroke="#d9d5ca"/>
+<text x="20" y="460" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10.5" font-weight="700" fill="#6b675d" text-anchor="start">CONTROLE</text>
+<line x1="20" y1="504" x2="1180" y2="504" stroke="#d9d5ca"/>
+<rect x="150.0" y="84" width="157.66666666666666" height="150" rx="6" fill="#ffffff" stroke="#15140f" stroke-width="1.2"/>
+<rect x="150.0" y="84" width="157.66666666666666" height="22" rx="6" fill="#b43c0e"/>
+<rect x="150.0" y="98" width="157.66666666666666" height="8" fill="#b43c0e"/>
+<text x="158.0" y="99" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="9.5" font-weight="700" fill="#ffffff" text-anchor="start">1 · RECONHECIMENTO</text>
+<text x="158.0" y="124" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#15140f" text-anchor="start">Varredura contínua com</text>
+<text x="158.0" y="139" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#15140f" text-anchor="start">impressões do ARTEX</text>
+<text x="158.0" y="226" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="9.5" font-weight="600" fill="#1f6f8b" text-anchor="start">T1595.002</text>
+<path d="M309.66666666666663 159 L318.66666666666663 159 M313.66666666666663 154 L318.66666666666663 159 L313.66666666666663 164" stroke="#15140f" stroke-width="1.5" fill="none"/>
+<text x="154.0" y="266" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#15140f" text-anchor="start">Logs de WAF e proxy:</text>
+<text x="154.0" y="280" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#15140f" text-anchor="start">caminho, user agent,</text>
+<text x="154.0" y="294" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#15140f" text-anchor="start">cabeçalhos</text>
+<rect x="150.0" y="350" width="157.66666666666666" height="34" rx="6" fill="#b43c0e"/>
+<text x="158.0" y="363" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10" font-weight="700" fill="#ffffff" text-anchor="start">DET-AI-048</text>
+<text x="158.0" y="377" font-family="Inter, Helvetica, Arial, sans-serif" font-size="9" font-weight="400" fill="#fbe9df" text-anchor="start">Agentic Offensive Framework</text>
+<rect x="321.66666666666663" y="84" width="157.66666666666666" height="150" rx="6" fill="#ffffff" stroke="#15140f" stroke-width="1.2"/>
+<rect x="321.66666666666663" y="84" width="157.66666666666666" height="22" rx="6" fill="#b43c0e"/>
+<rect x="321.66666666666663" y="98" width="157.66666666666666" height="8" fill="#b43c0e"/>
+<text x="329.66666666666663" y="99" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="9.5" font-weight="700" fill="#ffffff" text-anchor="start">2 · CREDENCIAIS</text>
+<text x="329.66666666666663" y="124" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#15140f" text-anchor="start">Password spraying em</text>
+<text x="329.66666666666663" y="139" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#15140f" text-anchor="start">ritmo fixo: 327 contas</text>
+<text x="329.66666666666663" y="154" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#15140f" text-anchor="start">de 8 organizações em</text>
+<text x="329.66666666666663" y="169" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#15140f" text-anchor="start">10 a 14/10</text>
+<text x="329.66666666666663" y="226" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="9.5" font-weight="600" fill="#1f6f8b" text-anchor="start">T1110.003</text>
+<path d="M481.33333333333326 159 L490.33333333333326 159 M485.33333333333326 154 L490.33333333333326 159 L485.33333333333326 164" stroke="#15140f" stroke-width="1.5" fill="none"/>
+<text x="325.66666666666663" y="266" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#15140f" text-anchor="start">Sign-ins do Entra ID e do</text>
+<text x="325.66666666666663" y="280" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#15140f" text-anchor="start">Okta com horário ao</text>
+<text x="325.66666666666663" y="294" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#15140f" text-anchor="start">segundo</text>
+<rect x="321.66666666666663" y="350" width="157.66666666666666" height="34" rx="6" fill="#b43c0e"/>
+<text x="329.66666666666663" y="363" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10" font-weight="700" fill="#ffffff" text-anchor="start">DET-AI-049</text>
+<text x="329.66666666666663" y="377" font-family="Inter, Helvetica, Arial, sans-serif" font-size="9" font-weight="400" fill="#fbe9df" text-anchor="start">Machine-Cadence Identity</text>
+<rect x="321.66666666666663" y="444" width="157.66666666666666" height="21" rx="4" fill="#f7e6dc"/>
+<text x="329.66666666666663" y="458" font-family="Inter, Helvetica, Arial, sans-serif" font-size="9" font-weight="600" fill="#15140f" text-anchor="start">MFA resistente a phishing</text>
+<rect x="493.3333333333333" y="84" width="157.66666666666666" height="150" rx="6" fill="#ffffff" stroke="#15140f" stroke-width="1.2"/>
+<rect x="493.3333333333333" y="84" width="157.66666666666666" height="22" rx="6" fill="#b43c0e"/>
+<rect x="493.3333333333333" y="98" width="157.66666666666666" height="8" fill="#b43c0e"/>
+<text x="501.3333333333333" y="99" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="9.5" font-weight="700" fill="#ffffff" text-anchor="start">3 · ACESSO INICIAL</text>
+<text x="501.3333333333333" y="124" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#15140f" text-anchor="start">Login válido logo</text>
+<text x="501.3333333333333" y="139" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#15140f" text-anchor="start">depois do spray</text>
+<text x="501.3333333333333" y="226" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="9.5" font-weight="600" fill="#1f6f8b" text-anchor="start">T1078.004</text>
+<path d="M653.0 159 L662.0 159 M657.0 154 L662.0 159 L657.0 164" stroke="#15140f" stroke-width="1.5" fill="none"/>
+<text x="497.3333333333333" y="266" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#15140f" text-anchor="start">Sign-ins bem-sucedidos com</text>
+<text x="497.3333333333333" y="280" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#15140f" text-anchor="start">o mesmo IP de origem</text>
+<rect x="493.3333333333333" y="350" width="157.66666666666666" height="34" rx="6" fill="#b43c0e"/>
+<text x="501.3333333333333" y="363" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10" font-weight="700" fill="#ffffff" text-anchor="start">DET-AI-049</text>
+<text x="501.3333333333333" y="377" font-family="Inter, Helvetica, Arial, sans-serif" font-size="9" font-weight="400" fill="#fbe9df" text-anchor="start">Machine-Cadence Identity</text>
+<rect x="493.3333333333333" y="444" width="157.66666666666666" height="21" rx="4" fill="#f7e6dc"/>
+<text x="501.3333333333333" y="458" font-family="Inter, Helvetica, Arial, sans-serif" font-size="9" font-weight="600" fill="#15140f" text-anchor="start">Acesso condicional</text>
+<rect x="665.0" y="84" width="157.66666666666666" height="150" rx="6" fill="#ffffff" stroke="#15140f" stroke-width="1.2"/>
+<rect x="665.0" y="84" width="157.66666666666666" height="22" rx="6" fill="#b43c0e"/>
+<rect x="665.0" y="98" width="157.66666666666666" height="8" fill="#b43c0e"/>
+<text x="673.0" y="99" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="9.5" font-weight="700" fill="#ffffff" text-anchor="start">4 · PERSISTÊNCIA E ESCALA</text>
+<text x="673.0" y="124" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#15140f" text-anchor="start">Aplicação OAuth ganha</text>
+<text x="673.0" y="139" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#15140f" text-anchor="start">credencial nova ou</text>
+<text x="673.0" y="154" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#15140f" text-anchor="start">concede papel a si</text>
+<text x="673.0" y="169" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#15140f" text-anchor="start">mesma</text>
+<text x="673.0" y="226" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="9.5" font-weight="600" fill="#1f6f8b" text-anchor="start">T1098.001 T1098.003 T1528</text>
+<path d="M824.6666666666666 159 L833.6666666666666 159 M828.6666666666666 154 L833.6666666666666 159 L828.6666666666666 164" stroke="#15140f" stroke-width="1.5" fill="none"/>
+<text x="669.0" y="266" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#15140f" text-anchor="start">Auditoria do Entra ID:</text>
+<text x="669.0" y="280" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#15140f" text-anchor="start">credenciais e papéis de</text>
+<text x="669.0" y="294" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#15140f" text-anchor="start">aplicações</text>
+<rect x="665.0" y="350" width="157.66666666666666" height="34" rx="6" fill="#b43c0e"/>
+<text x="673.0" y="363" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10" font-weight="700" fill="#ffffff" text-anchor="start">DET-AI-050</text>
+<text x="673.0" y="377" font-family="Inter, Helvetica, Arial, sans-serif" font-size="9" font-weight="400" fill="#fbe9df" text-anchor="start">Service Principal Abuse</text>
+<rect x="665.0" y="444" width="157.66666666666666" height="21" rx="4" fill="#f7e6dc"/>
+<text x="673.0" y="458" font-family="Inter, Helvetica, Arial, sans-serif" font-size="9" font-weight="600" fill="#15140f" text-anchor="start">Consentimento só por administ</text>
+<rect x="836.6666666666666" y="84" width="157.66666666666666" height="150" rx="6" fill="#ffffff" stroke="#15140f" stroke-width="1.2"/>
+<rect x="836.6666666666666" y="84" width="157.66666666666666" height="22" rx="6" fill="#b43c0e"/>
+<rect x="836.6666666666666" y="98" width="157.66666666666666" height="8" fill="#b43c0e"/>
+<text x="844.6666666666666" y="99" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="9.5" font-weight="700" fill="#ffffff" text-anchor="start">5 · COLETA E IMPACTO</text>
+<text x="844.6666666666666" y="124" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#15140f" text-anchor="start">Leitura em massa via</text>
+<text x="844.6666666666666" y="139" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#15140f" text-anchor="start">Microsoft Graph</text>
+<text x="844.6666666666666" y="154" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#15140f" text-anchor="start">acelerada por IA</text>
+<text x="844.6666666666666" y="226" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="9.5" font-weight="600" fill="#1f6f8b" text-anchor="start">T1087.004 T1530</text>
+<path d="M996.3333333333333 159 L1005.3333333333333 159 M1000.3333333333333 154 L1005.3333333333333 159 L1000.3333333333333 164" stroke="#15140f" stroke-width="1.5" fill="none"/>
+<text x="840.6666666666666" y="266" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#15140f" text-anchor="start">Sign-ins de service</text>
+<text x="840.6666666666666" y="280" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#15140f" text-anchor="start">principal e chamadas ao</text>
+<text x="840.6666666666666" y="294" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#15140f" text-anchor="start">Graph por aplicação</text>
+<rect x="836.6666666666666" y="350" width="157.66666666666666" height="34" rx="6" fill="#b43c0e"/>
+<text x="844.6666666666666" y="363" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10" font-weight="700" fill="#ffffff" text-anchor="start">DET-AI-050</text>
+<text x="844.6666666666666" y="377" font-family="Inter, Helvetica, Arial, sans-serif" font-size="9" font-weight="400" fill="#fbe9df" text-anchor="start">Service Principal Abuse</text>
+<rect x="1008.3333333333333" y="84" width="157.66666666666666" height="150" rx="6" fill="#ffffff" stroke="#15140f" stroke-width="1.2"/>
+<rect x="1008.3333333333333" y="84" width="157.66666666666666" height="22" rx="6" fill="#15140f"/>
+<rect x="1008.3333333333333" y="98" width="157.66666666666666" height="8" fill="#15140f"/>
+<text x="1016.3333333333333" y="99" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="9.5" font-weight="700" fill="#ffffff" text-anchor="start">6 · CADEIA DE SUPRIMENTOS</text>
+<text x="1016.3333333333333" y="124" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#15140f" text-anchor="start">Fornecedor de backup</text>
+<text x="1016.3333333333333" y="139" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#15140f" text-anchor="start">(ConnectWise) usado</text>
+<text x="1016.3333333333333" y="154" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#15140f" text-anchor="start">como ponte para</text>
+<text x="1016.3333333333333" y="169" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#15140f" text-anchor="start">tenants de clientes</text>
+<text x="1016.3333333333333" y="226" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="9.5" font-weight="600" fill="#1f6f8b" text-anchor="start">T1199 T1195</text>
+<text x="1012.3333333333333" y="266" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#15140f" text-anchor="start">Sign-ins de identidades de</text>
+<text x="1012.3333333333333" y="280" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#15140f" text-anchor="start">provedor nos tenants de</text>
+<text x="1012.3333333333333" y="294" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#15140f" text-anchor="start">clientes</text>
+<rect x="1008.3333333333333" y="350" width="157.66666666666666" height="72" rx="6" fill="none" stroke="#b43c0e" stroke-dasharray="5 4" stroke-width="1.4"/>
+<text x="1016.3333333333333" y="366" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10" font-weight="700" fill="#b43c0e" text-anchor="start">LACUNA</text>
+<text x="1016.3333333333333" y="381" font-family="Inter, Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#15140f" text-anchor="start">Nenhuma detecção do</text>
+<text x="1016.3333333333333" y="394" font-family="Inter, Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#15140f" text-anchor="start">repositório cobre o uso da</text>
+<text x="1016.3333333333333" y="407" font-family="Inter, Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#15140f" text-anchor="start">relação de confiança do</text>
+<text x="20" y="518" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10" font-weight="400" fill="#6b675d" text-anchor="start">Validação por replay: passou (1 alerta) · fixture sintética · spray_rhythm_burst (DET-AI-049) -&gt; signin_success -&gt; app_credential_added (mesmo IP de origem)</text>
+</svg>

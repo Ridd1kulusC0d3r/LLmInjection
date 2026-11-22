@@ -23,6 +23,8 @@ from pathlib import Path
 
 import build_report_pages as brp
 
+brp.IMG_BASE = (Path(__file__).resolve().parents[1] / "assets").as_uri() + "/"
+
 ROOT = Path(__file__).resolve().parents[1]
 REPORT = ROOT / "reports" / "intel" / "2026-11-20-vulnerabilidades-e-incidentes-ia.md"
 ART = ROOT / "assets" / "report-art"

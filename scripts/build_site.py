@@ -82,6 +82,7 @@ def build(out: Path) -> None:
     shutil.copytree(ROOT / "reports", out / "reports")
     shutil.copytree(ROOT / "assets" / "reports", out / "assets" / "reports")
     shutil.copytree(ROOT / "assets" / "brand", out / "assets" / "brand")
+    shutil.copytree(ROOT / "assets" / "tcem", out / "assets" / "tcem")
     shutil.copy(dist / "platform-report.md", out / "reports" / "platform-report.md")
     platform = {"path": "reports/platform-report.md", "title": "Platform report", "kind": "platform", "date": period,
                 "github": REPO + "scripts/generate_landscape_report.py"}

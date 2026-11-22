@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="458" viewBox="0 0 1200 458" role="img" aria-label="Cobertura TCEM dos ataques do ARTEX por fase">
+<rect width="1200" height="458" fill="#f6f5f1"/>
+<text x="20" y="30" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="12" font-weight="700" fill="#b43c0e" text-anchor="start">ATAQUES CONHECIDOS DO ARTEX · O QUE O REPOSITÓRIO DETECTA EM CADA FASE</text>
+<text x="20" y="54" font-family="Inter, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#15140f" text-anchor="start">Laranja: passo observado com detecção DET-AI. Contorno tracejado: passo observado sem detecção de IA (lacuna). Vazio: não descrito pelas fontes.</text>
+<text x="263.8888888888889" y="98" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#6b675d" text-anchor="middle">Reconhecimento</text>
+<text x="371.66666666666663" y="98" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#6b675d" text-anchor="middle">Acesso inicial</text>
+<text x="479.44444444444446" y="98" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#6b675d" text-anchor="middle">Credenciais</text>
+<text x="587.2222222222222" y="98" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#6b675d" text-anchor="middle">Descoberta</text>
+<text x="695.0" y="86" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#6b675d" text-anchor="middle">Persistência e</text>
+<text x="695.0" y="98" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#6b675d" text-anchor="middle">escalada</text>
+<text x="802.7777777777778" y="86" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#6b675d" text-anchor="middle">Movimento</text>
+<text x="802.7777777777778" y="98" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#6b675d" text-anchor="middle">lateral</text>
+<text x="910.5555555555555" y="86" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#6b675d" text-anchor="middle">Comando e</text>
+<text x="910.5555555555555" y="98" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#6b675d" text-anchor="middle">controle</text>
+<text x="1018.3333333333333" y="86" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#6b675d" text-anchor="middle">Coleta e</text>
+<text x="1018.3333333333333" y="98" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#6b675d" text-anchor="middle">impacto</text>
+<text x="1126.111111111111" y="86" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#6b675d" text-anchor="middle">Cadeia de</text>
+<text x="1126.111111111111" y="98" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#6b675d" text-anchor="middle">suprimentos</text>
+<text x="20" y="139" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#15140f" text-anchor="start">Storm-0940</text>
+<rect x="214.0" y="118" width="99.77777777777777" height="34" rx="4" fill="#b43c0e"/>
+<text x="263.8888888888889" y="140" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10.5" font-weight="700" fill="#ffffff" text-anchor="middle">048</text>
+<rect x="321.77777777777777" y="118" width="99.77777777777777" height="34" rx="4" fill="#b43c0e"/>
+<text x="371.66666666666663" y="140" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10.5" font-weight="700" fill="#ffffff" text-anchor="middle">049</text>
+<rect x="429.55555555555554" y="118" width="99.77777777777777" height="34" rx="4" fill="#b43c0e"/>
+<text x="479.44444444444446" y="140" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10.5" font-weight="700" fill="#ffffff" text-anchor="middle">049</text>
+<rect x="537.3333333333333" y="118" width="99.77777777777777" height="34" rx="4" fill="#ffffff" stroke="#d9d5ca"/>
+<rect x="645.1111111111111" y="118" width="99.77777777777777" height="34" rx="4" fill="#b43c0e"/>
+<text x="695.0" y="140" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10.5" font-weight="700" fill="#ffffff" text-anchor="middle">050</text>
+<rect x="752.8888888888889" y="118" width="99.77777777777777" height="34" rx="4" fill="#ffffff" stroke="#d9d5ca"/>
+<rect x="860.6666666666666" y="118" width="99.77777777777777" height="34" rx="4" fill="#ffffff" stroke="#d9d5ca"/>
+<rect x="968.4444444444443" y="118" width="99.77777777777777" height="34" rx="4" fill="#b43c0e"/>
+<text x="1018.3333333333333" y="140" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10.5" font-weight="700" fill="#ffffff" text-anchor="middle">050</text>
+<rect x="1076.2222222222222" y="118" width="99.77777777777777" height="34" rx="4" fill="#ffffff" stroke="#b43c0e" stroke-dasharray="5 4" stroke-width="1.4"/>
+<text x="1126.111111111111" y="140" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10.5" font-weight="700" fill="#b43c0e" text-anchor="middle">lacuna</text>
+<text x="20" y="185" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#15140f" text-anchor="start">VAPOR PANDA</text>
+<rect x="214.0" y="164" width="99.77777777777777" height="34" rx="4" fill="#ffffff" stroke="#d9d5ca"/>
+<rect x="321.77777777777777" y="164" width="99.77777777777777" height="34" rx="4" fill="#b43c0e"/>
+<text x="371.66666666666663" y="186" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10.5" font-weight="700" fill="#ffffff" text-anchor="middle">048</text>
+<rect x="429.55555555555554" y="164" width="99.77777777777777" height="34" rx="4" fill="#ffffff" stroke="#b43c0e" stroke-dasharray="5 4" stroke-width="1.4"/>
+<text x="479.44444444444446" y="186" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10.5" font-weight="700" fill="#b43c0e" text-anchor="middle">lacuna</text>
+<rect x="537.3333333333333" y="164" width="99.77777777777777" height="34" rx="4" fill="#ffffff" stroke="#d9d5ca"/>
+<rect x="645.1111111111111" y="164" width="99.77777777777777" height="34" rx="4" fill="#ffffff" stroke="#b43c0e" stroke-dasharray="5 4" stroke-width="1.4"/>
+<text x="695.0" y="186" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10.5" font-weight="700" fill="#b43c0e" text-anchor="middle">lacuna</text>
+<rect x="752.8888888888889" y="164" width="99.77777777777777" height="34" rx="4" fill="#ffffff" stroke="#b43c0e" stroke-dasharray="5 4" stroke-width="1.4"/>
+<text x="802.7777777777778" y="186" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10.5" font-weight="700" fill="#b43c0e" text-anchor="middle">lacuna</text>
+<rect x="860.6666666666666" y="164" width="99.77777777777777" height="34" rx="4" fill="#b43c0e"/>
+<text x="910.5555555555555" y="186" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10.5" font-weight="700" fill="#ffffff" text-anchor="middle">001 048</text>
+<rect x="968.4444444444443" y="164" width="99.77777777777777" height="34" rx="4" fill="#ffffff" stroke="#d9d5ca"/>
+<rect x="1076.2222222222222" y="164" width="99.77777777777777" height="34" rx="4" fill="#ffffff" stroke="#d9d5ca"/>
+<text x="20" y="231" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#15140f" text-anchor="start">Storm-3358</text>
+<rect x="214.0" y="210" width="99.77777777777777" height="34" rx="4" fill="#b43c0e"/>
+<text x="263.8888888888889" y="232" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10.5" font-weight="700" fill="#ffffff" text-anchor="middle">048</text>
+<rect x="321.77777777777777" y="210" width="99.77777777777777" height="34" rx="4" fill="#ffffff" stroke="#b43c0e" stroke-dasharray="5 4" stroke-width="1.4"/>
+<text x="371.66666666666663" y="232" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10.5" font-weight="700" fill="#b43c0e" text-anchor="middle">lacuna</text>
+<rect x="429.55555555555554" y="210" width="99.77777777777777" height="34" rx="4" fill="#ffffff" stroke="#d9d5ca"/>
+<rect x="537.3333333333333" y="210" width="99.77777777777777" height="34" rx="4" fill="#ffffff" stroke="#d9d5ca"/>
+<rect x="645.1111111111111" y="210" width="99.77777777777777" height="34" rx="4" fill="#ffffff" stroke="#d9d5ca"/>
+<rect x="752.8888888888889" y="210" width="99.77777777777777" height="34" rx="4" fill="#ffffff" stroke="#d9d5ca"/>
+<rect x="860.6666666666666" y="210" width="99.77777777777777" height="34" rx="4" fill="#ffffff" stroke="#b43c0e" stroke-dasharray="5 4" stroke-width="1.4"/>
+<text x="910.5555555555555" y="232" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10.5" font-weight="700" fill="#b43c0e" text-anchor="middle">lacuna</text>
+<rect x="968.4444444444443" y="210" width="99.77777777777777" height="34" rx="4" fill="#ffffff" stroke="#d9d5ca"/>
+<rect x="1076.2222222222222" y="210" width="99.77777777777777" height="34" rx="4" fill="#ffffff" stroke="#d9d5ca"/>
+<text x="20" y="277" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#15140f" text-anchor="start">CRAFTY FALCON</text>
+<rect x="214.0" y="256" width="99.77777777777777" height="34" rx="4" fill="#ffffff" stroke="#b43c0e" stroke-dasharray="5 4" stroke-width="1.4"/>
+<text x="263.8888888888889" y="278" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10.5" font-weight="700" fill="#b43c0e" text-anchor="middle">lacuna</text>
+<rect x="321.77777777777777" y="256" width="99.77777777777777" height="34" rx="4" fill="#ffffff" stroke="#b43c0e" stroke-dasharray="5 4" stroke-width="1.4"/>
+<text x="371.66666666666663" y="278" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10.5" font-weight="700" fill="#b43c0e" text-anchor="middle">lacuna</text>
+<rect x="429.55555555555554" y="256" width="99.77777777777777" height="34" rx="4" fill="#ffffff" stroke="#d9d5ca"/>
+<rect x="537.3333333333333" y="256" width="99.77777777777777" height="34" rx="4" fill="#ffffff" stroke="#d9d5ca"/>
+<rect x="645.1111111111111" y="256" width="99.77777777777777" height="34" rx="4" fill="#ffffff" stroke="#b43c0e" stroke-dasharray="5 4" stroke-width="1.4"/>
+<text x="695.0" y="278" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10.5" font-weight="700" fill="#b43c0e" text-anchor="middle">lacuna</text>
+<rect x="752.8888888888889" y="256" width="99.77777777777777" height="34" rx="4" fill="#ffffff" stroke="#d9d5ca"/>
+<rect x="860.6666666666666" y="256" width="99.77777777777777" height="34" rx="4" fill="#ffffff" stroke="#d9d5ca"/>
+<rect x="968.4444444444443" y="256" width="99.77777777777777" height="34" rx="4" fill="#ffffff" stroke="#b43c0e" stroke-dasharray="5 4" stroke-width="1.4"/>
+<text x="1018.3333333333333" y="278" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10.5" font-weight="700" fill="#b43c0e" text-anchor="middle">lacuna</text>
+<rect x="1076.2222222222222" y="256" width="99.77777777777777" height="34" rx="4" fill="#ffffff" stroke="#d9d5ca"/>
+<text x="20" y="323" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#15140f" text-anchor="start">Segredos de nuvem</text>
+<rect x="214.0" y="302" width="99.77777777777777" height="34" rx="4" fill="#ffffff" stroke="#d9d5ca"/>
+<rect x="321.77777777777777" y="302" width="99.77777777777777" height="34" rx="4" fill="#b43c0e"/>
+<text x="371.66666666666663" y="324" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10.5" font-weight="700" fill="#ffffff" text-anchor="middle">046</text>
+<rect x="429.55555555555554" y="302" width="99.77777777777777" height="34" rx="4" fill="#b43c0e"/>
+<text x="479.44444444444446" y="324" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10.5" font-weight="700" fill="#ffffff" text-anchor="middle">006 047</text>
+<rect x="537.3333333333333" y="302" width="99.77777777777777" height="34" rx="4" fill="#b43c0e"/>
+<text x="587.2222222222222" y="324" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10.5" font-weight="700" fill="#ffffff" text-anchor="middle">046 047</text>
+<rect x="645.1111111111111" y="302" width="99.77777777777777" height="34" rx="4" fill="#b43c0e"/>
+<text x="695.0" y="324" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10.5" font-weight="700" fill="#ffffff" text-anchor="middle">050</text>
+<rect x="752.8888888888889" y="302" width="99.77777777777777" height="34" rx="4" fill="#ffffff" stroke="#d9d5ca"/>
+<rect x="860.6666666666666" y="302" width="99.77777777777777" height="34" rx="4" fill="#ffffff" stroke="#d9d5ca"/>
+<rect x="968.4444444444443" y="302" width="99.77777777777777" height="34" rx="4" fill="#ffffff" stroke="#b43c0e" stroke-dasharray="5 4" stroke-width="1.4"/>
+<text x="1018.3333333333333" y="324" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10.5" font-weight="700" fill="#b43c0e" text-anchor="middle">lacuna</text>
+<rect x="1076.2222222222222" y="302" width="99.77777777777777" height="34" rx="4" fill="#ffffff" stroke="#d9d5ca"/>
+<text x="20" y="369" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#15140f" text-anchor="start">ARTEX dentro de casa</text>
+<rect x="214.0" y="348" width="99.77777777777777" height="34" rx="4" fill="#b43c0e"/>
+<text x="263.8888888888889" y="370" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10.5" font-weight="700" fill="#ffffff" text-anchor="middle">058</text>
+<rect x="321.77777777777777" y="348" width="99.77777777777777" height="34" rx="4" fill="#ffffff" stroke="#d9d5ca"/>
+<rect x="429.55555555555554" y="348" width="99.77777777777777" height="34" rx="4" fill="#ffffff" stroke="#d9d5ca"/>
+<rect x="537.3333333333333" y="348" width="99.77777777777777" height="34" rx="4" fill="#ffffff" stroke="#d9d5ca"/>
+<rect x="645.1111111111111" y="348" width="99.77777777777777" height="34" rx="4" fill="#ffffff" stroke="#d9d5ca"/>
+<rect x="752.8888888888889" y="348" width="99.77777777777777" height="34" rx="4" fill="#ffffff" stroke="#d9d5ca"/>
+<rect x="860.6666666666666" y="348" width="99.77777777777777" height="34" rx="4" fill="#b43c0e"/>
+<text x="910.5555555555555" y="370" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10.5" font-weight="700" fill="#ffffff" text-anchor="middle">052</text>
+<rect x="968.4444444444443" y="348" width="99.77777777777777" height="34" rx="4" fill="#b43c0e"/>
+<text x="1018.3333333333333" y="370" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10.5" font-weight="700" fill="#ffffff" text-anchor="middle">032 043</text>
+<rect x="1076.2222222222222" y="348" width="99.77777777777777" height="34" rx="4" fill="#b43c0e"/>
+<text x="1126.111111111111" y="370" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10.5" font-weight="700" fill="#ffffff" text-anchor="middle">052</text>
+<text x="20" y="440" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10" font-weight="400" fill="#6b675d" text-anchor="start">Fonte: tcem/cases (TCEM v0.5.1) · corte 2026-11-22 · números em cada célula são DET-AI-0xx</text>
+</svg>

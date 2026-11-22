@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="530" viewBox="0 0 1200 530" role="img" aria-label="Caminho de ataque TCEM: Storm-3358">
+<rect width="1200" height="530" fill="#f6f5f1"/>
+<rect width="1200" height="64" fill="#15140f"/>
+<text x="24" y="26" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="11" font-weight="700" fill="#e8a07f" text-anchor="start">TCEM · ARTEX · STORM-3358</text>
+<text x="24" y="50" font-family="Inter, Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#f6f5f1" text-anchor="start">Storm-3358 (Microsoft; crime financeiro, Sudeste Asiático)</text>
+<text x="1176" y="26" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="11" font-weight="400" fill="#b9b5aa" text-anchor="end">CASE-ARTEX-STORM-3358 · confiança confirmada</text>
+<text x="1176" y="50" font-family="Inter, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#e6e2d8" text-anchor="end">Ativo crítico: Servidores web expostos de serviços financeiros e a rede interna atrás deles</text>
+<text x="20" y="106" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10.5" font-weight="700" fill="#6b675d" text-anchor="start">CAMINHO</text>
+<line x1="20" y1="240" x2="1180" y2="240" stroke="#d9d5ca"/>
+<text x="20" y="272" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10.5" font-weight="700" fill="#6b675d" text-anchor="start">TELEMETRIA</text>
+<line x1="20" y1="340" x2="1180" y2="340" stroke="#d9d5ca"/>
+<text x="20" y="366" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10.5" font-weight="700" fill="#6b675d" text-anchor="start">DETECÇÃO</text>
+<line x1="20" y1="432" x2="1180" y2="432" stroke="#d9d5ca"/>
+<text x="20" y="460" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10.5" font-weight="700" fill="#6b675d" text-anchor="start">CONTROLE</text>
+<line x1="20" y1="504" x2="1180" y2="504" stroke="#d9d5ca"/>
+<rect x="150.0" y="84" width="243.5" height="150" rx="6" fill="#ffffff" stroke="#15140f" stroke-width="1.2"/>
+<rect x="150.0" y="84" width="243.5" height="22" rx="6" fill="#b43c0e"/>
+<rect x="150.0" y="98" width="243.5" height="8" fill="#b43c0e"/>
+<text x="158.0" y="99" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="9.5" font-weight="700" fill="#ffffff" text-anchor="start">1 · RECONHECIMENTO</text>
+<text x="158.0" y="124" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#15140f" text-anchor="start">Varredura de sistemas expostos com</text>
+<text x="158.0" y="139" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#15140f" text-anchor="start">agentes e scanners</text>
+<text x="158.0" y="226" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="9.5" font-weight="600" fill="#1f6f8b" text-anchor="start">T1595.002</text>
+<path d="M395.5 159 L404.5 159 M399.5 154 L404.5 159 L399.5 164" stroke="#15140f" stroke-width="1.5" fill="none"/>
+<text x="154.0" y="266" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#15140f" text-anchor="start">Logs de WAF e proxy</text>
+<rect x="150.0" y="350" width="243.5" height="34" rx="6" fill="#b43c0e"/>
+<text x="158.0" y="363" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10" font-weight="700" fill="#ffffff" text-anchor="start">DET-AI-048</text>
+<text x="158.0" y="377" font-family="Inter, Helvetica, Arial, sans-serif" font-size="9" font-weight="400" fill="#fbe9df" text-anchor="start">Agentic Offensive Framework Fingerprints</text>
+<rect x="407.5" y="84" width="243.5" height="150" rx="6" fill="#ffffff" stroke="#15140f" stroke-width="1.2"/>
+<rect x="407.5" y="84" width="243.5" height="22" rx="6" fill="#15140f"/>
+<rect x="407.5" y="98" width="243.5" height="8" fill="#15140f"/>
+<text x="415.5" y="99" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="9.5" font-weight="700" fill="#ffffff" text-anchor="start">2 · ACESSO INICIAL</text>
+<text x="415.5" y="124" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#15140f" text-anchor="start">Exploração de upload anônimo e</text>
+<text x="415.5" y="139" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#15140f" text-anchor="start">SSRF</text>
+<text x="415.5" y="226" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="9.5" font-weight="600" fill="#1f6f8b" text-anchor="start">T1190</text>
+<path d="M653.0 159 L662.0 159 M657.0 154 L662.0 159 L657.0 164" stroke="#15140f" stroke-width="1.5" fill="none"/>
+<text x="411.5" y="266" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#15140f" text-anchor="start">Logs da aplicação: uploads sem sessão</text>
+<rect x="407.5" y="350" width="243.5" height="72" rx="6" fill="none" stroke="#b43c0e" stroke-dasharray="5 4" stroke-width="1.4"/>
+<text x="415.5" y="366" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10" font-weight="700" fill="#b43c0e" text-anchor="start">LACUNA</text>
+<text x="415.5" y="381" font-family="Inter, Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#15140f" text-anchor="start">Sem DET-AI; depende de regra de aplicação.</text>
+<rect x="407.5" y="444" width="243.5" height="21" rx="4" fill="#f7e6dc"/>
+<text x="415.5" y="458" font-family="Inter, Helvetica, Arial, sans-serif" font-size="9" font-weight="600" fill="#15140f" text-anchor="start">Desligar upload anônimo</text>
+<rect x="665.0" y="84" width="243.5" height="150" rx="6" fill="#ffffff" stroke="#15140f" stroke-width="1.2"/>
+<rect x="665.0" y="84" width="243.5" height="22" rx="6" fill="#15140f"/>
+<rect x="665.0" y="98" width="243.5" height="8" fill="#15140f"/>
+<text x="673.0" y="99" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="9.5" font-weight="700" fill="#ffffff" text-anchor="start">3 · COMANDO E CONTROLE</text>
+<text x="673.0" y="124" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#15140f" text-anchor="start">Servidor baixa ferramentas com</text>
+<text x="673.0" y="139" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#15140f" text-anchor="start">curl ou netcat</text>
+<text x="673.0" y="226" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="9.5" font-weight="600" fill="#1f6f8b" text-anchor="start">T1105</text>
+<path d="M910.5 159 L919.5 159 M914.5 154 L919.5 159 L914.5 164" stroke="#15140f" stroke-width="1.5" fill="none"/>
+<text x="669.0" y="266" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#15140f" text-anchor="start">EDR: processo do servidor web inicia</text>
+<text x="669.0" y="280" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#15140f" text-anchor="start">curl, wget ou nc</text>
+<rect x="665.0" y="350" width="243.5" height="72" rx="6" fill="none" stroke="#b43c0e" stroke-dasharray="5 4" stroke-width="1.4"/>
+<text x="673.0" y="366" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10" font-weight="700" fill="#b43c0e" text-anchor="start">LACUNA</text>
+<text x="673.0" y="381" font-family="Inter, Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#15140f" text-anchor="start">Sem DET-AI; padrão clássico de</text>
+<text x="673.0" y="394" font-family="Inter, Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#15140f" text-anchor="start">pós-exploração.</text>
+<rect x="922.5" y="84" width="243.5" height="150" rx="6" fill="#ffffff" stroke="#15140f" stroke-width="1.2"/>
+<rect x="922.5" y="84" width="243.5" height="22" rx="6" fill="#15140f"/>
+<rect x="922.5" y="98" width="243.5" height="8" fill="#15140f"/>
+<text x="930.5" y="99" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="9.5" font-weight="700" fill="#ffffff" text-anchor="start">4 · COMANDO E CONTROLE</text>
+<text x="930.5" y="124" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#15140f" text-anchor="start">RAT aberto instalado (WISP,</text>
+<text x="930.5" y="139" font-family="Inter, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#15140f" text-anchor="start">vshell, AdaptixC2)</text>
+<text x="930.5" y="226" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="9.5" font-weight="600" fill="#1f6f8b" text-anchor="start">T1219 T1071.001</text>
+<text x="926.5" y="266" font-family="Inter, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#15140f" text-anchor="start">EDR e fluxo de rede para destinos novos</text>
+<rect x="922.5" y="350" width="243.5" height="72" rx="6" fill="none" stroke="#b43c0e" stroke-dasharray="5 4" stroke-width="1.4"/>
+<text x="930.5" y="366" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10" font-weight="700" fill="#b43c0e" text-anchor="start">LACUNA</text>
+<text x="930.5" y="381" font-family="Inter, Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#15140f" text-anchor="start">Coberto por regras genéricas (o</text>
+<text x="930.5" y="394" font-family="Inter, Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#15140f" text-anchor="start">artex-detections mantém versões).</text>
+<text x="20" y="518" font-family="JetBrains Mono, Menlo, Consolas, monospace" font-size="10" font-weight="400" fill="#6b675d" text-anchor="start">Validação por replay: passou (1 alerta) · fixture sintética · anonymous_upload -&gt; server_spawns_downloader -&gt; new_outbound_destination (mesmo host)</text>
+</svg>
