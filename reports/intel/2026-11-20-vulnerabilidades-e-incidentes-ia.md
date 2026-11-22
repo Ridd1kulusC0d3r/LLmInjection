@@ -1,7 +1,7 @@
 ---
 pdf: reports/pdf/LLMI-RI-2026-11-20-ameacas-sistemas-ia.pdf
 title: "Threat Intelligence: vulnerabilidades e incidentes em sistemas de IA, 2026"
-kpis: "13|vulnerabilidades de software de IA incluídas no CISA KEV em 2026 (conferido no feed);6 de 25|CVEs da tabela com exploração confirmada em campo;~36 h|do advisory à exploração do LiteLLM CVE-2026-42208;65|entradas na cronologia de 2026, de janeiro a 19 de novembro, 19 novas (v1.1)"
+kpis: "13|vulnerabilidades de software de IA incluídas no CISA KEV em 2026 (conferido no feed);6 de 25|CVEs da tabela com exploração confirmada em campo;~36 h|do advisory à exploração do LiteLLM CVE-2026-42208;66|entradas na cronologia de 2026, de janeiro a 20 de novembro"
 kev_chart: true
 hot_days: 30
 appendix: true
@@ -9,9 +9,11 @@ appendix: true
 
 ![Masthead](../../assets/reports/ia-2026-vulnerabilidades-incidentes.svg)
 
-<p class="rpt-head"><span>LLMI-RI-2026-11-20 · v2.0</span><span class="tlp">TLP:CLEAR</span><span>Corte 2026-11-20</span></p>
+<p class="rpt-head"><span>LLMI-RI-2026-11-20 · v2.1</span><span class="tlp">TLP:CLEAR</span><span>Corte 2026-11-20</span></p>
 
 <div class="injected" markdown="1">
+**v2.1 (2026-11-21).** Entrou o caso da Amazon Threat Intelligence: agentes Cairn de um operador de nexo chinês acharam e exploraram sozinhos um zero-day no MONAI Label (cronologia e marcos da seção 4). A linha da Gambit ganhou os números do Strix e do Cairn.
+
 **v2.0 (2026-11-21).** O relatório ganhou a estrutura completa de produto de inteligência: resumo gerencial e julgamentos-chave no sumário, matriz de risco na modelagem de ameaças, recomendações de segurança consolidadas, Camada 8, Brasil e América Latina, perspectivas com hipóteses concorrentes e previsões verificáveis, e conclusão. As seções novas são análise sobre as evidências já listadas; nenhum fato novo entrou sem fonte.
 
 **v1.2 (2026-11-20).** Três partes agora são geradas dos datasets a cada build, para o relatório não envelhecer:
@@ -209,6 +211,7 @@ A pergunta deixou de ser se agentes acham falhas reais e passou a ser quais. Os 
 | 11/05 | [curl](https://daniel.haxx.se/blog/2026/05/11/mythos-finds-a-curl-vulnerability/) | O relatório do Mythos listou cinco vulnerabilidades "confirmadas" e cerca de vinte bugs bem explicados, quase sem falso positivo | Depois da revisão do time do curl, uma única virou CVE |
 | 14/05 | [VulnCheck: a primeira onda de CVEs](https://www.vulncheck.com/blog/ai-assisted-vulnerability-discovery) | Alta de CVEs no ano até então: Chrome +563%, Apache +170%, emissões do GitHub +476% | A VulnCheck diz que a alta é compatível com descoberta assistida por IA, mas que nem toda ela pode ser atribuída |
 | 02/06 | [depthfirst no FFmpeg](https://depthfirst.com/research/21-zero-days-in-ffmpeg) | 21 zero-days com prova de conceito reproduzível, por cerca de US$ 1 mil; nove com CVE (CVE-2026-39210 a CVE-2026-39218) | Comparação de custo feita pela própria empresa; os nove CVEs ainda não aparecem no NVD |
+| 20/11 | [Amazon Threat Intelligence: Cairn e o MONAI Label](https://aws.amazon.com/blogs/security/chinese-nexus-actors-cairn-ai-agents-found-a-zero-day-on-their-own/) *v2.1* | Primeiro caso público, neste repositório, de agentes de um atacante que acham e exploram um zero-day sem o operador escolher cada passo: do mapeamento da API à escrita arbitrária de arquivos em cerca de 11 minutos | A AWS avalia com alta confiança que era zero-day; a falha é path traversal simples num software de IA sem autenticação por padrão, e as mesmas sessões fracassaram contra alvos endurecidos |
 
 A leitura para o defensor tem três partes:
 - **Volume.** Descoberta por IA já muda o volume de CVEs (VulnCheck, GTIG) e a gravidade média do que é achado (GTIG).
@@ -223,10 +226,11 @@ A rejeição está correta para o escopo de IA. CVE-2019-5418 (Rails, divulgaç�
 
 ## 5. Cronologia de incidentes de IA em 2026
 
-A cronologia reúne 65 entradas (19 adicionadas na v1.1, marcadas com *v1.1*), do mais recente ao mais antigo. As categorias são: EXP (exploração de vulnerabilidade), SC (cadeia de suprimentos), PI (injeção de prompt), OFF (IA usada por atacante), AUT (agente sem adversário), ID (identidade e credenciais) e EXPO (exposição ou configuração).
+A cronologia reúne 66 entradas (19 adicionadas na v1.1, marcadas com *v1.1*, e 1 na v2.1, marcada com *v2.1*), do mais recente ao mais antigo. As categorias são: EXP (exploração de vulnerabilidade), SC (cadeia de suprimentos), PI (injeção de prompt), OFF (IA usada por atacante), AUT (agente sem adversário), ID (identidade e credenciais) e EXPO (exposição ou configuração).
 
 | Data (2026) | Incidente | Cat. | O que aconteceu |
 | --- | --- | --- | --- |
+| 20 nov | [Amazon: agentes Cairn acham um zero-day sozinhos](https://aws.amazon.com/blogs/security/chinese-nexus-actors-cairn-ai-agents-found-a-zero-day-on-their-own/) *v2.1* | OFF | Operador de nexo chinês (confiança moderada da AWS) deu a agentes Cairn o objetivo "obter shell" contra universidades do Leste Asiático em 8 a 10 de setembro. Os agentes acharam um path traversal no MONAI Label ([GHSA-qc22-rmgc-vg94](https://github.com/Project-MONAI/MONAILabel/security/advisories/GHSA-qc22-rmgc-vg94)) em cerca de 11 minutos e chegaram a shell como root; Redis e cluster de GPU resistiram a 16 e 6 horas de tentativas |
 | 19 nov | Comissão Europeia: CERT-EU detecta ARTEX ([POLITICO, via Cyber Security News](https://cybersecuritynews.com/european-commission-cyberattack/)) *v1.1* | OFF | Sistemas de pessoal (Sysper, MyPMO) e de tradução fora do ar por precaução por mais de 10 dias; sem ator, falha ou exfiltração confirmados; não se sabe se o ARTEX serviu para entrar ou só para varrer |
 | 18 nov | [Censo da Spectrum](https://www.spectrum.security/blog/offensive-ai-tools-in-the-wild) *v1.1* | EXPO | 2.335 consoles ofensivos de IA expostos, 47 variantes de ARTEX, 179 consoles renomeados; frota `sco-fix2` com 348 serviços em um único AS |
 | 18 nov | LiteLLM CVE-2026-40217 no KEV (confirmado no feed da CISA na v1.1) | EXP | Quarta entrada KEV do produto; execução de código pelo teste de guardrail customizado |
@@ -245,7 +249,7 @@ A cronologia reúne 65 entradas (19 adicionadas na v1.1, marcadas com *v1.1*), d
 | 1 out | Claude Code 2.1.287 habilita mods por padrão | SC | Plugins rodam no processo do agente, sem sandbox, com acesso a segredos; pesquisadores demonstraram leitura de credenciais |
 | 1 out | [OpenAI notifica mais de 100 organizações](https://github.com/webpro255/awesome-ai-agent-attacks) | AUT | Investigação independente encontrou acesso de agentes a dados de 55 organizações entre março e setembro |
 | 29 set | Capturas de tela internas no GitHub | AUT | Agentes de código publicaram mais de 13.000 imagens internas de mais de 300 organizações em repositórios públicos |
-| 22 set | Pipeline de três agentes para roubo de cartões | OFF | Mais de 27 empresas invadidas em cinco dias e 600 mil registros de cartão, a um custo de computação de cerca de 7 mil dólares |
+| 22 set | [Pipeline de três agentes para roubo de cartões](https://gambit.security/blog-posts/autonomous-ai-agents-online-retailers-25-a-company) | OFF | Strix (146 varreduras em 138 hosts, com GLM 5.2 e DeepSeek v4 Pro), Cairn (DeepSeek v4.1 Flash, 105 projetos de ataque em 10 a 15 de setembro) e Hermes como orquestrador: mais de 27 empresas invadidas e 600 mil registros de cartão, a cerca de US$ 25 por varredura e 7 mil dólares em quatro semanas |
 | 21 set | [DIVD invadida por agente](https://www.divd.nl/newsroom/articles/when-no-if/) *v1.1* | EXP | Cadeia de falhas do Zammad (CVE-2026-102489 e CVE-2026-102490, KEV em 02/10): de sessão sequestrada a root em segundos, com exfiltração confirmada; não se sabe se o agente achou as falhas |
 | 18 set | Plugin4Shell | SC | Troca de plugin fixado afeta Claude Code, Codex, Copilot e Gemini CLI; dois corrigidos |
 | 10 set | Relatório de ameaças da Anthropic (GTG-50014, GTG-50020) | OFF | Varredura de 1,8 milhão de APKs por segredos levou a admin de nuvem em cerca de 3 horas; campanha de quatro dias contra cerca de 30 empresas de IA por chaves de API |

@@ -6507,5 +6507,93 @@
     "evidence_sources": [
       "SRC-AWS-CAIRN-MONAI"
     ]
+  },
+  {
+    "id": "REL-589",
+    "type": "relationship",
+    "source": "CAMPAIGN-CAIRN-EAST-ASIA-UNIVERSITIES",
+    "relationship": "uses",
+    "target": "LLMI-T015",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-AWS-CAIRN-MONAI"
+    ]
+  },
+  {
+    "id": "REL-590",
+    "type": "relationship",
+    "source": "CAMPAIGN-CAIRN-EAST-ASIA-UNIVERSITIES",
+    "relationship": "uses",
+    "target": "LLMI-T024",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-AWS-CAIRN-MONAI"
+    ]
+  },
+  {
+    "id": "REL-591",
+    "type": "relationship",
+    "source": "CAMPAIGN-CAIRN-EAST-ASIA-UNIVERSITIES",
+    "relationship": "uses-tool",
+    "target": "TOOL-CAIRN",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-AWS-CAIRN-MONAI"
+    ]
+  },
+  {
+    "id": "REL-592",
+    "type": "relationship",
+    "source": "VULN-MONAILABEL-GHSA-QC22-RMGC-VG94",
+    "relationship": "observed-in",
+    "target": "CAMPAIGN-CAIRN-EAST-ASIA-UNIVERSITIES",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-AWS-CAIRN-MONAI"
+    ]
+  },
+  {
+    "id": "REL-593",
+    "type": "relationship",
+    "source": "VULN-MONAILABEL-GHSA-QC22-RMGC-VG94",
+    "relationship": "demonstrates",
+    "target": "LLMI-T024",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-GHSA-MONAILABEL-TRAVERSAL"
+    ]
+  },
+  {
+    "id": "REL-594",
+    "type": "relationship",
+    "source": "INCIDENT-GAMBIT-AI-AGENT-RETAIL-SKIMMING",
+    "relationship": "uses-model-family",
+    "target": "MODEL-FAMILY-GLM",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GAMBIT-AI-AGENTS-RETAILERS"
+    ]
+  },
+  {
+    "id": "REL-595",
+    "type": "relationship",
+    "source": "INCIDENT-GAMBIT-AI-AGENT-RETAIL-SKIMMING",
+    "relationship": "uses-model-family",
+    "target": "MODEL-FAMILY-DEEPSEEK",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GAMBIT-AI-AGENTS-RETAILERS"
+    ]
+  },
+  {
+    "id": "REL-596",
+    "type": "relationship",
+    "source": "INCIDENT-GAMBIT-AI-AGENT-RETAIL-SKIMMING",
+    "relationship": "uses-model-family",
+    "target": "MODEL-FAMILY-CLAUDE",
+    "confidence": "confirmed",
+    "evidence_sources": [
+      "SRC-GAMBIT-AI-AGENTS-RETAILERS"
+    ]
   }
 ]
