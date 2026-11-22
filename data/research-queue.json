@@ -9281,6 +9281,174 @@
         "decision": null,
         "notes": "From digest LLMI-20261121. Read the primary source before promoting."
       }
+    },
+    {
+      "id": "RQ-AAD-20261122-01",
+      "status": "accepted",
+      "source_feed_id": "FEED-AGENTIC-ATTACK-DETECTIONS-COMMITS",
+      "source_grade": "B",
+      "kind": "actor-candidate",
+      "title": "NorForge AIA0001/AIA0002 (Cairn)",
+      "url": "https://norforge.com/blog/inside_cairn",
+      "published": "2026-10-19",
+      "observed_at": "2026-11-22T20:00:00Z",
+      "relevance_score": 85,
+      "matched_terms": [
+        "LLMI-T015"
+      ],
+      "summary": "Intrusion set listed in ThreatDefence agentic-attack-detections STIX bundle (commit 7a29e16); original report read on 2026-11-22.",
+      "identifiers": [],
+      "review": {
+        "decision": "promoted to CAMPAIGN-NORFORGE-AIA0001-CAIRN and CAMPAIGN-NORFORGE-AIA0002-CAIRN",
+        "notes": "Read in the original on 2026-11-22."
+      }
+    },
+    {
+      "id": "RQ-AAD-20261122-02",
+      "status": "accepted",
+      "source_feed_id": "FEED-AGENTIC-ATTACK-DETECTIONS-COMMITS",
+      "source_grade": "A",
+      "kind": "actor-candidate",
+      "title": "Japanese breach wave AI-agent operators (JPCERT AT-2026-0030, Scutum)",
+      "url": "https://www.jpcert.or.jp/at/2026/at260030.html",
+      "published": "2026-10-08",
+      "observed_at": "2026-11-22T20:00:00Z",
+      "relevance_score": 85,
+      "matched_terms": [
+        "LLMI-T015"
+      ],
+      "summary": "Intrusion set listed in ThreatDefence agentic-attack-detections STIX bundle (commit 7a29e16); original report read on 2026-11-22.",
+      "identifiers": [],
+      "review": {
+        "decision": "promoted to INCIDENT-JAPAN-BREACH-WAVE-2026",
+        "notes": "Read in the original on 2026-11-22."
+      }
+    },
+    {
+      "id": "RQ-AAD-20261122-03",
+      "status": "accepted",
+      "source_feed_id": "FEED-AGENTIC-ATTACK-DETECTIONS-COMMITS",
+      "source_grade": "A",
+      "kind": "actor-candidate",
+      "title": "CyberStrikeAI attacks on education organizations (Africa, Latin America)",
+      "url": "https://securelist.com/cyberstrikeai-attacks/121715/",
+      "published": "2026-11-02",
+      "observed_at": "2026-11-22T20:00:00Z",
+      "relevance_score": 85,
+      "matched_terms": [
+        "LLMI-T015"
+      ],
+      "summary": "Intrusion set listed in ThreatDefence agentic-attack-detections STIX bundle (commit 7a29e16); original report read on 2026-11-22.",
+      "identifiers": [],
+      "review": {
+        "decision": "promoted to CAMPAIGN-CYBERSTRIKEAI-EDUCATION-AFRICA-LATAM",
+        "notes": "Read in the original on 2026-11-22."
+      }
+    },
+    {
+      "id": "RQ-AAD-20261122-04",
+      "status": "accepted",
+      "source_feed_id": "FEED-AGENTIC-ATTACK-DETECTIONS-COMMITS",
+      "source_grade": "A",
+      "kind": "actor-candidate",
+      "title": "AI-run AWS intrusion from a CyberStrikeAI server",
+      "url": "https://www.elastic.co/security-labs/threat-command/cyberstrikeai-aws-cloudtrail-intrusion",
+      "published": "2026-11-13",
+      "observed_at": "2026-11-22T20:00:00Z",
+      "relevance_score": 85,
+      "matched_terms": [
+        "LLMI-T015"
+      ],
+      "summary": "Intrusion set listed in ThreatDefence agentic-attack-detections STIX bundle (commit 7a29e16); original report read on 2026-11-22.",
+      "identifiers": [],
+      "review": {
+        "decision": "promoted to INCIDENT-CYBERSTRIKEAI-AWS-2026-10",
+        "notes": "Read in the original on 2026-11-22."
+      }
+    },
+    {
+      "id": "RQ-AAD-20261122-05",
+      "status": "accepted",
+      "source_feed_id": "FEED-AGENTIC-ATTACK-DETECTIONS-COMMITS",
+      "source_grade": "A",
+      "kind": "actor-candidate",
+      "title": "Hermes operator against Thailand's Ministry of Finance (Hades, VShell)",
+      "url": "https://hunt.io/blog/thailand-ministry-finance-targeted-with-hermes-ai-agent",
+      "published": "2026-07-23",
+      "observed_at": "2026-11-22T20:00:00Z",
+      "relevance_score": 85,
+      "matched_terms": [
+        "LLMI-T015"
+      ],
+      "summary": "Intrusion set listed in ThreatDefence agentic-attack-detections STIX bundle (commit 7a29e16); original report read on 2026-11-22.",
+      "identifiers": [],
+      "review": {
+        "decision": "promoted to INCIDENT-HERMES-THAILAND-MOF and TOOL-HERMES-AGENT",
+        "notes": "Read in the original on 2026-11-22."
+      }
+    },
+    {
+      "id": "RQ-AAD-20261122-06",
+      "status": "accepted",
+      "source_feed_id": "FEED-AGENTIC-ATTACK-DETECTIONS-COMMITS",
+      "source_grade": "A",
+      "kind": "actor-candidate",
+      "title": "Carbonato Docker botnet (Costa Rica, assessed)",
+      "url": "https://www.threatdown.com/blog/carbonato/",
+      "published": "2026-09-22",
+      "observed_at": "2026-11-22T20:00:00Z",
+      "relevance_score": 85,
+      "matched_terms": [
+        "LLMI-T015"
+      ],
+      "summary": "Intrusion set listed in ThreatDefence agentic-attack-detections STIX bundle (commit 7a29e16); original report read on 2026-11-22.",
+      "identifiers": [],
+      "review": {
+        "decision": "promoted to CAMPAIGN-CARBONATO-DOCKER-HERMES",
+        "notes": "Read in the original on 2026-11-22."
+      }
+    },
+    {
+      "id": "RQ-AAD-20261122-07",
+      "status": "rejected",
+      "source_feed_id": "FEED-AGENTIC-ATTACK-DETECTIONS-COMMITS",
+      "source_grade": "B",
+      "kind": "actor-candidate",
+      "title": "Dark web actors discussing HexStrike (Check Point)",
+      "url": "https://blog.checkpoint.com/executive-insights/hexstrike-ai-when-llms-meet-zero-day-exploitation/",
+      "published": "2025-09-02",
+      "observed_at": "2026-11-22T20:00:00Z",
+      "relevance_score": 85,
+      "matched_terms": [
+        "LLMI-T015"
+      ],
+      "summary": "Intrusion set listed in ThreatDefence agentic-attack-detections STIX bundle (commit 7a29e16); original report read on 2026-11-22.",
+      "identifiers": [],
+      "review": {
+        "decision": "not promoted: underground discussion and claims about NetScaler exploitation, no confirmed HexStrike intrusion; source added to TOOL-HEXSTRIKE-AI",
+        "notes": "Read in the original on 2026-11-22."
+      }
+    },
+    {
+      "id": "RQ-AAD-20261122-08",
+      "status": "rejected",
+      "source_feed_id": "FEED-AGENTIC-ATTACK-DETECTIONS-COMMITS",
+      "source_grade": "B",
+      "kind": "actor-candidate",
+      "title": "Agent Zero operators (GitGuardian, ThreatDefence)",
+      "url": "https://blog.gitguardian.com/ai-pentesting-tools-beyond-artex/",
+      "published": "2026-11-09",
+      "observed_at": "2026-11-22T20:00:00Z",
+      "relevance_score": 85,
+      "matched_terms": [
+        "LLMI-T015"
+      ],
+      "summary": "Intrusion set listed in ThreatDefence agentic-attack-detections STIX bundle (commit 7a29e16); original report read on 2026-11-22.",
+      "identifiers": [],
+      "review": {
+        "decision": "not promoted: GitGuardian says actors experimented with Agent Zero without a case or count; no tool record until an observed case",
+        "notes": "Read in the original on 2026-11-22."
+      }
     }
   ]
 }

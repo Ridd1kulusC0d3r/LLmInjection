@@ -17,7 +17,6 @@
   "shared_behaviour_files": 24,
   "indicators": 479,
   "tool_records_missing": [
-   "Hermes Agent",
    "Agent Zero"
   ],
   "detections_used": [
@@ -33,7 +32,7 @@
   ],
   "unknown_detections": [],
   "intrusion_sets": 17,
-  "intrusion_sets_not_in_graph": 8,
+  "intrusion_sets_not_in_graph": 1,
   "unassigned_files": []
  },
  "frameworks": [
@@ -174,8 +173,10 @@
   {
    "framework": "Hermes Agent",
    "folder": "https://github.com/ThreatDefence/agentic-attack-detections/blob/main/frameworks/hermes",
-   "tools": [],
-   "tool_record_missing": true,
+   "tools": [
+    "TOOL-HERMES-AGENT"
+   ],
+   "tool_record_missing": false,
    "formats": {
     "KQL hunts": 4,
     "Sentinel analytics": 2,
@@ -482,18 +483,24 @@
   },
   {
    "name": "NorForge AIA0001 (Chinese-language, e-commerce access)",
-   "llminjection": [],
-   "status": "candidate: read the cited report"
+   "llminjection": [
+    "CAMPAIGN-NORFORGE-AIA0001-CAIRN"
+   ],
+   "status": "in the graph"
   },
   {
    "name": "NorForge AIA0002 (English-language, card and crypto theft)",
-   "llminjection": [],
-   "status": "candidate: read the cited report"
+   "llminjection": [
+    "CAMPAIGN-NORFORGE-AIA0002-CAIRN"
+   ],
+   "status": "in the graph"
   },
   {
    "name": "Japanese breach wave AI-agent operators",
-   "llminjection": [],
-   "status": "candidate: read the cited report"
+   "llminjection": [
+    "INCIDENT-JAPAN-BREACH-WAVE-2026"
+   ],
+   "status": "in the graph"
   },
   {
    "name": "Gambit retail card-theft operator (Hermes, Strix and Cairn)",
@@ -512,17 +519,21 @@
   {
    "name": "Dark web actors discussing HexStrike",
    "llminjection": [],
-   "status": "candidate: read the cited report"
+   "status": "not promoted: underground discussion, no confirmed intrusion (RQ-AAD-20261122-07)"
   },
   {
    "name": "CyberStrikeAI attacks on education organizations (Africa, Latin America)",
-   "llminjection": [],
-   "status": "candidate: read the cited report"
+   "llminjection": [
+    "CAMPAIGN-CYBERSTRIKEAI-EDUCATION-AFRICA-LATAM"
+   ],
+   "status": "in the graph"
   },
   {
    "name": "AI-run AWS intrusion from a CyberStrikeAI server",
-   "llminjection": [],
-   "status": "candidate: read the cited report"
+   "llminjection": [
+    "INCIDENT-CYBERSTRIKEAI-AWS-2026-10"
+   ],
+   "status": "in the graph"
   },
   {
    "name": "FortiGate mass-exploitation actor",
@@ -554,13 +565,17 @@
   },
   {
    "name": "Hermes operator against Thailand's Ministry of Finance (Hades, VShell)",
-   "llminjection": [],
-   "status": "candidate: read the cited report"
+   "llminjection": [
+    "INCIDENT-HERMES-THAILAND-MOF"
+   ],
+   "status": "in the graph"
   },
   {
    "name": "Carbonato Docker botnet (Costa Rica, assessed)",
-   "llminjection": [],
-   "status": "candidate: read the cited report"
+   "llminjection": [
+    "CAMPAIGN-CARBONATO-DOCKER-HERMES"
+   ],
+   "status": "in the graph"
   }
  ]
 }

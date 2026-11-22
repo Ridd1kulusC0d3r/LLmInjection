@@ -45,7 +45,7 @@ FRAMEWORKS = {  # folder -> (name, LLMInjection tool records)
     "hexstrike": ("HexStrike", ["TOOL-HEXSTRIKE-AI"]),
     "cyberstrikeai": ("CyberStrikeAI", ["TOOL-CYBERSTRIKEAI"]),
     "strix": ("Strix", ["TOOL-STRIX"]),
-    "hermes": ("Hermes Agent", []),
+    "hermes": ("Hermes Agent", ["TOOL-HERMES-AGENT"]),
     "agent-zero": ("Agent Zero", []),
 }
 
@@ -74,7 +74,15 @@ CLASSES = [
 # Intrusion sets whose names do not match a record here by name, matched by the analyst to the record of the same activity.
 SET_MATCH = {"Gambit retail card-theft operator": ["INCIDENT-GAMBIT-AI-AGENT-RETAIL-SKIMMING"],
              "PaperCut exploitation operator": ["INCIDENT-PAPERCUT-AI-AGENT-EXPLOITATION"],
-             "FortiGate mass-exploitation actor": ["INCIDENT-FORTIGATE-AI-AUGMENTED-ACCESS"]}
+             "FortiGate mass-exploitation actor": ["INCIDENT-FORTIGATE-AI-AUGMENTED-ACCESS"],
+             "NorForge AIA0001": ["CAMPAIGN-NORFORGE-AIA0001-CAIRN"], "NorForge AIA0002": ["CAMPAIGN-NORFORGE-AIA0002-CAIRN"],
+             "Japanese breach wave": ["INCIDENT-JAPAN-BREACH-WAVE-2026"],
+             "CyberStrikeAI attacks on education": ["CAMPAIGN-CYBERSTRIKEAI-EDUCATION-AFRICA-LATAM"],
+             "AI-run AWS intrusion": ["INCIDENT-CYBERSTRIKEAI-AWS-2026-10"],
+             "Hermes operator against Thailand": ["INCIDENT-HERMES-THAILAND-MOF"],
+             "Carbonato Docker botnet": ["CAMPAIGN-CARBONATO-DOCKER-HERMES"]}
+# Intrusion sets read in the original and kept out of the graph, with the reason (data/research-queue.json).
+NOT_PROMOTED = {"Dark web actors discussing HexStrike": "not promoted: underground discussion, no confirmed intrusion (RQ-AAD-20261122-07)"}
 FORMAT = {"sentinel/hunting": "KQL hunts", "sentinel/analytics": "Sentinel analytics", "sigma": "Sigma", "suricata": "Suricata", "yara": "YARA",
           "zeek": "Zeek", "splunk": "Splunk", "elastic": "Elastic", "osquery": "osquery"}
 SKIP = ("README.md", "coverage.md", "hunting-order.md", "source-code-signals.md", "app.conf", "default.meta", "macros.conf",
@@ -152,7 +160,7 @@ def build(repo: Path) -> dict:
         low = o["name"].lower()
         match = [rid for rname, rid in records.items() if rname.split(" (")[0] in low or low.split(" (")[0] in rname]
         match += next((v for k, v in SET_MATCH.items() if o["name"].startswith(k)), [])
-        sets.append({"name": o["name"], "llminjection": sorted(set(match))[:3], "status": "in the graph" if match else "candidate: read the cited report"})
+        sets.append({"name": o["name"], "llminjection": sorted(set(match))[:3], "status": "in the graph" if match else next((v for k, v in NOT_PROMOTED.items() if o["name"].startswith(k)), "candidate: read the cited report")})
     for c in classes:
         c["frameworks"] = dict(c["frameworks"])
     try:

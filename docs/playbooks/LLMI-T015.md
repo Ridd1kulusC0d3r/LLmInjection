@@ -13,7 +13,7 @@
 
 | Layer | Status |
 |---|---|
-| Evidence | 60 record(s), 43 publisher(s), best grade A, newest 2026 |
+| Evidence | 67 record(s), 49 publisher(s), best grade A, newest 2026 |
 | Safe tests | 1 |
 | Detections | 5 rule file(s), 5 specification(s) |
 | Controls | 2 |
@@ -37,11 +37,13 @@ What the repository links to it:
 - 2026-05 · [Aurora ransomware intrusions driven through Cursor Agent](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-AURORA-CURSOR-AGENT) (campaign, confirmed)
 - 2026-04 · [bandcampro Gemini CLI-driven C2 botnet build and fraud operations](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-BANDCAMPRO-GEMINI-CLI-C2) (campaign, confirmed)
 - 2026-09 · [Cairn autonomous agents against East Asian universities (MONAI Label zero-day)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-CAIRN-EAST-ASIA-UNIVERSITIES) (campaign, high)
+- 2026-09 · [Carbonato Docker botnet deploying Hermes Agent to hunt AI API keys](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-CARBONATO-DOCKER-HERMES) (campaign, high)
 - 2026-11 · [CRAFTY FALCON AI-driven attacks on Indian banking, fintech and payment entities](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-CRAFTY-FALCON-BFSI-INDIA) (campaign, confirmed)
 - 2026-08 · [CrowdStrike Threat Actor 1: Claude Code dual-agent harness against Argentine healthcare](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-CROWDSTRIKE-TA1-ARGENTINA-HEALTHCARE) (campaign, confirmed)
 - 2026-08 · [CrowdStrike Threat Actor 2: Chinese-speaking operator's Claude pentesting harnesses](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-CROWDSTRIKE-TA2-CHINESE-SPEAKING-HARNESS) (campaign, confirmed)
 - 2026-08 · [CrowdStrike Threat Actor 3: Indonesian-speaking operator using public Claude Code skills](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-CROWDSTRIKE-TA3-INDONESIAN-SKILLS) (campaign, confirmed)
 - 2026-08 · [CrowdStrike Threat Actor 4: Russian-speaking group's /pentest-setup Claude Code workflow](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-CROWDSTRIKE-TA4-PENTEST-SETUP) (campaign, confirmed)
+- 2026-11 · [CyberStrikeAI intrusions at education organisations in Africa and Latin America](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-CYBERSTRIKEAI-EDUCATION-AFRICA-LATAM) (campaign, high)
 - 2026-10 · [CyberXero Claude Code agent swarm against Ukrainian critical infrastructure](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-CYBERXERO-CLAUDE-AGENT-SWARM) (campaign, confirmed)
 - 2026 · [GTG-10007 exploit foundry and autonomous attack frameworks](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-GTG-10007) (campaign, confirmed)
 - 2026 · [GTG-20006 Claude-driven espionage operation lifecycle](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-GTG-20006) (campaign, confirmed)
@@ -53,6 +55,8 @@ What the repository links to it:
 - 2026-10 · [INC / The Gentlemen affiliate AI-driven ransomware operations (Phantom framework)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-INC-GENTLEMEN-PHANTOM-AI) (campaign, confirmed)
 - 2026 · [JADEPUFFER agentic database extortion](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-JADEPUFFER-AGENTIC-EXTORTION) (campaign, high)
 - 2026-07 · [knaithe autonomous exploitation with DeepSeek and Hermes Agent](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-KNAITHE-HERMES-AUTONOMOUS) (campaign, confirmed)
+- 2026-10 · [NorForge AIA0001: Chinese-language Cairn operator seeking e-commerce access](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-NORFORGE-AIA0001-CAIRN) (campaign, high)
+- 2026-10 · [NorForge AIA0002: English-language Cairn operator after card and crypto theft](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-NORFORGE-AIA0002-CAIRN) (campaign, high)
 - 2026-09 · [Onyx Sleet AI-generated lures against South Korea](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-ONYX-SLEET-AI-LURES) (campaign, high)
 - 2026-10 · [Pearl Sleet operations using the ARTEX agentic penetration-testing framework](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-PEARL-SLEET-ARTEX) (campaign, confirmed)
 - 2026-10 · [PentAGI-based orchestration against Asian telecoms and system integrators](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-PENTAGI-ASIA-TELECOM) (campaign, medium)
@@ -68,6 +72,7 @@ What the repository links to it:
 - 2026-07-01 · [Multi-Agent Framework Compromises Taiwanese Government Systems (AML.CS0071)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-ATLAS-CS0071) (atlas-incident, high)
 - 2026-11-01 · [Barracuda cloud intrusion through a vendor's unretired access key, run with ARTEX](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-BARRACUDA-ARTEX-CLOUD-2026-11) (intrusion, confirmed)
 - 2026 · [CLOSEDQUORUM autonomous AI C2 research case](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-CLOSEDQUORUM) (research-artifact, confirmed)
+- 2026-09-30 · [AWS intrusion run from a CyberStrikeAI server](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-CYBERSTRIKEAI-AWS-2026-10) (intrusion, high)
 - 2026-09-21 · [Agentic attacker breaches DIVD through a Zammad zero-day chain](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-DIVD-AGENTIC-ZAMMAD-2026-09) (intrusion, confirmed)
 - 2026-07 · [Multi-agent AI framework (Hermes/OpenClaw) used to compromise Asian government entities](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-DREAM-MULTI-AGENT-ASIA-GOV) (intrusion, high)
 - 2026-11 · [European Commission staff systems disrupted; CERT-EU found ARTEX in use](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-EC-ARTEX-2026-11) (intrusion, medium)
@@ -76,9 +81,11 @@ What the repository links to it:
 - 2026 · [Multi-agent credential harvesting from compromised cloud in under six hours](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-GTIG-AGENTIC-CREDENTIAL-HARVESTING) (intrusion, confirmed)
 - 2026 · [Multi-agent mass credential harvesting in under six hours](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-GTIG-AUTONOMOUS-HARVEST) (intrusion, confirmed)
 - 2026 · ["Recon" agentic reconnaissance and credential-management framework](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-GTIG-RECON-AGENTIC-FRAMEWORK) (intrusion, confirmed)
+- 2026-07 · [Hermes Agent in unattended mode against Thailand's Ministry of Finance](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-HERMES-THAILAND-MOF) (intrusion, high)
 - 2026 · [Agentic Hexstrike and Strix operations against East Asian targets](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-HEXSTRIKE-STRIX-EAST-ASIA) (intrusion, confirmed)
 - 2026-07 · [Hugging Face production intrusion driven by an autonomous AI agent system](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-HUGGINGFACE-AGENTIC-INTRUSION-2026-07) (intrusion, high)
 - 2026-06 · [Suspected Chinese operators use Claude Code and DeepSeek in government and financial intrusions](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-HUNTIO-CLAUDE-DEEPSEEK-INTRUSIONS) (intrusion, confirmed)
+- 2026-09 · [Wave of intrusions at Japanese organisations, including AI pentest platforms](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-JAPAN-BREACH-WAVE-2026) (intrusion, medium)
 - 2025-12 · [Single operator uses Claude Code and GPT-4.1 to breach nine Mexican government organisations](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-MEXICAN-GOVERNMENT-AI-BREACH) (intrusion, confirmed)
 - 2026-08 · [AI-agent-driven mass exploitation of PaperCut NG/MF](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-PAPERCUT-AI-AGENT-EXPLOITATION) (intrusion, confirmed)
 - 2026-09 · [TAG-217 ARTEX-linked intrusions at South Korean financial institutions](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-TAG-217-SOUTH-KOREA-FINANCE) (intrusion, medium)

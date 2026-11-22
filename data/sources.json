@@ -2317,5 +2317,104 @@
     "url": "https://github.com/Project-MONAI/MONAILabel/security/advisories/GHSA-qc22-rmgc-vg94",
     "published": "2026-11-18",
     "last_verified": "2026-11-21"
+  },
+  {
+    "id": "SRC-NORFORGE-INSIDE-CAIRN",
+    "type": "source",
+    "name": "Inside Cairn: Open Windows into massive AI-Driven Cyber Operations",
+    "publisher": "NorForge",
+    "grade": "B",
+    "role": "threat-research",
+    "url": "https://norforge.com/blog/inside_cairn",
+    "published": "2026-10-19",
+    "last_verified": "2026-11-22"
+  },
+  {
+    "id": "SRC-SCUTUM-WAF-085-AI-AGENTS",
+    "type": "source",
+    "name": "Warning on website attacks by AI agents (WAF Tech Blog 085, Japanese)",
+    "publisher": "Secure Sky Technology (Scutum)",
+    "grade": "B",
+    "role": "threat-research",
+    "url": "https://www.scutum.jp/information/waf_tech_blog/2026/10/waf-blog-085.html",
+    "published": "2026-10-14",
+    "last_verified": "2026-11-22"
+  },
+  {
+    "id": "SRC-KASPERSKY-CYBERSTRIKEAI-2026-11",
+    "type": "source",
+    "name": "CyberStrikeAI in the wild: the use of AI in real-world attacks on organizations",
+    "publisher": "Kaspersky (Securelist)",
+    "grade": "A",
+    "role": "threat-report",
+    "url": "https://securelist.com/cyberstrikeai-attacks/121715/",
+    "published": "2026-11-02",
+    "last_verified": "2026-11-22"
+  },
+  {
+    "id": "SRC-ELASTIC-CYBERSTRIKEAI-AWS",
+    "type": "source",
+    "name": "56 AWS API calls in 141 milliseconds: Inside an AI-run intrusion",
+    "publisher": "Elastic Security Labs",
+    "grade": "A",
+    "role": "threat-report",
+    "url": "https://www.elastic.co/security-labs/threat-command/cyberstrikeai-aws-cloudtrail-intrusion",
+    "published": "2026-11-13",
+    "last_verified": "2026-11-22"
+  },
+  {
+    "id": "SRC-ELASTIC-AGENTIC-FRAMEWORKS",
+    "type": "source",
+    "name": "Inside the loop: Five AI attack frameworks that never ask permission",
+    "publisher": "Elastic Security Labs",
+    "grade": "A",
+    "role": "threat-research",
+    "url": "https://www.elastic.co/security-labs/threat-command/agentic-offensive-frameworks-detection-artex",
+    "published": "2026-11-13",
+    "last_verified": "2026-11-22"
+  },
+  {
+    "id": "SRC-HUNTIO-HERMES-THAILAND-MOF",
+    "type": "source",
+    "name": "Thailand Ministry of Finance targeted with Hermes AI agent",
+    "publisher": "Hunt.io",
+    "grade": "A",
+    "role": "threat-report",
+    "url": "https://hunt.io/blog/thailand-ministry-finance-targeted-with-hermes-ai-agent",
+    "published": "2026-07-23",
+    "last_verified": "2026-11-22"
+  },
+  {
+    "id": "SRC-THREATDOWN-CARBONATO",
+    "type": "source",
+    "name": "CARBONATO: Docker botnet running Hermes Agent",
+    "publisher": "ThreatDown (Malwarebytes)",
+    "grade": "A",
+    "role": "threat-report",
+    "url": "https://www.threatdown.com/blog/carbonato/",
+    "published": "2026-09-22",
+    "last_verified": "2026-11-22"
+  },
+  {
+    "id": "SRC-CHECKPOINT-HEXSTRIKE-2025",
+    "type": "source",
+    "name": "HexStrike-AI: When LLMs Meet Zero-Day Exploitation",
+    "publisher": "Check Point",
+    "grade": "B",
+    "role": "threat-research",
+    "url": "https://blog.checkpoint.com/executive-insights/hexstrike-ai-when-llms-meet-zero-day-exploitation/",
+    "published": "2025-09-02",
+    "last_verified": "2026-11-22"
+  },
+  {
+    "id": "SRC-GITGUARDIAN-BEYOND-ARTEX",
+    "type": "source",
+    "name": "AI pentesting tools beyond ARTEX",
+    "publisher": "GitGuardian",
+    "grade": "B",
+    "role": "threat-research",
+    "url": "https://blog.gitguardian.com/ai-pentesting-tools-beyond-artex/",
+    "published": "2026-11-09",
+    "last_verified": "2026-11-22"
   }
 ]

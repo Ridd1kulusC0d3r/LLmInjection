@@ -993,5 +993,54 @@
       "SRC-SYSDIG-DIVD-ZAMMAD"
     ],
     "reported": "2026-09-25"
+  },
+  {
+    "id": "INCIDENT-JAPAN-BREACH-WAVE-2026",
+    "type": "incident",
+    "name": "Wave of intrusions at Japanese organisations, including AI pentest platforms",
+    "kind": "intrusion",
+    "status": "observed",
+    "confidence": "medium",
+    "date": "2026-09",
+    "reported": "2026-10-08",
+    "regions": [
+      "Japan"
+    ],
+    "summary": "JPCERT/CC warns of personal-data leaks at Japanese organisations since about September 2026 across products, grouping attacks into cases: known-vulnerability scanning, API abuse with stolen keys, a Metabase SQL injection (CVE-2026-72898), JSP web shells, and (added 23 October) attempts through AI penetration-testing platforms it names as Cairn, CyberStrikeAI and ARTEX against web apps and an exposed WSUS server between 23 September and 20 October. JPCERT calls the information limited and fragmentary and does not say one method was used everywhere. Scutum separately saw three sources run multi-phase AI-agent attacks of up to 12,450 requests on Japanese sites.",
+    "source_ids": [
+      "SRC-JPCERT-AT-2026-0030",
+      "SRC-SCUTUM-WAF-085-AI-AGENTS"
+    ]
+  },
+  {
+    "id": "INCIDENT-CYBERSTRIKEAI-AWS-2026-10",
+    "type": "incident",
+    "name": "AWS intrusion run from a CyberStrikeAI server",
+    "kind": "intrusion",
+    "status": "observed",
+    "confidence": "high",
+    "date": "2026-09-30",
+    "reported": "2026-11-13",
+    "summary": "Elastic traced activity across four AWS accounts (30 September to 16 October 2026) to a confirmed CyberStrikeAI server in Hong Kong: credentials of eight IAM identities validated, Secrets Manager secrets harvested, 56 EC2 user-data requests in 141 milliseconds, an SSM SecureString read and, two seconds later, an SSM SendCommand. Elastic cannot prove an LLM made the decisions and does not know how the credentials were obtained.",
+    "source_ids": [
+      "SRC-ELASTIC-CYBERSTRIKEAI-AWS"
+    ]
+  },
+  {
+    "id": "INCIDENT-HERMES-THAILAND-MOF",
+    "type": "incident",
+    "name": "Hermes Agent in unattended mode against Thailand's Ministry of Finance",
+    "kind": "intrusion",
+    "status": "observed",
+    "confidence": "high",
+    "date": "2026-07",
+    "reported": "2026-07-23",
+    "regions": [
+      "Thailand"
+    ],
+    "summary": "Hunt.io and Bob Diachenko found open directories (9 to 13 July 2026) on a Hong Kong server showing an operator running Hermes Agent with approvals off against Thailand's Ministry of Finance: host enumeration, privilege-escalation checks, web shells on ministry servers, Hadoop and GlassFish tooling, a custom Go implant (Hades) and tunnels; Hunt.io says multiple systems were compromised, initial access is unknown and there is no evidence of exfiltration. Attribution to a Chinese-speaking operator is low-to-medium confidence; Thailand's CERT was notified before publication.",
+    "source_ids": [
+      "SRC-HUNTIO-HERMES-THAILAND-MOF"
+    ]
   }
 ]
