@@ -149,7 +149,7 @@ Ten entries chosen as the highest-value inputs for taxonomy, evidence, tests and
 |---|---|---|---|---|
 | [ethz-spylab/agentdojo](https://github.com/ethz-spylab/agentdojo) | `benchmark` | `LLMI-T001`, `LLMI-T002`, `LLMI-T004`, `LLMI-T008` | 2026-06-02 · MIT | Environment for evaluating attacks and defences of LLM agents. · **start here** |
 | [microsoft/BIPIA](https://github.com/microsoft/BIPIA) | `benchmark` | `LLMI-T002`, `LLMI-T004` | 2024-04-15 · MIT | Benchmark for indirect prompt injection. · archived (as reported) |
-| [liu00222/Open-Prompt-Injection](https://github.com/liu00222/Open-Prompt-Injection) | `benchmark` | `LLMI-T001`, `LLMI-T002` | 2026-09-27 · MIT | Benchmark of prompt injection attacks and defences. |
+| [liu00222/Open-Prompt-Injection](https://github.com/liu00222/Open-Prompt-Injection) | `benchmark` | `LLMI-T001`, `LLMI-T002` | 2026-09-27 · MIT | Toolkit and benchmark of prompt injection attacks and defences (USENIX Security 2024), with the DataSentinel detector (IEEE S&P 2025) and PromptLocate localisation (IEEE S&P 2026). Mapped in references/crosswalks/open-prompt-injection.json. |
 | [JailbreakBench/jailbreakbench](https://github.com/JailbreakBench/jailbreakbench) | `benchmark` | `LLMI-T003` | 2025-03-31 · MIT | Open benchmark of robustness against jailbreaks. |
 | [centerforaisafety/HarmBench](https://github.com/centerforaisafety/HarmBench) | `benchmark` | `LLMI-T001`, `LLMI-T003` | 2024-08-05 · MIT | Standardised evaluation of automated red teaming and refusals. |
 | [agiresearch/ASB](https://github.com/agiresearch/ASB) | `benchmark` | `LLMI-T001`, `LLMI-T002`, `LLMI-T006`, `LLMI-T008`, `LLMI-T009` | 2026-09-29 · MIT | Agent Security Bench. |
