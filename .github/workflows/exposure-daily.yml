@@ -1,0 +1,75 @@
+name: Daily exposure of offensive AI agents (offensive.agency)
+
+# offensive.agency (data by ONYPHE) finishes its daily collection around 18:20 UTC. This job reads its public exports,
+# refreshes data/exposure/ and docs/EXPOSURE-OFFENSIVE-AGENCY.md, and keeps one review PR open with the change.
+# The Pages workflow refreshes the same snapshot at build time, so the Explorer is current even before the PR merges.
+
+on:
+  schedule:
+    - cron: "47 19 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  exposure:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Prepare automation branch
+        run: |
+          git checkout -B automation/exposure-daily
+          # carry the history accumulated on the open PR, if any, so no day is lost before a merge
+          if git fetch -q origin automation/exposure-daily 2>/dev/null; then
+            git checkout FETCH_HEAD -- data/exposure/offensive-agency-history.csv 2>/dev/null || true
+          fi
+
+      - name: Refresh the exposure snapshot
+        run: python scripts/offensive_agency_sync.py --strict
+
+      - name: Validate
+        run: |
+          python scripts/validate_intel.py
+          python -m unittest tests.test_offensive_agency
+
+      - name: Commit snapshot
+        shell: bash
+        run: |
+          git config user.name "llminjection-intel-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/exposure docs/EXPOSURE-OFFENSIVE-AGENCY.md
+          if git diff --cached --quiet; then
+            echo "No exposure changes."
+            exit 0
+          fi
+          DAY="$(python -c "import json;print(json.load(open('data/exposure/offensive-agency.json'))['meta']['ref_day'])")"
+          git commit -m "data: offensive AI agent exposure snapshot $DAY"
+          git push --force origin automation/exposure-daily
+
+      - name: Create or update the review PR
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          if git diff origin/main...HEAD --quiet; then
+            exit 0
+          fi
+          DAY="$(python -c "import json;print(json.load(open('data/exposure/offensive-agency.json'))['meta']['ref_day'])")"
+          BODY="Daily snapshot of offensive AI agents exposed on the Internet, read from https://offensive.agency (data by ONYPHE) by scripts/offensive_agency_sync.py. Aggregates only; IP lists stay at the source. Review before merge."
+          PR="$(gh pr list --base main --head automation/exposure-daily --state open --json number --jq '.[0].number // empty')"
+          if [ -z "$PR" ]; then
+            gh pr create --base main --head automation/exposure-daily --title "data: offensive AI agent exposure $DAY" --body "$BODY"
+          else
+            gh pr edit "$PR" --title "data: offensive AI agent exposure $DAY" --body "$BODY"
+          fi

@@ -58,6 +58,7 @@ async function loadReports(){
   try{SP.reports=await fetch("reports.json").then(r=>r.ok?r.json():null)}catch(_){SP.reports=null}
   try{SP.sub=await fetch("subscribe.json").then(r=>r.ok?r.json():null)}catch(_){SP.sub=null}
   try{SP.vault=await fetch("payload-vault.json").then(r=>r.ok?r.json():null)}catch(_){SP.vault=null}
+  try{SP.exp=await fetch("exposure.json").then(r=>r.ok?r.json():null)}catch(_){SP.exp=null}
 }
 const KIND_ORDER=["platform","landscape","trends","intel","dossier","intake","report","template"];
 function renderSubscribe(){
@@ -179,7 +180,26 @@ function renderThreatModel(){
   box.innerHTML=`<div class="tm">${cats.map(c=>{const ts=techs.filter(n=>n.data.category===c);return`<div class="dp"><h3>${esc(tOr("cat."+c,c.replace(/-/g," ")))}</h3><ul class="plain">${ts.map(n=>{const cs=ctl(n.id);return`<li><a href="#" data-id="${esc(n.id)}">${esc(n.label)}</a> <span class="id">${esc(matLabel(n.data.maturity))}</span><div class="tm-ctl">${cs.length?cs.map(id=>`<a href="#" class="tchip ctl" data-id="${esc(id)}">${esc(nodeById(id)?.label||id)}</a>`).join(""):`<span class="gap">${esc(t("tm.noctl"))}</span>`}</div></li>`}).join("")}</ul></div>`}).join("")}</div>
     <h3 class="sect">${esc(t("tm.frameworks"))}</h3><div class="table-wrap" tabindex="0"><table class="tbl"><thead><tr><th>${esc(t("tm.fw"))}</th><th>${esc(t("tm.scope"))}</th><th>${esc(t("tm.use"))}</th></tr></thead><tbody>${fw.map(n=>`<tr><td>${n.data.url?`<a class="out" href="${esc(n.data.url)}" rel="noopener"><b>${esc(n.label)}</b></a>`:`<b>${esc(n.label)}</b>`}</td><td>${esc(n.data.scope||"")}</td><td>${esc(n.data.use||"")}</td></tr>`).join("")}</tbody></table></div>`;
 }
-function renderSpaces(){renderMatrix();renderReports();renderTrends();renderTTPs();renderHunting();renderDetection();renderThreatModel();renderLatam()}
+/* ---------- exposure: offensive AI agent consoles answering on the Internet (offensive.agency, data by ONYPHE) */
+const spark=(v,w=120,h=26)=>{if(!v||!v.length)return"";const m=Math.max(1,...v),x=i=>(i*(w-2)/Math.max(1,v.length-1)+1).toFixed(1),y=n=>(h-1-(h-2)*n/m).toFixed(1);
+  return`<svg class="spark" viewBox="0 0 ${w} ${h}" width="${w}" height="${h}" aria-hidden="true"><polyline fill="none" stroke="currentColor" stroke-width="1.5" points="${v.map((n,i)=>x(i)+","+y(n)).join(" ")}"/></svg>`};
+function renderExposure(){
+  const box=$("#expBody");if(!box)return;const d=SP.exp;
+  if(!d){box.innerHTML=`<p class="note">${esc(t("exp.none"))}</p>`;return}
+  const T=d.totals,M=d.meta,am=Math.max(1,...d.agents.map(a=>a.active));
+  const cm=Math.max(1,...d.countries.map(c=>c[1])),lt=new Set(d.latam.countries.map(c=>c[0]));
+  const bars=(rows,max,lab)=>`<div class="bars sm">${rows.map(([k,n])=>`<div class="bar"><span>${lab?lab(k):esc(k)}</span><i style="width:${(100*n/max).toFixed(1)}%"></i><b>${nf(n)}</b></div>`).join("")}</div>`;
+  box.innerHTML=`<p class="note" style="margin:0 0 14px">${esc(t("exp.asof",{day:M.ref_day,since:M.active_since}))}</p>
+    <div class="strip">${stat(nf(T.active_ips),t("exp.active"))}${stat(nf(T.all_time_ips),t("exp.alltime"))}${stat(nf(T.new_ips),t("exp.new"))}${stat(nf(T.multi_agent_ips),t("exp.multi"))}${stat(nf(T.ips_with_c2),t("exp.c2"))}${stat(nf(d.latam.total),t("exp.latam"))}</div>
+    <div class="table-wrap" tabindex="0"><table class="tbl"><thead><tr><th>${esc(t("exp.agent"))}</th><th>${esc(t("exp.active"))}</th><th>${esc(t("exp.confirmed"))}</th><th>${esc(t("exp.new"))}</th><th>${esc(t("exp.trend"))}</th><th>${esc(t("exp.port"))}</th><th>${esc(t("exp.fp"))}</th></tr></thead><tbody>${d.agents.map(a=>`<tr${a.tool_id?` data-id="${esc(a.tool_id)}"`:""}><td><a class="out" href="${esc(a.tracker_url)}" rel="noopener"><b>${esc(a.name)}</b></a><br>${a.tool_id?chipLink(a.tool_id):`<span class="id">${esc(t("exp.norecord"))}</span>`}${a.project?` <a class="out id" href="${esc(a.project)}" rel="noopener">${esc(t("exp.project"))}</a>`:""}</td><td><div class="bars sm" style="min-width:140px"><div class="bar" style="grid-template-columns:1fr 44px"><i style="width:${(100*a.active/am).toFixed(1)}%"></i><b>${nf(a.active)}</b></div></div></td><td>${nf(a.confirmed)}</td><td>${nf(a.new)}</td><td>${spark(a.series)}</td><td class="id">${esc(String(a.main_port))}</td><td><details><summary class="id">${esc(t("exp.fp.n",{n:a.fingerprints.length}))}</summary><ul class="plain id">${a.fingerprints.map(f=>`<li><code>${esc(f)}</code></li>`).join("")}</ul></details></td></tr>`).join("")}</tbody></table></div>
+    <div class="dash two"><div class="dp"><h3>${esc(t("exp.countries"))}</h3>${bars(d.countries.slice(0,15),cm,k=>lt.has(k)?`<b>${esc(k)}</b> · LATAM`:esc(k))}<p class="note" style="margin-top:12px">${esc(t("exp.latam.line",{list:d.latam.countries.map(([c,n])=>c+" "+n).join(", ")||"–"}))}</p></div>
+    <div class="dp"><h3>${esc(t("exp.c2same"))}</h3>${bars(d.c2_same_ip,Math.max(1,...d.c2_same_ip.map(x=>x[1])))}<h3 style="margin-top:18px">${esc(t("exp.pairs"))}</h3>${bars(d.agent_pairs.slice(0,8),Math.max(1,...d.agent_pairs.map(x=>x[1])))}</div></div>
+    <div class="dash two"><div class="dp"><h3>${esc(t("exp.network"))}</h3>${bars(Object.entries(T.network).sort((a,b)=>b[1]-a[1]),T.active_ips||1,k=>esc(tOr("exp.net."+k,k)))}<p class="note" style="margin-top:12px">${esc(t("exp.cdn"))}</p></div>
+    <div class="dp"><h3>${esc(t("exp.clusters"))}</h3><ul class="plain">${d.clusters.map(c=>`<li><a class="out" href="${esc(c.tracker_url)}" rel="noopener">${esc(c.slug)}</a> · ${nf(c.hosts)} ${c.tool_id?chipLink(c.tool_id):""}</li>`).join("")}</ul><p class="note">${esc(t("exp.cluster.note"))}</p></div></div>
+    <h3 class="sect">${esc(t("exp.use"))}</h3><p class="note">${esc(t("exp.use.body"))}</p><p class="links">${Object.entries(M.exports).map(([k,u])=>`<a class="out" href="${esc(u)}" rel="noopener">${esc(k)}</a>`).join("")}</p>
+    <p class="note" style="margin-top:18px">${esc(t("exp.caveat"))} ${esc(t("exp.ref"))}</p>`;
+}
+function renderSpaces(){renderMatrix();renderReports();renderTrends();renderTTPs();renderHunting();renderDetection();renderExposure();renderThreatModel();renderLatam()}
 
 /* ---------- Brazil and Latin America: records tagged with a LATAM region, or whose report text names the region */
 const LATAM=new Set(["BR","MX","AR","CL","CO","PE","EC","BO","CR","UY","PY","VE","GT","HN","SV","NI","PA","DO","CU","LATAM"]);
