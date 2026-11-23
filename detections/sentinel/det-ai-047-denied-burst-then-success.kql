@@ -2,6 +2,8 @@
 // Status: experimental hunting query, not tested against live data.
 // Basis: Cloud Security Alliance note on AntiFox (2026-11-12): hundreds of AWS API calls across more than a
 // dozen services in about 30 minutes, mostly AccessDenied, ending in a successful GetSecretValue.
+// Prerequisite: SQS discovery (ListQueues, GetQueueAttributes, GetQueueUrl, ListQueueTags) is a CloudTrail data event,
+// off by default; without the selector in docs/CLOUDTRAIL-DISCOVERY-DATA-EVENTS.md that part of the sweep is invisible.
 let lookback = 1d;
 let bucket = 30m;
 AWSCloudTrail

@@ -83,6 +83,8 @@ A detecção que funciona aqui olha para ritmo, não para assinatura da ferramen
 
 Hipótese de hunting: *um mesmo principal passa de primeiro login bem-sucedido a consentimento de aplicação ou papel privilegiado em menos de três horas, fora do horário habitual do titular.* Quem tem ConnectWise Cloud Backup no ambiente deve rever consentimentos e credenciais de aplicação criados em outubro de 2026.
 
+**Lacuna de telemetria confirmada em emulação.** A Mitigant emulou as técnicas do Storm-0940 via ARTEX numa conta AWS e viu a enumeração de filas SQS passar sem registro no CloudTrail (demo de 2026-11-22, grau C). O motivo é documentado pela AWS: `ListQueues`, `GetQueueAttributes`, `GetQueueUrl` e `ListQueueTags` são eventos de dados, que a trilha não grava por padrão. Sem esse registro, a rajada que o `DET-AI-047` procura fica incompleta. Como ligar só esses eventos está em [`docs/CLOUDTRAIL-DISCOVERY-DATA-EVENTS.md`](../../docs/CLOUDTRAIL-DISCOVERY-DATA-EVENTS.md).
+
 ## 7. Camada 8
 
 Leitura do analista, não fato de fonte.
@@ -113,6 +115,8 @@ Impacto regional não demonstrado nas fontes consultadas. A Microsoft fala em te
 | [`SRC-GTIG-ARTEX-2026-10`](https://cloud.google.com/blog/topics/threat-intelligence/artex-and-friends-enter-agentic-offensive-frameworks) | Google Threat Intelligence Group | A | 2026-10-30 |
 | [`SRC-CENSYS-ARTEX-2026-11`](https://censys.com/blog/artex-agentic-asbestos) | Censys | A | 2026-11-05 |
 | [`SRC-FBI-FLASH-20261113-ARTEX`](https://www.ic3.gov/CSA/2026/261113.pdf) | FBI | A | 2026-11-13 |
+| [`SRC-AWS-SQS-CLOUDTRAIL-LOGGING`](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-logging-using-cloudtrail.html) | Amazon Web Services | A | documentação, lida em 2026-11-23 |
+| [`SRC-MITIGANT-ARTEX-KIRO-MCP`](https://www.youtube.com/watch?v=nLj5LP7oKT0) | Mitigant | C | 2026-11-22 |
 
 Lacunas para a v0.2: infraestrutura do ator, setores e países das oito organizações, atividade anterior a 2026, e se a Microsoft promove o nome "Storm".
 

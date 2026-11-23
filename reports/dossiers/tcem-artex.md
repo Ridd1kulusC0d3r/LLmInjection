@@ -175,7 +175,7 @@ O padrão mais documentado do ARTEX: o agente procura segredos, prova o que cada
 
 **Validação.** Rajada de chamadas negadas seguida de leitura de segredo com a mesma chave (`api_call_denied x3 -> get_secret_value (mesma chave)`). Três negações em serviços diferentes e uma leitura de segredo com a mesma chave (1 alerta); uma negação isolada antes de leitura legítima (sem alerta). Resultado do replay: 1 alerta, passou.
 
-**Lacunas de inteligência.** (1) Quais chaves de longo prazo e de fornecedores existem e quando foram usadas pela última vez? (2) A leitura do AntiFox é da CSA sobre o original da Arctic Wolf, não lido.
+**Lacunas de inteligência.** (1) Quais chaves de longo prazo e de fornecedores existem e quando foram usadas pela última vez? (2) A leitura do AntiFox é da CSA sobre o original da Arctic Wolf, não lido. (3) A trilha registra a descoberta que é evento de dados? ListQueues, GetQueueAttributes, GetQueueUrl e ListQueueTags do SQS são eventos de dados, desligados por padrão (documentação da AWS); a emulação da Mitigant viu a enumeração de SQS passar sem rastro no CloudTrail.
 
 **Decisões propostas.** (1) Revogar chaves de longo prazo sem uso e todas as entregues a fornecedores encerrados. (2) Alertar a sequência negações, sucesso e leitura de segredo por chave.
 
@@ -230,6 +230,7 @@ tce validate tcem/cases/CASE-ARTEX-STORM-0940   # no toolkit TCEM
 
 | ID | Publicador | Grau | Data |
 |---|---|---|---|
+| [`SRC-AWS-SQS-CLOUDTRAIL-LOGGING`](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-logging-using-cloudtrail.html) | Amazon Web Services | A | – |
 | [`SRC-BARRACUDA-ARTEX-2026-11`](https://blog.barracuda.com/2026/11/11/anatomy-of-a-machine-speed-intrusion) | Barracuda Networks | A | 2026-11-11 |
 | [`SRC-CENSYS-ARTEX-2026-11`](https://censys.com/blog/artex-agentic-asbestos) | Censys | A | 2026-11-05 |
 | [`SRC-CERTIN-CIAD-2026-0058`](https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES02&VLCODE=CIAD-2026-0058) | CERT-In | A | 2026-11-04 |

@@ -2427,5 +2427,26 @@
     "url": "https://offensive.agency/about",
     "published": "2026-10-21",
     "last_verified": "2026-11-23"
+  },
+  {
+    "id": "SRC-AWS-SQS-CLOUDTRAIL-LOGGING",
+    "type": "source",
+    "name": "Logging Amazon SQS API calls using AWS CloudTrail (data events vs management events)",
+    "publisher": "Amazon Web Services",
+    "grade": "A",
+    "role": "vendor-documentation",
+    "url": "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-logging-using-cloudtrail.html",
+    "last_verified": "2026-11-23"
+  },
+  {
+    "id": "SRC-MITIGANT-ARTEX-KIRO-MCP",
+    "type": "source",
+    "name": "Run ARTEX attacks with Kiro via Mitigant MCP (demo: Storm-0940 techniques emulated in AWS; SQS enumeration left no CloudTrail trace)",
+    "publisher": "Mitigant",
+    "grade": "C",
+    "role": "vendor-demo",
+    "url": "https://www.youtube.com/watch?v=nLj5LP7oKT0",
+    "published": "2026-11-22",
+    "last_verified": "2026-11-23"
   }
 ]

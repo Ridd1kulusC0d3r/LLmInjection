@@ -800,7 +800,8 @@
     "status": "specification",
     "hypothesis": "One cloud identity issues hundreds of API calls across many services in minutes, most of them denied, and one of them, often a secret read, succeeds. The Cloud Security Alliance's reading of the AntiFox intrusions describes this pattern; the value of the sweep is the few calls that succeed.",
     "telemetry": [
-      "CloudTrail (eventSource, eventName, errorCode, userIdentity.arn, sourceIPAddress)"
+      "CloudTrail (eventSource, eventName, errorCode, userIdentity.arn, sourceIPAddress)",
+      "CloudTrail data events for read-only discovery APIs that are not management events (SQS ListQueues, GetQueueAttributes, GetQueueUrl, ListQueueTags, ListDeadLetterSourceQueues): off by default, enable with advanced event selectors"
     ],
     "test_ids": []
   },

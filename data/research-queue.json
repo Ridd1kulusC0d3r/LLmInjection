@@ -9559,6 +9559,50 @@
         "decision": "not promoted to tools.json yet: an exposed console shows deployment, not abuse; promote when a report documents its use in an intrusion",
         "notes": "Fingerprints (title, favicon MD5, body text) kept in the exposure snapshot for hunting."
       }
+    },
+    {
+      "id": "RQ-MIT-20261123-01",
+      "status": "rejected",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "C",
+      "kind": "ecosystem-candidate",
+      "title": "Mitigant MCP server (agentic cloud adversary emulation)",
+      "url": "https://mitigant.io/en/mcp",
+      "published": "2026-10-31",
+      "observed_at": "2026-11-23T19:40:00Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "LLMI-T015",
+        "ARTEX"
+      ],
+      "summary": "Commercial MCP server that lets Claude Code or Kiro plan and run safe cloud attacks (AWS, Azure, GCP) through Mitigant's emulation platform; needs an API key.",
+      "identifiers": [],
+      "review": {
+        "decision": "not added to ecosystem.json: closed commercial service with no public repository to verify; kept as source SRC-MITIGANT-ARTEX-KIRO-MCP for its SQS telemetry finding",
+        "notes": "Read on 2026-11-23 (YouTube description, mitigant.io video and MCP pages)."
+      }
+    },
+    {
+      "id": "RQ-MIT-20261123-02",
+      "status": "rejected",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "C",
+      "kind": "actor-candidate",
+      "title": "Mitigant actor-to-attack table (12 actors, 4 via ARTEX techniques)",
+      "url": "https://www.youtube.com/watch?v=nLj5LP7oKT0",
+      "published": "2026-11-22",
+      "observed_at": "2026-11-23T19:40:00Z",
+      "relevance_score": 70,
+      "matched_terms": [
+        "LLMI-T015",
+        "ARTEX"
+      ],
+      "summary": "Demo lists 12 actors mapped to emulated attacks; Storm-0940, Storm-3358, VAPOR PANDA and UNC7228 via ARTEX techniques, all already in the graph from primary sources.",
+      "identifiers": [],
+      "review": {
+        "decision": "not promoted: the mapping is the vendor's emulation catalogue without a published method; the 4 ARTEX actors are already sourced (Microsoft, CrowdStrike, GTIG); the other 8 are not AI-specific",
+        "notes": "Read on 2026-11-23 (YouTube description, mitigant.io video and MCP pages)."
+      }
     }
   ]
 }
