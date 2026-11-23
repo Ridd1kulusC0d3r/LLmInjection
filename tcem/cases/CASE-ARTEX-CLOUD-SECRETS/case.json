@@ -25,7 +25,8 @@
    ],
    "information_gap_ids": [
     "GAP-CLOUD-SECRETS-1",
-    "GAP-CLOUD-SECRETS-2"
+    "GAP-CLOUD-SECRETS-2",
+    "GAP-CLOUD-SECRETS-3"
    ],
    "status": "open"
   }
@@ -129,6 +130,25 @@
    ],
    "contradicts": [],
    "analyst_notes": "Grau A (SRC-UNIT42-ARTEX-2026-11)."
+  },
+  {
+   "id": "EV-CLOUD-SECRETS-5",
+   "title": "Logging Amazon SQS API calls using AWS CloudTrail (data events vs management events)",
+   "source_type": "primary-external",
+   "source": "Amazon Web Services",
+   "reference": "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-logging-using-cloudtrail.html",
+   "publication_date": "",
+   "collected_at": "2026-11-23",
+   "claim": "Relato público usado no caso; registros: CAMPAIGN-ARTEX-EXPOSED-SECRETS, CAMPAIGN-ARTEX-AWS, INCIDENT-BARRACUDA-ARTEX-CLOUD-2026-11, CAMPAIGN-ANTIFOX-AWS-IIS, CAMPAIGN-ARTEX-IDENTITY-WORKFLOWS.",
+   "evidence_state": "observed",
+   "source_reliability": "high",
+   "information_credibility": "high",
+   "temporal_relevance": "current",
+   "supports": [
+    "TH-CLOUD-SECRETS"
+   ],
+   "contradicts": [],
+   "analyst_notes": "Grau A (SRC-AWS-SQS-CLOUDTRAIL-LOGGING)."
   }
  ],
  "hypotheses": [
@@ -147,7 +167,8 @@
     "EV-CLOUD-SECRETS-1",
     "EV-CLOUD-SECRETS-2",
     "EV-CLOUD-SECRETS-3",
-    "EV-CLOUD-SECRETS-4"
+    "EV-CLOUD-SECRETS-4",
+    "EV-CLOUD-SECRETS-5"
    ],
    "contradicting_evidence": [],
    "alternative_explanations": [
@@ -160,7 +181,8 @@
    "confidence": "high",
    "information_gap_ids": [
     "GAP-CLOUD-SECRETS-1",
-    "GAP-CLOUD-SECRETS-2"
+    "GAP-CLOUD-SECRETS-2",
+    "GAP-CLOUD-SECRETS-3"
    ],
    "attack_path_ids": [
     "TS-CLOUD-SECRETS"
@@ -364,8 +386,8 @@
    ],
    "detection_use_case_ids": [],
    "behavior": "api_call_denied x3 -> get_secret_value (mesma chave)",
-   "observable": "Alertas de varredura de segredos e uso de chaves de IA; CloudTrail, Azure Activity e sign-ins da credencial; CloudTrail com errorCode por serviço; Eventos GetSecretValue, Key Vault e FilterLogEvents; Auditoria de IAM e do Entra ID; Logs de CI e eventos do runtime de contêineres",
-   "source": "Alertas de varredura de segredos e uso de chaves de IA; CloudTrail, Azure Activity e sign-ins da credencial; CloudTrail com errorCode por serviço; Eventos GetSecretValue, Key Vault e FilterLogEvents; Auditoria de IAM e do Entra ID; Logs de CI e eventos do runtime de contêineres",
+   "observable": "Alertas de varredura de segredos e uso de chaves de IA; CloudTrail, Azure Activity e sign-ins da credencial; CloudTrail com errorCode por serviço, mais eventos de dados de descoberta (SQS) ligados; Eventos GetSecretValue, Key Vault e FilterLogEvents; Auditoria de IAM e do Entra ID; Logs de CI e eventos do runtime de contêineres",
+   "source": "Alertas de varredura de segredos e uso de chaves de IA; CloudTrail, Azure Activity e sign-ins da credencial; CloudTrail com errorCode por serviço, mais eventos de dados de descoberta (SQS) ligados; Eventos GetSecretValue, Key Vault e FilterLogEvents; Auditoria de IAM e do Entra ID; Logs de CI e eventos do runtime de contêineres",
    "event_or_state_change": "get_secret_value",
    "entity_identifiers": [
     "user.access_key"
@@ -493,7 +515,8 @@
     "SRC-MSFT-ARTEX-SECRETS-2026-11",
     "SRC-DATADOG-ARTEX-AWS",
     "SRC-BARRACUDA-ARTEX-2026-11",
-    "SRC-UNIT42-ARTEX-2026-11"
+    "SRC-UNIT42-ARTEX-2026-11",
+    "SRC-AWS-SQS-CLOUDTRAIL-LOGGING"
    ],
    "owner": "detection-engineering",
    "review_date": "2026-12-22"
@@ -561,6 +584,24 @@
    "owner": "cti",
    "status": "open",
    "due_date": "2026-12-22"
+  },
+  {
+   "id": "GAP-CLOUD-SECRETS-3",
+   "question": "A trilha registra a descoberta que é evento de dados? ListQueues, GetQueueAttributes, GetQueueUrl e ListQueueTags do SQS são eventos de dados, desligados por padrão (documentação da AWS); a emulação da Mitigant viu a enumeração de SQS passar sem rastro no CloudTrail.",
+   "affected_requirement_ids": [
+    "IR-CLOUD-SECRETS"
+   ],
+   "affected_hypothesis_ids": [
+    "TH-CLOUD-SECRETS"
+   ],
+   "affected_scenario_ids": [
+    "TS-CLOUD-SECRETS"
+   ],
+   "priority": "high",
+   "collection_action": "Coleta interna ou nova fonte primária.",
+   "owner": "cti",
+   "status": "open",
+   "due_date": "2026-12-22"
   }
  ],
  "decisions": [
@@ -586,12 +627,14 @@
     "EV-CLOUD-SECRETS-1",
     "EV-CLOUD-SECRETS-2",
     "EV-CLOUD-SECRETS-3",
-    "EV-CLOUD-SECRETS-4"
+    "EV-CLOUD-SECRETS-4",
+    "EV-CLOUD-SECRETS-5"
    ],
    "detection_use_case_ids": [],
    "intelligence_gap_ids": [
     "GAP-CLOUD-SECRETS-1",
-    "GAP-CLOUD-SECRETS-2"
+    "GAP-CLOUD-SECRETS-2",
+    "GAP-CLOUD-SECRETS-3"
    ],
    "rationale": "O padrão mais documentado do ARTEX: o agente procura segredos, prova o que cada chave pode fazer em segundos e encadeia o próximo acesso.",
    "created_at": "2026-11-22",
@@ -619,12 +662,14 @@
     "EV-CLOUD-SECRETS-1",
     "EV-CLOUD-SECRETS-2",
     "EV-CLOUD-SECRETS-3",
-    "EV-CLOUD-SECRETS-4"
+    "EV-CLOUD-SECRETS-4",
+    "EV-CLOUD-SECRETS-5"
    ],
    "detection_use_case_ids": [],
    "intelligence_gap_ids": [
     "GAP-CLOUD-SECRETS-1",
-    "GAP-CLOUD-SECRETS-2"
+    "GAP-CLOUD-SECRETS-2",
+    "GAP-CLOUD-SECRETS-3"
    ],
    "rationale": "O padrão mais documentado do ARTEX: o agente procura segredos, prova o que cada chave pode fazer em segundos e encadeia o próximo acesso.",
    "created_at": "2026-11-22",
@@ -648,6 +693,7 @@
    "INCIDENT-BARRACUDA-ARTEX-CLOUD-2026-11",
    "LLMI-T015",
    "LLMI-T016",
+   "SRC-AWS-SQS-CLOUDTRAIL-LOGGING",
    "SRC-BARRACUDA-ARTEX-2026-11",
    "SRC-DATADOG-ARTEX-AWS",
    "SRC-MSFT-ARTEX-SECRETS-2026-11",

@@ -122,7 +122,7 @@ New [source registry and ingestion guidance](docs/AI-INTELLIGENCE-SOURCES.md), [
 
 | Actors | Campaigns | Incidents | Vulnerabilities | Techniques | Sources |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| **75** | **105** | **75** | **51** | **28** | **228** |
+| **75** | **105** | **75** | **51** | **28** | **230** |
 
 | Test cases | Detections | Controls | Frameworks | Model families | Relationships | Ecosystem repos |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -1257,9 +1257,9 @@ Every intelligence item should answer:
 
 | Grade | Class | Sources |
 |---|---|---|
-| **A** | Primary or authoritative | 192 |
+| **A** | Primary or authoritative | 193 |
 | **B** | Strong secondary | 21 |
-| **C** | Reputable press | 10 |
+| **C** | Reputable press | 11 |
 | **D** | Community | 5 |
 | **E** | Unsupported | 0 |
 

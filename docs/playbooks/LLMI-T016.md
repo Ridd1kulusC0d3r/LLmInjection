@@ -74,7 +74,7 @@ The runner has plan and mock adapters only: it does not call your system. To run
 
 - **Severity:** high
 - **Hypothesis:** One cloud identity issues hundreds of API calls across many services in minutes, most of them denied, and one of them, often a secret read, succeeds. The Cloud Security Alliance's reading of the AntiFox intrusions describes this pattern; the value of the sweep is the few calls that succeed.
-- **Telemetry:** `CloudTrail (eventSource, eventName, errorCode, userIdentity.arn, sourceIPAddress)`
+- **Telemetry:** `CloudTrail (eventSource, eventName, errorCode, userIdentity.arn, sourceIPAddress)`, `CloudTrail data events for read-only discovery APIs that are not management events (SQS ListQueues, GetQueueAttributes, GetQueueUrl, ListQueueTags, ListDeadLetterSourceQueues): off by default, enable with advanced event selectors`
 - **Implementation:** rule file(s): [sentinel](../../detections/sentinel/det-ai-047-denied-burst-then-success.kql), [splunk](../../detections/splunk/det-ai-047-denied-burst-then-success.spl). Experimental and not run against real telemetry.
 
 ### DET-AI-053 · AI Service or Gateway Process Spawns a Shell or Network Utility
