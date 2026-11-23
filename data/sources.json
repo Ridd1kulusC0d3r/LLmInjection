@@ -2416,5 +2416,16 @@
     "url": "https://blog.gitguardian.com/ai-pentesting-tools-beyond-artex/",
     "published": "2026-11-09",
     "last_verified": "2026-11-22"
+  },
+  {
+    "id": "SRC-OFFENSIVE-AGENCY-TRACKER",
+    "type": "source",
+    "name": "offensive.agency: passive tracker of offensive AI agents exposed on the Internet (data by ONYPHE)",
+    "publisher": "offensive.agency / ONYPHE",
+    "grade": "B",
+    "role": "exposure-tracker",
+    "url": "https://offensive.agency/about",
+    "published": "2026-10-21",
+    "last_verified": "2026-11-23"
   }
 ]

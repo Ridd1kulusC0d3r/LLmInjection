@@ -221,6 +221,16 @@
       "relevance_mode": "all"
     },
     {
+      "id": "FEED-OFFENSIVE-AGENCY-STATS",
+      "name": "offensive.agency daily exposure of offensive AI agents (read by scripts/offensive_agency_sync.py into data/exposure/, workflow exposure-daily.yml)",
+      "kind": "exposure-stats",
+      "url": "https://offensive.agency/api/stats.json",
+      "source_grade": "B",
+      "enabled": false,
+      "max_items": 1,
+      "relevance_mode": "all"
+    },
+    {
       "id": "FEED-LLMI-DAILY-DIGEST",
       "name": "LLMInjection daily AI threat-landscape digest (intake/digests/*.json, read by scripts/import_digest.py)",
       "kind": "local-digest",

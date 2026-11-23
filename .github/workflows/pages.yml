@@ -19,6 +19,8 @@ on:
       - "scripts/build_report_pages.py"
       - "scripts/diff_intelligence.py"
       - ".github/workflows/pages.yml"
+  schedule:
+    - cron: "53 19 * * *"   # daily, after offensive.agency's collection, so the Exposure tab stays current
   workflow_dispatch:
 
 permissions:
@@ -42,6 +44,8 @@ jobs:
           python-version: "3.12"
       - name: Validate intelligence
         run: python scripts/validate_intel.py
+      - name: Refresh the exposure snapshot (keeps the committed one if offensive.agency is unreachable)
+        run: python scripts/offensive_agency_sync.py
       - name: Build the Explorer (graph, diff, API, Navigator layers, coverage model) into _site
         run: python scripts/build_site.py --out _site
 

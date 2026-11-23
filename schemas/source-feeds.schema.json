@@ -43,7 +43,9 @@
               "github-releases",
               "github-commits",
               "github-advisories",
-              "cisa-kev"
+              "cisa-kev",
+              "local-digest",
+              "exposure-stats"
             ]
           },
           "url": {

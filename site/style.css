@@ -457,3 +457,5 @@ th[aria-sort="ascending"] .sortbtn,th[aria-sort="descending"] .sortbtn{color:var
 .subform input{flex:1;min-width:0;padding:9px 14px;border:1px solid var(--rule);border-radius:var(--pill);background:var(--card);color:var(--ink);font:14px var(--sans)}
 .subfeeds{display:flex;gap:8px;flex-wrap:wrap}.subfeeds a{text-decoration:none}
 @media (max-width:720px){.subbox{grid-template-columns:1fr}}
+
+.spark{display:block;color:var(--seq-3)}

@@ -9449,6 +9449,116 @@
         "decision": "not promoted: GitGuardian says actors experimented with Agent Zero without a case or count; no tool record until an observed case",
         "notes": "Read in the original on 2026-11-22."
       }
+    },
+    {
+      "id": "RQ-OA-20261123-01",
+      "status": "reviewing",
+      "source_feed_id": "FEED-OFFENSIVE-AGENCY-STATS",
+      "source_grade": "B",
+      "kind": "ecosystem-candidate",
+      "title": "RedAmon (samugit83/redamon), offensive AI agent tracked by offensive.agency",
+      "url": "https://github.com/samugit83/redamon",
+      "published": "2026-11-19",
+      "observed_at": "2026-11-23T01:00:00Z",
+      "relevance_score": 80,
+      "matched_terms": [
+        "LLMI-T015",
+        "offensive-agent"
+      ],
+      "summary": "Self-hosted multi-tenant platform for AI-driven penetration testing (Next.js dashboard on port 3000); README claims 101/104 on the XBOW benchmark. Licence MIT; README read as text on 2026-11-23 (last commit 2026-11-19), nothing run. Exposed instances counted daily in data/exposure/offensive-agency.json (https://offensive.agency/agent/redamon).",
+      "identifiers": [],
+      "review": {
+        "decision": "not promoted to tools.json yet: an exposed console shows deployment, not abuse; promote when a report documents its use in an intrusion",
+        "notes": "Fingerprints (title, favicon MD5, body text) kept in the exposure snapshot for hunting."
+      }
+    },
+    {
+      "id": "RQ-OA-20261123-02",
+      "status": "reviewing",
+      "source_feed_id": "FEED-OFFENSIVE-AGENCY-STATS",
+      "source_grade": "B",
+      "kind": "ecosystem-candidate",
+      "title": "CyberStrike (CyberStrikeus/cyberstrike), offensive AI agent tracked by offensive.agency",
+      "url": "https://github.com/CyberStrikeus/cyberstrike",
+      "published": "2026-11-22",
+      "observed_at": "2026-11-23T01:00:00Z",
+      "relevance_score": 80,
+      "matched_terms": [
+        "LLMI-T015",
+        "offensive-agent"
+      ],
+      "summary": "Autonomous offensive security agent with a web interface on ports 4096-4098; distinct from CyberStrikeAI, though 3 IPs run both. Licence AGPL-3.0; README read as text on 2026-11-23 (last commit 2026-11-22), nothing run. Exposed instances counted daily in data/exposure/offensive-agency.json (https://offensive.agency/agent/cyberstrike).",
+      "identifiers": [],
+      "review": {
+        "decision": "not promoted to tools.json yet: an exposed console shows deployment, not abuse; promote when a report documents its use in an intrusion",
+        "notes": "Fingerprints (title, favicon MD5, body text) kept in the exposure snapshot for hunting."
+      }
+    },
+    {
+      "id": "RQ-OA-20261123-03",
+      "status": "reviewing",
+      "source_feed_id": "FEED-OFFENSIVE-AGENCY-STATS",
+      "source_grade": "B",
+      "kind": "ecosystem-candidate",
+      "title": "Xalgorix (xalgorix/xalgorix), offensive AI agent tracked by offensive.agency",
+      "url": "https://github.com/xalgorix/xalgorix",
+      "published": "2026-11-22",
+      "observed_at": "2026-11-23T01:00:00Z",
+      "relevance_score": 80,
+      "matched_terms": [
+        "LLMI-T015",
+        "offensive-agent"
+      ],
+      "summary": "Open-source AI pentester with a 22-phase methodology and an independent verifier that re-exploits findings; self-hosted or vendor cloud. Licence Apache-2.0; README read as text on 2026-11-23 (last commit 2026-11-22), nothing run. Exposed instances counted daily in data/exposure/offensive-agency.json (https://offensive.agency/agent/xalgorix).",
+      "identifiers": [],
+      "review": {
+        "decision": "not promoted to tools.json yet: an exposed console shows deployment, not abuse; promote when a report documents its use in an intrusion",
+        "notes": "Fingerprints (title, favicon MD5, body text) kept in the exposure snapshot for hunting."
+      }
+    },
+    {
+      "id": "RQ-OA-20261123-04",
+      "status": "reviewing",
+      "source_feed_id": "FEED-OFFENSIVE-AGENCY-STATS",
+      "source_grade": "B",
+      "kind": "ecosystem-candidate",
+      "title": "BugTraceAI (BugTraceAI/BugTraceAI), offensive AI agent tracked by offensive.agency",
+      "url": "https://github.com/BugTraceAI/BugTraceAI",
+      "published": "2026-10-19",
+      "observed_at": "2026-11-23T01:00:00Z",
+      "relevance_score": 80,
+      "matched_terms": [
+        "LLMI-T015",
+        "offensive-agent"
+      ],
+      "summary": "Self-hosted web and API pentesting suite with agentic scanning, published model checkpoints and MCP integrations; exposes a JSON API on port 8000. Licence Apache-2.0; README read as text on 2026-11-23 (last commit 2026-10-19), nothing run. Exposed instances counted daily in data/exposure/offensive-agency.json (https://offensive.agency/agent/bugtraceai).",
+      "identifiers": [],
+      "review": {
+        "decision": "not promoted to tools.json yet: an exposed console shows deployment, not abuse; promote when a report documents its use in an intrusion",
+        "notes": "Fingerprints (title, favicon MD5, body text) kept in the exposure snapshot for hunting."
+      }
+    },
+    {
+      "id": "RQ-OA-20261123-05",
+      "status": "reviewing",
+      "source_feed_id": "FEED-OFFENSIVE-AGENCY-STATS",
+      "source_grade": "B",
+      "kind": "ecosystem-candidate",
+      "title": "Pentest-Swarm-AI (Armur-Ai/Pentest-Swarm-AI), offensive AI agent tracked by offensive.agency",
+      "url": "https://github.com/Armur-Ai/Pentest-Swarm-AI",
+      "published": "2026-11-22",
+      "observed_at": "2026-11-23T01:00:00Z",
+      "relevance_score": 80,
+      "matched_terms": [
+        "LLMI-T015",
+        "offensive-agent"
+      ],
+      "summary": "Swarm of LLM agents that exploits findings and builds proofs of concept; the free edition is deliberately limited, a commercial hosted version exists. Licence AGPL-3.0; README read as text on 2026-11-23 (last commit 2026-11-22), nothing run. Exposed instances counted daily in data/exposure/offensive-agency.json (https://offensive.agency/agent/pentestswarm).",
+      "identifiers": [],
+      "review": {
+        "decision": "not promoted to tools.json yet: an exposed console shows deployment, not abuse; promote when a report documents its use in an intrusion",
+        "notes": "Fingerprints (title, favicon MD5, body text) kept in the exposure snapshot for hunting."
+      }
     }
   ]
 }

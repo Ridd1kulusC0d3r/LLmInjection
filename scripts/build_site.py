@@ -75,7 +75,7 @@ def build(out: Path) -> None:
         ("dist/llminjection-stix.json", "llminjection-stix.json"), ("data/threat-landscape-2026.json", "landscape.json"),
         ("data/ecosystem.json", "ecosystem.json"), ("dist/coverage.json", "coverage.json"),
         ("dist/current-snapshot.json", "current-snapshot.json"), ("dist/intelligence-diff.json", "intelligence-diff.json"),
-        ("dist/intelligence-diff.md", "intelligence-diff.md"),
+        ("dist/intelligence-diff.md", "intelligence-diff.md"), ("data/exposure/offensive-agency.json", "exposure.json"),
     ]:
         shutil.copy(ROOT / src, out / name)
     shutil.copytree(dist / "api", out / "api")

@@ -13,7 +13,8 @@
       "SRC-GTIG-ARTEX-2026-10",
       "SRC-WIZ-ARTEX-VENDORS",
       "SRC-CENSYS-ARTEX-2026-11",
-      "SRC-SPECTRUM-SWARM-CHASING"
+      "SRC-SPECTRUM-SWARM-CHASING",
+      "SRC-OFFENSIVE-AGENCY-TRACKER"
     ]
   },
   {
@@ -26,7 +27,8 @@
     "summary": "Self-hosted, Chinese-language agentic pentest platform whose README calls it secondary development of ARTEX; tied by Arctic Wolf Labs (as read by the Cloud Security Alliance) to IIS and AWS intrusions.",
     "source_ids": [
       "SRC-CSA-ANTIFOX",
-      "SRC-BC-ANTIFOX"
+      "SRC-BC-ANTIFOX",
+      "SRC-OFFENSIVE-AGENCY-TRACKER"
     ]
   },
   {
@@ -38,7 +40,8 @@
     "summary": "Autonomous offensive framework aimed at lowering the barrier for entry-level operators; GTIG observed a customised orchestration platform built on it in the wild.",
     "source_ids": [
       "SRC-GTIG-AGENTIC-THRESHOLD-2026-11",
-      "SRC-GTIG-ARTEX-2026-10"
+      "SRC-GTIG-ARTEX-2026-10",
+      "SRC-OFFENSIVE-AGENCY-TRACKER"
     ]
   },
   {
@@ -53,7 +56,8 @@
       "SRC-GAMBIT-AI-AGENTS-RETAILERS",
       "SRC-GTIG-AGENTIC-THRESHOLD-2026-11",
       "SRC-JPCERT-AT-2026-0030",
-      "SRC-NORFORGE-INSIDE-CAIRN"
+      "SRC-NORFORGE-INSIDE-CAIRN",
+      "SRC-OFFENSIVE-AGENCY-TRACKER"
     ]
   },
   {
@@ -67,7 +71,8 @@
       "SRC-ELASTIC-CYBERSTRIKEAI-AWS",
       "SRC-GTIG-AGENTIC-THRESHOLD-2026-11",
       "SRC-JPCERT-AT-2026-0030",
-      "SRC-KASPERSKY-CYBERSTRIKEAI-2026-11"
+      "SRC-KASPERSKY-CYBERSTRIKEAI-2026-11",
+      "SRC-OFFENSIVE-AGENCY-TRACKER"
     ]
   },
   {
@@ -81,7 +86,8 @@
       "SRC-CHECKPOINT-HEXSTRIKE-2025",
       "SRC-ELASTIC-AGENTIC-FRAMEWORKS",
       "SRC-GTIG-AGENTIC-THRESHOLD-2026-11",
-      "SRC-GTIG-AI-TRACKER-2026-05"
+      "SRC-GTIG-AI-TRACKER-2026-05",
+      "SRC-OFFENSIVE-AGENCY-TRACKER"
     ]
   },
   {
@@ -93,7 +99,8 @@
     "summary": "Multi-agent framework for automated vulnerability identification and validation, seen in a PRC-nexus intrusion (GTIG) and in a financially motivated card-skimming operation (Gambit).",
     "source_ids": [
       "SRC-GTIG-AI-TRACKER-2026-05",
-      "SRC-GAMBIT-AI-AGENTS-RETAILERS"
+      "SRC-GAMBIT-AI-AGENTS-RETAILERS",
+      "SRC-OFFENSIVE-AGENCY-TRACKER"
     ]
   },
   {

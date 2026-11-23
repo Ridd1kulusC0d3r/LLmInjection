@@ -68,6 +68,7 @@
       <button class="tab" role="tab" id="tab-matrix" aria-controls="matrix" aria-selected="false" tabindex="-1" data-tab="matrix" data-i18n="tab.matrix">Defense matrix</button>
       <button class="tab" role="tab" id="tab-hunting" aria-controls="hunting" aria-selected="false" tabindex="-1" data-tab="hunting" data-i18n="tab.hunting">Hunting</button>
       <button class="tab" role="tab" id="tab-detection" aria-controls="detection" aria-selected="false" tabindex="-1" data-tab="detection" data-i18n="tab.detection">Detection</button>
+      <button class="tab" role="tab" id="tab-exposure" aria-controls="exposure" aria-selected="false" tabindex="-1" data-tab="exposure" data-i18n="tab.exposure">Exposure</button>
       <button class="tab" role="tab" id="tab-threatmodel" aria-controls="threatmodel" aria-selected="false" tabindex="-1" data-tab="threatmodel" data-i18n="tab.threatmodel">Threat modeling</button>
       <button type="button" class="tabgrp" data-goto="ecosystem" data-i18n="tabgrp.reference" data-i18n-attr="title:tabgrp.go">Reference</button>
       <button class="tab" role="tab" id="tab-ecosystem" aria-controls="ecosystem" aria-selected="false" tabindex="-1" data-tab="ecosystem" data-i18n="tab.ecosystem">Ecosystem</button>
@@ -263,6 +264,14 @@
         <h2 data-i18n="det.title"></h2>
         <p class="sub" data-i18n="det.sub"></p>
         <div id="detBody"></div>
+      </section>
+
+      <section id="exposure" class="view" role="tabpanel" aria-labelledby="tab-exposure" tabindex="0">
+        <div class="eyebrow" data-i18n="exp.eyebrow"></div>
+        <h2 data-i18n="exp.title"></h2>
+        <p class="sub" data-i18n="exp.sub"></p>
+        <p class="links" style="margin:0 0 18px"><a class="out" href="https://offensive.agency/" rel="noopener" data-i18n="exp.link.tracker">offensive.agency</a><a class="out" href="https://offensive.agency/about" rel="noopener" data-i18n="exp.link.method">Method and limits</a><a class="out" href="https://github.com/Ridd1kulusC0d3r/LLmInjection/blob/main/docs/EXPOSURE-OFFENSIVE-AGENCY.md" rel="noopener" data-i18n="exp.link.doc">Snapshot in the repository</a><a class="out" href="https://github.com/Ridd1kulusC0d3r/LLmInjection/blob/main/data/exposure/offensive-agency-history.csv" rel="noopener" data-i18n="exp.link.history">Daily history (CSV)</a></p>
+        <div id="expBody"></div>
       </section>
 
       <section id="threatmodel" class="view" role="tabpanel" aria-labelledby="tab-threatmodel" tabindex="0">

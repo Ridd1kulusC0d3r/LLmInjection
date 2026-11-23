@@ -1,4 +1,4 @@
-.PHONY: tcem print test validate build charts readme lint audit check navigator coverage site osint
+.PHONY: exposure tcem print test validate build charts readme lint audit check navigator coverage site osint
 
 test:
 	python3 -m unittest discover -s tests -v
@@ -47,6 +47,9 @@ print:
 	node scripts/render_print_report.js dist/print-storm0940 reports/pdf/LLMI-PA-STORM-0940.pdf --dossier reports/dossiers/ator-storm-0940.md
 	python3 scripts/build_print_report.py --out dist/print-tcem --dossier reports/dossiers/tcem-artex.md
 	node scripts/render_print_report.js dist/print-tcem reports/pdf/LLMI-TM-ARTEX.pdf --dossier reports/dossiers/tcem-artex.md
+
+exposure:
+	python3 scripts/offensive_agency_sync.py
 
 tcem:
 	python3 scripts/build_tcem.py
