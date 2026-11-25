@@ -9623,7 +9623,7 @@
       "identifiers": [],
       "review": {
         "decision": "not promoted: original not read yet",
-        "notes": "From the ARTEX source dossier shared on 2026-11-24 (@Rafael)."
+        "notes": "From an ARTEX source compilation reviewed on 2026-11-25."
       }
     },
     {
@@ -9645,7 +9645,7 @@
       "identifiers": [],
       "review": {
         "decision": "not promoted: original not located",
-        "notes": "From the ARTEX source dossier shared on 2026-11-24 (@Rafael)."
+        "notes": "From an ARTEX source compilation reviewed on 2026-11-25."
       }
     },
     {
@@ -9667,7 +9667,7 @@
       "identifiers": [],
       "review": {
         "decision": "not promoted: keep at grade C until BadByte's report is read",
-        "notes": "From the ARTEX source dossier shared on 2026-11-24 (@Rafael)."
+        "notes": "From an ARTEX source compilation reviewed on 2026-11-25."
       }
     },
     {
@@ -9689,7 +9689,7 @@
       "identifiers": [],
       "review": {
         "decision": "not promoted: read the Black October post and each victim disclosure",
-        "notes": "From the ARTEX source dossier shared on 2026-11-24 (@Rafael)."
+        "notes": "From an ARTEX source compilation reviewed on 2026-11-25."
       }
     },
     {
@@ -9711,7 +9711,7 @@
       "identifiers": [],
       "review": {
         "decision": "not promoted: the Censys original is already SRC-CENSYS-ARTEX-2026-11 (grade A); implicator returned HTTP 403",
-        "notes": "From the ARTEX source dossier shared on 2026-11-24 (@Rafael)."
+        "notes": "From an ARTEX source compilation reviewed on 2026-11-25."
       }
     },
     {
@@ -9733,7 +9733,7 @@
       "identifiers": [],
       "review": {
         "decision": "not promoted: originals not read; port divergence unresolved",
-        "notes": "From the ARTEX source dossier shared on 2026-11-24 (@Rafael)."
+        "notes": "From an ARTEX source compilation reviewed on 2026-11-25."
       }
     }
   ]

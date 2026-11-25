@@ -8,7 +8,7 @@ title: "Dossiê: ARTEX, framework ofensivo agêntico em uso por vários atores"
 <p class="rpt-head"><span>LLMI-DS-ARTEX · v0.5</span><span class="tlp">TLP:CLEAR</span><span>Corte 2026-11-25</span></p>
 
 <div class="injected" markdown="1">
-v0.5 (2026-11-25): três relatórios lidos no original a partir do dossiê de fontes do Rafael (24/11). O da Bitrise é o relatório de vítima mais detalhado publicado até aqui (§6.4, `INCIDENT-BITRISE-ARTEX-2026-11`). A MadPot da Amazon capturou a memória operacional dos agentes (`CAMPAIGN-ARTEX-MADPOT-AI-CREDENTIAL-THEFT`, `CAMPAIGN-ARTEX-MADPOT-KYC-DEEPFAKE`). A Wiz publicou a campanha ARTEX-Harvester e um caso visto dos dois lados (`CAMPAIGN-ARTEX-HARVESTER`, `INCIDENT-WIZ-CYBERSTRIKEAI-EKS-BOTH-SIDES-2026-10`). A §6.3 traz o que a leitura do código mostra sobre o gate de aprovação. A regra Sigma nova é `det-ai-048-artex-self-declared-pentest-web`.
+v0.5 (2026-11-25): três relatórios lidos no original a partir de uma compilação de fontes sobre o ARTEX. O da Bitrise é o relatório de vítima mais detalhado publicado até aqui (§6.4, `INCIDENT-BITRISE-ARTEX-2026-11`). A MadPot da Amazon capturou a memória operacional dos agentes (`CAMPAIGN-ARTEX-MADPOT-AI-CREDENTIAL-THEFT`, `CAMPAIGN-ARTEX-MADPOT-KYC-DEEPFAKE`). A Wiz publicou a campanha ARTEX-Harvester e um caso visto dos dois lados (`CAMPAIGN-ARTEX-HARVESTER`, `INCIDENT-WIZ-CYBERSTRIKEAI-EKS-BOTH-SIDES-2026-10`). A §6.3 traz o que a leitura do código mostra sobre o gate de aprovação. A regra Sigma nova é `det-ai-048-artex-self-declared-pentest-web`.
 
 v0.4 (2026-11-20): censo de consoles da Spectrum (§6.1) e o fork do ScopeSentry que entrega alvos ao ARTEX (§6.2, `TOOL-SCOPESENTRY`, `DET-AI-058`). O repositório artex-detections não mudou desde o mapa da §7.1 (commit `3ad092e`).
 
@@ -262,6 +262,6 @@ Também lidas: `SRC-MSFT-STORM-3358-ARTEX` · `SRC-WIZ-ARTEX-VENDORS` · `SRC-WO
 
 **Lidas em v0.4:** `SRC-SPECTRUM-SWARM-CHASING` (B) · `SRC-GH-SCOPESENTRY-NIUDAII` (código, B). As 22 referências da Spectrum ainda não abertas aqui estão na fila de pesquisa (`intake/digests/2026-11-20-spectrum.json`).
 
-**Lidas em v0.5 (2026-11-25):** `SRC-BITRISE-ARTEX-INCIDENT-2026-11` (A) · `SRC-AWS-ARTEX-MADPOT-2026-11` (A) · `SRC-WIZ-AGENTIC-ATTACKS-2026-11` (A) · `SRC-0XUKI-ARTEX-DESIGN` (C, leitura de código) · `SRC-GUARDZ-ARTEX` (D) · `SRC-TOMODAHINATA-ARTEX-ARCH` (D, separa o que foi confirmado do que não foi). O ponto de partida foi o "ARTEX — Dossiê de Fontes" (@Rafael, 24/11), com mais de 60 fontes, usado só como roteiro de leitura.
+**Lidas em v0.5 (2026-11-25):** `SRC-BITRISE-ARTEX-INCIDENT-2026-11` (A) · `SRC-AWS-ARTEX-MADPOT-2026-11` (A) · `SRC-WIZ-AGENTIC-ATTACKS-2026-11` (A) · `SRC-0XUKI-ARTEX-DESIGN` (C, leitura de código) · `SRC-GUARDZ-ARTEX` (D) · `SRC-TOMODAHINATA-ARTEX-ARCH` (D, separa o que foi confirmado do que não foi). O ponto de partida foi uma compilação de mais de 60 fontes, usada só como roteiro de leitura.
 
 **Ainda a ler:** o boletim da Arctic Wolf (não localizado); a Huntress (403) e a SentinelOne (429) recusaram o acesso automático.
