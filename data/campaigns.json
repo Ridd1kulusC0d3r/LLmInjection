@@ -1409,5 +1409,44 @@
     "source_ids": [
       "SRC-THREATDOWN-CARBONATO"
     ]
+  },
+  {
+    "id": "CAMPAIGN-ARTEX-MADPOT-AI-CREDENTIAL-THEFT",
+    "type": "campaign",
+    "name": "ARTEX agents stealing AI model credentials at industrial scale (seen through Amazon MadPot)",
+    "confidence": "medium",
+    "first_seen": "2026-10",
+    "last_seen": "2026-11",
+    "reported": "2026-11-13",
+    "summary": "From 3 Oct to 5 Nov 2026, Amazon MadPot sensors posing as LLM inference APIs received the agents' own operating memory (system prompts, tool history, knowledge-graph state). Amazon assesses with moderate confidence that the framework was ARTEX and that the operators are disparate Chinese-nexus groups (simplified Chinese prompts, China time zones, red lines excluding mainland China and government domains, all traffic through proxies). The agents hunted exposed AI applications that hold upstream provider keys (One API, New API, Veloera, Sub2API, LiteLLM, Dify, FastGPT, Langflow, RAGFlow, Open WebUI, LobeChat, Ollama) with a codified playbook (unclaimed installs, anonymous admin endpoints, the LiteLLM default master key, CVE-2025-3248, CVE-2026-28797, SSRF to metadata, secrets in client JavaScript), and mined GitHub, npm, PyPI, container layers, notebooks, paste sites and Telegram. Stolen keys fed the framework's own model gateway, paying for the agents that hunted more keys; credentials were graded L1 lead, L2 working call, L3 quantified impact. Amazon cannot verify the outcomes the agents reported.",
+    "source_ids": [
+      "SRC-AWS-ARTEX-MADPOT-2026-11"
+    ]
+  },
+  {
+    "id": "CAMPAIGN-ARTEX-MADPOT-KYC-DEEPFAKE",
+    "type": "campaign",
+    "name": "ARTEX agents attempting crypto-exchange KYC bypass with real-time deepfakes (seen through Amazon MadPot)",
+    "confidence": "medium",
+    "first_seen": "2026-10",
+    "last_seen": "2026-10",
+    "reported": "2026-11-13",
+    "summary": "Agent records captured by Amazon MadPot show at least four parallel ARTEX sessions working on two cryptocurrency exchanges: one reverse-engineered a vendor's liveness protocol (face-detection event stream, coordinate system), one built a real-time deepfake pipeline on a single consumer GPU (11.5 frames per second with an open-source face animation model), one forged ID photos with synthetic camera metadata and the original JPEG quantisation tables, and others looked for cash-out and balance clearing. The best attempt matched the movement sequence within 7 pixels, but the vendor's server-side verdict rejected the deepfake in every attempt recorded. Attribution and outcomes as in the credential-theft campaign: moderate confidence, agents' own narration.",
+    "source_ids": [
+      "SRC-AWS-ARTEX-MADPOT-2026-11"
+    ]
+  },
+  {
+    "id": "CAMPAIGN-ARTEX-HARVESTER",
+    "type": "campaign",
+    "name": "ARTEX-Harvester: opportunistic agentic intrusions through residential proxies (Wiz)",
+    "confidence": "medium",
+    "first_seen": "2026-10",
+    "last_seen": "2026-11",
+    "reported": "2026-11-23",
+    "summary": "One of about a dozen agentic campaigns Wiz tracks, clustered on a distinctive boto3 build, an incrementing ARTEX intent ID seen across victims and proxy-pool overlap; tied at varying confidence to more than a dozen organizations between late October and mid-November 2026, with a different residential or ISP proxy exit for almost every request (over 220 IPs at one target). The operator tried stolen cloud keys, anonymous storage, sign-up and password-reset flows and identity-provider probing in parallel. In one success, stolen VCS credentials led to private repositories, branches abusing CI workload-identity trust, and harvest workflows that dumped CI secrets and Terraform state; in parallel a stolen pod service-account token created a privileged node-level collector pod that took the kubelet PKI and projected tokens, and a cert-manager token read ArgoCD secrets, reaching cluster-admin. Artifacts carried self-labels (pentest-recon user agents, pentest-* pods, pentest-iNNNNNN counters).",
+    "source_ids": [
+      "SRC-WIZ-AGENTIC-ATTACKS-2026-11"
+    ]
   }
 ]
