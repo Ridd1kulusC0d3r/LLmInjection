@@ -1,7 +1,7 @@
 {
   "meta": {
     "schema_version": "1.0",
-    "last_run": "2026-11-21T10:10:31Z",
+    "last_run": "2026-11-25T12:21:08Z",
     "policy": "candidate-only; no automatic promotion into official intelligence datasets",
     "statuses": [
       "candidate",
@@ -9602,6 +9602,201 @@
       "review": {
         "decision": "not promoted: the mapping is the vendor's emulation catalogue without a published method; the 4 ARTEX actors are already sourced (Microsoft, CrowdStrike, GTIG); the other 8 are not AI-specific",
         "notes": "Read on 2026-11-23 (YouTube description, mitigant.io video and MCP pages)."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261125-01",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "C",
+      "kind": "digest-vulnerability",
+      "title": "CISA adds MONAI Label path traversal (CVE-2026-133968) to KEV after AI-agent exploitation",
+      "url": "https://thehackernews.com/2026/11/hackers-exploit-n-able-mailassure-flaw.html",
+      "published": "2026-11-24",
+      "observed_at": "2026-11-25T12:21:08Z",
+      "relevance_score": 40,
+      "matched_terms": [
+        "LLMI-T024",
+        "LLMI-T015"
+      ],
+      "summary": "[LLMI-20261125-01] seal: secondary; update. Per The Hacker News, CISA added the MONAI Label datastore path traversal, now CVE-2026-133968 (CVSS 9.8), to the KEV catalog on 23 Nov 2026 with a federal due date of 26 Nov, citing the Cairn-agent exploitation that Amazon reported. The article says the attackers wrote a Python reverse shell to sitecustomize.py; it does not state a fixed version. The CISA alert (https://www.cisa.gov/news-events/alerts/2026/11/23/cisa-adds-two-known-exploited-vulnerabilities-catalog) was not read in this run.",
+      "identifiers": [
+        "CVE-2026-133968",
+        "GHSA-qc22-rmgc-vg94"
+      ],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261125. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261125-02",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "C",
+      "kind": "digest-threat-report",
+      "title": "Microsoft agent-framework 1.26.1/1.26.2 on PyPI shipped a .pth credential stealer (Azure, CI/CD, Hugging Face)",
+      "url": "https://thehackernews.com/2026/11/attackers-compromise-microsofts-agent.html",
+      "published": "2026-11-18",
+      "observed_at": "2026-11-25T12:21:08Z",
+      "relevance_score": 40,
+      "matched_terms": [
+        "LLMI-T011"
+      ],
+      "summary": "[LLMI-20261125-02] seal: secondary; recovered. Per The Hacker News, citing Aikido, Chainguard, Endor Labs, OX Security, SafeDep, Socket, StepSecurity and Wiz, two malicious releases of Microsoft's agent-framework meta-package (1.26.1, 1.26.2) were published 33 minutes apart on 17 Nov 2026 and dropped a .pth file (agent_framework_meta.pth, af_runtime_diag.pth) that ran a stealer on every Python start. It collected environment variables, credential files (Azure CLI, .npmrc, pip.conf, .netrc, .git-credentials, Docker, Hugging Face), Azure DevOps and GitHub Actions OIDC tokens and managed-identity tokens, and posted them to a webhook.site URL. How publishing access was obtained is unclear; no attribution. Last safe version 1.26.0; vendor write-ups not read in this run.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261125. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261125-03",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "C",
+      "kind": "digest-research",
+      "title": "AIR WebSec Benchmark: every tested search API handed coding-agent queries known-malicious results",
+      "url": "https://thehackernews.com/expert-insights/2026/11/ai-coding-agents-are-getting-malicious.html",
+      "published": "2026-11-23",
+      "observed_at": "2026-11-25T12:21:08Z",
+      "relevance_score": 40,
+      "matched_terms": [
+        "LLMI-T012",
+        "LLMI-T002"
+      ],
+      "summary": "[LLMI-20261125-03] seal: secondary; new. AIR Research Lab, writing in The Hacker News, replayed 4,719 developer-style searches derived from 850 open-source coding-agent sessions against eight search APIs (Firecrawl, Tavily, Perplexity, Parallel, Exa, Nimble, Brave, You.com) and checked over 282,000 results. All eight returned known-malicious content at least once; per-API rates were 0.8%-2.2% of searches, highest for install and package queries. It measures search APIs, not named agent products. Primary report: https://websec.air.security/ (not read).",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261125. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261125-04",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "C",
+      "kind": "digest-research",
+      "title": "OpenAI and Cisco release Shirudo: agents write signed eBPF shields to block exploits before patching",
+      "url": "https://thehackernews.com/2026/11/openai-and-cisco-unveil-ai-assisted.html",
+      "published": "2026-11-24",
+      "observed_at": "2026-11-25T12:21:08Z",
+      "relevance_score": 40,
+      "matched_terms": [],
+      "summary": "[LLMI-20261125-04] seal: secondary; new. Per The Hacker News, OpenAI and Cisco launched Shirudo, an open-source Linux runtime built on Tetragon in which agents trace a vulnerability to affected assets and write a temporary eBPF shield, delivered as a signed package through an OCI registry and verified before loading; operators can observe a shield before enforcing it. The only validation cited is a controlled test in which a Codex-written shield blocked an exploit attempt against a running Elasticsearch service. Announcements by OpenAI and Cisco were not read here.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261125. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261125-05",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "D",
+      "kind": "digest-research",
+      "title": "UK AISI reported a universal jailbreak against pre-release GPT-6.2 Astra and Sol",
+      "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol/",
+      "published": "2026-11-19",
+      "observed_at": "2026-11-25T12:21:08Z",
+      "relevance_score": 25,
+      "matched_terms": [
+        "LLMI-T003"
+      ],
+      "summary": "[LLMI-20261125-05] seal: secondary; recovered. Per The Hacker News ThreatsDay roundup of 19 Nov 2026, OpenAI's GPT-6.2 Astra and Sol announcement reports significant cyber-capability gains, and the UK AI Security Institute found a universal jailbreak against pre-release versions that OpenAI says it fixed. The OpenAI page was not read; AISI disclosure date not given.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261125. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261125-06",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "D",
+      "kind": "digest-threat-report",
+      "title": "Hudson Rock: infostealer marketplace sells stolen data with AI-written, natural-language-searchable victim profiles",
+      "url": "https://www.infostealers.com/article/inside-the-ai-powered-marketplace-turning-infected-computers-into-searchable-profiles/",
+      "published": "2026-11-19",
+      "observed_at": "2026-11-25T12:21:08Z",
+      "relevance_score": 25,
+      "matched_terms": [
+        "LLMI-T014"
+      ],
+      "summary": "[LLMI-20261125-06] seal: secondary; recovered. Per The Hacker News ThreatsDay roundup of 19 Nov 2026, Hudson Rock describes a marketplace that sells infostealer-stolen data together with AI-generated profiles of each infected machine's owner, searchable in natural language. Original not read; date is the roundup's.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261125. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261125-07",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "D",
+      "kind": "digest-threat-report",
+      "title": "Varonis: TheMailer phishing kit uses several AI models to rewrite lures until they pass spam filters",
+      "url": "https://www.varonis.com/blog/themailer-ai-phishing-kit",
+      "published": null,
+      "observed_at": "2026-11-25T12:21:08Z",
+      "relevance_score": 25,
+      "matched_terms": [
+        "LLMI-T014"
+      ],
+      "summary": "[LLMI-20261125-07] seal: secondary; recovered. Per The Hacker News ThreatsDay roundup of 19 Nov 2026, Varonis describes TheMailer, a phishing kit that uses multiple AI models to write lures and keeps rewriting them until they pass spam filtering. Original not read; publication date not given.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261125. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261125-08",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "D",
+      "kind": "digest-threat-report",
+      "title": "Reuters: Chinese entities distill outputs of US AI models to train domestic rivals under chip curbs",
+      "url": "https://www.reuters.com/world/china/china-taps-us-ai-models-train-homegrown-rivals-chip-curbs-bite-2026-11-17/",
+      "published": "2026-11-17",
+      "observed_at": "2026-11-25T12:21:08Z",
+      "relevance_score": 25,
+      "matched_terms": [
+        "LLMI-T019"
+      ],
+      "summary": "[LLMI-20261125-08] seal: secondary; recovered. Per The Hacker News ThreatsDay roundup of 19 Nov 2026, a Reuters review reports that Chinese entities use outputs from US AI models to train domestic models as chip export curbs bite. Original not read; date from the URL.",
+      "identifiers": [],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261125. Read the primary source before promoting."
+      }
+    },
+    {
+      "id": "RQ-DIG-20261125-09",
+      "status": "candidate",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "D",
+      "kind": "digest-vulnerability",
+      "title": "MCP Python SDK CVE-2026-116686: tool outputSchema $ref lets a malicious server make the client fetch URLs or read local files",
+      "url": "https://security-tracker.debian.org/tracker/CVE-2026-116686",
+      "published": "2026-10-27",
+      "observed_at": "2026-11-25T12:21:08Z",
+      "relevance_score": 25,
+      "matched_terms": [
+        "LLMI-T021"
+      ],
+      "summary": "[LLMI-20261125-09] seal: secondary; retrospective. Collected via search (Debian tracker, TuxCare, OpenCVE). In mcp 1.10.0 to before 1.30.0 and 2.x before 2.2.0, client tool calls validate a server-declared outputSchema with jsonschema's default resolver, so an unresolved $ref makes the client request an http(s) URL or open a file:// path from its own network position on every call. Rated CVSS 6.5 (CWE-918); fixed in 1.30.0 and 2.2.0, which resolve references only inside the received schema. No public exploitation reported.",
+      "identifiers": [
+        "CVE-2026-116686",
+        "GHSA-rwrf-2pqf-9j8j"
+      ],
+      "review": {
+        "decision": null,
+        "notes": "From digest LLMI-20261125. Read the primary source before promoting."
       }
     }
   ]
