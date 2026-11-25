@@ -2512,5 +2512,38 @@
     "role": "secondary-analysis",
     "url": "https://tomodahinata.com/en/blog/artex-ai-pentesting-architecture-guide",
     "last_verified": "2026-11-25"
+  },
+  {
+    "id": "SRC-OPENROUTER-ZDR-PROVIDER-INCIDENTS",
+    "type": "source",
+    "name": "OpenRouter: data processing incidents on inference providers (three providers and 125 endpoints removed from Zero Data Retention)",
+    "publisher": "OpenRouter",
+    "grade": "A",
+    "role": "threat-report",
+    "url": "https://openrouter.ai/blog/announcements/data-processing-incidents-on-inference-providers/",
+    "published": "2026-11-22",
+    "last_verified": "2026-11-25"
+  },
+  {
+    "id": "SRC-DRAGOS-AI-CANARY-PROMPTS",
+    "type": "source",
+    "name": "Dragos: AI supply chain security with canary tokens (planted prompt secrets reused by third parties)",
+    "publisher": "Dragos",
+    "grade": "A",
+    "role": "threat-research",
+    "url": "https://www.dragos.com/blog/ai-supply-chain-security-canary-tokens",
+    "published": "2026-11-19",
+    "last_verified": "2026-11-25"
+  },
+  {
+    "id": "SRC-AWS-2026-200-ECS-MCP",
+    "type": "source",
+    "name": "AWS Security Bulletin 2026-200-AWS: CVE-2026-135614, sensitive data redaction bypass in Amazon ECS MCP Server troubleshooting tool",
+    "publisher": "Amazon Web Services",
+    "grade": "A",
+    "role": "security-advisory",
+    "url": "https://aws.amazon.com/security/security-bulletins/2026-200-aws/",
+    "published": "2026-11-24",
+    "last_verified": "2026-11-25"
   }
 ]

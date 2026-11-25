@@ -7002,5 +7002,30 @@
     "evidence_sources": [
       "SRC-AWS-ARTEX-MADPOT-2026-11"
     ]
+  },
+  {
+    "id": "REL-634",
+    "type": "relationship",
+    "source": "DET-AI-060",
+    "relationship": "detects",
+    "target": "LLMI-T004",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-DRAGOS-AI-CANARY-PROMPTS",
+      "SRC-OPENROUTER-ZDR-PROVIDER-INCIDENTS",
+      "SRC-AWS-2026-200-ECS-MCP"
+    ]
+  },
+  {
+    "id": "REL-635",
+    "type": "relationship",
+    "source": "DET-AI-060",
+    "relationship": "detects",
+    "target": "LLMI-T016",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-DRAGOS-AI-CANARY-PROMPTS",
+      "SRC-OPENROUTER-ZDR-PROVIDER-INCIDENTS"
+    ]
   }
 ]

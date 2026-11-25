@@ -15,7 +15,7 @@
 |---|---|
 | Evidence | 14 record(s), 13 publisher(s), best grade A, newest 2026 |
 | Safe tests | 1 |
-| Detections | 3 rule file(s), 1 specification(s) |
+| Detections | 4 rule file(s), 1 specification(s) |
 | Controls | 1 |
 | Benchmarks | 0 |
 
@@ -95,6 +95,13 @@ The runner has plan and mock adapters only: it does not call your system. To run
 - **Telemetry:** `reverse proxy or WAF logs`, `AI gateway audit log`
 - **Implementation:** rule file(s): [sigma](../../detections/sigma/det-ai-056-ai-platform-sensitive-endpoint.yml). Experimental and not run against real telemetry.
 
+### DET-AI-060 · Canary Credential That Only Ever Lived in LLM Prompts Is Used
+
+- **Severity:** critical
+- **Hypothesis:** Prompt content sent to an AI gateway or third-party inference provider is logged, retained or resold despite no-retention terms, and secrets found in it are reused. A per-provider canary access key planted only in prompts turns any later use into proof of leakage and identifies the route. Dragos observed planted AWS keys used by third parties (OpenRouter ZDR removals, 2026-11-22); agent tools that return secrets into context (CVE-2026-135614) create the same exposure.
+- **Telemetry:** `AWS CloudTrail (userIdentity.accessKeyId, sourceIPAddress, userAgent)`, `AI gateway request logs mapping canary IDs to provider routes`, `canary-token service callbacks (URLs, DNS)`
+- **Implementation:** rule file(s): [sigma](../../detections/sigma/det-ai-060-prompt-only-canary-credential-used.yml). Experimental and not run against real telemetry.
+
 ## 4. Prevent it
 
 - **Secret Isolation** (`CTRL-SECRET-ISOLATION`): Keep model/provider credentials outside prompts and minimize which agents can access them.
@@ -109,7 +116,7 @@ The runner has plan and mock adapters only: it does not call your system. To run
 
 ## 6. Limits of this page
 
-- 1 of 4 detection(s) are specifications, not rules. They say what to look for, not how to query it. Nothing here has been run against real telemetry.
+- 1 of 5 detection(s) are specifications, not rules. They say what to look for, not how to query it. Nothing here has been run against real telemetry.
 - No benchmark maps to it, so there is no public yardstick for how well a defence performs.
 - The tests use benign markers and synthetic data. A pass in a lab is not a security rating for a production system.
 - Ecosystem tools and benchmarks help you test and measure. They never support a claim that an actor used the technique.

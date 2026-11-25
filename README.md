@@ -62,7 +62,7 @@ Each row is a record in [`data/threat-landscape-2026.json`](data/threat-landscap
 
 <!-- gen:landscape-evidence:start -->
 
-Of the **28 techniques** tracked, **22** have activity observed in the wild, **2** are tied to a disclosed vulnerability, **4** are demonstrated in research and **0** have no linked evidence yet (a gap in this repository, not a claim that they are theoretical). On the defensive side, **14 of 59** detections exist as rule files; the rest are specifications.
+Of the **28 techniques** tracked, **22** have activity observed in the wild, **2** are tied to a disclosed vulnerability, **4** are demonstrated in research and **0** have no linked evidence yet (a gap in this repository, not a claim that they are theoretical). On the defensive side, **15 of 60** detections exist as rule files; the rest are specifications.
 
 <!-- gen:landscape-evidence:end -->
 
@@ -122,11 +122,11 @@ New [source registry and ingestion guidance](docs/AI-INTELLIGENCE-SOURCES.md), [
 
 | Actors | Campaigns | Incidents | Vulnerabilities | Techniques | Sources |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| **75** | **108** | **77** | **51** | **28** | **236** |
+| **75** | **108** | **77** | **51** | **28** | **239** |
 
 | Test cases | Detections | Controls | Frameworks | Model families | Relationships | Ecosystem repos |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| **40** | **59** | **32** | **21** | **12** | **633** | **127** |
+| **40** | **60** | **32** | **21** | **12** | **635** | **127** |
 
 <!-- gen:stats:end -->
 
@@ -1162,6 +1162,7 @@ telemetry + detection
 | `DET-AI-057` | **MLflow Webhook Test Followed by Egress to Metadata or Internal Address** | network | critical | specification |
 | `DET-AI-058` | **Internal Scanner or Asset Platform Hands Targets to an Agentic Offensive Framework** | network | high | specification |
 | `DET-AI-059` | **Python sitecustomize or usercustomize Written Outside a Package Install** | endpoint | high | specification |
+| `DET-AI-060` | **Canary Credential That Only Ever Lived in LLM Prompts Is Used** | inference-api | critical | specification |
 
 <!-- gen:detections:end -->
 
@@ -1262,7 +1263,7 @@ Every intelligence item should answer:
 
 | Grade | Class | Sources |
 |---|---|---|
-| **A** | Primary or authoritative | 196 |
+| **A** | Primary or authoritative | 199 |
 | **B** | Strong secondary | 21 |
 | **C** | Reputable press | 12 |
 | **D** | Community | 7 |

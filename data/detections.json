@@ -983,5 +983,20 @@
       "package manager logs (pip, uv, conda)"
     ],
     "test_ids": []
+  },
+  {
+    "id": "DET-AI-060",
+    "type": "detection",
+    "name": "Canary Credential That Only Ever Lived in LLM Prompts Is Used",
+    "category": "inference-api",
+    "severity": "critical",
+    "status": "specification",
+    "hypothesis": "Prompt content sent to an AI gateway or third-party inference provider is logged, retained or resold despite no-retention terms, and secrets found in it are reused. A per-provider canary access key planted only in prompts turns any later use into proof of leakage and identifies the route. Dragos observed planted AWS keys used by third parties (OpenRouter ZDR removals, 2026-11-22); agent tools that return secrets into context (CVE-2026-135614) create the same exposure.",
+    "telemetry": [
+      "AWS CloudTrail (userIdentity.accessKeyId, sourceIPAddress, userAgent)",
+      "AI gateway request logs mapping canary IDs to provider routes",
+      "canary-token service callbacks (URLs, DNS)"
+    ],
+    "test_ids": []
   }
 ]
