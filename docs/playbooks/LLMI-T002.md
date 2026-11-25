@@ -13,7 +13,7 @@
 
 | Layer | Status |
 |---|---|
-| Evidence | 7 record(s), 3 publisher(s), best grade A, newest 2026-11 |
+| Evidence | 8 record(s), 5 publisher(s), best grade A, newest 2026-11 |
 | Safe tests | 1 |
 | Detections | 0 rule file(s), 2 specification(s) |
 | Controls | 3 |
@@ -32,6 +32,7 @@ What the repository links to it:
 - 2025-05-25 · [EchoLeak: Zero-Click Prompt Injection Targeting M365 Copilot for Data Exfiltration (AML.CS0059)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-ATLAS-CS0059) (atlas-exercise, confirmed)
 - 2025-08-06 · [Prompt-Based Attacks Against Gemini via Calendar Invitations (AML.CS0063)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-ATLAS-CS0063) (atlas-exercise, confirmed)
 - 2026-11 · [Indirect prompt injection through EDR telemetry against AI-assisted SOCs (Viaconnect research)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-VIACONNECT-EDR-TELEMETRY-INJECTION) (research-artifact, medium)
+- 2026-11-24 · [Amazon ECS MCP Server troubleshooting tool returns unredacted task-definition secrets to the agent](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-AWSLABS-ECS-MCP-CVE-2026-135614) (credential-exposure, confirmed)
 - 2025-08-05 · [Cursor creates new workspace dotfiles without approval (CurXecute)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-CURSOR-CVE-2025-54135) (prompt-injection-to-rce, confirmed)
 - 2025-06-11 · [Microsoft 365 Copilot AI command injection (information disclosure)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-M365-COPILOT-CVE-2025-32711) (prompt-injection, confirmed)
 

@@ -13,7 +13,7 @@
 
 | Layer | Status |
 |---|---|
-| Evidence | 72 record(s), 51 publisher(s), best grade A, newest 2026 |
+| Evidence | 73 record(s), 53 publisher(s), best grade A, newest 2026 |
 | Safe tests | 1 |
 | Detections | 6 rule file(s), 4 specification(s) |
 | Controls | 2 |
@@ -93,6 +93,7 @@ What the repository links to it:
 - 2025-12 · [Single operator uses Claude Code and GPT-4.1 to breach nine Mexican government organisations](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-MEXICAN-GOVERNMENT-AI-BREACH) (intrusion, confirmed)
 - 2026-08 · [AI-agent-driven mass exploitation of PaperCut NG/MF](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-PAPERCUT-AI-AGENT-EXPLOITATION) (intrusion, confirmed)
 - 2026-09 · [TAG-217 ARTEX-linked intrusions at South Korean financial institutions](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-TAG-217-SOUTH-KOREA-FINANCE) (intrusion, medium)
+- 2026-10 · [Agents under misalignment testing escaped containment and probed Epoch AI's live website without consent](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-TRAJECTORY-EPOCH-EVAL-ESCAPE-2026-10) (unintended-access, high)
 - 2026 · [Claude Code CLI run as autonomous lateral-movement agent against a Thai organisation](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-TREND-CLAUDE-CODE-AGENT-THAILAND) (intrusion, confirmed)
 - 2026 · [Unit 42 investigation of a sub-10-hour AI-agent-assisted intrusion](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-UNIT42-AI-ASSISTED-INTRUSION) (intrusion, high)
 - 2026-10 · [Cloud and Kubernetes intrusion seen from both sides: victim telemetry plus the operator's open directory (Wiz)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-WIZ-CYBERSTRIKEAI-EKS-BOTH-SIDES-2026-10) (intrusion, high)

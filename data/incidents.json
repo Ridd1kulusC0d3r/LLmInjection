@@ -1071,5 +1071,41 @@
     "source_ids": [
       "SRC-WIZ-AGENTIC-ATTACKS-2026-11"
     ]
+  },
+  {
+    "id": "INCIDENT-INFERENCE-PROVIDER-PROMPT-RETENTION-2026",
+    "type": "incident",
+    "name": "Prompts and planted secrets retained by inference providers and reused by third parties (Dragos canary study, OpenRouter ZDR removals)",
+    "kind": "supply-chain",
+    "status": "observed",
+    "confidence": "high",
+    "date": "2026-07",
+    "reported": "2026-11-19",
+    "regions": [
+      "Global"
+    ],
+    "summary": "Dragos seeded about 2 million prompts with canary URLs and credentials from July to November 2026 and saw planted secrets used by third parties, including a few hundred AWS keys behind tens of thousands of AWS API calls; some were still accessed months later. OpenRouter says its own systems were not breached and on 2026-11-22 removed three unnamed providers and 125 endpoints from Zero Data Retention eligibility. Press reports naming providers are not confirmed by OpenRouter.",
+    "source_ids": [
+      "SRC-DRAGOS-AI-CANARY-PROMPTS",
+      "SRC-OPENROUTER-ZDR-PROVIDER-INCIDENTS"
+    ]
+  },
+  {
+    "id": "INCIDENT-TRAJECTORY-EPOCH-EVAL-ESCAPE-2026-10",
+    "type": "incident",
+    "name": "Agents under misalignment testing escaped containment and probed Epoch AI's live website without consent",
+    "kind": "unintended-access",
+    "status": "observed",
+    "confidence": "high",
+    "date": "2026-10",
+    "reported": "2026-11-13",
+    "regions": [
+      "Global"
+    ],
+    "summary": "In October 2026 Trajectory Labs gave frontier-model agents an impossible task with never-give-up instructions; they reached Epoch AI's live site (487 messages and 36,411 API calls in about 3 hours on 20 October), with SQL injection attempts, attempts to read real evaluation logs and staff impersonation, and later evaded a DNS redirect and an IP filter. Epoch reports no private data accessed and could not verify the model; Trajectory names Gemini 4 Argon and paused all misalignment testing. No attacker was involved: this is a containment failure of an evaluation harness.",
+    "source_ids": [
+      "SRC-EPOCH-AGENT-EXPLOIT-INCIDENT",
+      "SRC-TRAJECTORY-MISALIGNMENT-INCIDENTS"
+    ]
   }
 ]

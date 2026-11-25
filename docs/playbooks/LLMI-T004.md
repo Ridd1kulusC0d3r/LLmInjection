@@ -6,20 +6,20 @@
 |---|---|
 | Category | confidentiality |
 | Maturity | **observed in the wild** |
-| Priority | 2 of 16 (maturity weight times the layers still missing) |
+| Priority | 0 of 16 (maturity weight times the layers still missing) |
 | Frameworks | [LLM02:2026](https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/) OWASP LLM Top 10 2026 (exact), [AML.T0057](https://atlas.mitre.org/techniques/AML.T0057) ATLAS (exact), [AML.T0056](https://atlas.mitre.org/techniques/AML.T0056) ATLAS (related), [AML.T0069](https://atlas.mitre.org/techniques/AML.T0069) ATLAS (related), [AML.T0085](https://atlas.mitre.org/techniques/AML.T0085) ATLAS (related) |
 
 ## Where it stands
 
 | Layer | Status |
 |---|---|
-| Evidence | 2 record(s), 2 publisher(s), best grade A, newest 2026-06 |
+| Evidence | 4 record(s), 6 publisher(s), best grade A, newest 2026-11-24 |
 | Safe tests | 2 |
-| Detections | 0 rule file(s), 1 specification(s) |
+| Detections | 1 rule file(s), 1 specification(s) |
 | Controls | 1 |
 | Benchmarks | 3 |
 
-**Next step:** Turn DET-AI-010 (Sensitive Canary in Model Output) from a specification into a rule file, starting with the telemetry listed in section 3.
+**Next step:** All layers exist. Re-verify after any change to the model, prompt, tools or policy.
 
 ## 1. Understand it
 
@@ -29,6 +29,8 @@ What the repository links to it:
 
 - 2026-06 · [GTG-50020 AI vendor sandbox injection and AI-company targeting](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-GTG-50020) (campaign, confirmed)
 - 2025-09-25 · [ZombieAgent: Data Exfiltration Attack on ChatGPT (AML.CS0066)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-ATLAS-CS0066) (atlas-exercise, confirmed)
+- 2026-07 · [Prompts and planted secrets retained by inference providers and reused by third parties (Dragos canary study, OpenRouter ZDR removals)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-INFERENCE-PROVIDER-PROMPT-RETENTION-2026) (supply-chain, high)
+- 2026-11-24 · [Amazon ECS MCP Server troubleshooting tool returns unredacted task-definition secrets to the agent](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-AWSLABS-ECS-MCP-CVE-2026-135614) (credential-exposure, confirmed)
 
 Actors whose campaigns use it: GTG-50020. Vendor labels are kept as published and never merged without evidence.
 
@@ -70,6 +72,13 @@ The runner has plan and mock adapters only: it does not call your system. To run
 - **Telemetry:** `response-classification`, `canary-hit`, `request-id`
 - **Implementation:** specification only. Collect the telemetry above first; if you cannot, the detection cannot work yet.
 
+### DET-AI-060 · Canary Credential That Only Ever Lived in LLM Prompts Is Used
+
+- **Severity:** critical
+- **Hypothesis:** Prompt content sent to an AI gateway or third-party inference provider is logged, retained or resold despite no-retention terms, and secrets found in it are reused. A per-provider canary access key planted only in prompts turns any later use into proof of leakage and identifies the route. Dragos observed planted AWS keys used by third parties (OpenRouter ZDR removals, 2026-11-22); agent tools that return secrets into context (CVE-2026-135614) create the same exposure.
+- **Telemetry:** `AWS CloudTrail (userIdentity.accessKeyId, sourceIPAddress, userAgent)`, `AI gateway request logs mapping canary IDs to provider routes`, `canary-token service callbacks (URLs, DNS)`
+- **Implementation:** rule file(s): [sigma](../../detections/sigma/det-ai-060-prompt-only-canary-credential-used.yml). Experimental and not run against real telemetry.
+
 ## 4. Prevent it
 
 - **Privileged-Context Canary Tokens** (`CTRL-CONTEXT-CANARY`): Insert unique per-session canaries into system prompts/secret-bearing context and alert when they appear in output, tool arguments or egress (pairs with DET-AI-010).
@@ -84,7 +93,7 @@ The runner has plan and mock adapters only: it does not call your system. To run
 
 ## 6. Limits of this page
 
-- 1 of 1 detection(s) are specifications, not rules. They say what to look for, not how to query it. Nothing here has been run against real telemetry.
+- 1 of 2 detection(s) are specifications, not rules. They say what to look for, not how to query it. Nothing here has been run against real telemetry.
 - The tests use benign markers and synthetic data. A pass in a lab is not a security rating for a production system.
 - Ecosystem tools and benchmarks help you test and measure. They never support a claim that an actor used the technique.
 

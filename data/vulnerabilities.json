@@ -1325,5 +1325,83 @@
       "SRC-GHSA-MONAILABEL-TRAVERSAL",
       "SRC-AWS-CAIRN-MONAI"
     ]
+  },
+  {
+    "id": "VULN-AWSLABS-ECS-MCP-CVE-2026-135614",
+    "type": "vulnerability",
+    "name": "Amazon ECS MCP Server troubleshooting tool returns unredacted task-definition secrets to the agent",
+    "kind": "credential-exposure",
+    "package": "awslabs.ecs-mcp-server",
+    "ecosystem": "PyPI",
+    "identifiers": [
+      "CVE-2026-135614",
+      "GHSA-ppc7-5jf2-gcfc"
+    ],
+    "severity": "medium",
+    "affected": [
+      "< 0.1.36"
+    ],
+    "patched": [
+      "0.1.36"
+    ],
+    "published": "2026-11-24",
+    "confidence": "confirmed",
+    "ai_relation": "ai-software",
+    "summary": "With the sensitive-data setting at its default, the troubleshooting tool returned plaintext container environment variable values and secret references from ECS task definitions (CWE-212, CVSS 3.1 5.5). AWS names prompt injection as an example of how a remote actor who can influence the agent's input could obtain them; the server is read-only and uses local stdio by default. AWS advises upgrading and rotating credentials stored as plaintext environment variables.",
+    "source_ids": [
+      "SRC-AWS-2026-200-ECS-MCP",
+      "SRC-GHSA-ECS-MCP-PPC7"
+    ]
+  },
+  {
+    "id": "VULN-MCP-SERVER-FETCH-GHSA-3RXJ-6JHW-QFV7",
+    "type": "vulnerability",
+    "name": "mcp-server-fetch SSRF guard treats IPv6 site-local fec0::/10 and IPv4-translated addresses as public",
+    "kind": "ssrf",
+    "package": "mcp-server-fetch",
+    "ecosystem": "PyPI",
+    "identifiers": [
+      "GHSA-3rxj-6jhw-qfv7",
+      "CVE-2026-134492"
+    ],
+    "severity": "low",
+    "affected": [
+      ">= 2026.10.10, < 2026.11.11"
+    ],
+    "patched": [
+      "2026.11.11"
+    ],
+    "published": "2026-11-11",
+    "confidence": "confirmed",
+    "ai_relation": "ai-software",
+    "summary": "The private-address check omitted fec0::/10 and ::ffff:0:0/96, so a fetch to such an address passed the SSRF guard (CWE-918). The advisory rates real-world reachability as low and says it is not a proven metadata exploit; the report was AI-assisted and human-reviewed. The CVE id comes from secondary trackers (published 2026-11-23); the advisory itself listed no CVE when read. Python's ipaddress module reports these ranges as global, so custom guards built on is_private share the gap.",
+    "source_ids": [
+      "SRC-GHSA-MCP-FETCH-3RXJ"
+    ]
+  },
+  {
+    "id": "VULN-MCP-SERVER-KUBERNETES-CVE-2026-134817",
+    "type": "vulnerability",
+    "name": "mcp-server-kubernetes argument injection lets a remote MCP client make kubectl read files on the server host",
+    "kind": "argument-injection",
+    "package": "mcp-server-kubernetes",
+    "ecosystem": "npm",
+    "identifiers": [
+      "CVE-2026-134817"
+    ],
+    "severity": "high",
+    "affected": [
+      "< 4.2.0"
+    ],
+    "patched": [
+      "4.2.0"
+    ],
+    "published": "2026-11-22",
+    "confidence": "high",
+    "ai_relation": "ai-software",
+    "summary": "Dash-prefixed client values reach kubectl as options through tools such as exec_in_pod and kubectl_logs, allowing reads of files on the server host (CWE-88, CVSS 3.1 7.1). Reachable only when the non-default SSE or Streamable HTTP transport is enabled; local stdio is outside the path. Known through HOL Guard and Strix; the NVD and VulnCheck records were not read.",
+    "source_ids": [
+      "SRC-HOL-MCP-K8S-134817"
+    ]
   }
 ]

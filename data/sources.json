@@ -2512,5 +2512,147 @@
     "role": "secondary-analysis",
     "url": "https://tomodahinata.com/en/blog/artex-ai-pentesting-architecture-guide",
     "last_verified": "2026-11-25"
+  },
+  {
+    "id": "SRC-OPENROUTER-ZDR-PROVIDER-INCIDENTS",
+    "type": "source",
+    "name": "OpenRouter: data processing incidents on inference providers (three providers and 125 endpoints removed from Zero Data Retention)",
+    "publisher": "OpenRouter",
+    "grade": "A",
+    "role": "threat-report",
+    "url": "https://openrouter.ai/blog/announcements/data-processing-incidents-on-inference-providers/",
+    "published": "2026-11-22",
+    "last_verified": "2026-11-25"
+  },
+  {
+    "id": "SRC-DRAGOS-AI-CANARY-PROMPTS",
+    "type": "source",
+    "name": "Dragos: AI supply chain security with canary tokens (planted prompt secrets reused by third parties)",
+    "publisher": "Dragos",
+    "grade": "A",
+    "role": "threat-research",
+    "url": "https://www.dragos.com/blog/ai-supply-chain-security-canary-tokens",
+    "published": "2026-11-19",
+    "last_verified": "2026-11-25"
+  },
+  {
+    "id": "SRC-AWS-2026-200-ECS-MCP",
+    "type": "source",
+    "name": "AWS Security Bulletin 2026-200-AWS: CVE-2026-135614, sensitive data redaction bypass in Amazon ECS MCP Server troubleshooting tool",
+    "publisher": "Amazon Web Services",
+    "grade": "A",
+    "role": "security-advisory",
+    "url": "https://aws.amazon.com/security/security-bulletins/2026-200-aws/",
+    "published": "2026-11-24",
+    "last_verified": "2026-11-25"
+  },
+  {
+    "id": "SRC-GHSA-ECS-MCP-PPC7",
+    "type": "source",
+    "name": "GHSA-ppc7-5jf2-gcfc: Amazon ECS MCP Server troubleshooting tool returns unredacted environment variables (CVE-2026-135614)",
+    "publisher": "Amazon Web Services (awslabs/mcp)",
+    "grade": "A",
+    "role": "security-advisory",
+    "url": "https://github.com/awslabs/mcp/security/advisories/GHSA-ppc7-5jf2-gcfc",
+    "published": "2026-11-24",
+    "last_verified": "2026-11-25"
+  },
+  {
+    "id": "SRC-GHSA-MCP-FETCH-3RXJ",
+    "type": "source",
+    "name": "GHSA-3rxj-6jhw-qfv7: mcp-server-fetch SSRF guard classifies IPv6 site-local fec0::/10 as public",
+    "publisher": "Model Context Protocol (modelcontextprotocol/servers)",
+    "grade": "A",
+    "role": "security-advisory",
+    "url": "https://github.com/modelcontextprotocol/servers/security/advisories/GHSA-3rxj-6jhw-qfv7",
+    "published": "2026-11-11",
+    "last_verified": "2026-11-25"
+  },
+  {
+    "id": "SRC-HOL-MCP-K8S-134817",
+    "type": "source",
+    "name": "HOL Guard: mcp-server-kubernetes argument injection lets a remote client read host files (CVE-2026-134817, fixed in 4.2.0)",
+    "publisher": "HOL",
+    "grade": "B",
+    "role": "vulnerability-research",
+    "url": "https://hol.org/guard/security/campaigns/cve-2026-134817-mcp-server-kubernetes-argument-injection-file-read",
+    "published": "2026-11-22",
+    "last_verified": "2026-11-25"
+  },
+  {
+    "id": "SRC-EPOCH-AGENT-EXPLOIT-INCIDENT",
+    "type": "source",
+    "name": "Epoch AI incident report: AI agents attempted exploits on our website (Trajectory Labs misalignment tests, October 2026)",
+    "publisher": "Epoch AI",
+    "grade": "A",
+    "role": "threat-report",
+    "url": "https://epoch.ai/publications/incident-report-ai-agents-attempted-exploits-on-our-website",
+    "published": "2026-11-13",
+    "last_verified": "2026-11-25"
+  },
+  {
+    "id": "SRC-TRAJECTORY-MISALIGNMENT-INCIDENTS",
+    "type": "source",
+    "name": "Trajectory Labs: responding to incidents during misalignment testing (agents escaped containment and reached a live third-party site)",
+    "publisher": "Trajectory Labs",
+    "grade": "A",
+    "role": "threat-report",
+    "url": "https://www.trajectorylabs.com/blog/responding-to-incidents-during-misalignment-testing",
+    "published": "2026-11-13",
+    "last_verified": "2026-11-25"
+  },
+  {
+    "id": "SRC-NSM-AZURE-APIM-2026-11",
+    "type": "source",
+    "name": "NSM: measures against a vulnerability in Azure API Management (secrets, tokens and named values targeted in Norwegian energy companies)",
+    "publisher": "Nasjonal sikkerhetsmyndighet (NSM)",
+    "grade": "A",
+    "role": "government-advisory",
+    "url": "https://nsm.no/aktuelt/nsm-deler-tiltak-mot-sarbarhet-i-azure-api-management",
+    "published": "2026-11-20",
+    "last_verified": "2026-11-25"
+  },
+  {
+    "id": "SRC-CISCO-OPENAI-SHIRUDO",
+    "type": "source",
+    "name": "Cisco and OpenAI launch Shirudo, open-source eBPF shields written and tested by AI agents",
+    "publisher": "Cisco",
+    "grade": "A",
+    "role": "defensive-research",
+    "url": "https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m11/cisco-and-openai-launch-shirudo-a-new-project-to-safeguard-agentic-ai.html",
+    "published": "2026-11-23",
+    "last_verified": "2026-11-25"
+  },
+  {
+    "id": "SRC-UNIT42-CL-UNK-1211",
+    "type": "source",
+    "name": "Unit 42: AI-powered espionage campaign targets government Linux infrastructure (CL-UNK-1211, SysGoRAT)",
+    "publisher": "Palo Alto Networks Unit 42",
+    "grade": "A",
+    "role": "threat-report",
+    "url": "https://unit42.paloaltonetworks.com/ai-campaign-targets-linux-infrastructure/",
+    "published": "2026-10-15",
+    "last_verified": "2026-11-25"
+  },
+  {
+    "id": "SRC-AIR-WEBSEC-SEARCH-APIS",
+    "type": "source",
+    "name": "AIR Research (via The Hacker News): AI coding agents are getting malicious results from search APIs (WebSec Benchmark)",
+    "publisher": "AIR Research Lab",
+    "grade": "B",
+    "role": "research-report",
+    "url": "https://thehackernews.com/expert-insights/2026/11/ai-coding-agents-are-getting-malicious.html",
+    "published": "2026-11-23",
+    "last_verified": "2026-11-25"
+  },
+  {
+    "id": "SRC-INFOSEC-OX-PLUG-AND-PRAY",
+    "type": "source",
+    "name": "Infosecurity Magazine: Ox Security 'Plug and Pray' finds prompt injection or tool poisoning in flagged MCP servers and agent skills",
+    "publisher": "Infosecurity Magazine",
+    "grade": "C",
+    "role": "journalism",
+    "url": "https://www.infosecurity-magazine.com/news/researchers-new-ai-attack-path/",
+    "last_verified": "2026-11-25"
   }
 ]

@@ -7002,5 +7002,132 @@
     "evidence_sources": [
       "SRC-AWS-ARTEX-MADPOT-2026-11"
     ]
+  },
+  {
+    "id": "REL-634",
+    "type": "relationship",
+    "source": "DET-AI-060",
+    "relationship": "detects",
+    "target": "LLMI-T004",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-DRAGOS-AI-CANARY-PROMPTS",
+      "SRC-OPENROUTER-ZDR-PROVIDER-INCIDENTS",
+      "SRC-AWS-2026-200-ECS-MCP"
+    ]
+  },
+  {
+    "id": "REL-635",
+    "type": "relationship",
+    "source": "DET-AI-060",
+    "relationship": "detects",
+    "target": "LLMI-T016",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-DRAGOS-AI-CANARY-PROMPTS",
+      "SRC-OPENROUTER-ZDR-PROVIDER-INCIDENTS"
+    ]
+  },
+  {
+    "id": "REL-636",
+    "type": "relationship",
+    "source": "VULN-AWSLABS-ECS-MCP-CVE-2026-135614",
+    "relationship": "demonstrates",
+    "target": "LLMI-T004",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-AWS-2026-200-ECS-MCP"
+    ]
+  },
+  {
+    "id": "REL-637",
+    "type": "relationship",
+    "source": "VULN-AWSLABS-ECS-MCP-CVE-2026-135614",
+    "relationship": "demonstrates",
+    "target": "LLMI-T002",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-AWS-2026-200-ECS-MCP",
+      "SRC-GHSA-ECS-MCP-PPC7"
+    ]
+  },
+  {
+    "id": "REL-638",
+    "type": "relationship",
+    "source": "VULN-MCP-SERVER-FETCH-GHSA-3RXJ-6JHW-QFV7",
+    "relationship": "demonstrates",
+    "target": "LLMI-T008",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-GHSA-MCP-FETCH-3RXJ"
+    ]
+  },
+  {
+    "id": "REL-639",
+    "type": "relationship",
+    "source": "VULN-MCP-SERVER-KUBERNETES-CVE-2026-134817",
+    "relationship": "demonstrates",
+    "target": "LLMI-T008",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-HOL-MCP-K8S-134817"
+    ]
+  },
+  {
+    "id": "REL-640",
+    "type": "relationship",
+    "source": "VULN-MCP-SERVER-KUBERNETES-CVE-2026-134817",
+    "relationship": "demonstrates",
+    "target": "LLMI-T024",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-HOL-MCP-K8S-134817"
+    ]
+  },
+  {
+    "id": "REL-641",
+    "type": "relationship",
+    "source": "INCIDENT-INFERENCE-PROVIDER-PROMPT-RETENTION-2026",
+    "relationship": "demonstrates",
+    "target": "LLMI-T004",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-DRAGOS-AI-CANARY-PROMPTS",
+      "SRC-OPENROUTER-ZDR-PROVIDER-INCIDENTS"
+    ]
+  },
+  {
+    "id": "REL-642",
+    "type": "relationship",
+    "source": "INCIDENT-INFERENCE-PROVIDER-PROMPT-RETENTION-2026",
+    "relationship": "demonstrates",
+    "target": "LLMI-T011",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-OPENROUTER-ZDR-PROVIDER-INCIDENTS"
+    ]
+  },
+  {
+    "id": "REL-643",
+    "type": "relationship",
+    "source": "INCIDENT-TRAJECTORY-EPOCH-EVAL-ESCAPE-2026-10",
+    "relationship": "demonstrates",
+    "target": "LLMI-T008",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-EPOCH-AGENT-EXPLOIT-INCIDENT",
+      "SRC-TRAJECTORY-MISALIGNMENT-INCIDENTS"
+    ]
+  },
+  {
+    "id": "REL-644",
+    "type": "relationship",
+    "source": "INCIDENT-TRAJECTORY-EPOCH-EVAL-ESCAPE-2026-10",
+    "relationship": "demonstrates",
+    "target": "LLMI-T015",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-TRAJECTORY-MISALIGNMENT-INCIDENTS"
+    ]
   }
 ]
