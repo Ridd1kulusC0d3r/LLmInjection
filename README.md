@@ -62,7 +62,7 @@ Each row is a record in [`data/threat-landscape-2026.json`](data/threat-landscap
 
 <!-- gen:landscape-evidence:start -->
 
-Of the **28 techniques** tracked, **22** have activity observed in the wild, **2** are tied to a disclosed vulnerability, **4** are demonstrated in research and **0** have no linked evidence yet (a gap in this repository, not a claim that they are theoretical). On the defensive side, **13 of 59** detections exist as rule files; the rest are specifications.
+Of the **28 techniques** tracked, **22** have activity observed in the wild, **2** are tied to a disclosed vulnerability, **4** are demonstrated in research and **0** have no linked evidence yet (a gap in this repository, not a claim that they are theoretical). On the defensive side, **14 of 59** detections exist as rule files; the rest are specifications.
 
 <!-- gen:landscape-evidence:end -->
 
@@ -122,11 +122,11 @@ New [source registry and ingestion guidance](docs/AI-INTELLIGENCE-SOURCES.md), [
 
 | Actors | Campaigns | Incidents | Vulnerabilities | Techniques | Sources |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| **75** | **105** | **75** | **51** | **28** | **230** |
+| **75** | **108** | **77** | **51** | **28** | **236** |
 
 | Test cases | Detections | Controls | Frameworks | Model families | Relationships | Ecosystem repos |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| **40** | **59** | **32** | **21** | **12** | **617** | **127** |
+| **40** | **59** | **32** | **21** | **12** | **633** | **127** |
 
 <!-- gen:stats:end -->
 
@@ -617,6 +617,9 @@ Real-world reporting is intentionally placed on the front page because AI securi
 | **NorForge AIA0002: English-language Cairn operator after card and crypto theft** | 2026-10 | 2026-10-19 | Africa | high | NorForge links 10 Cairn panels, mainly on Vultr, to an English-language operator whose workers ran DeepSeek through OpenRouter, targeting… |
 | **CyberStrikeAI intrusions at education organisations in Africa and Latin America** | 2026 | 2026-11-02 | Africa, Latin America | high | Kaspersky describes intrusions at education-sector organisations in several countries across Africa and Latin America (none named) run… |
 | **Carbonato Docker botnet deploying Hermes Agent to hunt AI API keys** | 2024-10 | 2026-09-22 |  | high | ThreatDown describes a botnet that abuses unauthenticated Docker APIs (port 2375), escapes to the host through a privileged container… |
+| **ARTEX agents stealing AI model credentials at industrial scale (seen through Amazon MadPot)** | 2026-10 | 2026-11-13 |  | medium | From 3 Oct to 5 Nov 2026, Amazon MadPot sensors posing as LLM inference APIs received the agents' own operating memory (system prompts… |
+| **ARTEX agents attempting crypto-exchange KYC bypass with real-time deepfakes (seen through Amazon MadPot)** | 2026-10 | 2026-11-13 |  | medium | Agent records captured by Amazon MadPot show at least four parallel ARTEX sessions working on two cryptocurrency exchanges: one… |
+| **ARTEX-Harvester: opportunistic agentic intrusions through residential proxies (Wiz)** | 2026-10 | 2026-11-23 |  | medium | One of about a dozen agentic campaigns Wiz tracks, clustered on a distinctive boto3 build, an incrementing ARTEX intent ID seen across… |
 
 <!-- gen:campaigns:end -->
 
@@ -701,6 +704,8 @@ Real-world reporting is intentionally placed on the front page because AI securi
 | **Wave of intrusions at Japanese organisations, including AI pentest platforms** | intrusion | observed | medium |
 | **AWS intrusion run from a CyberStrikeAI server** | intrusion | observed | high |
 | **Hermes Agent in unattended mode against Thailand's Ministry of Finance** | intrusion | observed | high |
+| **ARTEX-class intrusion at Bitrise through a dormant test bot account** | intrusion | observed | confirmed |
+| **Cloud and Kubernetes intrusion seen from both sides: victim telemetry plus the operator's open directory (Wiz)** | intrusion | observed | high |
 
 <!-- gen:incidents:end -->
 
@@ -1257,10 +1262,10 @@ Every intelligence item should answer:
 
 | Grade | Class | Sources |
 |---|---|---|
-| **A** | Primary or authoritative | 193 |
+| **A** | Primary or authoritative | 196 |
 | **B** | Strong secondary | 21 |
-| **C** | Reputable press | 11 |
-| **D** | Community | 5 |
+| **C** | Reputable press | 12 |
+| **D** | Community | 7 |
 | **E** | Unsupported | 0 |
 
 <!-- gen:source-grades:end -->

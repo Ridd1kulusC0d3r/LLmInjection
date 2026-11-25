@@ -13,7 +13,7 @@
 
 | Layer | Status |
 |---|---|
-| Evidence | 10 record(s), 10 publisher(s), best grade A, newest 2026 |
+| Evidence | 14 record(s), 13 publisher(s), best grade A, newest 2026 |
 | Safe tests | 1 |
 | Detections | 3 rule file(s), 1 specification(s) |
 | Controls | 1 |
@@ -28,12 +28,16 @@ An AI gateway or proxy is compromised to access concentrated upstream model-prov
 What the repository links to it:
 
 - 2026-11 · [ARTEX-driven search and abuse of secrets exposed on GitHub](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-ARTEX-EXPOSED-SECRETS) (campaign, high)
+- 2026-11 · [ARTEX-Harvester: opportunistic agentic intrusions through residential proxies (Wiz)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-ARTEX-HARVESTER) (campaign, medium)
+- 2026-11 · [ARTEX agents stealing AI model credentials at industrial scale (seen through Amazon MadPot)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-ARTEX-MADPOT-AI-CREDENTIAL-THEFT) (campaign, medium)
 - 2026-09 · [Carbonato Docker botnet deploying Hermes Agent to hunt AI API keys](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-CARBONATO-DOCKER-HERMES) (campaign, high)
 - 2026 · [TeamPCP LiteLLM supply-chain compromise](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-TEAMPCP-LITELLM) (campaign, confirmed)
 - 2024-05-06 · [LLM Jacking (AML.CS0030)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-ATLAS-CS0030) (atlas-incident, high)
 - 2024-12-01 · [Storm-2139 Azure OpenAI Guardrail Bypass (AML.CS0057)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-ATLAS-CS0057) (atlas-incident, high)
 - 2026-11-01 · [Barracuda cloud intrusion through a vendor's unretired access key, run with ARTEX](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-BARRACUDA-ARTEX-CLOUD-2026-11) (intrusion, confirmed)
+- 2026-11-13 · [ARTEX-class intrusion at Bitrise through a dormant test bot account](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-BITRISE-ARTEX-2026-11) (intrusion, confirmed)
 - 2026-04-15 · [Exploitation attempts against LiteLLM's guardrail tester (CVE-2026-40217)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-LITELLM-GUARDRAIL-TESTER-EXPLOITATION) (exploitation, high)
+- 2026-10 · [Cloud and Kubernetes intrusion seen from both sides: victim telemetry plus the operator's open directory (Wiz)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-WIZ-CYBERSTRIKEAI-EKS-BOTH-SIDES-2026-10) (intrusion, high)
 - 2025-12-05 · [Langflow CORS and refresh-cookie chain to account takeover and code execution](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-LANGFLOW-CVE-2025-34291) (cors-misconfiguration, confirmed)
 - 2026-05-08 · [LiteLLM proxy SQL injection via authorization header](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-LITELLM-CVE-2026-42208) (sql-injection, confirmed)
 - 2026-05-08 · [LiteLLM proxy command injection in two endpoints](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-LITELLM-CVE-2026-42271) (command-injection, confirmed)

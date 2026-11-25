@@ -812,14 +812,15 @@
     "category": "web-network",
     "severity": "high",
     "status": "specification",
-    "hypothesis": "Requests or host artifacts carry the fingerprints an agentic pentest framework leaves while validating findings: user agents that name it, placeholder probe paths and files, a probe header, alg:none JWTs or OAuth callback probes on SSO routes, artifact names on disk, and servers calling webhook or DNS-log services to confirm a hit.",
+    "hypothesis": "Requests or host artifacts carry the fingerprints an agentic pentest framework leaves while validating findings: user agents that name it, placeholder probe paths and files, a probe header, alg:none JWTs or OAuth callback probes on SSO routes, artifact names on disk, and servers calling webhook or DNS-log services to confirm a hit. Victim-confirmed ARTEX traits (Bitrise, 2026-11): the norma/0.4 web-fetch user agent, self-declared 'authorized pentest' or 'read-only research' user agents that often embed the target's name, and accounts, CI jobs, paths and resources named i<3-6 digits> plus probe, canary, certs or net.",
     "telemetry": [
       "web and WAF logs (path, user agent, headers)",
       "proxy logs",
       "sign-in logs (user agent)",
       "CloudTrail and Okta user agent",
       "DNS queries from servers",
-      "EDR file and process events"
+      "EDR file and process events",
+      "sign-up, tenant, CI job and workspace names (i<number> intent counters)"
     ],
     "test_ids": []
   },

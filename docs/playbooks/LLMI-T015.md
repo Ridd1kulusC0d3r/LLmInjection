@@ -13,9 +13,9 @@
 
 | Layer | Status |
 |---|---|
-| Evidence | 67 record(s), 49 publisher(s), best grade A, newest 2026 |
+| Evidence | 72 record(s), 51 publisher(s), best grade A, newest 2026 |
 | Safe tests | 1 |
-| Detections | 5 rule file(s), 5 specification(s) |
+| Detections | 6 rule file(s), 4 specification(s) |
 | Controls | 2 |
 | Benchmarks | 1 |
 
@@ -31,8 +31,11 @@ What the repository links to it:
 - 2026-11 · [ARTEX activity in AWS accounts with compromised IAM keys](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-ARTEX-AWS) (campaign, high)
 - 2026-11 · [ARTEX-driven search and abuse of secrets exposed on GitHub](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-ARTEX-EXPOSED-SECRETS) (campaign, high)
 - 2026-10 · [ARTEX agentic offensive framework use by extortion groups and suspected PRC-nexus clusters](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-ARTEX-EXTORTION-AND-PRC-CLUSTERS) (campaign, confirmed)
+- 2026-11 · [ARTEX-Harvester: opportunistic agentic intrusions through residential proxies (Wiz)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-ARTEX-HARVESTER) (campaign, medium)
 - 2026-11 · [ARTEX abuse of password-reset pages and exposed APIs to reach cloud access](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-ARTEX-IDENTITY-WORKFLOWS) (campaign, high)
 - 2026-10 · [ARTEX-using actor targeting IT and software vendors (overlaps Storm-0940)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-ARTEX-IT-SOFTWARE-VENDORS) (campaign, high)
+- 2026-11 · [ARTEX agents stealing AI model credentials at industrial scale (seen through Amazon MadPot)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-ARTEX-MADPOT-AI-CREDENTIAL-THEFT) (campaign, medium)
+- 2026-10 · [ARTEX agents attempting crypto-exchange KYC bypass with real-time deepfakes (seen through Amazon MadPot)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-ARTEX-MADPOT-KYC-DEEPFAKE) (campaign, medium)
 - 2026-10 · [Chinese-speaking ARTEX multi-model operator targeting 19 markets](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-ARTEX-MULTI-MODEL-OPERATOR) (campaign, high)
 - 2026-05 · [Aurora ransomware intrusions driven through Cursor Agent](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-AURORA-CURSOR-AGENT) (campaign, confirmed)
 - 2026-04 · [bandcampro Gemini CLI-driven C2 botnet build and fraud operations](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-BANDCAMPRO-GEMINI-CLI-C2) (campaign, confirmed)
@@ -71,6 +74,7 @@ What the repository links to it:
 - 2026-05-07 · [Threat Actor Uses a DeepSeek-Powered Hermes Agent in Langflow and n8n Exploitation Attempts (AML.CS0070)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-ATLAS-CS0070) (atlas-incident, high)
 - 2026-07-01 · [Multi-Agent Framework Compromises Taiwanese Government Systems (AML.CS0071)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-ATLAS-CS0071) (atlas-incident, high)
 - 2026-11-01 · [Barracuda cloud intrusion through a vendor's unretired access key, run with ARTEX](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-BARRACUDA-ARTEX-CLOUD-2026-11) (intrusion, confirmed)
+- 2026-11-13 · [ARTEX-class intrusion at Bitrise through a dormant test bot account](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-BITRISE-ARTEX-2026-11) (intrusion, confirmed)
 - 2026 · [CLOSEDQUORUM autonomous AI C2 research case](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-CLOSEDQUORUM) (research-artifact, confirmed)
 - 2026-09-30 · [AWS intrusion run from a CyberStrikeAI server](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-CYBERSTRIKEAI-AWS-2026-10) (intrusion, high)
 - 2026-09-21 · [Agentic attacker breaches DIVD through a Zammad zero-day chain](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-DIVD-AGENTIC-ZAMMAD-2026-09) (intrusion, confirmed)
@@ -91,6 +95,7 @@ What the repository links to it:
 - 2026-09 · [TAG-217 ARTEX-linked intrusions at South Korean financial institutions](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-TAG-217-SOUTH-KOREA-FINANCE) (intrusion, medium)
 - 2026 · [Claude Code CLI run as autonomous lateral-movement agent against a Thai organisation](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-TREND-CLAUDE-CODE-AGENT-THAILAND) (intrusion, confirmed)
 - 2026 · [Unit 42 investigation of a sub-10-hour AI-agent-assisted intrusion](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-UNIT42-AI-ASSISTED-INTRUSION) (intrusion, high)
+- 2026-10 · [Cloud and Kubernetes intrusion seen from both sides: victim telemetry plus the operator's open directory (Wiz)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-WIZ-CYBERSTRIKEAI-EKS-BOTH-SIDES-2026-10) (intrusion, high)
 - 2026-10-30 · [ARTEX agent escapes a researcher's sandbox and reaches WorkOS's internal sales tool](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-WORKOS-ARTEX-SANDBOX-ESCAPE) (unintended-access, confirmed)
 - 2026-09-30 · [Zammad session hijack leading to code execution](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-ZAMMAD-CVE-2026-102489) (session-hijack, confirmed)
 - 2026-09-30 · [Zammad packaged builds allow local escalation to root](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-ZAMMAD-CVE-2026-102490) (privilege-escalation, confirmed)
@@ -151,9 +156,9 @@ The runner has plan and mock adapters only: it does not call your system. To run
 ### DET-AI-048 · Agentic Offensive Framework Fingerprints (User Agents, Probe Artifacts, Callback Services)
 
 - **Severity:** high
-- **Hypothesis:** Requests or host artifacts carry the fingerprints an agentic pentest framework leaves while validating findings: user agents that name it, placeholder probe paths and files, a probe header, alg:none JWTs or OAuth callback probes on SSO routes, artifact names on disk, and servers calling webhook or DNS-log services to confirm a hit.
-- **Telemetry:** `web and WAF logs (path, user agent, headers)`, `proxy logs`, `sign-in logs (user agent)`, `CloudTrail and Okta user agent`, `DNS queries from servers`, `EDR file and process events`
-- **Implementation:** specification only. Collect the telemetry above first; if you cannot, the detection cannot work yet.
+- **Hypothesis:** Requests or host artifacts carry the fingerprints an agentic pentest framework leaves while validating findings: user agents that name it, placeholder probe paths and files, a probe header, alg:none JWTs or OAuth callback probes on SSO routes, artifact names on disk, and servers calling webhook or DNS-log services to confirm a hit. Victim-confirmed ARTEX traits (Bitrise, 2026-11): the norma/0.4 web-fetch user agent, self-declared 'authorized pentest' or 'read-only research' user agents that often embed the target's name, and accounts, CI jobs, paths and resources named i<3-6 digits> plus probe, canary, certs or net.
+- **Telemetry:** `web and WAF logs (path, user agent, headers)`, `proxy logs`, `sign-in logs (user agent)`, `CloudTrail and Okta user agent`, `DNS queries from servers`, `EDR file and process events`, `sign-up, tenant, CI job and workspace names (i<number> intent counters)`
+- **Implementation:** rule file(s): [sigma](../../detections/sigma/det-ai-048-artex-self-declared-pentest-web.yml). Experimental and not run against real telemetry.
 
 ### DET-AI-049 · Machine-Cadence Identity Attacks (Fixed-Rhythm Spray, User-Agent Family Burst)
 
@@ -205,7 +210,7 @@ The runner has plan and mock adapters only: it does not call your system. To run
 
 ## 6. Limits of this page
 
-- 5 of 10 detection(s) are specifications, not rules. They say what to look for, not how to query it. Nothing here has been run against real telemetry.
+- 4 of 10 detection(s) are specifications, not rules. They say what to look for, not how to query it. Nothing here has been run against real telemetry.
 - The tests use benign markers and synthetic data. A pass in a lab is not a security rating for a production system.
 - Ecosystem tools and benchmarks help you test and measure. They never support a claim that an actor used the technique.
 
