@@ -134,6 +134,23 @@ def no_startup_hook(param: str = "path") -> Callable[[dict], None]:
     return check
 
 
+IPV4_TRANSLATED = ipaddress.ip_network("::ffff:0:0:0/96")  # RFC 2765 IPv4-translated (::ffff:0:a.b.c.d), not the mapped ::ffff:a.b.c.d
+
+
+def non_public(ip: ipaddress.IPv4Address | ipaddress.IPv6Address) -> bool:
+    """True for any address a fetch tool must refuse. Unwraps IPv4 embedded in IPv6 and treats deprecated
+    site-local fec0::/10 as private: Python's ``is_private`` misses both, the gap behind GHSA-3rxj-6jhw-qfv7
+    (mcp-server-fetch, CVE-2026-134492)."""
+    if ip.version == 6:
+        if ip.ipv4_mapped is not None:                     # ::ffff:a.b.c.d
+            ip = ip.ipv4_mapped
+        elif ip in IPV4_TRANSLATED:                        # ::ffff:0:a.b.c.d
+            ip = ipaddress.IPv4Address(int(ip) & 0xFFFFFFFF)
+        elif ip.is_site_local:                             # fec0::/10, reported as global by ipaddress
+            return True
+    return not ip.is_global or ip.is_private or ip.is_link_local or ip.is_loopback or ip.is_reserved or ip.is_multicast
+
+
 def public_https_host(allowed_hosts: set[str]) -> Callable[[dict], None]:
     """Validator factory for a fetch tool: https only, an allowlisted host, never a private or link-local address."""
     def check(params: dict) -> None:
@@ -143,7 +160,7 @@ def public_https_host(allowed_hosts: set[str]) -> Callable[[dict], None]:
             ip = ipaddress.ip_address(host)
         except ValueError:
             ip = None                                          # a name, not an address literal
-        if ip is not None and (ip.is_private or ip.is_link_local or ip.is_loopback or ip.is_reserved):
+        if ip is not None and non_public(ip):
             raise ValueError("private or link-local address")
         if url.scheme != "https" or host not in allowed_hosts:
             raise ValueError("destination is not allowlisted")
