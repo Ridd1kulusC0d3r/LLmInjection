@@ -13,7 +13,7 @@
 
 | Layer | Status |
 |---|---|
-| Evidence | 2 record(s), 2 publisher(s), best grade A, newest 2026-06 |
+| Evidence | 4 record(s), 6 publisher(s), best grade A, newest 2026-11-24 |
 | Safe tests | 2 |
 | Detections | 1 rule file(s), 1 specification(s) |
 | Controls | 1 |
@@ -29,6 +29,8 @@ What the repository links to it:
 
 - 2026-06 · [GTG-50020 AI vendor sandbox injection and AI-company targeting](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=CAMPAIGN-GTG-50020) (campaign, confirmed)
 - 2025-09-25 · [ZombieAgent: Data Exfiltration Attack on ChatGPT (AML.CS0066)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-ATLAS-CS0066) (atlas-exercise, confirmed)
+- 2026-07 · [Prompts and planted secrets retained by inference providers and reused by third parties (Dragos canary study, OpenRouter ZDR removals)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-INFERENCE-PROVIDER-PROMPT-RETENTION-2026) (supply-chain, high)
+- 2026-11-24 · [Amazon ECS MCP Server troubleshooting tool returns unredacted task-definition secrets to the agent](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-AWSLABS-ECS-MCP-CVE-2026-135614) (credential-exposure, confirmed)
 
 Actors whose campaigns use it: GTG-50020. Vendor labels are kept as published and never merged without evidence.
 

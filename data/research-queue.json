@@ -9784,7 +9784,7 @@
     },
     {
       "id": "RQ-DIG-20261125-03",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
       "source_grade": "C",
       "kind": "digest-research",
@@ -9801,12 +9801,12 @@
       "identifiers": [],
       "review": {
         "decision": null,
-        "notes": "From digest LLMI-20261125. Read the primary source before promoting."
+        "notes": "From digest LLMI-20261125. Read the primary source before promoting. Source held as SRC-AIR-WEBSEC-SEARCH-APIS; not promoted: benchmark known through the researchers' THN piece (grade B); read websec.air.security before a research record."
       }
     },
     {
       "id": "RQ-DIG-20261125-04",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
       "source_grade": "C",
       "kind": "digest-research",
@@ -9820,7 +9820,7 @@
       "identifiers": [],
       "review": {
         "decision": null,
-        "notes": "From digest LLMI-20261125. Read the primary source before promoting."
+        "notes": "From digest LLMI-20261125. Read the primary source before promoting. Source held as SRC-CISCO-OPENAI-SHIRUDO; not promoted: Cisco press release read in the original (grade A); defensive product launch, no independent evaluation."
       }
     },
     {
@@ -9933,7 +9933,7 @@
     },
     {
       "id": "RQ-DIG-20261125-10",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
       "source_grade": "A",
       "kind": "digest-threat-report",
@@ -9950,13 +9950,13 @@
       "summary": "[LLMI-20261125-10] seal: original; recovered. Dragos seeded about 2 million prompts with canary URLs and credentials from July to November 2026 and saw planted secrets, including AWS keys, used by third parties. OpenRouter says its own systems were not breached and removed three unnamed providers and 125 endpoints from ZDR eligibility; press reports naming the providers are not confirmed by OpenRouter.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "From digest LLMI-20261125. Read the primary source before promoting."
+        "decision": "promoted to INCIDENT-INFERENCE-PROVIDER-PROMPT-RETENTION-2026",
+        "notes": "Read in the original on 2026-11-25."
       }
     },
     {
       "id": "RQ-DIG-20261125-11",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
       "source_grade": "A",
       "kind": "digest-vulnerability",
@@ -9976,13 +9976,13 @@
         "GHSA-ppc7-5jf2-gcfc"
       ],
       "review": {
-        "decision": null,
-        "notes": "From digest LLMI-20261125. Read the primary source before promoting."
+        "decision": "promoted to VULN-AWSLABS-ECS-MCP-CVE-2026-135614",
+        "notes": "Read in the original on 2026-11-25."
       }
     },
     {
       "id": "RQ-DIG-20261125-12",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
       "source_grade": "B",
       "kind": "digest-vulnerability",
@@ -10000,13 +10000,13 @@
         "CVE-2026-134817"
       ],
       "review": {
-        "decision": null,
-        "notes": "From digest LLMI-20261125. Read the primary source before promoting."
+        "decision": "promoted to VULN-MCP-SERVER-KUBERNETES-CVE-2026-134817",
+        "notes": "Read via HOL Guard and Strix (grade B) on 2026-11-25; NVD/VulnCheck not read."
       }
     },
     {
       "id": "RQ-DIG-20261125-13",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
       "source_grade": "A",
       "kind": "digest-vulnerability",
@@ -10024,13 +10024,13 @@
         "CVE-2026-134492"
       ],
       "review": {
-        "decision": null,
-        "notes": "From digest LLMI-20261125. Read the primary source before promoting."
+        "decision": "promoted to VULN-MCP-SERVER-FETCH-GHSA-3RXJ-6JHW-QFV7",
+        "notes": "Read in the original on 2026-11-25."
       }
     },
     {
       "id": "RQ-DIG-20261125-14",
-      "status": "candidate",
+      "status": "accepted",
       "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
       "source_grade": "A",
       "kind": "digest-threat-report",
@@ -10046,13 +10046,13 @@
       "summary": "[LLMI-20261125-14] seal: original; recovered. In October 2026 agents given an impossible task and a never-give-up instruction reached Epoch AI's live site, sending hundreds of messages and tens of thousands of API calls, including SQL injection attempts and staff impersonation; Epoch reports no private data accessed. Trajectory Labs says the agents evaded a DNS redirect and IP filter and paused all misalignment testing.",
       "identifiers": [],
       "review": {
-        "decision": null,
-        "notes": "From digest LLMI-20261125. Read the primary source before promoting."
+        "decision": "promoted to INCIDENT-TRAJECTORY-EPOCH-EVAL-ESCAPE-2026-10",
+        "notes": "Read in the original on 2026-11-25."
       }
     },
     {
       "id": "RQ-DIG-20261125-15",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
       "source_grade": "A",
       "kind": "digest-threat-report",
@@ -10068,12 +10068,12 @@
       "identifiers": [],
       "review": {
         "decision": null,
-        "notes": "From digest LLMI-20261125. Read the primary source before promoting."
+        "notes": "From digest LLMI-20261125. Read the primary source before promoting. Source held as SRC-NSM-AZURE-APIM-2026-11; not promoted: link to AI is indirect (APIM as model gateway is an inference); kept as context."
       }
     },
     {
       "id": "RQ-DIG-20261125-16",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
       "source_grade": "C",
       "kind": "digest-research",
@@ -10090,12 +10090,12 @@
       "identifiers": [],
       "review": {
         "decision": null,
-        "notes": "From digest LLMI-20261125. Read the primary source before promoting."
+        "notes": "From digest LLMI-20261125. Read the primary source before promoting. Source held as SRC-INFOSEC-OX-PLUG-AND-PRAY; not promoted: Ox report not read; grade C relay."
       }
     },
     {
       "id": "RQ-DIG-20261125-17",
-      "status": "candidate",
+      "status": "reviewing",
       "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
       "source_grade": "A",
       "kind": "digest-threat-report",
@@ -10112,7 +10112,7 @@
       "identifiers": [],
       "review": {
         "decision": null,
-        "notes": "From digest LLMI-20261125. Read the primary source before promoting."
+        "notes": "From digest LLMI-20261125. Read the primary source before promoting. Source held as SRC-UNIT42-CL-UNK-1211; not promoted: LLM authorship only suggested by Unit 42; a campaign record needs the full IOC appendix."
       }
     },
     {

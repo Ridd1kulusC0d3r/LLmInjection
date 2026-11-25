@@ -13,7 +13,7 @@
 
 | Layer | Status |
 |---|---|
-| Evidence | 25 record(s), 9 publisher(s), best grade A, newest 2026 |
+| Evidence | 26 record(s), 10 publisher(s), best grade A, newest 2026 |
 | Safe tests | 1 |
 | Detections | 3 rule file(s), 3 specification(s) |
 | Controls | 2 |
@@ -44,6 +44,7 @@ What the repository links to it:
 - 2026-04-10 · [LiteLLM guardrail tester sandbox escape to code execution](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-LITELLM-CVE-2026-40217) (sandbox-escape, confirmed)
 - 2026-05-08 · [LiteLLM proxy command injection in two endpoints](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-LITELLM-CVE-2026-42271) (command-injection, confirmed)
 - 2025-06-13 · [MCP Inspector unauthenticated proxy remote code execution](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-MCP-INSPECTOR-CVE-2025-49596) (remote-code-execution, confirmed)
+- 2026-11-22 · [mcp-server-kubernetes argument injection lets a remote MCP client make kubectl read files on the server host](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-MCP-SERVER-KUBERNETES-CVE-2026-134817) (argument-injection, high)
 - 2023-03-24 · [MLflow path traversal](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-MLFLOW-CVE-2023-1177) (path-traversal, confirmed)
 - 2026-08-17 · [MLflow webhook test endpoint follows redirects past URL validation (SSRF)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-MLFLOW-CVE-2026-64849) (ssrf, confirmed)
 - 2026-11-18 · [MONAI Label path traversal in datastore upload endpoints (arbitrary file write), found and exploited by attacker AI agents](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-MONAILABEL-GHSA-QC22-RMGC-VG94) (path-traversal, confirmed)

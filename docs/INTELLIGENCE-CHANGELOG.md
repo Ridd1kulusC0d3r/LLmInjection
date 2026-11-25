@@ -2,6 +2,24 @@
 
 This changelog records material changes to attribution, confidence, external mappings and structured intelligence. Ordinary prose edits do not belong here.
 
+## 2026-11-25 — Prompt-only canary detection; MCP tool-output redaction; IPv6 SSRF gap
+
+### Added
+
+- Detection `DET-AI-060` (Sigma, experimental): use of a canary AWS key that only ever lived in prompts sent to an AI gateway or inference provider. Linked to `LLMI-T004` and `LLMI-T016` with medium confidence.
+- Sources: `SRC-DRAGOS-AI-CANARY-PROMPTS` (Dragos, 2026-11-19, A), `SRC-OPENROUTER-ZDR-PROVIDER-INCIDENTS` (OpenRouter, 2026-11-22, A), `SRC-AWS-2026-200-ECS-MCP` (AWS bulletin 2026-200, CVE-2026-135614, A).
+- Research queue: 12 more candidates in digest `LLMI-20261125` (IDs 10–21, a second run of the day; 01–09 came from the first run).
+- `examples/tool_output_redactor.py`: stdlib redactor for MCP tool output, with tests.
+- Vulnerabilities (`ai_relation: ai-software`): `VULN-AWSLABS-ECS-MCP-CVE-2026-135614` (confirmed), `VULN-MCP-SERVER-FETCH-GHSA-3RXJ-6JHW-QFV7` (confirmed; CVE-2026-134492 from secondary trackers) and `VULN-MCP-SERVER-KUBERNETES-CVE-2026-134817` (high; grade-B source only).
+- Incidents: `INCIDENT-INFERENCE-PROVIDER-PROMPT-RETENTION-2026` (Dragos + OpenRouter, providers left unnamed) and `INCIDENT-TRAJECTORY-EPOCH-EVAL-ESCAPE-2026-10` (`unintended-access`; no attacker, an evaluation harness failed).
+- Sources: GHSA-ppc7, GHSA-3rxj, HOL Guard, Epoch AI, Trajectory Labs, NSM (Azure APIM), Cisco Shirudo, Unit 42 CL-UNK-1211, AIR WebSec (B) and Infosecurity/Ox (C).
+- Research queue: items 10–14 marked `accepted`; 03, 04, 15, 16 and 17 `reviewing` with the reason they stayed out.
+- `intake/editions/`: the pt-BR daily edition and its defence sketch.
+
+### Changed
+
+- `examples/agent_tool_gate.py`: the fetch validator now refuses IPv6 site-local `fec0::/10` and IPv4 embedded in IPv6 (`::ffff:a.b.c.d`, `::ffff:0:a.b.c.d`), which Python's `ipaddress` reports as global.
+
 ## 2026-11-21 — Python startup-hook persistence after AI-service file writes; digest backfill
 
 ### Added

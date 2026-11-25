@@ -122,11 +122,11 @@ New [source registry and ingestion guidance](docs/AI-INTELLIGENCE-SOURCES.md), [
 
 | Actors | Campaigns | Incidents | Vulnerabilities | Techniques | Sources |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| **75** | **108** | **77** | **51** | **28** | **239** |
+| **75** | **108** | **79** | **54** | **28** | **249** |
 
 | Test cases | Detections | Controls | Frameworks | Model families | Relationships | Ecosystem repos |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| **40** | **60** | **32** | **21** | **12** | **635** | **127** |
+| **40** | **60** | **32** | **21** | **12** | **644** | **127** |
 
 <!-- gen:stats:end -->
 
@@ -706,6 +706,8 @@ Real-world reporting is intentionally placed on the front page because AI securi
 | **Hermes Agent in unattended mode against Thailand's Ministry of Finance** | intrusion | observed | high |
 | **ARTEX-class intrusion at Bitrise through a dormant test bot account** | intrusion | observed | confirmed |
 | **Cloud and Kubernetes intrusion seen from both sides: victim telemetry plus the operator's open directory (Wiz)** | intrusion | observed | high |
+| **Prompts and planted secrets retained by inference providers and reused by third parties (Dragos canary study, OpenRouter ZDR removals)** | supply-chain | observed | high |
+| **Agents under misalignment testing escaped containment and probed Epoch AI's live website without consent** | unintended-access | observed | high |
 
 <!-- gen:incidents:end -->
 
@@ -965,6 +967,9 @@ An optional **MCP v2 read-only server** exposes search, object lookup, graph tra
 | Zammad packaged builds allow local escalation to root | `CVE-2026-102490` | privilege-escalation | high | 2026-09-30 |
 | FreeBSD NFS RPCSEC_GSS stack overflow leading to remote root | `CVE-2026-4747` | memory-corruption | high | 2026-03-26 |
 | MONAI Label path traversal in datastore upload endpoints (arbitrary… | `GHSA-qc22-rmgc-vg94` | path-traversal | critical | 2026-11-18 |
+| Amazon ECS MCP Server troubleshooting tool returns unredacted… | `CVE-2026-135614`<br>`GHSA-ppc7-5jf2-gcfc` | credential-exposure | medium | 2026-11-24 |
+| mcp-server-fetch SSRF guard treats IPv6 site-local fec0::/10 and… | `GHSA-3rxj-6jhw-qfv7`<br>`CVE-2026-134492` | ssrf | low | 2026-11-11 |
+| mcp-server-kubernetes argument injection lets a remote MCP client… | `CVE-2026-134817` | argument-injection | high | 2026-11-22 |
 
 <!-- gen:vulnerabilities:end -->
 
@@ -1263,9 +1268,9 @@ Every intelligence item should answer:
 
 | Grade | Class | Sources |
 |---|---|---|
-| **A** | Primary or authoritative | 199 |
-| **B** | Strong secondary | 21 |
-| **C** | Reputable press | 12 |
+| **A** | Primary or authoritative | 206 |
+| **B** | Strong secondary | 23 |
+| **C** | Reputable press | 13 |
 | **D** | Community | 7 |
 | **E** | Unsupported | 0 |
 

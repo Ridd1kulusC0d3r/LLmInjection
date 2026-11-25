@@ -13,7 +13,7 @@
 
 | Layer | Status |
 |---|---|
-| Evidence | 18 record(s), 6 publisher(s), best grade A, newest 2026-07-08 |
+| Evidence | 21 record(s), 10 publisher(s), best grade A, newest 2026-11-22 |
 | Safe tests | 6 |
 | Detections | 1 rule file(s), 3 specification(s) |
 | Controls | 2 |
@@ -32,14 +32,17 @@ What the repository links to it:
 - 2025-07-13 · [Code to Deploy Destructive AI Agent Discovered in Amazon Q VS Code Extension (AML.CS0047)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-ATLAS-CS0047) (atlas-incident, high)
 - 2025-05-24 · [AI ClickFix: Hijacking Computer-Use Agents Using ClickFix (AML.CS0055)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-ATLAS-CS0055) (atlas-exercise, confirmed)
 - 2026-07-08 · [Autonomous OpenAI Evaluation Agents Compromise Hugging Face Infrastructure (AML.CS0068)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-ATLAS-CS0068) (atlas-incident, high)
+- 2026-10 · [Agents under misalignment testing escaped containment and probed Epoch AI's live website without consent](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-TRAJECTORY-EPOCH-EVAL-ESCAPE-2026-10) (unintended-access, high)
 - 2026-03-30 · [CrewAI CodeInterpreter falls back to SandboxPython when Docker is unreachable](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-CREWAI-CVE-2026-2275) (sandbox-escape, confirmed)
 - 2026-03-30 · [CrewAI JSON loader arbitrary local file read](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-CREWAI-CVE-2026-2285) (path-traversal, confirmed)
 - 2026-03-30 · [CrewAI RAG tool server-side request forgery](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-CREWAI-CVE-2026-2286) (server-side-request-forgery, confirmed)
 - 2026-03-30 · [CrewAI does not re-check Docker at runtime before falling back to the sandbox](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-CREWAI-CVE-2026-2287) (sandbox-escape, confirmed)
 - 2026-06-23 · [Langflow /api/v1/responses IDOR runs another user's flow](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-LANGFLOW-CVE-2026-55255) (idor, confirmed)
+- 2026-11-11 · [mcp-server-fetch SSRF guard treats IPv6 site-local fec0::/10 and IPv4-translated addresses as public](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-MCP-SERVER-FETCH-GHSA-3RXJ-6JHW-QFV7) (ssrf, confirmed)
 - 2025-12-17 · [mcp-server-git path traversal in git_init](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-MCP-SERVER-GIT-CVE-2025-68143) (path-traversal, confirmed)
 - 2025-12-17 · [mcp-server-git argument injection in git_diff and git_checkout](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-MCP-SERVER-GIT-CVE-2025-68144) (argument-injection, confirmed)
 - 2025-12-17 · [mcp-server-git --repository restriction not enforced on tool calls](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-MCP-SERVER-GIT-CVE-2025-68145) (path-traversal, confirmed)
+- 2026-11-22 · [mcp-server-kubernetes argument injection lets a remote MCP client make kubectl read files on the server host](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-MCP-SERVER-KUBERNETES-CVE-2026-134817) (argument-injection, high)
 - 2026-04-15 · [MCP STDIO configuration command injection across AI frameworks](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-MCP-STDIO-OX-2026) (command-injection, high)
 - 2025-12-19 · [n8n workflow expression evaluation escapes to code execution](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-N8N-CVE-2025-68613) (code-injection, confirmed)
 - 2026-05-07 · [Semantic Kernel SessionsPythonPlugin arbitrary file access](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-SK-CVE-2026-25592) (sandbox-escape, confirmed)

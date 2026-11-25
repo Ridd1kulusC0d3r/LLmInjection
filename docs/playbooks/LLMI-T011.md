@@ -13,7 +13,7 @@
 
 | Layer | Status |
 |---|---|
-| Evidence | 9 record(s), 9 publisher(s), best grade A, newest 2026 |
+| Evidence | 10 record(s), 11 publisher(s), best grade A, newest 2026 |
 | Safe tests | 2 |
 | Detections | 2 rule file(s), 5 specification(s) |
 | Controls | 1 |
@@ -34,6 +34,7 @@ What the repository links to it:
 - 2026 · [DUSTMAKER credential stealer targeting AI coding-assistant workspaces](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-DUSTMAKER) (malware, confirmed)
 - 2024-02 · [Malicious Hugging Face models with pickle reverse-shell payloads](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-HF-MALICIOUS-PICKLE-MODELS) (supply-chain, confirmed)
 - 2026-07 · [Hugging Face production intrusion driven by an autonomous AI agent system](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-HUGGINGFACE-AGENTIC-INTRUSION-2026-07) (intrusion, high)
+- 2026-07 · [Prompts and planted secrets retained by inference providers and reused by third parties (Dragos canary study, OpenRouter ZDR removals)](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-INFERENCE-PROVIDER-PROMPT-RETENTION-2026) (supply-chain, high)
 - 2026 · [STARDUST CHOLLIMA Mastra AI package compromise](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=INCIDENT-MASTRA-STARDUST) (supply-chain, confirmed)
 - 2026-03-21 · [Trivy Ecosystem Supply-Chain Compromise](https://ridd1kulusc0d3r.github.io/LLmInjection/#node=VULN-TRIVY-CVE-2026-33634) (supply-chain-compromise, confirmed)
 
