@@ -2448,5 +2448,69 @@
     "url": "https://www.youtube.com/watch?v=nLj5LP7oKT0",
     "published": "2026-11-22",
     "last_verified": "2026-11-23"
+  },
+  {
+    "id": "SRC-BITRISE-ARTEX-INCIDENT-2026-11",
+    "type": "source",
+    "name": "Anatomy of an AI-driven attack: what ARTEX looks like in action (Bitrise security incident report, TLP:CLEAR, v1.6)",
+    "publisher": "Bitrise",
+    "grade": "A",
+    "role": "victim-incident-report",
+    "url": "https://bitrise.io/artex-incident-report",
+    "published": "2026-11-19",
+    "last_verified": "2026-11-25"
+  },
+  {
+    "id": "SRC-AWS-ARTEX-MADPOT-2026-11",
+    "type": "source",
+    "name": "Amazon Threat Intelligence observes threat actors running cybercrime campaigns with ARTEX AI agents",
+    "publisher": "Amazon Threat Intelligence (AWS)",
+    "grade": "A",
+    "role": "threat-report",
+    "url": "https://aws.amazon.com/blogs/security/amazon-threat-intelligence-observes-threat-actors-running-cybercrime-campaigns-with-artex-ai-agents/",
+    "published": "2026-11-13",
+    "last_verified": "2026-11-25"
+  },
+  {
+    "id": "SRC-WIZ-AGENTIC-ATTACKS-2026-11",
+    "type": "source",
+    "name": "Agentic attacks: ARTEX and offensive AI frameworks in the wild (ARTEX-Harvester, both sides of one intrusion, Black October update)",
+    "publisher": "Wiz Research",
+    "grade": "A",
+    "role": "threat-report",
+    "url": "https://www.wiz.io/blog/agentic-attacks-artex-offensive-ai-frameworks",
+    "published": "2026-11-23",
+    "last_verified": "2026-11-25"
+  },
+  {
+    "id": "SRC-0XUKI-ARTEX-DESIGN",
+    "type": "source",
+    "name": "Reading the design of ARTEX: dual graphs, approval gates and safeguards that can be switched off (source-code reading, Japanese)",
+    "publisher": "uki (note.com)",
+    "grade": "C",
+    "role": "code-analysis",
+    "url": "https://note.com/0xuki/n/n0893bce5c84d",
+    "published": "2026-10-08",
+    "last_verified": "2026-11-25"
+  },
+  {
+    "id": "SRC-GUARDZ-ARTEX",
+    "type": "source",
+    "name": "ARTEX unveiled: key pillars of offensive AI",
+    "publisher": "Guardz",
+    "grade": "D",
+    "role": "secondary-analysis",
+    "url": "https://guardz.com/blog/artex-agentic-ai-framework/",
+    "last_verified": "2026-11-25"
+  },
+  {
+    "id": "SRC-TOMODAHINATA-ARTEX-ARCH",
+    "type": "source",
+    "name": "ARTEX internal architecture read from public analyses (marks confirmed vs unverified claims)",
+    "publisher": "tomodahinata",
+    "grade": "D",
+    "role": "secondary-analysis",
+    "url": "https://tomodahinata.com/en/blog/artex-ai-pentesting-architecture-guide",
+    "last_verified": "2026-11-25"
   }
 ]

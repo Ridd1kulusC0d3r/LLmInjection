@@ -9603,6 +9603,138 @@
         "decision": "not promoted: the mapping is the vendor's emulation catalogue without a published method; the 4 ARTEX actors are already sourced (Microsoft, CrowdStrike, GTIG); the other 8 are not AI-specific",
         "notes": "Read on 2026-11-23 (YouTube description, mitigant.io video and MCP pages)."
       }
+    },
+    {
+      "id": "RQ-ADS-20261125-01",
+      "status": "reviewing",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "C",
+      "kind": "source-candidate",
+      "title": "SentinelOne: ARTEX unmasked, the rise of AI-powered ARTEX in cybercrime and espionage",
+      "url": "https://www.sentinelone.com/blog/artex-unmasked-the-rise-of-ai-powered-artex-in-cybercrime-espionage/",
+      "published": null,
+      "observed_at": "2026-11-25T01:00:00Z",
+      "relevance_score": 75,
+      "matched_terms": [
+        "ARTEX",
+        "LLMI-T015"
+      ],
+      "summary": "Cited by the ARTEX source dossier (default toolset, residential proxies). Fetch refused with HTTP 429 on 2026-11-25; not read.",
+      "identifiers": [],
+      "review": {
+        "decision": "not promoted: original not read yet",
+        "notes": "From the ARTEX source dossier shared on 2026-11-24 (@Rafael)."
+      }
+    },
+    {
+      "id": "RQ-ADS-20261125-02",
+      "status": "reviewing",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "C",
+      "kind": "source-candidate",
+      "title": "NCSC UK incident handlers' blog on agentic offensive frameworks (24 Nov 2026)",
+      "url": "https://www.ncsc.gov.uk/section/keep-up-to-date/ncsc-blog",
+      "published": "2026-11-24",
+      "observed_at": "2026-11-25T01:00:00Z",
+      "relevance_score": 75,
+      "matched_terms": [
+        "ARTEX",
+        "LLMI-T015"
+      ],
+      "summary": "Dossier cites it through explainx: AI-assisted intrusions accelerated since September 2026, same old weaknesses, EC training-portal incident. The post was not found on the NCSC blog index on 2026-11-25.",
+      "identifiers": [],
+      "review": {
+        "decision": "not promoted: original not located",
+        "notes": "From the ARTEX source dossier shared on 2026-11-24 (@Rafael)."
+      }
+    },
+    {
+      "id": "RQ-ADS-20261125-03",
+      "status": "reviewing",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "C",
+      "kind": "source-candidate",
+      "title": "BadByte: backdoored ARTEX images on Docker Hub (2-4 Nov 2026)",
+      "url": "https://threatdefence.com/article/artex-agentic-attack-framework-detection-hunting",
+      "published": "2026-11-04",
+      "observed_at": "2026-11-25T01:00:00Z",
+      "relevance_score": 75,
+      "matched_terms": [
+        "ARTEX",
+        "LLMI-T015"
+      ],
+      "summary": "Backdoored ARTEX builds on Docker Hub; The Hacker News says up to 62 consoles served them. Already cited at grade C in the ARTEX dossier; BadByte's original not read.",
+      "identifiers": [],
+      "review": {
+        "decision": "not promoted: keep at grade C until BadByte's report is read",
+        "notes": "From the ARTEX source dossier shared on 2026-11-24 (@Rafael)."
+      }
+    },
+    {
+      "id": "RQ-ADS-20261125-04",
+      "status": "reviewing",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "C",
+      "kind": "source-candidate",
+      "title": "Wiz: Black October for AI developer platforms (Zeabur, Kernel, Lightning AI, Railway, Phala, Dokploy, Chainstack, NEAR AI, Northflank)",
+      "url": "https://www.wiz.io/blog",
+      "published": "2026-10-31",
+      "observed_at": "2026-11-25T01:00:00Z",
+      "relevance_score": 75,
+      "matched_terms": [
+        "ARTEX",
+        "LLMI-T015"
+      ],
+      "summary": "Wiz links nine, now about thirty, disclosed incidents at AI developer platforms; entry points stolen keys, exposed services and tenant-isolation escapes. Each incident needs its own disclosure read.",
+      "identifiers": [],
+      "review": {
+        "decision": "not promoted: read the Black October post and each victim disclosure",
+        "notes": "From the ARTEX source dossier shared on 2026-11-24 (@Rafael)."
+      }
+    },
+    {
+      "id": "RQ-ADS-20261125-05",
+      "status": "rejected",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "C",
+      "kind": "source-candidate",
+      "title": "implicator.ai and explainx coverage of Censys 'Agentic Asbestos'",
+      "url": "https://www.implicator.ai/censys-finds-800-publicly-exposed-copies-artex-chinese-made/",
+      "published": "2026-11-05",
+      "observed_at": "2026-11-25T01:00:00Z",
+      "relevance_score": 75,
+      "matched_terms": [
+        "ARTEX",
+        "LLMI-T015"
+      ],
+      "summary": "Secondary coverage of the Censys scan (1,465 consoles, ~815 deployments, 155 with another threat on the host, 32 open directories).",
+      "identifiers": [],
+      "review": {
+        "decision": "not promoted: the Censys original is already SRC-CENSYS-ARTEX-2026-11 (grade A); implicator returned HTTP 403",
+        "notes": "From the ARTEX source dossier shared on 2026-11-24 (@Rafael)."
+      }
+    },
+    {
+      "id": "RQ-ADS-20261125-06",
+      "status": "reviewing",
+      "source_feed_id": "FEED-LLMI-DAILY-DIGEST",
+      "source_grade": "C",
+      "kind": "source-candidate",
+      "title": "Kodem: ARTEX IOCs and response runbook; CTI Academy lab audit (127.0.0.1:8788)",
+      "url": "https://www.kodemsecurity.com/",
+      "published": "2026-11-13",
+      "observed_at": "2026-11-25T01:00:00Z",
+      "relevance_score": 75,
+      "matched_terms": [
+        "ARTEX",
+        "LLMI-T015"
+      ],
+      "summary": "Dossier lists both as IOC/runbook sources; ports diverge (8787 per the code reading, 8788 per CTI Academy). Not read.",
+      "identifiers": [],
+      "review": {
+        "decision": "not promoted: originals not read; port divergence unresolved",
+        "notes": "From the ARTEX source dossier shared on 2026-11-24 (@Rafael)."
+      }
     }
   ]
 }

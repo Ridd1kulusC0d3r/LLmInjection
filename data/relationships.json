@@ -6826,5 +6826,181 @@
     "evidence_sources": [
       "SRC-UNIT42-BUGSTER"
     ]
+  },
+  {
+    "id": "REL-618",
+    "type": "relationship",
+    "source": "CAMPAIGN-ARTEX-MADPOT-AI-CREDENTIAL-THEFT",
+    "relationship": "uses-tool",
+    "target": "TOOL-ARTEX",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-AWS-ARTEX-MADPOT-2026-11"
+    ]
+  },
+  {
+    "id": "REL-619",
+    "type": "relationship",
+    "source": "CAMPAIGN-ARTEX-MADPOT-AI-CREDENTIAL-THEFT",
+    "relationship": "uses",
+    "target": "LLMI-T015",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-AWS-ARTEX-MADPOT-2026-11"
+    ]
+  },
+  {
+    "id": "REL-620",
+    "type": "relationship",
+    "source": "CAMPAIGN-ARTEX-MADPOT-AI-CREDENTIAL-THEFT",
+    "relationship": "uses",
+    "target": "LLMI-T016",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-AWS-ARTEX-MADPOT-2026-11"
+    ]
+  },
+  {
+    "id": "REL-621",
+    "type": "relationship",
+    "source": "CAMPAIGN-ARTEX-MADPOT-KYC-DEEPFAKE",
+    "relationship": "uses-tool",
+    "target": "TOOL-ARTEX",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-AWS-ARTEX-MADPOT-2026-11"
+    ]
+  },
+  {
+    "id": "REL-622",
+    "type": "relationship",
+    "source": "CAMPAIGN-ARTEX-MADPOT-KYC-DEEPFAKE",
+    "relationship": "uses",
+    "target": "LLMI-T015",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-AWS-ARTEX-MADPOT-2026-11"
+    ]
+  },
+  {
+    "id": "REL-623",
+    "type": "relationship",
+    "source": "CAMPAIGN-ARTEX-HARVESTER",
+    "relationship": "uses-tool",
+    "target": "TOOL-ARTEX",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-WIZ-AGENTIC-ATTACKS-2026-11"
+    ]
+  },
+  {
+    "id": "REL-624",
+    "type": "relationship",
+    "source": "CAMPAIGN-ARTEX-HARVESTER",
+    "relationship": "uses",
+    "target": "LLMI-T015",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-WIZ-AGENTIC-ATTACKS-2026-11"
+    ]
+  },
+  {
+    "id": "REL-625",
+    "type": "relationship",
+    "source": "CAMPAIGN-ARTEX-HARVESTER",
+    "relationship": "uses",
+    "target": "LLMI-T016",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-WIZ-AGENTIC-ATTACKS-2026-11"
+    ]
+  },
+  {
+    "id": "REL-626",
+    "type": "relationship",
+    "source": "INCIDENT-BITRISE-ARTEX-2026-11",
+    "relationship": "demonstrates",
+    "target": "LLMI-T015",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-BITRISE-ARTEX-INCIDENT-2026-11"
+    ]
+  },
+  {
+    "id": "REL-627",
+    "type": "relationship",
+    "source": "INCIDENT-BITRISE-ARTEX-2026-11",
+    "relationship": "demonstrates",
+    "target": "LLMI-T016",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-BITRISE-ARTEX-INCIDENT-2026-11"
+    ]
+  },
+  {
+    "id": "REL-628",
+    "type": "relationship",
+    "source": "INCIDENT-WIZ-CYBERSTRIKEAI-EKS-BOTH-SIDES-2026-10",
+    "relationship": "demonstrates",
+    "target": "LLMI-T015",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-WIZ-AGENTIC-ATTACKS-2026-11"
+    ]
+  },
+  {
+    "id": "REL-629",
+    "type": "relationship",
+    "source": "INCIDENT-WIZ-CYBERSTRIKEAI-EKS-BOTH-SIDES-2026-10",
+    "relationship": "demonstrates",
+    "target": "LLMI-T016",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-WIZ-AGENTIC-ATTACKS-2026-11"
+    ]
+  },
+  {
+    "id": "REL-630",
+    "type": "relationship",
+    "source": "INCIDENT-BITRISE-ARTEX-2026-11",
+    "relationship": "uses-tool",
+    "target": "TOOL-ARTEX",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-BITRISE-ARTEX-INCIDENT-2026-11"
+    ]
+  },
+  {
+    "id": "REL-631",
+    "type": "relationship",
+    "source": "INCIDENT-WIZ-CYBERSTRIKEAI-EKS-BOTH-SIDES-2026-10",
+    "relationship": "uses-tool",
+    "target": "TOOL-CYBERSTRIKEAI",
+    "confidence": "high",
+    "evidence_sources": [
+      "SRC-WIZ-AGENTIC-ATTACKS-2026-11"
+    ]
+  },
+  {
+    "id": "REL-632",
+    "type": "relationship",
+    "source": "INCIDENT-WIZ-CYBERSTRIKEAI-EKS-BOTH-SIDES-2026-10",
+    "relationship": "uses-tool",
+    "target": "TOOL-ARTEX",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-WIZ-AGENTIC-ATTACKS-2026-11"
+    ]
+  },
+  {
+    "id": "REL-633",
+    "type": "relationship",
+    "source": "VULN-LANGFLOW-CVE-2025-3248",
+    "relationship": "observed-in",
+    "target": "CAMPAIGN-ARTEX-MADPOT-AI-CREDENTIAL-THEFT",
+    "confidence": "medium",
+    "evidence_sources": [
+      "SRC-AWS-ARTEX-MADPOT-2026-11"
+    ]
   }
 ]

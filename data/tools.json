@@ -7,14 +7,18 @@
     "origin": "Open-source, Go, published on GitHub by \"Autumn-27\" in July 2026; made unavailable on 2026-10-08, with forks, archived copies and a commercial ARTEX PRO still in circulation",
     "models": "External providers (Claude, GPT, DeepSeek, GLM, Grok, Kimi); DeepSeek Flash models dominate attacker instances per the FBI",
     "first_seen": "2026-07",
-    "summary": "Multi-agent, LLM-driven penetration-testing platform: an operator sets a target and objective, a planner agent chooses steps and worker agents run standard tools, sharing findings. Reported in use by state-aligned and financially motivated actors since August 2026; its own consoles are often exposed to the internet. Spectrum's census (2026-11-18) counted 2,335 exposed offensive AI consoles, 47 distinct ARTEX variants (forks, private builds, renamed consoles such as ScopeWeaver) and 179 ARTEX consoles that a default-title search misses.",
+    "summary": "Multi-agent, LLM-driven penetration-testing platform: an operator sets a target and objective, a planner agent chooses steps and worker agents run standard tools, sharing findings. Reported in use by state-aligned and financially motivated actors since August 2026; its own consoles are often exposed to the internet. Spectrum's census (2026-11-18) counted 2,335 exposed offensive AI consoles, 47 distinct ARTEX variants (forks, private builds, renamed consoles such as ScopeWeaver) and 179 ARTEX consoles that a default-title search misses. Code-level traits confirmed by a victim and a code reading: agents are built on the norma SDK, whose web-fetch tool hard-codes the user agent norma/0.4; each worker runs in a directory named i<intent-id>, so the names it creates carry i<number>; the default system prompt tells every agent it belongs to an authorized penetration test, which surfaces as self-declared 'authorized pentest' user agents (Bitrise). The console listens on TCP 8787 and the first visitor sets the admin password; every tool call passes an approval gate whose destructive-command and .gov/.edu rules are on by default but editable, whose exfiltration-pipe rule is off by default, and whose optional LLM-delegated approval allows the call if the judging model fails or times out (15 s) (0xuki code reading, 2026-10-08).",
     "source_ids": [
       "SRC-FBI-FLASH-20261113-ARTEX",
       "SRC-GTIG-ARTEX-2026-10",
       "SRC-WIZ-ARTEX-VENDORS",
       "SRC-CENSYS-ARTEX-2026-11",
       "SRC-SPECTRUM-SWARM-CHASING",
-      "SRC-OFFENSIVE-AGENCY-TRACKER"
+      "SRC-OFFENSIVE-AGENCY-TRACKER",
+      "SRC-BITRISE-ARTEX-INCIDENT-2026-11",
+      "SRC-AWS-ARTEX-MADPOT-2026-11",
+      "SRC-WIZ-AGENTIC-ATTACKS-2026-11",
+      "SRC-0XUKI-ARTEX-DESIGN"
     ]
   },
   {
@@ -72,7 +76,8 @@
       "SRC-GTIG-AGENTIC-THRESHOLD-2026-11",
       "SRC-JPCERT-AT-2026-0030",
       "SRC-KASPERSKY-CYBERSTRIKEAI-2026-11",
-      "SRC-OFFENSIVE-AGENCY-TRACKER"
+      "SRC-OFFENSIVE-AGENCY-TRACKER",
+      "SRC-WIZ-AGENTIC-ATTACKS-2026-11"
     ]
   },
   {

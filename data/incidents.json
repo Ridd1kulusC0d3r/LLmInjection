@@ -1042,5 +1042,34 @@
     "source_ids": [
       "SRC-HUNTIO-HERMES-THAILAND-MOF"
     ]
+  },
+  {
+    "id": "INCIDENT-BITRISE-ARTEX-2026-11",
+    "type": "incident",
+    "name": "ARTEX-class intrusion at Bitrise through a dormant test bot account",
+    "kind": "intrusion",
+    "status": "observed",
+    "confidence": "confirmed",
+    "date": "2026-11-13",
+    "reported": "2026-11-19",
+    "summary": "Bitrise's evidence-graded public report (TLP:CLEAR) covers 25 days, 25 Oct to 18 Nov 2026. Reconnaissance from an AWS Hong Kong address labelled itself an authorized pentest in its user agents (36,698 requests, 20+ hostnames), opened throw-away accounts and reused public install-page links. On 13 Nov the attacker signed in to a test bot account idle for almost four years, without a second factor, and had a cloud key in use 10 min 37 s later; over about ten hours it revealed unprotected CI secrets (up to 385 internal apps), downloaded Apple and Android signing material, 236 production Terraform state files and build logs, cloned 28 private repositories and used an engineer's API token and a GitHub App key. Customer impact: files in 15 customer workspaces (one signing certificate without its password, one provisioning profile, 13 diagnostic build logs) and a list of 150 customer emails; no access to the customer secret store was seen. Bitrise shut the platform path down 3 h 54 min after detection, rotated everything and saw the attacker return on 18 Nov with nothing opening. ARTEX is identified by three matches to its public code: the norma/0.4 web-fetch user agent, i<intent-number> names on everything it created, and the default prompt that tells agents they are part of an authorized test. The model and the operator are not established.",
+    "source_ids": [
+      "SRC-BITRISE-ARTEX-INCIDENT-2026-11",
+      "SRC-WIZ-AGENTIC-ATTACKS-2026-11"
+    ]
+  },
+  {
+    "id": "INCIDENT-WIZ-CYBERSTRIKEAI-EKS-BOTH-SIDES-2026-10",
+    "type": "incident",
+    "name": "Cloud and Kubernetes intrusion seen from both sides: victim telemetry plus the operator's open directory (Wiz)",
+    "kind": "intrusion",
+    "status": "observed",
+    "confidence": "high",
+    "date": "2026-10",
+    "reported": "2026-11-23",
+    "summary": "Anonymized Wiz case across two AWS accounts and seven EKS clusters over four days in October 2026: a stolen Terraform-runner session read the kubelet kubeconfig and created a privileged pod and cluster-admin binding, Jenkins RCE opened a reverse shell, a pod escape installed an ld.so.preload rootkit with a DNS-tunnel channel, and node, IRSA and Terraform credentials were used from the attacker's server against Terraform state, Secrets Manager and SSM. The operator's open directory (over 3,000 files) adds forged identity-provider admin tokens (3,392 users), beacons on 19 hosts, 50 SSH keys, dumped GitHub Actions secrets and a Jenkinsfile modified to run before its approval gate. CyberStrikeAI ran the operation (csai- prefixes), with an ARTEX checkout and .claude, .grok and .agents directories alongside; Anthropic API keys were harvested from 50 hosts and AI coding-assistant session histories were mined for SSO credentials. The operator's own Chinese-language report framed it as an authorised red-team test with 58 findings.",
+    "source_ids": [
+      "SRC-WIZ-AGENTIC-ATTACKS-2026-11"
+    ]
   }
 ]
