@@ -100,7 +100,7 @@ Attribution is the weakest link: AI use is usually **inferred from artifacts**, 
 
 <sub>Regenerate the GIFs with `node scripts/record_tour.js <url> <frames> tour|graph|filters|orchestration|timeline|spaces` and `python scripts/make_tour_gif.py <frames> assets/explorer-<name>.gif`.</sub>
 
-### ▶ Video tour (73 s)
+### ▶ Video tour (80 s, narrated)
 
 <a href="https://ridd1kulusc0d3r.github.io/LLmInjection/video.html"><img src="assets/promo-video-poster.jpg" alt="Video tour of the LLMInjection Explorer: intelligence graph and coverage matrix" width="100%"></a>
 

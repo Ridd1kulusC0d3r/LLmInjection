@@ -24,3 +24,17 @@ cat package/kokoro-q8.part{0..5}.bin > kokoro-q8.onnx   # sha256 fbae9257…a147
 python3 -c "import numpy as n,glob,os;n.savez('voices.npz',**{os.path.basename(f)[:-4]:n.fromfile(f,'f4').reshape(510,1,256) for f in glob.glob('package/voices/*.bin')})"
 python3 narrate.py en --model kokoro-q8.onnx --voices voices.npz
 ```
+
+## ElevenLabs voice-over (current videos)
+
+The published tour uses an ElevenLabs narration: one take per language, generated from the lines in
+`elevenlabs.json` (respelled so names like LLMInjection, dataset and benchmark are pronounced right) and
+separated by `[long pause]`. ElevenLabs only generates the audio; the sync and the video edit run here:
+
+```bash
+python3 voiceover_mix.py out/llminjection-promo-pt.mp4 speech-pt.mp3 out/timeline-pt.json narrated-pt.mp4 "14.85:2.6,23.69:1.3"
+```
+
+`render.py` writes `out/timeline-<lang>.json` with the start of every beat. `voiceover_mix.py` splits the take on
+its longest silences, puts each line on its beat, and freezes frames where a line needs more room (the optional
+`t:seconds` holds).

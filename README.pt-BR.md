@@ -12,7 +12,7 @@ Inteligência de ameaças aberta para sistemas de IA, LLMs e agentes: atores, ca
 
 **[Explorer](https://ridd1kulusc0d3r.github.io/LLmInjection/)** · [Documentação](docs/README.md) · [Panorama Brasil e América Latina](docs/pt-BR/PANORAMA-BRASIL-LATAM.md) · [Metodologia](docs/METHODOLOGY.md)
 
-### ▶ Tour em vídeo (73 s)
+### ▶ Tour em vídeo (80 s, narrado)
 
 <a href="https://ridd1kulusc0d3r.github.io/LLmInjection/video.html?lang=pt"><img src="assets/promo-video-poster.jpg" alt="Tour em vídeo do Explorer do LLMInjection: grafo de inteligência e matriz de cobertura" width="100%"></a>
 

@@ -11,32 +11,6 @@
    "wmSub": "Every claim carries a source grade and a confidence level.",
    "statsKick": "Linked to the evidence behind each claim",
    "statsTitle": "One open dataset. Graded, cited, defensive-first.",
-   "stats": [
-    [
-     8,
-     "Actors"
-    ],
-    [
-     30,
-     "Incidents"
-    ],
-    [
-     28,
-     "Techniques"
-    ],
-    [
-     40,
-     "Safe test cases"
-    ],
-    [
-     45,
-     "Detections"
-    ],
-    [
-     215,
-     "Relationships"
-    ]
-   ],
    "outKick": "Open source · Apache-2.0",
    "outTitle": "Open. Graded.<br>Defensive-first.",
    "outLinks": [
@@ -47,13 +21,40 @@
     "★ Star the repo",
     "Contribute intel",
     "STIX 2.1 · API · Navigator"
-   ]
+   ],
+   "stat_keys": [
+    [
+     "actor",
+     "Actors"
+    ],
+    [
+     "campaign",
+     "Campaigns"
+    ],
+    [
+     "incident",
+     "Incidents"
+    ],
+    [
+     "vulnerability",
+     "Vulnerabilities"
+    ],
+    [
+     "detection",
+     "Detections"
+    ],
+    [
+     "edges",
+     "Relationships"
+    ]
+   ],
+   "locale": "en-US"
   },
   "ch1": {
    "no": "01 / 02",
    "kick": "The intelligence graph",
    "title": "Trace the whole<br>kill chain.",
-   "sub": "Actors, campaigns, incidents, techniques, tests, detections, controls and frameworks in one connected view."
+   "sub": "Actors, campaigns, incidents, vulnerabilities, techniques, detections and controls in one connected view."
   },
   "ch2": {
    "no": "02 / 02",
@@ -64,15 +65,19 @@
   "graph": [
    [
     "Intelligence graph",
-    "One column per object type, every link backed by a source."
+    "{types} object types, {nodes} records, {edges} links. Each one backed by a source."
    ],
    [
-    "Focus a node",
-    "Its linked records light up in every column, campaign to control."
+    "Select a record",
+    "Its whole chain lights up, with the reports behind it."
    ],
    [
-    "Open any record",
-    "Sources, grade, confidence, framework mapping and the defensive angle."
+    "Focus",
+    "Keep only that record and its chain, and nothing else."
+   ],
+   [
+    "Open the record",
+    "Sources, confidence, relations and evidence, in full."
    ]
   ],
   "cov": [
@@ -110,32 +115,6 @@
    "wmSub": "Toda afirmação traz grau da fonte e nível de confiança.",
    "statsKick": "Ligado à evidência por trás de cada afirmação",
    "statsTitle": "Um dataset aberto. Graduado, citado, defensivo.",
-   "stats": [
-    [
-     8,
-     "Atores"
-    ],
-    [
-     30,
-     "Incidentes"
-    ],
-    [
-     28,
-     "Técnicas"
-    ],
-    [
-     40,
-     "Casos de teste seguros"
-    ],
-    [
-     45,
-     "Detecções"
-    ],
-    [
-     215,
-     "Relacionamentos"
-    ]
-   ],
    "outKick": "Código aberto · Apache-2.0",
    "outTitle": "Aberto. Graduado.<br>Defensivo primeiro.",
    "outLinks": [
@@ -146,13 +125,40 @@
     "★ Dê uma estrela",
     "Contribua com inteligência",
     "STIX 2.1 · API · Navigator"
-   ]
+   ],
+   "stat_keys": [
+    [
+     "actor",
+     "Atores"
+    ],
+    [
+     "campaign",
+     "Campanhas"
+    ],
+    [
+     "incident",
+     "Incidentes"
+    ],
+    [
+     "vulnerability",
+     "Vulnerabilidades"
+    ],
+    [
+     "detection",
+     "Detecções"
+    ],
+    [
+     "edges",
+     "Relacionamentos"
+    ]
+   ],
+   "locale": "pt-BR"
   },
   "ch1": {
    "no": "01 / 02",
    "kick": "O grafo de inteligência",
    "title": "Rastreie a cadeia<br>de ataque inteira.",
-   "sub": "Atores, campanhas, incidentes, técnicas, testes, detecções, controles e frameworks numa única visão conectada."
+   "sub": "Atores, campanhas, incidentes, vulnerabilidades, técnicas, detecções e controles numa única visão conectada."
   },
   "ch2": {
    "no": "02 / 02",
@@ -163,15 +169,19 @@
   "graph": [
    [
     "Grafo de inteligência",
-    "Uma coluna por tipo de objeto, cada ligação apoiada numa fonte."
+    "{types} tipos de objeto, {nodes} registros, {edges} ligações. Cada uma apoiada numa fonte."
    ],
    [
-    "Foque um nó",
-    "Os registros ligados a ele acendem em todas as colunas, da campanha ao controle."
+    "Selecione um registro",
+    "A cadeia inteira acende, com os relatórios por trás dela."
    ],
    [
-    "Abra qualquer registro",
-    "Fontes, grau, confiança, mapeamento de frameworks e o ângulo defensivo."
+    "Foco",
+    "Fica só o registro e a cadeia dele, e mais nada."
+   ],
+   [
+    "Abra o registro",
+    "Fontes, confiança, relações e evidências, por inteiro."
    ]
   ],
   "cov": [

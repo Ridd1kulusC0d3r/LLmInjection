@@ -1,0 +1,21 @@
+{
+ "note": "Voice-over generated in ElevenLabs (eleven_v4, one take per language). Words are respelled so the voice pronounces them right. Lines are separated by [long pause]; voiceover_mix.py splits on the longest silences and places each line on its beat.",
+ "pt": {
+  "voice": "Caio - Confiável e Explicativa (dkEWjOjfTCMYc8zRNyju)",
+  "holds": "14.85:2.6,23.69:1.3",
+  "respellings": {
+   "LLMInjection": "Éle Éle Ême Indjékchon",
+   "dataset": "dêitassét",
+   "benchmark": "bêntchmárk",
+   "GitHub": "Guít-Râb"
+  }
+ },
+ "en": {
+  "voice": "Zuko - Global Modern Narrator (7PbNGDB5sJCFnOZuMPNL)",
+  "holds": "14.85:1.8,23.69:0.9",
+  "respellings": {
+   "LLMInjection": "Ell Ell Em Injection",
+   "AI": "A.I."
+  }
+ }
+}
