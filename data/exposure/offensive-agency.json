@@ -5,9 +5,9 @@
     "data_by": "ONYPHE (category:ctiscan for IPs, category:ctiurl for domains)",
     "method": "Passive. The tracker reads ONYPHE scan data and never connects to a listed host; this repository only reads the tracker's public exports. Two independent fingerprint families on one IP make it confirmed, one makes it probable. Honeypots and IPs answering on 150 ports or more are dropped. Active = seen in the last 7 days.",
     "caveat": "A listed IP runs an exposed instance; that says nothing about who runs it or why (researchers, students, penetration testers and attackers all appear). A CDN-front IP is shared by unrelated sites: search the domain instead. A cloud IP can change owner within minutes: compare log dates with first and last seen. Counts are IPs, not machines. Clusters are a shared build detail, not an attribution.",
-    "ref_day": "2026-11-22",
-    "active_since": "2026-11-16",
-    "fetched_at": "2026-11-23T01:02:43Z",
+    "ref_day": "2026-11-27",
+    "active_since": "2026-11-21",
+    "fetched_at": "2026-11-28T02:10:56Z",
     "exports": {
       "ips.txt": "https://offensive.agency/api/ips.txt",
       "domains.txt": "https://offensive.agency/api/domains.txt",
@@ -17,116 +17,116 @@
     }
   },
   "totals": {
-    "active_ips": 5005,
-    "all_time_ips": 8087,
-    "new_ips": 1373,
-    "multi_agent_ips": 444,
-    "ips_with_c2": 27,
-    "domains": 203,
-    "domains_behind_cdn": 46,
+    "active_ips": 6892,
+    "all_time_ips": 12284,
+    "new_ips": 2781,
+    "multi_agent_ips": 431,
+    "ips_with_c2": 82,
+    "domains": 702,
+    "domains_behind_cdn": 167,
     "network": {
-      "cdn": 67,
-      "cloud": 294,
-      "hosting": 4644
+      "cdn": 206,
+      "cloud": 380,
+      "hosting": 6306
     },
-    "cdn_front_ips_in_hosts": 67,
-    "agents": 11
+    "cdn_front_ips_in_hosts": 206,
+    "agents": 29
   },
   "agents": [
     {
       "slug": "artex",
       "name": "ARTEX",
       "tool_id": "TOOL-ARTEX",
-      "active": 3617,
-      "confirmed": 3437,
-      "probable": 180,
-      "new": 1058,
-      "all_time": 5870,
+      "active": 4917,
+      "confirmed": 4143,
+      "probable": 774,
+      "new": 2413,
+      "all_time": 8634,
       "main_port": "8787",
       "ports": [
         [
           "8787",
-          2629
+          2740
         ],
         [
           "443",
-          700
+          1541
         ],
         [
           "80",
-          221
+          753
+        ],
+        [
+          "2096",
+          74
         ],
         [
           "8443",
-          54
-        ],
-        [
-          "8080",
-          35
+          62
         ]
       ],
       "countries": [
         [
           "US",
-          1207
+          1247
         ],
         [
           "HK",
-          816
+          1024
         ],
         [
           "CN",
-          526
+          726
         ],
         [
           "JP",
-          152
-        ],
-        [
-          "SG",
-          141
-        ],
-        [
-          "FR",
-          110
-        ],
-        [
-          "IT",
-          109
+          297
         ],
         [
           "DE",
-          100
+          216
         ],
         [
           "NL",
-          77
+          211
+        ],
+        [
+          "SG",
+          201
+        ],
+        [
+          "FR",
+          146
         ],
         [
           "KR",
-          57
+          135
+        ],
+        [
+          "BR",
+          114
         ]
       ],
       "hosters": [
         [
-          "PEG TECH INC",
-          491
-        ],
-        [
-          "Yancy Limited",
-          246
+          "Tencent Building, Kejizhongyi Avenue",
+          908
         ],
         [
           "Shenzhen Tencent Computer Systems Company Limited",
-          234
+          268
         ],
         [
-          "Tencent Building, Kejizhongyi Avenue",
-          227
+          "Yancy Limited",
+          244
         ],
         [
           "Hangzhou Alibaba Advertising Co.,Ltd.",
-          135
+          177
+        ],
+        [
+          "Cloudflare, Inc.",
+          150
         ]
       ],
       "series": [
@@ -136,38 +136,45 @@
         198,
         88,
         379,
-        485,
-        459,
-        490,
-        524,
-        290,
-        146,
-        568,
-        712,
-        620,
-        640,
-        679,
-        360,
-        157,
-        585,
-        694,
-        612,
-        680,
-        733,
-        410,
-        215,
-        638,
-        818,
-        788,
-        775,
-        740,
+        486,
         471,
-        244
+        543,
+        574,
+        346,
+        178,
+        622,
+        785,
+        687,
+        717,
+        752,
+        426,
+        196,
+        636,
+        771,
+        697,
+        777,
+        822,
+        489,
+        266,
+        709,
+        910,
+        986,
+        920,
+        878,
+        605,
+        682,
+        963,
+        1032,
+        1023,
+        1179,
+        958
       ],
       "tracker_url": "https://offensive.agency/agent/artex",
       "fingerprints": [
         "app.device:\"offensive agent\"",
         "favicon.data.md5:cd3ebd16437d6d3963592f7365dd3980",
+        "favicon.data.md5:e14fa4f2f1f6dfdd606c7267877fb72e",
+        "favicon.data.md5:16bf6c5653291854e8c56c8eff7ca20d",
         "favicon.data.md5:885700bddad47ba6c1e891db12ad6640",
         "html.title.raw:\"ARTEX — 自主渗透测试控制台\"",
         "html.title.text:\"ARTEX\"",
@@ -175,14 +182,15 @@
         "html.title.text:\"自主渗透测试控制台\"",
         "html.title.text:\"자율 침투 테스트 콘솔\"",
         "html.title.text:\"自律型ペネトレーションテストコンソール\"",
+        "html.title.text:\"Otonom Sızma Testi Konsolu\"",
         "app.data.text:\"LLM 驱动的自主渗透测试系统控制台\"",
         "app.data.text:\"Console for the LLM-driven autonomous penetration testing system\"",
         "app.data.text:\"An LLM-driven system console for autonomous penetration testing\"",
         "app.data.text:\"LLM 기반으로 자율 침투 테스트를 수행하는 시스템 콘솔\"",
         "app.data.text:\"Una consola de sistema impulsada por LLM para pruebas de penetración autónomas\"",
         "app.data.text:\"LLM を活用して自律的にペネトレーションテストを行うシステムコンソール\"",
-        "app.data.text:\"AI 驱动的自主渗透测试平台\"",
-        "app.data.text:\"We are coming to root your server\""
+        "app.data.text:\"LLM güdümlü otonom sızma testi sistemi için konsol\"",
+        "app.data.text:\"AI 驱动的自主渗透测试平台\""
       ],
       "project": "https://github.com/BaaRai/ARTEX"
     },
@@ -190,96 +198,96 @@
       "slug": "cyberstrikeai",
       "name": "CyberStrikeAI",
       "tool_id": "TOOL-CYBERSTRIKEAI",
-      "active": 1029,
-      "confirmed": 1018,
-      "probable": 11,
-      "new": 145,
-      "all_time": 1574,
+      "active": 1093,
+      "confirmed": 1028,
+      "probable": 65,
+      "new": 228,
+      "all_time": 1839,
       "main_port": "8080",
       "ports": [
         [
           "8080",
-          567
+          631
         ],
         [
           "8444",
-          238
+          204
         ],
         [
           "443",
-          61
+          99
+        ],
+        [
+          "80",
+          43
         ],
         [
           "8443",
-          20
-        ],
-        [
-          "18080",
-          18
+          27
         ]
       ],
       "countries": [
         [
           "US",
-          393
+          346
         ],
         [
           "CN",
-          259
+          294
         ],
         [
           "HK",
-          215
-        ],
-        [
-          "SG",
-          33
+          266
         ],
         [
           "JP",
-          32
+          39
+        ],
+        [
+          "SG",
+          39
         ],
         [
           "KR",
-          20
+          32
         ],
         [
           "FR",
-          12
+          11
         ],
         [
           "DE",
-          11
+          10
         ],
         [
           "NL",
           7
         ],
         [
-          "MY",
-          6
+          "MD",
+          7
         ]
       ],
       "hosters": [
         [
           "PEG TECH INC",
-          241
+          215
         ],
         [
           "Shenzhen Tencent Computer Systems Company Limited",
-          118
+          133
         ],
         [
           "Hangzhou Alibaba Advertising Co.,Ltd.",
-          79
+          83
         ],
         [
           "CTG Server Limited",
-          36
+          59
         ],
         [
-          "HostPapa",
-          33
+          "Cloudie Limited",
+          49
         ]
       ],
       "series": [
@@ -290,32 +298,37 @@
         167,
         226,
         260,
-        265,
-        274,
-        303,
-        229,
-        214,
-        253,
-        291,
-        288,
-        315,
-        318,
-        215,
-        181,
-        209,
-        266,
-        223,
-        247,
         269,
-        211,
-        182,
-        215,
-        260,
-        245,
-        249,
-        276,
+        288,
+        316,
+        240,
+        224,
+        264,
+        302,
+        301,
+        329,
+        330,
+        229,
+        193,
         216,
-        156
+        275,
+        235,
+        256,
+        278,
+        222,
+        191,
+        222,
+        271,
+        266,
+        263,
+        291,
+        431,
+        192,
+        228,
+        286,
+        310,
+        248,
+        172
       ],
       "tracker_url": "https://offensive.agency/agent/cyberstrikeai",
       "fingerprints": [
@@ -324,7 +337,8 @@
         "extract.url:\"https://github.com/Ed1s0nZ/CyberStrikeAI\"",
         "app.data.text:\"CyberStrikeAI Logo\"",
         "favicon.data.md5:7d794e98f48497b767fceb032ef28e3e",
-        "favicon.data.md5:8675aef8c3ffdbe15bb2638291887954"
+        "favicon.data.md5:8675aef8c3ffdbe15bb2638291887954",
+        "app.data.text:\"brand-wordmark__ai\""
       ],
       "project": "https://github.com/AIPentest/CyberStrikeAI"
     },
@@ -332,50 +346,50 @@
       "slug": "pentagi",
       "name": "PentAGI",
       "tool_id": "TOOL-PENTAGI",
-      "active": 664,
-      "confirmed": 648,
-      "probable": 16,
-      "new": 149,
-      "all_time": 950,
+      "active": 510,
+      "confirmed": 493,
+      "probable": 17,
+      "new": 50,
+      "all_time": 1002,
       "main_port": "8443",
       "ports": [
         [
           "8443",
-          357
+          238
         ],
         [
           "8666",
-          237
+          203
         ],
         [
           "443",
-          34
-        ],
-        [
-          "8444",
-          16
+          39
         ],
         [
           "80",
-          7
+          13
+        ],
+        [
+          "8444",
+          11
         ]
       ],
       "countries": [
         [
           "US",
-          417
-        ],
-        [
-          "HK",
-          41
+          274
         ],
         [
           "CN",
-          40
+          38
         ],
         [
           "SG",
           32
+        ],
+        [
+          "HK",
+          28
         ],
         [
           "FR",
@@ -383,7 +397,7 @@
         ],
         [
           "DE",
-          23
+          19
         ],
         [
           "NL",
@@ -391,37 +405,37 @@
         ],
         [
           "JP",
-          10
+          9
         ],
         [
           "GB",
-          7
+          8
         ],
         [
           "FI",
-          6
+          5
         ]
       ],
       "hosters": [
         [
           "PEG TECH INC",
-          344
-        ],
-        [
-          "CTG Server Limited",
-          19
+          203
         ],
         [
           "Contabo GmbH",
           18
         ],
         [
-          "Shenzhen Tencent Computer Systems Company Limited",
+          "CTG Server Limited",
           16
         ],
         [
-          "Amazon.com, Inc.",
-          13
+          "Shenzhen Tencent Computer Systems Company Limited",
+          12
+        ],
+        [
+          "Oracle Corporation",
+          11
         ]
       ],
       "series": [
@@ -448,16 +462,21 @@
         133,
         135,
         137,
-        124,
+        125,
         100,
         67,
         155,
         190,
-        142,
-        126,
-        120,
+        145,
+        127,
+        207,
         91,
-        65
+        75,
+        95,
+        149,
+        98,
+        52,
+        55
       ],
       "tracker_url": "https://offensive.agency/agent/pentagi",
       "fingerprints": [
@@ -465,24 +484,576 @@
         "cert.issuer.o:\"PentAGI\"",
         "cert.issuer.cn:\"PentAGI CA\"",
         "cert.subject.an:\"pentagi.local\"",
-        "favicon.data.md5:c7bf380529c43568d4bcad5e52c90c32"
+        "favicon.data.md5:c7bf380529c43568d4bcad5e52c90c32",
+        "favicon.data.md5:d2fbb03231198e21b2e866363272a3d4",
+        "favicon.data.md5:bcfaddafe9133ff84ed893bb71d385a9"
       ],
       "project": "https://github.com/vxcontrol/pentagi"
+    },
+    {
+      "slug": "hermes-agent",
+      "name": "Hermes Agent",
+      "tool_id": null,
+      "active": 326,
+      "confirmed": 0,
+      "probable": 326,
+      "new": 62,
+      "all_time": 743,
+      "main_port": "9119",
+      "ports": [
+        [
+          "9119",
+          198
+        ],
+        [
+          "443",
+          56
+        ],
+        [
+          "80",
+          41
+        ],
+        [
+          "8080",
+          9
+        ],
+        [
+          "8000",
+          3
+        ]
+      ],
+      "countries": [
+        [
+          "CN",
+          101
+        ],
+        [
+          "US",
+          95
+        ],
+        [
+          "FR",
+          23
+        ],
+        [
+          "DE",
+          17
+        ],
+        [
+          "BR",
+          12
+        ],
+        [
+          "HK",
+          11
+        ],
+        [
+          "SG",
+          8
+        ],
+        [
+          "ID",
+          7
+        ],
+        [
+          "MY",
+          6
+        ],
+        [
+          "JP",
+          6
+        ]
+      ],
+      "hosters": [
+        [
+          "HostPapa",
+          41
+        ],
+        [
+          "Shenzhen Tencent Computer Systems Company Limited",
+          40
+        ],
+        [
+          "Hangzhou Alibaba Advertising Co.,Ltd.",
+          36
+        ],
+        [
+          "Oracle Corporation",
+          25
+        ],
+        [
+          "Contabo GmbH",
+          21
+        ]
+      ],
+      "series": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        76,
+        96,
+        92,
+        41,
+        33,
+        65,
+        118,
+        98,
+        92,
+        84,
+        38,
+        29,
+        58,
+        97,
+        95,
+        78,
+        78,
+        37,
+        24,
+        57,
+        87,
+        78,
+        78,
+        68,
+        46,
+        37,
+        69,
+        87,
+        72,
+        74,
+        50
+      ],
+      "tracker_url": "https://offensive.agency/agent/hermes-agent",
+      "fingerprints": [
+        "html.title.text:\"Hermes Agent - Dashboard\""
+      ],
+      "project": "https://github.com/NousResearch/hermes-agent"
+    },
+    {
+      "slug": "autocve",
+      "name": "AutoCVE",
+      "tool_id": null,
+      "active": 246,
+      "confirmed": 245,
+      "probable": 1,
+      "new": 1,
+      "all_time": 257,
+      "main_port": "3000",
+      "ports": [
+        [
+          "3000",
+          240
+        ],
+        [
+          "13000",
+          3
+        ],
+        [
+          "8088",
+          1
+        ],
+        [
+          "8443",
+          1
+        ],
+        [
+          "18080",
+          1
+        ]
+      ],
+      "countries": [
+        [
+          "US",
+          237
+        ],
+        [
+          "CN",
+          8
+        ],
+        [
+          "SG",
+          1
+        ]
+      ],
+      "hosters": [
+        [
+          "Uscloud Inc",
+          232
+        ],
+        [
+          "Shenzhen Tencent Computer Systems Company Limited",
+          5
+        ],
+        [
+          "CNSERVERS LLC",
+          3
+        ],
+        [
+          "Tencent Building, Kejizhongyi Avenue",
+          2
+        ],
+        [
+          "Hangzhou Alibaba Advertising Co.,Ltd.",
+          2
+        ]
+      ],
+      "series": [
+        0,
+        0,
+        0,
+        0,
+        20,
+        52,
+        73,
+        70,
+        60,
+        66,
+        73,
+        47,
+        51,
+        61,
+        63,
+        69,
+        70,
+        81,
+        51,
+        53,
+        72,
+        73,
+        57,
+        68,
+        71,
+        46,
+        55,
+        70,
+        74,
+        58,
+        70,
+        69,
+        40,
+        51,
+        141,
+        155,
+        53,
+        65
+      ],
+      "tracker_url": "https://offensive.agency/agent/autocve",
+      "fingerprints": [
+        "html.title.text:\"AutoCVE\"",
+        "favicon.data.md5:f20edcc49f7b035d4ff0b7dd62d67eae"
+      ],
+      "project": "https://github.com/larlarua/AutoCVE"
+    },
+    {
+      "slug": "deepaudit",
+      "name": "DeepAudit",
+      "tool_id": null,
+      "active": 74,
+      "confirmed": 70,
+      "probable": 4,
+      "new": 3,
+      "all_time": 92,
+      "main_port": "3000",
+      "ports": [
+        [
+          "3000",
+          58
+        ],
+        [
+          "443",
+          5
+        ],
+        [
+          "3030",
+          5
+        ],
+        [
+          "8888",
+          4
+        ],
+        [
+          "80",
+          4
+        ]
+      ],
+      "countries": [
+        [
+          "CN",
+          37
+        ],
+        [
+          "US",
+          14
+        ],
+        [
+          "HK",
+          11
+        ],
+        [
+          "SG",
+          3
+        ],
+        [
+          "JP",
+          2
+        ],
+        [
+          "SE",
+          1
+        ],
+        [
+          "NL",
+          1
+        ],
+        [
+          "TH",
+          1
+        ],
+        [
+          "KR",
+          1
+        ],
+        [
+          "MM",
+          1
+        ]
+      ],
+      "hosters": [
+        [
+          "Shenzhen Tencent Computer Systems Company Limited",
+          15
+        ],
+        [
+          "Hangzhou Alibaba Advertising Co.,Ltd.",
+          14
+        ],
+        [
+          "Netsec Limited",
+          5
+        ],
+        [
+          "HostPapa",
+          4
+        ],
+        [
+          "China Telecom Beijing Tianjin Hebei Big Data Industry Park Branch",
+          3
+        ]
+      ],
+      "series": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        23,
+        18,
+        21,
+        15,
+        16,
+        17,
+        19,
+        21,
+        20,
+        23,
+        22,
+        19,
+        17,
+        23,
+        21,
+        20,
+        22,
+        15,
+        18,
+        16,
+        21,
+        21,
+        13,
+        22,
+        15,
+        17,
+        13,
+        21,
+        20,
+        16
+      ],
+      "tracker_url": "https://offensive.agency/agent/deepaudit",
+      "fingerprints": [
+        "html.title.raw:\"DeepAudit\"",
+        "favicon.data.md5:c0e1513d2d79dda98209cde3885b5f47"
+      ],
+      "project": "https://github.com/lintsinghua/DeepAudit"
+    },
+    {
+      "slug": "cairn",
+      "name": "Cairn",
+      "tool_id": "TOOL-CAIRN",
+      "active": 48,
+      "confirmed": 44,
+      "probable": 4,
+      "new": 9,
+      "all_time": 113,
+      "main_port": "8000",
+      "ports": [
+        [
+          "8000",
+          41
+        ],
+        [
+          "8001",
+          2
+        ],
+        [
+          "18443",
+          2
+        ],
+        [
+          "35000",
+          1
+        ],
+        [
+          "8010",
+          1
+        ]
+      ],
+      "countries": [
+        [
+          "CN",
+          11
+        ],
+        [
+          "US",
+          7
+        ],
+        [
+          "SG",
+          4
+        ],
+        [
+          "FR",
+          4
+        ],
+        [
+          "JP",
+          4
+        ],
+        [
+          "HK",
+          4
+        ],
+        [
+          "DE",
+          2
+        ],
+        [
+          "KR",
+          2
+        ],
+        [
+          "CA",
+          2
+        ],
+        [
+          "FI",
+          2
+        ]
+      ],
+      "hosters": [
+        [
+          "Hangzhou Alibaba Advertising Co.,Ltd.",
+          7
+        ],
+        [
+          "Tencent Building, Kejizhongyi Avenue",
+          4
+        ],
+        [
+          "Google LLC",
+          3
+        ],
+        [
+          "HostPapa",
+          3
+        ],
+        [
+          "OVH SAS",
+          3
+        ]
+      ],
+      "series": [
+        8,
+        16,
+        9,
+        14,
+        14,
+        11,
+        10,
+        14,
+        17,
+        11,
+        20,
+        19,
+        23,
+        16,
+        17,
+        14,
+        14,
+        23,
+        18,
+        18,
+        20,
+        18,
+        20,
+        14,
+        19,
+        16,
+        15,
+        14,
+        13,
+        16,
+        13,
+        17,
+        24,
+        25,
+        16,
+        13,
+        8,
+        10
+      ],
+      "tracker_url": "https://offensive.agency/agent/cairn",
+      "fingerprints": [
+        "favicon.data.md5:46f7bbdd5796a334ba2f6999f0c6798a",
+        "app.data.text:\"reasonBeaconPulse\"",
+        "app.data.text:\"/static/favicon.svg\"",
+        "app.data.text:\"cytoscape-elk.js\"",
+        "html.title.raw:\"Cairn\"",
+        "cert.subject.cn:\"Cairn auto-generated TLS certificate\"",
+        "cert.subject.o:\"Cairn Platform\"",
+        "html.title.text:\"衍迹 · 自主探索工作台\"",
+        "html.title.text:\"衍迹 · 意图驱动推理工作台\""
+      ],
+      "project": "https://github.com/oritera/Cairn"
     },
     {
       "slug": "redamon",
       "name": "RedAmon",
       "tool_id": null,
-      "active": 45,
-      "confirmed": 42,
-      "probable": 3,
-      "new": 11,
-      "all_time": 69,
+      "active": 39,
+      "confirmed": 35,
+      "probable": 4,
+      "new": 7,
+      "all_time": 76,
       "main_port": "3000",
       "ports": [
         [
           "3000",
-          30
+          26
         ],
         [
           "443",
@@ -490,10 +1061,10 @@
         ],
         [
           "80",
-          2
+          3
         ],
         [
-          "3001",
+          "7777",
           1
         ],
         [
@@ -508,60 +1079,60 @@
         ],
         [
           "FR",
-          6
+          5
         ],
         [
-          "IN",
+          "AU",
+          3
+        ],
+        [
+          "DE",
+          3
+        ],
+        [
+          "FI",
           3
         ],
         [
           "SG",
-          3
-        ],
-        [
-          "NL",
           2
         ],
         [
-          "FI",
-          2
-        ],
-        [
-          "HK",
-          2
-        ],
-        [
-          "DE",
-          2
-        ],
-        [
-          "BR",
+          "BG",
           1
         ],
         [
-          "SI",
+          "RU",
+          1
+        ],
+        [
+          "IE",
+          1
+        ],
+        [
+          "AR",
           1
         ]
       ],
       "hosters": [
         [
-          "Hostinger International Limited",
+          "Hetzner Online GmbH",
           4
+        ],
+        [
+          "Amazon.com, Inc.",
+          3
+        ],
+        [
+          "DigitalOcean, LLC",
+          3
         ],
         [
           "Contabo GmbH",
-          4
-        ],
-        [
-          "Hetzner Online GmbH",
           3
         ],
         [
           "The Constant Company, LLC",
-          2
-        ],
-        [
-          "Microsoft Corporation",
           2
         ]
       ],
@@ -594,11 +1165,16 @@
         10,
         10,
         10,
-        11,
+        12,
         15,
-        13,
+        14,
         9,
-        6
+        12,
+        8,
+        14,
+        16,
+        11,
+        9
       ],
       "tracker_url": "https://offensive.agency/agent/redamon",
       "fingerprints": [
@@ -610,163 +1186,22 @@
       "project": "https://github.com/samugit83/redamon"
     },
     {
-      "slug": "cairn",
-      "name": "Cairn",
-      "tool_id": "TOOL-CAIRN",
-      "active": 43,
-      "confirmed": 40,
-      "probable": 3,
-      "new": 6,
-      "all_time": 97,
-      "main_port": "8000",
-      "ports": [
-        [
-          "8000",
-          37
-        ],
-        [
-          "8001",
-          2
-        ],
-        [
-          "35000",
-          1
-        ],
-        [
-          "8010",
-          1
-        ],
-        [
-          "20201",
-          1
-        ]
-      ],
-      "countries": [
-        [
-          "CN",
-          10
-        ],
-        [
-          "US",
-          6
-        ],
-        [
-          "HK",
-          5
-        ],
-        [
-          "NL",
-          3
-        ],
-        [
-          "JP",
-          3
-        ],
-        [
-          "CA",
-          3
-        ],
-        [
-          "FR",
-          3
-        ],
-        [
-          "SG",
-          2
-        ],
-        [
-          "KR",
-          2
-        ],
-        [
-          "FI",
-          2
-        ]
-      ],
-      "hosters": [
-        [
-          "Hangzhou Alibaba Advertising Co.,Ltd.",
-          6
-        ],
-        [
-          "The Constant Company, LLC",
-          4
-        ],
-        [
-          "Tencent Building, Kejizhongyi Avenue",
-          3
-        ],
-        [
-          "HostPapa",
-          3
-        ],
-        [
-          "Google LLC",
-          3
-        ]
-      ],
-      "series": [
-        8,
-        16,
-        9,
-        14,
-        14,
-        11,
-        10,
-        14,
-        14,
-        7,
-        15,
-        14,
-        19,
-        12,
-        15,
-        12,
-        10,
-        19,
-        13,
-        15,
-        15,
-        16,
-        18,
-        12,
-        17,
-        14,
-        15,
-        13,
-        12,
-        16,
-        13,
-        17,
-        11
-      ],
-      "tracker_url": "https://offensive.agency/agent/cairn",
-      "fingerprints": [
-        "favicon.data.md5:46f7bbdd5796a334ba2f6999f0c6798a",
-        "app.data.text:\"reasonBeaconPulse\"",
-        "app.data.text:\"/static/favicon.svg\"",
-        "app.data.text:\"cytoscape-elk.js\"",
-        "html.title.raw:\"Cairn\""
-      ],
-      "project": "https://github.com/oritera/Cairn"
-    },
-    {
       "slug": "strix",
       "name": "Strix",
       "tool_id": "TOOL-STRIX",
-      "active": 25,
-      "confirmed": 25,
-      "probable": 0,
+      "active": 24,
+      "confirmed": 22,
+      "probable": 2,
       "new": 4,
-      "all_time": 42,
+      "all_time": 45,
       "main_port": "8080",
       "ports": [
         [
           "8080",
-          14
+          13
         ],
         [
-          "8899",
+          "443",
           3
         ],
         [
@@ -778,37 +1213,33 @@
           2
         ],
         [
-          "80",
+          "8501",
           1
         ]
       ],
       "countries": [
         [
           "US",
-          7
+          6
         ],
         [
-          "FR",
-          3
+          "HK",
+          4
         ],
         [
           "DE",
           3
         ],
         [
-          "NL",
+          "FR",
           2
         ],
         [
-          "KR",
-          2
+          "BR",
+          1
         ],
         [
-          "FI",
-          2
-        ],
-        [
-          "HK",
+          "IN",
           1
         ],
         [
@@ -820,29 +1251,33 @@
           1
         ],
         [
-          "SG",
+          "IT",
+          1
+        ],
+        [
+          "FI",
           1
         ]
       ],
       "hosters": [
         [
           "Hetzner Online GmbH",
-          4
-        ],
-        [
-          "The Constant Company, LLC",
-          2
+          3
         ],
         [
           "Contabo GmbH",
           2
         ],
         [
-          "cognetcloud INC",
+          "HostPapa",
+          2
+        ],
+        [
+          "Tyna Host - Datacenter no Brasil",
           1
         ],
         [
-          "HIVELOCITY, Inc.",
+          "cognetcloud INC",
           1
         ]
       ],
@@ -878,8 +1313,13 @@
         8,
         5,
         7,
-        2,
-        6
+        7,
+        7,
+        4,
+        3,
+        11,
+        5,
+        5
       ],
       "tracker_url": "https://offensive.agency/agent/strix",
       "fingerprints": [
@@ -893,27 +1333,27 @@
       "slug": "cyberstrike",
       "name": "CyberStrike",
       "tool_id": null,
-      "active": 15,
-      "confirmed": 14,
-      "probable": 1,
-      "new": 5,
-      "all_time": 26,
+      "active": 11,
+      "confirmed": 9,
+      "probable": 2,
+      "new": 1,
+      "all_time": 27,
       "main_port": "4096",
       "ports": [
         [
           "4096",
-          8
+          5
         ],
         [
           "8888",
           2
         ],
         [
-          "8088",
-          2
+          "7777",
+          1
         ],
         [
-          "9527",
+          "8080",
           1
         ],
         [
@@ -923,45 +1363,33 @@
       ],
       "countries": [
         [
-          "CN",
+          "US",
           4
         ],
         [
-          "US",
-          4
+          "CN",
+          3
         ],
         [
           "HK",
           2
         ],
         [
-          "TW",
-          1
-        ],
-        [
-          "IN",
-          1
-        ],
-        [
-          "NG",
-          1
-        ],
-        [
-          "NL",
-          1
-        ],
-        [
           "MD",
+          1
+        ],
+        [
+          "TW",
           1
         ]
       ],
       "hosters": [
         [
-          "Hangzhou Alibaba Advertising Co.,Ltd.",
-          2
+          "Google LLC",
+          3
         ],
         [
-          "Google LLC",
+          "Hangzhou Alibaba Advertising Co.,Ltd.",
           2
         ],
         [
@@ -969,11 +1397,11 @@
           1
         ],
         [
-          "HostingInside LTD",
+          "MivoCloud SRL",
           1
         ],
         [
-          "Amazon.com, Inc.",
+          "HostingInside LTD",
           1
         ]
       ],
@@ -1010,7 +1438,12 @@
         2,
         2,
         0,
-        1
+        3,
+        4,
+        4,
+        3,
+        3,
+        0
       ],
       "tracker_url": "https://offensive.agency/agent/cyberstrike",
       "fingerprints": [
@@ -1026,49 +1459,49 @@
       "slug": "hexstrike",
       "name": "HexStrike AI",
       "tool_id": "TOOL-HEXSTRIKE-AI",
-      "active": 11,
-      "confirmed": 0,
-      "probable": 11,
-      "new": 5,
-      "all_time": 14,
+      "active": 10,
+      "confirmed": 1,
+      "probable": 9,
+      "new": 3,
+      "all_time": 17,
       "main_port": "443",
       "ports": [
         [
           "443",
-          5
+          4
         ],
         [
           "80",
           3
         ],
         [
+          "6666",
+          1
+        ],
+        [
           "8888",
           1
         ],
         [
-          "10203",
-          1
-        ],
-        [
-          "3000",
+          "8889",
           1
         ]
       ],
       "countries": [
         [
           "US",
-          6
+          4
         ],
         [
-          "CN",
-          1
+          "DE",
+          2
         ],
         [
           "SE",
           1
         ],
         [
-          "DE",
+          "CN",
           1
         ],
         [
@@ -1082,7 +1515,15 @@
       ],
       "hosters": [
         [
-          "Hosteons Pte. Ltd.",
+          "Amazon.com, Inc.",
+          1
+        ],
+        [
+          "Hetzner Online GmbH",
+          1
+        ],
+        [
+          "netcup GmbH",
           1
         ],
         [
@@ -1090,15 +1531,7 @@
           1
         ],
         [
-          "Google LLC",
-          1
-        ],
-        [
-          "DigitalOcean, LLC",
-          1
-        ],
-        [
-          "Hetzner Online GmbH",
+          "12651980 CANADA INC.",
           1
         ]
       ],
@@ -1135,7 +1568,12 @@
         2,
         5,
         1,
-        3
+        3,
+        3,
+        3,
+        4,
+        2,
+        2
       ],
       "tracker_url": "https://offensive.agency/agent/hexstrike",
       "fingerprints": [
@@ -1150,11 +1588,11 @@
       "slug": "xalgorix",
       "name": "Xalgorix",
       "tool_id": null,
-      "active": 9,
-      "confirmed": 6,
-      "probable": 3,
-      "new": 1,
-      "all_time": 11,
+      "active": 10,
+      "confirmed": 8,
+      "probable": 2,
+      "new": 4,
+      "all_time": 14,
       "main_port": "443",
       "ports": [
         [
@@ -1162,11 +1600,11 @@
           4
         ],
         [
-          "1337",
+          "8443",
           2
         ],
         [
-          "8443",
+          "1337",
           2
         ],
         [
@@ -1174,17 +1612,21 @@
           1
         ],
         [
-          "80",
+          "9119",
           1
         ]
       ],
       "countries": [
         [
-          "CN",
-          3
+          "FR",
+          2
         ],
         [
-          "FR",
+          "SG",
+          2
+        ],
+        [
+          "CN",
           2
         ],
         [
@@ -1192,15 +1634,15 @@
           1
         ],
         [
-          "US",
-          1
-        ],
-        [
           "NL",
           1
         ],
         [
-          "SG",
+          "ID",
+          1
+        ],
+        [
+          "DE",
           1
         ]
       ],
@@ -1210,19 +1652,19 @@
           2
         ],
         [
+          "LEASEWEB SINGAPORE PTE. LTD.",
+          1
+        ],
+        [
           "Alibaba (US) Technology Co., Ltd.",
           1
         ],
         [
-          "Hosteons Pte. Ltd.",
+          "Beijing Volcano Engine Technology Co., Ltd.",
           1
         ],
         [
-          "China Telecom Beijing Tianjin Hebei Big Data Industry Park Branch",
-          1
-        ],
-        [
-          "Shenzhen Tencent Computer Systems Company Limited",
+          "Microsoft Corporation",
           1
         ]
       ],
@@ -1255,11 +1697,16 @@
         0,
         2,
         1,
-        2,
-        1,
-        1,
         3,
-        1
+        1,
+        2,
+        3,
+        3,
+        3,
+        2,
+        2,
+        2,
+        2
       ],
       "tracker_url": "https://offensive.agency/agent/xalgorix",
       "fingerprints": [
@@ -1274,13 +1721,229 @@
       "project": "https://github.com/xalgorix/xalgorix"
     },
     {
+      "slug": "z3r0",
+      "name": "Z3r0",
+      "tool_id": null,
+      "active": 6,
+      "confirmed": 5,
+      "probable": 1,
+      "new": 2,
+      "all_time": 7,
+      "main_port": "8000",
+      "ports": [
+        [
+          "8000",
+          3
+        ],
+        [
+          "443",
+          2
+        ],
+        [
+          "80",
+          1
+        ],
+        [
+          "18089",
+          1
+        ]
+      ],
+      "countries": [
+        [
+          "US",
+          4
+        ],
+        [
+          "HK",
+          1
+        ],
+        [
+          "SG",
+          1
+        ]
+      ],
+      "hosters": [
+        [
+          "HostPapa",
+          2
+        ],
+        [
+          "Zillion Network Inc.",
+          1
+        ],
+        [
+          "ALEXHOST SRL",
+          1
+        ],
+        [
+          "cognetcloud INC",
+          1
+        ],
+        [
+          "Oracle Corporation",
+          1
+        ]
+      ],
+      "series": [
+        0,
+        0,
+        0,
+        0,
+        2,
+        3,
+        1,
+        2,
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        3,
+        2,
+        0,
+        1
+      ],
+      "tracker_url": "https://offensive.agency/agent/z3r0",
+      "fingerprints": [
+        "html.title.text:\"Z3r0 Console\"",
+        "favicon.data.md5:0f2b5d1d65422072b373cbc3e720dd80"
+      ],
+      "project": "https://github.com/yv1ing/Z3r0"
+    },
+    {
+      "slug": "aida",
+      "name": "AIDA",
+      "tool_id": null,
+      "active": 5,
+      "confirmed": 4,
+      "probable": 1,
+      "new": 0,
+      "all_time": 10,
+      "main_port": "31337",
+      "ports": [
+        [
+          "31337",
+          2
+        ],
+        [
+          "443",
+          1
+        ],
+        [
+          "8000",
+          1
+        ],
+        [
+          "8443",
+          1
+        ]
+      ],
+      "countries": [
+        [
+          "FR",
+          3
+        ],
+        [
+          "US",
+          1
+        ],
+        [
+          "DE",
+          1
+        ]
+      ],
+      "hosters": [
+        [
+          "Contabo GmbH",
+          3
+        ],
+        [
+          "Contabo Inc.",
+          1
+        ],
+        [
+          "ExpressHost Ltd",
+          1
+        ]
+      ],
+      "series": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        2,
+        4,
+        2,
+        2,
+        0,
+        0,
+        1,
+        3,
+        1,
+        1,
+        2,
+        0,
+        1,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        3,
+        2,
+        3,
+        3,
+        0,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1
+      ],
+      "tracker_url": "https://offensive.agency/agent/aida",
+      "fingerprints": [
+        "html.title.text:\"AIDA - AI-Driven Security Assessment\"",
+        "favicon.data.md5:d4be6f9e5330cbc5606bd101256e94fa",
+        "app.data.text:\"AIDA API\"",
+        "app.data.text:\"tagline\""
+      ],
+      "project": "https://github.com/Vasco0x4/AIDA"
+    },
+    {
       "slug": "bugtraceai",
       "name": "BugTraceAI",
       "tool_id": null,
       "active": 3,
       "confirmed": 3,
       "probable": 0,
-      "new": 1,
+      "new": 0,
       "all_time": 5,
       "main_port": "8000",
       "ports": [
@@ -1301,11 +1964,11 @@
       ],
       "hosters": [
         [
-          "Contabo Inc.",
+          "netcup GmbH",
           1
         ],
         [
-          "netcup GmbH",
+          "Contabo Inc.",
           1
         ],
         [
@@ -1346,7 +2009,12 @@
         0,
         2,
         2,
-        0
+        1,
+        2,
+        1,
+        2,
+        0,
+        1
       ],
       "tracker_url": "https://offensive.agency/agent/bugtraceai",
       "fingerprints": [
@@ -1356,16 +2024,269 @@
       "project": "https://github.com/BugTraceAI/BugTraceAI"
     },
     {
+      "slug": "airecon",
+      "name": "AIRecon",
+      "tool_id": null,
+      "active": 2,
+      "confirmed": 0,
+      "probable": 2,
+      "new": 0,
+      "all_time": 2,
+      "main_port": "8080",
+      "ports": [
+        [
+          "8080",
+          2
+        ]
+      ],
+      "countries": [
+        [
+          "SG",
+          1
+        ],
+        [
+          "FR",
+          1
+        ]
+      ],
+      "hosters": [
+        [
+          "Contabo Asia Private Limited",
+          1
+        ],
+        [
+          "Contabo GmbH",
+          1
+        ]
+      ],
+      "series": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "tracker_url": "https://offensive.agency/agent/airecon",
+      "fingerprints": [
+        "html.title.text:\"AIRecon Search\""
+      ],
+      "project": "https://github.com/pikpikcu/airecon"
+    },
+    {
+      "slug": "decepticon",
+      "name": "Decepticon",
+      "tool_id": null,
+      "active": 2,
+      "confirmed": 1,
+      "probable": 1,
+      "new": 0,
+      "all_time": 5,
+      "main_port": "3000",
+      "ports": [
+        [
+          "3000",
+          2
+        ]
+      ],
+      "countries": [
+        [
+          "FR",
+          2
+        ]
+      ],
+      "hosters": [
+        [
+          "Hostinger International Limited",
+          1
+        ],
+        [
+          "OVH SAS",
+          1
+        ]
+      ],
+      "series": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        2,
+        1,
+        1,
+        1,
+        0,
+        2,
+        0,
+        2,
+        0,
+        0,
+        2,
+        1,
+        0,
+        0,
+        3,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        2,
+        1,
+        0,
+        1
+      ],
+      "tracker_url": "https://offensive.agency/agent/decepticon",
+      "fingerprints": [
+        "html.title.text:\"Decepticon\"",
+        "html.title.text:\"Autonomous Red Team Platform\"",
+        "favicon.data.md5:0d9eb87ab032844a4bed864085981964"
+      ],
+      "project": "https://github.com/BitterSecurity/Decepticon"
+    },
+    {
+      "slug": "open-kritt",
+      "name": "open-kritt",
+      "tool_id": null,
+      "active": 2,
+      "confirmed": 2,
+      "probable": 0,
+      "new": 0,
+      "all_time": 3,
+      "main_port": "80",
+      "ports": [
+        [
+          "80",
+          1
+        ],
+        [
+          "4700",
+          1
+        ]
+      ],
+      "countries": [
+        [
+          "SG",
+          1
+        ],
+        [
+          "US",
+          1
+        ]
+      ],
+      "hosters": [
+        [
+          "DigitalOcean, LLC",
+          1
+        ],
+        [
+          "Oracle Corporation",
+          1
+        ]
+      ],
+      "series": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        3,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        3,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "tracker_url": "https://offensive.agency/agent/open-kritt",
+      "fingerprints": [
+        "favicon.data.md5:2df232e29387b904996ae39123f79362",
+        "html.title.text:\"kritt\""
+      ],
+      "project": "https://github.com/Kritt-ai/open-kritt"
+    },
+    {
       "slug": "pentestswarm",
       "name": "Pentest-Swarm-AI",
       "tool_id": null,
-      "active": 1,
+      "active": 2,
       "confirmed": 0,
-      "probable": 1,
+      "probable": 2,
       "new": 1,
-      "all_time": 1,
-      "main_port": "8777",
+      "all_time": 2,
+      "main_port": "6666",
       "ports": [
+        [
+          "6666",
+          1
+        ],
         [
           "8777",
           1
@@ -1373,11 +2294,19 @@
       ],
       "countries": [
         [
+          "DE",
+          1
+        ],
+        [
           "HK",
           1
         ]
       ],
       "hosters": [
+        [
+          "Hetzner Online GmbH",
+          1
+        ],
         [
           "Cloudie Limited",
           1
@@ -1416,7 +2345,12 @@
         1,
         0,
         0,
-        0
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
       ],
       "tracker_url": "https://offensive.agency/agent/pentestswarm",
       "fingerprints": [
@@ -1424,139 +2358,853 @@
         "app.data.text:\"pentestswarm\""
       ],
       "project": "https://github.com/Armur-Ai/Pentest-Swarm-AI"
+    },
+    {
+      "slug": "t3mp3st",
+      "name": "T3MP3ST",
+      "tool_id": null,
+      "active": 2,
+      "confirmed": 0,
+      "probable": 2,
+      "new": 1,
+      "all_time": 2,
+      "main_port": "3333",
+      "ports": [
+        [
+          "3333",
+          1
+        ],
+        [
+          "443",
+          1
+        ]
+      ],
+      "countries": [
+        [
+          "US",
+          1
+        ],
+        [
+          "DE",
+          1
+        ]
+      ],
+      "hosters": [
+        [
+          "Interserver, Inc",
+          1
+        ],
+        [
+          "Amazon.com, Inc.",
+          1
+        ]
+      ],
+      "series": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "tracker_url": "https://offensive.agency/agent/t3mp3st",
+      "fingerprints": [
+        "html.title.text:\"T3MP3ST\"",
+        "html.title.text:\"Dashboard\""
+      ],
+      "project": "https://github.com/elder-plinius/T3MP3ST"
+    },
+    {
+      "slug": "luan1aoagent",
+      "name": "LuaN1aoAgent",
+      "tool_id": null,
+      "active": 1,
+      "confirmed": 0,
+      "probable": 1,
+      "new": 0,
+      "all_time": 1,
+      "main_port": "8787",
+      "ports": [
+        [
+          "8787",
+          1
+        ]
+      ],
+      "countries": [
+        [
+          "CN",
+          1
+        ]
+      ],
+      "hosters": [
+        [
+          "Shenzhen Tencent Computer Systems Company Limited",
+          1
+        ]
+      ],
+      "series": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tracker_url": "https://offensive.agency/agent/luan1aoagent",
+      "fingerprints": [
+        "html.title.text:\"鸾鸟渗透智能体\""
+      ],
+      "project": "https://github.com/SanMuzZzZz/LuaN1aoAgent"
+    },
+    {
+      "slug": "redcell",
+      "name": "REDCELL",
+      "tool_id": null,
+      "active": 1,
+      "confirmed": 1,
+      "probable": 0,
+      "new": 0,
+      "all_time": 3,
+      "main_port": "80",
+      "ports": [
+        [
+          "80",
+          1
+        ]
+      ],
+      "countries": [
+        [
+          "ID",
+          1
+        ]
+      ],
+      "hosters": [
+        [
+          "PT LAYANAN SERVER INDONESIA",
+          1
+        ]
+      ],
+      "series": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        2,
+        0,
+        1,
+        2,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "tracker_url": "https://offensive.agency/agent/redcell",
+      "fingerprints": [
+        "app.data.text:\"apple-mobile-web-app-title\"",
+        "app.data.text:\"REDCELL\"",
+        "favicon.data.md5:82d9011327979643168e73a45a394420"
+      ],
+      "project": "https://github.com/martian56/redcell"
+    },
+    {
+      "slug": "sapper-v2",
+      "name": "sapper-v2",
+      "tool_id": null,
+      "active": 1,
+      "confirmed": 0,
+      "probable": 1,
+      "new": 0,
+      "all_time": 4,
+      "main_port": "2333",
+      "ports": [
+        [
+          "2333",
+          1
+        ]
+      ],
+      "countries": [
+        [
+          "US",
+          1
+        ]
+      ],
+      "hosters": [
+        [
+          "AROSSCLOUD INC.",
+          1
+        ]
+      ],
+      "series": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        2,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "tracker_url": "https://offensive.agency/agent/sapper-v2",
+      "fingerprints": [
+        "html.title.text:\"sapper\"",
+        "html.title.text:\"engagement graph\""
+      ],
+      "project": "https://github.com/N1nEmAn/sapper-v2"
+    },
+    {
+      "slug": "vulnerator-ai",
+      "name": "Vulnerator AI",
+      "tool_id": null,
+      "active": 1,
+      "confirmed": 1,
+      "probable": 0,
+      "new": 0,
+      "all_time": 110,
+      "main_port": "9100",
+      "ports": [
+        [
+          "9100",
+          1
+        ]
+      ],
+      "countries": [
+        [
+          "HK",
+          1
+        ]
+      ],
+      "hosters": [
+        [
+          "VH Global Limited",
+          1
+        ]
+      ],
+      "series": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        47,
+        57,
+        33,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "tracker_url": "https://offensive.agency/agent/vulnerator-ai",
+      "fingerprints": [
+        "html.title.text:\"Vulnerator Console\"",
+        "favicon.data.md5:f27e45fa2a7d35d46111f1ca15f27c43"
+      ],
+      "project": "https://github.com/irraz/vulnerator-ai"
+    },
+    {
+      "slug": "wormxgpt",
+      "name": "WormXGPT",
+      "tool_id": null,
+      "active": 1,
+      "confirmed": 1,
+      "probable": 0,
+      "new": 0,
+      "all_time": 3,
+      "main_port": "3005",
+      "ports": [
+        [
+          "3005",
+          1
+        ]
+      ],
+      "countries": [
+        [
+          "DK",
+          1
+        ]
+      ],
+      "hosters": [
+        [
+          "Webdock.io ApS",
+          1
+        ]
+      ],
+      "series": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        2,
+        0,
+        0,
+        2,
+        1,
+        0,
+        0,
+        2,
+        0,
+        0,
+        2,
+        1,
+        0,
+        0,
+        2,
+        0,
+        0,
+        2,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "tracker_url": "https://offensive.agency/agent/wormxgpt",
+      "fingerprints": [
+        "html.title.text:\"WormGPT Red Terminal\"",
+        "html.title.text:\"WormGPT Terminal\"",
+        "favicon.data.md5:5be0a3173f6fc54a7862dda9fe1d223f"
+      ],
+      "project": "https://github.com/gaur-avvv/wormxgpt"
+    },
+    {
+      "slug": "artex-cc",
+      "name": "ARTEX-CC",
+      "tool_id": null,
+      "active": 0,
+      "confirmed": 0,
+      "probable": 0,
+      "new": 0,
+      "all_time": 0,
+      "main_port": "",
+      "ports": [],
+      "countries": [],
+      "hosters": [],
+      "series": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tracker_url": "https://offensive.agency/agent/artex-cc",
+      "fingerprints": [
+        "html.title.text:\"ARTEX-CC\"",
+        "favicon.data.md5:eddd4f1af798717d69460adc5084a8f9",
+        "favicon.data.md5:317c4c1d070cd9aa15ff7723fb7631eb"
+      ],
+      "project": "https://github.com/SREsAreHumanToo/ARTEX-CC"
+    },
+    {
+      "slug": "neurosploit",
+      "name": "NeuroSploit",
+      "tool_id": null,
+      "active": 0,
+      "confirmed": 0,
+      "probable": 0,
+      "new": 0,
+      "all_time": 1,
+      "main_port": "",
+      "ports": [],
+      "countries": [],
+      "hosters": [],
+      "series": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tracker_url": "https://offensive.agency/agent/neurosploit",
+      "fingerprints": [
+        "html.title.text:\"NeuroSploit\"",
+        "favicon.data.md5:f8fb482e183c10bb03aaf940dde7b18c"
+      ],
+      "project": "https://github.com/JoasASantos/NeuroSploit"
+    },
+    {
+      "slug": "nyxstrike",
+      "name": "NyxStrike",
+      "tool_id": null,
+      "active": 0,
+      "confirmed": 0,
+      "probable": 0,
+      "new": 0,
+      "all_time": 1,
+      "main_port": "",
+      "ports": [],
+      "countries": [],
+      "hosters": [],
+      "series": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tracker_url": "https://offensive.agency/agent/nyxstrike",
+      "fingerprints": [
+        "html.title.text:\"NyxStrike\""
+      ],
+      "project": "https://github.com/CommonHuman-Lab/nyxstrike"
+    },
+    {
+      "slug": "pentestcode",
+      "name": "PentestCode",
+      "tool_id": null,
+      "active": 0,
+      "confirmed": 0,
+      "probable": 0,
+      "new": 0,
+      "all_time": 0,
+      "main_port": "",
+      "ports": [],
+      "countries": [],
+      "hosters": [],
+      "series": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tracker_url": "https://offensive.agency/agent/pentestcode",
+      "fingerprints": [
+        "html.title.raw:\"PentestCode\""
+      ],
+      "project": "https://github.com/s0ld13rr/pentestcode"
     }
   ],
   "countries": [
     [
       "US",
-      1771
+      2003
     ],
     [
       "HK",
-      1012
+      1286
     ],
     [
       "CN",
-      793
-    ],
-    [
-      "SG",
-      207
+      1163
     ],
     [
       "JP",
-      186
+      345
     ],
     [
-      "FR",
-      158
+      "SG",
+      287
     ],
     [
       "DE",
-      139
-    ],
-    [
-      "IT",
-      112
+      272
     ],
     [
       "NL",
-      98
+      230
+    ],
+    [
+      "FR",
+      216
     ],
     [
       "KR",
-      81
-    ],
-    [
-      "ID",
-      39
-    ],
-    [
-      "FI",
-      33
-    ],
-    [
-      "CA",
-      33
-    ],
-    [
-      "GB",
-      30
+      174
     ],
     [
       "BR",
-      29
+      129
     ],
     [
-      "IN",
-      27
-    ],
-    [
-      "MY",
-      27
+      "CA",
+      119
     ],
     [
       "TH",
-      26
+      111
     ],
     [
-      "VN",
-      24
+      "ID",
+      86
     ],
     [
-      "PL",
-      18
-    ],
-    [
-      "AU",
-      18
-    ],
-    [
-      "CH",
-      14
-    ],
-    [
-      "RO",
-      12
+      "FI",
+      47
     ],
     [
       "LT",
-      12
+      41
     ],
     [
-      "RU",
-      10
+      "GB",
+      38
+    ],
+    [
+      "MY",
+      33
+    ],
+    [
+      "IN",
+      33
+    ],
+    [
+      "VN",
+      30
+    ],
+    [
+      "PL",
+      23
+    ],
+    [
+      "AU",
+      23
+    ],
+    [
+      "CH",
+      19
     ],
     [
       "MD",
-      10
+      19
+    ],
+    [
+      "RU",
+      18
+    ],
+    [
+      "RO",
+      16
+    ],
+    [
+      "SE",
+      14
+    ],
+    [
+      "UA",
+      13
     ],
     [
       "TW",
       9
     ],
     [
-      "SI",
-      9
-    ],
-    [
-      "UA",
+      "IT",
       8
     ],
     [
-      "SE",
+      "SI",
+      8
+    ],
+    [
+      "ES",
       7
     ],
     [
-      "AE",
+      "TR",
       6
     ],
     [
-      "MX",
+      "AT",
+      6
+    ],
+    [
+      "CZ",
       5
     ],
     [
       "LV",
+      5
+    ],
+    [
+      "MX",
       4
     ],
     [
@@ -1564,157 +3212,165 @@
       4
     ],
     [
-      "CZ",
-      4
-    ],
-    [
-      "AT",
-      3
-    ],
-    [
-      "ES",
-      3
-    ],
-    [
       "IE",
-      2
-    ],
-    [
-      "TR",
-      2
+      3
     ],
     [
       "CO",
-      2
+      3
+    ],
+    [
+      "IR",
+      3
     ]
   ],
   "latam": {
-    "total": 38,
+    "total": 142,
     "countries": [
       [
         "BR",
-        29
+        129
       ],
       [
         "MX",
-        5
+        4
       ],
       [
         "CO",
-        2
-      ],
-      [
-        "BO",
-        1
+        3
       ],
       [
         "AR",
+        3
+      ],
+      [
+        "DO",
+        1
+      ],
+      [
+        "CL",
+        1
+      ],
+      [
+        "PE",
         1
       ]
     ],
     "by_agent": {
       "AR": {
-        "artex": 1
-      },
-      "BO": {
-        "artex": 1
-      },
-      "BR": {
-        "artex": 27,
-        "pentagi": 1,
+        "artex": 2,
         "redamon": 1
       },
+      "BR": {
+        "artex": 114,
+        "hermes-agent": 12,
+        "pentagi": 3,
+        "strix": 1
+      },
+      "CL": {
+        "artex": 1
+      },
       "CO": {
-        "pentagi": 1,
+        "pentagi": 2,
+        "artex": 1
+      },
+      "DO": {
         "artex": 1
       },
       "MX": {
-        "artex": 4,
+        "artex": 3,
         "pentagi": 1
+      },
+      "PE": {
+        "cyberstrikeai": 1
       }
     }
   },
   "hosters": [
     [
-      "PEG TECH INC",
-      840
+      "Tencent Building, Kejizhongyi Avenue",
+      950
     ],
     [
       "Shenzhen Tencent Computer Systems Company Limited",
-      347
+      448
     ],
     [
-      "Tencent Building, Kejizhongyi Avenue",
-      251
-    ],
-    [
-      "Yancy Limited",
-      247
+      "PEG TECH INC",
+      344
     ],
     [
       "Hangzhou Alibaba Advertising Co.,Ltd.",
-      219
+      318
     ],
     [
-      "cognetcloud INC",
-      135
+      "Uscloud Inc",
+      252
+    ],
+    [
+      "Yancy Limited",
+      251
+    ],
+    [
+      "Cloudflare, Inc.",
+      164
     ],
     [
       "HostPapa",
-      125
-    ],
-    [
-      "Cinzia Tocci trading as Lumanex Srl",
-      108
+      155
     ],
     [
       "CTG Server Limited",
-      102
+      153
     ],
     [
-      "NetLab Global",
-      93
+      "cognetcloud INC",
+      148
     ],
     [
       "Contabo GmbH",
-      86
-    ],
-    [
-      "Amazon.com, Inc.",
-      86
-    ],
-    [
-      "Alibaba (US) Technology Co., Ltd.",
-      78
+      128
     ],
     [
       "Oracle Corporation",
-      77
+      123
     ],
     [
-      "OVH SAS",
-      73
+      "Alibaba (US) Technology Co., Ltd.",
+      120
+    ],
+    [
+      "Amazon.com, Inc.",
+      116
+    ],
+    [
+      "NetLab Global",
+      102
     ]
   ],
   "c2_same_ip": [
     [
-      "Vshell",
-      12
-    ],
-    [
       "Sliver",
-      6
+      52
     ],
     [
-      "Mythic",
-      3
+      "Vshell",
+      17
+    ],
+    [
+      "AdaptixC2",
+      4
     ],
     [
       "Cobalt Strike",
       3
     ],
     [
-      "AdaptixC2",
+      "Mythic",
+      2
+    ],
+    [
+      "Supershell",
       2
     ],
     [
@@ -1722,7 +3378,11 @@
       1
     ],
     [
-      "Supershell",
+      "Hak5 Cloud",
+      1
+    ],
+    [
+      "Villain",
       1
     ],
     [
@@ -1733,57 +3393,87 @@
   "agent_pairs": [
     [
       "CyberStrikeAI + PentAGI",
-      249
+      215
     ],
     [
       "ARTEX + CyberStrikeAI",
-      147
+      153
     ],
     [
       "ARTEX + PentAGI",
-      37
+      43
+    ],
+    [
+      "ARTEX + DeepAudit",
+      8
     ],
     [
       "ARTEX + Strix",
+      8
+    ],
+    [
+      "ARTEX + Cairn",
       7
     ],
     [
       "ARTEX + RedAmon",
-      5
-    ],
-    [
-      "ARTEX + Cairn",
-      4
-    ],
-    [
-      "PentAGI + Strix",
       3
     ],
     [
-      "CyberStrike + CyberStrikeAI",
-      3
-    ],
-    [
-      "RedAmon + Strix",
+      "CyberStrikeAI + DeepAudit",
       2
     ],
     [
-      "CyberStrikeAI + Xalgorix",
+      "CyberStrikeAI + RedAmon",
+      2
+    ],
+    [
+      "ARTEX + AutoCVE",
       2
     ]
   ],
   "clusters": [
     {
       "slug": "antifox",
-      "hosts": 494,
+      "hosts": 940,
       "tool_id": "TOOL-ANTIFOX",
       "tracker_url": "https://offensive.agency/cluster/antifox"
     },
     {
+      "slug": "artex-ruoji6-basic",
+      "hosts": 650,
+      "tool_id": null,
+      "tracker_url": "https://offensive.agency/cluster/artex-ruoji6-basic"
+    },
+    {
       "slug": "bob-research-labs",
-      "hosts": 154,
+      "hosts": 158,
       "tool_id": null,
       "tracker_url": "https://offensive.agency/cluster/bob-research-labs"
+    },
+    {
+      "slug": "forang",
+      "hosts": 2,
+      "tool_id": null,
+      "tracker_url": "https://offensive.agency/cluster/forang"
+    },
+    {
+      "slug": "pojun",
+      "hosts": 193,
+      "tool_id": null,
+      "tracker_url": "https://offensive.agency/cluster/pojun"
+    },
+    {
+      "slug": "scopeweaver",
+      "hosts": 270,
+      "tool_id": null,
+      "tracker_url": "https://offensive.agency/cluster/scopeweaver"
+    },
+    {
+      "slug": "yueluo",
+      "hosts": 8,
+      "tool_id": null,
+      "tracker_url": "https://offensive.agency/cluster/yueluo"
     }
   ],
   "days": [
@@ -1819,6 +3509,11 @@
     "2026-11-19",
     "2026-11-20",
     "2026-11-21",
-    "2026-11-22"
+    "2026-11-22",
+    "2026-11-23",
+    "2026-11-24",
+    "2026-11-25",
+    "2026-11-26",
+    "2026-11-27"
   ]
 }
